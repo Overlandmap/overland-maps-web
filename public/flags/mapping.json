@@ -1,0 +1,1846 @@
+{
+  "metadata": {
+    "generatedAt": "2025-11-02T07:42:03.623Z",
+    "totalFiles": 277,
+    "copiedFiles": 241,
+    "skippedFiles": 36
+  },
+  "mapping": {
+    "_abkhazia": "ABK",
+    "aw": "ABW",
+    "af": "AFG",
+    "ao": "AGO",
+    "ai": "AIA",
+    "al": "ALB",
+    "ax": "ALD",
+    "ad": "AND",
+    "ae": "ARE",
+    "ar": "ARG",
+    "am": "ARM",
+    "as": "ASM",
+    "aq": "ATA",
+    "tf": "ATF",
+    "ag": "ATG",
+    "au": "AUS",
+    "at": "AUT",
+    "az": "AZE",
+    "bi": "BDI",
+    "be": "BEL",
+    "bj": "BEN",
+    "bf": "BFA",
+    "bd": "BGD",
+    "bg": "BGR",
+    "bh": "BHR",
+    "bs": "BHS",
+    "ba": "BIH",
+    "bl": "BLM",
+    "by": "BLR",
+    "bz": "BLZ",
+    "bm": "BMU",
+    "bo": "BOL",
+    "br": "BRA",
+    "bb": "BRB",
+    "bn": "BRN",
+    "bt": "BTN",
+    "bw": "BWA",
+    "cf": "CAF",
+    "ca": "CAN",
+    "ch": "CHE",
+    "cl": "CHL",
+    "cn": "CHN",
+    "ci": "CIV",
+    "cm": "CMR",
+    "cd": "COD",
+    "cg": "COG",
+    "ck": "COK",
+    "co": "COL",
+    "km": "COM",
+    "cv": "CPV",
+    "cr": "CRI",
+    "cu": "CUB",
+    "cw": "CUW",
+    "ky": "CYM",
+    "_northern_cyprus": "CYN",
+    "cy": "CYP",
+    "cz": "CZE",
+    "de": "DEU",
+    "dj": "DJI",
+    "dm": "DMA",
+    "dk": "DNK",
+    "do": "DOM",
+    "dz": "DZA",
+    "ec": "ECU",
+    "eg": "EGY",
+    "er": "ERI",
+    "es": "ESP",
+    "ee": "EST",
+    "et": "ETH",
+    "fi": "FIN",
+    "fj": "FJI",
+    "fk": "FLK",
+    "fr": "FRA",
+    "fo": "FRO",
+    "fm": "FSM",
+    "ga": "GAB",
+    "gb": "GBR",
+    "ge": "GEO",
+    "gg": "GGY",
+    "gh": "GHA",
+    "gn": "GIN",
+    "gm": "GMB",
+    "gw": "GNB",
+    "gq": "GNQ",
+    "gr": "GRC",
+    "gd": "GRD",
+    "gl": "GRL",
+    "gt": "GTM",
+    "gu": "GUM",
+    "gy": "GUY",
+    "hk": "HKG",
+    "hm": "HMD",
+    "hn": "HND",
+    "hr": "HRV",
+    "ht": "HTI",
+    "hu": "HUN",
+    "id": "IDN",
+    "im": "IMN",
+    "in": "IND",
+    "io": "IOT",
+    "ie": "IRL",
+    "ir": "IRN",
+    "iq": "IRQ",
+    "is": "ISL",
+    "il": "ISR",
+    "it": "ITA",
+    "jm": "JAM",
+    "je": "JEY",
+    "jo": "JOR",
+    "jp": "JPN",
+    "kz": "KAZ",
+    "ke": "KEN",
+    "kg": "KGZ",
+    "kh": "KHM",
+    "ki": "KIR",
+    "kn": "KNA",
+    "kr": "KOR",
+    "xk": "KOS",
+    "kw": "KWT",
+    "la": "LAO",
+    "lb": "LBN",
+    "lr": "LBR",
+    "ly": "LBY",
+    "lc": "LCA",
+    "li": "LIE",
+    "lk": "LKA",
+    "ls": "LSO",
+    "lt": "LTU",
+    "lu": "LUX",
+    "lv": "LVA",
+    "mo": "MAC",
+    "mf": "MAF",
+    "ma": "MAR",
+    "mc": "MCO",
+    "md": "MDA",
+    "mg": "MDG",
+    "mv": "MDV",
+    "mx": "MEX",
+    "mh": "MHL",
+    "mk": "MKD",
+    "ml": "MLI",
+    "mt": "MLT",
+    "mm": "MMR",
+    "me": "MNE",
+    "mn": "MNG",
+    "mp": "MNP",
+    "mz": "MOZ",
+    "mr": "MRT",
+    "ms": "MSR",
+    "mu": "MUS",
+    "mw": "MWI",
+    "my": "MYS",
+    "na": "NAM",
+    "nc": "NCL",
+    "ne": "NER",
+    "nf": "NFK",
+    "ng": "NGA",
+    "_nagorno_karabakh": "NGK",
+    "ni": "NIC",
+    "nu": "NIU",
+    "nl": "NLD",
+    "no": "NOR",
+    "np": "NPL",
+    "nr": "NRU",
+    "nz": "NZL",
+    "om": "OMN",
+    "pk": "PAK",
+    "pa": "PAN",
+    "pn": "PCN",
+    "pe": "PER",
+    "ph": "PHL",
+    "pw": "PLW",
+    "_transnistria": "PMR",
+    "pg": "PNG",
+    "pl": "POL",
+    "pr": "PRI",
+    "kp": "PRK",
+    "pt": "PRT",
+    "py": "PRY",
+    "ps": "PSX",
+    "pf": "PYF",
+    "qa": "QAT",
+    "ro": "ROU",
+    "ru": "RUS",
+    "rw": "RWA",
+    "eh": "SAH",
+    "sa": "SAU",
+    "sd": "SDN",
+    "ss": "SDS",
+    "sn": "SEN",
+    "sg": "SGP",
+    "gs": "SGS",
+    "sh": "SHN",
+    "sb": "SLB",
+    "sl": "SLE",
+    "sv": "SLV",
+    "sm": "SMR",
+    "_somaliland": "SOL",
+    "so": "SOM",
+    "_south_ossetia": "SOS",
+    "pm": "SPM",
+    "rs": "SRB",
+    "st": "STP",
+    "sr": "SUR",
+    "sk": "SVK",
+    "si": "SVN",
+    "se": "SWE",
+    "sz": "SWZ",
+    "sx": "SXM",
+    "sc": "SYC",
+    "sy": "SYR",
+    "tc": "TCA",
+    "td": "TCD",
+    "tg": "TGO",
+    "th": "THA",
+    "tj": "TJK",
+    "tm": "TKM",
+    "tl": "TLS",
+    "to": "TON",
+    "tt": "TTO",
+    "tn": "TUN",
+    "tr": "TUR",
+    "tw": "TWN",
+    "tz": "TZA",
+    "ug": "UGA",
+    "ua": "UKR",
+    "uy": "URY",
+    "us": "USA",
+    "uz": "UZB",
+    "va": "VAT",
+    "vc": "VCT",
+    "ve": "VEN",
+    "vg": "VGB",
+    "vi": "VIR",
+    "vn": "VNM",
+    "vu": "VUT",
+    "wf": "WLF",
+    "ws": "WSM",
+    "ye": "YEM",
+    "za": "ZAF",
+    "zm": "ZMB",
+    "zw": "ZWE"
+  },
+  "copiedFiles": [
+    {
+      "iso_a2": "_abkhazia",
+      "adm0_a3": "ABK",
+      "country": "Abkhazia",
+      "filename": "ABK.svg"
+    },
+    {
+      "iso_a2": "_northern_cyprus",
+      "adm0_a3": "CYN",
+      "country": "Northern Cyprus",
+      "filename": "CYN.svg"
+    },
+    {
+      "iso_a2": "_somaliland",
+      "adm0_a3": "SOL",
+      "country": "Somaliland",
+      "filename": "SOL.svg"
+    },
+    {
+      "iso_a2": "_south_ossetia",
+      "adm0_a3": "SOS",
+      "country": "South Ossetia",
+      "filename": "SOS.svg"
+    },
+    {
+      "iso_a2": "_transnistria",
+      "adm0_a3": "PMR",
+      "country": "Transdniestria",
+      "filename": "PMR.svg"
+    },
+    {
+      "iso_a2": "ad",
+      "adm0_a3": "AND",
+      "country": "Andorra",
+      "filename": "AND.svg"
+    },
+    {
+      "iso_a2": "ae",
+      "adm0_a3": "ARE",
+      "country": "United Arab Emirates",
+      "filename": "ARE.svg"
+    },
+    {
+      "iso_a2": "af",
+      "adm0_a3": "AFG",
+      "country": "Afghanistan",
+      "filename": "AFG.svg"
+    },
+    {
+      "iso_a2": "ag",
+      "adm0_a3": "ATG",
+      "country": "Antigua and Barb.",
+      "filename": "ATG.svg"
+    },
+    {
+      "iso_a2": "ai",
+      "adm0_a3": "AIA",
+      "country": "Anguilla",
+      "filename": "AIA.svg"
+    },
+    {
+      "iso_a2": "al",
+      "adm0_a3": "ALB",
+      "country": "Albania",
+      "filename": "ALB.svg"
+    },
+    {
+      "iso_a2": "am",
+      "adm0_a3": "ARM",
+      "country": "Armenia",
+      "filename": "ARM.svg"
+    },
+    {
+      "iso_a2": "ao",
+      "adm0_a3": "AGO",
+      "country": "Angola",
+      "filename": "AGO.svg"
+    },
+    {
+      "iso_a2": "aq",
+      "adm0_a3": "ATA",
+      "country": "Antarctica",
+      "filename": "ATA.svg"
+    },
+    {
+      "iso_a2": "ar",
+      "adm0_a3": "ARG",
+      "country": "Argentina",
+      "filename": "ARG.svg"
+    },
+    {
+      "iso_a2": "as",
+      "adm0_a3": "ASM",
+      "country": "American Samoa",
+      "filename": "ASM.svg"
+    },
+    {
+      "iso_a2": "at",
+      "adm0_a3": "AUT",
+      "country": "Austria",
+      "filename": "AUT.svg"
+    },
+    {
+      "iso_a2": "au",
+      "adm0_a3": "AUS",
+      "country": "Australia",
+      "filename": "AUS.svg"
+    },
+    {
+      "iso_a2": "aw",
+      "adm0_a3": "ABW",
+      "country": "Aruba",
+      "filename": "ABW.svg"
+    },
+    {
+      "iso_a2": "ax",
+      "adm0_a3": "ALD",
+      "country": "Aland",
+      "filename": "ALD.svg"
+    },
+    {
+      "iso_a2": "az",
+      "adm0_a3": "AZE",
+      "country": "Azerbaijan",
+      "filename": "AZE.svg"
+    },
+    {
+      "iso_a2": "ba",
+      "adm0_a3": "BIH",
+      "country": "Bosnia and Herz.",
+      "filename": "BIH.svg"
+    },
+    {
+      "iso_a2": "bb",
+      "adm0_a3": "BRB",
+      "country": "Barbados",
+      "filename": "BRB.svg"
+    },
+    {
+      "iso_a2": "bd",
+      "adm0_a3": "BGD",
+      "country": "Bangladesh",
+      "filename": "BGD.svg"
+    },
+    {
+      "iso_a2": "be",
+      "adm0_a3": "BEL",
+      "country": "Belgium",
+      "filename": "BEL.svg"
+    },
+    {
+      "iso_a2": "bf",
+      "adm0_a3": "BFA",
+      "country": "Burkina Faso",
+      "filename": "BFA.svg"
+    },
+    {
+      "iso_a2": "bg",
+      "adm0_a3": "BGR",
+      "country": "Bulgaria",
+      "filename": "BGR.svg"
+    },
+    {
+      "iso_a2": "bh",
+      "adm0_a3": "BHR",
+      "country": "Bahrain",
+      "filename": "BHR.svg"
+    },
+    {
+      "iso_a2": "bi",
+      "adm0_a3": "BDI",
+      "country": "Burundi",
+      "filename": "BDI.svg"
+    },
+    {
+      "iso_a2": "bj",
+      "adm0_a3": "BEN",
+      "country": "Benin",
+      "filename": "BEN.svg"
+    },
+    {
+      "iso_a2": "bl",
+      "adm0_a3": "BLM",
+      "country": "St-Barthlemy",
+      "filename": "BLM.svg"
+    },
+    {
+      "iso_a2": "bm",
+      "adm0_a3": "BMU",
+      "country": "Bermuda",
+      "filename": "BMU.svg"
+    },
+    {
+      "iso_a2": "bn",
+      "adm0_a3": "BRN",
+      "country": "Brunei",
+      "filename": "BRN.svg"
+    },
+    {
+      "iso_a2": "bo",
+      "adm0_a3": "BOL",
+      "country": "Bolivia",
+      "filename": "BOL.svg"
+    },
+    {
+      "iso_a2": "br",
+      "adm0_a3": "BRA",
+      "country": "Brazil",
+      "filename": "BRA.svg"
+    },
+    {
+      "iso_a2": "bs",
+      "adm0_a3": "BHS",
+      "country": "Bahamas",
+      "filename": "BHS.svg"
+    },
+    {
+      "iso_a2": "bt",
+      "adm0_a3": "BTN",
+      "country": "Bhutan",
+      "filename": "BTN.svg"
+    },
+    {
+      "iso_a2": "bw",
+      "adm0_a3": "BWA",
+      "country": "Botswana",
+      "filename": "BWA.svg"
+    },
+    {
+      "iso_a2": "by",
+      "adm0_a3": "BLR",
+      "country": "Belarus",
+      "filename": "BLR.svg"
+    },
+    {
+      "iso_a2": "bz",
+      "adm0_a3": "BLZ",
+      "country": "Belize",
+      "filename": "BLZ.svg"
+    },
+    {
+      "iso_a2": "ca",
+      "adm0_a3": "CAN",
+      "country": "Canada",
+      "filename": "CAN.svg"
+    },
+    {
+      "iso_a2": "cd",
+      "adm0_a3": "COD",
+      "country": "Dem. Rep. Congo",
+      "filename": "COD.svg"
+    },
+    {
+      "iso_a2": "cf",
+      "adm0_a3": "CAF",
+      "country": "Central African Rep.",
+      "filename": "CAF.svg"
+    },
+    {
+      "iso_a2": "cg",
+      "adm0_a3": "COG",
+      "country": "Congo",
+      "filename": "COG.svg"
+    },
+    {
+      "iso_a2": "ch",
+      "adm0_a3": "CHE",
+      "country": "Switzerland",
+      "filename": "CHE.svg"
+    },
+    {
+      "iso_a2": "ci",
+      "adm0_a3": "CIV",
+      "country": "Côte d'Ivoire",
+      "filename": "CIV.svg"
+    },
+    {
+      "iso_a2": "ck",
+      "adm0_a3": "COK",
+      "country": "Cook Is.",
+      "filename": "COK.svg"
+    },
+    {
+      "iso_a2": "cl",
+      "adm0_a3": "CHL",
+      "country": "Chile",
+      "filename": "CHL.svg"
+    },
+    {
+      "iso_a2": "cm",
+      "adm0_a3": "CMR",
+      "country": "Cameroon",
+      "filename": "CMR.svg"
+    },
+    {
+      "iso_a2": "cn",
+      "adm0_a3": "CHN",
+      "country": "China",
+      "filename": "CHN.svg"
+    },
+    {
+      "iso_a2": "co",
+      "adm0_a3": "COL",
+      "country": "Colombia",
+      "filename": "COL.svg"
+    },
+    {
+      "iso_a2": "cr",
+      "adm0_a3": "CRI",
+      "country": "Costa Rica",
+      "filename": "CRI.svg"
+    },
+    {
+      "iso_a2": "cu",
+      "adm0_a3": "CUB",
+      "country": "Cuba",
+      "filename": "CUB.svg"
+    },
+    {
+      "iso_a2": "cv",
+      "adm0_a3": "CPV",
+      "country": "Cape Verde",
+      "filename": "CPV.svg"
+    },
+    {
+      "iso_a2": "cw",
+      "adm0_a3": "CUW",
+      "country": "Curaçao",
+      "filename": "CUW.svg"
+    },
+    {
+      "iso_a2": "cy",
+      "adm0_a3": "CYP",
+      "country": "Cyprus",
+      "filename": "CYP.svg"
+    },
+    {
+      "iso_a2": "cz",
+      "adm0_a3": "CZE",
+      "country": "Czech Rep.",
+      "filename": "CZE.svg"
+    },
+    {
+      "iso_a2": "de",
+      "adm0_a3": "DEU",
+      "country": "Germany",
+      "filename": "DEU.svg"
+    },
+    {
+      "iso_a2": "dj",
+      "adm0_a3": "DJI",
+      "country": "Djibouti",
+      "filename": "DJI.svg"
+    },
+    {
+      "iso_a2": "dk",
+      "adm0_a3": "DNK",
+      "country": "Denmark",
+      "filename": "DNK.svg"
+    },
+    {
+      "iso_a2": "dm",
+      "adm0_a3": "DMA",
+      "country": "Dominica",
+      "filename": "DMA.svg"
+    },
+    {
+      "iso_a2": "do",
+      "adm0_a3": "DOM",
+      "country": "Dominican Rep.",
+      "filename": "DOM.svg"
+    },
+    {
+      "iso_a2": "dz",
+      "adm0_a3": "DZA",
+      "country": "Algeria",
+      "filename": "DZA.svg"
+    },
+    {
+      "iso_a2": "ec",
+      "adm0_a3": "ECU",
+      "country": "Ecuador",
+      "filename": "ECU.svg"
+    },
+    {
+      "iso_a2": "ee",
+      "adm0_a3": "EST",
+      "country": "Estonia",
+      "filename": "EST.svg"
+    },
+    {
+      "iso_a2": "eg",
+      "adm0_a3": "EGY",
+      "country": "Egypt",
+      "filename": "EGY.svg"
+    },
+    {
+      "iso_a2": "eh",
+      "adm0_a3": "SAH",
+      "country": "Western Sahara",
+      "filename": "SAH.svg"
+    },
+    {
+      "iso_a2": "er",
+      "adm0_a3": "ERI",
+      "country": "Eritrea",
+      "filename": "ERI.svg"
+    },
+    {
+      "iso_a2": "es",
+      "adm0_a3": "ESP",
+      "country": "Spain",
+      "filename": "ESP.svg"
+    },
+    {
+      "iso_a2": "et",
+      "adm0_a3": "ETH",
+      "country": "Ethiopia",
+      "filename": "ETH.svg"
+    },
+    {
+      "iso_a2": "fi",
+      "adm0_a3": "FIN",
+      "country": "Finland",
+      "filename": "FIN.svg"
+    },
+    {
+      "iso_a2": "fj",
+      "adm0_a3": "FJI",
+      "country": "Fiji",
+      "filename": "FJI.svg"
+    },
+    {
+      "iso_a2": "fk",
+      "adm0_a3": "FLK",
+      "country": "Falkland Is.",
+      "filename": "FLK.svg"
+    },
+    {
+      "iso_a2": "fm",
+      "adm0_a3": "FSM",
+      "country": "Micronesia",
+      "filename": "FSM.svg"
+    },
+    {
+      "iso_a2": "fo",
+      "adm0_a3": "FRO",
+      "country": "Faeroe Is.",
+      "filename": "FRO.svg"
+    },
+    {
+      "iso_a2": "fr",
+      "adm0_a3": "FRA",
+      "country": "France",
+      "filename": "FRA.svg"
+    },
+    {
+      "iso_a2": "ga",
+      "adm0_a3": "GAB",
+      "country": "Gabon",
+      "filename": "GAB.svg"
+    },
+    {
+      "iso_a2": "gb",
+      "adm0_a3": "GBR",
+      "country": "United Kingdom",
+      "filename": "GBR.svg"
+    },
+    {
+      "iso_a2": "gd",
+      "adm0_a3": "GRD",
+      "country": "Grenada",
+      "filename": "GRD.svg"
+    },
+    {
+      "iso_a2": "ge",
+      "adm0_a3": "GEO",
+      "country": "Georgia",
+      "filename": "GEO.svg"
+    },
+    {
+      "iso_a2": "gg",
+      "adm0_a3": "GGY",
+      "country": "Guernsey",
+      "filename": "GGY.svg"
+    },
+    {
+      "iso_a2": "gh",
+      "adm0_a3": "GHA",
+      "country": "Ghana",
+      "filename": "GHA.svg"
+    },
+    {
+      "iso_a2": "gl",
+      "adm0_a3": "GRL",
+      "country": "Greenland",
+      "filename": "GRL.svg"
+    },
+    {
+      "iso_a2": "gm",
+      "adm0_a3": "GMB",
+      "country": "Gambia",
+      "filename": "GMB.svg"
+    },
+    {
+      "iso_a2": "gn",
+      "adm0_a3": "GIN",
+      "country": "Guinea",
+      "filename": "GIN.svg"
+    },
+    {
+      "iso_a2": "gq",
+      "adm0_a3": "GNQ",
+      "country": "Eq. Guinea",
+      "filename": "GNQ.svg"
+    },
+    {
+      "iso_a2": "gr",
+      "adm0_a3": "GRC",
+      "country": "Greece",
+      "filename": "GRC.svg"
+    },
+    {
+      "iso_a2": "gs",
+      "adm0_a3": "SGS",
+      "country": "S. Geo. and S. Sandw. Is.",
+      "filename": "SGS.svg"
+    },
+    {
+      "iso_a2": "gt",
+      "adm0_a3": "GTM",
+      "country": "Guatemala",
+      "filename": "GTM.svg"
+    },
+    {
+      "iso_a2": "gu",
+      "adm0_a3": "GUM",
+      "country": "Guam",
+      "filename": "GUM.svg"
+    },
+    {
+      "iso_a2": "gw",
+      "adm0_a3": "GNB",
+      "country": "Guinea-Bissau",
+      "filename": "GNB.svg"
+    },
+    {
+      "iso_a2": "gy",
+      "adm0_a3": "GUY",
+      "country": "Guyana",
+      "filename": "GUY.svg"
+    },
+    {
+      "iso_a2": "hk",
+      "adm0_a3": "HKG",
+      "country": "Hong Kong",
+      "filename": "HKG.svg"
+    },
+    {
+      "iso_a2": "hm",
+      "adm0_a3": "HMD",
+      "country": "Heard I. and McDonald Is.",
+      "filename": "HMD.svg"
+    },
+    {
+      "iso_a2": "hn",
+      "adm0_a3": "HND",
+      "country": "Honduras",
+      "filename": "HND.svg"
+    },
+    {
+      "iso_a2": "hr",
+      "adm0_a3": "HRV",
+      "country": "Croatia",
+      "filename": "HRV.svg"
+    },
+    {
+      "iso_a2": "ht",
+      "adm0_a3": "HTI",
+      "country": "Haiti",
+      "filename": "HTI.svg"
+    },
+    {
+      "iso_a2": "hu",
+      "adm0_a3": "HUN",
+      "country": "Hungary",
+      "filename": "HUN.svg"
+    },
+    {
+      "iso_a2": "id",
+      "adm0_a3": "IDN",
+      "country": "Indonesia",
+      "filename": "IDN.svg"
+    },
+    {
+      "iso_a2": "ie",
+      "adm0_a3": "IRL",
+      "country": "Ireland",
+      "filename": "IRL.svg"
+    },
+    {
+      "iso_a2": "il",
+      "adm0_a3": "ISR",
+      "country": "Israel",
+      "filename": "ISR.svg"
+    },
+    {
+      "iso_a2": "im",
+      "adm0_a3": "IMN",
+      "country": "Isle of Man",
+      "filename": "IMN.svg"
+    },
+    {
+      "iso_a2": "in",
+      "adm0_a3": "IND",
+      "country": "India",
+      "filename": "IND.svg"
+    },
+    {
+      "iso_a2": "io",
+      "adm0_a3": "IOT",
+      "country": "Br. Indian Ocean Ter.",
+      "filename": "IOT.svg"
+    },
+    {
+      "iso_a2": "iq",
+      "adm0_a3": "IRQ",
+      "country": "Iraq",
+      "filename": "IRQ.svg"
+    },
+    {
+      "iso_a2": "ir",
+      "adm0_a3": "IRN",
+      "country": "Iran",
+      "filename": "IRN.svg"
+    },
+    {
+      "iso_a2": "is",
+      "adm0_a3": "ISL",
+      "country": "Iceland",
+      "filename": "ISL.svg"
+    },
+    {
+      "iso_a2": "it",
+      "adm0_a3": "ITA",
+      "country": "Italy",
+      "filename": "ITA.svg"
+    },
+    {
+      "iso_a2": "je",
+      "adm0_a3": "JEY",
+      "country": "Jersey",
+      "filename": "JEY.svg"
+    },
+    {
+      "iso_a2": "jm",
+      "adm0_a3": "JAM",
+      "country": "Jamaica",
+      "filename": "JAM.svg"
+    },
+    {
+      "iso_a2": "jo",
+      "adm0_a3": "JOR",
+      "country": "Jordan",
+      "filename": "JOR.svg"
+    },
+    {
+      "iso_a2": "jp",
+      "adm0_a3": "JPN",
+      "country": "Japan",
+      "filename": "JPN.svg"
+    },
+    {
+      "iso_a2": "ke",
+      "adm0_a3": "KEN",
+      "country": "Kenya",
+      "filename": "KEN.svg"
+    },
+    {
+      "iso_a2": "kg",
+      "adm0_a3": "KGZ",
+      "country": "Kyrgyzstan",
+      "filename": "KGZ.svg"
+    },
+    {
+      "iso_a2": "kh",
+      "adm0_a3": "KHM",
+      "country": "Cambodia",
+      "filename": "KHM.svg"
+    },
+    {
+      "iso_a2": "ki",
+      "adm0_a3": "KIR",
+      "country": "Kiribati",
+      "filename": "KIR.svg"
+    },
+    {
+      "iso_a2": "km",
+      "adm0_a3": "COM",
+      "country": "Comoros",
+      "filename": "COM.svg"
+    },
+    {
+      "iso_a2": "kn",
+      "adm0_a3": "KNA",
+      "country": "St. Kitts and Nevis",
+      "filename": "KNA.svg"
+    },
+    {
+      "iso_a2": "kp",
+      "adm0_a3": "PRK",
+      "country": "North Korea",
+      "filename": "PRK.svg"
+    },
+    {
+      "iso_a2": "kr",
+      "adm0_a3": "KOR",
+      "country": "Korea",
+      "filename": "KOR.svg"
+    },
+    {
+      "iso_a2": "kw",
+      "adm0_a3": "KWT",
+      "country": "Kuwait",
+      "filename": "KWT.svg"
+    },
+    {
+      "iso_a2": "ky",
+      "adm0_a3": "CYM",
+      "country": "Cayman Is.",
+      "filename": "CYM.svg"
+    },
+    {
+      "iso_a2": "kz",
+      "adm0_a3": "KAZ",
+      "country": "Kazakhstan",
+      "filename": "KAZ.svg"
+    },
+    {
+      "iso_a2": "la",
+      "adm0_a3": "LAO",
+      "country": "Laos",
+      "filename": "LAO.svg"
+    },
+    {
+      "iso_a2": "lb",
+      "adm0_a3": "LBN",
+      "country": "Lebanon",
+      "filename": "LBN.svg"
+    },
+    {
+      "iso_a2": "lc",
+      "adm0_a3": "LCA",
+      "country": "Saint Lucia",
+      "filename": "LCA.svg"
+    },
+    {
+      "iso_a2": "li",
+      "adm0_a3": "LIE",
+      "country": "Liechtenstein",
+      "filename": "LIE.svg"
+    },
+    {
+      "iso_a2": "lk",
+      "adm0_a3": "LKA",
+      "country": "Sri Lanka",
+      "filename": "LKA.svg"
+    },
+    {
+      "iso_a2": "lr",
+      "adm0_a3": "LBR",
+      "country": "Liberia",
+      "filename": "LBR.svg"
+    },
+    {
+      "iso_a2": "ls",
+      "adm0_a3": "LSO",
+      "country": "Lesotho",
+      "filename": "LSO.svg"
+    },
+    {
+      "iso_a2": "lt",
+      "adm0_a3": "LTU",
+      "country": "Lithuania",
+      "filename": "LTU.svg"
+    },
+    {
+      "iso_a2": "lu",
+      "adm0_a3": "LUX",
+      "country": "Luxembourg",
+      "filename": "LUX.svg"
+    },
+    {
+      "iso_a2": "lv",
+      "adm0_a3": "LVA",
+      "country": "Latvia",
+      "filename": "LVA.svg"
+    },
+    {
+      "iso_a2": "ly",
+      "adm0_a3": "LBY",
+      "country": "Libya",
+      "filename": "LBY.svg"
+    },
+    {
+      "iso_a2": "ma",
+      "adm0_a3": "MAR",
+      "country": "Morocco",
+      "filename": "MAR.svg"
+    },
+    {
+      "iso_a2": "mc",
+      "adm0_a3": "MCO",
+      "country": "Monaco",
+      "filename": "MCO.svg"
+    },
+    {
+      "iso_a2": "md",
+      "adm0_a3": "MDA",
+      "country": "Moldova",
+      "filename": "MDA.svg"
+    },
+    {
+      "iso_a2": "me",
+      "adm0_a3": "MNE",
+      "country": "Montenegro",
+      "filename": "MNE.svg"
+    },
+    {
+      "iso_a2": "mf",
+      "adm0_a3": "MAF",
+      "country": "St-Martin",
+      "filename": "MAF.svg"
+    },
+    {
+      "iso_a2": "mg",
+      "adm0_a3": "MDG",
+      "country": "Madagascar",
+      "filename": "MDG.svg"
+    },
+    {
+      "iso_a2": "mh",
+      "adm0_a3": "MHL",
+      "country": "Marshall Is.",
+      "filename": "MHL.svg"
+    },
+    {
+      "iso_a2": "mk",
+      "adm0_a3": "MKD",
+      "country": "Macedonia",
+      "filename": "MKD.svg"
+    },
+    {
+      "iso_a2": "ml",
+      "adm0_a3": "MLI",
+      "country": "Mali",
+      "filename": "MLI.svg"
+    },
+    {
+      "iso_a2": "mm",
+      "adm0_a3": "MMR",
+      "country": "Myanmar",
+      "filename": "MMR.svg"
+    },
+    {
+      "iso_a2": "mn",
+      "adm0_a3": "MNG",
+      "country": "Mongolia",
+      "filename": "MNG.svg"
+    },
+    {
+      "iso_a2": "mo",
+      "adm0_a3": "MAC",
+      "country": "Macao",
+      "filename": "MAC.svg"
+    },
+    {
+      "iso_a2": "mp",
+      "adm0_a3": "MNP",
+      "country": "N. Mariana Is.",
+      "filename": "MNP.svg"
+    },
+    {
+      "iso_a2": "mr",
+      "adm0_a3": "MRT",
+      "country": "Mauritania",
+      "filename": "MRT.svg"
+    },
+    {
+      "iso_a2": "ms",
+      "adm0_a3": "MSR",
+      "country": "Montserrat",
+      "filename": "MSR.svg"
+    },
+    {
+      "iso_a2": "mt",
+      "adm0_a3": "MLT",
+      "country": "Malta",
+      "filename": "MLT.svg"
+    },
+    {
+      "iso_a2": "mu",
+      "adm0_a3": "MUS",
+      "country": "Mauritius",
+      "filename": "MUS.svg"
+    },
+    {
+      "iso_a2": "mv",
+      "adm0_a3": "MDV",
+      "country": "Maldives",
+      "filename": "MDV.svg"
+    },
+    {
+      "iso_a2": "mw",
+      "adm0_a3": "MWI",
+      "country": "Malawi",
+      "filename": "MWI.svg"
+    },
+    {
+      "iso_a2": "mx",
+      "adm0_a3": "MEX",
+      "country": "Mexico",
+      "filename": "MEX.svg"
+    },
+    {
+      "iso_a2": "my",
+      "adm0_a3": "MYS",
+      "country": "Malaysia",
+      "filename": "MYS.svg"
+    },
+    {
+      "iso_a2": "mz",
+      "adm0_a3": "MOZ",
+      "country": "Mozambique",
+      "filename": "MOZ.svg"
+    },
+    {
+      "iso_a2": "na",
+      "adm0_a3": "NAM",
+      "country": "Namibia",
+      "filename": "NAM.svg"
+    },
+    {
+      "iso_a2": "nc",
+      "adm0_a3": "NCL",
+      "country": "New Caledonia",
+      "filename": "NCL.svg"
+    },
+    {
+      "iso_a2": "ne",
+      "adm0_a3": "NER",
+      "country": "Niger",
+      "filename": "NER.svg"
+    },
+    {
+      "iso_a2": "nf",
+      "adm0_a3": "NFK",
+      "country": "Norfolk Island",
+      "filename": "NFK.svg"
+    },
+    {
+      "iso_a2": "ng",
+      "adm0_a3": "NGA",
+      "country": "Nigeria",
+      "filename": "NGA.svg"
+    },
+    {
+      "iso_a2": "ni",
+      "adm0_a3": "NIC",
+      "country": "Nicaragua",
+      "filename": "NIC.svg"
+    },
+    {
+      "iso_a2": "nl",
+      "adm0_a3": "NLD",
+      "country": "Netherlands",
+      "filename": "NLD.svg"
+    },
+    {
+      "iso_a2": "no",
+      "adm0_a3": "NOR",
+      "country": "Norway",
+      "filename": "NOR.svg"
+    },
+    {
+      "iso_a2": "np",
+      "adm0_a3": "NPL",
+      "country": "Nepal",
+      "filename": "NPL.svg"
+    },
+    {
+      "iso_a2": "nr",
+      "adm0_a3": "NRU",
+      "country": "Nauru",
+      "filename": "NRU.svg"
+    },
+    {
+      "iso_a2": "nu",
+      "adm0_a3": "NIU",
+      "country": "Niue",
+      "filename": "NIU.svg"
+    },
+    {
+      "iso_a2": "nz",
+      "adm0_a3": "NZL",
+      "country": "New Zealand",
+      "filename": "NZL.svg"
+    },
+    {
+      "iso_a2": "om",
+      "adm0_a3": "OMN",
+      "country": "Oman",
+      "filename": "OMN.svg"
+    },
+    {
+      "iso_a2": "pa",
+      "adm0_a3": "PAN",
+      "country": "Panama",
+      "filename": "PAN.svg"
+    },
+    {
+      "iso_a2": "pe",
+      "adm0_a3": "PER",
+      "country": "Peru",
+      "filename": "PER.svg"
+    },
+    {
+      "iso_a2": "pf",
+      "adm0_a3": "PYF",
+      "country": "Fr. Polynesia",
+      "filename": "PYF.svg"
+    },
+    {
+      "iso_a2": "pg",
+      "adm0_a3": "PNG",
+      "country": "Papua New Guinea",
+      "filename": "PNG.svg"
+    },
+    {
+      "iso_a2": "ph",
+      "adm0_a3": "PHL",
+      "country": "Philippines",
+      "filename": "PHL.svg"
+    },
+    {
+      "iso_a2": "pk",
+      "adm0_a3": "PAK",
+      "country": "Pakistan",
+      "filename": "PAK.svg"
+    },
+    {
+      "iso_a2": "pl",
+      "adm0_a3": "POL",
+      "country": "Poland",
+      "filename": "POL.svg"
+    },
+    {
+      "iso_a2": "pm",
+      "adm0_a3": "SPM",
+      "country": "St. Pierre and Miquelon",
+      "filename": "SPM.svg"
+    },
+    {
+      "iso_a2": "pn",
+      "adm0_a3": "PCN",
+      "country": "Pitcairn Is.",
+      "filename": "PCN.svg"
+    },
+    {
+      "iso_a2": "pr",
+      "adm0_a3": "PRI",
+      "country": "Puerto Rico",
+      "filename": "PRI.svg"
+    },
+    {
+      "iso_a2": "ps",
+      "adm0_a3": "PSX",
+      "country": "Palestine",
+      "filename": "PSX.svg"
+    },
+    {
+      "iso_a2": "pt",
+      "adm0_a3": "PRT",
+      "country": "Portugal",
+      "filename": "PRT.svg"
+    },
+    {
+      "iso_a2": "pw",
+      "adm0_a3": "PLW",
+      "country": "Palau",
+      "filename": "PLW.svg"
+    },
+    {
+      "iso_a2": "py",
+      "adm0_a3": "PRY",
+      "country": "Paraguay",
+      "filename": "PRY.svg"
+    },
+    {
+      "iso_a2": "qa",
+      "adm0_a3": "QAT",
+      "country": "Qatar",
+      "filename": "QAT.svg"
+    },
+    {
+      "iso_a2": "ro",
+      "adm0_a3": "ROU",
+      "country": "Romania",
+      "filename": "ROU.svg"
+    },
+    {
+      "iso_a2": "rs",
+      "adm0_a3": "SRB",
+      "country": "Serbia",
+      "filename": "SRB.svg"
+    },
+    {
+      "iso_a2": "ru",
+      "adm0_a3": "RUS",
+      "country": "Russia",
+      "filename": "RUS.svg"
+    },
+    {
+      "iso_a2": "rw",
+      "adm0_a3": "RWA",
+      "country": "Rwanda",
+      "filename": "RWA.svg"
+    },
+    {
+      "iso_a2": "sa",
+      "adm0_a3": "SAU",
+      "country": "Saudi Arabia",
+      "filename": "SAU.svg"
+    },
+    {
+      "iso_a2": "sb",
+      "adm0_a3": "SLB",
+      "country": "Solomon Is.",
+      "filename": "SLB.svg"
+    },
+    {
+      "iso_a2": "sc",
+      "adm0_a3": "SYC",
+      "country": "Seychelles",
+      "filename": "SYC.svg"
+    },
+    {
+      "iso_a2": "sd",
+      "adm0_a3": "SDN",
+      "country": "Sudan",
+      "filename": "SDN.svg"
+    },
+    {
+      "iso_a2": "se",
+      "adm0_a3": "SWE",
+      "country": "Sweden",
+      "filename": "SWE.svg"
+    },
+    {
+      "iso_a2": "sg",
+      "adm0_a3": "SGP",
+      "country": "Singapore",
+      "filename": "SGP.svg"
+    },
+    {
+      "iso_a2": "sh",
+      "adm0_a3": "SHN",
+      "country": "Saint Helena",
+      "filename": "SHN.svg"
+    },
+    {
+      "iso_a2": "si",
+      "adm0_a3": "SVN",
+      "country": "Slovenia",
+      "filename": "SVN.svg"
+    },
+    {
+      "iso_a2": "sk",
+      "adm0_a3": "SVK",
+      "country": "Slovakia",
+      "filename": "SVK.svg"
+    },
+    {
+      "iso_a2": "sl",
+      "adm0_a3": "SLE",
+      "country": "Sierra Leone",
+      "filename": "SLE.svg"
+    },
+    {
+      "iso_a2": "sm",
+      "adm0_a3": "SMR",
+      "country": "San Marino",
+      "filename": "SMR.svg"
+    },
+    {
+      "iso_a2": "sn",
+      "adm0_a3": "SEN",
+      "country": "Senegal",
+      "filename": "SEN.svg"
+    },
+    {
+      "iso_a2": "so",
+      "adm0_a3": "SOM",
+      "country": "Somalia",
+      "filename": "SOM.svg"
+    },
+    {
+      "iso_a2": "sr",
+      "adm0_a3": "SUR",
+      "country": "Suriname",
+      "filename": "SUR.svg"
+    },
+    {
+      "iso_a2": "ss",
+      "adm0_a3": "SDS",
+      "country": "South Sudan",
+      "filename": "SDS.svg"
+    },
+    {
+      "iso_a2": "st",
+      "adm0_a3": "STP",
+      "country": "So Tom and Principe",
+      "filename": "STP.svg"
+    },
+    {
+      "iso_a2": "sv",
+      "adm0_a3": "SLV",
+      "country": "El Salvador",
+      "filename": "SLV.svg"
+    },
+    {
+      "iso_a2": "sx",
+      "adm0_a3": "SXM",
+      "country": "Sint Maarten",
+      "filename": "SXM.svg"
+    },
+    {
+      "iso_a2": "sy",
+      "adm0_a3": "SYR",
+      "country": "Syria",
+      "filename": "SYR.svg"
+    },
+    {
+      "iso_a2": "sz",
+      "adm0_a3": "SWZ",
+      "country": "Swaziland",
+      "filename": "SWZ.svg"
+    },
+    {
+      "iso_a2": "tc",
+      "adm0_a3": "TCA",
+      "country": "Turks and Caicos Is.",
+      "filename": "TCA.svg"
+    },
+    {
+      "iso_a2": "td",
+      "adm0_a3": "TCD",
+      "country": "Chad",
+      "filename": "TCD.svg"
+    },
+    {
+      "iso_a2": "tf",
+      "adm0_a3": "ATF",
+      "country": "Fr. S. Antarctic Lands",
+      "filename": "ATF.svg"
+    },
+    {
+      "iso_a2": "tg",
+      "adm0_a3": "TGO",
+      "country": "Togo",
+      "filename": "TGO.svg"
+    },
+    {
+      "iso_a2": "th",
+      "adm0_a3": "THA",
+      "country": "Thailand",
+      "filename": "THA.svg"
+    },
+    {
+      "iso_a2": "tj",
+      "adm0_a3": "TJK",
+      "country": "Tajikistan",
+      "filename": "TJK.svg"
+    },
+    {
+      "iso_a2": "tl",
+      "adm0_a3": "TLS",
+      "country": "Timor-Leste",
+      "filename": "TLS.svg"
+    },
+    {
+      "iso_a2": "tm",
+      "adm0_a3": "TKM",
+      "country": "Turkmenistan",
+      "filename": "TKM.svg"
+    },
+    {
+      "iso_a2": "tn",
+      "adm0_a3": "TUN",
+      "country": "Tunisia",
+      "filename": "TUN.svg"
+    },
+    {
+      "iso_a2": "to",
+      "adm0_a3": "TON",
+      "country": "Tonga",
+      "filename": "TON.svg"
+    },
+    {
+      "iso_a2": "tr",
+      "adm0_a3": "TUR",
+      "country": "Turkey",
+      "filename": "TUR.svg"
+    },
+    {
+      "iso_a2": "tt",
+      "adm0_a3": "TTO",
+      "country": "Trinidad and Tobago",
+      "filename": "TTO.svg"
+    },
+    {
+      "iso_a2": "tw",
+      "adm0_a3": "TWN",
+      "country": "Taiwan",
+      "filename": "TWN.svg"
+    },
+    {
+      "iso_a2": "tz",
+      "adm0_a3": "TZA",
+      "country": "Tanzania",
+      "filename": "TZA.svg"
+    },
+    {
+      "iso_a2": "ua",
+      "adm0_a3": "UKR",
+      "country": "Ukraine",
+      "filename": "UKR.svg"
+    },
+    {
+      "iso_a2": "ug",
+      "adm0_a3": "UGA",
+      "country": "Uganda",
+      "filename": "UGA.svg"
+    },
+    {
+      "iso_a2": "us",
+      "adm0_a3": "USA",
+      "country": "United States",
+      "filename": "USA.svg"
+    },
+    {
+      "iso_a2": "uy",
+      "adm0_a3": "URY",
+      "country": "Uruguay",
+      "filename": "URY.svg"
+    },
+    {
+      "iso_a2": "uz",
+      "adm0_a3": "UZB",
+      "country": "Uzbekistan",
+      "filename": "UZB.svg"
+    },
+    {
+      "iso_a2": "va",
+      "adm0_a3": "VAT",
+      "country": "Vatican",
+      "filename": "VAT.svg"
+    },
+    {
+      "iso_a2": "vc",
+      "adm0_a3": "VCT",
+      "country": "St. Vin. and Gren.",
+      "filename": "VCT.svg"
+    },
+    {
+      "iso_a2": "ve",
+      "adm0_a3": "VEN",
+      "country": "Venezuela",
+      "filename": "VEN.svg"
+    },
+    {
+      "iso_a2": "vg",
+      "adm0_a3": "VGB",
+      "country": "British Virgin Is.",
+      "filename": "VGB.svg"
+    },
+    {
+      "iso_a2": "vi",
+      "adm0_a3": "VIR",
+      "country": "U.S. Virgin Is.",
+      "filename": "VIR.svg"
+    },
+    {
+      "iso_a2": "vn",
+      "adm0_a3": "VNM",
+      "country": "Vietnam",
+      "filename": "VNM.svg"
+    },
+    {
+      "iso_a2": "vu",
+      "adm0_a3": "VUT",
+      "country": "Vanuatu",
+      "filename": "VUT.svg"
+    },
+    {
+      "iso_a2": "wf",
+      "adm0_a3": "WLF",
+      "country": "Wallis and Futuna Is.",
+      "filename": "WLF.svg"
+    },
+    {
+      "iso_a2": "ws",
+      "adm0_a3": "WSM",
+      "country": "Samoa",
+      "filename": "WSM.svg"
+    },
+    {
+      "iso_a2": "xk",
+      "adm0_a3": "KOS",
+      "country": "Kosovo",
+      "filename": "KOS.svg"
+    },
+    {
+      "iso_a2": "ye",
+      "adm0_a3": "YEM",
+      "country": "Yemen",
+      "filename": "YEM.svg"
+    },
+    {
+      "iso_a2": "za",
+      "adm0_a3": "ZAF",
+      "country": "South Africa",
+      "filename": "ZAF.svg"
+    },
+    {
+      "iso_a2": "zm",
+      "adm0_a3": "ZMB",
+      "country": "Zambia",
+      "filename": "ZMB.svg"
+    },
+    {
+      "iso_a2": "zw",
+      "adm0_a3": "ZWE",
+      "country": "Zimbabwe",
+      "filename": "ZWE.svg"
+    }
+  ],
+  "skippedFiles": [
+    {
+      "filename": "arab.svg",
+      "reason": "No mapping found"
+    },
+    {
+      "filename": "asean.svg",
+      "reason": "No mapping found"
+    },
+    {
+      "filename": "bq.svg",
+      "reason": "No mapping found"
+    },
+    {
+      "filename": "bv.svg",
+      "reason": "No mapping found"
+    },
+    {
+      "filename": "cc.svg",
+      "reason": "No mapping found"
+    },
+    {
+      "filename": "cefta.svg",
+      "reason": "No mapping found"
+    },
+    {
+      "filename": "ch-4x3.svg",
+      "reason": "No mapping found"
+    },
+    {
+      "filename": "cp.svg",
+      "reason": "No mapping found"
+    },
+    {
+      "filename": "cx.svg",
+      "reason": "No mapping found"
+    },
+    {
+      "filename": "dg.svg",
+      "reason": "No mapping found"
+    },
+    {
+      "filename": "eac.svg",
+      "reason": "No mapping found"
+    },
+    {
+      "filename": "es-ct.svg",
+      "reason": "No mapping found"
+    },
+    {
+      "filename": "es-ga.svg",
+      "reason": "No mapping found"
+    },
+    {
+      "filename": "es-pv.svg",
+      "reason": "No mapping found"
+    },
+    {
+      "filename": "eu.svg",
+      "reason": "No mapping found"
+    },
+    {
+      "filename": "gb-eng.svg",
+      "reason": "No mapping found"
+    },
+    {
+      "filename": "gb-nir.svg",
+      "reason": "No mapping found"
+    },
+    {
+      "filename": "gb-sct.svg",
+      "reason": "No mapping found"
+    },
+    {
+      "filename": "gb-wls.svg",
+      "reason": "No mapping found"
+    },
+    {
+      "filename": "gf.svg",
+      "reason": "No mapping found"
+    },
+    {
+      "filename": "gi.svg",
+      "reason": "No mapping found"
+    },
+    {
+      "filename": "gp.svg",
+      "reason": "No mapping found"
+    },
+    {
+      "filename": "ic.svg",
+      "reason": "No mapping found"
+    },
+    {
+      "filename": "mq.svg",
+      "reason": "No mapping found"
+    },
+    {
+      "filename": "pc.svg",
+      "reason": "No mapping found"
+    },
+    {
+      "filename": "re.svg",
+      "reason": "No mapping found"
+    },
+    {
+      "filename": "sh-ac.svg",
+      "reason": "No mapping found"
+    },
+    {
+      "filename": "sh-hl.svg",
+      "reason": "No mapping found"
+    },
+    {
+      "filename": "sh-ta.svg",
+      "reason": "No mapping found"
+    },
+    {
+      "filename": "sj.svg",
+      "reason": "No mapping found"
+    },
+    {
+      "filename": "tk.svg",
+      "reason": "No mapping found"
+    },
+    {
+      "filename": "tv.svg",
+      "reason": "No mapping found"
+    },
+    {
+      "filename": "um.svg",
+      "reason": "No mapping found"
+    },
+    {
+      "filename": "un.svg",
+      "reason": "No mapping found"
+    },
+    {
+      "filename": "xx.svg",
+      "reason": "No mapping found"
+    },
+    {
+      "filename": "yt.svg",
+      "reason": "No mapping found"
+    }
+  ]
+}

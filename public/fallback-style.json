@@ -1,0 +1,43 @@
+{
+  "version": 8,
+  "name": "Fallback Style",
+  "sources": {
+    "openmaptiles": {
+      "type": "vector",
+      "url": "https://api.maptiler.com/tiles/v3/tiles.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL"
+    },
+    "natural-earth": {
+      "type": "vector",
+      "url": "https://tiles.stadiamaps.com/data/openmaptiles.json"
+    }
+  },
+  "layers": [
+    {
+      "id": "background",
+      "type": "background",
+      "paint": {
+        "background-color": "#f0f8ff"
+      }
+    },
+    {
+      "id": "countries-fill",
+      "type": "fill",
+      "source": "natural-earth",
+      "source-layer": "countries",
+      "paint": {
+        "fill-color": "#e6f3ff",
+        "fill-outline-color": "#4a90e2"
+      }
+    },
+    {
+      "id": "countries-stroke",
+      "type": "line",
+      "source": "natural-earth", 
+      "source-layer": "countries",
+      "paint": {
+        "line-color": "#4a90e2",
+        "line-width": 1
+      }
+    }
+  ]
+}

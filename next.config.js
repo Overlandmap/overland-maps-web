@@ -1,0 +1,32 @@
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: 'export',
+  trailingSlash: true,
+  images: {
+    unoptimized: true
+  },
+  // assetPrefix: process.env.NODE_ENV === 'production' ? '/static-firestore-webapp' : '',
+  // basePath: process.env.NODE_ENV === 'production' ? '/static-firestore-webapp' : '',
+  
+  // Custom webpack configuration for build-time data generation
+  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+    // Only run data generation during server-side build (not for client)
+    if (isServer && !dev) {
+      // Add a plugin to run data generation before the build completes
+      config.plugins.push(
+        new webpack.DefinePlugin({
+          'process.env.BUILD_TIME': JSON.stringify(new Date().toISOString()),
+        })
+      )
+    }
+    
+    return config
+  },
+  
+  // Environment variables to expose to the client
+  env: {
+    BUILD_TIME: process.env.BUILD_TIME || new Date().toISOString(),
+  },
+}
+
+module.exports = nextConfig
