@@ -11,8 +11,12 @@ const dataCache = new Map<string, any>()
 // Loading states to prevent duplicate requests
 const loadingStates = new Map<string, Promise<any>>()
 
-// Configuration
-const DATA_BASE_PATH = '/data'
+// Configuration - use absolute path with base path for subdirectory deployment
+function getDataBasePath(): string {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
+  return `${basePath}/data`
+}
+
 const CACHE_EXPIRY_MS = 5 * 60 * 1000 // 5 minutes
 const MAX_RETRY_ATTEMPTS = 3
 const RETRY_DELAY_MS = 1000
@@ -194,7 +198,7 @@ export async function loadCountryData(options?: LoadingOptions): Promise<{
   }
   
   // Load from static files (default behavior)
-  return loadDataWithRetry(`${DATA_BASE_PATH}/countries.json`, 'countries', options)
+  return loadDataWithRetry(`${getDataBasePath()}/countries.json`, 'countries', options)
 }
 
 /**
@@ -204,7 +208,7 @@ export async function loadBorderData(options?: LoadingOptions): Promise<{
   borders: BorderData[]
   metadata: any
 }> {
-  return loadDataWithRetry(`${DATA_BASE_PATH}/borders.json`, 'borders', options)
+  return loadDataWithRetry(`${getDataBasePath()}/borders.json`, 'borders', options)
 }
 
 /**
@@ -214,7 +218,7 @@ export async function loadISO3Lookup(options?: LoadingOptions): Promise<{
   lookup: ISO3Lookup
   metadata: any
 }> {
-  return loadDataWithRetry(`${DATA_BASE_PATH}/iso3-lookup.json`, 'iso3-lookup', options)
+  return loadDataWithRetry(`${getDataBasePath()}/iso3-lookup.json`, 'iso3-lookup', options)
 }
 
 /**
@@ -227,7 +231,7 @@ export async function loadBorderGeoJSON(
   const filename = optimized ? 'borders-optimized.geojson' : 'borders.geojson'
   const cacheKey = `geojson-${filename}`
   
-  return loadDataWithRetry(`${DATA_BASE_PATH}/${filename}`, cacheKey, {
+  return loadDataWithRetry(`${getDataBasePath()}/${filename}`, cacheKey, {
     ...options,
     timeout: 30000 // Longer timeout for potentially large GeoJSON files
   })
@@ -243,7 +247,7 @@ export async function loadBorderPostGeoJSON(
   const filename = optimized ? 'border-posts-optimized.geojson' : 'border-posts.geojson'
   const cacheKey = `geojson-${filename}`
   
-  return loadDataWithRetry(`${DATA_BASE_PATH}/${filename}`, cacheKey, {
+  return loadDataWithRetry(`${getDataBasePath()}/${filename}`, cacheKey, {
     ...options,
     timeout: 15000 // Border posts are smaller than borders
   })
@@ -387,7 +391,9 @@ export async function getBorderPostsByIds(
   
   try {
     // Fetch from Firestore API
-    const response = await fetch('/api/border-posts', {
+    // Note: This only works with a dynamic server, not static export
+    const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
+    const response = await fetch(`${basePath}/api/border-posts`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -411,7 +417,7 @@ export async function getBorderPostsByIds(
  * Load data manifest with build information
  */
 export async function loadDataManifest(options?: LoadingOptions): Promise<any> {
-  return loadDataWithRetry(`${DATA_BASE_PATH}/manifest.json`, 'manifest', options)
+  return loadDataWithRetry(`${getDataBasePath()}/manifest.json`, 'manifest', options)
 }
 
 /**
@@ -619,13 +625,13 @@ export async function checkDataAvailability(): Promise<{
   try {
     // Quick check - just try to fetch headers
     const promises = [
-      fetch(`${DATA_BASE_PATH}/countries.json`, { method: 'HEAD' }),
-      fetch(`${DATA_BASE_PATH}/borders.json`, { method: 'HEAD' }),
-      fetch(`${DATA_BASE_PATH}/border-posts.geojson`, { method: 'HEAD' }),
-      fetch(`${DATA_BASE_PATH}/iso3-lookup.json`, { method: 'HEAD' }),
-      fetch(`${DATA_BASE_PATH}/borders.geojson`, { method: 'HEAD' }),
-      fetch(`${DATA_BASE_PATH}/border-posts.geojson`, { method: 'HEAD' }),
-      fetch(`${DATA_BASE_PATH}/manifest.json`, { method: 'HEAD' })
+      fetch(`${getDataBasePath()}/countries.json`, { method: 'HEAD' }),
+      fetch(`${getDataBasePath()}/borders.json`, { method: 'HEAD' }),
+      fetch(`${getDataBasePath()}/border-posts.geojson`, { method: 'HEAD' }),
+      fetch(`${getDataBasePath()}/iso3-lookup.json`, { method: 'HEAD' }),
+      fetch(`${getDataBasePath()}/borders.geojson`, { method: 'HEAD' }),
+      fetch(`${getDataBasePath()}/border-posts.geojson`, { method: 'HEAD' }),
+      fetch(`${getDataBasePath()}/manifest.json`, { method: 'HEAD' })
     ]
     
     const results = await Promise.allSettled(promises)

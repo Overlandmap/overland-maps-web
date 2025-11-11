@@ -8,7 +8,8 @@
  * @returns The path to the flag SVG file
  */
 export function getFlagPath(adm0A3: string): string {
-  return `/flags/${adm0A3}.svg`
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
+  return `${basePath}/flags/${adm0A3}.svg`
 }
 
 /**

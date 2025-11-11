@@ -114,16 +114,19 @@ class MapManager {
     try {
       console.log('🔄 Adding GeoJSON sources and layers...')
       
+      // Get base path from environment for subdirectory deployment
+      const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
+      
       // Add countries GeoJSON source and layer
       this.map.addSource('countries', {
         type: 'geojson',
-        data: '/data/countries-merged.geojson'
+        data: `${basePath}/data/countries-merged.geojson`
       })
 
       // Add borders GeoJSON source and layer  
       this.map.addSource('borders', {
         type: 'geojson',
-        data: '/data/borders.geojson'
+        data: `${basePath}/data/borders.geojson`
       })
 
       console.log('✅ GeoJSON sources added')

@@ -240,22 +240,25 @@ export default function DetailSidebar({
             const borderPostIds = Object.keys(borderPostsField)
             console.log(`🔄 Loading ${borderPostIds.length} border posts for border`)
             
-            // Fetch border posts from Firestore
-            const { getBorderPostsByIds } = await import('../lib/data-loader')
-            const borderPostsData = await getBorderPostsByIds(borderPostIds)
+            // Load border posts from static GeoJSON file (works with static export)
+            const borderPostGeoJSON = await loadBorderPostGeoJSON(false)
             
-            const matchingBorderPosts = borderPostsData.map((borderPost: any) => ({
-              id: borderPost.id,
-              name: borderPost.name || 'Unnamed Border Post',
-              is_open: borderPost.is_open ?? -1,
-              comment: borderPost.comment,
-              geometry: borderPost.geometry,
-              coordinates: borderPost.location?._longitude && borderPost.location?._latitude 
-                ? [borderPost.location._longitude, borderPost.location._latitude]
-                : null
+            // Filter to only the border posts for this border
+            const matchingFeatures = borderPostGeoJSON.features.filter((feature: any) => 
+              borderPostIds.includes(feature.properties?.id)
+            )
+            
+            const matchingBorderPosts = matchingFeatures.map((feature: any) => ({
+              id: feature.properties.id,
+              name: feature.properties.name || 'Unnamed Border Post',
+              is_open: feature.properties.is_open ?? -1,
+              comment: feature.properties.comment,
+              countries: feature.properties.countries,
+              geometry: feature.geometry,
+              coordinates: feature.geometry?.type === 'Point' ? feature.geometry.coordinates : null
             }))
             
-            console.log(`✅ Loaded ${matchingBorderPosts.length} border posts`)
+            console.log(`✅ Loaded ${matchingBorderPosts.length} border posts from GeoJSON`)
             setBorderPosts(matchingBorderPosts)
           } catch (error) {
             console.error('Failed to load border posts:', error)
@@ -445,9 +448,10 @@ export default function DetailSidebar({
                 <div className="flex items-center justify-between">
                   <span className="text-sm font-medium text-gray-700">Overlanding Status</span>
                   <span className={`px-3 py-1 text-sm font-medium rounded-full ${
-                    countryData.parameters.overlanding === 1 ? 'bg-green-100 text-green-800' :
-                    countryData.parameters.overlanding === 2 ? 'bg-yellow-100 text-yellow-800' :
-                    countryData.parameters.overlanding === 3 ? 'bg-red-100 text-red-800' :
+                    countryData.parameters.overlanding === 3 ? 'bg-green-500 text-white' :
+                    countryData.parameters.overlanding === 2 ? 'bg-yellow-500 text-white' :
+                    countryData.parameters.overlanding === 1 ? 'bg-red-500 text-white' :
+                    countryData.parameters.overlanding === 0 ? 'bg-black text-white' :
                     'bg-gray-100 text-gray-800'
                   }`}>
                     {getTranslatedOverlandingStatus(countryData.parameters.overlanding, language)}
@@ -826,11 +830,9 @@ export default function DetailSidebar({
   if (!isOpen) return null
 
   return (
-    <div className={`fixed inset-y-0 right-0 w-96 bg-white shadow-xl z-50 transform transition-transform duration-300 ${className}`}>
-
-
+    <div className={`fixed inset-y-0 right-0 w-96 bg-white shadow-xl z-50 transform transition-transform duration-300 flex flex-col ${className}`}>
       {/* Content */}
-      <div className="flex-1 overflow-y-auto p-4 pt-4">
+      <div className="flex-1 overflow-y-auto p-4">
         {sidebarState.isLoading ? (
           <div className="flex items-center justify-center py-8">
             <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>

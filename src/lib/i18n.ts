@@ -34,15 +34,6 @@ export function getTranslatedCountryName(
   // Try to get translation from the translations object (check both locations)
   const translations = countryData.translations || countryData.parameters?.translations
   
-  // Debug logging
-  console.log('getTranslatedCountryName:', {
-    country: countryData.name,
-    language,
-    hasTranslations: !!translations,
-    availableLanguages: translations ? Object.keys(translations) : [],
-    requestedTranslation: translations?.[language]
-  })
-  
   if (translations && translations[language]) {
     return translations[language]
   }

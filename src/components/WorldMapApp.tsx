@@ -8,6 +8,7 @@ import { useLanguage } from '../contexts/LanguageContext'
 import { ColorSchemeProvider } from '../contexts/ColorSchemeContext'
 import SimpleMapContainer from './SimpleMapContainer'
 import DetailSidebar from './DetailSidebar'
+import { generateEntityUrl } from '../lib/url-utils'
 
 interface SelectedFeature {
   type: 'country' | 'border' | 'border-post'
@@ -68,7 +69,7 @@ export default function WorldMapApp({ initialCountry, initialBorder, initialBord
     if (iso3) {
       // Update URL without navigation (unless handling popstate)
       if (!isHandlingPopState) {
-        window.history.pushState({ type: 'country', id: iso3 }, '', `/country/${iso3}`)
+        window.history.pushState({ type: 'country', id: iso3 }, '', generateEntityUrl('country', iso3))
       }
       
       // Load country data if not provided
@@ -107,7 +108,7 @@ export default function WorldMapApp({ initialCountry, initialBorder, initialBord
     if (borderId) {
       // Update URL without navigation (unless handling popstate)
       if (!isHandlingPopState) {
-        window.history.pushState({ type: 'border', id: borderId }, '', `/border/${borderId}`)
+        window.history.pushState({ type: 'border', id: borderId }, '', generateEntityUrl('border', borderId))
       }
       
       // Load complete border data if needed
@@ -140,7 +141,7 @@ export default function WorldMapApp({ initialCountry, initialBorder, initialBord
     if (borderPostId) {
       // Update URL without navigation (unless handling popstate)
       if (!isHandlingPopState) {
-        window.history.pushState({ type: 'border-post', id: borderPostId }, '', `/border_post/${borderPostId}`)
+        window.history.pushState({ type: 'border-post', id: borderPostId }, '', generateEntityUrl('border_post', borderPostId))
       }
       
       // Use feature properties as border post data
@@ -185,7 +186,9 @@ export default function WorldMapApp({ initialCountry, initialBorder, initialBord
     setSelectedFeature(null)
     // Update URL to home (unless handling popstate)
     if (!isHandlingPopState) {
-      window.history.pushState({ type: 'home' }, '', '/')
+      const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
+      const homePath = basePath || '/'
+      window.history.pushState({ type: 'home' }, '', homePath)
     }
     // Clear map selection
     if (mapInteractions?.clearSelection) {
@@ -283,7 +286,12 @@ export default function WorldMapApp({ initialCountry, initialBorder, initialBord
       // Set flag to prevent pushState in handlers
       setIsHandlingPopState(true)
       
-      if (path === '/') {
+      // Get base path from environment
+      const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
+      const homePath = basePath || '/'
+      
+      // Check if we're at the home path (with or without base path)
+      if (path === homePath || path === '/' || path === basePath + '/') {
         // Back to home - close sidebar and clear selection
         setSidebarOpen(false)
         setSelectedFeature(null)
@@ -292,10 +300,13 @@ export default function WorldMapApp({ initialCountry, initialBorder, initialBord
         return
       }
 
+      // Remove base path from the pathname for matching
+      const pathWithoutBase = basePath ? path.replace(basePath, '') : path
+      
       // Parse the URL to determine what to load
-      const countryMatch = path.match(/^\/country\/([^\/]+)/)
-      const borderMatch = path.match(/^\/border\/([^\/]+)/)
-      const borderPostMatch = path.match(/^\/border_post\/([^\/]+)/)
+      const countryMatch = pathWithoutBase.match(/^\/country\/([^\/]+)/)
+      const borderMatch = pathWithoutBase.match(/^\/border\/([^\/]+)/)
+      const borderPostMatch = pathWithoutBase.match(/^\/border_post\/([^\/]+)/)
 
       if (countryMatch) {
         const countryCode = countryMatch[1]
@@ -382,8 +393,10 @@ export default function WorldMapApp({ initialCountry, initialBorder, initialBord
           setSidebarOpen(true)
         } else {
           // Fetch from API if no pre-loaded data
+          // Note: This only works with a dynamic server, not static export
           try {
-            const response = await fetch('/api/border-posts', {
+            const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
+            const response = await fetch(`${basePath}/api/border-posts`, {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({ ids: [initialBorderPost] })

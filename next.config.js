@@ -1,12 +1,16 @@
 /** @type {import('next').NextConfig} */
+// Read base path from environment variable
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 const nextConfig = {
   output: 'export',
   trailingSlash: true,
   images: {
     unoptimized: true
   },
-  // assetPrefix: process.env.NODE_ENV === 'production' ? '/static-firestore-webapp' : '',
-  // basePath: process.env.NODE_ENV === 'production' ? '/static-firestore-webapp' : '',
+  // Enable relative paths for subdirectory deployment
+  assetPrefix: basePath,
+  basePath: basePath,
   
   // Custom webpack configuration for build-time data generation
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
