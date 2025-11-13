@@ -2,7 +2,7 @@
  * Internationalization utilities for multi-language support
  */
 
-export type SupportedLanguage = 'en' | 'de' | 'es' | 'fr' | 'it' | 'ja' | 'ru' | 'zh'
+export type SupportedLanguage = 'en' | 'de' | 'es' | 'fr' | 'it' | 'ja' | 'nl' | 'ru' | 'zh'
 
 export interface LanguageInfo {
   code: SupportedLanguage
@@ -18,6 +18,7 @@ export const SUPPORTED_LANGUAGES: LanguageInfo[] = [
   { code: 'fr', name: 'French', nativeName: 'Français', flag: '🇫🇷' },
   { code: 'it', name: 'Italian', nativeName: 'Italiano', flag: '🇮🇹' },
   { code: 'ja', name: 'Japanese', nativeName: '日本語', flag: '🇯🇵' },
+  { code: 'nl', name: 'Dutch', nativeName: 'Nederlands', flag: '🇳🇱' },
   { code: 'ru', name: 'Russian', nativeName: 'Русский', flag: '🇷🇺' },
   { code: 'zh', name: 'Chinese', nativeName: '中文', flag: '🇨🇳' }
 ]
@@ -151,6 +152,12 @@ const BORDER_STATUS_TRANSLATIONS: Record<SupportedLanguage, Record<string, strin
     'open': 'Открыто',
     'unknown': 'Неизвестно'
   },
+  nl: {
+    'closed': 'Gesloten',
+    'dangerous': 'Gevaarlijk',
+    'open': 'Open',
+    'unknown': 'Onbekend'
+  },
   zh: {
     'closed': '关闭',
     'dangerous': '危险',
@@ -204,6 +211,13 @@ const OVERLANDING_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>
     'restricted': 'アクセス制限',
     'open': 'オープン',
     'unknown': '不明'
+  },
+  nl: {
+    'forbidden': 'Verboden',
+    'war_dangerous': 'Oorlog / Gevaarlijk',
+    'restricted': 'Beperkte toegang',
+    'open': 'Open',
+    'unknown': 'Onbekend'
   },
   ru: {
     'forbidden': 'Запрещено',
@@ -309,6 +323,12 @@ const CARNET_STATUS_TRANSLATIONS: Record<SupportedLanguage, Record<string, strin
     'not_required': '不要',
     'required_some': '一部の状況で必要',
     'required': '必須'
+  },
+  nl: {
+    'access_forbidden': 'Toegang verboden',
+    'not_required': 'Niet vereist',
+    'required_some': 'Vereist in sommige situaties',
+    'required': 'Verplicht'
   },
   ru: {
     'access_forbidden': 'Доступ запрещен',
@@ -570,6 +590,35 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'bilateral': '二国間',
     'restrictions_apply': '制限が適用されます',
     'temporary_closed': '一時閉鎖'
+  },
+  nl: {
+    'overlanding': 'Overlanding',
+    'carnet': 'Carnet',
+    'overlanding_status': 'Overlanding Status',
+    'carnet_requirements': 'Carnet Vereisten',
+    'border_status': 'Grens Status',
+    'open': 'Open',
+    'restricted_access': 'Beperkte toegang',
+    'war_dangerous': 'Oorlog / Gevaarlijk',
+    'forbidden': 'Verboden',
+    'unknown': 'Onbekend',
+    'not_required': 'Niet vereist',
+    'required_in_some_situations': 'Vereist in sommige situaties',
+    'mandatory': 'Verplicht',
+    'access_forbidden': 'Toegang verboden',
+    'restricted': 'Beperkt',
+    'closed': 'Gesloten',
+    'loading_map': 'Kaart laden...',
+    'visa': 'Visum',
+    'driving': 'Rijden',
+    'left': 'Links',
+    'right': 'Rechts',
+    'zoom_to_location': 'Zoom naar locatie',
+    'borders': 'Grenzen',
+    'border_posts': 'Grensposten',
+    'bilateral': 'Bilateraal',
+    'restrictions_apply': 'Beperkingen van toepassing',
+    'temporary_closed': 'Tijdelijk gesloten'
   },
   ru: {
     'overlanding': 'Оверлендинг',

@@ -4,7 +4,7 @@ import { useEffect, useRef, useState, useCallback } from 'react'
 import maplibregl from 'maplibre-gl'
 import { Protocol } from 'pmtiles'
 import 'maplibre-gl/dist/maplibre-gl.css'
-import LanguageSelector from './LanguageSelector'
+import TopMenu from './TopMenu'
 import { useLanguage } from '../contexts/LanguageContext'
 import { getTranslatedLabel } from '../lib/i18n'
 
@@ -654,9 +654,9 @@ export default function SimpleMapContainer({
         </div>
       )}
 
-      {/* Language Selector */}
+      {/* Top Menu (Language + User) */}
       <div className="absolute top-4 right-16 z-10">
-        <LanguageSelector />
+        <TopMenu />
       </div>
 
       <div className="absolute top-4 left-4 bg-white bg-opacity-95 rounded-lg shadow-lg z-10 max-w-xs">

@@ -1,149 +1,92 @@
 /**
- * Client-side Firebase configuration for browser operations
- * Used for real-time updates to Firestore from the web app
+ * Firebase Client SDK Configuration
+ * Handles client-side Firebase initialization and authentication
  */
 
-/**
- * Client-side Firebase operations using server-side API endpoints
- * This approach uses the admin SDK on the server for secure database operations
- */
+import { initializeApp, getApps, FirebaseApp } from 'firebase/app'
+import { 
+  getAuth, 
+  signInAnonymously, 
+  signInWithEmailAndPassword,
+  signOut as firebaseSignOut,
+  onAuthStateChanged,
+  User,
+  Auth
+} from 'firebase/auth'
+
+// Firebase configuration from environment variables
+const firebaseConfig = {
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
+}
+
+// Initialize Firebase
+let app: FirebaseApp
+let auth: Auth
+
+if (typeof window !== 'undefined') {
+  app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0]
+  auth = getAuth(app)
+}
 
 /**
- * Update a country's overlanding status using server-side API and return updated data
+ * Sign in anonymously
  */
-export async function updateCountryOverlanding(countryId: string, overlanding: number): Promise<any> {
+export async function signInAnonymous(): Promise<User> {
   try {
-    console.log(`🔄 Updating overlanding status for ${countryId} to ${overlanding} via API`)
-    
-    const response = await fetch('/api/update-country', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        countryId,
-        field: 'overlanding',
-        value: overlanding
-      })
-    })
-    
-    if (!response.ok) {
-      const errorData = await response.json().catch(() => ({ error: 'Unknown error' }))
-      throw new Error(`API Error (${response.status}): ${errorData.error || errorData.details || 'Failed to update'}`)
-    }
-    
-    const result = await response.json()
-    
-    if (!result.success) {
-      throw new Error(result.error || 'Update failed')
-    }
-    
-    console.log(`✅ Successfully updated overlanding status for ${countryId} via API`)
-    return result.data
-    
+    const result = await signInAnonymously(auth)
+    console.log('✅ Signed in anonymously:', result.user.uid)
+    return result.user
   } catch (error) {
-    console.error(`❌ Failed to update overlanding status for ${countryId}:`, error)
-    
-    // Enhance error with context
-    if (error instanceof Error) {
-      const enhancedError = new Error(`Failed to update overlanding for country ${countryId}: ${error.message}`)
-      // Add original error info to the enhanced error
-      ;(enhancedError as any).originalError = error
-      throw enhancedError
-    }
-    
+    console.error('❌ Anonymous sign-in failed:', error)
     throw error
   }
 }
 
 /**
- * Update any field in a country document
+ * Sign in with email and password
  */
-export async function updateCountryField(
-  countryId: string, 
-  field: string, 
-  value: any
-): Promise<any> {
+export async function signInWithEmail(email: string, password: string): Promise<User> {
   try {
-    console.log(`🔄 Updating ${field} for ${countryId} to ${value} via API`)
-    
-    const response = await fetch('/api/update-country', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        countryId,
-        field,
-        value
-      })
-    })
-    
-    if (!response.ok) {
-      const errorData = await response.json().catch(() => ({ error: 'Unknown error' }))
-      throw new Error(`API Error (${response.status}): ${errorData.error || errorData.details || 'Failed to update'}`)
-    }
-    
-    const result = await response.json()
-    
-    if (!result.success) {
-      throw new Error(result.error || 'Update failed')
-    }
-    
-    console.log(`✅ Successfully updated ${field} for ${countryId} via API`)
-    return result.data
-    
+    const result = await signInWithEmailAndPassword(auth, email, password)
+    console.log('✅ Signed in with email:', result.user.email)
+    return result.user
   } catch (error) {
-    console.error(`❌ Failed to update ${field} for ${countryId}:`, error)
+    console.error('❌ Email sign-in failed:', error)
     throw error
   }
 }
-
-
 
 /**
- * Update a border's status using server-side API and return updated data
+ * Sign out
  */
-export async function updateBorderStatus(borderId: string, isOpen: number): Promise<any> {
+export async function signOut(): Promise<void> {
   try {
-    console.log(`🔄 Updating border status for ${borderId} to ${isOpen} via API`)
-    
-    const response = await fetch('/api/update-border', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        borderId,
-        field: 'is_open',
-        value: isOpen
-      })
-    })
-    
-    if (!response.ok) {
-      const errorData = await response.json().catch(() => ({ error: 'Unknown error' }))
-      throw new Error(`API Error (${response.status}): ${errorData.error || errorData.details || 'Failed to update'}`)
-    }
-    
-    const result = await response.json()
-    
-    if (!result.success) {
-      throw new Error(result.error || 'Update failed')
-    }
-    
-    console.log(`✅ Successfully updated border status for ${borderId} via API`)
-    return result.data
-    
+    await firebaseSignOut(auth)
+    console.log('✅ Signed out')
   } catch (error) {
-    console.error(`❌ Failed to update border status for ${borderId}:`, error)
-    
-    // Enhance error with context
-    if (error instanceof Error) {
-      const enhancedError = new Error(`Failed to update border status for ${borderId}: ${error.message}`)
-      ;(enhancedError as any).originalError = error
-      throw enhancedError
-    }
-    
+    console.error('❌ Sign-out failed:', error)
     throw error
   }
 }
+
+/**
+ * Subscribe to auth state changes
+ */
+export function onAuthChange(callback: (user: User | null) => void): () => void {
+  return onAuthStateChanged(auth, callback)
+}
+
+/**
+ * Get current user
+ */
+export function getCurrentUser(): User | null {
+  return auth?.currentUser || null
+}
+
+export { auth }
