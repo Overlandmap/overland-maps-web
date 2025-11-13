@@ -1,7 +1,0 @@
-{
-  "/page": "app/page.js",
-  "/country/[code]/page": "app/country/[code]/page.js",
-  "/border/[id]/page": "app/border/[id]/page.js",
-  "/api/border-posts/route": "app/api/border-posts/route.js",
-  "/border_post/[id]/page": "app/border_post/[id]/page.js"
-}
