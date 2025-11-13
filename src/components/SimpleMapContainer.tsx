@@ -46,7 +46,7 @@ export default function SimpleMapContainer({
   // Clear all highlights function
   const clearAllHighlights = useCallback(() => {
     if (!map.current) return
-    
+
     console.log('🧹 Clearing all highlights')
     // Clear border highlights
     if (map.current.getLayer('border-highlight')) {
@@ -65,7 +65,7 @@ export default function SimpleMapContainer({
   // Highlighting functions
   const highlightBorder = useCallback((borderId: string) => {
     if (!map.current || !borderId) return
-    
+
     console.log('🎯 Highlighting border:', borderId)
     // Clear all other highlights first
     clearAllHighlights()
@@ -77,7 +77,7 @@ export default function SimpleMapContainer({
 
   const highlightCountry = useCallback((countryId: string) => {
     if (!map.current || !countryId) return
-    
+
     console.log('🎯 Highlighting country:', countryId)
     // Clear all other highlights first
     clearAllHighlights()
@@ -95,7 +95,7 @@ export default function SimpleMapContainer({
 
   const highlightBorderPost = useCallback((borderPostId: string) => {
     if (!map.current || !borderPostId) return
-    
+
     console.log('🎯 Highlighting border post:', borderPostId)
     // Clear all other highlights first
     clearAllHighlights()
@@ -133,7 +133,7 @@ export default function SimpleMapContainer({
 
     const features = map.current.queryRenderedFeatures(e.point)
     console.log('🖱️ Map clicked at:', e.lngLat, 'features found:', features.length)
-    
+
     // Look for border post features FIRST (highest priority - smallest targets)
     const borderPostFeature = features.find(f => f.source === 'country-border' && f.sourceLayer === 'border_post')
     if (borderPostFeature) {
@@ -195,11 +195,11 @@ export default function SimpleMapContainer({
     const r = parseInt(hex.substr(0, 2), 16)
     const g = parseInt(hex.substr(2, 2), 16)
     const b = parseInt(hex.substr(4, 2), 16)
-    
+
     const darkenedR = Math.floor(r * 0.7)
     const darkenedG = Math.floor(g * 0.7)
     const darkenedB = Math.floor(b * 0.7)
-    
+
     return `#${darkenedR.toString(16).padStart(2, '0')}${darkenedG.toString(16).padStart(2, '0')}${darkenedB.toString(16).padStart(2, '0')}`
   }
 
@@ -265,10 +265,10 @@ export default function SimpleMapContainer({
 
   // Generate darker version of color expression for highlights
   const generateDarkerColorExpression = useCallback((scheme: ColorScheme) => {
-    const baseExpression = scheme === 'overlanding' 
+    const baseExpression = scheme === 'overlanding'
       ? generateOverlandingColorExpression()
       : generateCarnetColorExpression()
-    
+
     // Create a darker version by applying darken function to each color
     const darkerExpression = [...baseExpression]
     for (let i = 0; i < darkerExpression.length; i++) {
@@ -292,20 +292,20 @@ export default function SimpleMapContainer({
       return
     }
 
-    const colorExpression = scheme === 'overlanding' 
+    const colorExpression = scheme === 'overlanding'
       ? generateOverlandingColorExpression()
       : generateCarnetColorExpression()
-    
+
     const darkerColorExpression = generateDarkerColorExpression(scheme)
-    
+
     try {
       map.current.setPaintProperty('country', 'fill-color', colorExpression as any)
-      
+
       // Update highlight layer with darker colors
       if (map.current.getLayer('countries-highlight')) {
         map.current.setPaintProperty('countries-highlight', 'fill-color', darkerColorExpression as any)
       }
-      
+
       console.log(`🎨 Map colors updated to ${scheme} scheme`)
     } catch (error) {
       console.error('❌ Failed to update map colors:', error)
@@ -316,7 +316,7 @@ export default function SimpleMapContainer({
   const handleColorSchemeChange = useCallback((scheme: ColorScheme) => {
     console.log(`🔄 Changing color scheme to: ${scheme}`)
     setColorScheme(scheme)
-    
+
     // Only update colors if map is loaded
     if (isLoaded) {
       updateMapColors(scheme)
@@ -374,9 +374,9 @@ export default function SimpleMapContainer({
   // Toggle border posts layer visibility
   useEffect(() => {
     if (!map.current || !isLoaded) return
-    
+
     const visibility = showBorderPosts ? 'visible' : 'none'
-    
+
     if (map.current.getLayer('border_post')) {
       map.current.setLayoutProperty('border_post', 'visibility', visibility)
     }
@@ -396,30 +396,19 @@ export default function SimpleMapContainer({
       maplibregl.addProtocol('pmtiles', protocol.tile)
       console.log('✅ PMTiles protocol registered')
 
+      // Load style from JSON file based on language
+      const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
+      // Supported languages with translation files
+      const supportedLanguages = ['en', 'fr', 'de', 'es', 'pt', 'it', 'nl', 'ru']
+      // Use default basemap.json for unsupported languages (e.g., Chinese)
+      const languageSuffix = supportedLanguages.includes(language) && language !== 'en' ? `-${language}` : ''
+      const styleUrl = `${basePath}/styles/basemap${languageSuffix}.json`
+
+      console.log('📄 Loading style from:', styleUrl, 'for language:', language)
+
       map.current = new maplibregl.Map({
         container: mapContainer.current,
-        style: {
-          version: 8,
-          sources: {
-            'osm': {
-              type: 'raster',
-              tiles: ['https://tile.openstreetmap.org/{z}/{x}/{y}.png'],
-              tileSize: 256,
-              attribution: '© OpenStreetMap contributors'
-            },
-            'country-border': {
-              type: 'vector',
-              url: 'pmtiles://https://overlanding.io/country-borders.pmtiles'
-            }
-          },
-          layers: [
-            {
-              id: 'osm',
-              type: 'raster',
-              source: 'osm'
-            }
-          ]
-        },
+        style: styleUrl,
         center: [0, 20],
         zoom: 2,
         maxZoom: 18
@@ -429,7 +418,7 @@ export default function SimpleMapContainer({
 
       map.current.on('load', () => {
         console.log('✅ Simple map loaded')
-        
+
         // Call onMapReady with map interactions BEFORE setting isLoaded
         // This ensures the interactions are available before any effects that depend on isLoaded
         if (onMapReady) {
@@ -443,11 +432,17 @@ export default function SimpleMapContainer({
           console.log('🔄 Calling onMapReady with interactions:', Object.keys(interactions))
           onMapReady(interactions)
         }
-        
+
         setIsLoaded(true)
-        
-        // Add layers from PMTiles
+
+        // Add country-border source from PMTiles
         if (map.current) {
+          console.log('➕ Adding country-border source')
+          map.current.addSource('country-border', {
+            type: 'vector',
+            url: 'pmtiles://https://overlanding.io/country-borders.pmtiles'
+          })
+
           // Add country layer (bottom layer)
           map.current.addLayer({
             id: 'country',
@@ -543,7 +538,7 @@ export default function SimpleMapContainer({
           })
 
           console.log('✅ PMTiles layers added: country, border, border_post')
-          
+
           // Add highlight layers (on top of regular layers)
           // Country highlight layer - darker version of base color for selected countries
           map.current.addLayer({
@@ -588,20 +583,20 @@ export default function SimpleMapContainer({
           })
 
           console.log('✅ Highlight layers added: countries-highlight, border-highlight, border-post-highlight')
-          
+
           // Add click handler
           map.current.on('click', handleMapClick)
-          
+
           // Add cursor pointer for clickable layers
           const clickableLayers = ['country', 'border', 'border_post']
-          
+
           clickableLayers.forEach(layerId => {
             // Change cursor to pointer when hovering over clickable features
             map.current!.on('mouseenter', layerId, (e) => {
               console.log(`🖱️ Mouse entered ${layerId}:`, e.features?.[0]?.properties)
               map.current!.getCanvas().style.cursor = 'pointer'
             })
-            
+
             // Change cursor back to default when leaving clickable features
             map.current!.on('mouseleave', layerId, (e) => {
               console.log(`🖱️ Mouse left ${layerId}`)
@@ -623,12 +618,13 @@ export default function SimpleMapContainer({
 
     return () => {
       if (map.current) {
-        console.log('🧹 Cleaning up simple map')
+        console.log('🧹 Cleaning up simple map for language change')
         map.current.remove()
         map.current = null
+        setIsLoaded(false)
       }
     }
-  }, [generateOverlandingColorExpression, handleMapClick])
+  }, [language, clearAllHighlights, generateOverlandingColorExpression, handleMapClick, highlightBorder, highlightBorderPost, highlightCountry, onMapReady, zoomToLocation])
 
   if (error) {
     return (
@@ -644,7 +640,7 @@ export default function SimpleMapContainer({
   return (
     <div className={`${className} relative`}>
       <div ref={mapContainer} className="w-full h-full" />
-      
+
       {!isLoaded && (
         <div className="absolute inset-0 bg-gray-100 flex items-center justify-center">
           <div className="text-center">
@@ -666,30 +662,28 @@ export default function SimpleMapContainer({
             <div className="flex space-x-1 mb-3">
               <button
                 onClick={() => handleColorSchemeChange('overlanding')}
-                className={`px-3 py-1 text-xs rounded transition-colors ${
-                  colorScheme === 'overlanding'
-                    ? 'bg-blue-600 text-white'
-                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                }`}
+                className={`px-3 py-1 text-xs rounded transition-colors ${colorScheme === 'overlanding'
+                  ? 'bg-blue-600 text-white'
+                  : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                  }`}
               >
                 {getTranslatedLabel('overlanding', language)}
               </button>
               <button
                 onClick={() => handleColorSchemeChange('carnet')}
-                className={`px-3 py-1 text-xs rounded transition-colors ${
-                  colorScheme === 'carnet'
-                    ? 'bg-blue-600 text-white'
-                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                }`}
+                className={`px-3 py-1 text-xs rounded transition-colors ${colorScheme === 'carnet'
+                  ? 'bg-blue-600 text-white'
+                  : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                  }`}
               >
                 {getTranslatedLabel('carnet', language)}
               </button>
             </div>
-            
+
             <h3 className="text-sm font-semibold mb-2">
               {colorScheme === 'overlanding' ? 'Overlanding' : 'Carnet de passage en Douane (CpD)'}
             </h3>
-            
+
             <div className="space-y-1 text-xs">
               {colorScheme === 'overlanding' ? (
                 <>
@@ -732,7 +726,7 @@ export default function SimpleMapContainer({
               )}
             </div>
           </div>
-          
+
           {colorScheme === 'overlanding' && (
             <>
               <div>
@@ -752,7 +746,7 @@ export default function SimpleMapContainer({
                   </div>
                 </div>
               </div>
-              
+
               <div className="mt-4">
                 <div className="flex items-center mb-2">
                   <label className="relative inline-flex items-center cursor-pointer">

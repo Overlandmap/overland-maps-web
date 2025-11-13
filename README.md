@@ -128,9 +128,51 @@ overlanding-maps/
 - **Language**: TypeScript 5
 - **Styling**: Tailwind CSS 3
 - **Mapping**: MapLibre GL JS 4
+- **Base Map**: Custom style from `public/styles/basemap.json`
 - **Database**: Firebase Firestore (read-only)
 - **Map Format**: PMTiles, GeoJSON
 - **Build Tools**: PostCSS, Autoprefixer
+
+### Map Configuration
+
+The map uses custom MapLibre styles with multi-language support:
+
+**Base Map Styles:**
+- `public/styles/basemap.json` - English (default, uses `{name}`)
+- `public/styles/basemap-fr.json` - French (uses `{name_fr}`)
+- `public/styles/basemap-de.json` - German (uses `{name_de}`)
+- `public/styles/basemap-es.json` - Spanish (uses `{name_es}`)
+- `public/styles/basemap-pt.json` - Portuguese (uses `{name_pt}`)
+- `public/styles/basemap-it.json` - Italian (uses `{name_it}`)
+- `public/styles/basemap-nl.json` - Dutch (uses `{name_nl}`)
+- `public/styles/basemap-ru.json` - Russian (uses `{name_ru}`)
+
+The map automatically reloads with the appropriate language style when the user changes the language. For languages without a specific translation file (e.g., Chinese), the default `basemap.json` is used as a fallback. Each style file includes:
+- Base map layers from PMTiles vector tiles
+- Custom styling for roads, water, landuse, etc.
+- Sprite and glyph configurations
+- Language-specific name fields
+
+The country borders, overlanding data, and border posts are loaded from a separate PMTiles source (`country-borders.pmtiles`) and layered on top of the base map.
+
+**To add a new language:**
+```bash
+cat public/styles/basemap.json | sed 's/{name}/{name_LANG}/g' > public/styles/basemap-LANG.json
+```
+Replace `LANG` with your language code (e.g., `it` for Italian).
+
+### Common Installation Warnings
+
+When running `npm install`, you may see deprecation warnings. These are from transitive dependencies (dependencies of your dependencies) and are safe to ignore:
+
+```
+npm warn deprecated eslint@8.57.1: This version is no longer supported
+npm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
+npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+```
+
+These warnings will be resolved when Next.js and eslint-config-next update their dependencies. The application will work perfectly fine with these warnings present.
 
 ### Troubleshooting
 
