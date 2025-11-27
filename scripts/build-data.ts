@@ -234,16 +234,19 @@ class DataBuildPipeline {
     // Generate country JSON
     this.generator.generateCountryJSON(processedCountries)
     
-    // Generate border JSON
+    // Generate border JSON (for routes only - data loaded from Firestore)
     this.generator.generateBorderJSON(processedBorders)
     
-    // Generate border GeoJSON
+    // Generate border GeoJSON (for PMTiles generation)
     const borderGeoJSON = this.processor.generateBorderGeoJSON(processedBorders)
     this.generator.generateBorderGeoJSONFiles(borderGeoJSON)
     
     // Generate border post GeoJSON
     const borderPostGeoJSON = this.processor.generateBorderPostGeoJSON(processedBorderPosts)
     this.generator.generateBorderPostGeoJSONFiles(borderPostGeoJSON)
+    
+    // Generate border post JSON (without geography, for detail lookups)
+    this.generator.generateBorderPostJSONFile(processedBorderPosts)
     
     // Generate ISO3 lookup
     this.generator.generateISO3LookupJSON(iso3Lookup)

@@ -1,50 +1,46 @@
 {
-  "generatedAt": "2025-11-10T19:39:51.008Z",
+  "generatedAt": "2025-11-27T16:59:43.666Z",
   "version": "1.1.0",
   "files": {
     "countries.json": {
       "description": "Country data with parameters and border references",
       "recordCount": 242,
-      "sizeEstimate": "189 KB"
+      "sizeEstimate": "159 KB"
     },
     "borders.json": {
-      "description": "Border metadata without full geometry",
-      "recordCount": 336,
-      "sizeEstimate": "2.1 MB"
+      "description": "Border metadata for route generation only (data loaded from Firestore)",
+      "recordCount": 334,
+      "sizeEstimate": "2.2 MB",
+      "note": "Border details are always loaded from Firestore, not from static files"
     },
-    "borders.geojson": {
-      "description": "Full border geometries as GeoJSON FeatureCollection",
-      "featureCount": 336,
-      "sizeEstimate": "Large - contains full geometry data"
-    },
-    "borders-optimized.geojson": {
-      "description": "Optimized border geometries with reduced precision",
-      "featureCount": 336,
-      "sizeEstimate": "Medium - optimized for web display"
+    "border-posts.json": {
+      "description": "Border post details without geographic data (for lookups)",
+      "recordCount": 246,
+      "sizeEstimate": "153 KB"
     },
     "border-posts.geojson": {
       "description": "Border crossing posts as Point features",
-      "featureCount": 124,
+      "featureCount": 246,
       "sizeEstimate": "Small - Point geometries with status data"
     },
     "border-posts-optimized.geojson": {
       "description": "Optimized border post Point features",
-      "featureCount": 124,
+      "featureCount": 246,
       "sizeEstimate": "Small - optimized Point features"
     },
     "iso3-lookup.json": {
       "description": "ISO A3 code to country data lookup table",
-      "mappingCount": 240,
-      "sizeEstimate": "189 KB"
+      "mappingCount": 0,
+      "sizeEstimate": "0 KB"
     }
   },
   "statistics": {
     "totalCountries": 242,
-    "countriesWithIso3": 240,
-    "totalBorders": 336,
-    "bordersWithGeometry": 336,
-    "totalBorderPosts": 124,
-    "borderPostsWithGeometry": 124,
-    "iso3Mappings": 240
+    "countriesWithIso3": 0,
+    "totalBorders": 334,
+    "bordersWithGeometry": 334,
+    "totalBorderPosts": 246,
+    "borderPostsWithGeometry": 246,
+    "iso3Mappings": 0
   }
 }

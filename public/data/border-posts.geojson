@@ -6,20 +6,48 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          53.382564,
+          51.492998
+        ]
+      },
+      "properties": {
+        "id": "0D59FyxuYkD04aYvxD4v",
+        "is_open": 2,
+        "name": "Ilek / Aksay",
+        "location": {
+          "_latitude": 51.492998,
+          "_longitude": 53.382564
+        },
+        "countries": "RUS-KAZ",
+        "createdat": {
+          "_seconds": 1764172688,
+          "_nanoseconds": 701000000
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           35.5409112,
           31.8738717
         ]
       },
       "properties": {
         "id": "0OWDO48nJ8OqAdSiNquA",
-        "is_open": 1,
-        "name": "Allenby Bridge",
+        "is_open": 3,
+        "comment": "Only pedestrians (and bicycles) are allowed to cross, no motor vehicles.\nIf you'd like to visit Israel from Jordan, this is worth knowing:\nThis border is controlled by the Israelis, but they stamp you on a separate piece of paper, and on the Syrian side they don't stamp you out, so if you come back to Syria using this same border post, there will be no trace of your visit to Israel in your passport (which is important for some countries such as Iran or Sudan).",
         "countries": "JOR-PSX",
         "location": {
           "_latitude": 31.8738717,
           "_longitude": 35.5409112
         },
-        "comment": "Only pedestrians (and bicycles) are allowed to cross, no motor vehicles.\nIf you'd like to visit Israel from Jordan, this is worth knowing:\nThis border is controlled by the Israelis, but they stamp you on a separate piece of paper, and on the Syrian side they don't stamp you out, so if you come back to Syria using this same border post, there will be no trace of your visit to Israel in your passport (which is important for some countries such as Iran or Sudan)."
+        "name": "Allenby Bridge",
+        "updatedat": {
+          "_seconds": 1764257220,
+          "_nanoseconds": 766000000
+        }
       }
     },
     {
@@ -34,11 +62,59 @@
       "properties": {
         "id": "0mHxm75uJtqlK8XPSinT",
         "is_open": 2,
-        "name": "Jogbani/Biratnagar",
         "countries": "IND-NPL",
         "location": {
           "_latitude": 26.4026803,
           "_longitude": 87.2657375
+        },
+        "name": "Jogbani/Biratnagar"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          22.590262,
+          55.059774
+        ]
+      },
+      "properties": {
+        "id": "0ne78yZOO0KQI1mSyCLq",
+        "is_open": 1,
+        "name": "Pogranichnyy / Ramonishkyay",
+        "location": {
+          "_latitude": 55.059774,
+          "_longitude": 22.590262
+        },
+        "countries": "LTU-RUS",
+        "createdat": {
+          "_seconds": 1764171462,
+          "_nanoseconds": 100000000
+        },
+        "updatedat": {
+          "_seconds": 1764171462,
+          "_nanoseconds": 100000000
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          71.5775203,
+          36.7471011
+        ]
+      },
+      "properties": {
+        "id": "0q7EOL1JJVvB9RsygGGb",
+        "is_open": 1,
+        "name": "Ishkashim",
+        "countries": "TJK-AFG",
+        "location": {
+          "_latitude": 36.7471011,
+          "_longitude": 71.5775203
         }
       }
     },
@@ -54,12 +130,12 @@
       "properties": {
         "id": "0v4FWzEZCR51TGxHlQeR",
         "is_open": 1,
-        "name": "Al Buraimi south",
         "countries": "OMN-ARE",
         "location": {
           "_latitude": 24.233134,
           "_longitude": 55.7696578
-        }
+        },
+        "name": "Al Buraimi south"
       }
     },
     {
@@ -74,13 +150,33 @@
       "properties": {
         "id": "1T7RELzq01PoJ8RABPHg",
         "is_open": 2,
+        "comment": "Note: UAE demands 125 AED to stamp the carnet, all other border posts between Oman and UAE are free.",
         "countries": "ARE-OMN",
         "location": {
           "_latitude": 24.8074753,
           "_longitude": 56.201921
         },
-        "comment": "Note: UAE demands 125 AED to stamp the carnet, all other border posts between Oman and UAE are free.",
         "name": "Hatta-Al Wajajajh"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          61.8212714,
+          30.9681395
+        ]
+      },
+      "properties": {
+        "id": "1otZHxYJ3H4QMm4RnmOO",
+        "is_open": 2,
+        "name": "Milak / Zaranj",
+        "countries": "IRN-AFG",
+        "location": {
+          "_latitude": 30.9681395,
+          "_longitude": 61.8212714
+        }
       }
     },
     {
@@ -95,12 +191,12 @@
       "properties": {
         "id": "2yz20xWyfpI7Utb8EGuB",
         "is_open": 1,
-        "name": "Baqti/Tacheng",
         "countries": "KAZ-CHN",
         "location": {
           "_latitude": 46.6811085,
           "_longitude": 82.7872368
-        }
+        },
+        "name": "Baqti/Tacheng"
       }
     },
     {
@@ -115,12 +211,12 @@
       "properties": {
         "id": "38ZOj7LUxiNLlyeXUTXg",
         "is_open": 0,
-        "name": "Ergneti",
         "countries": "GEO-SOS",
         "location": {
           "_latitude": 42.2084978,
           "_longitude": 43.9893639
-        }
+        },
+        "name": "Ergneti"
       }
     },
     {
@@ -135,13 +231,36 @@
       "properties": {
         "id": "42XM8ThVjtU8iy8sAZH4",
         "is_open": 3,
-        "name": "Taba",
         "countries": "ISR-EGY",
         "location": {
           "_latitude": 29.4909641,
           "_longitude": 34.90283
         },
-        "comment": "No guarantee you can pass. Sinai has been closed for a long time. \nNote: motorbikes are forbidden in Sinai."
+        "comment": "No guarantee you can pass. Sinai has been closed for a long time. \nNote: motorbikes and 4x4 are forbidden in Sinai.",
+        "updatedat": {
+          "_seconds": 1764257255,
+          "_nanoseconds": 54000000
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          60.8718371,
+          32.1603686
+        ]
+      },
+      "properties": {
+        "id": "4EFdAphZAfvE4Yjep0Im",
+        "is_open": 2,
+        "name": "Mahirood / Abu Nasr Farahi",
+        "countries": "IRN-AFG",
+        "location": {
+          "_latitude": 32.1603686,
+          "_longitude": 60.8718371
+        }
       }
     },
     {
@@ -156,11 +275,35 @@
       "properties": {
         "id": "4IN2EHXcwDNmPLoYwnBw",
         "is_open": 2,
-        "name": "Salmi/Raqi",
         "countries": "SAU-KWT",
         "location": {
           "_latitude": 29.0658526,
           "_longitude": 46.6388619
+        },
+        "name": "Salmi/Raqi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.387415,
+          57.644615
+        ]
+      },
+      "properties": {
+        "id": "4NRxGzvJmVZ7At4THkAa",
+        "is_open": 2,
+        "name": "Shumilkino / Lukhamaa",
+        "location": {
+          "_latitude": 57.644615,
+          "_longitude": 27.387415
+        },
+        "countries": "RUS-EST",
+        "createdat": {
+          "_seconds": 1764172634,
+          "_nanoseconds": 418000000
         }
       }
     },
@@ -176,12 +319,12 @@
       "properties": {
         "id": "4WKgm87fSpCEJq2ifDqn",
         "is_open": 1,
-        "name": "Al Buraimi north",
         "countries": "OMN-ARE",
         "location": {
           "_latitude": 24.2620696,
           "_longitude": 55.7669767
-        }
+        },
+        "name": "Al Buraimi north"
       }
     },
     {
@@ -196,11 +339,71 @@
       "properties": {
         "id": "4efAqT6ljDDWKvPio4VZ",
         "is_open": 2,
-        "name": "Haji Omaran",
         "countries": "IRN-IRQ",
         "location": {
           "_latitude": 36.665452,
           "_longitude": 45.0682256
+        },
+        "name": "Haji Omaran"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          67.4225795,
+          37.2376712
+        ]
+      },
+      "properties": {
+        "id": "4fpi7SjPS9ssU8n0Oakr",
+        "is_open": 2,
+        "name": "Termez / Hairatan",
+        "countries": "UZB-AFG",
+        "location": {
+          "_latitude": 37.2376712,
+          "_longitude": 67.4225795
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          67.7971477,
+          37.1892876
+        ]
+      },
+      "properties": {
+        "id": "5IdfDFZkoTDoD6o2Ncpc",
+        "is_open": 2,
+        "countries": "TJK-UZB",
+        "location": {
+          "_latitude": 37.1892876,
+          "_longitude": 67.7971477
+        },
+        "name": "Gulbakhor / Ayvanch"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          61.0035837,
+          34.7086542
+        ]
+      },
+      "properties": {
+        "id": "5OEqJ8yyK6nBey2vB8kO",
+        "is_open": 2,
+        "name": "Islam Qala / Taybad",
+        "countries": "IRN-AFG",
+        "location": {
+          "_latitude": 34.7086542,
+          "_longitude": 61.0035837
         }
       }
     },
@@ -216,12 +419,12 @@
       "properties": {
         "id": "65hnzm2e31YFmrB4yvxj",
         "is_open": 2,
-        "name": "Jaber",
         "countries": "JOR-SYR",
         "location": {
           "_latitude": 32.53057,
           "_longitude": 36.2006898
-        }
+        },
+        "name": "Jaber"
       }
     },
     {
@@ -236,11 +439,31 @@
       "properties": {
         "id": "6DSBFMBXMUgFCs27hh05",
         "is_open": 2,
-        "name": "Al Batha-Ghuwaifat",
         "countries": "SAU-ARE",
         "location": {
           "_latitude": 24.1263907,
           "_longitude": 51.5744166
+        },
+        "name": "Al Batha-Ghuwaifat"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.3939088,
+          40.5516953
+        ]
+      },
+      "properties": {
+        "id": "6jaLvdcjsTLpyZptPC2g",
+        "is_open": 2,
+        "name": "Torugart",
+        "countries": "KGZ-CHN",
+        "location": {
+          "_latitude": 40.5516953,
+          "_longitude": 75.3939088
         }
       }
     },
@@ -256,12 +479,12 @@
       "properties": {
         "id": "6pfPA1T0kDczZ73LcUOy",
         "is_open": 2,
-        "name": "Shushami",
         "countries": "IRN-IRQ",
         "location": {
           "_latitude": 35.181072,
           "_longitude": 46.181048
-        }
+        },
+        "name": "Shushami"
       }
     },
     {
@@ -276,12 +499,12 @@
       "properties": {
         "id": "71IFvAGyGqkQeEHHhrIc",
         "is_open": 1,
+        "comment": "Gives acces to Nakchivan enclave. Azerbaijan has closed its land borders since COVID.",
         "countries": "TUR-AZE",
         "location": {
           "_latitude": 39.6543628,
           "_longitude": 44.7998079
         },
-        "comment": "Gives acces to Nakchivan enclave. Azerbaijan has closed its land borders since COVID.",
         "name": "Sadarak/Dilicu"
       }
     },
@@ -297,13 +520,77 @@
       "properties": {
         "id": "72Pd0mkXI39Bej71uxA8",
         "is_open": -1,
-        "name": "Sarfayt",
+        "comment": "You need a Yemeni visa to get through, which is normally only given to tourists heading to Soccotra.",
         "countries": "OMN-YEM",
         "location": {
           "_latitude": 16.6710831,
           "_longitude": 53.0992821
         },
-        "comment": "You need a Yemeni visa to get through, which is normally only given to tourists heading to Soccotra."
+        "name": "Sarfayt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          69.3016832,
+          40.1964387
+        ]
+      },
+      "properties": {
+        "id": "7DJGp721SPe26xkuChh5",
+        "is_open": 2,
+        "name": "Bekobod / Kushtegirmon",
+        "countries": "TJK-UZB",
+        "location": {
+          "_latitude": 40.1964387,
+          "_longitude": 69.3016832
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.051943,
+          53.796579
+        ]
+      },
+      "properties": {
+        "id": "7GX62rn5dYRzrQKRZzz7",
+        "is_open": 2,
+        "name": "Olkhovka / Urlyutobe",
+        "location": {
+          "_latitude": 53.796579,
+          "_longitude": 75.051943
+        },
+        "countries": "RUS-KAZ",
+        "createdat": {
+          "_seconds": 1764172688,
+          "_nanoseconds": 287000000
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          54.6195827,
+          37.4466069
+        ]
+      },
+      "properties": {
+        "id": "7NK8mpI1ECWRXWX8RWdY",
+        "is_open": 2,
+        "name": "Incheburun / Güdriolum",
+        "countries": "IRN-TKM",
+        "location": {
+          "_latitude": 37.4466069,
+          "_longitude": 54.6195827
+        }
       }
     },
     {
@@ -318,11 +605,35 @@
       "properties": {
         "id": "7TVYVJrYFHoNXsQuudY6",
         "is_open": 1,
-        "name": "Arandu",
         "countries": "AFG-PAK",
         "location": {
           "_latitude": 35.3097091,
           "_longitude": 71.5442007
+        },
+        "name": "Arandu"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          22.298854,
+          54.343023
+        ]
+      },
+      "properties": {
+        "id": "7qXLp79KhnciFVlYfeHP",
+        "is_open": 2,
+        "name": "Gusev / Goldap",
+        "location": {
+          "_latitude": 54.343023,
+          "_longitude": 22.298854
+        },
+        "countries": "RUS-POL",
+        "createdat": {
+          "_seconds": 1764172512,
+          "_nanoseconds": 467000000
         }
       }
     },
@@ -338,13 +649,13 @@
       "properties": {
         "id": "8UxeNbLsYqdkkXgmvHDi",
         "is_open": 4,
-        "name": "Wagah - Attari",
+        "comment": "Single border crossing between Pakistan and India.\nIt's been closed since the 2025 air war between both countries.",
         "countries": "PAK-IND",
         "location": {
           "_latitude": 31.6046353,
           "_longitude": 74.5731088
         },
-        "comment": "Single border crossing between Pakistan and India.\nIt's been closed since the 2025 air war between both countries."
+        "name": "Wagah - Attari"
       }
     },
     {
@@ -359,12 +670,12 @@
       "properties": {
         "id": "9C5Ap0WBJwJ5yQgfk1HK",
         "is_open": 1,
-        "name": "Shara-Sur/Tes",
         "countries": "RUS-MNG",
         "location": {
           "_latitude": 50.5169932,
           "_longitude": 94.3327852
-        }
+        },
+        "name": "Shara-Sur/Tes"
       }
     },
     {
@@ -379,11 +690,39 @@
       "properties": {
         "id": "9JBmq9hCSCxEnFr3Ml4e",
         "is_open": 2,
-        "name": "Zabaikalsk/Manchuria",
         "countries": "RUS-CHN",
         "location": {
           "_latitude": 49.6321486,
           "_longitude": 117.3749944
+        },
+        "name": "Zabaikalsk/Manchuria"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.109591,
+          65.798791
+        ]
+      },
+      "properties": {
+        "id": "9qKyEH0KCWFvH1hK1cdS",
+        "is_open": 0,
+        "name": "Suoperya / Kuusamo",
+        "location": {
+          "_latitude": 65.798791,
+          "_longitude": 30.109591
+        },
+        "countries": "FIN-RUS",
+        "createdat": {
+          "_seconds": 1764171929,
+          "_nanoseconds": 743000000
+        },
+        "updatedat": {
+          "_seconds": 1764257551,
+          "_nanoseconds": 633000000
         }
       }
     },
@@ -399,12 +738,12 @@
       "properties": {
         "id": "AB2kbwsaYGJDF32FdmP4",
         "is_open": 2,
-        "name": "Kraskino/Hunchun",
         "countries": "RUS-CHN",
         "location": {
           "_latitude": 42.7706455,
           "_longitude": 130.4587124
-        }
+        },
+        "name": "Kraskino/Hunchun"
       }
     },
     {
@@ -418,12 +757,57 @@
       },
       "properties": {
         "id": "AIa1Uaz9qGJ705YgRI9R",
-        "is_open": 4,
-        "name": "Torkham",
+        "is_open": 0,
         "countries": "AFG-PAK",
         "location": {
           "_latitude": 34.1217414,
           "_longitude": 71.0943544
+        },
+        "name": "Torkham",
+        "comment": "The border has been closed since the skirmishes of 2025.",
+        "updatedat": {
+          "_seconds": 1764010152,
+          "_nanoseconds": 22000000
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          69.5435915,
+          40.0835813
+        ]
+      },
+      "properties": {
+        "id": "AJA8l4JWifQWqrwrdT6z",
+        "is_open": 1,
+        "countries": "TJK-KGZ",
+        "location": {
+          "_latitude": 40.0835813,
+          "_longitude": 69.5435915
+        },
+        "name": "Kayragach"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          68.6047452,
+          37.190923
+        ]
+      },
+      "properties": {
+        "id": "AjrDyYsQyemIyQ6InHjL",
+        "is_open": 2,
+        "name": "Shir Khan Bandar / Panji Poyon",
+        "countries": "TJK-AFG",
+        "location": {
+          "_latitude": 37.190923,
+          "_longitude": 68.6047452
         }
       }
     },
@@ -439,13 +823,17 @@
       "properties": {
         "id": "AqR3DUxCM1v1Y3QEQN6r",
         "is_open": 2,
-        "name": "Psou",
+        "comment": "It feels like a normal border crossing. Coming from Russia, you need the proper visa (see country info).\nIf you enter Abkhazia here, you must also exit from here, crossing from Russia to Abkhazia to Georgia isn't permitted.",
         "countries": "ABK-RUS",
         "location": {
           "_latitude": 43.3936056,
           "_longitude": 40.0112018
         },
-        "comment": "It feels like a normal border crossing. Coming from Russia, you need the proper visa (see country info).\nIf you enter Abkhazia here, you must also exit from here, crossing from Russia to Abkhazia to Georgia isn't permitted."
+        "name": "Adler / Psou",
+        "updatedat": {
+          "_seconds": 1764167347,
+          "_nanoseconds": 691000000
+        }
       }
     },
     {
@@ -460,12 +848,12 @@
       "properties": {
         "id": "Bj5dS6IDfdGv6hpQQZ1A",
         "is_open": 2,
-        "name": "Tashanta/Tsagaannuur",
         "countries": "RUS-MNG",
         "location": {
           "_latitude": 49.6435814,
           "_longitude": 89.4419003
-        }
+        },
+        "name": "Tashanta/Tsagaannuur"
       }
     },
     {
@@ -480,12 +868,12 @@
       "properties": {
         "id": "C67qpfwoB3CXUVUbPYpi",
         "is_open": 2,
-        "name": "Bagratashen/Sadakhlo",
         "countries": "ARM-GEO",
         "location": {
           "_latitude": 41.2291534,
           "_longitude": 44.8343471
-        }
+        },
+        "name": "Bagratashen/Sadakhlo"
       }
     },
     {
@@ -500,11 +888,59 @@
       "properties": {
         "id": "CrdxwhHXv8zzsKAnG3dI",
         "is_open": 1,
-        "name": "Dayan/Hunshanjin",
         "countries": "MNG-CHN",
         "location": {
           "_latitude": 48.092958,
           "_longitude": 88.9424913
+        },
+        "name": "Dayan/Hunshanjin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.560617,
+          60.931202
+        ]
+      },
+      "properties": {
+        "id": "DCpq1a9SYjJcamTMS57w",
+        "is_open": 0,
+        "name": "Brusnichnoe / Nuyamaa",
+        "location": {
+          "_latitude": 60.931202,
+          "_longitude": 28.560617
+        },
+        "countries": "FIN-RUS",
+        "createdat": {
+          "_seconds": 1764171929,
+          "_nanoseconds": 422000000
+        },
+        "updatedat": {
+          "_seconds": 1764257568,
+          "_nanoseconds": 38000000
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          70.8275104,
+          38.4538667
+        ]
+      },
+      "properties": {
+        "id": "DF9EcwwrYMqStX8zFTwh",
+        "is_open": 1,
+        "name": "Frienship Bridge",
+        "countries": "TJK-AFG",
+        "location": {
+          "_latitude": 38.4538667,
+          "_longitude": 70.8275104
         }
       }
     },
@@ -520,12 +956,12 @@
       "properties": {
         "id": "DMqrZp9YxmLEjs643SK4",
         "is_open": 1,
-        "name": "Pokrovka/Zhaohe",
         "countries": "RUS-CHN",
         "location": {
           "_latitude": 46.7233637,
           "_longitude": 134.0232183
-        }
+        },
+        "name": "Pokrovka/Zhaohe"
       }
     },
     {
@@ -540,11 +976,95 @@
       "properties": {
         "id": "DrK5OofQhBLTaNDRzd4t",
         "is_open": 2,
-        "name": "Mazyad",
         "countries": "ARE-OMN",
         "location": {
           "_latitude": 24.0212654,
           "_longitude": 55.8473625
+        },
+        "name": "Mazyad"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          62.2829198,
+          35.2598399
+        ]
+      },
+      "properties": {
+        "id": "DyVZcOstYWUuHoDJhejh",
+        "is_open": -1,
+        "name": "Serhetabat / Turgundi",
+        "countries": "TKM-AFG",
+        "location": {
+          "_latitude": 35.2598399,
+          "_longitude": 62.2829198
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          68.4170431,
+          40.6087966
+        ]
+      },
+      "properties": {
+        "id": "EHkS5nfuezhouJTXjEIo",
+        "is_open": 1,
+        "name": "Tselinny / Ak-Altyn",
+        "countries": "KAZ-UZB",
+        "location": {
+          "_latitude": 40.6087966,
+          "_longitude": 68.4170431
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          61.625926,
+          54.006458
+        ]
+      },
+      "properties": {
+        "id": "EgbujVzgvsQV1ck2nxzD",
+        "is_open": 2,
+        "name": "Bugristoe / Kayrak",
+        "location": {
+          "_latitude": 54.006458,
+          "_longitude": 61.625926
+        },
+        "countries": "RUS-KAZ",
+        "createdat": {
+          "_seconds": 1764172689,
+          "_nanoseconds": 598000000
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.2853287,
+          42.8578666
+        ]
+      },
+      "properties": {
+        "id": "EpDKuZgb3yu4NOUuQ59J",
+        "is_open": 2,
+        "name": "Tokmok - Sartobe",
+        "countries": "KGZ-KAZ",
+        "location": {
+          "_latitude": 42.8578666,
+          "_longitude": 75.2853287
         }
       }
     },
@@ -560,13 +1080,13 @@
       "properties": {
         "id": "FPHVD1BAmgoOoGpN2rjG",
         "is_open": 2,
-        "name": "Bashmaq",
+        "comment": "On Iraqi side you arrive in Kurdistan. Visa on arrival is not possible, you need to have bought beforehand an e-visa for (federal) Iraq.",
         "countries": "IRN-IRQ",
         "location": {
           "_latitude": 35.6142215,
           "_longitude": 46.016787
         },
-        "comment": "On Iraqi side you arrive in Kurdistan. Visa on arrival is not possible, you need to have bought beforehand an e-visa for (federal) Iraq."
+        "name": "Bashmaq"
       }
     },
     {
@@ -581,11 +1101,63 @@
       "properties": {
         "id": "FZ7O1yTaFpAIwOBj00Zi",
         "is_open": -1,
-        "name": "Al Walid",
         "countries": "SYR-IRQ",
         "location": {
           "_latitude": 33.4342064,
           "_longitude": 38.9106155
+        },
+        "name": "Al Walid / Al Tanf"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.211033,
+          59.376896
+        ]
+      },
+      "properties": {
+        "id": "FarnEMxMUlhi48MdKjXj",
+        "is_open": 2,
+        "name": "Ivangorod / Narva",
+        "location": {
+          "_latitude": 59.376896,
+          "_longitude": 28.211033
+        },
+        "countries": "RUS-EST",
+        "createdat": {
+          "_seconds": 1764172634,
+          "_nanoseconds": 535000000
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.913096,
+          60.596099
+        ]
+      },
+      "properties": {
+        "id": "FnvzioEXnDbZbQeUIIrv",
+        "is_open": 0,
+        "name": "Torfyanovka / Vaalimaa",
+        "location": {
+          "_latitude": 60.596099,
+          "_longitude": 27.913096
+        },
+        "countries": "FIN-RUS",
+        "createdat": {
+          "_seconds": 1764171929,
+          "_nanoseconds": 352000000
+        },
+        "updatedat": {
+          "_seconds": 1764257572,
+          "_nanoseconds": 157000000
         }
       }
     },
@@ -601,11 +1173,51 @@
       "properties": {
         "id": "GLyxbP0gGEFysnmMLLY9",
         "is_open": 1,
-        "name": "Kuhak-Chagdi",
         "countries": "IRN-PAK",
         "location": {
           "_latitude": 27.1419418,
           "_longitude": 63.3191621
+        },
+        "name": "Kuhak-Chagdi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          71.337946,
+          38.2727054
+        ]
+      },
+      "properties": {
+        "id": "Glh9joeWnr8ZPwcHq0yY",
+        "is_open": 1,
+        "name": "Kupruki Vanch / Jomarji Bolo",
+        "countries": "TJK-AFG",
+        "location": {
+          "_latitude": 38.2727054,
+          "_longitude": 71.337946
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          70.4548572,
+          40.3639912
+        ]
+      },
+      "properties": {
+        "id": "Gvi5flsenqEOb10ZQ5tv",
+        "is_open": 2,
+        "name": "Patar / Andarkhon",
+        "countries": "TJK-UZB",
+        "location": {
+          "_latitude": 40.3639912,
+          "_longitude": 70.4548572
         }
       }
     },
@@ -621,11 +1233,35 @@
       "properties": {
         "id": "H99mQyiWWHSpCtiq7lMj",
         "is_open": 2,
-        "name": "Sheikh Hussein/Jordan River",
         "countries": "ISR-JOR",
         "location": {
           "_latitude": 32.4975617,
           "_longitude": 35.5770768
+        },
+        "name": "Sheikh Hussein/Jordan River"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.774503,
+          57.132236
+        ]
+      },
+      "properties": {
+        "id": "HrbZHwtljGrJJrFLUS9m",
+        "is_open": 1,
+        "name": "Ludonka / Vientuli",
+        "location": {
+          "_latitude": 57.132236,
+          "_longitude": 27.774503
+        },
+        "countries": "RUS-LVA",
+        "createdat": {
+          "_seconds": 1764258327,
+          "_nanoseconds": 770000000
         }
       }
     },
@@ -641,11 +1277,75 @@
       "properties": {
         "id": "I5QO4BpOVVe0lqjACu4G",
         "is_open": 2,
-        "name": "Masnaa",
         "countries": "SYR-LBN",
         "location": {
           "_latitude": 33.7021842,
           "_longitude": 35.9238448
+        },
+        "name": "Masnaa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          81.965854,
+          50.807859
+        ]
+      },
+      "properties": {
+        "id": "IB226kMiBA6mUwXbwoRC",
+        "is_open": 2,
+        "name": "Mikhaylovka / Ube",
+        "location": {
+          "_latitude": 50.807859,
+          "_longitude": 81.965854
+        },
+        "countries": "RUS-KAZ",
+        "createdat": {
+          "_seconds": 1764172687,
+          "_nanoseconds": 889000000
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          38.9580515,
+          36.7034639
+        ]
+      },
+      "properties": {
+        "id": "ICrbTgwnYXloY8NN9JvM",
+        "is_open": 0,
+        "name": "Akçakale / Tal Abyad",
+        "countries": "TUR-SYR",
+        "location": {
+          "_latitude": 36.7034639,
+          "_longitude": 38.9580515
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          60.0744555,
+          41.7675771
+        ]
+      },
+      "properties": {
+        "id": "IMOrbgojVFCoSVZ6U9eM",
+        "is_open": 2,
+        "name": "Shavat / Dashoguz",
+        "countries": "UZB-TKM",
+        "location": {
+          "_latitude": 41.7675771,
+          "_longitude": 60.0744555
         }
       }
     },
@@ -661,11 +1361,35 @@
       "properties": {
         "id": "Id2lAvrclzVyFcqkqTUS",
         "is_open": 1,
-        "name": "Kolzhat/Dolat",
         "countries": "KAZ-CHN",
         "location": {
           "_latitude": 43.6725198,
           "_longitude": 80.624637
+        },
+        "name": "Kolzhat/Dolat"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          51.543277,
+          51.504733
+        ]
+      },
+      "properties": {
+        "id": "IfKChReQMjseN8R3EsHc",
+        "is_open": 1,
+        "name": "Teploe / Shagan",
+        "location": {
+          "_latitude": 51.504733,
+          "_longitude": 51.543277
+        },
+        "countries": "RUS-KAZ",
+        "createdat": {
+          "_seconds": 1764172688,
+          "_nanoseconds": 620000000
         }
       }
     },
@@ -681,11 +1405,59 @@
       "properties": {
         "id": "IrRNoKKtDTfTRbIL9P7x",
         "is_open": 1,
-        "name": "Khaviragiin/Ar-Khunshuut",
         "countries": "MNG-CHN",
         "location": {
           "_latitude": 48.5970085,
           "_longitude": 115.8626848
+        },
+        "name": "Khaviragiin/Ar-Khunshuut"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.635873,
+          62.168784
+        ]
+      },
+      "properties": {
+        "id": "JbF9h2iPcOzWjSyBnvtq",
+        "is_open": 0,
+        "name": "Vyartsilya / Niirala",
+        "location": {
+          "_latitude": 62.168784,
+          "_longitude": 30.635873
+        },
+        "countries": "FIN-RUS",
+        "createdat": {
+          "_seconds": 1764171929,
+          "_nanoseconds": 857000000
+        },
+        "updatedat": {
+          "_seconds": 1764257559,
+          "_nanoseconds": 462000000
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.7000408,
+          54.544123
+        ]
+      },
+      "properties": {
+        "id": "K8TYxOcH9Ba9pbvZRvnQ",
+        "is_open": 2,
+        "name": "Medininkai / Kamenny Log",
+        "countries": "LTU-BLR",
+        "location": {
+          "_latitude": 54.544123,
+          "_longitude": 25.7000408
         }
       }
     },
@@ -701,12 +1473,12 @@
       "properties": {
         "id": "KFFqTSDZcDo4DMn0a9Je",
         "is_open": 2,
-        "name": " Safwan/Abdali",
         "countries": "IRQ-KWT",
         "location": {
           "_latitude": 30.0926546,
           "_longitude": 47.7101423
-        }
+        },
+        "name": " Safwan/Abdali"
       }
     },
     {
@@ -721,12 +1493,77 @@
       "properties": {
         "id": "L46IwMSOyhSqjMQvtHHZ",
         "is_open": 2,
-        "name": "Khorgos",
         "countries": "KAZ-CHN",
         "location": {
           "_latitude": 44.1571787,
           "_longitude": 80.3988612
+        },
+        "name": "Khorgos"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          69.4085686,
+          41.5236949
+        ]
+      },
+      "properties": {
+        "id": "L7jqMazYIXoTy1bVa7Ne",
+        "is_open": 1,
+        "name": "Kazygurt / Mayskiy",
+        "countries": "KAZ-UZB",
+        "location": {
+          "_latitude": 41.5236949,
+          "_longitude": 69.4085686
         }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.901304,
+          54.439183
+        ]
+      },
+      "properties": {
+        "id": "LBg6mGCdbNvapKGjLU9u",
+        "is_open": 2,
+        "name": "Mamonovo / Gronovo",
+        "location": {
+          "_latitude": 54.439183,
+          "_longitude": 19.901304
+        },
+        "countries": "RUS-POL",
+        "createdat": {
+          "_seconds": 1764172512,
+          "_nanoseconds": 657000000
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          55.9969816,
+          44.8959036
+        ]
+      },
+      "properties": {
+        "id": "LTsCDi3XQr465FXmhAYO",
+        "is_open": 0,
+        "name": "Tejen",
+        "countries": "KAZ-UZB",
+        "location": {
+          "_latitude": 44.8959036,
+          "_longitude": 55.9969816
+        },
+        "comment": "Closed for renovation. Should re-open in 2026."
       }
     },
     {
@@ -741,12 +1578,12 @@
       "properties": {
         "id": "LW4ksNtKpaEoQW8d3DDh",
         "is_open": 2,
-        "name": "Pogranitschny/Suifenhe",
         "countries": "RUS-CHN",
         "location": {
           "_latitude": 44.4099846,
           "_longitude": 131.1884721
-        }
+        },
+        "name": "Pogranitschny/Suifenhe"
       }
     },
     {
@@ -761,12 +1598,55 @@
       "properties": {
         "id": "M2u3X3vnmIZshuCS9nxC",
         "is_open": 2,
-        "name": "Ibrahim Khalil",
         "countries": "TUR-IRQ",
-        "comment": "Kurdish visa on arrival no longer available, you need to buy an e-visa online beforehand, either for Kurdistan only:\nhttps://visit.gov.krd\nor for Federal Iraq:\nhttps://evisa.iq/en\nCarnet isn't asked because it's possible to visit Kurdistan only without Carnet, if you exit using the same border. But if you wan to cross to Iran or Kuwait, you need to ask for your carnet to be stamped.",
         "location": {
           "_latitude": 37.143435,
           "_longitude": 42.5645842
+        },
+        "name": "Ibrahim Khalil"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.792108,
+          54.159304
+        ]
+      },
+      "properties": {
+        "id": "MK3qzThhwhrJCJmUoA3A",
+        "is_open": 1,
+        "name": "Odesskoe / Bidaik",
+        "location": {
+          "_latitude": 54.159304,
+          "_longitude": 72.792108
+        },
+        "countries": "RUS-KAZ",
+        "createdat": {
+          "_seconds": 1764172688,
+          "_nanoseconds": 479000000
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.3759668,
+          54.2745663
+        ]
+      },
+      "properties": {
+        "id": "MN2FuTOhHmbvkt0aEbEV",
+        "is_open": 2,
+        "name": "Šalčininkai / Bieniakoni",
+        "countries": "LTU-BLR",
+        "location": {
+          "_latitude": 54.2745663,
+          "_longitude": 25.3759668
         }
       }
     },
@@ -782,11 +1662,51 @@
       "properties": {
         "id": "MSNG8vHoDNhSG6AFxT4c",
         "is_open": -1,
-        "name": "Shihan-Al Mazyunah",
         "countries": "OMN-YEM",
         "location": {
           "_latitude": 17.8036693,
           "_longitude": 52.5539202
+        },
+        "name": "Shihan-Al Mazyunah"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          41.217732,
+          37.0626854
+        ]
+      },
+      "properties": {
+        "id": "Me4PzJ991OBSzj2n34Ex",
+        "is_open": 0,
+        "name": "Nusaybin",
+        "countries": "TUR-SYR",
+        "location": {
+          "_latitude": 37.0626854,
+          "_longitude": 41.217732
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.8009878,
+          38.1492243
+        ]
+      },
+      "properties": {
+        "id": "MhXIq32GLt6ZAuUYWz8L",
+        "is_open": 2,
+        "name": "Kulma",
+        "countries": "TJK-CHN",
+        "location": {
+          "_latitude": 38.1492243,
+          "_longitude": 74.8009878
         }
       }
     },
@@ -802,12 +1722,12 @@
       "properties": {
         "id": "NPZA6bYfLTXatkzpExpR",
         "is_open": 1,
-        "name": "Sheveekhuren/Ceke",
         "countries": "MNG-CHN",
         "location": {
           "_latitude": 42.5913525,
           "_longitude": 101.2831521
-        }
+        },
+        "name": "Sheveekhuren/Ceke"
       }
     },
     {
@@ -822,12 +1742,52 @@
       "properties": {
         "id": "NVfYkV2NKM1ouzRNW2hR",
         "is_open": 2,
-        "name": "Mirjaveh - Taftan",
+        "countries": "IRN-PAK",
         "location": {
           "_latitude": 28.9775633,
           "_longitude": 61.5502529
         },
-        "countries": "IRN-PAK"
+        "name": "Mirjaveh - Taftan"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          68.5771731,
+          40.7869504
+        ]
+      },
+      "properties": {
+        "id": "Nfk2WibsNSxef9ZJpvaS",
+        "is_open": 1,
+        "name": "Syrdarya / Malek",
+        "countries": "KAZ-UZB",
+        "location": {
+          "_latitude": 40.7869504,
+          "_longitude": 68.5771731
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          59.3016982,
+          42.3736833
+        ]
+      },
+      "properties": {
+        "id": "O8MX9FOvNNCOQEJ9yPM6",
+        "is_open": 2,
+        "countries": "UZB-TKM",
+        "location": {
+          "_latitude": 42.3736833,
+          "_longitude": 59.3016982
+        },
+        "name": "Khodjeyli / Konye-Urgench"
       }
     },
     {
@@ -842,12 +1802,32 @@
       "properties": {
         "id": "OJt7ldMf9ywt6lkK7oZA",
         "is_open": 2,
-        "name": "Salwa/Abu Samra",
         "countries": "SAU-QAT",
         "location": {
           "_latitude": 24.7271429,
           "_longitude": 50.8223462
-        }
+        },
+        "name": "Salwa/Abu Samra"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          52.6532056,
+          41.9006989
+        ]
+      },
+      "properties": {
+        "id": "OKEtwV9XiyGcCn7SwIxK",
+        "is_open": 0,
+        "countries": "KAZ-TKM",
+        "location": {
+          "_latitude": 41.9006989,
+          "_longitude": 52.6532056
+        },
+        "name": "Garabogaz / Temir Baba"
       }
     },
     {
@@ -882,11 +1862,87 @@
       "properties": {
         "id": "OVKyn3uAqJc3GpaVIrML",
         "is_open": 2,
-        "name": "Sonauli",
         "countries": "IND-NPL",
         "location": {
           "_latitude": 27.4759208,
           "_longitude": 83.4698147
+        },
+        "name": "Sonauli"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          62.129645,
+          53.003526
+        ]
+      },
+      "properties": {
+        "id": "OoUeMg5qQZlp6WN5XItS",
+        "is_open": 1,
+        "name": "Nikolaevka / Ayat",
+        "location": {
+          "_latitude": 53.003526,
+          "_longitude": 62.129645
+        },
+        "countries": "RUS-KAZ",
+        "createdat": {
+          "_seconds": 1764172689,
+          "_nanoseconds": 531000000
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.841682,
+          61.123856
+        ]
+      },
+      "properties": {
+        "id": "OpwjpCWUuvaRKtylW0ZQ",
+        "is_open": 0,
+        "name": "Svetogorsk / Imatra",
+        "location": {
+          "_latitude": 61.123856,
+          "_longitude": 28.841682
+        },
+        "countries": "FIN-RUS",
+        "createdat": {
+          "_seconds": 1764171929,
+          "_nanoseconds": 486000000
+        },
+        "updatedat": {
+          "_seconds": 1764257564,
+          "_nanoseconds": 670000000
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.8075000010431,
+          53.7267000004649
+        ]
+      },
+      "properties": {
+        "id": "OvNXJHd3TkJiL8GEdoxU",
+        "is_open": 1,
+        "name": "Nevolnoe / Amangeldy",
+        "location": {
+          "_latitude": 53.7267000004649,
+          "_longitude": 73.8075000010431
+        },
+        "countries": "RUS-KAZ",
+        "createdat": {
+          "_seconds": 1764172688,
+          "_nanoseconds": 416000000
         }
       }
     },
@@ -902,12 +1958,12 @@
       "properties": {
         "id": "PRTUxiDKP3HgR3cjFHTh",
         "is_open": 2,
-        "name": "Wadi Araba / Itzhak Rabin",
         "countries": "ISR-JOR",
         "location": {
           "_latitude": 29.575104,
           "_longitude": 34.9786272
-        }
+        },
+        "name": "Wadi Araba / Itzhak Rabin"
       }
     },
     {
@@ -922,13 +1978,37 @@
       "properties": {
         "id": "PRmyIsj95881vS01nTL9",
         "is_open": 0,
-        "name": "Lipulekh",
+        "comment": "Only open for bilateral trade, no tourists allowed, except Indian pilgrims to Kailash, with special permit.",
         "countries": "IND-CHN",
         "location": {
           "_latitude": 30.2329056,
           "_longitude": 81.0285145
         },
-        "comment": "Only open for bilateral trade, no tourists allowed, except Indian pilgrims to Kailash, with special permit."
+        "name": "Lipulekh"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          49.880509,
+          51.216321
+        ]
+      },
+      "properties": {
+        "id": "Pclxp29gTCUMF2mdzpOp",
+        "is_open": 2,
+        "name": "Ozinki / Taskala",
+        "location": {
+          "_latitude": 51.216321,
+          "_longitude": 49.880509
+        },
+        "countries": "RUS-KAZ",
+        "createdat": {
+          "_seconds": 1764172688,
+          "_nanoseconds": 553000000
+        }
       }
     },
     {
@@ -942,12 +2022,16 @@
       },
       "properties": {
         "id": "Pd4dkXLBBAoJ56Nz09KV",
-        "is_open": 1,
-        "name": "Bilasuvar",
+        "is_open": 3,
         "countries": "AZE-IRN",
         "location": {
           "_latitude": 39.3891035,
           "_longitude": 48.3600117
+        },
+        "name": "Bilasuvar",
+        "updatedat": {
+          "_seconds": 1764168581,
+          "_nanoseconds": 478000000
         }
       }
     },
@@ -963,11 +2047,35 @@
       "properties": {
         "id": "PwiAu22NQSL5Bp4BmLJB",
         "is_open": 1,
-        "name": "Verkhniy Ulkhun",
         "countries": "RUS-MNG",
         "location": {
           "_latitude": 49.5113242,
           "_longitude": 112.6008041
+        },
+        "name": "Verkhniy Ulkhun"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          60.615823,
+          51.576089
+        ]
+      },
+      "properties": {
+        "id": "PxjDooBZjCiIKuNMlPZG",
+        "is_open": 1,
+        "name": "Komsomolskiy / Kondybay",
+        "location": {
+          "_latitude": 51.576089,
+          "_longitude": 60.615823
+        },
+        "countries": "RUS-KAZ",
+        "createdat": {
+          "_seconds": 1764172688,
+          "_nanoseconds": 811000000
         }
       }
     },
@@ -983,13 +2091,33 @@
       "properties": {
         "id": "Q6pZ09C5JYcXzw42adqP",
         "is_open": 0,
-        "name": "Nathu La",
+        "comment": "Generally closed, except for local traders and Indian pilgrims to the Kailash Mansarovar Yatra (special permit).\nIndian tourists can drive up to the border, but foreigners can't.",
         "countries": "IND-CHN",
         "location": {
           "_latitude": 27.3868289,
           "_longitude": 88.8308961
         },
-        "comment": "Generally closed, except for local traders and Indian pilgrims to the Kailash Mansarovar Yatra (special permit).\nIndian tourists can drive up to the border, but foreigners can't."
+        "name": "Nathu La"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          58.4058167,
+          37.6299086
+        ]
+      },
+      "properties": {
+        "id": "QR1l83ADhazmritzRotj",
+        "is_open": 2,
+        "name": "Badzhigiran / Gaudan",
+        "countries": "IRN-TKM",
+        "location": {
+          "_latitude": 37.6299086,
+          "_longitude": 58.4058167
+        }
       }
     },
     {
@@ -1004,11 +2132,43 @@
       "properties": {
         "id": "RCm8QSDHZhkbhiqJnhTA",
         "is_open": 1,
-        "name": "Khandagaity/Borscht",
         "countries": "RUS-MNG",
         "location": {
           "_latitude": 50.69549,
           "_longitude": 92.067347
+        },
+        "name": "Khandagaity/Borsho",
+        "updatedat": {
+          "_seconds": 1764167137,
+          "_nanoseconds": 101000000
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          22.736633,
+          54.645721
+        ]
+      },
+      "properties": {
+        "id": "RIh0ERgdpp9SMLQ0u5rt",
+        "is_open": 2,
+        "name": "Chernyshevskoe / Kibartay",
+        "location": {
+          "_latitude": 54.645721,
+          "_longitude": 22.736633
+        },
+        "countries": "LTU-RUS",
+        "createdat": {
+          "_seconds": 1764171461,
+          "_nanoseconds": 893000000
+        },
+        "updatedat": {
+          "_seconds": 1764171461,
+          "_nanoseconds": 893000000
         }
       }
     },
@@ -1023,13 +2183,17 @@
       },
       "properties": {
         "id": "RQyR6WJu485WDpNf9MJJ",
-        "is_open": 3,
-        "name": "Rimdan",
+        "is_open": 2,
+        "countries": "IRN-PAK",
         "location": {
           "_latitude": 25.3776568,
           "_longitude": 61.6545268
         },
-        "countries": "IRN-PAK"
+        "name": "Rimdan",
+        "updatedat": {
+          "_seconds": 1764257304,
+          "_nanoseconds": 365000000
+        }
       }
     },
     {
@@ -1044,12 +2208,12 @@
       "properties": {
         "id": "RSrmUfZQ817IA4ovcYmo",
         "is_open": 2,
-        "name": "Norduz",
         "countries": "IRN-ARM",
         "location": {
           "_latitude": 38.8537671,
           "_longitude": 46.206445
-        }
+        },
+        "name": "Norduz"
       }
     },
     {
@@ -1064,12 +2228,12 @@
       "properties": {
         "id": "SE56D1N3m9fEODXuat0z",
         "is_open": 1,
-        "name": "Khankh/Mondy",
         "countries": "RUS-MNG",
         "location": {
           "_latitude": 51.6340575,
           "_longitude": 100.8572602
-        }
+        },
+        "name": "Khankh/Mondy"
       }
     },
     {
@@ -1084,13 +2248,53 @@
       "properties": {
         "id": "SY8xfl3dvhQjed0OnrZu",
         "is_open": 1,
-        "name": "Purang",
+        "comment": "Open for bilateral trade, but also for Indian pilgrims doing the Kailash Mansarovar Yatra, with special permits needed.",
         "countries": "NPL-CHN",
         "location": {
           "_latitude": 30.1532053,
           "_longitude": 81.3329027
         },
-        "comment": "Open for bilateral trade, but also for Indian pilgrims doing the Kailash Mansarovar Yatra, with special permits needed."
+        "name": "Purang"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.6560725,
+          52.0729083
+        ]
+      },
+      "properties": {
+        "id": "SizKPFyAawVAOKZCBWI3",
+        "is_open": 2,
+        "name": "Terespol / Brest",
+        "countries": "POL-BLR",
+        "location": {
+          "_latitude": 52.0729083,
+          "_longitude": 23.6560725
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.6955,
+          37.0625989
+        ]
+      },
+      "properties": {
+        "id": "SnaNRv9MSAJcQJz7Qqvr",
+        "is_open": 1,
+        "name": "Langar / Dehkonkhona",
+        "countries": "TJK-AFG",
+        "location": {
+          "_latitude": 37.0625989,
+          "_longitude": 72.6955
+        }
       }
     },
     {
@@ -1105,11 +2309,39 @@
       "properties": {
         "id": "SuVdcPEW0oYPFaw7eKFP",
         "is_open": 1,
-        "name": "Poldasht/Shahtakhti",
         "countries": "AZE-IRN",
         "location": {
           "_latitude": 39.3596189,
           "_longitude": 45.0705406
+        },
+        "name": "Poldasht/Shahtakhti"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.903888,
+          55.082342
+        ]
+      },
+      "properties": {
+        "id": "Sx3Lf5Nzl6Qnrki0vJLA",
+        "is_open": 2,
+        "name": "Sovetsk / Panemune",
+        "location": {
+          "_latitude": 55.082342,
+          "_longitude": 21.903888
+        },
+        "countries": "LTU-RUS",
+        "createdat": {
+          "_seconds": 1764171462,
+          "_nanoseconds": 33000000
+        },
+        "updatedat": {
+          "_seconds": 1764171462,
+          "_nanoseconds": 33000000
         }
       }
     },
@@ -1138,6 +2370,26 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          69.3585889,
+          41.4714641
+        ]
+      },
+      "properties": {
+        "id": "THIaRpX5dXxrOilTcqot",
+        "is_open": 0,
+        "name": "Zhibek-Joly / Chernayevka",
+        "countries": "KAZ-UZB",
+        "location": {
+          "_latitude": 41.4714641,
+          "_longitude": 69.3585889
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           75.4283294,
           36.8503858
         ]
@@ -1145,13 +2397,54 @@
       "properties": {
         "id": "TKkx6MLGuWvmDoKM0zN2",
         "is_open": 2,
-        "name": "Khunjerab Pass",
+        "comment": "Note to cyclists: it's forbidden to ride between Sost and Tashkurgan; you need to take a bus instead, and put the bike on the bus. Motorcycles and cars are OK.\nYou need to to pay 30$ pp on Pakistani side for the entrance into Khunjerab National Park.",
         "countries": "CHN-PAK",
         "location": {
           "_latitude": 36.8503858,
           "_longitude": 75.4283294
         },
-        "comment": "Note to cyclists: it's forbidden to ride between Sost and Tashkurgan; you need to take a bus instead, and put the bike on the bus. Motorcycles and cars are OK.\nYou need to to pay 30$ pp on Pakistani side for the entrance into Khunjerab National Park."
+        "name": "Khunjerab Pass"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          70.731634,
+          40.1126425
+        ]
+      },
+      "properties": {
+        "id": "UK4JsG7P7t1QaRXwcFCH",
+        "is_open": 2,
+        "name": "Kyzyl-Bel",
+        "countries": "TJK-KGZ",
+        "location": {
+          "_latitude": 40.1126425,
+          "_longitude": 70.731634
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.625134,
+          55.8200478
+        ]
+      },
+      "properties": {
+        "id": "Ua2enINkej9GXZwJA0V1",
+        "is_open": 2,
+        "name": "Patarnieki / Grigorovshchina",
+        "countries": "LVA-BLR",
+        "location": {
+          "_latitude": 55.8200478,
+          "_longitude": 27.625134
+        },
+        "comment": "Mandatory reservation: https://lvrobeza.lv/en/reserve/"
       }
     },
     {
@@ -1166,11 +2459,35 @@
       "properties": {
         "id": "Ue15AAMOxHyDqcmlLaHi",
         "is_open": 1,
-        "name": "Starotsurukhaytuysky/Heishantou",
         "countries": "RUS-CHN",
         "location": {
           "_latitude": 50.1997888,
           "_longitude": 119.3382033
+        },
+        "name": "Starotsurukhaytuysky/Heishantou"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          65.803555,
+          54.646153
+        ]
+      },
+      "properties": {
+        "id": "Ur8prBr27nQmbYUkMr2S",
+        "is_open": 2,
+        "name": "Voskresenskoe / Akbalshyk",
+        "location": {
+          "_latitude": 54.646153,
+          "_longitude": 65.803555
+        },
+        "countries": "RUS-KAZ",
+        "createdat": {
+          "_seconds": 1764172689,
+          "_nanoseconds": 404000000
         }
       }
     },
@@ -1186,12 +2503,12 @@
       "properties": {
         "id": "UzBiTIrG21roZIt6vuYS",
         "is_open": 2,
-        "name": "Jaigaon/Phuentsholing",
         "countries": "IND-BTN",
         "location": {
           "_latitude": 26.8612765,
           "_longitude": 89.3808084
-        }
+        },
+        "name": "Jaigaon/Phuentsholing"
       }
     },
     {
@@ -1206,12 +2523,12 @@
       "properties": {
         "id": "V1l2lChQTOdVACoCzOWW",
         "is_open": 2,
-        "name": "Bazargan",
         "countries": "IRN-TUR",
         "location": {
           "_latitude": 39.4122129,
           "_longitude": 44.3777801
-        }
+        },
+        "name": "Bazargan"
       }
     },
     {
@@ -1226,12 +2543,12 @@
       "properties": {
         "id": "V2A5S76ajzunEMreHv1R",
         "is_open": 1,
-        "name": "Tsagan-Tolgoy/Arts-Sur",
         "countries": "RUS-MNG",
         "location": {
           "_latitude": 49.9560564,
           "_longitude": 95.6272424
-        }
+        },
+        "name": "Tsagan-Tolgoy/Arts-Sur"
       }
     },
     {
@@ -1246,13 +2563,57 @@
       "properties": {
         "id": "VHbtbkquEbv7b0JxAJcq",
         "is_open": 4,
-        "name": "Rasuwagadhi-Gyirong",
+        "comment": "Temporary closed in 2025 when the road was destroyed. Meanwhile the Kodari border post has been reactivated.\nAfter it's fixed, it will again be the only crossing between Tibet and Nepal for tourists.",
         "countries": "NPL-CHN",
         "location": {
           "_latitude": 28.2785926,
           "_longitude": 85.3780088
         },
-        "comment": "Temporary closed in 2025 when the road was destroyed. Meanwhile the Kodari border post has been reactivated.\nAfter it's fixed, it will again be the only crossing between Tibet and Nepal for tourists."
+        "name": "Rasuwagadhi-Gyirong"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          69.338667,
+          55.393328
+        ]
+      },
+      "properties": {
+        "id": "VeKhuAJDNHIdK18KjDDs",
+        "is_open": 2,
+        "name": "Kazanskoe / Kyzyl Zhar",
+        "location": {
+          "_latitude": 55.393328,
+          "_longitude": 69.338667
+        },
+        "countries": "RUS-KAZ",
+        "createdat": {
+          "_seconds": 1764172689,
+          "_nanoseconds": 143000000
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          69.2162849,
+          40.5462428
+        ]
+      },
+      "properties": {
+        "id": "VgdHoNcZqgX1Zywg2R2u",
+        "is_open": 2,
+        "countries": "TJK-UZB",
+        "location": {
+          "_latitude": 40.5462428,
+          "_longitude": 69.2162849
+        },
+        "name": "Oybek / Fotehobod"
       }
     },
     {
@@ -1267,12 +2628,12 @@
       "properties": {
         "id": "VuQmmQMRHxIzG7z2VEeP",
         "is_open": 1,
-        "name": "Olochi/Shiwei",
         "countries": "RUS-CHN",
         "location": {
           "_latitude": 51.3364379,
           "_longitude": 119.8725653
-        }
+        },
+        "name": "Olochi/Shiwei"
       }
     },
     {
@@ -1287,12 +2648,133 @@
       "properties": {
         "id": "Vy7gksQGUa7wgT2pOpHu",
         "is_open": 2,
-        "name": "Mudayrah",
         "countries": "OMN-ARE",
         "location": {
           "_latitude": 24.8558381,
           "_longitude": 56.0014094
+        },
+        "name": "Mudayrah"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.595687,
+          57.832371
+        ]
+      },
+      "properties": {
+        "id": "WMu80EhfVrssmJR3kCKc",
+        "is_open": 2,
+        "name": "Kunichina Gora / Koydula",
+        "location": {
+          "_latitude": 57.832371,
+          "_longitude": 27.595687
+        },
+        "countries": "RUS-EST",
+        "createdat": {
+          "_seconds": 1764172634,
+          "_nanoseconds": 351000000
         }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          56.142094,
+          50.857938
+        ]
+      },
+      "properties": {
+        "id": "WToPoJIqXHx9rNq11RHV",
+        "is_open": 2,
+        "name": "Sagarchin / Zhaysan",
+        "location": {
+          "_latitude": 50.857938,
+          "_longitude": 56.142094
+        },
+        "countries": "RUS-KAZ",
+        "createdat": {
+          "_seconds": 1764172689,
+          "_nanoseconds": 27000000
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.630049,
+          52.532284
+        ]
+      },
+      "properties": {
+        "id": "WcrV0lTI5WbpzefAjATb",
+        "is_open": 2,
+        "name": "Kulunda / Sharbakty",
+        "location": {
+          "_latitude": 52.532284,
+          "_longitude": 78.630049
+        },
+        "countries": "RUS-KAZ",
+        "createdat": {
+          "_seconds": 1764172688,
+          "_nanoseconds": 106000000
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.203183,
+          69.655681
+        ]
+      },
+      "properties": {
+        "id": "WfH77SNFzkQ0fbjAXzz4",
+        "is_open": 2,
+        "name": "Borisoglebsk / Sturskug",
+        "location": {
+          "_latitude": 69.655681,
+          "_longitude": 30.203183
+        },
+        "countries": "RUS-NOR",
+        "createdat": {
+          "_seconds": 1764172014,
+          "_nanoseconds": 180000000
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.833766,
+          56.87317
+        ]
+      },
+      "properties": {
+        "id": "WwPFTKz8QC6qAzLdaFYw",
+        "is_open": 2,
+        "location": {
+          "_latitude": 56.87317,
+          "_longitude": 27.833766
+        },
+        "countries": "RUS-LVA",
+        "createdat": {
+          "_seconds": 1764258327,
+          "_nanoseconds": 839000000
+        },
+        "comment": "Mandatory reservation: https://lvrobeza.lv/en/reserve/",
+        "name": "Ubylinka / Grebneva"
       }
     },
     {
@@ -1307,12 +2789,12 @@
       "properties": {
         "id": "XLvWFTaEexJOnMuYjt2j",
         "is_open": 1,
-        "name": "Jolfa/Julfa",
         "countries": "AZE-IRN",
         "location": {
           "_latitude": 38.9447352,
           "_longitude": 45.6325458
-        }
+        },
+        "name": "Jolfa/Julfa"
       }
     },
     {
@@ -1326,14 +2808,13 @@
       },
       "properties": {
         "id": "Y1yrxB8mrjjjv0rwmhS0",
-        "is_open": "1",
-        "name": "Dibba",
+        "is_open": 1,
         "countries": "ARE-OMN",
         "location": {
           "_latitude": 25.6256314,
           "_longitude": 56.270657
         },
-        "comment": "Just a police checkpoint, no immigration facilities, so open only to Omani and Emirati."
+        "name": "Dibba"
       }
     },
     {
@@ -1347,12 +2828,88 @@
       },
       "properties": {
         "id": "YLK5aGk81d37JsoRjIiK",
-        "is_open": "2",
-        "name": "Parwezkhan",
+        "is_open": 2,
         "countries": "IRN-IRQ",
         "location": {
           "_latitude": 34.5565427,
           "_longitude": 45.5912218
+        },
+        "name": "Parwezkhan"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.795764,
+          49.429484
+        ]
+      },
+      "properties": {
+        "id": "YSv6TOAkl7ZxGlfX5Qaq",
+        "is_open": 1,
+        "name": "Vishnevka / Zhanybek",
+        "location": {
+          "_latitude": 49.429484,
+          "_longitude": 46.795764
+        },
+        "countries": "RUS-KAZ",
+        "createdat": {
+          "_seconds": 1764172687,
+          "_nanoseconds": 580000000
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.471549,
+          57.538718
+        ]
+      },
+      "properties": {
+        "id": "YdBGOU9ECZlC2rHuzArl",
+        "is_open": 1,
+        "name": "Brunishevo / Pededze",
+        "location": {
+          "_latitude": 57.538718,
+          "_longitude": 27.471549
+        },
+        "countries": "RUS-LVA",
+        "createdat": {
+          "_seconds": 1764258327,
+          "_nanoseconds": 908000000
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.963083,
+          55.278507
+        ]
+      },
+      "properties": {
+        "id": "YdaffFx2VLbTmYoEkTrI",
+        "is_open": 2,
+        "name": "Morskoe / Nida",
+        "location": {
+          "_latitude": 55.278507,
+          "_longitude": 20.963083
+        },
+        "countries": "LTU-RUS",
+        "createdat": {
+          "_seconds": 1764171461,
+          "_nanoseconds": 771000000
+        },
+        "updatedat": {
+          "_seconds": 1764171461,
+          "_nanoseconds": 771000000
         }
       }
     },
@@ -1368,11 +2925,91 @@
       "properties": {
         "id": "YeFRvGOkJn4hLoY2w609",
         "is_open": 2,
-        "name": "Kapıköy-Razi",
         "countries": "IRN-TUR",
         "location": {
           "_latitude": 38.4969018,
           "_longitude": 44.3205641
+        },
+        "name": "Kapıköy-Razi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.437002,
+          51.595588
+        ]
+      },
+      "properties": {
+        "id": "YsbVOaRKa4RNh4DHyjqI",
+        "is_open": 1,
+        "name": "Malinovoe Ozero / Koyanbay",
+        "location": {
+          "_latitude": 51.595588,
+          "_longitude": 79.437002
+        },
+        "countries": "RUS-KAZ",
+        "createdat": {
+          "_seconds": 1764172687,
+          "_nanoseconds": 825000000
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.038847,
+          66.944902
+        ]
+      },
+      "properties": {
+        "id": "Z2JotQEIfBWLhalv7xDe",
+        "is_open": 0,
+        "name": "Salla / Kelloselkya",
+        "location": {
+          "_latitude": 66.944902,
+          "_longitude": 29.038847
+        },
+        "countries": "FIN-RUS",
+        "createdat": {
+          "_seconds": 1764171929,
+          "_nanoseconds": 678000000
+        },
+        "updatedat": {
+          "_seconds": 1764257547,
+          "_nanoseconds": 590000000
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.994016,
+          64.545064
+        ]
+      },
+      "properties": {
+        "id": "Z44wbC8lChlpjL2EFgJ3",
+        "is_open": 0,
+        "name": "Lyuttya / Vartius",
+        "location": {
+          "_latitude": 64.545064,
+          "_longitude": 29.994016
+        },
+        "countries": "FIN-RUS",
+        "createdat": {
+          "_seconds": 1764171929,
+          "_nanoseconds": 793000000
+        },
+        "updatedat": {
+          "_seconds": 1764257555,
+          "_nanoseconds": 490000000
         }
       }
     },
@@ -1388,12 +3025,36 @@
       "properties": {
         "id": "Z4VDxc3gQRffBsswU5vt",
         "is_open": 2,
-        "name": "Tirbil",
         "countries": "JOR-IRQ",
         "location": {
           "_latitude": 32.7396782,
           "_longitude": 39.0071786
+        },
+        "name": "Ruwaished / Turaibil",
+        "updatedat": {
+          "_seconds": 1764256891,
+          "_nanoseconds": 411000000
         }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7036648,
+          43.0251607
+        ]
+      },
+      "properties": {
+        "id": "Z5v4HB2Hji1V6ACJPyyp",
+        "is_open": 2,
+        "countries": "KGZ-KAZ",
+        "location": {
+          "_latitude": 43.0251607,
+          "_longitude": 74.7036648
+        },
+        "name": "Korday / Ak-Zhol"
       }
     },
     {
@@ -1408,12 +3069,12 @@
       "properties": {
         "id": "ZDrxegRVcexXybgR4cvE",
         "is_open": 2,
-        "name": "Shalamcheh",
         "countries": "IRN-IRQ",
         "location": {
           "_latitude": 30.5053954,
           "_longitude": 48.0266119
-        }
+        },
+        "name": "Shalamcheh"
       }
     },
     {
@@ -1428,13 +3089,13 @@
       "properties": {
         "id": "a3RXvjiKVQZweKoSg3oV",
         "is_open": -1,
-        "name": "Inguri",
+        "comment": "It used to be possible to cross from Georgia to Abkhazia with the right Abkhazia visa, but it seems nobody has been able to cross for a long time.\nComing from Georgia, you're supposed to return to Georgia using the same crossing after your visit to Abkhazia (not continue into Russia).",
         "countries": "ABK-GEO",
         "location": {
           "_latitude": 42.5761528,
           "_longitude": 41.8635247
         },
-        "comment": "It used to be possible to cross from Georgia to Abkhazia with the right Abkhazia visa, but it seems nobody has been able to cross for a long time.\nComing from Georgia, you're supposed to return to Georgia using the same crossing after your visit to Abkhazia (not continue into Russia)."
+        "name": "Inguri"
       }
     },
     {
@@ -1449,13 +3110,13 @@
       "properties": {
         "id": "a5XtXZDzjKNYz0VQW1sj",
         "is_open": 2,
-        "name": "Nizhneleninskoye/Tongjiang",
+        "comment": "Ferry terminal.",
         "countries": "RUS-CHN",
         "location": {
           "_latitude": 47.9614125,
           "_longitude": 132.6691294
         },
-        "comment": "Ferry terminal."
+        "name": "Nizhneleninskoye/Tongjiang"
       }
     },
     {
@@ -1470,12 +3131,73 @@
       "properties": {
         "id": "aKdNLxdtWyoJHfMdPbRB",
         "is_open": 2,
-        "name": "Al Omari",
         "countries": "SAU-JOR",
         "location": {
           "_latitude": 31.527683,
           "_longitude": 37.0819015
+        },
+        "name": "Al Omari"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          70.2292377,
+          37.9388556
+        ]
+      },
+      "properties": {
+        "id": "aQK89nhdXwIXH7okVrtj",
+        "is_open": 1,
+        "name": "Shohon / Khwahan",
+        "countries": "TJK-AFG",
+        "location": {
+          "_latitude": 37.9388556,
+          "_longitude": 70.2292377
         }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          42.3484312,
+          37.0891808
+        ]
+      },
+      "properties": {
+        "id": "aoYnPJMPXnZ1wjBLL4kS",
+        "is_open": 0,
+        "name": "Fishkhabour / Semalka",
+        "countries": "SYR-IRQ",
+        "location": {
+          "_latitude": 37.0891808,
+          "_longitude": 42.3484312
+        },
+        "comment": "Border between Syria and Kurdistan."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.1812994,
+          42.8009527
+        ]
+      },
+      "properties": {
+        "id": "aseezburxfT2N37eIeAj",
+        "is_open": 2,
+        "location": {
+          "_latitude": 42.8009527,
+          "_longitude": 79.1812994
+        },
+        "countries": "KGZ-KAZ",
+        "name": "Karkara"
       }
     },
     {
@@ -1490,12 +3212,12 @@
       "properties": {
         "id": "bgU2I3wojpRwBUYHKSMT",
         "is_open": 2,
-        "name": "Al Mudawara",
         "countries": "SAU-JOR",
         "location": {
           "_latitude": 29.1709518,
           "_longitude": 36.0740579
-        }
+        },
+        "name": "Al Mudawara"
       }
     },
     {
@@ -1530,12 +3252,12 @@
       "properties": {
         "id": "bs5YsTfR9JlrsaAHq62n",
         "is_open": 2,
-        "name": "Zamiin-Uud/Erenhot",
         "countries": "MNG-CHN",
         "location": {
           "_latitude": 43.6949726,
           "_longitude": 111.9361926
-        }
+        },
+        "name": "Zamiin-Uud/Erenhot"
       }
     },
     {
@@ -1550,12 +3272,12 @@
       "properties": {
         "id": "c12BRUHpPLLdcHmvD7mz",
         "is_open": 2,
-        "name": "Napalganj",
         "countries": "IND-NPL",
         "location": {
           "_latitude": 28.0189568,
           "_longitude": 81.6004603
-        }
+        },
+        "name": "Napalganj"
       }
     },
     {
@@ -1570,12 +3292,12 @@
       "properties": {
         "id": "c929zr2Gf4hv0hemkMom",
         "is_open": 2,
-        "name": "Serow-Esender",
         "countries": "IRN-TUR",
         "location": {
           "_latitude": 37.7174784,
           "_longitude": 44.622154
-        }
+        },
+        "name": "Serow-Esender"
       }
     },
     {
@@ -1590,11 +3312,31 @@
       "properties": {
         "id": "cIllekrAJJM0oY1qK01j",
         "is_open": 2,
-        "name": "Al Qa’im",
         "countries": "SYR-IRQ",
         "location": {
           "_latitude": 34.3977199,
           "_longitude": 40.9769976
+        },
+        "name": "Al Qa’im / Abu Kamal"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          42.8185854,
+          41.5882762
+        ]
+      },
+      "properties": {
+        "id": "cR8yZX9eqcDH0IaYaUHk",
+        "is_open": 2,
+        "name": "Posof / Vale",
+        "countries": "GEO-TUR",
+        "location": {
+          "_latitude": 41.5882762,
+          "_longitude": 42.8185854
         }
       }
     },
@@ -1610,13 +3352,93 @@
       "properties": {
         "id": "cpe4ryiDgakeyw9jozax",
         "is_open": 2,
-        "name": "Blagoveschensk/Heihe",
+        "comment": "Ferry terminal",
         "countries": "RUS-CHN",
         "location": {
           "_latitude": 50.2481192,
           "_longitude": 127.5334528
         },
-        "comment": "Ferry terminal"
+        "name": "Blagoveschensk/Heihe"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          71.7209223,
+          39.413881
+        ]
+      },
+      "properties": {
+        "id": "cqs9sIv2aQHAmrX2GiIP",
+        "is_open": 1,
+        "countries": "TJK-KGZ",
+        "location": {
+          "_latitude": 39.413881,
+          "_longitude": 71.7209223
+        },
+        "name": "Karamyk / Jirgital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.9254246,
+          39.6956473
+        ]
+      },
+      "properties": {
+        "id": "czBwGyqwbHfETo5LOdFY",
+        "is_open": 2,
+        "name": "Irkeshtam",
+        "countries": "KGZ-CHN",
+        "location": {
+          "_latitude": 39.6956473,
+          "_longitude": 73.9254246
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          69.6702943,
+          40.1222811
+        ]
+      },
+      "properties": {
+        "id": "d1lkUFLCWBFSBtDIL5EY",
+        "is_open": 2,
+        "name": "Kulundu – Ovchi Kalacha",
+        "countries": "TJK-KGZ",
+        "location": {
+          "_latitude": 40.1222811,
+          "_longitude": 69.6702943
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.3268693,
+          39.3733558
+        ]
+      },
+      "properties": {
+        "id": "d6xbCQkwfdjq9kcxAGs8",
+        "is_open": 2,
+        "countries": "TJK-KGZ",
+        "location": {
+          "_latitude": 39.3733558,
+          "_longitude": 73.3268693
+        },
+        "name": "Kyzyl-Art / Bor Dobo"
       }
     },
     {
@@ -1631,13 +3453,12 @@
       "properties": {
         "id": "dRIneQLPGq90jSTmBpNo",
         "is_open": 2,
-        "name": "Amurzet/Lobei",
-        "clountries": "RUS-CHN",
+        "comment": "Ferry terminal.",
         "location": {
           "_latitude": 47.6904053,
           "_longitude": 131.0727982
         },
-        "comment": "Ferry terminal."
+        "name": "Amurzet/Lobei"
       }
     },
     {
@@ -1652,13 +3473,13 @@
       "properties": {
         "id": "dTWtmsCFrWcKf5gmUjhu",
         "is_open": 0,
-        "name": "Shipki La",
+        "comment": "Only open for bilateral trade, no tourists allowed.",
         "countries": "IND-CHN",
         "location": {
           "_latitude": 31.8319529,
           "_longitude": 78.7338942
         },
-        "comment": "Only open for bilateral trade, no tourists allowed."
+        "name": "Shipki La"
       }
     },
     {
@@ -1672,12 +3493,40 @@
       },
       "properties": {
         "id": "dWgQe0fkBfJih4XqJLpK",
-        "is_open": 2,
-        "name": "Al Wadiah",
+        "is_open": 1,
         "countries": "SAU-YEM",
         "location": {
           "_latitude": 16.9508963,
           "_longitude": 47.0163814
+        },
+        "name": "Al Wadiah",
+        "updatedat": {
+          "_seconds": 1764257288,
+          "_nanoseconds": 915000000
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          68.242499,
+          55.090975
+        ]
+      },
+      "properties": {
+        "id": "depu9e9bz68v2nMZebmC",
+        "is_open": 2,
+        "name": "Petukhovo / Zhana Zhol",
+        "location": {
+          "_latitude": 55.090975,
+          "_longitude": 68.242499
+        },
+        "countries": "RUS-KAZ",
+        "createdat": {
+          "_seconds": 1764172689,
+          "_nanoseconds": 339000000
         }
       }
     },
@@ -1693,12 +3542,72 @@
       "properties": {
         "id": "eKGm2iBWLef5tCYrAHW6",
         "is_open": 2,
-        "name": "Khatm Al Shikla",
         "countries": "OMN-ARE",
         "location": {
           "_latitude": 24.215886,
           "_longitude": 55.9554305
+        },
+        "name": "Khatm Al Shikla"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          61.1649514,
+          36.5199427
+        ]
+      },
+      "properties": {
+        "id": "eLrIN8NuUoDdBFv0wPw9",
+        "is_open": 2,
+        "name": "Sarakhs / Sarahs",
+        "countries": "IRN-TKM",
+        "location": {
+          "_latitude": 36.5199427,
+          "_longitude": 61.1649514
         }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          41.5483829,
+          41.5209873
+        ]
+      },
+      "properties": {
+        "id": "eX0ZLhg8fTwsWQZJdVLX",
+        "is_open": 2,
+        "name": "Sarp / Sarpi",
+        "countries": "GEO-TUR",
+        "location": {
+          "_latitude": 41.5209873,
+          "_longitude": 41.5483829
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          67.3994957,
+          39.5181679
+        ]
+      },
+      "properties": {
+        "id": "edM84IDrTyXbtxSpvKwK",
+        "is_open": 2,
+        "countries": "TJK-UZB",
+        "location": {
+          "_latitude": 39.5181679,
+          "_longitude": 67.3994957
+        },
+        "name": "Jartepa / Sarazm"
       }
     },
     {
@@ -1713,12 +3622,32 @@
       "properties": {
         "id": "ejp4VhvtruXjXiGnWCu4",
         "is_open": 0,
-        "name": "At Tuwal",
         "countries": "SAU-YEM",
         "location": {
           "_latitude": 16.5098977,
           "_longitude": 42.9729442
-        }
+        },
+        "name": "At Tuwal"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          67.9306503,
+          41.1500699
+        ]
+      },
+      "properties": {
+        "id": "f8WdbJv0ZOmXXVvByL9U",
+        "is_open": 1,
+        "countries": "UZB-KAZ",
+        "location": {
+          "_latitude": 41.1500699,
+          "_longitude": 67.9306503
+        },
+        "name": "Shardara"
       }
     },
     {
@@ -1733,12 +3662,12 @@
       "properties": {
         "id": "fRipIkGn9ldV4VtP9cEr",
         "is_open": 1,
-        "name": "Bichigt/Zuun Khatavch",
         "countries": "MNG-CHN",
         "location": {
           "_latitude": 45.7535616,
           "_longitude": 116.2359356
-        }
+        },
+        "name": "Bichigt/Zuun Khatavch"
       }
     },
     {
@@ -1752,13 +3681,37 @@
       },
       "properties": {
         "id": "g4NsPLBzAVTTfxtGHiTf",
-        "is_open": 1,
-        "name": "Lagodeki / Balakan",
+        "is_open": 3,
         "countries": "GEO-AZE",
         "location": {
           "_latitude": 41.7918868,
           "_longitude": 46.3090885
+        },
+        "name": "Lagodeki / Balakan",
+        "updatedat": {
+          "_seconds": 1764168589,
+          "_nanoseconds": 593000000
         }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          68.5643067,
+          40.8357383
+        ]
+      },
+      "properties": {
+        "id": "gtJhWdfhYDgbVAbcsgBX",
+        "is_open": 1,
+        "coutries": "KAZ-UZB",
+        "location": {
+          "_latitude": 40.8357383,
+          "_longitude": 68.5643067
+        },
+        "name": "Atameken / Gulistan"
       }
     },
     {
@@ -1773,12 +3726,12 @@
       "properties": {
         "id": "gwsdXEH0HuymXs6IuWcz",
         "is_open": 2,
-        "name": "Bulgan/Takashiken",
         "countries": "MNG-CHN",
         "location": {
           "_latitude": 46.1423775,
           "_longitude": 90.9953677
-        }
+        },
+        "name": "Bulgan/Takashiken"
       }
     },
     {
@@ -1793,12 +3746,12 @@
       "properties": {
         "id": "h008gt5vzfgcumr2D42u",
         "is_open": 1,
-        "name": "Mand-Pishin",
         "countries": "IRN-PAK",
         "location": {
           "_latitude": 26.095704,
           "_longitude": 61.8465359
-        }
+        },
+        "name": "Mand-Pishin"
       }
     },
     {
@@ -1813,11 +3766,35 @@
       "properties": {
         "id": "hErDL8fXcYBfciEOQFD4",
         "is_open": 1,
-        "name": "Bayan/Hushuu Uvdug",
         "countries": "MNG-CHN",
         "location": {
           "_latitude": 48.0264965,
           "_longitude": 118.1756549
+        },
+        "name": "Bayan/Hushuu Uvdug"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          61.02061,
+          50.710306
+        ]
+      },
+      "properties": {
+        "id": "hHO9iVRPh3scF3rKDXzZ",
+        "is_open": 2,
+        "name": "Svetlyy / Karashatau",
+        "location": {
+          "_latitude": 50.710306,
+          "_longitude": 61.02061
+        },
+        "countries": "RUS-KAZ",
+        "createdat": {
+          "_seconds": 1764172689,
+          "_nanoseconds": 76000000
         }
       }
     },
@@ -1833,11 +3810,39 @@
       "properties": {
         "id": "hWv5UtS4abPUEDyIsXt8",
         "is_open": 1,
-        "name": "Lesozavodsk",
         "countries": "RUS-CHN",
         "location": {
           "_latitude": 45.5485647,
           "_longitude": 133.322976
+        },
+        "name": "Lesozavodsk"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.477149,
+          68.477378
+        ]
+      },
+      "properties": {
+        "id": "hpZKyhjo1l8FLSpdhNG6",
+        "is_open": 0,
+        "name": "Lotta / Rayya-Yooseppi",
+        "location": {
+          "_latitude": 68.477378,
+          "_longitude": 28.477149
+        },
+        "countries": "FIN-RUS",
+        "createdat": {
+          "_seconds": 1764171929,
+          "_nanoseconds": 554000000
+        },
+        "updatedat": {
+          "_seconds": 1764257543,
+          "_nanoseconds": 96000000
         }
       }
     },
@@ -1852,12 +3857,36 @@
       },
       "properties": {
         "id": "hqAzjmdGkN3NYNVjTarr",
-        "is_open": 1,
-        "name": "Samur/Yarag-Kazmalyar",
+        "is_open": 3,
         "countries": "AZE-RUS",
         "location": {
           "_latitude": 41.6369239,
           "_longitude": 48.4164344
+        },
+        "name": "Samur / Yarag-Kazmalyar",
+        "updatedat": {
+          "_seconds": 1764168585,
+          "_nanoseconds": 781000000
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          69.2087231,
+          41.4538484
+        ]
+      },
+      "properties": {
+        "id": "hvZTqNK9GlPH3To3mvUJ",
+        "is_open": 2,
+        "name": "Kaplanbek / Navoiy",
+        "countries": "KAZ-UZB",
+        "location": {
+          "_latitude": 41.4538484,
+          "_longitude": 69.2087231
         }
       }
     },
@@ -1878,7 +3907,55 @@
           "_latitude": 49.8874951,
           "_longitude": 115.7448754
         },
-        "name": "Ereentsav/Solovyovsk"
+        "name": "Yereentsav/Solovyovsk",
+        "updatedat": {
+          "_seconds": 1764167316,
+          "_nanoseconds": 440000000
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.8639649,
+          42.9953162
+        ]
+      },
+      "properties": {
+        "id": "i99u5Tk8JBF8oiSSSRdj",
+        "is_open": 1,
+        "name": "Ak-Tilek / Karasu",
+        "countries": "KGZ-KAZ",
+        "location": {
+          "_latitude": 42.9953162,
+          "_longitude": 74.8639649
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          61.001741,
+          52.319569
+        ]
+      },
+      "properties": {
+        "id": "iBDVloBRgzdxG43CkuDa",
+        "is_open": 1,
+        "name": "Mariinskiy / Zhelkuar",
+        "location": {
+          "_latitude": 52.319569,
+          "_longitude": 61.001741
+        },
+        "countries": "RUS-KAZ",
+        "createdat": {
+          "_seconds": 1764172689,
+          "_nanoseconds": 470000000
+        }
       }
     },
     {
@@ -1893,11 +3970,35 @@
       "properties": {
         "id": "ilVNTpnUzfy3bzTAry5b",
         "is_open": 2,
-        "name": "Ramtha",
         "countries": "JOR-SYR",
         "location": {
           "_latitude": 32.5793322,
           "_longitude": 36.0424049
+        },
+        "name": "Ramtha"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.659173,
+          54.372517
+        ]
+      },
+      "properties": {
+        "id": "j5B6OeN9BXJe1OtvDl1G",
+        "is_open": 2,
+        "name": "Bagrationovsk / Bezledy",
+        "location": {
+          "_latitude": 54.372517,
+          "_longitude": 20.659173
+        },
+        "countries": "RUS-POL",
+        "createdat": {
+          "_seconds": 1764172512,
+          "_nanoseconds": 543000000
         }
       }
     },
@@ -1912,14 +4013,38 @@
       },
       "properties": {
         "id": "kAMpDv9bssFYsRYLpbSd",
-        "is_open": 0,
-        "name": "Al Juddayyidah",
+        "is_open": 1,
+        "comment": "Close to tourists. Only open for Iraqi pilgrims heading to Mecca.",
         "countries": "SAU-IRQ",
         "location": {
           "_latitude": 31.3718846,
           "_longitude": 41.4450791
         },
-        "comment": "Close to tourists. Only open for Iraqi pilgrims heading to Mecca."
+        "updatedat": {
+          "_seconds": 1764256971,
+          "_nanoseconds": 301000000
+        },
+        "name": "An Nukhayb / Arar"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          37.0847701,
+          36.6461706
+        ]
+      },
+      "properties": {
+        "id": "kAtL1DkSZ0BbwMAb0baH",
+        "is_open": 0,
+        "name": "Bab as-Salama / Öncüpınar",
+        "countries": "TUR-SYR",
+        "location": {
+          "_latitude": 36.6461706,
+          "_longitude": 37.0847701
+        }
       }
     },
     {
@@ -1934,13 +4059,57 @@
       "properties": {
         "id": "kGSKrpqCNztGRAQ5Z139",
         "is_open": 2,
-        "name": "Kodari",
+        "comment": "Border post linking Tatopani and Zhangmu on the Araniko highway. It had been the only crossing from Nepal to Tibet from the 1960s until the large earthquake of 2015 destroyed it. From then on, the Rasuwagadhi-Gyirong border took over.\nThe Kodari border post is normally closed, but it was reopened after the Gyirong road was destroyed (2025 monsoon season).\nSo it's expected that it will be closed down again after the Gyirong crossing is accessible again.",
         "countries": "NPL-CHN",
         "location": {
           "_latitude": 27.9730991,
           "_longitude": 85.9631132
         },
-        "comment": "Border post linking Tatopani and Zhangmu on the Araniko highway. It had been the only crossing from Nepal to Tibet from the 1960s until the large earthquake of 2015 destroyed it. From then on, the Rasuwagadhi-Gyirong border took over.\nThe Kodari border post is normally closed, but it was reopened after the Gyirong road was destroyed (2025 monsoon season).\nSo it's expected that it will be closed down again after the Gyirong crossing is accessible again."
+        "name": "Kodari"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          61.3749816,
+          41.1786774
+        ]
+      },
+      "properties": {
+        "id": "kIwk04OygLnBgltsx8dy",
+        "is_open": 2,
+        "name": "Gazojak / Druzhba",
+        "countries": "UZB-TKM",
+        "location": {
+          "_latitude": 41.1786774,
+          "_longitude": 61.3749816
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          58.475364,
+          51.084344
+        ]
+      },
+      "properties": {
+        "id": "kUgMpT1DMmOJzORPOcw4",
+        "is_open": 2,
+        "name": "Orsk / Alimbet",
+        "location": {
+          "_latitude": 51.084344,
+          "_longitude": 58.475364
+        },
+        "countries": "RUS-KAZ",
+        "createdat": {
+          "_seconds": 1764172688,
+          "_nanoseconds": 949000000
+        }
       }
     },
     {
@@ -1955,12 +4124,32 @@
       "properties": {
         "id": "kk6QRrhbiez1A9rYdsLv",
         "is_open": 2,
-        "name": "Khatmat Malaha",
         "countries": "ARE-OMN",
         "location": {
           "_latitude": 24.9783555,
           "_longitude": 56.3648257
-        }
+        },
+        "name": "Khatmat Malaha"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          68.1016314,
+          38.50238
+        ]
+      },
+      "properties": {
+        "id": "lAor8y0VnECcC3QZRA8E",
+        "is_open": 2,
+        "countries": "TJK-UZB",
+        "location": {
+          "_latitude": 38.50238,
+          "_longitude": 68.1016314
+        },
+        "name": "Saryasiya / Bratstvo"
       }
     },
     {
@@ -1975,12 +4164,12 @@
       "properties": {
         "id": "lRpyyyEUach4aQ0SwQHv",
         "is_open": 2,
-        "name": "Rub' al Khali",
         "countries": "OMN-SAU",
         "location": {
           "_latitude": 22.2122317,
           "_longitude": 55.5275973
-        }
+        },
+        "name": "Rub' al Khali"
       }
     },
     {
@@ -1995,12 +4184,12 @@
       "properties": {
         "id": "ldWvLb7F81Z6F13lvOAF",
         "is_open": 2,
-        "name": "Chaman-Spin Boldak",
         "countries": "PAK-AFG",
         "location": {
           "_latitude": 30.9548,
           "_longitude": 66.43805
-        }
+        },
+        "name": "Chaman-Spin Boldak"
       }
     },
     {
@@ -2015,12 +4204,12 @@
       "properties": {
         "id": "mIQgR769fGkeuhFbiTPp",
         "is_open": 2,
-        "name": "Samdrup Jongkhar",
         "countries": "IND-BTN",
         "location": {
           "_latitude": 26.7926375,
           "_longitude": 91.5022946
-        }
+        },
+        "name": "Samdrup Jongkhar"
       }
     },
     {
@@ -2035,11 +4224,31 @@
       "properties": {
         "id": "nF4PIWRvJh7zpjjv7FxG",
         "is_open": 2,
-        "name": "Bavra/Ninotsminda",
         "countries": "GEO-ARM",
         "location": {
           "_latitude": 41.1404232,
           "_longitude": 43.7920841
+        },
+        "name": "Bavra/Ninotsminda"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          63.7109602,
+          39.2112391
+        ]
+      },
+      "properties": {
+        "id": "nJqtHGDZLvQWyL9F34Ft",
+        "is_open": 2,
+        "name": "Farap / Alat",
+        "countries": "UZB-TKM",
+        "location": {
+          "_latitude": 39.2112391,
+          "_longitude": 63.7109602
         }
       }
     },
@@ -2055,11 +4264,15 @@
       "properties": {
         "id": "nOqFYViPoyEeVofACcms",
         "is_open": 2,
-        "name": "Verkhnij Lars",
         "countries": "RUS-GEO",
         "location": {
           "_latitude": 42.7406764,
           "_longitude": 44.6266035
+        },
+        "name": "Verkhniy Lars / Kazbegi",
+        "updatedat": {
+          "_seconds": 1764167371,
+          "_nanoseconds": 795000000
         }
       }
     },
@@ -2075,12 +4288,35 @@
       "properties": {
         "id": "nT4UsPbBdSRTOcy7P87Z",
         "is_open": 2,
-        "country": "RUS-MNG",
         "location": {
           "_latitude": 50.321868,
           "_longitude": 106.4891507
         },
         "name": "Kyakhta/Altanbulag"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          71.0168999992311,
+          54.9219999983907
+        ]
+      },
+      "properties": {
+        "id": "nffDEigzPtt4G0dGarZj",
+        "is_open": 2,
+        "name": "Isilkul / Karakoga",
+        "location": {
+          "_latitude": 54.9219999983907,
+          "_longitude": 71.0168999992311
+        },
+        "countries": "RUS-KAZ",
+        "createdat": {
+          "_seconds": 1764172688,
+          "_nanoseconds": 349000000
+        }
       }
     },
     {
@@ -2095,12 +4331,12 @@
       "properties": {
         "id": "nymWKBbyy8STU9wJRSZM",
         "is_open": 1,
-        "name": "Ar Rawdah",
         "countries": "ARE-OMN",
         "location": {
           "_latitude": 24.907299,
           "_longitude": 55.8112143
-        }
+        },
+        "name": "Ar Rawdah"
       }
     },
     {
@@ -2115,12 +4351,12 @@
       "properties": {
         "id": "nzM0JdPbX7SqdfvweAnh",
         "is_open": 2,
-        "name": "Turiy Rog/Mishan",
         "countries": "RUS-CHN",
         "location": {
           "_latitude": 45.2621886,
           "_longitude": 131.9781645
-        }
+        },
+        "name": "Turiy Rog/Mishan"
       }
     },
     {
@@ -2135,13 +4371,13 @@
       "properties": {
         "id": "oC2Hph7XGGKOWAx5fxEL",
         "is_open": 4,
-        "name": "Moreh",
+        "comment": "Closed since the military takeover in Myanmar.",
         "countries": "IND-MMR",
         "location": {
           "_latitude": 24.2467876,
           "_longitude": 94.3082127
         },
-        "comment": "Closed since the military takeover in Myanmar."
+        "name": "Moreh"
       }
     },
     {
@@ -2156,12 +4392,12 @@
       "properties": {
         "id": "p3GrseRa4UmjVcmNrWzu",
         "is_open": 2,
-        "name": "Jeminay/Maikapchagai",
         "countries": "KAZ-CHN",
         "location": {
           "_latitude": 47.5023975,
           "_longitude": 85.6136464
-        }
+        },
+        "name": "Jeminay/Maikapchagai"
       }
     },
     {
@@ -2176,11 +4412,39 @@
       "properties": {
         "id": "p5ev8OqJIIeRovl5D3cE",
         "is_open": 2,
-        "name": "Gogavan/Guguti",
         "countries": "ARM-GEO",
         "location": {
           "_latitude": 41.2076482,
           "_longitude": 44.3201994
+        },
+        "name": "Gogavan/Guguti"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.952485,
+          55.066608
+        ]
+      },
+      "properties": {
+        "id": "pGGffC3L2Et6VT2SOrTd",
+        "is_open": 2,
+        "name": "Dubki / Rambinas",
+        "location": {
+          "_latitude": 55.066608,
+          "_longitude": 21.952485
+        },
+        "countries": "LTU-RUS",
+        "createdat": {
+          "_seconds": 1764171461,
+          "_nanoseconds": 833000000
+        },
+        "updatedat": {
+          "_seconds": 1764171461,
+          "_nanoseconds": 833000000
         }
       }
     },
@@ -2195,12 +4459,16 @@
       },
       "properties": {
         "id": "pRrdGw0kPNODUuZbRfVC",
-        "is_open": 1,
-        "name": "Yalama/Tagirkent-Kazmalyar",
+        "is_open": 2,
         "countries": "AZE-RUS",
         "location": {
           "_latitude": 41.7821253,
           "_longitude": 48.5553613
+        },
+        "name": "Yalama / Tagirkent-Kazmalyar",
+        "updatedat": {
+          "_seconds": 1764168243,
+          "_nanoseconds": 973000000
         }
       }
     },
@@ -2215,12 +4483,40 @@
       },
       "properties": {
         "id": "pXwaApfYwM2csONINuBI",
-        "is_open": 1,
-        "name": "Red Bridge/Sixli",
+        "is_open": 3,
         "countries": "GEO-AZE",
         "location": {
           "_latitude": 41.3281994,
           "_longitude": 45.073882
+        },
+        "name": "Red Bridge/Sixli",
+        "updatedat": {
+          "_seconds": 1764168601,
+          "_nanoseconds": 112000000
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          48.637239,
+          46.545927
+        ]
+      },
+      "properties": {
+        "id": "pco7DyzsEKjXrhZ7rGTp",
+        "is_open": 2,
+        "name": "Karauzek / Kurmangazy",
+        "location": {
+          "_latitude": 46.545927,
+          "_longitude": 48.637239
+        },
+        "countries": "RUS-KAZ",
+        "createdat": {
+          "_seconds": 1764172687,
+          "_nanoseconds": 428000000
         }
       }
     },
@@ -2235,14 +4531,82 @@
       },
       "properties": {
         "id": "rEr7QbUF6voRsdqu43nZ",
-        "is_open": "3",
-        "name": "Khosravi",
+        "is_open": 3,
+        "comment": "Only on foot, no motor vehicles allowed.",
         "countries": "IRN-IRQ",
         "location": {
           "_latitude": 34.3826511,
           "_longitude": 45.4670285
         },
-        "comment": "Only on foot, no motor vehicles allowed."
+        "name": "Khosravi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          65.4661323,
+          38.3392833
+        ]
+      },
+      "properties": {
+        "id": "rKoPQhaWGho8IyVLm8Ds",
+        "is_open": 1,
+        "name": "Tallymerjen",
+        "countries": "UZB-TKM",
+        "location": {
+          "_latitude": 38.3392833,
+          "_longitude": 65.4661323
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.074312,
+          54.424393
+        ]
+      },
+      "properties": {
+        "id": "rOsX7wVNLcXtUcJrStN2",
+        "is_open": 2,
+        "name": "Mamonovo / Gzhekhotki",
+        "location": {
+          "_latitude": 54.424393,
+          "_longitude": 20.074312
+        },
+        "countries": "RUS-POL",
+        "createdat": {
+          "_seconds": 1764172512,
+          "_nanoseconds": 726000000
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.817193,
+          57.895767
+        ]
+      },
+      "properties": {
+        "id": "rgg2cCIlXL0R8ISjj4DB",
+        "is_open": 1,
+        "name": "Krupp / Saatse",
+        "location": {
+          "_latitude": 57.895767,
+          "_longitude": 27.817193
+        },
+        "countries": "RUS-EST",
+        "createdat": {
+          "_seconds": 1764172634,
+          "_nanoseconds": 476000000
+        }
       }
     },
     {
@@ -2257,12 +4621,12 @@
       "properties": {
         "id": "rxGvyVMxEkbWABqhKcBq",
         "is_open": 2,
-        "name": "Banbasa",
         "countries": "IND-NPL",
         "location": {
           "_latitude": 28.992359,
           "_longitude": 80.1207109
-        }
+        },
+        "name": "Banbasa"
       }
     },
     {
@@ -2277,13 +4641,13 @@
       "properties": {
         "id": "sfIO6zVeodScDhC82EET",
         "is_open": 1,
+        "comment": "This crossing is only open for trade between the 2 countries.",
         "countries": "NPL-CHN",
         "location": {
           "_latitude": 29.3231404,
           "_longitude": 83.9863704
         },
-        "name": "Korala",
-        "comment": "This crossing is only open for trade between the 2 countries."
+        "name": "Korala"
       }
     },
     {
@@ -2298,12 +4662,13 @@
       "properties": {
         "id": "t96A5xT3nrVXktJ2Iqch",
         "is_open": 2,
-        "name": "Roki Tunnel",
         "countries": "RUS-SOS",
         "location": {
           "_latitude": 42.6297114,
           "_longitude": 44.0910908
-        }
+        },
+        "comment": "Also known as the Roki tunnel.",
+        "name": "Nizhny Zaramag"
       }
     },
     {
@@ -2317,13 +4682,13 @@
       },
       "properties": {
         "id": "tGj4CHvZ9raj8HTbttMu",
-        "is_open": "1",
-        "name": "Ghulam Khan",
+        "is_open": 1,
         "countries": "PAK-AFG",
         "location": {
           "_latitude": 33.150938,
           "_longitude": 70.0300178
-        }
+        },
+        "name": "Ghulam Khan"
       }
     },
     {
@@ -2338,11 +4703,55 @@
       "properties": {
         "id": "tQugr9d0Er8bVE2pE0Fh",
         "is_open": 2,
-        "name": "Durra",
         "countries": "SAU-JOR",
         "location": {
           "_latitude": 29.357803,
           "_longitude": 34.9627204
+        },
+        "name": "Durra"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          68.7275182,
+          40.9680155
+        ]
+      },
+      "properties": {
+        "id": "tQz6XY2IOXqNTt1cGfwe",
+        "is_open": 2,
+        "countries": "KAZ-UZB",
+        "location": {
+          "_latitude": 40.9680155,
+          "_longitude": 68.7275182
+        },
+        "name": "Yalama / Konysbayeva"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          81.420538,
+          50.972275
+        ]
+      },
+      "properties": {
+        "id": "ty9ywDR5HQLd9Wu0zO7D",
+        "is_open": 2,
+        "name": "Gornyak / Zhezkent",
+        "location": {
+          "_latitude": 50.972275,
+          "_longitude": 81.420538
+        },
+        "countries": "RUS-KAZ",
+        "createdat": {
+          "_seconds": 1764172687,
+          "_nanoseconds": 761000000
         }
       }
     },
@@ -2358,12 +4767,12 @@
       "properties": {
         "id": "uHIKbiTccCcfZgkI583z",
         "is_open": 2,
-        "name": "King Fahd Causeway",
         "countries": "SAU-BHR",
         "location": {
           "_latitude": 26.1842342,
           "_longitude": 50.32286
-        }
+        },
+        "name": "King Fahd Causeway"
       }
     },
     {
@@ -2378,12 +4787,12 @@
       "properties": {
         "id": "uK4rqqkNS9XDkqQjjt8Z",
         "is_open": 2,
-        "name": "Al Dhara",
         "countries": "ARE-OMN",
         "location": {
           "_latitude": 26.0497437,
           "_longitude": 56.087357
-        }
+        },
+        "name": "Al Dhara"
       }
     },
     {
@@ -2397,12 +4806,81 @@
       },
       "properties": {
         "id": "uW5JdikVcnRfekYBo0B0",
-        "is_open": 1,
-        "name": "Sadaxli",
+        "is_open": 3,
         "countries": "AZE-GEO",
         "location": {
           "_latitude": 41.3790733,
           "_longitude": 45.1356123
+        },
+        "name": "Sadaxli",
+        "updatedat": {
+          "_seconds": 1764168595,
+          "_nanoseconds": 932000000
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          59.3340997,
+          37.5280597
+        ]
+      },
+      "properties": {
+        "id": "uXBR0iIPWBjF0KdbD71y",
+        "is_open": 2,
+        "name": "Lotfabad / Artyk",
+        "countries": "IRN-TKM",
+        "location": {
+          "_latitude": 37.5280597,
+          "_longitude": 59.3340997
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.197336,
+          56.356309
+        ]
+      },
+      "properties": {
+        "id": "ubN0uMYIS85QiMKDaqZd",
+        "is_open": 2,
+        "location": {
+          "_latitude": 56.356309,
+          "_longitude": 28.197336
+        },
+        "countries": "RUS-LVA",
+        "createdat": {
+          "_seconds": 1764258327,
+          "_nanoseconds": 977000000
+        },
+        "name": "Burachki / Terehova",
+        "comment": "Mandatory reservation: https://lvrobeza.lv/en/reserve/"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.1489788,
+          42.8812462
+        ]
+      },
+      "properties": {
+        "id": "ufbWqYAVmtiOA82c7Jbl",
+        "is_open": 2,
+        "name": "Ken-Bulun",
+        "countries": "KAZ-KGZ",
+        "location": {
+          "_latitude": 42.8812462,
+          "_longitude": 75.1489788
         }
       }
     },
@@ -2431,6 +4909,30 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          46.789453,
+          48.953911
+        ]
+      },
+      "properties": {
+        "id": "vSdiAOojVHtZGDJTiaUe",
+        "is_open": 1,
+        "name": "Polynnyy / Orda",
+        "location": {
+          "_latitude": 48.953911,
+          "_longitude": 46.789453
+        },
+        "countries": "RUS-KAZ",
+        "createdat": {
+          "_seconds": 1764172687,
+          "_nanoseconds": 494000000
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           127.6451164,
           50.1980288
         ]
@@ -2438,11 +4940,119 @@
       "properties": {
         "id": "w56zys52qS3ijWmOV02d",
         "is_open": 2,
-        "name": "Kani-Kurgan/Heihe",
         "countries": "RUS-CHN",
         "location": {
           "_latitude": 50.1980288,
           "_longitude": 127.6451164
+        },
+        "name": "Kani-Kurgan/Heihe"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          81.11318,
+          51.211204
+        ]
+      },
+      "properties": {
+        "id": "w8vnn8NwGNXFe47w9jpF",
+        "is_open": 2,
+        "name": "Veseloyarsk / Auyl",
+        "location": {
+          "_latitude": 51.211204,
+          "_longitude": 81.11318
+        },
+        "countries": "RUS-KAZ",
+        "createdat": {
+          "_seconds": 1764172687,
+          "_nanoseconds": 636000000
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          68.8482281,
+          40.1937942
+        ]
+      },
+      "properties": {
+        "id": "wWltQHvRCw8A6hJxPsKT",
+        "is_open": 2,
+        "countries": "TJK-UZB",
+        "location": {
+          "_latitude": 40.1937942,
+          "_longitude": 68.8482281
+        },
+        "name": "Zafarobod / Xovosobod"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.5110693,
+          42.8230545
+        ]
+      },
+      "properties": {
+        "id": "wcLuHV3bFiURvB9MCPaz",
+        "is_open": 2,
+        "name": "Sypatay Batyr / Chaldybar",
+        "countries": "KGZ-KAZ",
+        "location": {
+          "_latitude": 42.8230545,
+          "_longitude": 73.5110693
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          50.896097,
+          51.853502
+        ]
+      },
+      "properties": {
+        "id": "wcQ056Qx7YCQRNRLhHC6",
+        "is_open": 2,
+        "name": "Mashtakovo / Syrym",
+        "location": {
+          "_latitude": 51.853502,
+          "_longitude": 50.896097
+        },
+        "countries": "RUS-KAZ",
+        "createdat": {
+          "_seconds": 1764172688,
+          "_nanoseconds": 882000000
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          71.5033786,
+          42.7915914
+        ]
+      },
+      "properties": {
+        "id": "wcXzWQvSjxmVqJtwaJlE",
+        "is_open": 2,
+        "name": "Aisha Bibi / Chon-Kapka",
+        "countries": "KGZ-KAZ",
+        "location": {
+          "_latitude": 42.7915914,
+          "_longitude": 71.5033786
         }
       }
     },
@@ -2457,13 +5067,17 @@
       },
       "properties": {
         "id": "xPez4QX7AZw0rbYdrGDB",
-        "is_open": 1,
+        "is_open": 2,
         "countries": "AZE-RUS",
         "location": {
           "_latitude": 41.7063396,
           "_longitude": 48.4761962
         },
-        "name": "Shirvanovka/Filya"
+        "name": "Shirvanovka / Filya",
+        "updatedat": {
+          "_seconds": 1764168248,
+          "_nanoseconds": 417000000
+        }
       }
     },
     {
@@ -2471,19 +5085,179 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          8.8761252,
+          80.103876,
+          50.918237
+        ]
+      },
+      "properties": {
+        "id": "xSY5lB2JbbzMBjyNffyq",
+        "is_open": 1,
+        "name": "Topolnoe / Baytanat",
+        "location": {
+          "_latitude": 50.918237,
+          "_longitude": 80.103876
+        },
+        "countries": "RUS-KAZ",
+        "createdat": {
+          "_seconds": 1764172688,
+          "_nanoseconds": 40000000
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.268375,
+          52.924229
+        ]
+      },
+      "properties": {
+        "id": "xeZdBV3Nc8ZO5h5mmgRO",
+        "is_open": 1,
+        "name": "Pavlovka / Nayza",
+        "location": {
+          "_latitude": 52.924229,
+          "_longitude": 78.268375
+        },
+        "countries": "RUS-KAZ",
+        "createdat": {
+          "_seconds": 1764172687,
+          "_nanoseconds": 974000000
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          64.805326,
+          54.386677
+        ]
+      },
+      "properties": {
+        "id": "yOGju1hDt6Ra3mpWS9Nh",
+        "is_open": 1,
+        "name": "Zverinogolovskoe / Ubagan",
+        "location": {
+          "_latitude": 54.386677,
+          "_longitude": 64.805326
+        },
+        "countries": "RUS-KAZ",
+        "createdat": {
+          "_seconds": 1764172689,
+          "_nanoseconds": 190000000
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.709242,
+          53.401993
+        ]
+      },
+      "properties": {
+        "id": "yPZK5gmegz5xjJuaNvTL",
+        "is_open": 2,
+        "name": "Pavlovka / Kosak",
+        "location": {
+          "_latitude": 53.401993,
+          "_longitude": 77.709242
+        },
+        "countries": "RUS-KAZ",
+        "createdat": {
+          "_seconds": 1764172688,
+          "_nanoseconds": 146000000
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          71.5011408,
+          37.5270323
+        ]
+      },
+      "properties": {
+        "id": "yT9ZdYhWajf4xGVXxQgM",
+        "is_open": 1,
+        "name": "Tem-Demogan",
+        "countries": "TJK-AFG",
+        "location": {
+          "_latitude": 37.5270323,
+          "_longitude": 71.5011408
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          48.8761252,
           38.4392017
         ]
       },
       "properties": {
         "id": "yTrr9gGGskIcUIs0RWmC",
-        "is_open": 1,
-        "name": "Astara",
+        "is_open": 3,
         "countries": "AZE-IRN",
+        "name": "Astara",
         "location": {
           "_latitude": 38.4392017,
-          "_longitude": 8.8761252
+          "_longitude": 48.8761252
+        },
+        "updatedat": {
+          "_seconds": 1764168571,
+          "_nanoseconds": 51000000
         }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          65.2671742,
+          37.2460585
+        ]
+      },
+      "properties": {
+        "id": "ywqcERpxn769fEhV5s8p",
+        "is_open": -1,
+        "name": "Imam Nazar",
+        "countries": "TKM-AFG",
+        "location": {
+          "_latitude": 37.2460585,
+          "_longitude": 65.2671742
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.0090512,
+          35.9043493
+        ]
+      },
+      "properties": {
+        "id": "zTAk3cPRt6d59RVRYr0r",
+        "is_open": 0,
+        "countries": "TUR-SYR",
+        "location": {
+          "_latitude": 35.9043493,
+          "_longitude": 36.0090512
+        },
+        "name": "Yayladağı / Kassab"
       }
     },
     {
@@ -2498,13 +5272,33 @@
       "properties": {
         "id": "zWfB7LNKT1IMBU9ZeElb",
         "is_open": 2,
-        "name": "Panitanki/Kakarbhitta",
+        "comment": "As a tourist, you need to look for the immigration offices on either sides of the border, because 99.99% of the traffic is bilateral and they only need to show an ID to cross, so this is very unformal.\nHave your visa checked and carnet stamped before crossing actual border, where they'll only check for your entry/exit stamps.\nNote that the large 2-lanes highway is restricted to cars and trucks, motorcycles need to take the smaller road that runs parallel and which is congested with rickshaws.",
         "countries": "IND-NPL",
         "location": {
           "_latitude": 26.6446682,
           "_longitude": 88.1625578
         },
-        "comment": "As a tourist, you need to look for the immigration offices on either sides of the border, because 99.99% of the traffic is bilateral and they only need to show an ID to cross, so this is very unformal.\nHave your visa checked and carnet stamped before crossing actual border, where they'll only check for your entry/exit stamps.\nNote that the large 2-lanes highway is restricted to cars and trucks, motorcycles need to take the smaller road that runs parallel and which is congested with rickshaws."
+        "name": "Panitanki/Kakarbhitta"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          43.2024286,
+          41.235148
+        ]
+      },
+      "properties": {
+        "id": "zlysr78S8OIhONjFzstt",
+        "is_open": 2,
+        "name": "Cildir-Aktas / Kartsakhi",
+        "countries": "GEO-TUR",
+        "location": {
+          "_latitude": 41.235148,
+          "_longitude": 43.2024286
+        }
       }
     }
   ]

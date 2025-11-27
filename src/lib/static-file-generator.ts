@@ -134,6 +134,30 @@ export class StaticFileGenerator {
   }
 
   /**
+   * Generate border post JSON file without geographic information (for detail lookups)
+   */
+  generateBorderPostJSONFile(borderPosts: ProcessedBorderPostData[]): void {
+    console.log('🔄 Generating border post JSON file (without geography)...')
+    
+    try {
+      // Extract only the data properties, excluding geometry
+      const borderPostsData = borderPosts.map(bp => ({
+        id: bp.id,
+        is_open: bp.is_open,
+        ...bp.properties
+      }))
+      
+      const filePath = join(this.outputDir, 'border-posts.json')
+      this.writeJSONFile(filePath, borderPostsData)
+      
+      console.log(`✅ Generated border-posts.json with ${borderPostsData.length} entries`)
+    } catch (error) {
+      console.error('❌ Failed to generate border post JSON:', error)
+      throw error
+    }
+  }
+
+  /**
    * Generate iso_a3 lookup JSON for runtime country data access
    */
   generateISO3LookupJSON(lookup: ISO3Lookup): void {
@@ -183,19 +207,15 @@ export class StaticFileGenerator {
             sizeEstimate: this.estimateFileSize(countries)
           },
           'borders.json': {
-            description: 'Border metadata without full geometry',
+            description: 'Border metadata for route generation only (data loaded from Firestore)',
             recordCount: borders.length,
-            sizeEstimate: this.estimateFileSize(borders)
+            sizeEstimate: this.estimateFileSize(borders),
+            note: 'Border details are always loaded from Firestore, not from static files'
           },
-          'borders.geojson': {
-            description: 'Full border geometries as GeoJSON FeatureCollection',
-            featureCount: borders.length,
-            sizeEstimate: 'Large - contains full geometry data'
-          },
-          'borders-optimized.geojson': {
-            description: 'Optimized border geometries with reduced precision',
-            featureCount: borders.length,
-            sizeEstimate: 'Medium - optimized for web display'
+          'border-posts.json': {
+            description: 'Border post details without geographic data (for lookups)',
+            recordCount: borderPosts.length,
+            sizeEstimate: this.estimateFileSize(borderPosts)
           },
           'border-posts.geojson': {
             description: 'Border crossing posts as Point features',

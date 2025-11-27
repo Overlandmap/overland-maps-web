@@ -1,0 +1,2165 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          48.637239,
+          46.545927
+        ]
+      },
+      "properties": {
+        "name": "Karauzek",
+        "status": 2,
+        "id": 133,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.571801,
+          45.976242
+        ]
+      },
+      "properties": {
+        "name": "Dzhankoy",
+        "status": 2,
+        "id": 91,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.633651,
+          46.215373
+        ]
+      },
+      "properties": {
+        "name": "Perekop",
+        "status": 1,
+        "id": 247,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.646077,
+          46.136665
+        ]
+      },
+      "properties": {
+        "name": "Armyansk",
+        "status": 2,
+        "id": 16,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          39.918452,
+          48.905176
+        ]
+      },
+      "properties": {
+        "name": "Voloshino",
+        "status": 2,
+        "id": 65,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          39.920856,
+          48.34025
+        ]
+      },
+      "properties": {
+        "name": "Donetsk (Severnyy)",
+        "status": 1,
+        "id": 95,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          39.913518,
+          48.293035
+        ]
+      },
+      "properties": {
+        "name": "Donetsk (Izvarino)",
+        "status": 2,
+        "id": 94,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          39.121442,
+          47.829234
+        ]
+      },
+      "properties": {
+        "name": "Kuybyshevo (Dyakovo)",
+        "status": 2,
+        "id": 151,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          38.683999,
+          47.697363
+        ]
+      },
+      "properties": {
+        "name": "Matveev Kurgan",
+        "status": 2,
+        "id": 183,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          39.737029,
+          48.759866
+        ]
+      },
+      "properties": {
+        "name": "Mozhaevka",
+        "status": 1,
+        "id": 190,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          39.760708,
+          47.84551
+        ]
+      },
+      "properties": {
+        "name": "Novoshakhtinsk",
+        "status": 2,
+        "id": 223,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          39.843771,
+          48.061967
+        ]
+      },
+      "properties": {
+        "name": "Gukovo",
+        "status": 2,
+        "id": 85,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          39.7369,
+          48.995
+        ]
+      },
+      "properties": {
+        "name": "Titovka",
+        "status": 1,
+        "id": 327,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          38.858523,
+          47.857207
+        ]
+      },
+      "properties": {
+        "name": "Kuybyshevo (Marinovka)",
+        "status": 2,
+        "id": 152,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          40.123997,
+          49.387003
+        ]
+      },
+      "properties": {
+        "name": "Chertkovo",
+        "status": 1,
+        "id": 364,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          55.0,
+          55.0
+        ]
+      },
+      "properties": {
+        "name": "Shramko-Ulyanovskoe",
+        "status": 1,
+        "id": 386,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          38.242846,
+          47.1616
+        ]
+      },
+      "properties": {
+        "name": "Veselo-Voznesenka",
+        "status": 2,
+        "id": 58,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          40.002072,
+          43.397314
+        ]
+      },
+      "properties": {
+        "name": "Adler",
+        "status": 2,
+        "id": 5,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.789453,
+          48.953911
+        ]
+      },
+      "properties": {
+        "name": "Polynnyy",
+        "status": 1,
+        "id": 262,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.795764,
+          49.429484
+        ]
+      },
+      "properties": {
+        "name": "Vishnevka",
+        "status": 1,
+        "id": 60,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.298149,
+          51.24417
+        ]
+      },
+      "properties": {
+        "name": "Tyotkino (Boyaro-Lezhachi)",
+        "status": 1,
+        "id": 325,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.058658,
+          52.192193
+        ]
+      },
+      "properties": {
+        "name": "Zernovo",
+        "status": 1,
+        "id": 110,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.811135,
+          52.116365
+        ]
+      },
+      "properties": {
+        "name": "Novye Yurkovichi",
+        "status": 2,
+        "id": 224,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.243985,
+          52.369862
+        ]
+      },
+      "properties": {
+        "name": "Pogar",
+        "status": 2,
+        "id": 255,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.4804,
+          52.3835
+        ]
+      },
+      "properties": {
+        "name": "Belaya Berezka",
+        "status": 1,
+        "id": 27,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.647313,
+          52.295003
+        ]
+      },
+      "properties": {
+        "name": "Lomakovka",
+        "status": 1,
+        "id": 166,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.337551,
+          51.881005
+        ]
+      },
+      "properties": {
+        "name": "Troebortnoe",
+        "status": 2,
+        "id": 333,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.137715,
+          51.647524
+        ]
+      },
+      "properties": {
+        "name": "Krupets",
+        "status": 2,
+        "id": 147,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.139334,
+          51.172627
+        ]
+      },
+      "properties": {
+        "name": "Sudzha",
+        "status": 2,
+        "id": 310,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.298117,
+          51.24413
+        ]
+      },
+      "properties": {
+        "name": "Tyotkino (Ryzhevka)",
+        "status": 1,
+        "id": 326,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          37.467621,
+          50.391387
+        ]
+      },
+      "properties": {
+        "name": "Tishanka",
+        "status": 1,
+        "id": 328,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.5807,
+          50.3108
+        ]
+      },
+      "properties": {
+        "name": "Vergelevka",
+        "status": 1,
+        "id": 53,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.8312,
+          50.4348
+        ]
+      },
+      "properties": {
+        "name": "Golovchino",
+        "status": 1,
+        "id": 79,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.415016,
+          50.813564
+        ]
+      },
+      "properties": {
+        "name": "Kolotilovka",
+        "status": 1,
+        "id": 139,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.922684,
+          50.352158
+        ]
+      },
+      "properties": {
+        "name": "Shebekino",
+        "status": 2,
+        "id": 369,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          38.959084,
+          49.806705
+        ]
+      },
+      "properties": {
+        "name": "Rovenki",
+        "status": 2,
+        "id": 276,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          37.638937,
+          50.197641
+        ]
+      },
+      "properties": {
+        "name": "Verigovka",
+        "status": 1,
+        "id": 54,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          37.951784,
+          49.999964
+        ]
+      },
+      "properties": {
+        "name": "Logachevka",
+        "status": 1,
+        "id": 163,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          38.176687,
+          50.078024
+        ]
+      },
+      "properties": {
+        "name": "Valuyki",
+        "status": 1,
+        "id": 49,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.591033,
+          50.43093
+        ]
+      },
+      "properties": {
+        "name": "Grayvoron",
+        "status": 2,
+        "id": 82,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.28717,
+          50.338847
+        ]
+      },
+      "properties": {
+        "name": "Kyzyl",
+        "status": 2,
+        "id": 209,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          55.0,
+          55.0
+        ]
+      },
+      "properties": {
+        "name": "Nekhoteevka",
+        "status": 2,
+        "id": 389,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.756453,
+          50.368527
+        ]
+      },
+      "properties": {
+        "name": "Bezymeno",
+        "status": 1,
+        "id": 26,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          38.3698,
+          50.0551
+        ]
+      },
+      "properties": {
+        "name": "Klimenki",
+        "status": 1,
+        "id": 138,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          39.713156,
+          49.609088
+        ]
+      },
+      "properties": {
+        "name": "Bugaevka",
+        "status": 2,
+        "id": 44,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          39.245439,
+          49.7947
+        ]
+      },
+      "properties": {
+        "name": "Novobelaya",
+        "status": 1,
+        "id": 219,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          81.11318,
+          51.211204
+        ]
+      },
+      "properties": {
+        "name": "Veseloyarsk",
+        "status": 2,
+        "id": 59,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          81.420538,
+          50.972275
+        ]
+      },
+      "properties": {
+        "name": "Gornyak",
+        "status": 2,
+        "id": 81,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.437002,
+          51.595588
+        ]
+      },
+      "properties": {
+        "name": "Malinovoe Ozero",
+        "status": 1,
+        "id": 176,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          81.965854,
+          50.807859
+        ]
+      },
+      "properties": {
+        "name": "Mikhaylovka",
+        "status": 2,
+        "id": 189,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.268375,
+          52.924229
+        ]
+      },
+      "properties": {
+        "name": "Pavlovka (Slavgorod)",
+        "status": 1,
+        "id": 243,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.103876,
+          50.918237
+        ]
+      },
+      "properties": {
+        "name": "Topolnoe",
+        "status": 1,
+        "id": 330,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.630049,
+          52.532284
+        ]
+      },
+      "properties": {
+        "name": "Kulunda (Sharbakty)",
+        "status": 2,
+        "id": 154,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          89.44195,
+          49.643629
+        ]
+      },
+      "properties": {
+        "name": "Tashanta",
+        "status": 2,
+        "id": 320,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.709242,
+          53.401993
+        ]
+      },
+      "properties": {
+        "name": "Pavlovka",
+        "status": 2,
+        "id": 242,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.051943,
+          53.796579
+        ]
+      },
+      "properties": {
+        "name": "Olkhovka",
+        "status": 2,
+        "id": 231,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          71.0168999992311,
+          54.9219999983907
+        ]
+      },
+      "properties": {
+        "name": "Isilkul",
+        "status": 2,
+        "id": 122,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.8075000010431,
+          53.7267000004649
+        ]
+      },
+      "properties": {
+        "name": "Nevolnoe",
+        "status": 1,
+        "id": 206,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.792108,
+          54.159304
+        ]
+      },
+      "properties": {
+        "name": "Odesskoe",
+        "status": 1,
+        "id": 225,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.0221,
+          50.3099
+        ]
+      },
+      "properties": {
+        "name": "Aspayty",
+        "status": 1,
+        "id": 20,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.5,
+          50.35
+        ]
+      },
+      "properties": {
+        "name": "Mugur-Aksy",
+        "status": 1,
+        "id": 197,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.337233,
+          50.515325
+        ]
+      },
+      "properties": {
+        "name": "Shara-Sur",
+        "status": 1,
+        "id": 367,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.069395,
+          50.700218
+        ]
+      },
+      "properties": {
+        "name": "Khandagayty (Borsho)",
+        "status": 2,
+        "id": 352,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.62729,
+          49.957094
+        ]
+      },
+      "properties": {
+        "name": "Tsagan-Tolgoy",
+        "status": 1,
+        "id": 356,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.774503,
+          57.132236
+        ]
+      },
+      "properties": {
+        "name": "Ludonka",
+        "status": 2,
+        "id": 168,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.833766,
+          56.87317
+        ]
+      },
+      "properties": {
+        "name": "Ubylinka",
+        "status": 2,
+        "id": 339,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.595687,
+          57.832371
+        ]
+      },
+      "properties": {
+        "name": "Kunichina Gora",
+        "status": 2,
+        "id": 155,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.471549,
+          57.538718
+        ]
+      },
+      "properties": {
+        "name": "Brunishevo",
+        "status": 1,
+        "id": 38,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.387415,
+          57.644615
+        ]
+      },
+      "properties": {
+        "name": "Shumilkino",
+        "status": 2,
+        "id": 370,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.197336,
+          56.356309
+        ]
+      },
+      "properties": {
+        "name": "Burachki",
+        "status": 2,
+        "id": 46,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.817193,
+          57.895767
+        ]
+      },
+      "properties": {
+        "name": "Krupp",
+        "status": 1,
+        "id": 148,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.913096,
+          60.596099
+        ]
+      },
+      "properties": {
+        "name": "Torfyanovka",
+        "status": 2,
+        "id": 331,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.560617,
+          60.931202
+        ]
+      },
+      "properties": {
+        "name": "Brusnichnoe",
+        "status": 2,
+        "id": 39,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.841682,
+          61.123856
+        ]
+      },
+      "properties": {
+        "name": "Svetogorsk",
+        "status": 2,
+        "id": 292,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.211033,
+          59.376896
+        ]
+      },
+      "properties": {
+        "name": "Ivangorod",
+        "status": 2,
+        "id": 113,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.477149,
+          68.477378
+        ]
+      },
+      "properties": {
+        "name": "Lotta",
+        "status": 2,
+        "id": 167,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.203183,
+          69.655681
+        ]
+      },
+      "properties": {
+        "name": "Borisoglebsk",
+        "status": 2,
+        "id": 36,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.038847,
+          66.944902
+        ]
+      },
+      "properties": {
+        "name": "Salla",
+        "status": 2,
+        "id": 284,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.5533,
+          54.3275
+        ]
+      },
+      "properties": {
+        "name": "Krylovo",
+        "status": 2,
+        "id": 149,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.963083,
+          55.278507
+        ]
+      },
+      "properties": {
+        "name": "Morskoe",
+        "status": 2,
+        "id": 192,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.952485,
+          55.066608
+        ]
+      },
+      "properties": {
+        "name": "Dubki",
+        "status": 2,
+        "id": 96,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          22.298854,
+          54.343023
+        ]
+      },
+      "properties": {
+        "name": "Gusev",
+        "status": 2,
+        "id": 86,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          22.736633,
+          54.645721
+        ]
+      },
+      "properties": {
+        "name": "Chernyshevskoe",
+        "status": 2,
+        "id": 361,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.323472,
+          54.356622
+        ]
+      },
+      "properties": {
+        "name": "Zheleznodorozhnyy",
+        "status": 2,
+        "id": 102,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.903888,
+          55.082342
+        ]
+      },
+      "properties": {
+        "name": "Sovetsk",
+        "status": 2,
+        "id": 300,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.659173,
+          54.372517
+        ]
+      },
+      "properties": {
+        "name": "Bagrationovsk",
+        "status": 2,
+        "id": 24,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.901304,
+          54.439183
+        ]
+      },
+      "properties": {
+        "name": "Mamonovo (Gronovo)",
+        "status": 2,
+        "id": 179,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.074312,
+          54.424393
+        ]
+      },
+      "properties": {
+        "name": "Mamonovo (Gzhekhotki)",
+        "status": 2,
+        "id": 178,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          22.590262,
+          55.059774
+        ]
+      },
+      "properties": {
+        "name": "Pogranichnyy",
+        "status": 1,
+        "id": 256,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.109591,
+          65.798791
+        ]
+      },
+      "properties": {
+        "name": "Suoperya",
+        "status": 2,
+        "id": 312,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.61031,
+          61.501999
+        ]
+      },
+      "properties": {
+        "name": "Syuvyaoro",
+        "status": 1,
+        "id": 315,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.004307,
+          63.304965
+        ]
+      },
+      "properties": {
+        "name": "Inari",
+        "status": 1,
+        "id": 118,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.994016,
+          64.545064
+        ]
+      },
+      "properties": {
+        "name": "Lyuttya",
+        "status": 2,
+        "id": 170,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.635873,
+          62.168784
+        ]
+      },
+      "properties": {
+        "name": "Vyartsilya",
+        "status": 2,
+        "id": 73,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.641475,
+          50.197449
+        ]
+      },
+      "properties": {
+        "name": "Kani-Kurgan",
+        "status": 2,
+        "id": 131,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          133.321171,
+          45.550477
+        ]
+      },
+      "properties": {
+        "name": "Markovo",
+        "status": 1,
+        "id": 181,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          131.252823,
+          44.018064
+        ]
+      },
+      "properties": {
+        "name": "Poltavka",
+        "status": 1,
+        "id": 261,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          131.978153,
+          45.262249
+        ]
+      },
+      "properties": {
+        "name": "Turiy Rog",
+        "status": 1,
+        "id": 336,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          130.470716,
+          42.768502
+        ]
+      },
+      "properties": {
+        "name": "Kraskino",
+        "status": 2,
+        "id": 144,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          131.885494,
+          43.115542
+        ]
+      },
+      "properties": {
+        "name": "Khasan",
+        "status": 2,
+        "id": 387,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          131.259668,
+          44.39917
+        ]
+      },
+      "properties": {
+        "name": "Pogranichnyy",
+        "status": 2,
+        "id": 257,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.1031,
+          50.4742
+        ]
+      },
+      "properties": {
+        "name": "Zheltura",
+        "status": 1,
+        "id": 103,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.860313,
+          51.636004
+        ]
+      },
+      "properties": {
+        "name": "Mondy",
+        "status": 2,
+        "id": 191,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.279,
+          50.3678
+        ]
+      },
+      "properties": {
+        "name": "Aynek-Gol",
+        "status": 2,
+        "id": 7,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.487149,
+          50.325935
+        ]
+      },
+      "properties": {
+        "name": "Kyakhta",
+        "status": 2,
+        "id": 159,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.0667,
+          49.8833
+        ]
+      },
+      "properties": {
+        "name": "Altan",
+        "status": 1,
+        "id": 10,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.535043,
+          53.343378
+        ]
+      },
+      "properties": {
+        "name": "Pokrovka",
+        "status": 1,
+        "id": 259,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.713356,
+          49.886726
+        ]
+      },
+      "properties": {
+        "name": "Solovevsk",
+        "status": 2,
+        "id": 304,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.602049,
+          49.5112
+        ]
+      },
+      "properties": {
+        "name": "Verkhniy Ulkhun",
+        "status": 1,
+        "id": 57,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.337367,
+          50.199642
+        ]
+      },
+      "properties": {
+        "name": "Starotsurukhaytuyskiy",
+        "status": 1,
+        "id": 308,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.873112,
+          51.336732
+        ]
+      },
+      "properties": {
+        "name": "Olochi",
+        "status": 1,
+        "id": 229,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          117.373814,
+          49.632878
+        ]
+      },
+      "properties": {
+        "name": "Zabaykalsk",
+        "status": 2,
+        "id": 106,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.8333,
+          50.4167
+        ]
+      },
+      "properties": {
+        "name": "Ubur-Tokhtor",
+        "status": 1,
+        "id": 338,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          134.768252,
+          48.347254
+        ]
+      },
+      "properties": {
+        "name": "Bolshoy Ussuriyskiy",
+        "status": 2,
+        "id": 35,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.631185,
+          42.768431
+        ]
+      },
+      "properties": {
+        "name": "Verkhniy Lars",
+        "status": 2,
+        "id": 56,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.025982,
+          42.669885
+        ]
+      },
+      "properties": {
+        "name": "Nizhniy Zaramag",
+        "status": 2,
+        "id": 214,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          48.40786,
+          41.640607
+        ]
+      },
+      "properties": {
+        "name": "Yarag-Kazmalyar",
+        "status": 2,
+        "id": 377,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          48.064536,
+          41.490063
+        ]
+      },
+      "properties": {
+        "name": "Garakh",
+        "status": 1,
+        "id": 74,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          48.473279,
+          41.708056
+        ]
+      },
+      "properties": {
+        "name": "Novo-Filya",
+        "status": 2,
+        "id": 218,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          48.54852,
+          41.787765
+        ]
+      },
+      "properties": {
+        "name": "Tagirkent-Kazmalyar",
+        "status": 2,
+        "id": 318,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          49.880509,
+          51.216321
+        ]
+      },
+      "properties": {
+        "name": "Ozinki",
+        "status": 2,
+        "id": 226,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          51.543277,
+          51.504733
+        ]
+      },
+      "properties": {
+        "name": "Teploe",
+        "status": 1,
+        "id": 323,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          53.382564,
+          51.492998
+        ]
+      },
+      "properties": {
+        "name": "Ilek",
+        "status": 2,
+        "id": 115,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          60.615823,
+          51.576089
+        ]
+      },
+      "properties": {
+        "name": "Komsomolskiy",
+        "status": 1,
+        "id": 140,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          50.896097,
+          51.853502
+        ]
+      },
+      "properties": {
+        "name": "Mashtakovo",
+        "status": 2,
+        "id": 187,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          58.475364,
+          51.084344
+        ]
+      },
+      "properties": {
+        "name": "Orsk",
+        "status": 2,
+        "id": 238,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          56.142094,
+          50.857938
+        ]
+      },
+      "properties": {
+        "name": "Sagarchin",
+        "status": 2,
+        "id": 283,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          61.02061,
+          50.710306
+        ]
+      },
+      "properties": {
+        "name": "Svetlyy",
+        "status": 2,
+        "id": 290,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          69.338667,
+          55.393328
+        ]
+      },
+      "properties": {
+        "name": "Kazanskoe",
+        "status": 2,
+        "id": 124,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          64.805326,
+          54.386677
+        ]
+      },
+      "properties": {
+        "name": "Zverinogolovskoe",
+        "status": 1,
+        "id": 109,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          68.242499,
+          55.090975
+        ]
+      },
+      "properties": {
+        "name": "Petukhovo",
+        "status": 2,
+        "id": 253,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          65.803555,
+          54.646153
+        ]
+      },
+      "properties": {
+        "name": "Voskresenskoe",
+        "status": 2,
+        "id": 67,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          61.001741,
+          52.319569
+        ]
+      },
+      "properties": {
+        "name": "Mariinskiy",
+        "status": 1,
+        "id": 180,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          62.129645,
+          53.003526
+        ]
+      },
+      "properties": {
+        "name": "Nikolaevka",
+        "status": 1,
+        "id": 216,
+        "foreign_checkpoint_en": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          61.625926,
+          54.006458
+        ]
+      },
+      "properties": {
+        "name": "Bugristoe",
+        "status": 2,
+        "id": 45,
+        "foreign_checkpoint_en": null
+      }
+    }
+  ]
+}

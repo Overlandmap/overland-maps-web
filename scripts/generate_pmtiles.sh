@@ -8,12 +8,14 @@ npm run build:data:skip-validation
 echo "OK, static data fetched from firestore. Generating pmtiles..."
 npm run merge-countries-geojson
 rm -f b.pmtiles bp.pmtiles c.pmtiles country-borders.pmtiles
-tippecanoe -z4 -o b.pmtiles -l border -x geomstring -x geomtype public/data/borders.geojson 
-tippecanoe -z4 -o bp.pmtiles -l border_post -x location -x countries public/data/border-posts.geojson
-tippecanoe -z4 -o c.pmtiles -l country public/data/countries-merged.geojson
-tile-join -o country-borders.pmtiles b.pmtiles c.pmtiles bp.pmtiles
-cp public/data/borders.json overlanding-maps/public/data
-cp public/data/countries.json overlanding-maps/public/data
+tippecanoe -z4 -o b.pmtiles -l border -x geomstring -x geomtype --force public/data/borders.geojson 
+tippecanoe -z4 -o bp.pmtiles -l border_post -x location -x countries -Bg --force public/data/border-posts.geojson
+tippecanoe -z4 -o c.pmtiles -l country -Bg --force public/data/countries-merged.geojson
+tippecanoe -z4 -o z.pmtiles -l zones --force public/data/zones.geojson
+tile-join -o country-borders.pmtiles b.pmtiles c.pmtiles bp.pmtiles z.pmtiles --force
+cp public/data/borders.json ../overland-maps-editor/public/data
+cp public/data/countries.json ../overland-maps-editor/public/data
+cp public/data/border-posts.json ../overland-maps-editor/public/data
 echo "Done; Copy command:"
 echo "scp country-borders.pmtiles ubuntu@overlanding.io:/var/www/overlanding.io/html/"
 

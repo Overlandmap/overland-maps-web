@@ -1,7 +1,7 @@
 {
   "buildInfo": {
-    "timestamp": "2025-11-10T19:39:51.025Z",
-    "duration": 1762803591025,
+    "timestamp": "2025-11-27T16:59:43.683Z",
+    "duration": 1764262783683,
     "nodeVersion": "v22.9.0",
     "platform": "darwin"
   },
@@ -9,21 +9,21 @@
     "countries": {
       "fetched": 242,
       "processed": 242,
-      "withIso3": 240,
+      "withIso3": 0,
       "withBorders": 0
     },
     "borders": {
-      "fetched": 336,
-      "processed": 336,
-      "withGeometry": 336
+      "fetched": 334,
+      "processed": 334,
+      "withGeometry": 334
     },
     "mappings": {
-      "iso3Lookup": 240
+      "iso3Lookup": 0
     }
   },
   "qualityMetrics": {
     "countryProcessingRate": 100,
     "borderProcessingRate": 100,
-    "iso3CoverageRate": 99
+    "iso3CoverageRate": 0
   }
 }

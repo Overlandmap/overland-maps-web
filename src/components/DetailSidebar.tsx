@@ -12,7 +12,7 @@ import {
   formatFieldName,
   formatParameterValue
 } from '../lib/data-formatters'
-import { getBorderById, loadCountryData, loadBorderPostGeoJSON } from '../lib/data-loader'
+import { getBorderById, loadCountryData } from '../lib/data-loader'
 import { useLanguage } from '../contexts/LanguageContext'
 import { getTranslatedCountryName, getTranslatedBorderStatus, getBorderStatusColorClasses, getTranslatedCarnetStatus, getTranslatedOverlandingStatus, getTranslatedLabel } from '../lib/i18n'
 import { hasFlagAvailable } from '../lib/flag-utils'
@@ -153,7 +153,6 @@ export default function DetailSidebar({
   const [borderDetails, setBorderDetails] = useState<BorderDetail[]>([])
   const [loadingBorders, setLoadingBorders] = useState(false)
   const [borderPosts, setBorderPosts] = useState<any[]>([])
-  const [loadingBorderPosts, setLoadingBorderPosts] = useState(false)
   const [translatedBorderTitle, setTranslatedBorderTitle] = useState<string>('')
 
   // Reset state when feature changes
@@ -228,48 +227,30 @@ export default function DetailSidebar({
 
   // Load border posts when a border is selected
   useEffect(() => {
-    const loadBorderPostsForBorder = async () => {
+    const loadBorderPostsForBorder = () => {
       if (selectedFeature?.type === 'border' && selectedFeature.data) {
         const borderData = selectedFeature.data
-        const borderPostsField = (borderData as any).border_posts
+        console.log('🔍 DEBUG: Border data:', borderData)
         
+        const borderPostsField = (borderData as any).border_posts
+        console.log('🔍 DEBUG: border_posts field:', borderPostsField)
+        console.log('🔍 DEBUG: border_posts type:', typeof borderPostsField)
+        
+        // border_posts is a map of ID → name from Firestore
         if (borderPostsField && typeof borderPostsField === 'object') {
-          setLoadingBorderPosts(true)
+          const borderPostsList = Object.entries(borderPostsField).map(([id, name]) => ({
+            id,
+            name: name as string || 'Unnamed Border Post'
+          }))
           
-          try {
-            const borderPostIds = Object.keys(borderPostsField)
-            console.log(`🔄 Loading ${borderPostIds.length} border posts for border`)
-            
-            // Load border posts from static GeoJSON file (works with static export)
-            const borderPostGeoJSON = await loadBorderPostGeoJSON(false)
-            
-            // Filter to only the border posts for this border
-            const matchingFeatures = borderPostGeoJSON.features.filter((feature: any) => 
-              borderPostIds.includes(feature.properties?.id)
-            )
-            
-            const matchingBorderPosts = matchingFeatures.map((feature: any) => ({
-              id: feature.properties.id,
-              name: feature.properties.name || 'Unnamed Border Post',
-              is_open: feature.properties.is_open ?? -1,
-              comment: feature.properties.comment,
-              countries: feature.properties.countries,
-              geometry: feature.geometry,
-              coordinates: feature.geometry?.type === 'Point' ? feature.geometry.coordinates : null
-            }))
-            
-            console.log(`✅ Loaded ${matchingBorderPosts.length} border posts from GeoJSON`)
-            setBorderPosts(matchingBorderPosts)
-          } catch (error) {
-            console.error('Failed to load border posts:', error)
-            setBorderPosts([])
-          } finally {
-            setLoadingBorderPosts(false)
-          }
+          console.log(`✅ Loaded ${borderPostsList.length} border posts from border data:`, borderPostsList)
+          setBorderPosts(borderPostsList)
         } else {
+          console.log('⚠️ No border_posts field found or invalid type')
           setBorderPosts([])
         }
       } else {
+        console.log('⚠️ No border selected or no border data')
         setBorderPosts([])
       }
     }
@@ -379,19 +360,19 @@ export default function DetailSidebar({
 
   /**
    * Get border post status
+   * is_open values:
+   * 0 = Closed (red)
+   * 1 = Bilateral (orange)
+   * 2 = Open/Multilateral (green)
    */
   const getBorderPostStatus = (isOpen: number) => {
     switch (isOpen) {
-      case 2:
-        return { label: getTranslatedLabel('open', language as any), color: 'bg-green-100 text-green-800' }
-      case 3:
-        return { label: getTranslatedLabel('restrictions_apply', language as any), color: 'bg-yellow-100 text-yellow-800' }
-      case 1:
-        return { label: getTranslatedLabel('bilateral', language as any), color: 'bg-blue-100 text-blue-800' }
-      case 4:
-        return { label: getTranslatedLabel('temporary_closed', language as any), color: 'bg-red-100 text-red-800' }
       case 0:
         return { label: getTranslatedLabel('closed', language as any), color: 'bg-red-100 text-red-800' }
+      case 1:
+        return { label: getTranslatedLabel('bilateral', language as any), color: 'bg-orange-100 text-orange-800' }
+      case 2:
+        return { label: getTranslatedLabel('open', language as any), color: 'bg-green-100 text-green-800' }
       default:
         return { label: getTranslatedLabel('unknown', language as any), color: 'bg-gray-100 text-gray-800' }
     }
@@ -648,71 +629,32 @@ export default function DetailSidebar({
               Border Posts {borderPosts.length > 0 ? `(${borderPosts.length})` : ''}
             </h3>
             
-            {loadingBorderPosts ? (
-              <div className="flex items-center justify-center py-4">
-                <div className="text-sm text-gray-500">Loading border posts...</div>
-              </div>
-            ) : borderPosts.length > 0 ? (
-              <div className="space-y-3">
-                {borderPosts.map((borderPost) => {
-                  const status = getBorderPostStatus(borderPost.is_open)
-                  return (
-                    <div 
-                      key={borderPost.id} 
-                      className="bg-gray-50 p-3 rounded-lg hover:bg-blue-50 transition-colors cursor-pointer border border-transparent hover:border-blue-200"
-                      onClick={() => {
-                        if (onBorderPostClick) {
-                          console.log('🔄 Border post clicked from list:', borderPost.id)
-                          // Structure the feature object to match what handleBorderPostClick expects
-                          const feature = {
-                            properties: {
-                              id: borderPost.id,
-                              name: borderPost.name,
-                              is_open: borderPost.is_open,
-                              comment: borderPost.comment,
-                              coordinates: borderPost.coordinates
-                            },
-                            geometry: borderPost.geometry || {
-                              type: 'Point',
-                              coordinates: borderPost.coordinates
-                            }
-                          }
-                          onBorderPostClick(borderPost.id, borderPost, feature)
+            {borderPosts.length > 0 ? (
+              <div className="space-y-2">
+                {borderPosts.map((borderPost) => (
+                  <div 
+                    key={borderPost.id} 
+                    className="bg-gray-50 p-3 rounded-lg hover:bg-blue-50 transition-colors cursor-pointer border border-transparent hover:border-blue-200"
+                    onClick={() => {
+                      if (onBorderPostClick) {
+                        console.log('🔄 Border post clicked from list:', borderPost.id)
+                        // Structure the feature object to match what handleBorderPostClick expects
+                        const feature = {
+                          properties: {
+                            id: borderPost.id,
+                            name: borderPost.name
+                          },
+                          geometry: null
                         }
-                      }}
-                    >
-                      <div className="flex justify-between items-start mb-2">
-                        <div className="flex-1">
-                          <div className="font-medium text-sm text-gray-900">
-                            🛂 {borderPost.name}
-                          </div>
-                        </div>
-                        <div className={`text-xs px-2 py-1 rounded ${status.color}`}>
-                          {status.label}
-                        </div>
-                      </div>
-                      
-                      {borderPost.comment && (
-                        <p className="text-xs text-gray-600 mt-2 mb-3">{borderPost.comment}</p>
-                      )}
-                      
-                      <div className="flex justify-end mt-3">
-                        <button
-                          onClick={(e) => {
-                            e.stopPropagation() // Prevent triggering the parent div's onClick
-                            handleBorderPostZoom(borderPost)
-                          }}
-                          className="inline-flex items-center px-3 py-1.5 text-xs font-medium text-blue-600 bg-blue-50 border border-blue-200 rounded-md hover:bg-blue-100 hover:border-blue-300 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-1"
-                        >
-                          <svg className="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                          </svg>
-                          Zoom to location
-                        </button>
-                      </div>
+                        onBorderPostClick(borderPost.id, borderPost, feature)
+                      }
+                    }}
+                  >
+                    <div className="font-medium text-sm text-gray-900">
+                      🛂 {borderPost.name}
                     </div>
-                  )
-                })}
+                  </div>
+                ))}
               </div>
             ) : (
               <div className="text-sm text-gray-500 py-4">

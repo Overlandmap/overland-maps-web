@@ -7,6 +7,7 @@
     "build": "next build",
     "build:data": "npx ts-node --project scripts/tsconfig.json scripts/build-data.ts",
     "build:data:skip-validation": "npx ts-node --project scripts/tsconfig.json scripts/build-data.ts --skip-validation",
+    "merge-countries-geojson": "npx ts-node --project scripts/tsconfig.json scripts/merge-countries-geojson.ts",
     "start": "next start",
     "lint": "next lint"
   },

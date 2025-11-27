@@ -426,7 +426,6 @@ export async function loadDataManifest(options?: LoadingOptions): Promise<any> {
 export async function preloadEssentialData(options?: LoadingOptions): Promise<{
   countries: CountryData[]
   iso3Lookup: ISO3Lookup
-  borderGeoJSON: GeoJSON.FeatureCollection
   borderPostGeoJSON: GeoJSON.FeatureCollection
   manifest: any
 }> {
@@ -435,10 +434,10 @@ export async function preloadEssentialData(options?: LoadingOptions): Promise<{
   try {
     const startTime = Date.now()
     
-    const [countryData, iso3Data, borderGeoJSON, borderPostGeoJSON, manifest] = await Promise.all([
+    const [countryData, iso3Data, borderPostGeoJSON, manifest] = await Promise.all([
       loadCountryData(options),
       loadISO3Lookup(options),
-      loadBorderGeoJSON(false, options), // Use full quality version
+      // Note: borders.geojson is NOT loaded - border data comes from Firestore
       loadBorderPostGeoJSON(false, options), // Use full quality version
       loadDataManifest(options)
     ])
@@ -449,7 +448,6 @@ export async function preloadEssentialData(options?: LoadingOptions): Promise<{
     return {
       countries: countryData.countries,
       iso3Lookup: iso3Data.lookup,
-      borderGeoJSON: borderGeoJSON,
       borderPostGeoJSON: borderPostGeoJSON,
       manifest: manifest
     }
@@ -627,9 +625,8 @@ export async function checkDataAvailability(): Promise<{
     const promises = [
       fetch(`${getDataBasePath()}/countries.json`, { method: 'HEAD' }),
       fetch(`${getDataBasePath()}/borders.json`, { method: 'HEAD' }),
-      fetch(`${getDataBasePath()}/border-posts.geojson`, { method: 'HEAD' }),
+      fetch(`${getDataBasePath()}/border-posts.json`, { method: 'HEAD' }),
       fetch(`${getDataBasePath()}/iso3-lookup.json`, { method: 'HEAD' }),
-      fetch(`${getDataBasePath()}/borders.geojson`, { method: 'HEAD' }),
       fetch(`${getDataBasePath()}/border-posts.geojson`, { method: 'HEAD' }),
       fetch(`${getDataBasePath()}/manifest.json`, { method: 'HEAD' })
     ]
@@ -640,9 +637,9 @@ export async function checkDataAvailability(): Promise<{
     checks.borders = results[1].status === 'fulfilled' && (results[1].value as Response).ok
     checks.borderPosts = results[2].status === 'fulfilled' && (results[2].value as Response).ok
     checks.iso3Lookup = results[3].status === 'fulfilled' && (results[3].value as Response).ok
-    checks.borderGeoJSON = results[4].status === 'fulfilled' && (results[4].value as Response).ok
-    checks.borderPostGeoJSON = results[5].status === 'fulfilled' && (results[5].value as Response).ok
-    checks.manifest = results[6].status === 'fulfilled' && (results[6].value as Response).ok
+    checks.borderGeoJSON = false // Not generated - borders loaded from Firestore
+    checks.borderPostGeoJSON = results[4].status === 'fulfilled' && (results[4].value as Response).ok
+    checks.manifest = results[5].status === 'fulfilled' && (results[5].value as Response).ok
     
   } catch (error) {
     console.warn('Data availability check failed:', error)
@@ -662,10 +659,7 @@ export async function warmUpCache(): Promise<void> {
     await loadISO3Lookup({ useCache: true })
     await loadCountryData({ useCache: true })
     
-    // Load GeoJSON in background
-    loadBorderGeoJSON(false, { useCache: true }).catch(error => {
-      console.warn('Background GeoJSON load failed:', error)
-    })
+    // Note: borders.geojson is NOT loaded - border data comes from Firestore
     
     console.log('✅ Cache warmed up successfully')
   } catch (error) {

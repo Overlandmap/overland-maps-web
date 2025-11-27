@@ -1,4 +1,6 @@
 import { Suspense } from 'react'
+import { readFileSync } from 'fs'
+import { join } from 'path'
 import { LanguageProvider } from '../../../contexts/LanguageContext'
 import WorldMapApp from '../../../components/WorldMapApp'
 
@@ -22,16 +24,16 @@ function BorderPostMapWrapper({ borderPostData, borderPostId }: BorderPostPageDa
 }
 
 export default function BorderPostPage({ params }: BorderPostPageProps) {
-  // Pass minimal data - the client will fetch from PMTiles or handle it
-  const borderPostData = {
-    id: params.id,
-    name: null, // Will be loaded client-side
-    is_open: -1,
-    comment: null,
-    countries: null,
-    location: null,
-    geometry: null,
-    coordinates: null
+  // Load border post data from static JSON file
+  let borderPostData = null
+  
+  try {
+    const dataPath = join(process.cwd(), 'public', 'data', 'border-posts.json')
+    const fileContent = readFileSync(dataPath, 'utf-8')
+    const borderPosts = JSON.parse(fileContent)
+    borderPostData = borderPosts.find((bp: any) => bp.id === params.id) || null
+  } catch (error) {
+    console.error('Failed to load border post data:', error)
   }
   
   return (
@@ -46,17 +48,27 @@ export default function BorderPostPage({ params }: BorderPostPageProps) {
 // Generate static params for border post pages
 export async function generateStaticParams() {
   try {
-    // Try to fetch from Firestore
-    const { FirestoreDataFetcher } = await import('../../../lib/firestore-data-fetcher')
-    const fetcher = new FirestoreDataFetcher()
+    // Load from static JSON file
+    const dataPath = join(process.cwd(), 'public', 'data', 'border-posts.json')
     
+    // Check if file exists
     try {
-      const borderPosts = await fetcher.fetchBorderPosts()
+      const fileContent = readFileSync(dataPath, 'utf-8')
+      const borderPosts = JSON.parse(fileContent)
       
-      if (borderPosts.length === 0) {
-        console.log('⚠️ No border posts found in Firestore, skipping border post pages')
-        return []
-      }
+      const paths = borderPosts.map((borderPost: any) => ({
+        id: borderPost.id
+      }))
+      
+      console.log(`📄 Generated ${paths.length} static border post pages from JSON`)
+      return paths
+    } catch (fileError) {
+      console.warn('⚠️ border-posts.json not found, trying Firestore fallback...')
+      
+      // Fallback to Firestore if JSON file doesn't exist
+      const { FirestoreDataFetcher } = await import('../../../lib/firestore-data-fetcher')
+      const fetcher = new FirestoreDataFetcher()
+      const borderPosts = await fetcher.fetchBorderPosts()
       
       const paths = borderPosts.map((borderPost: any) => ({
         id: borderPost.id
@@ -64,14 +76,9 @@ export async function generateStaticParams() {
       
       console.log(`📄 Generated ${paths.length} static border post pages from Firestore`)
       return paths
-    } catch (firestoreError) {
-      console.warn('⚠️ Failed to fetch border posts from Firestore:', firestoreError)
-      console.log('⚠️ Skipping border post page generation')
-      return []
     }
   } catch (error) {
     console.error('❌ Failed to generate border post static params:', error)
-    // Return empty array to skip border post pages if there's an error
     return []
   }
 }

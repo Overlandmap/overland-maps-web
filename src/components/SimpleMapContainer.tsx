@@ -501,35 +501,10 @@ export default function SimpleMapContainer({
             paint: {
               'circle-color': [
                 'case',
-                // Unknown (-1) - grey
-                ['any',
-                  ['==', ['get', 'is_open'], -1],
-                  ['==', ['get', 'is_open'], '-1']
-                ], '#9ca3af',
-                // Closed (0 or 4) - red
-                ['any',
-                  ['==', ['get', 'is_open'], 0],
-                  ['==', ['get', 'is_open'], '0'],
-                  ['==', ['get', 'is_open'], 4],
-                  ['==', ['get', 'is_open'], '4']
-                ], '#ef4444',
-                // Bilateral (1) - blue
-                ['any',
-                  ['==', ['get', 'is_open'], 1],
-                  ['==', ['get', 'is_open'], '1']
-                ], '#3b82f6',
-                // Open (2) - green
-                ['any',
-                  ['==', ['get', 'is_open'], 2],
-                  ['==', ['get', 'is_open'], '2']
-                ], '#22c55e',
-                // Restrictions apply (3) - yellow
-                ['any',
-                  ['==', ['get', 'is_open'], 3],
-                  ['==', ['get', 'is_open'], '3']
-                ], '#eab308',
-                // Default - grey for unknown
-                '#9ca3af'
+                ['==', ['get', 'is_open'], 0], '#ef4444',  // Closed - red
+                ['==', ['get', 'is_open'], 1], '#f97316',  // Bilateral - orange
+                ['==', ['get', 'is_open'], 2], '#22c55e',  // Open/Multilateral - green
+                '#9ca3af'  // Default - grey for unknown
               ],
               'circle-radius': 8,
               'circle-stroke-width': 2,
