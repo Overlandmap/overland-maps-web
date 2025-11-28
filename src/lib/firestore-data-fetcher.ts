@@ -1,5 +1,5 @@
 import { getFirestoreAdmin, withRetry } from './firebase-admin'
-import { CountryData, BorderData, BorderPostData } from '../types'
+import { CountryData, BorderData, BorderPostData, ZoneData } from '../types'
 
 export class FirestoreDataFetcher {
   private db = getFirestoreAdmin()
@@ -173,6 +173,39 @@ export class FirestoreDataFetcher {
 
       console.log(`✅ Fetched ${borderPosts.length} border posts`)
       return borderPosts
+    })
+  }
+
+  /**
+   * Fetch all documents from the Zone Collection
+   */
+  async fetchZones(): Promise<ZoneData[]> {
+    console.log('🔄 Fetching zones from Firestore...')
+    
+    return withRetry(async () => {
+      const snapshot = await this.db.collection('zone').get()
+      
+      if (snapshot.empty) {
+        console.warn('⚠️ No zones found in Firestore')
+        return []
+      }
+
+      const zones: ZoneData[] = []
+      
+      snapshot.forEach((doc: any) => {
+        const data = doc.data()
+        
+        const zone: ZoneData = {
+          id: doc.id,
+          type: data.type,
+          properties: { ...data } // Include all fields as properties
+        }
+        
+        zones.push(zone)
+      })
+
+      console.log(`✅ Fetched ${zones.length} zones`)
+      return zones
     })
   }
 

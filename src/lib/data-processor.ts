@@ -207,6 +207,68 @@ export class DataProcessor {
   }
 
   /**
+   * Process zone data (parse geomString into geometry)
+   * Returns zones with geometry parsed (for GeoJSON generation)
+   */
+  processZoneData(zones: any[]): any[] {
+    console.log('🔄 Processing zone data...')
+    
+    let zonesWithoutGeometry = 0
+    
+    const processedZones = zones.map(zone => {
+      if (!zone.geomString) {
+        zonesWithoutGeometry++
+        return null
+      }
+
+      try {
+        const geometry = JSON.parse(zone.geomString)
+        
+        return {
+          ...zone,
+          geometry,
+          feature: {
+            type: 'Feature',
+            id: zone.id,
+            geometry,
+            properties: {
+              id: zone.id,
+              type: zone.type,
+              ...zone.properties
+            }
+          }
+        }
+      } catch (error) {
+        console.warn(`⚠️ Failed to parse geometry for zone ${zone.id}:`, error)
+        return null
+      }
+    }).filter(zone => zone !== null)
+
+    console.log(`✅ Processed ${processedZones.length}/${zones.length} zones with geometry`)
+    if (zonesWithoutGeometry > 0) {
+      console.log(`ℹ️  ${zonesWithoutGeometry} zones without geometry (will be included in JSON only)`)
+    }
+    return processedZones
+  }
+
+  /**
+   * Generate GeoJSON FeatureCollection from processed zone data
+   */
+  generateZoneGeoJSON(zones: any[]): GeoJSON.FeatureCollection {
+    console.log('🔄 Generating zone GeoJSON FeatureCollection...')
+    
+    const features = zones.map(zone => zone.feature)
+    
+    const featureCollection: GeoJSON.FeatureCollection = {
+      type: 'FeatureCollection',
+      features: features
+    }
+
+    console.log(`✅ Generated GeoJSON FeatureCollection with ${features.length} zone features`)
+    return featureCollection
+  }
+
+  /**
    * Create iso_a3 to country data lookup table for map feature linking
    */
   createISO3Lookup(countries: ProcessedCountryData[]): ISO3Lookup {

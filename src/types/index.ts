@@ -44,6 +44,12 @@ export interface ProcessedBorderPostData extends BorderPostData {
   feature: GeoJSON.Feature
 }
 
+export interface ZoneData {
+  id: string
+  type?: number // 0: closed, 1: guide/escort needed, 2: permit needed, 3: restrictions apply
+  properties?: Record<string, any>
+}
+
 export interface MapGeoJSON {
   // Countries come from base map style, not generated
   borders: GeoJSON.FeatureCollection // Borders generated from Firestore

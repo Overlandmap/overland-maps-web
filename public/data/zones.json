@@ -1,0 +1,150 @@
+{
+  "az-nk": {
+    "id": "az-nk",
+    "type": 0,
+    "name": "Nagorno Karabakh",
+    "country": "AZE",
+    "comment": "The Nagorno Karabakh region was regained from Armenia during the 2023 war. It's not clear if any part of it is open to tourism."
+  },
+  "cn-tibet": {
+    "id": "cn-tibet",
+    "type": 1,
+    "name": "Tibet",
+    "country": "CHN",
+    "comment": "Foreigners need a guide to visit Tibet (the Tibet Autonomous Region). It's not allowed to travel on your own."
+  },
+  "dz-sahara": {
+    "id": "dz-sahara",
+    "type": 1,
+    "name": "South Algeria",
+    "country": "DZA",
+    "comment": "A military escort and a guide is required to travel in the region of Tamanrasset and Djanet.\nAlso, an authorization is needed to travel to the border with Mauritania/SADR."
+  },
+  "eg-sinai": {
+    "id": "eg-sinai",
+    "type": 0,
+    "name": "Sinai",
+    "country": "EGY",
+    "comment": "It's forbidden to cross Sinai with a 4x4 or a motorcycle. So that means it's closed for most overlanders."
+  },
+  "et-danakil": {
+    "id": "et-danakil",
+    "type": 1,
+    "name": "Danakil",
+    "country": "ETH",
+    "comment": "You need a local guide to visit the Danakil depression, including the Erta-Ale volcano.\nThat is, if the security situation in Ethiopia allows you to get there in the first place."
+  },
+  "in-arunachal": {
+    "id": "in-arunachal",
+    "type": 2,
+    "name": "Arunachal Pradesh",
+    "country": "IND",
+    "comment": "Foreigners need a permit to visit Arunachal Pradesh. Note that permits are not delivered to solo travelers, you'll need to apply as a group of 2 or more people."
+  },
+  "in-galwan-dbo": {
+    "id": "in-galwan-dbo",
+    "type": 0,
+    "name": "Galwan-DBO",
+    "comment": "The Shyok-DBO road is for military use only, closed to tourists. Daulat Beg Oldi and the Galwan valley are close to the LaC, where deadly skirmishes have happened in the past.",
+    "country": "IND"
+  },
+  "in-ladakh": {
+    "id": "in-ladakh",
+    "type": 2,
+    "name": "Ladakh",
+    "country": "IND",
+    "comment": "Foreigners need to get a permit in Leh, while Indians can get it online. The permit coverage changes slightly from year to year, so check the latest regulations. It usually covers:\n- Chang La, Wari La, Pangong Tso, Hanle, Tso Moriri, Tso Kar and Umling La.\n- The road along the Indus from Khaltse to Batalik and the Hanu valley.\n- Khardung La, Shyok and Nubra valleys. \nDungti - Demchok and Demchok - Umling La restricted to Indian nationals.\nThe Siachen glacier base camp is restricted to Indian nationals."
+  },
+  "in-muskoh": {
+    "id": "in-muskoh",
+    "type": 0,
+    "name": "Muskoh",
+    "comment": "Military area, travel to Muskoh and Kaobal Gali is forbidden.",
+    "country": "IND"
+  },
+  "in-sikkim": {
+    "id": "in-sikkim",
+    "type": 2,
+    "name": "Sikkim",
+    "country": "IND",
+    "comment": "Foreigners need a permit to visit Sikkim; Indians just need to show an ID.\nThe permit is free and easily done at several checkpoints, but it can also be done at Bagdogra airport or in Darjeeling.\nNote that the road to Gurudongmar Lake and to Nathu La are forbidden to foreigners."
+  },
+  "in-spiti": {
+    "id": "in-spiti",
+    "type": 2,
+    "name": "Spiti",
+    "country": "IND",
+    "comment": "A permit for Spiti is required for foreigners, and can be done in Rekong Peo or in Pooh, coming from the South, or in Kaza, if you're coming from the North (for a fee). Indians only need to show an ID at the checkpoints."
+  },
+  "iq-kurdistan": {
+    "id": "iq-kurdistan",
+    "type": 3,
+    "name": "Kurdistan",
+    "country": "IRQ",
+    "comment": "The Kurdistan autonomous region is an interesting concept. It is not an independent state, it is part of the federal state of Iraq. It has historically been largely self-governed when the rest of Iraq was riddled by war, so that they started issuing their own visa, valid only within Kurdistan.\nNowadays they still do, but it's also possible to enter the area with a (federal) Iraq visa - the opposite isn't true.\nComing from Turkey, they also don't stamp the carnet, because a carnet is not required if you only visit Kurdistan and if you exit the country back into Turkey. But if you exit to any other country, a carnet will be required to exit (with both entry and exit stamps done at the same time)."
+  },
+  "kg-chon-kemin": {
+    "id": "kg-chon-kemin",
+    "type": 2,
+    "name": "Chon-Kemin",
+    "country": "KGZ",
+    "comment": "Permit needed for the upper part of the valley.",
+    "itinerary": "Kyrgyzstan:K20"
+  },
+  "kg-issyk-kul": {
+    "id": "kg-issyk-kul",
+    "type": 2,
+    "name": "Issyk Kul region",
+    "country": "KGZ",
+    "comment": "Covers Engilchek, Sary Jaz, and the Aksay valley."
+  },
+  "kg-naryn": {
+    "id": "kg-naryn",
+    "type": 2,
+    "name": "Naryn region",
+    "country": "KGZ",
+    "comment": "Covers Kel Suu and Chatyr Kul.\nNote that if you have a valid Chinese visa, you don't need a permit to drive to the Torugart border post."
+  },
+  "mn-tavan-bogd": {
+    "id": "mn-tavan-bogd",
+    "type": 1,
+    "name": "Altai Tavan Bogd",
+    "country": "MNG",
+    "comment": "Not only do you need a permit to enter the Altai Tavan Bodg national park, but you also need a guide - or at least one Mongolian national in the group."
+  },
+  "na-skeleton": {
+    "id": "na-skeleton",
+    "type": 0,
+    "name": "Skeleton Coast",
+    "country": "NAM",
+    "comment": "The upper part of the Skeleton Coast is closed to tourism."
+  },
+  "na-sperrgebiet": {
+    "id": "na-sperrgebiet",
+    "type": 0,
+    "name": "Sperrgebiet",
+    "country": "NAM",
+    "comment": "This is a diamond-mining area, and as such is closed to public."
+  },
+  "pk-south": {
+    "id": "pk-south",
+    "type": 1,
+    "name": "South Pakistan",
+    "country": "PAK",
+    "comment": "A military escort is generally required to travel in the region south of the Peshawar-Islamabad-Lahore road.\nA NOC is also required for certain parts, such as from Quetta to Sukkur (coming from Iran).\nBasically, you can travel to/from Iran on the main road, but it's otherwise difficult or impossible to visit this area.\nIn particular, the tribal areas next to Afghanistan are no-go."
+  },
+  "sa-eq": {
+    "id": "sa-eq",
+    "type": 0,
+    "name": "Empty Quarter Border",
+    "country": "SAU",
+    "comment": "The area immediately next to the border with Oman is forbidden, with the exception of the main road leading the border post.\nIn particular, the road hugging the Saudi Arabia - Oman border south of the Rub' al Khali border post is closed."
+  },
+  "tj-gbao": {
+    "id": "tj-gbao",
+    "type": 2,
+    "name": "GBAO",
+    "country": "TJK",
+    "comment": "The so-called GBAO permit (Gorno-Badakshan autonomous oblast) covers the Pamir in the east of Tajikistan.\nYou can easily obtain your permit together with your e-visa online, if you need one. If you're eligible to enter without visa, you'll have to purchase your permit in Dushanbe - or through a travel agent."
+  }
+}

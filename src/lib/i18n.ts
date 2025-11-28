@@ -172,63 +172,63 @@ const BORDER_STATUS_TRANSLATIONS: Record<SupportedLanguage, Record<string, strin
 const OVERLANDING_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> = {
   en: {
     'forbidden': 'Forbidden',
-    'war_dangerous': 'War / Dangerous',
+    'war_dangerous': 'Unsafe',
     'restricted': 'Restricted access',
     'open': 'Open',
     'unknown': 'Unknown'
   },
   de: {
     'forbidden': 'Verboten',
-    'war_dangerous': 'Krieg / Gefährlich',
+    'war_dangerous': 'Unsicher',
     'restricted': 'Eingeschränkter Zugang',
     'open': 'Offen',
     'unknown': 'Unbekannt'
   },
   es: {
     'forbidden': 'Prohibido',
-    'war_dangerous': 'Guerra / Peligroso',
+    'war_dangerous': 'Inseguro',
     'restricted': 'Acceso restringido',
     'open': 'Abierto',
     'unknown': 'Desconocido'
   },
   fr: {
     'forbidden': 'Interdit',
-    'war_dangerous': 'Guerre / Dangereux',
+    'war_dangerous': 'Dangereux',
     'restricted': 'Accès restreint',
     'open': 'Ouvert',
     'unknown': 'Inconnu'
   },
   it: {
     'forbidden': 'Vietato',
-    'war_dangerous': 'Guerra / Pericoloso',
+    'war_dangerous': 'Non sicuro',
     'restricted': 'Accesso limitato',
     'open': 'Aperto',
     'unknown': 'Sconosciuto'
   },
   ja: {
     'forbidden': '禁止',
-    'war_dangerous': '戦争/危険',
+    'war_dangerous': '危険',
     'restricted': 'アクセス制限',
     'open': 'オープン',
     'unknown': '不明'
   },
   nl: {
     'forbidden': 'Verboden',
-    'war_dangerous': 'Oorlog / Gevaarlijk',
+    'war_dangerous': 'Onveilig',
     'restricted': 'Beperkte toegang',
     'open': 'Open',
     'unknown': 'Onbekend'
   },
   ru: {
     'forbidden': 'Запрещено',
-    'war_dangerous': 'Война / Опасно',
+    'war_dangerous': 'Небезопасно',
     'restricted': 'Ограниченный доступ',
     'open': 'Открыто',
     'unknown': 'Неизвестно'
   },
   zh: {
     'forbidden': '禁止',
-    'war_dangerous': '战争/危险',
+    'war_dangerous': '不安全',
     'restricted': '限制访问',
     'open': '开放',
     'unknown': '未知'
@@ -425,7 +425,7 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'border_status': 'Border Status',
     'open': 'Open',
     'restricted_access': 'Restricted access',
-    'war_dangerous': 'War / Dangerous',
+    'war_dangerous': 'Unsafe',
     'forbidden': 'Forbidden',
     'unknown': 'Unknown',
     'not_required': 'Not required',
@@ -444,7 +444,13 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'border_posts': 'Border Posts',
     'bilateral': 'Bilateral',
     'restrictions_apply': 'Restrictions apply',
-    'temporary_closed': 'Temporary Closed'
+    'temporary_closed': 'Temporary Closed',
+    'zones': 'Zones',
+    'restricted_areas': 'Restricted areas',
+    'zone_closed': 'Closed',
+    'zone_guide_escort': 'Guide/Escort Needed',
+    'zone_permit': 'Permit Needed',
+    'zone_restrictions': 'Restrictions apply'
   },
   de: {
     'overlanding': 'Overlanding',
@@ -454,7 +460,7 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'border_status': 'Grenzstatus',
     'open': 'Offen',
     'restricted_access': 'Eingeschränkter Zugang',
-    'war_dangerous': 'Krieg / Gefährlich',
+    'war_dangerous': 'Unsicher',
     'forbidden': 'Verboten',
     'unknown': 'Unbekannt',
     'not_required': 'Nicht erforderlich',
@@ -473,7 +479,13 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'border_posts': 'Grenzposten',
     'bilateral': 'Bilateral',
     'restrictions_apply': 'Einschränkungen gelten',
-    'temporary_closed': 'Vorübergehend geschlossen'
+    'temporary_closed': 'Vorübergehend geschlossen',
+    'zones': 'Zonen',
+    'restricted_areas': 'Sperrgebiete',
+    'zone_closed': 'Geschlossen',
+    'zone_guide_escort': 'Führer/Begleitung erforderlich',
+    'zone_permit': 'Genehmigung erforderlich',
+    'zone_restrictions': 'Einschränkungen gelten'
   },
   es: {
     'overlanding': 'Overlanding',
@@ -483,7 +495,7 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'border_status': 'Estado de Frontera',
     'open': 'Abierto',
     'restricted_access': 'Acceso restringido',
-    'war_dangerous': 'Guerra / Peligroso',
+    'war_dangerous': 'Inseguro',
     'forbidden': 'Prohibido',
     'unknown': 'Desconocido',
     'not_required': 'No requerido',
@@ -502,7 +514,13 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'border_posts': 'Puestos fronterizos',
     'bilateral': 'Bilateral',
     'restrictions_apply': 'Se aplican restricciones',
-    'temporary_closed': 'Cerrado temporalmente'
+    'temporary_closed': 'Cerrado temporalmente',
+    'zones': 'Zonas',
+    'restricted_areas': 'Áreas restringidas',
+    'zone_closed': 'Cerrado',
+    'zone_guide_escort': 'Guía/Escolta necesario',
+    'zone_permit': 'Permiso necesario',
+    'zone_restrictions': 'Se aplican restricciones'
   },
   fr: {
     'overlanding': 'Overlanding',
@@ -512,7 +530,7 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'border_status': 'Statut de Frontière',
     'open': 'Ouvert',
     'restricted_access': 'Accès restreint',
-    'war_dangerous': 'Guerre / Dangereux',
+    'war_dangerous': 'Dangereux',
     'forbidden': 'Interdit',
     'unknown': 'Inconnu',
     'not_required': 'Non requis',
@@ -531,7 +549,13 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'border_posts': 'Postes frontières',
     'bilateral': 'Bilatéral',
     'restrictions_apply': 'Restrictions applicables',
-    'temporary_closed': 'Fermé temporairement'
+    'temporary_closed': 'Fermé temporairement',
+    'zones': 'Zones',
+    'restricted_areas': 'Zones restreintes',
+    'zone_closed': 'Fermé',
+    'zone_guide_escort': 'Guide/Escorte nécessaire',
+    'zone_permit': 'Permis nécessaire',
+    'zone_restrictions': 'Restrictions applicables'
   },
   it: {
     'overlanding': 'Overlanding',
@@ -541,7 +565,7 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'border_status': 'Stato del Confine',
     'open': 'Aperto',
     'restricted_access': 'Accesso limitato',
-    'war_dangerous': 'Guerra / Pericoloso',
+    'war_dangerous': 'Non sicuro',
     'forbidden': 'Vietato',
     'unknown': 'Sconosciuto',
     'not_required': 'Non richiesto',
@@ -560,7 +584,13 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'border_posts': 'Posti di frontiera',
     'bilateral': 'Bilaterale',
     'restrictions_apply': 'Si applicano restrizioni',
-    'temporary_closed': 'Chiuso temporaneamente'
+    'temporary_closed': 'Chiuso temporaneamente',
+    'zones': 'Zone',
+    'restricted_areas': 'Aree riservate',
+    'zone_closed': 'Chiuso',
+    'zone_guide_escort': 'Guida/Scorta necessaria',
+    'zone_permit': 'Permesso necessario',
+    'zone_restrictions': 'Si applicano restrizioni'
   },
   ja: {
     'overlanding': 'オーバーランディング',
@@ -570,7 +600,7 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'border_status': '国境状況',
     'open': '開放',
     'restricted_access': 'アクセス制限',
-    'war_dangerous': '戦争/危険',
+    'war_dangerous': '危険',
     'forbidden': '禁止',
     'unknown': '不明',
     'not_required': '不要',
@@ -589,7 +619,13 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'border_posts': '国境検問所',
     'bilateral': '二国間',
     'restrictions_apply': '制限が適用されます',
-    'temporary_closed': '一時閉鎖'
+    'temporary_closed': '一時閉鎖',
+    'zones': 'ゾーン',
+    'restricted_areas': '制限区域',
+    'zone_closed': '閉鎖',
+    'zone_guide_escort': 'ガイド/エスコート必要',
+    'zone_permit': '許可証必要',
+    'zone_restrictions': '制限が適用されます'
   },
   nl: {
     'overlanding': 'Overlanding',
@@ -599,7 +635,7 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'border_status': 'Grens Status',
     'open': 'Open',
     'restricted_access': 'Beperkte toegang',
-    'war_dangerous': 'Oorlog / Gevaarlijk',
+    'war_dangerous': 'Onveilig',
     'forbidden': 'Verboden',
     'unknown': 'Onbekend',
     'not_required': 'Niet vereist',
@@ -618,7 +654,13 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'border_posts': 'Grensposten',
     'bilateral': 'Bilateraal',
     'restrictions_apply': 'Beperkingen van toepassing',
-    'temporary_closed': 'Tijdelijk gesloten'
+    'temporary_closed': 'Tijdelijk gesloten',
+    'zones': 'Zones',
+    'restricted_areas': 'Beperkte gebieden',
+    'zone_closed': 'Gesloten',
+    'zone_guide_escort': 'Gids/Begeleiding vereist',
+    'zone_permit': 'Vergunning vereist',
+    'zone_restrictions': 'Beperkingen van toepassing'
   },
   ru: {
     'overlanding': 'Оверлендинг',
@@ -628,7 +670,7 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'border_status': 'Статус границы',
     'open': 'Открыто',
     'restricted_access': 'Ограниченный доступ',
-    'war_dangerous': 'Война / Опасно',
+    'war_dangerous': 'Небезопасно',
     'forbidden': 'Запрещено',
     'unknown': 'Неизвестно',
     'not_required': 'Не требуется',
@@ -647,7 +689,13 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'border_posts': 'Пограничные посты',
     'bilateral': 'Двусторонний',
     'restrictions_apply': 'Применяются ограничения',
-    'temporary_closed': 'Временно закрыто'
+    'temporary_closed': 'Временно закрыто',
+    'zones': 'Зоны',
+    'restricted_areas': 'Запретные зоны',
+    'zone_closed': 'Закрыто',
+    'zone_guide_escort': 'Требуется гид/сопровождение',
+    'zone_permit': 'Требуется разрешение',
+    'zone_restrictions': 'Применяются ограничения'
   },
   zh: {
     'overlanding': '越野旅行',
@@ -657,7 +705,7 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'border_status': '边境状态',
     'open': '开放',
     'restricted_access': '限制访问',
-    'war_dangerous': '战争/危险',
+    'war_dangerous': '不安全',
     'forbidden': '禁止',
     'unknown': '未知',
     'not_required': '不需要',
@@ -676,7 +724,13 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'border_posts': '边境哨所',
     'bilateral': '双边',
     'restrictions_apply': '适用限制',
-    'temporary_closed': '暂时关闭'
+    'temporary_closed': '暂时关闭',
+    'zones': '区域',
+    'restricted_areas': '限制区域',
+    'zone_closed': '关闭',
+    'zone_guide_escort': '需要向导/护送',
+    'zone_permit': '需要许可证',
+    'zone_restrictions': '适用限制'
   }
 }
 

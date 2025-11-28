@@ -222,6 +222,26 @@ export async function loadISO3Lookup(options?: LoadingOptions): Promise<{
 }
 
 /**
+ * Load zone data with enhanced caching and error handling
+ */
+export async function loadZoneData(options?: LoadingOptions): Promise<Record<string, any>> {
+  return loadDataWithRetry(`${getDataBasePath()}/zones.json`, 'zones', options)
+}
+
+/**
+ * Get zone by ID from loaded zone data
+ */
+export async function getZoneById(zoneId: string, options?: LoadingOptions): Promise<any | null> {
+  try {
+    const zones = await loadZoneData(options)
+    return zones[zoneId] || null
+  } catch (error) {
+    console.error(`Failed to load zone ${zoneId}:`, error)
+    return null
+  }
+}
+
+/**
  * Load border GeoJSON for MapLibre with enhanced error handling
  */
 export async function loadBorderGeoJSON(

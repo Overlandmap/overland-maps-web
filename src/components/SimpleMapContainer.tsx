@@ -16,6 +16,7 @@ interface SimpleMapContainerProps {
   onCountryClick?: (iso3: string, countryData: any, feature: any) => void
   onBorderClick?: (borderId: string, borderData: any, feature: any) => void
   onBorderPostClick?: (borderPostId: string, borderPostData: any, feature: any) => void
+  onZoneClick?: (zoneId: string, zoneData: any, feature: any) => void
   onSelectionClear?: () => void
   onMapReady?: (interactions: any) => void
   // Selection props for URL-driven highlighting
@@ -29,6 +30,7 @@ export default function SimpleMapContainer({
   onCountryClick,
   onBorderClick,
   onBorderPostClick,
+  onZoneClick,
   onSelectionClear,
   onMapReady,
   selectedCountryId,
@@ -149,7 +151,19 @@ export default function SimpleMapContainer({
       return
     }
 
-    // Look for border features SECOND (medium priority)
+    // Look for zone features SECOND (high priority - restricted areas)
+    const zoneFeature = features.find(f => f.source === 'country-border' && f.sourceLayer === 'zones')
+    if (zoneFeature) {
+      console.log('🚫 Zone clicked:', zoneFeature.properties)
+      const zoneId = zoneFeature.properties?.id
+      if (zoneId && onZoneClick) {
+        console.log('🔄 Calling onZoneClick with:', zoneId)
+        onZoneClick(zoneId, null, zoneFeature)
+      }
+      return
+    }
+
+    // Look for border features THIRD (medium priority)
     const borderFeature = features.find(f => f.source === 'country-border' && f.sourceLayer === 'border')
     if (borderFeature) {
       console.log('🚧 Border clicked:', borderFeature.properties)
@@ -185,7 +199,7 @@ export default function SimpleMapContainer({
     if (onSelectionClear) {
       onSelectionClear()
     }
-  }, [onCountryClick, onBorderClick, onBorderPostClick, onSelectionClear, highlightBorder, highlightCountry, highlightBorderPost, clearAllHighlights])
+  }, [onCountryClick, onBorderClick, onBorderPostClick, onZoneClick, onSelectionClear, highlightBorder, highlightCountry, highlightBorderPost, clearAllHighlights])
 
 
   // Helper function to create darker color expressions for highlights
@@ -437,6 +451,47 @@ export default function SimpleMapContainer({
 
         // Add country-border source from PMTiles
         if (map.current) {
+          // Create horizontal stripe patterns for zones
+          const createStripePattern = (color: string) => {
+            const width = 1 // Pattern width (minimal for tiling)
+            const height = 12 // Pattern height (4px colored + 8px semi-transparent white)
+            const canvas = document.createElement('canvas')
+            canvas.width = width
+            canvas.height = height
+            const ctx = canvas.getContext('2d')
+            
+            if (ctx) {
+              // Fill with transparent background
+              ctx.clearRect(0, 0, width, height)
+              
+              // Draw horizontal stripe (colored part at top) - narrower
+              ctx.fillStyle = color
+              ctx.fillRect(0, 0, width, 4) // 4px colored stripe (narrower)
+              
+              // Draw semi-transparent white for the gap (50% opacity)
+              ctx.fillStyle = 'rgba(255, 255, 255, 0.5)'
+              ctx.fillRect(0, 4, width, 8) // 8px semi-transparent white (1:2 ratio)
+              
+              // Return ImageData
+              return ctx.getImageData(0, 0, width, height)
+            }
+            
+            return null
+          }
+
+          // Add stripe patterns as images
+          const redStripe = createStripePattern('#ef4444')      // Type 0: Red - Closed
+          const blackStripe = createStripePattern('#000000')    // Type 1: Black - Guide/Escort Needed
+          const whiteStripe = createStripePattern('#ffffff')    // Type 2: White - Permit Needed
+          const blueStripe = createStripePattern('#3b82f6')     // Type 3: Blue - Restrictions apply
+
+          if (redStripe) map.current.addImage('stripe-red', redStripe)
+          if (blackStripe) map.current.addImage('stripe-black', blackStripe)
+          if (whiteStripe) map.current.addImage('stripe-white', whiteStripe)
+          if (blueStripe) map.current.addImage('stripe-blue', blueStripe)
+
+          console.log('✅ Stripe patterns created')
+
           console.log('➕ Adding country-border source')
           map.current.addSource('country-border', {
             type: 'vector',
@@ -501,18 +556,36 @@ export default function SimpleMapContainer({
             paint: {
               'circle-color': [
                 'case',
-                ['==', ['get', 'is_open'], 0], '#ef4444',  // Closed - red
-                ['==', ['get', 'is_open'], 1], '#f97316',  // Bilateral - orange
-                ['==', ['get', 'is_open'], 2], '#22c55e',  // Open/Multilateral - green
-                '#9ca3af'  // Default - grey for unknown
+                ['==', ['get', 'is_open'], 1], '#3b82f6',  // Bilateral - blue
+                ['==', ['get', 'is_open'], 2], '#22c55e',  // Open - green
+                ['==', ['get', 'is_open'], 3], '#eab308',  // Restrictions - yellow
+                '#ef4444'  // Closed (0) or null - red (default)
               ],
-              'circle-radius': 8,
-              'circle-stroke-width': 2,
+              'circle-radius': 6,
+              'circle-stroke-width': 1.5,
               'circle-stroke-color': '#ffffff'
             }
           })
 
-          console.log('✅ PMTiles layers added: country, border, border_post')
+          // Add zones layer (restricted areas) with diagonal stripe patterns
+          map.current.addLayer({
+            id: 'zones',
+            type: 'fill',
+            source: 'country-border',
+            'source-layer': 'zones',
+            paint: {
+              'fill-pattern': [
+                'case',
+                ['==', ['get', 'type'], 1], 'stripe-black',   // Type 1: Black - Guide/Escort Needed
+                ['==', ['get', 'type'], 2], 'stripe-white',   // Type 2: White - Permit Needed
+                ['==', ['get', 'type'], 3], 'stripe-blue',    // Type 3: Blue - Restrictions apply
+                'stripe-red'  // Type 0: Red - Closed (default)
+              ],
+              'fill-opacity': 1.0
+            }
+          })
+
+          console.log('✅ PMTiles layers added: country, zones, border, border_post')
 
           // Add highlight layers (on top of regular layers)
           // Country highlight layer - darker version of base color for selected countries
@@ -563,7 +636,7 @@ export default function SimpleMapContainer({
           map.current.on('click', handleMapClick)
 
           // Add cursor pointer for clickable layers
-          const clickableLayers = ['country', 'border', 'border_post']
+          const clickableLayers = ['country', 'border', 'border_post', 'zones']
 
           clickableLayers.forEach(layerId => {
             // Change cursor to pointer when hovering over clickable features
@@ -751,6 +824,40 @@ export default function SimpleMapContainer({
                   <div className="flex items-center space-x-2">
                     <div className="w-3 h-3 rounded-full" style={{ backgroundColor: '#ef4444' }}></div>
                     <span className="text-gray-700">{getTranslatedLabel('closed', language)}</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-4">
+                <h3 className="text-sm font-semibold mb-2">{getTranslatedLabel('restricted_areas', language)}</h3>
+                <div className="space-y-1 text-xs">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-3 h-3 rounded-sm" style={{ 
+                      background: 'repeating-linear-gradient(45deg, #ef4444, #ef4444 2px, rgba(255,255,255,0.5) 2px, rgba(255,255,255,0.5) 4px)',
+                      border: '1px solid #ef4444'
+                    }}></div>
+                    <span className="text-gray-700">{getTranslatedLabel('zone_closed', language)}</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-3 h-3 rounded-sm" style={{ 
+                      background: 'repeating-linear-gradient(45deg, #000000, #000000 2px, rgba(255,255,255,0.5) 2px, rgba(255,255,255,0.5) 4px)',
+                      border: '1px solid #000000'
+                    }}></div>
+                    <span className="text-gray-700">{getTranslatedLabel('zone_guide_escort', language)}</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-3 h-3 rounded-sm" style={{ 
+                      background: 'repeating-linear-gradient(45deg, #9ca3af, #9ca3af 2px, rgba(255,255,255,0.5) 2px, rgba(255,255,255,0.5) 4px)',
+                      border: '1px solid #9ca3af'
+                    }}></div>
+                    <span className="text-gray-700">{getTranslatedLabel('zone_permit', language)}</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-3 h-3 rounded-sm" style={{ 
+                      background: 'repeating-linear-gradient(45deg, #3b82f6, #3b82f6 2px, rgba(255,255,255,0.5) 2px, rgba(255,255,255,0.5) 4px)',
+                      border: '1px solid #3b82f6'
+                    }}></div>
+                    <span className="text-gray-700">{getTranslatedLabel('zone_restrictions', language)}</span>
                   </div>
                 </div>
               </div>

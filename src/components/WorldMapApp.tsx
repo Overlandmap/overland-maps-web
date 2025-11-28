@@ -3,7 +3,7 @@
 import { useState, useCallback, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { CountryData, BorderData } from '../types'
-import { loadCountryData, getBorderById } from '../lib/data-loader'
+import { loadCountryData, getBorderById, getZoneById } from '../lib/data-loader'
 import { useLanguage } from '../contexts/LanguageContext'
 import { ColorSchemeProvider } from '../contexts/ColorSchemeContext'
 import SimpleMapContainer from './SimpleMapContainer'
@@ -11,7 +11,7 @@ import DetailSidebar from './DetailSidebar'
 import { generateEntityUrl } from '../lib/url-utils'
 
 interface SelectedFeature {
-  type: 'country' | 'border' | 'border-post'
+  type: 'country' | 'border' | 'border-post' | 'zone'
   id: string
   data: CountryData | BorderData | any | null
   feature: any
@@ -167,6 +167,45 @@ export default function WorldMapApp({ initialCountry, initialBorder, initialBord
       setSidebarOpen(true)
     }
   }, [isHandlingPopState])
+
+  /**
+   * Handle zone clicks
+   */
+  const handleZoneClick = useCallback(async (zoneId: string, zoneData: any | null, feature: any) => {
+    console.log('🚫 Zone clicked:', zoneId)
+    
+    if (zoneId) {
+      // Load zone data if not provided
+      let data = zoneData
+      if (!data) {
+        try {
+          data = await getZoneById(zoneId)
+        } catch (error) {
+          console.error('Failed to load zone data:', error)
+        }
+      }
+      
+      // Merge feature properties with loaded data
+      const completeData = {
+        ...data,
+        id: zoneId,
+        name: feature?.properties?.name || data?.name || 'Unnamed Zone',
+        type: feature?.properties?.type ?? data?.type ?? 0,
+        description: feature?.properties?.description || data?.description,
+        geometry: feature?.geometry,
+        ...feature?.properties
+      }
+      
+      // Show detail sidebar
+      setSelectedFeature({
+        type: 'zone',
+        id: zoneId,
+        data: completeData,
+        feature: feature
+      })
+      setSidebarOpen(true)
+    }
+  }, [])
 
   /**
    * Handle selection clear
@@ -493,6 +532,7 @@ export default function WorldMapApp({ initialCountry, initialBorder, initialBord
           onCountryClick={handleCountryClick}
           onBorderClick={handleBorderClick}
           onBorderPostClick={handleBorderPostClick}
+          onZoneClick={handleZoneClick}
           onSelectionClear={handleSelectionClear}
           onMapReady={handleMapReady}
           selectedCountryId={selectedFeature?.type === 'country' ? selectedFeature.id : null}
