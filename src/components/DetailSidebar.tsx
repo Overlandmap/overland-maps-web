@@ -22,7 +22,7 @@ interface DetailSidebarProps {
   isOpen: boolean
   onClose: () => void
   selectedFeature?: {
-    type: 'country' | 'border' | 'border-post'
+    type: 'country' | 'border' | 'border-post' | 'zone'
     id: string
     data: CountryData | BorderData | any | null
     feature: any
@@ -526,6 +526,212 @@ export default function DetailSidebar({
             )}
           </div>
         )}
+
+        {/* Official Travel Advice Links */}
+        {(() => {
+          const generateOfficialLinks = () => {
+            try {
+              const foreignUrls = countryData.parameters?.foreign_url
+              const links: Array<{ url: string; label: string; countryCode: string }> = []
+            // Configuration for different country sources
+            // Keys can be either country code (e.g., 'FRA') or language_country (e.g., 'de_CHE')
+            const urlConfig: Record<string, { baseUrl: string; labelTemplate: string; postfix?: string; useCountryCode?: boolean }> = {
+              'FRA': {
+                baseUrl: 'https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/',
+                labelTemplate: 'Conseil aux voyageurs (France)'
+              },
+              'fr_CHE': {
+                baseUrl: 'https://www.eda.admin.ch/eda/fr/dfae/representations-et-conseils-pour-les-voyages/',
+                labelTemplate: 'Conseil pour les voyages (Suisse)',
+                postfix: '.html'
+              },
+              'de_CHE': {
+                baseUrl: 'https://www.eda.admin.ch/eda/de/home/vertretungen-und-reisehinweise/',
+                labelTemplate: 'Reise- und Sicherheitshinweise (Schweiz)',
+                postfix: '.html'
+              },
+              'it_CHE': {
+                baseUrl: 'https://www.eda.admin.ch/eda/it/dfae/rappresentanze-e-consigli-di-viaggio/',
+                labelTemplate: 'Consigli di viaggio (Svizzera)',
+                postfix: '.html'
+              },
+              'fr_BEL': {
+                baseUrl: 'https://diplomatie.belgium.be/fr/pays/',
+                labelTemplate: 'Conseils aux voyageurs (Belgique)'
+              },
+              'nl_BEL': {
+                baseUrl: 'https://diplomatie.belgium.be/nl/landen/',
+                labelTemplate: 'Reisadvies (België)'
+              },
+              'NLD': {
+                baseUrl: 'https://www.nederlandwereldwijd.nl/reizen/reisadviezen/',
+                labelTemplate: 'Reisadvies (Nederland)'
+              },
+              'ITA': {
+                baseUrl: 'https://www.viaggiaresicuri.it/find-country/country/',
+                labelTemplate: 'Viaggiare Sicuri (Italia)',
+                useCountryCode: true // Use ADM0_A3 instead of country name
+              },
+              'ESP': {
+                baseUrl: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Detalle-recomendaciones-de-viaje.aspx?trc=',
+                labelTemplate: 'Recomendaciones de viaje (España)'
+              },
+              'GER': {
+                baseUrl: 'https://www.auswaertiges-amt.de/de/service/laender/',
+                labelTemplate: 'Reise- und Sicherheitshinweise (Deutschland)',
+                postfix: '-node/'
+              },
+              'GBR': {
+                baseUrl: 'https://www.gov.uk/foreign-travel-advice/',
+                labelTemplate: 'Travel Advice (UK)'
+              },
+              'USA': {
+                baseUrl: 'https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/',
+                labelTemplate: 'Travel Advisory (USA)',
+                postfix: '.html'
+              },
+              'en_CAN': {
+                baseUrl: 'https://travel.gc.ca/destinations/',
+                labelTemplate: 'Travel Advice (Canada)'
+              },
+              'fr_CAN': {
+                baseUrl: 'https://voyage.gc.ca/destinations/',
+                labelTemplate: 'Conseils aux voyageurs (Canada)'
+              },
+              // 'AUS': {
+              //   baseUrl: 'https://www.smartraveller.gov.au/destinations/africa/',
+              //   labelTemplate: 'Travel Advice (Australia)'
+              // }
+            }
+
+            // Default countries to show per language when no foreign_url exists
+            // Use language_country format for language-specific configs
+            const defaultCountriesByLanguage: Record<string, string[]> = {
+              'fr': ['FRA', 'fr_CHE', 'fr_BEL', 'fr_CAN'],
+              'en': ['GBR', 'USA', 'en_CAN', 'AUS'],
+              'de': ['GER', 'de_CHE'],
+              'it': ['ITA', 'it_CHE'],
+              'nl': ['NLD', 'nl_BEL'],
+              'es': ['ESP']
+            }
+
+            // Helper function to generate URL slug from country name
+            const generateSlug = (name: string, capitalize: boolean = false) => {
+              const normalized = name
+                .normalize('NFD')
+                .replace(/[\u0300-\u036f]/g, '')
+                .replace(/[^a-z0-9\s-]/gi, '')
+                .replace(/\s+/g, '-')
+                .replace(/-+/g, '-')
+                .trim()
+              
+              if (capitalize) {
+                // Capitalize first letter of each word for USA format (no spaces or hyphens)
+                // Example: "Saudi Arabia" -> "SaudiArabia"
+                return normalized
+                  .split('-')
+                  .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+                  .join('')
+              }
+              
+              return normalized.toLowerCase()
+            }
+
+            // Check if foreign_url exists and has entries for current language
+            if (foreignUrls && typeof foreignUrls === 'object') {
+              // Iterate through foreign_url entries
+              Object.entries(foreignUrls).forEach(([key, value]) => {
+                // Parse key format: {language}_{country_code}
+                const parts = key.split('_')
+                if (parts.length !== 2) return
+                
+                const [lang, countryCode] = parts
+                
+                // Only show links for current language
+                if (lang !== language) return
+                
+                // Try to get configuration with language_country key first, then just country
+                const configKey = `${lang}_${countryCode}`
+                const config = urlConfig[configKey] || urlConfig[countryCode]
+                if (!config) return
+                
+                // Generate URL based on config
+                let urlPart: string
+                if (config.useCountryCode) {
+                  // Use ADM0_A3 code directly (e.g., for Italy)
+                  urlPart = countryData.parameters?.adm0_a3 || countryData.id || String(value)
+                } else {
+                  // Generate slug from country name (capitalize for USA)
+                  urlPart = generateSlug(String(value), countryCode === 'USA')
+                }
+                const postfix = config.postfix || ''
+                
+                links.push({
+                  url: config.baseUrl + urlPart + postfix,
+                  label: config.labelTemplate,
+                  countryCode: configKey
+                })
+              })
+            }
+            
+            // If no links found, add default links based on current language
+            if (links.length === 0) {
+              const defaultCountries = defaultCountriesByLanguage[language] || []
+              
+              if (defaultCountries.length > 0) {
+                const countryName = formatCountryName(countryData, properties, language)
+                
+                defaultCountries.forEach(configKey => {
+                  const config = urlConfig[configKey]
+                  if (config) {
+                    // Extract actual country code for special handling (e.g., USA capitalization)
+                    const actualCountryCode = configKey.includes('_') ? configKey.split('_')[1] : configKey
+                    
+                    // Generate slug (capitalize for USA)
+                    const slug = generateSlug(countryName, actualCountryCode === 'USA')
+                    const postfix = config.postfix || ''
+                    links.push({
+                      url: config.baseUrl + slug + postfix,
+                      label: config.labelTemplate,
+                      countryCode: configKey
+                    })
+                  }
+                })
+              }
+            }
+            
+              return links
+            } catch (error) {
+              console.error('Error generating official links:', error)
+              return []
+            }
+          }
+
+          const officialLinks = generateOfficialLinks()
+          
+          if (officialLinks.length > 0) {
+            return (
+              <div className="mt-4 space-y-2">
+                {officialLinks.map((link, index) => (
+                  <a
+                    key={index}
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center px-4 py-2 text-sm font-medium text-blue-700 bg-blue-50 border border-blue-200 rounded-lg hover:bg-blue-100 hover:border-blue-300 transition-colors w-full"
+                  >
+                    <svg className="w-4 h-4 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                    <span className="flex-1">{link.label}</span>
+                  </a>
+                ))}
+              </div>
+            )
+          }
+          
+          return null
+        })()}
       </div>
     )
   }
@@ -769,6 +975,90 @@ export default function DetailSidebar({
     )
   }
 
+  /**
+   * Get zone type label
+   * type values:
+   * 0 = Closed (red)
+   * 1 = Guide/Escort Needed (black)
+   * 2 = Permit Needed (white/gray)
+   * 3 = Restrictions apply (blue)
+   */
+  const getZoneTypeLabel = (type: number) => {
+    switch (type) {
+      case 0:
+        return { label: getTranslatedLabel('zone_closed', language), color: 'bg-red-100 text-red-800' }
+      case 1:
+        return { label: getTranslatedLabel('zone_guide_escort', language), color: 'bg-gray-900 text-white' }
+      case 2:
+        return { label: getTranslatedLabel('zone_permit', language), color: 'bg-gray-100 text-gray-800' }
+      case 3:
+        return { label: getTranslatedLabel('zone_restrictions', language), color: 'bg-blue-100 text-blue-800' }
+      default:
+        return { label: getTranslatedLabel('unknown', language), color: 'bg-gray-100 text-gray-800' }
+    }
+  }
+
+  /**
+   * Render zone information (read-only)
+   */
+  const renderZoneDetails = (zoneData: any, feature: any) => {
+    const properties = feature?.properties || zoneData || {}
+    const zoneType = getZoneTypeLabel(properties.type ?? 0)
+    
+    return (
+      <div className="space-y-6">
+        {/* Header */}
+        <div className="border-b border-gray-200 pb-4">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-4 flex-1">
+              <h2 className="text-2xl font-bold text-gray-900">
+                🚫 {properties.name || 'Restricted Zone'}
+              </h2>
+              <button
+                onClick={onClose}
+                className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <span className={`px-3 py-1 text-sm font-medium rounded-full ${zoneType.color}`}>
+              {zoneType.label}
+            </span>
+          </div>
+        </div>
+
+        {/* Zone Information */}
+        <div className="space-y-4">
+          <div className="grid grid-cols-1 gap-3">
+            {/* Country */}
+            {properties.country && (
+              <div className="space-y-2">
+                <span className="text-gray-600 text-sm font-medium">{getTranslatedLabel('country', language)}:</span>
+                <CountryNameDisplay 
+                  countryCode={properties.country} 
+                  language={language}
+                  onCountryClick={onCountrySelect}
+                />
+              </div>
+            )}
+          </div>
+          
+          {/* Comment */}
+          {properties.comment && (
+            <div className="space-y-2">
+              <span className="text-gray-600 text-sm font-medium">{getTranslatedLabel('comment', language)}:</span>
+              <div className="bg-yellow-50 p-3 rounded-lg border border-yellow-200">
+                <p className="text-sm text-gray-800">{properties.comment}</p>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    )
+  }
+
   if (!isOpen) return null
 
   return (
@@ -789,10 +1079,13 @@ export default function DetailSidebar({
             
             {selectedFeature.type === 'border-post' && selectedFeature.data && 
               renderBorderPostDetails(selectedFeature.data, selectedFeature.feature)}
+            
+            {selectedFeature.type === 'zone' && selectedFeature.data && 
+              renderZoneDetails(selectedFeature.data, selectedFeature.feature)}
           </>
         ) : (
           <div className="text-center py-8 text-gray-500">
-            Click on a country or border to view details
+            Click on a country, border, or zone to view details
           </div>
         )}
       </div>

@@ -2,6 +2,7 @@ import { Suspense } from 'react'
 import { readFileSync } from 'fs'
 import { join } from 'path'
 import { LanguageProvider } from '../../../contexts/LanguageContext'
+import { AuthProvider } from '../../../contexts/AuthContext'
 import WorldMapApp from '../../../components/WorldMapApp'
 
 interface BorderPostPageProps {
@@ -37,11 +38,13 @@ export default function BorderPostPage({ params }: BorderPostPageProps) {
   }
   
   return (
-    <LanguageProvider>
-      <main className="h-screen">
-        <BorderPostMapWrapper borderPostData={borderPostData} borderPostId={params.id} />
-      </main>
-    </LanguageProvider>
+    <AuthProvider>
+      <LanguageProvider>
+        <main className="h-screen">
+          <BorderPostMapWrapper borderPostData={borderPostData} borderPostId={params.id} />
+        </main>
+      </LanguageProvider>
+    </AuthProvider>
   )
 }
 

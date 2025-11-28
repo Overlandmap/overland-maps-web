@@ -27,9 +27,10 @@ interface WorldMapAppProps {
   initialBorder?: string
   initialBorderPost?: string
   initialBorderPostData?: any
+  initialZone?: string
 }
 
-export default function WorldMapApp({ initialCountry, initialBorder, initialBorderPost, initialBorderPostData }: WorldMapAppProps = {}) {
+export default function WorldMapApp({ initialCountry, initialBorder, initialBorderPost, initialBorderPostData, initialZone }: WorldMapAppProps = {}) {
   const { language } = useLanguage()
   const router = useRouter()
   const [selectedFeature, setSelectedFeature] = useState<SelectedFeature | null>(null)
@@ -175,6 +176,11 @@ export default function WorldMapApp({ initialCountry, initialBorder, initialBord
     console.log('🚫 Zone clicked:', zoneId)
     
     if (zoneId) {
+      // Update URL without navigation (unless handling popstate)
+      if (!isHandlingPopState) {
+        window.history.pushState({ type: 'zone', id: zoneId }, '', generateEntityUrl('zone', zoneId))
+      }
+      
       // Load zone data if not provided
       let data = zoneData
       if (!data) {
@@ -191,6 +197,8 @@ export default function WorldMapApp({ initialCountry, initialBorder, initialBord
         id: zoneId,
         name: feature?.properties?.name || data?.name || 'Unnamed Zone',
         type: feature?.properties?.type ?? data?.type ?? 0,
+        comment: feature?.properties?.comment || data?.comment,
+        country: feature?.properties?.country || data?.country,
         description: feature?.properties?.description || data?.description,
         geometry: feature?.geometry,
         ...feature?.properties
@@ -205,7 +213,7 @@ export default function WorldMapApp({ initialCountry, initialBorder, initialBord
       })
       setSidebarOpen(true)
     }
-  }, [])
+  }, [isHandlingPopState])
 
   /**
    * Handle selection clear
@@ -346,6 +354,7 @@ export default function WorldMapApp({ initialCountry, initialBorder, initialBord
       const countryMatch = pathWithoutBase.match(/^\/country\/([^\/]+)/)
       const borderMatch = pathWithoutBase.match(/^\/border\/([^\/]+)/)
       const borderPostMatch = pathWithoutBase.match(/^\/border_post\/([^\/]+)/)
+      const zoneMatch = pathWithoutBase.match(/^\/zone\/([^\/]+)/)
 
       if (countryMatch) {
         const countryCode = countryMatch[1]
@@ -359,6 +368,10 @@ export default function WorldMapApp({ initialCountry, initialBorder, initialBord
         const borderPostId = borderPostMatch[1]
         console.log('📍 Loading border post from URL:', borderPostId)
         await handleBorderPostClick(borderPostId, null, null)
+      } else if (zoneMatch) {
+        const zoneId = zoneMatch[1]
+        console.log('🚫 Loading zone from URL:', zoneId)
+        await handleZoneClick(zoneId, null, null)
       }
       
       // Reset flag after handling
@@ -367,7 +380,7 @@ export default function WorldMapApp({ initialCountry, initialBorder, initialBord
 
     window.addEventListener('popstate', handlePopState)
     return () => window.removeEventListener('popstate', handlePopState)
-  }, [handleCountryClick, handleBorderClick, handleBorderPostClick])
+  }, [handleCountryClick, handleBorderClick, handleBorderPostClick, handleZoneClick])
 
   // Initialize app on mount
   useEffect(() => {
@@ -494,6 +507,15 @@ export default function WorldMapApp({ initialCountry, initialBorder, initialBord
     
     loadInitialBorderPost()
   }, [initialBorderPost, initialBorderPostData, hasHandledInitialSelection])
+
+  // Handle initial zone selection from URL
+  useEffect(() => {
+    if (initialZone && !hasHandledInitialSelection) {
+      console.log('🎯 Setting initial zone selection:', initialZone)
+      handleZoneClick(initialZone, null, null)
+      setHasHandledInitialSelection(true)
+    }
+  }, [initialZone, hasHandledInitialSelection, handleZoneClick])
 
   if (appState.isLoading) {
     return (

@@ -1,5 +1,6 @@
 import { Suspense } from 'react'
 import { LanguageProvider } from '../../../contexts/LanguageContext'
+import { AuthProvider } from '../../../contexts/AuthContext'
 import WorldMapApp from '../../../components/WorldMapApp'
 
 interface CountryPageProps {
@@ -10,21 +11,23 @@ interface CountryPageProps {
 
 export default function CountryPage({ params }: CountryPageProps) {
   return (
-    <LanguageProvider>
-      <main className="h-screen">
-        <Suspense fallback={
-          <div className="h-screen flex items-center justify-center bg-gray-50">
-            <div className="text-center">
-              <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4"></div>
-              <h2 className="text-xl font-semibold text-gray-900 mb-2">Loading Country Details</h2>
-              <p className="text-gray-600">Loading {params.code}...</p>
+    <AuthProvider>
+      <LanguageProvider>
+        <main className="h-screen">
+          <Suspense fallback={
+            <div className="h-screen flex items-center justify-center bg-gray-50">
+              <div className="text-center">
+                <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4"></div>
+                <h2 className="text-xl font-semibold text-gray-900 mb-2">Loading Country Details</h2>
+                <p className="text-gray-600">Loading {params.code}...</p>
+              </div>
             </div>
-          </div>
-        }>
-          <WorldMapApp initialCountry={params.code} />
-        </Suspense>
-      </main>
-    </LanguageProvider>
+          }>
+            <WorldMapApp initialCountry={params.code} />
+          </Suspense>
+        </main>
+      </LanguageProvider>
+    </AuthProvider>
   )
 }
 

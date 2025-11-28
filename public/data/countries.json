@@ -36,6 +36,7 @@
         "overlanding": 2,
         "population": 43700,
         "timezone": "Asia/Tbilisi",
+        "foreign_urls": {"fr_FR": "georgie", "fr_CHE": "georgie.html", "fr_BEL": "georgie"},
         "translations": {
           "de": "Abchasien",
           "en": "Abkhazia",
