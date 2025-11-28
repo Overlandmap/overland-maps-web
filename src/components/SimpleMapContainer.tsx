@@ -45,24 +45,31 @@ export default function SimpleMapContainer({
   const [colorScheme, setColorScheme] = useState<ColorScheme>('overlanding')
   const [showBorderPosts, setShowBorderPosts] = useState(true)
 
+  // Store selected country ID in a ref for paint property updates
+  const selectedCountryIdRef = useRef<string | null>(null)
+  // Store updateMapColors ref to avoid circular dependencies
+  const updateMapColorsRef = useRef<((scheme: ColorScheme) => void) | null>(null)
+
   // Clear all highlights function
   const clearAllHighlights = useCallback(() => {
     if (!map.current) return
 
     console.log('🧹 Clearing all highlights')
+    selectedCountryIdRef.current = null
+    
     // Clear border highlights
     if (map.current.getLayer('border-highlight')) {
       map.current.setFilter('border-highlight', ['==', ['get', 'id'], ''])
-    }
-    // Clear country highlights
-    if (map.current.getLayer('countries-highlight')) {
-      map.current.setFilter('countries-highlight', ['==', ['get', 'ADM0_A3'], ''])
     }
     // Clear border post highlights
     if (map.current.getLayer('border-post-highlight')) {
       map.current.setFilter('border-post-highlight', ['==', ['get', 'id'], ''])
     }
-  }, [])
+    // Reset country colors to base (no selection)
+    if (updateMapColorsRef.current) {
+      updateMapColorsRef.current(colorScheme)
+    }
+  }, [colorScheme])
 
   // Highlighting functions
   const highlightBorder = useCallback((borderId: string) => {
@@ -81,19 +88,23 @@ export default function SimpleMapContainer({
     if (!map.current || !countryId) return
 
     console.log('🎯 Highlighting country:', countryId)
-    // Clear all other highlights first
-    clearAllHighlights()
-    // Highlight the selected country (darker blue fill)
-    // Try multiple field names to match the country
-    if (map.current.getLayer('countries-highlight')) {
-      map.current.setFilter('countries-highlight', [
-        'any',
-        ['==', ['get', 'ADM0_A3'], countryId],
-        ['==', ['get', 'ISO_A3'], countryId],
-        ['==', ['get', 'id'], countryId]
-      ])
+    
+    // Clear all other highlights first (but not country colors)
+    if (map.current.getLayer('border-highlight')) {
+      map.current.setFilter('border-highlight', ['==', ['get', 'id'], ''])
     }
-  }, [clearAllHighlights])
+    if (map.current.getLayer('border-post-highlight')) {
+      map.current.setFilter('border-post-highlight', ['==', ['get', 'id'], ''])
+    }
+    
+    // Store the selected country ID and update colors
+    selectedCountryIdRef.current = countryId
+    
+    // Update colors using the ref
+    if (updateMapColorsRef.current) {
+      updateMapColorsRef.current(colorScheme)
+    }
+  }, [colorScheme])
 
   const highlightBorderPost = useCallback((borderPostId: string) => {
     if (!map.current || !borderPostId) return
@@ -306,18 +317,31 @@ export default function SimpleMapContainer({
       return
     }
 
-    const colorExpression = scheme === 'overlanding'
+    const baseColorExpression = scheme === 'overlanding'
       ? generateOverlandingColorExpression()
       : generateCarnetColorExpression()
 
-    const darkerColorExpression = generateDarkerColorExpression(scheme)
-
     try {
-      map.current.setPaintProperty('country', 'fill-color', colorExpression as any)
-
-      // Update highlight layer with darker colors
-      if (map.current.getLayer('countries-highlight')) {
-        map.current.setPaintProperty('countries-highlight', 'fill-color', darkerColorExpression as any)
+      // If a country is selected, create a conditional expression
+      if (selectedCountryIdRef.current) {
+        const darkerColorExpression = generateDarkerColorExpression(scheme)
+        const conditionalColorExpression = [
+          'case',
+          [
+            'any',
+            ['==', ['get', 'ADM0_A3'], selectedCountryIdRef.current],
+            ['==', ['get', 'ISO_A3'], selectedCountryIdRef.current],
+            ['==', ['get', 'id'], selectedCountryIdRef.current]
+          ],
+          darkerColorExpression,
+          baseColorExpression
+        ]
+        map.current.setPaintProperty('country', 'fill-color', conditionalColorExpression as any)
+        map.current.setPaintProperty('country', 'fill-opacity', 0.8)
+      } else {
+        // No selection, use base colors
+        map.current.setPaintProperty('country', 'fill-color', baseColorExpression as any)
+        map.current.setPaintProperty('country', 'fill-opacity', 0.6)
       }
 
       console.log(`🎨 Map colors updated to ${scheme} scheme`)
@@ -325,6 +349,11 @@ export default function SimpleMapContainer({
       console.error('❌ Failed to update map colors:', error)
     }
   }, [generateOverlandingColorExpression, generateCarnetColorExpression, generateDarkerColorExpression])
+
+  // Store updateMapColors in ref for use by clearAllHighlights and highlightCountry
+  useEffect(() => {
+    updateMapColorsRef.current = updateMapColors
+  }, [updateMapColors])
 
   // Handle color scheme change
   const handleColorSchemeChange = useCallback((scheme: ColorScheme) => {
@@ -510,6 +539,24 @@ export default function SimpleMapContainer({
             }
           })
 
+          // Add zones layer (restricted areas) with diagonal stripe patterns - above countries
+          map.current.addLayer({
+            id: 'zones',
+            type: 'fill',
+            source: 'country-border',
+            'source-layer': 'zones',
+            paint: {
+              'fill-pattern': [
+                'case',
+                ['==', ['get', 'type'], 1], 'stripe-black',   // Type 1: Black - Guide/Escort Needed
+                ['==', ['get', 'type'], 2], 'stripe-white',   // Type 2: White - Permit Needed
+                ['==', ['get', 'type'], 3], 'stripe-blue',    // Type 3: Blue - Restrictions apply
+                'stripe-red'  // Type 0: Red - Closed (default)
+              ],
+              'fill-opacity': 1.0
+            }
+          })
+
           // Add border layer (middle layer)
           map.current.addLayer({
             id: 'border',
@@ -567,40 +614,9 @@ export default function SimpleMapContainer({
             }
           })
 
-          // Add zones layer (restricted areas) with diagonal stripe patterns
-          map.current.addLayer({
-            id: 'zones',
-            type: 'fill',
-            source: 'country-border',
-            'source-layer': 'zones',
-            paint: {
-              'fill-pattern': [
-                'case',
-                ['==', ['get', 'type'], 1], 'stripe-black',   // Type 1: Black - Guide/Escort Needed
-                ['==', ['get', 'type'], 2], 'stripe-white',   // Type 2: White - Permit Needed
-                ['==', ['get', 'type'], 3], 'stripe-blue',    // Type 3: Blue - Restrictions apply
-                'stripe-red'  // Type 0: Red - Closed (default)
-              ],
-              'fill-opacity': 1.0
-            }
-          })
-
           console.log('✅ PMTiles layers added: country, zones, border, border_post')
 
           // Add highlight layers (on top of regular layers)
-          // Country highlight layer - darker version of base color for selected countries
-          map.current.addLayer({
-            id: 'countries-highlight',
-            type: 'fill',
-            source: 'country-border',
-            'source-layer': 'country',
-            paint: {
-              'fill-color': generateOverlandingColorExpression() as any, // Will be updated based on color scheme
-              'fill-opacity': 0.7 // Higher opacity for darker appearance
-            },
-            filter: ['==', ['get', 'ADM0_A3'], ''] // Initially show nothing
-          })
-
           // Border highlight layer - white, wider line for selected borders
           map.current.addLayer({
             id: 'border-highlight',
@@ -630,7 +646,7 @@ export default function SimpleMapContainer({
             filter: ['==', ['get', 'id'], ''] // Initially show nothing
           })
 
-          console.log('✅ Highlight layers added: countries-highlight, border-highlight, border-post-highlight')
+          console.log('✅ Highlight layers added: border-highlight, border-post-highlight')
 
           // Add click handler
           map.current.on('click', handleMapClick)
