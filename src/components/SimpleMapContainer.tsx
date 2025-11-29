@@ -9,7 +9,7 @@ import { useLanguage } from '../contexts/LanguageContext'
 import { getTranslatedLabel } from '../lib/i18n'
 
 
-type ColorScheme = 'overlanding' | 'carnet'
+type ColorScheme = 'overlanding' | 'carnet' | 'climate'
 
 interface SimpleMapContainerProps {
   className?: string
@@ -44,6 +44,8 @@ export default function SimpleMapContainer({
   const [error, setError] = useState<string | null>(null)
   const [colorScheme, setColorScheme] = useState<ColorScheme>('overlanding')
   const [showBorderPosts, setShowBorderPosts] = useState(true)
+  const [selectedMonth, setSelectedMonth] = useState<number>(0) // 0 = January, 11 = December
+  const [climateDataType, setClimateDataType] = useState<'temperature' | 'precipitation'>('temperature')
 
   // Store selected country ID in a ref for paint property updates
   const selectedCountryIdRef = useRef<string | null>(null)
@@ -418,7 +420,8 @@ export default function SimpleMapContainer({
   useEffect(() => {
     if (!map.current || !isLoaded) return
 
-    const visibility = showBorderPosts ? 'visible' : 'none'
+    // Hide border posts when carnet or climate is selected, or when toggle is off
+    const visibility = (showBorderPosts && colorScheme !== 'carnet' && colorScheme !== 'climate') ? 'visible' : 'none'
 
     if (map.current.getLayer('border_post')) {
       map.current.setLayoutProperty('border_post', 'visibility', visibility)
@@ -426,7 +429,50 @@ export default function SimpleMapContainer({
     if (map.current.getLayer('border-post-highlight')) {
       map.current.setLayoutProperty('border-post-highlight', 'visibility', visibility)
     }
-  }, [showBorderPosts, isLoaded])
+  }, [showBorderPosts, colorScheme, isLoaded])
+
+  // Handle month selection and data type for climate layers
+  useEffect(() => {
+    if (!map.current || !isLoaded) return
+    
+    // Show/hide climate layers based on selected month, data type, and color scheme
+    for (let i = 1; i <= 12; i++) {
+      const monthNumber = String(i).padStart(2, '0') // 01, 02, ..., 12
+      const isSelectedMonth = (i - 1) === selectedMonth
+      
+      // Temperature layers
+      const tempLayerId = `climate-temp-${monthNumber}`
+      if (map.current!.getLayer(tempLayerId)) {
+        const visibility = (colorScheme === 'climate' && climateDataType === 'temperature' && isSelectedMonth) ? 'visible' : 'none'
+        map.current!.setLayoutProperty(tempLayerId, 'visibility', visibility)
+      }
+      
+      // Precipitation layers
+      const precipLayerId = `climate-precip-${monthNumber}`
+      if (map.current!.getLayer(precipLayerId)) {
+        const visibility = (colorScheme === 'climate' && climateDataType === 'precipitation' && isSelectedMonth) ? 'visible' : 'none'
+        map.current!.setLayoutProperty(precipLayerId, 'visibility', visibility)
+      }
+    }
+
+    // Hide country layer when climate is selected, show it otherwise
+    if (map.current.getLayer('country')) {
+      const countryVisibility = colorScheme === 'climate' ? 'none' : 'visible'
+      map.current.setLayoutProperty('country', 'visibility', countryVisibility)
+    }
+
+    // Show zones layer only for overlanding scheme
+    if (map.current.getLayer('zones')) {
+      const zonesVisibility = colorScheme === 'overlanding' ? 'visible' : 'none'
+      map.current.setLayoutProperty('zones', 'visibility', zonesVisibility)
+    }
+
+    // Show top-water layer only for climate scheme
+    if (map.current.getLayer('top-water')) {
+      const topWaterVisibility = colorScheme === 'climate' ? 'visible' : 'none'
+      map.current.setLayoutProperty('top-water', 'visibility', topWaterVisibility)
+    }
+  }, [selectedMonth, colorScheme, climateDataType, isLoaded])
 
   useEffect(() => {
     if (!mapContainer.current || map.current) return
@@ -527,6 +573,28 @@ export default function SimpleMapContainer({
             url: 'pmtiles://https://overlanding.io/country-borders.pmtiles'
           })
 
+          // Add climate temperature sources for each month
+          for (let i = 1; i <= 12; i++) {
+            const monthNumber = String(i).padStart(2, '0') // 01, 02, ..., 12
+            map.current!.addSource(`climate-temp-${monthNumber}`, {
+              type: 'raster',
+              tiles: [`https://pmtiles-cloudflare.overlandmap.workers.dev/tas/${monthNumber}/{z}/{x}/{y}.webp`],
+              tileSize: 512
+            })
+          }
+          console.log('✅ Climate temperature sources added for all 12 months')
+
+          // Add climate precipitation sources for each month
+          for (let i = 1; i <= 12; i++) {
+            const monthNumber = String(i).padStart(2, '0') // 01, 02, ..., 12
+            map.current!.addSource(`climate-precip-${monthNumber}`, {
+              type: 'raster',
+              tiles: [`https://pmtiles-cloudflare.overlandmap.workers.dev/pr/${monthNumber}/{z}/{x}/{y}.webp`],
+              tileSize: 512
+            })
+          }
+          console.log('✅ Climate precipitation sources added for all 12 months')
+
           // Add country layer (bottom layer)
           map.current.addLayer({
             id: 'country',
@@ -538,6 +606,40 @@ export default function SimpleMapContainer({
               'fill-opacity': 0.6
             }
           })
+
+          // Add climate temperature layers right after country layer (initially hidden)
+          for (let i = 1; i <= 12; i++) {
+            const monthNumber = String(i).padStart(2, '0') // 01, 02, ..., 12
+            map.current.addLayer({
+              id: `climate-temp-${monthNumber}`,
+              type: 'raster',
+              source: `climate-temp-${monthNumber}`,
+              layout: {
+                visibility: i === 1 ? 'visible' : 'none' // Show January by default
+              },
+              paint: {
+                'raster-opacity': 1.0 // Full opacity for visibility
+              }
+            })
+          }
+          console.log('✅ Climate temperature layers added for all 12 months (after country layer)')
+
+          // Add climate precipitation layers right after temperature layers (initially hidden)
+          for (let i = 1; i <= 12; i++) {
+            const monthNumber = String(i).padStart(2, '0') // 01, 02, ..., 12
+            map.current.addLayer({
+              id: `climate-precip-${monthNumber}`,
+              type: 'raster',
+              source: `climate-precip-${monthNumber}`,
+              layout: {
+                visibility: 'none' // Hidden by default
+              },
+              paint: {
+                'raster-opacity': 1.0 // Full opacity for visibility
+              }
+            })
+          }
+          console.log('✅ Climate precipitation layers added for all 12 months (after temperature layers)')
 
           // Add zones layer (restricted areas) with diagonal stripe patterns - above countries
           map.current.addLayer({
@@ -555,7 +657,7 @@ export default function SimpleMapContainer({
               ],
               'fill-opacity': 1.0
             }
-          })
+          }, 'waterway_river')
 
           // Add border layer (middle layer)
           map.current.addLayer({
@@ -645,6 +747,41 @@ export default function SimpleMapContainer({
             },
             filter: ['==', ['get', 'id'], ''] // Initially show nothing
           })
+
+          map.current.addLayer({
+            "id": "top-water",
+            "type": "fill",
+            "metadata": {},
+            "source": "planet",
+            "source-layer": "water",
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "fill-color": "rgb(158,189,255)"
+            },
+        })
+
+      //     map.current.addLayer({
+      //       id: 'top-country',
+      //       type: 'line',
+      //       source: 'planet',
+      //       'source-layer': 'boundary',
+      //       paint: {
+      //         'line-color': '#ffffff', // Plain white
+      //         'line-width': 1, // Double the default width
+      //         'line-opacity': 1.0
+      //       },
+      //             "filter": [
+      //   "all",
+      //   [
+      //     "==",
+      //     "admin_level",
+      //     2
+      //   ]
+      // ],
+// 
+          // })
 
           console.log('✅ Highlight layers added: border-highlight, border-post-highlight')
 
@@ -742,14 +879,151 @@ export default function SimpleMapContainer({
               >
                 {getTranslatedLabel('carnet', language)}
               </button>
+              <button
+                onClick={() => handleColorSchemeChange('climate')}
+                className={`px-3 py-1 text-xs rounded transition-colors ${colorScheme === 'climate'
+                  ? 'bg-blue-600 text-white'
+                  : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                  }`}
+              >
+                Climate
+              </button>
             </div>
 
+            {/* Climate Data Type Selector */}
+            {colorScheme === 'climate' && (
+              <div className="mb-3">
+                <div className="flex space-x-1 mb-2">
+                  <button
+                    onClick={() => setClimateDataType('temperature')}
+                    className={`flex-1 px-3 py-1 text-xs rounded transition-colors ${climateDataType === 'temperature'
+                      ? 'bg-orange-600 text-white'
+                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                      }`}
+                  >
+                    Temperature
+                  </button>
+                  <button
+                    onClick={() => setClimateDataType('precipitation')}
+                    className={`flex-1 px-3 py-1 text-xs rounded transition-colors ${climateDataType === 'precipitation'
+                      ? 'bg-purple-600 text-white'
+                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                      }`}
+                  >
+                    Precipitation
+                  </button>
+                </div>
+              </div>
+            )}
+
+            {/* Month Selector for Climate */}
+            {colorScheme === 'climate' && (
+              <div className="mb-3">
+                <div className="grid grid-cols-6 gap-1">
+                  {['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'].map((month, index) => (
+                    <button
+                      key={month}
+                      onClick={() => setSelectedMonth(index)}
+                      className={`px-2 py-1 text-xs rounded transition-colors ${selectedMonth === index
+                        ? 'bg-green-600 text-white'
+                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                        }`}
+                    >
+                      {month}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+
             <h3 className="text-sm font-semibold mb-2">
-              {colorScheme === 'overlanding' ? 'Overlanding' : 'Carnet de passage en Douane (CpD)'}
+              {colorScheme === 'overlanding' ? 'Overlanding' : colorScheme === 'carnet' ? 'Carnet de passage en Douane (CpD)' : `Climate - ${climateDataType === 'temperature' ? 'Temperature' : 'Precipitation'}`}
             </h3>
 
             <div className="space-y-1 text-xs">
-              {colorScheme === 'overlanding' ? (
+              {colorScheme === 'climate' ? (
+                <>
+                  {climateDataType === 'temperature' ? (
+                    <div className="text-gray-700 space-y-2">
+                      <p className="text-xs text-gray-600 mb-3">Monthly average temperature (°C)</p>
+                      <div className="space-y-1">
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center space-x-2">
+                          <div className="w-4 h-3 rounded-sm" style={{ backgroundColor: 'rgb(111,159,205)' }}></div>
+                          <span>-20°C</span>
+                        </div>
+                        <span className="text-gray-500">-4°F</span>
+                      </div>
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center space-x-2">
+                          <div className="w-4 h-3 rounded-sm" style={{ backgroundColor: 'rgb(189,222,236)' }}></div>
+                          <span>-10°C</span>
+                        </div>
+                        <span className="text-gray-500">14°F</span>
+                      </div>
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center space-x-2">
+                          <div className="w-4 h-3 rounded-sm" style={{ backgroundColor: 'rgb(243,246,212)' }}></div>
+                          <span>0°C</span>
+                        </div>
+                        <span className="text-gray-500">32°F</span>
+                      </div>
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center space-x-2">
+                          <div className="w-4 h-3 rounded-sm" style={{ backgroundColor: 'rgb(254,227,149)' }}></div>
+                          <span>10°C</span>
+                        </div>
+                        <span className="text-gray-500">50°F</span>
+                      </div>
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center space-x-2">
+                          <div className="w-4 h-3 rounded-sm" style={{ backgroundColor: 'rgb(250,153,87)' }}></div>
+                          <span>20°C</span>
+                        </div>
+                        <span className="text-gray-500">68°F</span>
+                      </div>
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center space-x-2">
+                          <div className="w-4 h-3 rounded-sm" style={{ backgroundColor: 'rgb(241,104,65)' }}></div>
+                          <span>30°C</span>
+                        </div>
+                        <span className="text-gray-500">86°F</span>
+                      </div>
+                    </div>
+                    </div>
+                  ) : (
+                    <div className="text-gray-700 space-y-2">
+                      <p className="text-xs text-gray-600 mb-3">Monthly precipitation (mm)</p>
+                      <div className="space-y-1">
+                        <div className="flex items-center space-x-2">
+                          <div className="w-4 h-3 rounded-sm" style={{ backgroundColor: 'rgb(255,255,204)' }}></div>
+                          <span>0 mm</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <div className="w-4 h-3 rounded-sm" style={{ backgroundColor: 'rgb(199,233,180)' }}></div>
+                          <span>10 mm</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <div className="w-4 h-3 rounded-sm" style={{ backgroundColor: 'rgb(65,182,196)' }}></div>
+                          <span>50 mm</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <div className="w-4 h-3 rounded-sm" style={{ backgroundColor: 'rgb(37,52,148)' }}></div>
+                          <span>200 mm</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <div className="w-4 h-3 rounded-sm" style={{ backgroundColor: 'rgb(197,27,125)' }}></div>
+                          <span>800 mm</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <div className="w-4 h-3 rounded-sm" style={{ backgroundColor: 'rgb(128,0,38)' }}></div>
+                          <span>2200 mm</span>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </>
+              ) : colorScheme === 'overlanding' ? (
                 <>
                   <div className="flex items-center space-x-2">
                     <div className="w-3 h-3 rounded-sm" style={{ backgroundColor: '#16a34a' }}></div>
