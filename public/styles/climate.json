@@ -1,0 +1,398 @@
+{
+  "version": 8,
+  "name": "Climate",
+  "metadata": {
+    "maputnik:renderer": "mlgljs"
+  },
+  "center": [0, 0],
+  "zoom": 0,
+  "sources": {
+    "planet": {
+      "type": "vector",
+      "tiles": [
+        "https://pmtiles-cloudflare.overlandmap.workers.dev/planet-0-6/{z}/{x}/{y}.mvt"
+      ],
+      "minzoom": 0,
+      "maxzoom": 6
+    },
+    "climate-temp-01": {
+      "type": "raster",
+      "tiles": ["https://pmtiles-cloudflare.overlandmap.workers.dev/tas/01/{z}/{x}/{y}.webp"],
+      "tileSize": 512
+    },
+    "climate-temp-02": {
+      "type": "raster",
+      "tiles": ["https://pmtiles-cloudflare.overlandmap.workers.dev/tas/02/{z}/{x}/{y}.webp"],
+      "tileSize": 512
+    },
+    "climate-temp-03": {
+      "type": "raster",
+      "tiles": ["https://pmtiles-cloudflare.overlandmap.workers.dev/tas/03/{z}/{x}/{y}.webp"],
+      "tileSize": 512
+    },
+    "climate-temp-04": {
+      "type": "raster",
+      "tiles": ["https://pmtiles-cloudflare.overlandmap.workers.dev/tas/04/{z}/{x}/{y}.webp"],
+      "tileSize": 512
+    },
+    "climate-temp-05": {
+      "type": "raster",
+      "tiles": ["https://pmtiles-cloudflare.overlandmap.workers.dev/tas/05/{z}/{x}/{y}.webp"],
+      "tileSize": 512
+    },
+    "climate-temp-06": {
+      "type": "raster",
+      "tiles": ["https://pmtiles-cloudflare.overlandmap.workers.dev/tas/06/{z}/{x}/{y}.webp"],
+      "tileSize": 512
+    },
+    "climate-temp-07": {
+      "type": "raster",
+      "tiles": ["https://pmtiles-cloudflare.overlandmap.workers.dev/tas/07/{z}/{x}/{y}.webp"],
+      "tileSize": 512
+    },
+    "climate-temp-08": {
+      "type": "raster",
+      "tiles": ["https://pmtiles-cloudflare.overlandmap.workers.dev/tas/08/{z}/{x}/{y}.webp"],
+      "tileSize": 512
+    },
+    "climate-temp-09": {
+      "type": "raster",
+      "tiles": ["https://pmtiles-cloudflare.overlandmap.workers.dev/tas/09/{z}/{x}/{y}.webp"],
+      "tileSize": 512
+    },
+    "climate-temp-10": {
+      "type": "raster",
+      "tiles": ["https://pmtiles-cloudflare.overlandmap.workers.dev/tas/10/{z}/{x}/{y}.webp"],
+      "tileSize": 512
+    },
+    "climate-temp-11": {
+      "type": "raster",
+      "tiles": ["https://pmtiles-cloudflare.overlandmap.workers.dev/tas/11/{z}/{x}/{y}.webp"],
+      "tileSize": 512
+    },
+    "climate-temp-12": {
+      "type": "raster",
+      "tiles": ["https://pmtiles-cloudflare.overlandmap.workers.dev/tas/12/{z}/{x}/{y}.webp"],
+      "tileSize": 512
+    },
+    "climate-precip-01": {
+      "type": "raster",
+      "tiles": ["https://pmtiles-cloudflare.overlandmap.workers.dev/pr/01/{z}/{x}/{y}.webp"],
+      "tileSize": 512
+    },
+    "climate-precip-02": {
+      "type": "raster",
+      "tiles": ["https://pmtiles-cloudflare.overlandmap.workers.dev/pr/02/{z}/{x}/{y}.webp"],
+      "tileSize": 512
+    },
+    "climate-precip-03": {
+      "type": "raster",
+      "tiles": ["https://pmtiles-cloudflare.overlandmap.workers.dev/pr/03/{z}/{x}/{y}.webp"],
+      "tileSize": 512
+    },
+    "climate-precip-04": {
+      "type": "raster",
+      "tiles": ["https://pmtiles-cloudflare.overlandmap.workers.dev/pr/04/{z}/{x}/{y}.webp"],
+      "tileSize": 512
+    },
+    "climate-precip-05": {
+      "type": "raster",
+      "tiles": ["https://pmtiles-cloudflare.overlandmap.workers.dev/pr/05/{z}/{x}/{y}.webp"],
+      "tileSize": 512
+    },
+    "climate-precip-06": {
+      "type": "raster",
+      "tiles": ["https://pmtiles-cloudflare.overlandmap.workers.dev/pr/06/{z}/{x}/{y}.webp"],
+      "tileSize": 512
+    },
+    "climate-precip-07": {
+      "type": "raster",
+      "tiles": ["https://pmtiles-cloudflare.overlandmap.workers.dev/pr/07/{z}/{x}/{y}.webp"],
+      "tileSize": 512
+    },
+    "climate-precip-08": {
+      "type": "raster",
+      "tiles": ["https://pmtiles-cloudflare.overlandmap.workers.dev/pr/08/{z}/{x}/{y}.webp"],
+      "tileSize": 512
+    },
+    "climate-precip-09": {
+      "type": "raster",
+      "tiles": ["https://pmtiles-cloudflare.overlandmap.workers.dev/pr/09/{z}/{x}/{y}.webp"],
+      "tileSize": 512
+    },
+    "climate-precip-10": {
+      "type": "raster",
+      "tiles": ["https://pmtiles-cloudflare.overlandmap.workers.dev/pr/10/{z}/{x}/{y}.webp"],
+      "tileSize": 512
+    },
+    "climate-precip-11": {
+      "type": "raster",
+      "tiles": ["https://pmtiles-cloudflare.overlandmap.workers.dev/pr/11/{z}/{x}/{y}.webp"],
+      "tileSize": 512
+    },
+    "climate-precip-12": {
+      "type": "raster",
+      "tiles": ["https://pmtiles-cloudflare.overlandmap.workers.dev/pr/12/{z}/{x}/{y}.webp"],
+      "tileSize": 512
+    }
+  },
+  "sprite": "https://overlanding.io/sprites/sprite",
+  "glyphs": "https://overlanding.io/glyphs/{fontstack}/{range}.pbf",
+  "layers": [
+    {
+      "id": "climate-temp-01",
+      "type": "raster",
+      "source": "climate-temp-01",
+      "layout": {"visibility": "visible"},
+      "paint": {"raster-opacity": 1.0}
+    },
+    {
+      "id": "climate-temp-02",
+      "type": "raster",
+      "source": "climate-temp-02",
+      "layout": {"visibility": "none"},
+      "paint": {"raster-opacity": 1.0}
+    },
+    {
+      "id": "climate-temp-03",
+      "type": "raster",
+      "source": "climate-temp-03",
+      "layout": {"visibility": "none"},
+      "paint": {"raster-opacity": 1.0}
+    },
+    {
+      "id": "climate-temp-04",
+      "type": "raster",
+      "source": "climate-temp-04",
+      "layout": {"visibility": "none"},
+      "paint": {"raster-opacity": 1.0}
+    },
+    {
+      "id": "climate-temp-05",
+      "type": "raster",
+      "source": "climate-temp-05",
+      "layout": {"visibility": "none"},
+      "paint": {"raster-opacity": 1.0}
+    },
+    {
+      "id": "climate-temp-06",
+      "type": "raster",
+      "source": "climate-temp-06",
+      "layout": {"visibility": "none"},
+      "paint": {"raster-opacity": 1.0}
+    },
+    {
+      "id": "climate-temp-07",
+      "type": "raster",
+      "source": "climate-temp-07",
+      "layout": {"visibility": "none"},
+      "paint": {"raster-opacity": 1.0}
+    },
+    {
+      "id": "climate-temp-08",
+      "type": "raster",
+      "source": "climate-temp-08",
+      "layout": {"visibility": "none"},
+      "paint": {"raster-opacity": 1.0}
+    },
+    {
+      "id": "climate-temp-09",
+      "type": "raster",
+      "source": "climate-temp-09",
+      "layout": {"visibility": "none"},
+      "paint": {"raster-opacity": 1.0}
+    },
+    {
+      "id": "climate-temp-10",
+      "type": "raster",
+      "source": "climate-temp-10",
+      "layout": {"visibility": "none"},
+      "paint": {"raster-opacity": 1.0}
+    },
+    {
+      "id": "climate-temp-11",
+      "type": "raster",
+      "source": "climate-temp-11",
+      "layout": {"visibility": "none"},
+      "paint": {"raster-opacity": 1.0}
+    },
+    {
+      "id": "climate-temp-12",
+      "type": "raster",
+      "source": "climate-temp-12",
+      "layout": {"visibility": "none"},
+      "paint": {"raster-opacity": 1.0}
+    },
+    {
+      "id": "climate-precip-01",
+      "type": "raster",
+      "source": "climate-precip-01",
+      "layout": {"visibility": "none"},
+      "paint": {"raster-opacity": 1.0}
+    },
+    {
+      "id": "climate-precip-02",
+      "type": "raster",
+      "source": "climate-precip-02",
+      "layout": {"visibility": "none"},
+      "paint": {"raster-opacity": 1.0}
+    },
+    {
+      "id": "climate-precip-03",
+      "type": "raster",
+      "source": "climate-precip-03",
+      "layout": {"visibility": "none"},
+      "paint": {"raster-opacity": 1.0}
+    },
+    {
+      "id": "climate-precip-04",
+      "type": "raster",
+      "source": "climate-precip-04",
+      "layout": {"visibility": "none"},
+      "paint": {"raster-opacity": 1.0}
+    },
+    {
+      "id": "climate-precip-05",
+      "type": "raster",
+      "source": "climate-precip-05",
+      "layout": {"visibility": "none"},
+      "paint": {"raster-opacity": 1.0}
+    },
+    {
+      "id": "climate-precip-06",
+      "type": "raster",
+      "source": "climate-precip-06",
+      "layout": {"visibility": "none"},
+      "paint": {"raster-opacity": 1.0}
+    },
+    {
+      "id": "climate-precip-07",
+      "type": "raster",
+      "source": "climate-precip-07",
+      "layout": {"visibility": "none"},
+      "paint": {"raster-opacity": 1.0}
+    },
+    {
+      "id": "climate-precip-08",
+      "type": "raster",
+      "source": "climate-precip-08",
+      "layout": {"visibility": "none"},
+      "paint": {"raster-opacity": 1.0}
+    },
+    {
+      "id": "climate-precip-09",
+      "type": "raster",
+      "source": "climate-precip-09",
+      "layout": {"visibility": "none"},
+      "paint": {"raster-opacity": 1.0}
+    },
+    {
+      "id": "climate-precip-10",
+      "type": "raster",
+      "source": "climate-precip-10",
+      "layout": {"visibility": "none"},
+      "paint": {"raster-opacity": 1.0}
+    },
+    {
+      "id": "climate-precip-11",
+      "type": "raster",
+      "source": "climate-precip-11",
+      "layout": {"visibility": "none"},
+      "paint": {"raster-opacity": 1.0}
+    },
+    {
+      "id": "climate-precip-12",
+      "type": "raster",
+      "source": "climate-precip-12",
+      "layout": {"visibility": "none"},
+      "paint": {"raster-opacity": 1.0}
+    },
+    {
+      "id": "waterway_river",
+      "type": "line",
+      "source": "planet",
+      "source-layer": "waterway",
+      "filter": ["==", "class", "river"],
+      "layout": {
+        "line-cap": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#a0c8f0",
+        "line-width": {
+          "base": 1.2,
+          "stops": [[11, 0.5], [20, 6]]
+        }
+      }
+    },
+    {
+      "id": "waterway_other",
+      "type": "line",
+      "source": "planet",
+      "source-layer": "waterway",
+      "filter": ["!=", "class", "river"],
+      "layout": {
+        "line-cap": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#a0c8f0",
+        "line-width": {
+          "base": 1.3,
+          "stops": [[13, 0.5], [20, 6]]
+        }
+      }
+    },
+    {
+      "id": "water",
+      "type": "fill",
+      "source": "planet",
+      "source-layer": "water",
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": "rgb(158,189,255)"
+      }
+    },
+    {
+      "id": "boundary_country",
+      "type": "line",
+      "source": "planet",
+      "source-layer": "boundary",
+      "filter": ["==", "admin_level", 2],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "rgba(128, 128, 128, 0.5)",
+        "line-width": {
+          "base": 1.1,
+          "stops": [[3, 1], [22, 20]]
+        }
+      }
+    },
+    {
+      "id": "place_country",
+      "type": "symbol",
+      "source": "planet",
+      "source-layer": "place",
+      "filter": ["==", "class", "country"],
+      "layout": {
+        "text-field": "{name}",
+        "text-font": ["Noto Sans Regular"],
+        "text-size": {
+          "stops": [[1, 10], [6, 14]]
+        },
+        "text-transform": "uppercase"
+      },
+      "paint": {
+        "text-color": "#334",
+        "text-halo-blur": 1,
+        "text-halo-color": "rgba(255,255,255,0.8)",
+        "text-halo-width": 2
+      }
+    }
+  ]
+}

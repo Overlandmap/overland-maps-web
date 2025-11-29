@@ -51,6 +51,8 @@ export default function SimpleMapContainer({
   const selectedCountryIdRef = useRef<string | null>(null)
   // Store updateMapColors ref to avoid circular dependencies
   const updateMapColorsRef = useRef<((scheme: ColorScheme) => void) | null>(null)
+  // Track previous language to detect changes
+  const previousLanguageRef = useRef<string>(language)
 
   // Clear all highlights function
   const clearAllHighlights = useCallback(() => {
@@ -360,17 +362,67 @@ export default function SimpleMapContainer({
   // Handle color scheme change
   const handleColorSchemeChange = useCallback((scheme: ColorScheme) => {
     console.log(`🔄 Changing color scheme to: ${scheme}`)
+    const previousScheme = colorScheme
     setColorScheme(scheme)
 
-    // Only update colors if map is loaded
-    if (isLoaded) {
-      updateMapColors(scheme)
-    } else {
-      console.warn('⚠️ Map not loaded yet, color scheme will be applied when ready')
+    // Switch map style when changing to/from climate mode
+    if (map.current && isLoaded) {
+      const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
+      const supportedLanguages = ['en', 'fr', 'de', 'es', 'pt', 'it', 'nl', 'ru']
+      
+      if (scheme === 'climate') {
+        // Switch to climate style with language support - always include language suffix
+        const climateLangSuffix = supportedLanguages.includes(language) ? `-${language}` : '-en'
+        const climateStyleUrl = `${basePath}/styles/climate${climateLangSuffix}.json`
+        console.log('🌡️ Switching to climate style:', climateStyleUrl)
+        map.current.setStyle(climateStyleUrl)
+      } else if (previousScheme === 'climate') {
+        // Switching from climate to overlanding/carnet - reload basemap
+        const basemapLangSuffix = supportedLanguages.includes(language) && language !== 'en' ? `-${language}` : ''
+        const styleUrl = `${basePath}/styles/basemap${basemapLangSuffix}.json`
+        console.log('🗺️ Switching back to basemap style:', styleUrl)
+        map.current.setStyle(styleUrl)
+      } else {
+        // Just update colors for overlanding/carnet switch
+        updateMapColors(scheme)
+      }
     }
-  }, [updateMapColors, isLoaded])
+  }, [updateMapColors, isLoaded, colorScheme, language])
 
 
+
+  // Handle language changes - reload map style with new language
+  useEffect(() => {
+    if (!map.current || !isLoaded) return
+    
+    // Check if language actually changed (not initial load)
+    if (previousLanguageRef.current === language) {
+      return
+    }
+    
+    console.log(`🌐 Language changed from ${previousLanguageRef.current} to ${language}`)
+    previousLanguageRef.current = language
+    
+    const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
+    const supportedLanguages = ['en', 'fr', 'de', 'es', 'pt', 'it', 'nl', 'ru']
+    
+    // Reload style with new language for both climate and basemap modes
+    if (colorScheme === 'climate') {
+      // Climate mode - always include language suffix
+      const climateLangSuffix = supportedLanguages.includes(language) ? `-${language}` : '-en'
+      const climateStyleUrl = `${basePath}/styles/climate${climateLangSuffix}.json`
+      console.log('🌐 Reloading climate style for language change:', climateStyleUrl)
+      map.current.setStyle(climateStyleUrl)
+    } else {
+      // For overlanding/carnet, we need to reload basemap which will trigger re-adding layers
+      const basemapLangSuffix = supportedLanguages.includes(language) && language !== 'en' ? `-${language}` : ''
+      const styleUrl = `${basePath}/styles/basemap${basemapLangSuffix}.json`
+      console.log('🌐 Reloading basemap style for language change:', styleUrl)
+      map.current.setStyle(styleUrl)
+      
+      // Note: The 'load' event handler will re-add all custom layers automatically
+    }
+  }, [language, isLoaded, colorScheme])
 
   // Apply color scheme when map becomes loaded
   useEffect(() => {
@@ -433,9 +485,9 @@ export default function SimpleMapContainer({
 
   // Handle month selection and data type for climate layers
   useEffect(() => {
-    if (!map.current || !isLoaded) return
+    if (!map.current || !isLoaded || colorScheme !== 'climate') return
     
-    // Show/hide climate layers based on selected month, data type, and color scheme
+    // Only control climate layer visibility when in climate mode
     for (let i = 1; i <= 12; i++) {
       const monthNumber = String(i).padStart(2, '0') // 01, 02, ..., 12
       const isSelectedMonth = (i - 1) === selectedMonth
@@ -443,36 +495,29 @@ export default function SimpleMapContainer({
       // Temperature layers
       const tempLayerId = `climate-temp-${monthNumber}`
       if (map.current!.getLayer(tempLayerId)) {
-        const visibility = (colorScheme === 'climate' && climateDataType === 'temperature' && isSelectedMonth) ? 'visible' : 'none'
+        const visibility = (climateDataType === 'temperature' && isSelectedMonth) ? 'visible' : 'none'
         map.current!.setLayoutProperty(tempLayerId, 'visibility', visibility)
       }
       
       // Precipitation layers
       const precipLayerId = `climate-precip-${monthNumber}`
       if (map.current!.getLayer(precipLayerId)) {
-        const visibility = (colorScheme === 'climate' && climateDataType === 'precipitation' && isSelectedMonth) ? 'visible' : 'none'
+        const visibility = (climateDataType === 'precipitation' && isSelectedMonth) ? 'visible' : 'none'
         map.current!.setLayoutProperty(precipLayerId, 'visibility', visibility)
       }
     }
+  }, [selectedMonth, colorScheme, climateDataType, isLoaded])
 
-    // Hide country layer when climate is selected, show it otherwise
-    if (map.current.getLayer('country')) {
-      const countryVisibility = colorScheme === 'climate' ? 'none' : 'visible'
-      map.current.setLayoutProperty('country', 'visibility', countryVisibility)
-    }
-
-    // Show zones layer only for overlanding scheme
+  // Handle zones layer visibility for overlanding mode
+  useEffect(() => {
+    if (!map.current || !isLoaded || colorScheme === 'climate') return
+    
+    // Show zones layer only for overlanding scheme (not in climate mode)
     if (map.current.getLayer('zones')) {
       const zonesVisibility = colorScheme === 'overlanding' ? 'visible' : 'none'
       map.current.setLayoutProperty('zones', 'visibility', zonesVisibility)
     }
-
-    // Show top-water layer only for climate scheme
-    if (map.current.getLayer('top-water')) {
-      const topWaterVisibility = colorScheme === 'climate' ? 'visible' : 'none'
-      map.current.setLayoutProperty('top-water', 'visibility', topWaterVisibility)
-    }
-  }, [selectedMonth, colorScheme, climateDataType, isLoaded])
+  }, [colorScheme, isLoaded])
 
   useEffect(() => {
     if (!mapContainer.current || map.current) return
@@ -485,15 +530,22 @@ export default function SimpleMapContainer({
       maplibregl.addProtocol('pmtiles', protocol.tile)
       console.log('✅ PMTiles protocol registered')
 
-      // Load style from JSON file based on language
+      // Load style from JSON file based on color scheme and language
       const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
-      // Supported languages with translation files
       const supportedLanguages = ['en', 'fr', 'de', 'es', 'pt', 'it', 'nl', 'ru']
-      // Use default basemap.json for unsupported languages (e.g., Chinese)
-      const languageSuffix = supportedLanguages.includes(language) && language !== 'en' ? `-${language}` : ''
-      const styleUrl = `${basePath}/styles/basemap${languageSuffix}.json`
-
-      console.log('📄 Loading style from:', styleUrl, 'for language:', language)
+      let styleUrl: string
+      
+      if (colorScheme === 'climate') {
+        // Load climate style with language support - always include language suffix for climate
+        const climateLangSuffix = supportedLanguages.includes(language) ? `-${language}` : '-en'
+        styleUrl = `${basePath}/styles/climate${climateLangSuffix}.json`
+        console.log('📄 Loading climate style:', styleUrl, 'for language:', language)
+      } else {
+        // Load basemap style with language support for overlanding/carnet modes
+        const basemapLangSuffix = supportedLanguages.includes(language) && language !== 'en' ? `-${language}` : ''
+        styleUrl = `${basePath}/styles/basemap${basemapLangSuffix}.json`
+        console.log('📄 Loading basemap style:', styleUrl, 'for language:', language)
+      }
 
       map.current = new maplibregl.Map({
         container: mapContainer.current,
@@ -554,46 +606,26 @@ export default function SimpleMapContainer({
             return null
           }
 
-          // Add stripe patterns as images
-          const redStripe = createStripePattern('#ef4444')      // Type 0: Red - Closed
-          const blackStripe = createStripePattern('#000000')    // Type 1: Black - Guide/Escort Needed
-          const whiteStripe = createStripePattern('#ffffff')    // Type 2: White - Permit Needed
-          const blueStripe = createStripePattern('#3b82f6')     // Type 3: Blue - Restrictions apply
+          // Skip adding layers if in climate mode - climate.json style handles everything
+          if (colorScheme !== 'climate') {
+            // Add stripe patterns as images
+            const redStripe = createStripePattern('#ef4444')      // Type 0: Red - Closed
+            const blackStripe = createStripePattern('#000000')    // Type 1: Black - Guide/Escort Needed
+            const whiteStripe = createStripePattern('#ffffff')    // Type 2: White - Permit Needed
+            const blueStripe = createStripePattern('#3b82f6')     // Type 3: Blue - Restrictions apply
 
-          if (redStripe) map.current.addImage('stripe-red', redStripe)
-          if (blackStripe) map.current.addImage('stripe-black', blackStripe)
-          if (whiteStripe) map.current.addImage('stripe-white', whiteStripe)
-          if (blueStripe) map.current.addImage('stripe-blue', blueStripe)
+            if (redStripe) map.current.addImage('stripe-red', redStripe)
+            if (blackStripe) map.current.addImage('stripe-black', blackStripe)
+            if (whiteStripe) map.current.addImage('stripe-white', whiteStripe)
+            if (blueStripe) map.current.addImage('stripe-blue', blueStripe)
 
-          console.log('✅ Stripe patterns created')
+            console.log('✅ Stripe patterns created')
 
-          console.log('➕ Adding country-border source')
-          map.current.addSource('country-border', {
-            type: 'vector',
-            url: 'pmtiles://https://overlanding.io/country-borders.pmtiles'
-          })
-
-          // Add climate temperature sources for each month
-          for (let i = 1; i <= 12; i++) {
-            const monthNumber = String(i).padStart(2, '0') // 01, 02, ..., 12
-            map.current!.addSource(`climate-temp-${monthNumber}`, {
-              type: 'raster',
-              tiles: [`https://pmtiles-cloudflare.overlandmap.workers.dev/tas/${monthNumber}/{z}/{x}/{y}.webp`],
-              tileSize: 512
+            console.log('➕ Adding country-border source')
+            map.current.addSource('country-border', {
+              type: 'vector',
+              url: 'pmtiles://https://overlanding.io/country-borders.pmtiles'
             })
-          }
-          console.log('✅ Climate temperature sources added for all 12 months')
-
-          // Add climate precipitation sources for each month
-          for (let i = 1; i <= 12; i++) {
-            const monthNumber = String(i).padStart(2, '0') // 01, 02, ..., 12
-            map.current!.addSource(`climate-precip-${monthNumber}`, {
-              type: 'raster',
-              tiles: [`https://pmtiles-cloudflare.overlandmap.workers.dev/pr/${monthNumber}/{z}/{x}/{y}.webp`],
-              tileSize: 512
-            })
-          }
-          console.log('✅ Climate precipitation sources added for all 12 months')
 
           // Add country layer (bottom layer)
           map.current.addLayer({
@@ -606,40 +638,6 @@ export default function SimpleMapContainer({
               'fill-opacity': 0.6
             }
           })
-
-          // Add climate temperature layers right after country layer (initially hidden)
-          for (let i = 1; i <= 12; i++) {
-            const monthNumber = String(i).padStart(2, '0') // 01, 02, ..., 12
-            map.current.addLayer({
-              id: `climate-temp-${monthNumber}`,
-              type: 'raster',
-              source: `climate-temp-${monthNumber}`,
-              layout: {
-                visibility: i === 1 ? 'visible' : 'none' // Show January by default
-              },
-              paint: {
-                'raster-opacity': 1.0 // Full opacity for visibility
-              }
-            })
-          }
-          console.log('✅ Climate temperature layers added for all 12 months (after country layer)')
-
-          // Add climate precipitation layers right after temperature layers (initially hidden)
-          for (let i = 1; i <= 12; i++) {
-            const monthNumber = String(i).padStart(2, '0') // 01, 02, ..., 12
-            map.current.addLayer({
-              id: `climate-precip-${monthNumber}`,
-              type: 'raster',
-              source: `climate-precip-${monthNumber}`,
-              layout: {
-                visibility: 'none' // Hidden by default
-              },
-              paint: {
-                'raster-opacity': 1.0 // Full opacity for visibility
-              }
-            })
-          }
-          console.log('✅ Climate precipitation layers added for all 12 months (after temperature layers)')
 
           // Add zones layer (restricted areas) with diagonal stripe patterns - above countries
           map.current.addLayer({
@@ -762,6 +760,54 @@ export default function SimpleMapContainer({
             },
         })
 
+          map.current.addLayer({
+      "id": "top-country",
+      "type": "symbol",
+      "metadata": {},
+      "source": "planet",
+      "source-layer": "place",
+      "filter": [
+        // "all",
+        // [
+        //   "==",
+        //   "rank",
+        //   1
+        // ],
+        // [
+          "==",
+          "class",
+          "country"
+        // ]
+      ],
+      "layout": {
+        "text-font": [
+          "Roboto Condensed Italic"
+        ],
+        "text-size": {
+          "stops": [
+            [
+              1,
+              11
+            ],
+            [
+              4,
+              17
+            ]
+          ]
+        },
+        "text-field": "{name_en}",
+        "visibility": "visible",
+        "text-max-width": 6.25,
+        "text-transform": "none"
+      },
+      "paint": {
+        "text-color": "#334",
+        "text-halo-blur": 1,
+        "text-halo-color": "rgba(255,255,255,0.8)",
+        "text-halo-width": 1
+      }
+    }),
+
       //     map.current.addLayer({
       //       id: 'top-country',
       //       type: 'line',
@@ -784,6 +830,9 @@ export default function SimpleMapContainer({
           // })
 
           console.log('✅ Highlight layers added: border-highlight, border-post-highlight')
+          } else {
+            console.log('🌡️ Climate mode: Using climate.json style, no additional layers needed')
+          }
 
           // Add click handler
           map.current.on('click', handleMapClick)
