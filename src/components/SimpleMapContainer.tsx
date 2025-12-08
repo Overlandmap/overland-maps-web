@@ -241,12 +241,12 @@ export default function SimpleMapContainer({
         ['==', ['get', 'overlanding'], 0],
         ['==', ['get', 'overlanding'], '0']
       ], '#1a1a1a',
-      // Handle overlanding value 1 (War/Dangerous) - red
+      // Handle overlanding value 1 (Unsafe) - red
       ['any',
         ['==', ['get', 'overlanding'], 1],
         ['==', ['get', 'overlanding'], '1']
       ], '#dc2626',
-      // Handle overlanding value 2 (Restricted) - yellow
+      // Handle overlanding value 2 (Restrictions Apply) - yellow
       ['any',
         ['==', ['get', 'overlanding'], 2],
         ['==', ['get', 'overlanding'], '2']
@@ -331,24 +331,21 @@ export default function SimpleMapContainer({
         const darkerColorExpression = generateDarkerColorExpression(scheme)
         const conditionalColorExpression = [
           'case',
-          [
-            'any',
+
             ['==', ['get', 'ADM0_A3'], selectedCountryIdRef.current],
-            ['==', ['get', 'ISO_A3'], selectedCountryIdRef.current],
-            ['==', ['get', 'id'], selectedCountryIdRef.current]
-          ],
+
           darkerColorExpression,
           baseColorExpression
         ]
         map.current.setPaintProperty('country', 'fill-color', conditionalColorExpression as any)
-        map.current.setPaintProperty('country', 'fill-opacity', 0.8)
+        map.current.setPaintProperty('country', 'fill-opacity', 0.6)
       } else {
         // No selection, use base colors
         map.current.setPaintProperty('country', 'fill-color', baseColorExpression as any)
         map.current.setPaintProperty('country', 'fill-opacity', 0.6)
       }
 
-      console.log(`🎨 Map colors updated to ${scheme} scheme`)
+      console.log(`� Map  colors updated to ${scheme} scheme`)
     } catch (error) {
       console.error('❌ Failed to update map colors:', error)
     }

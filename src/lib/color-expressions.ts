@@ -25,7 +25,7 @@ export const COLOR_SCHEMES: Record<ColorScheme, SchemeDefinition> = {
     name: 'Overlanding Status',
     colors: {
       0: { color: '#1a1a1a', label: 'Forbidden' },
-      1: { color: '#dc2626', label: 'War / Dangerous' },
+      1: { color: '#dc2626', label: 'Unsafe' },
       2: { color: '#eab308', label: 'Restrictions Apply' },
       3: { color: '#16a34a', label: 'Open' },
       default: { color: '#9ca3af', label: 'Unknown' }
@@ -54,7 +54,7 @@ function generateOverlandingColorExpression(): any[] {
       ['==', ['get', 'overlanding'], 0],
       ['==', ['get', 'overlanding'], '0']
     ], scheme.colors[0].color,
-    // Handle overlanding value 1 (War/Dangerous) - red
+    // Handle overlanding value 1 (Unsafe) - red
     ['any',
       ['==', ['get', 'overlanding'], 1],
       ['==', ['get', 'overlanding'], '1']
