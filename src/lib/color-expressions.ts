@@ -5,7 +5,7 @@
  */
 
 // Color scheme types
-export type ColorScheme = 'overlanding' | 'carnet'
+export type ColorScheme = 'overlanding' | 'carnet' | 'climate'
 
 // Color definition interface
 export interface ColorDefinition {
@@ -19,7 +19,7 @@ export interface SchemeDefinition {
   colors: Record<string | number, ColorDefinition>
 }
 
-// Color scheme constants with overlanding and carnet mappings
+// Color scheme constants with overlanding, carnet, and climate mappings
 export const COLOR_SCHEMES: Record<ColorScheme, SchemeDefinition> = {
   overlanding: {
     name: 'Overlanding Status',
@@ -39,6 +39,12 @@ export const COLOR_SCHEMES: Record<ColorScheme, SchemeDefinition> = {
       1: { color: '#eab308', label: 'Required in some situations' },
       2: { color: '#dc2626', label: 'Mandatory' },
       default: { color: '#16a34a', label: 'Not required' }
+    }
+  },
+  climate: {
+    name: 'Climate Data',
+    colors: {
+      default: { color: '#9ca3af', label: 'Climate' }
     }
   }
 }

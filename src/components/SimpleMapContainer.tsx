@@ -6,6 +6,7 @@ import { Protocol } from 'pmtiles'
 import 'maplibre-gl/dist/maplibre-gl.css'
 import TopMenu from './TopMenu'
 import { useLanguage } from '../contexts/LanguageContext'
+import { useColorScheme } from '../contexts/ColorSchemeContext'
 import { getTranslatedLabel } from '../lib/i18n'
 
 
@@ -38,11 +39,11 @@ export default function SimpleMapContainer({
   selectedBorderPostId
 }: SimpleMapContainerProps) {
   const { language } = useLanguage()
+  const { colorScheme, setColorScheme } = useColorScheme()
   const mapContainer = useRef<HTMLDivElement>(null)
   const map = useRef<maplibregl.Map | null>(null)
   const [isLoaded, setIsLoaded] = useState(false)
   const [error, setError] = useState<string | null>(null)
-  const [colorScheme, setColorScheme] = useState<ColorScheme>('overlanding')
   const [showBorderPosts, setShowBorderPosts] = useState(true)
   const [selectedMonth, setSelectedMonth] = useState<number>(0) // 0 = January, 11 = December
   const [climateDataType, setClimateDataType] = useState<'temperature' | 'precipitation'>('temperature')
@@ -53,6 +54,8 @@ export default function SimpleMapContainer({
   const updateMapColorsRef = useRef<((scheme: ColorScheme) => void) | null>(null)
   // Track previous language to detect changes
   const previousLanguageRef = useRef<string>(language)
+  // Track if initial colors have been applied
+  const initialColorsAppliedRef = useRef<boolean>(false)
 
   // Clear all highlights function
   const clearAllHighlights = useCallback(() => {
@@ -331,9 +334,7 @@ export default function SimpleMapContainer({
         const darkerColorExpression = generateDarkerColorExpression(scheme)
         const conditionalColorExpression = [
           'case',
-
             ['==', ['get', 'ADM0_A3'], selectedCountryIdRef.current],
-
           darkerColorExpression,
           baseColorExpression
         ]
@@ -356,35 +357,252 @@ export default function SimpleMapContainer({
     updateMapColorsRef.current = updateMapColors
   }, [updateMapColors])
 
-  // Handle color scheme change
-  const handleColorSchemeChange = useCallback((scheme: ColorScheme) => {
-    console.log(`🔄 Changing color scheme to: ${scheme}`)
-    const previousScheme = colorScheme
-    setColorScheme(scheme)
+  // Track previous color scheme to detect changes
+  const previousColorSchemeRef = useRef<ColorScheme>(colorScheme)
 
-    // Switch map style when changing to/from climate mode
-    if (map.current && isLoaded) {
-      const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
-      const supportedLanguages = ['en', 'fr', 'de', 'es', 'pt', 'it', 'nl', 'ru']
+  // Handle color scheme changes from context
+  useEffect(() => {
+    if (!map.current || !isLoaded) return
+    
+    const previousScheme = previousColorSchemeRef.current
+    if (previousScheme === colorScheme) return
+    
+    console.log(`🔄 Color scheme changed from ${previousScheme} to: ${colorScheme}`)
+    previousColorSchemeRef.current = colorScheme
+
+    const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
+    const supportedLanguages = ['en', 'fr', 'de', 'es', 'pt', 'it', 'nl', 'ru']
+    
+    if (colorScheme === 'climate') {
+      // Save current map position before switching style
+      const currentCenter = map.current.getCenter()
+      const currentZoom = map.current.getZoom()
       
-      if (scheme === 'climate') {
-        // Switch to climate style with language support - always include language suffix
-        const climateLangSuffix = supportedLanguages.includes(language) ? `-${language}` : '-en'
-        const climateStyleUrl = `${basePath}/styles/climate${climateLangSuffix}.json`
-        console.log('🌡️ Switching to climate style:', climateStyleUrl)
-        map.current.setStyle(climateStyleUrl)
-      } else if (previousScheme === 'climate') {
-        // Switching from climate to overlanding/carnet - reload basemap
-        const basemapLangSuffix = supportedLanguages.includes(language) && language !== 'en' ? `-${language}` : ''
-        const styleUrl = `${basePath}/styles/basemap${basemapLangSuffix}.json`
-        console.log('🗺️ Switching back to basemap style:', styleUrl)
-        map.current.setStyle(styleUrl)
-      } else {
-        // Just update colors for overlanding/carnet switch
-        updateMapColors(scheme)
+      // Switch to climate style with language support - always include language suffix
+      const climateLangSuffix = supportedLanguages.includes(language) ? `-${language}` : '-en'
+      const climateStyleUrl = `${basePath}/styles/climate${climateLangSuffix}.json`
+      console.log('🌡️ Switching to climate style:', climateStyleUrl)
+      
+      // Set style and restore position after load
+      map.current.once('style.load', () => {
+        if (map.current) {
+          map.current.setCenter(currentCenter)
+          map.current.setZoom(currentZoom)
+          console.log(`📍 Position restored after climate style load`)
+        }
+      })
+      map.current.setStyle(climateStyleUrl)
+    } else if (previousScheme === 'climate') {
+      // Save current map position before switching style
+      const currentCenter = map.current.getCenter()
+      const currentZoom = map.current.getZoom()
+      
+      // Switching from climate to overlanding/carnet - reload basemap
+      const basemapLangSuffix = supportedLanguages.includes(language) && language !== 'en' ? `-${language}` : ''
+      const styleUrl = `${basePath}/styles/basemap${basemapLangSuffix}.json`
+      console.log('🗺️ Switching back to basemap style:', styleUrl)
+      
+      // Set style and restore position after load, then re-add custom layers
+      const handleStyleLoad = () => {
+        console.log('🎬 styledata event fired!')
+        if (!map.current) {
+          console.error('❌ map.current is null in styledata handler')
+          return
+        }
+        
+        try {
+          // Restore position
+          map.current.setCenter(currentCenter)
+          map.current.setZoom(currentZoom)
+          console.log(`📍 Position restored after basemap style load`)
+          
+          // Re-add all custom layers that were in the basemap
+          console.log('🔄 Re-adding custom layers after style switch')
+        
+        // Re-create stripe patterns
+        const createStripePattern = (color: string) => {
+          const width = 1
+          const height = 12
+          const canvas = document.createElement('canvas')
+          canvas.width = width
+          canvas.height = height
+          const ctx = canvas.getContext('2d')
+          
+          if (ctx) {
+            ctx.clearRect(0, 0, width, height)
+            ctx.fillStyle = color
+            ctx.fillRect(0, 0, width, 4)
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.5)'
+            ctx.fillRect(0, 4, width, 8)
+            return ctx.getImageData(0, 0, width, height)
+          }
+          return null
+        }
+        
+        const redStripe = createStripePattern('#ef4444')
+        const blackStripe = createStripePattern('#000000')
+        const whiteStripe = createStripePattern('#ffffff')
+        const blueStripe = createStripePattern('#3b82f6')
+        
+        // Only add images if they don't already exist
+        if (redStripe && !map.current.hasImage('stripe-red')) map.current.addImage('stripe-red', redStripe)
+        if (blackStripe && !map.current.hasImage('stripe-black')) map.current.addImage('stripe-black', blackStripe)
+        if (whiteStripe && !map.current.hasImage('stripe-white')) map.current.addImage('stripe-white', whiteStripe)
+        if (blueStripe && !map.current.hasImage('stripe-blue')) map.current.addImage('stripe-blue', blueStripe)
+        
+        // Re-add country-border source (only if it doesn't exist)
+        if (!map.current.getSource('country-border')) {
+          map.current.addSource('country-border', {
+            type: 'vector',
+            url: 'pmtiles://https://overlanding.io/country-borders.pmtiles'
+          })
+        }
+        
+        // Re-add country layer (only if it doesn't exist)
+        if (!map.current.getLayer('country')) {
+          map.current.addLayer({
+          id: 'country',
+          type: 'fill',
+          source: 'country-border',
+          'source-layer': 'country',
+          paint: {
+            'fill-color': generateOverlandingColorExpression() as any,
+            'fill-opacity': 0.6
+          }
+          })
+        }
+        
+        // Re-add zones layer (only if it doesn't exist)
+        if (!map.current.getLayer('zones')) {
+          map.current.addLayer({
+          id: 'zones',
+          type: 'fill',
+          source: 'country-border',
+          'source-layer': 'zones',
+          paint: {
+            'fill-pattern': [
+              'case',
+              ['==', ['get', 'type'], 1], 'stripe-black',
+              ['==', ['get', 'type'], 2], 'stripe-white',
+              ['==', ['get', 'type'], 3], 'stripe-blue',
+              'stripe-red'
+            ],
+            'fill-opacity': 1.0
+          }
+          }, 'waterway_river')
+        }
+        
+        // Re-add border layer (only if it doesn't exist)
+        if (!map.current.getLayer('border')) {
+          map.current.addLayer({
+          id: 'border',
+          type: 'line',
+          source: 'country-border',
+          'source-layer': 'border',
+          paint: {
+            'line-color': [
+              'case',
+              ['any', ['==', ['get', 'is_open'], 2], ['==', ['get', 'is_open'], '2']], '#15803d',
+              ['any', ['==', ['get', 'is_open'], 1], ['==', ['get', 'is_open'], '1']], '#eab308',
+              ['any', ['==', ['get', 'is_open'], 3], ['==', ['get', 'is_open'], '3']], '#eab308',
+              ['any', ['==', ['get', 'is_open'], -1], ['==', ['get', 'is_open'], '-1']], '#9ca3af',
+              '#ef4444'
+            ],
+            'line-width': 2,
+            'line-opacity': 0.8
+          }
+          })
+        }
+        
+        // Re-add border post layer (only if it doesn't exist)
+        if (!map.current.getLayer('border_post')) {
+          map.current.addLayer({
+          id: 'border_post',
+          type: 'circle',
+          source: 'country-border',
+          'source-layer': 'border_post',
+          paint: {
+            'circle-color': [
+              'case',
+              ['==', ['get', 'is_open'], 1], '#3b82f6',
+              ['==', ['get', 'is_open'], 2], '#22c55e',
+              ['==', ['get', 'is_open'], 3], '#eab308',
+              '#ef4444'
+            ],
+            'circle-radius': 6,
+            'circle-stroke-width': 1.5,
+            'circle-stroke-color': '#ffffff'
+          }
+          })
+        }
+        
+        // Re-add highlight layers (only if they don't exist)
+        if (!map.current.getLayer('border-highlight')) {
+          map.current.addLayer({
+          id: 'border-highlight',
+          type: 'line',
+          source: 'country-border',
+          'source-layer': 'border',
+          paint: {
+            'line-color': '#ffffff',
+            'line-width': 4,
+            'line-opacity': 1.0
+          },
+          filter: ['==', ['get', 'id'], '']
+          })
+        }
+        
+        if (!map.current.getLayer('border-post-highlight')) {
+          map.current.addLayer({
+          id: 'border-post-highlight',
+          type: 'circle',
+          source: 'country-border',
+          'source-layer': 'border_post',
+          paint: {
+            'circle-color': '#ffffff',
+            'circle-radius': 12,
+            'circle-stroke-width': 3,
+            'circle-stroke-color': '#1e40af'
+          },
+          filter: ['==', ['get', 'id'], '']
+          })
+        }
+        
+          console.log('✅ Custom layers re-added')
+          
+          // Wait a tick for layers to be fully registered, then apply colors and visibility
+          setTimeout(() => {
+            if (map.current && map.current.getLayer('country')) {
+              console.log('🎨 Applying color scheme after layer re-add')
+              updateMapColors(colorScheme)
+              
+              // Apply border posts visibility based on current state
+              // Border posts are visible only in overlanding mode when the toggle is on
+              const visibility = (showBorderPosts && colorScheme === 'overlanding') ? 'visible' : 'none'
+              if (map.current.getLayer('border_post')) {
+                map.current.setLayoutProperty('border_post', 'visibility', visibility)
+              }
+              if (map.current.getLayer('border-post-highlight')) {
+                map.current.setLayoutProperty('border-post-highlight', 'visibility', visibility)
+              }
+              console.log(`👁️ Border posts visibility set to: ${visibility}`)
+            } else {
+              console.warn('⚠️ Country layer still not found after re-add')
+            }
+          }, 0)
+        } catch (error) {
+          console.error('❌ Error re-adding layers:', error)
+        }
       }
+      
+      map.current.once('styledata', handleStyleLoad)
+      map.current.setStyle(styleUrl)
+    } else {
+      // Just update colors for overlanding/carnet switch (no style reload needed)
+      console.log('🎨 Updating colors only (no style reload)')
+      updateMapColors(colorScheme)
     }
-  }, [updateMapColors, isLoaded, colorScheme, language])
+  }, [colorScheme, isLoaded, language, updateMapColors])
 
 
 
@@ -400,6 +618,10 @@ export default function SimpleMapContainer({
     console.log(`🌐 Language changed from ${previousLanguageRef.current} to ${language}`)
     previousLanguageRef.current = language
     
+    // Save current map position before reloading style
+    const currentCenter = map.current.getCenter()
+    const currentZoom = map.current.getZoom()
+    
     const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
     const supportedLanguages = ['en', 'fr', 'de', 'es', 'pt', 'it', 'nl', 'ru']
     
@@ -409,23 +631,40 @@ export default function SimpleMapContainer({
       const climateLangSuffix = supportedLanguages.includes(language) ? `-${language}` : '-en'
       const climateStyleUrl = `${basePath}/styles/climate${climateLangSuffix}.json`
       console.log('🌐 Reloading climate style for language change:', climateStyleUrl)
+      
+      // Restore position after style loads
+      map.current.once('style.load', () => {
+        if (map.current) {
+          map.current.setCenter(currentCenter)
+          map.current.setZoom(currentZoom)
+        }
+      })
       map.current.setStyle(climateStyleUrl)
     } else {
       // For overlanding/carnet, we need to reload basemap which will trigger re-adding layers
       const basemapLangSuffix = supportedLanguages.includes(language) && language !== 'en' ? `-${language}` : ''
       const styleUrl = `${basePath}/styles/basemap${basemapLangSuffix}.json`
       console.log('🌐 Reloading basemap style for language change:', styleUrl)
+      
+      // Restore position after style loads
+      map.current.once('style.load', () => {
+        if (map.current) {
+          map.current.setCenter(currentCenter)
+          map.current.setZoom(currentZoom)
+        }
+      })
       map.current.setStyle(styleUrl)
       
       // Note: The 'load' event handler will re-add all custom layers automatically
     }
   }, [language, isLoaded, colorScheme])
 
-  // Apply color scheme when map becomes loaded
+  // Apply color scheme when map becomes loaded (initial load only)
   useEffect(() => {
-    if (isLoaded && map.current) {
-      console.log(`🎨 Applying ${colorScheme} color scheme to loaded map`)
+    if (isLoaded && map.current && !initialColorsAppliedRef.current && colorScheme !== 'climate') {
+      console.log(`🎨 Applying ${colorScheme} color scheme to loaded map (initial load)`)
       updateMapColors(colorScheme)
+      initialColorsAppliedRef.current = true
     }
   }, [isLoaded, colorScheme, updateMapColors])
 
@@ -784,13 +1023,14 @@ export default function SimpleMapContainer({
 
     return () => {
       if (map.current) {
-        console.log('🧹 Cleaning up simple map for language change')
+        console.log('🧹 Cleaning up simple map on unmount')
         map.current.remove()
         map.current = null
         setIsLoaded(false)
       }
     }
-  }, [language, clearAllHighlights, generateOverlandingColorExpression, handleMapClick, highlightBorder, highlightBorderPost, highlightCountry, onMapReady, zoomToLocation])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   if (error) {
     return (
@@ -827,7 +1067,7 @@ export default function SimpleMapContainer({
           <div className="mb-4">
             <div className="flex space-x-1 mb-3">
               <button
-                onClick={() => handleColorSchemeChange('overlanding')}
+                onClick={() => setColorScheme('overlanding')}
                 className={`px-3 py-1 text-xs rounded transition-colors ${colorScheme === 'overlanding'
                   ? 'bg-blue-600 text-white'
                   : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -836,7 +1076,7 @@ export default function SimpleMapContainer({
                 {getTranslatedLabel('overlanding', language)}
               </button>
               <button
-                onClick={() => handleColorSchemeChange('carnet')}
+                onClick={() => setColorScheme('carnet')}
                 className={`px-3 py-1 text-xs rounded transition-colors ${colorScheme === 'carnet'
                   ? 'bg-blue-600 text-white'
                   : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -845,7 +1085,7 @@ export default function SimpleMapContainer({
                 {getTranslatedLabel('carnet', language)}
               </button>
               <button
-                onClick={() => handleColorSchemeChange('climate')}
+                onClick={() => setColorScheme('climate')}
                 className={`px-3 py-1 text-xs rounded transition-colors ${colorScheme === 'climate'
                   ? 'bg-blue-600 text-white'
                   : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
