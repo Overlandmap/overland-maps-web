@@ -990,9 +990,9 @@ export default function DetailSidebar({
       case 1:
         return { label: getTranslatedLabel('zone_guide_escort', language), color: 'bg-gray-900 text-white' }
       case 2:
-        return { label: getTranslatedLabel('zone_permit', language), color: 'bg-gray-100 text-gray-800' }
+        return { label: getTranslatedLabel('zone_permit', language), color: 'bg-blue-100 text-blue-800' }
       case 3:
-        return { label: getTranslatedLabel('zone_restrictions', language), color: 'bg-blue-100 text-blue-800' }
+        return { label: getTranslatedLabel('zone_restrictions', language), color: 'bg-gray-100 text-gray-800' }
       default:
         return { label: getTranslatedLabel('unknown', language), color: 'bg-gray-100 text-gray-800' }
     }
@@ -1002,8 +1002,22 @@ export default function DetailSidebar({
    * Render zone information (read-only)
    */
   const renderZoneDetails = (zoneData: any, feature: any) => {
-    const properties = feature?.properties || zoneData || {}
+    // Merge zoneData with feature properties, prioritizing zoneData for fields like comment
+    const properties = {
+      ...zoneData,
+      ...feature?.properties,
+      // Preserve important fields from zoneData if not in feature
+      comment: feature?.properties?.comment || zoneData?.comment,
+      description: feature?.properties?.description || zoneData?.description
+    }
     const zoneType = getZoneTypeLabel(properties.type ?? 0)
+    
+    console.log('🔍 Rendering zone details:', { 
+      hasComment: !!properties.comment, 
+      comment: properties.comment,
+      fromZoneData: zoneData?.comment,
+      fromFeature: feature?.properties?.comment 
+    })
     
     return (
       <div className="space-y-6">

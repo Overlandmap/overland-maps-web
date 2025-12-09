@@ -192,17 +192,30 @@ export default function WorldMapApp({ initialCountry, initialBorder, initialBord
       }
       
       // Merge feature properties with loaded data
-      const completeData = {
+      // Start with loaded data and its properties
+      const baseData = {
         ...data,
-        id: zoneId,
-        name: feature?.properties?.name || data?.name || 'Unnamed Zone',
-        type: feature?.properties?.type ?? data?.type ?? 0,
-        comment: feature?.properties?.comment || data?.comment,
-        country: feature?.properties?.country || data?.country,
-        description: feature?.properties?.description || data?.description,
-        geometry: feature?.geometry,
-        ...feature?.properties
+        ...data?.properties
       }
+      
+      // Build complete data with proper fallbacks
+      const completeData = {
+        ...baseData,
+        id: zoneId,
+        name: feature?.properties?.name || baseData?.name || 'Unnamed Zone',
+        type: feature?.properties?.type ?? baseData?.type ?? 0,
+        comment: feature?.properties?.comment || baseData?.comment, // Preserve comment from loaded data
+        country: feature?.properties?.country || baseData?.country,
+        description: feature?.properties?.description || baseData?.description,
+        geometry: feature?.geometry
+      }
+      
+      console.log('🔍 Zone data merged:', { 
+        hasComment: !!completeData.comment, 
+        comment: completeData.comment,
+        fromData: baseData?.comment,
+        fromFeature: feature?.properties?.comment 
+      })
       
       // Show detail sidebar
       setSelectedFeature({

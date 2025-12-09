@@ -419,36 +419,63 @@ export default function SimpleMapContainer({
           // Re-add all custom layers that were in the basemap
           console.log('🔄 Re-adding custom layers after style switch')
         
-        // Re-create stripe patterns
-        const createStripePattern = (color: string) => {
-          const width = 1
-          const height = 12
+        // Re-create diagonal stripe patterns with different colors
+        const createDiagonalPattern = (color: string) => {
           const canvas = document.createElement('canvas')
-          canvas.width = width
-          canvas.height = height
+          const size = 16
+          canvas.width = size
+          canvas.height = size
           const ctx = canvas.getContext('2d')
           
           if (ctx) {
-            ctx.clearRect(0, 0, width, height)
-            ctx.fillStyle = color
-            ctx.fillRect(0, 0, width, 4)
-            ctx.fillStyle = 'rgba(255, 255, 255, 0.5)'
-            ctx.fillRect(0, 4, width, 8)
-            return ctx.getImageData(0, 0, width, height)
+            // Clear background (transparent)
+            ctx.clearRect(0, 0, size, size)
+            
+            // Draw diagonal stripes with the specified color
+            ctx.strokeStyle = color
+            ctx.lineWidth = 3
+            
+            // Draw multiple diagonal lines to create stripe pattern
+            ctx.beginPath()
+            ctx.moveTo(0, size)
+            ctx.lineTo(size, 0)
+            ctx.stroke()
+            
+            ctx.beginPath()
+            ctx.moveTo(-size/2, size/2)
+            ctx.lineTo(size/2, -size/2)
+            ctx.stroke()
+            
+            ctx.beginPath()
+            ctx.moveTo(size/2, size * 1.5)
+            ctx.lineTo(size * 1.5, size/2)
+            ctx.stroke()
+            
+            return ctx.getImageData(0, 0, size, size)
           }
           return null
         }
         
-        const redStripe = createStripePattern('#ef4444')
-        const blackStripe = createStripePattern('#000000')
-        const whiteStripe = createStripePattern('#ffffff')
-        const blueStripe = createStripePattern('#3b82f6')
+        // Add all colored stripe patterns
+        const redPattern = createDiagonalPattern('rgba(239, 68, 68, 1)')
+        if (redPattern && !map.current.hasImage('diagonal-stripe-red')) {
+          map.current.addImage('diagonal-stripe-red', redPattern)
+        }
         
-        // Only add images if they don't already exist
-        if (redStripe && !map.current.hasImage('stripe-red')) map.current.addImage('stripe-red', redStripe)
-        if (blackStripe && !map.current.hasImage('stripe-black')) map.current.addImage('stripe-black', blackStripe)
-        if (whiteStripe && !map.current.hasImage('stripe-white')) map.current.addImage('stripe-white', whiteStripe)
-        if (blueStripe && !map.current.hasImage('stripe-blue')) map.current.addImage('stripe-blue', blueStripe)
+        const blackPattern = createDiagonalPattern('rgba(0, 0, 0, 0.8)')
+        if (blackPattern && !map.current.hasImage('diagonal-stripe-black')) {
+          map.current.addImage('diagonal-stripe-black', blackPattern)
+        }
+        
+        const greyPattern = createDiagonalPattern('rgba(156, 163, 175, 1)')
+        if (greyPattern && !map.current.hasImage('diagonal-stripe-grey')) {
+          map.current.addImage('diagonal-stripe-grey', greyPattern)
+        }
+        
+        const bluePattern = createDiagonalPattern('rgba(6, 92, 230, 1)')
+        if (bluePattern && !map.current.hasImage('diagonal-stripe-blue')) {
+          map.current.addImage('diagonal-stripe-blue', bluePattern)
+        }
         
         // Re-add country-border source (only if it doesn't exist)
         if (!map.current.getSource('country-border')) {
@@ -458,7 +485,7 @@ export default function SimpleMapContainer({
           })
         }
         
-        // Re-add country layer (only if it doesn't exist)
+        // Re-add country layer (only if it doesn't exist) - insert before waterway_river
         if (!map.current.getLayer('country')) {
           map.current.addLayer({
           id: 'country',
@@ -469,10 +496,10 @@ export default function SimpleMapContainer({
             'fill-color': generateOverlandingColorExpression() as any,
             'fill-opacity': 0.6
           }
-          })
+          }, 'waterway_river')
         }
         
-        // Re-add zones layer (only if it doesn't exist)
+        // Re-add zones layer (only if it doesn't exist) - above countries, before waterway
         if (!map.current.getLayer('zones')) {
           map.current.addLayer({
           id: 'zones',
@@ -480,16 +507,27 @@ export default function SimpleMapContainer({
           source: 'country-border',
           'source-layer': 'zones',
           paint: {
+            // Background color based on zone type
+            'fill-color': [
+              'case',
+              ['==', ['get', 'type'], 0], '#ef4444', // Closed - red
+              ['==', ['get', 'type'], 1], '#000000', // Guide/Escort - black
+              ['==', ['get', 'type'], 2], '#9ca3af', // Permit - grey
+              ['==', ['get', 'type'], 3], '#3b82f6', // Restrictions - blue
+              '#9ca3af' // Default - grey
+            ],
+            // Pattern based on zone type
             'fill-pattern': [
               'case',
-              ['==', ['get', 'type'], 1], 'stripe-black',
-              ['==', ['get', 'type'], 2], 'stripe-white',
-              ['==', ['get', 'type'], 3], 'stripe-blue',
-              'stripe-red'
+              ['==', ['get', 'type'], 0], 'diagonal-stripe-red',
+              ['==', ['get', 'type'], 1], 'diagonal-stripe-black',
+              ['==', ['get', 'type'], 2], 'diagonal-stripe-grey',
+              ['==', ['get', 'type'], 3], 'diagonal-stripe-blue',
+              'diagonal-stripe-grey' // Default
             ],
-            'fill-opacity': 1.0
+            'fill-opacity': 0.7
           }
-          }, 'waterway_river')
+          })
         }
         
         // Re-add border layer (only if it doesn't exist)
@@ -814,48 +852,71 @@ export default function SimpleMapContainer({
 
         // Add country-border source from PMTiles
         if (map.current) {
-          // Create horizontal stripe patterns for zones
-          const createStripePattern = (color: string) => {
-            const width = 1 // Pattern width (minimal for tiling)
-            const height = 12 // Pattern height (4px colored + 8px semi-transparent white)
+          // Create diagonal stripe patterns for zones with different colors
+          const createDiagonalPattern = (color: string) => {
             const canvas = document.createElement('canvas')
-            canvas.width = width
-            canvas.height = height
+            const size = 16
+            canvas.width = size
+            canvas.height = size
             const ctx = canvas.getContext('2d')
             
             if (ctx) {
-              // Fill with transparent background
-              ctx.clearRect(0, 0, width, height)
+              // Clear background (transparent)
+              ctx.clearRect(0, 0, size, size)
               
-              // Draw horizontal stripe (colored part at top) - narrower
-              ctx.fillStyle = color
-              ctx.fillRect(0, 0, width, 4) // 4px colored stripe (narrower)
+              // Draw diagonal stripes with the specified color
+              ctx.strokeStyle = color
+              ctx.lineWidth = 3
               
-              // Draw semi-transparent white for the gap (50% opacity)
-              ctx.fillStyle = 'rgba(255, 255, 255, 0.5)'
-              ctx.fillRect(0, 4, width, 8) // 8px semi-transparent white (1:2 ratio)
+              // Draw multiple diagonal lines to create stripe pattern
+              ctx.beginPath()
+              ctx.moveTo(0, size)
+              ctx.lineTo(size, 0)
+              ctx.stroke()
               
-              // Return ImageData
-              return ctx.getImageData(0, 0, width, height)
+              ctx.beginPath()
+              ctx.moveTo(-size/2, size/2)
+              ctx.lineTo(size/2, -size/2)
+              ctx.stroke()
+              
+              ctx.beginPath()
+              ctx.moveTo(size/2, size * 1.5)
+              ctx.lineTo(size * 1.5, size/2)
+              ctx.stroke()
+              
+              return ctx.getImageData(0, 0, size, size)
             }
-            
             return null
           }
 
           // Skip adding layers if in climate mode - climate.json style handles everything
           if (colorScheme !== 'climate') {
-            // Add stripe patterns as images
-            const redStripe = createStripePattern('#ef4444')      // Type 0: Red - Closed
-            const blackStripe = createStripePattern('#000000')    // Type 1: Black - Guide/Escort Needed
-            const whiteStripe = createStripePattern('#ffffff')    // Type 2: White - Permit Needed
-            const blueStripe = createStripePattern('#3b82f6')     // Type 3: Blue - Restrictions apply
+            // Add diagonal stripe patterns for each zone type
+            // Type 0: Closed - Red stripes
+            const redPattern = createDiagonalPattern('rgba(239, 68, 68, 1)')
+            if (redPattern && !map.current.hasImage('diagonal-stripe-red')) {
+              map.current.addImage('diagonal-stripe-red', redPattern)
+            }
+            
+            // Type 1: Guide/Escort - Black stripes
+            const blackPattern = createDiagonalPattern('rgba(0, 0, 0, 1)')
+            if (blackPattern && !map.current.hasImage('diagonal-stripe-black')) {
+              map.current.addImage('diagonal-stripe-black', blackPattern)
+            }
+            
+            // Type 2: Permit - Grey stripes
+            const greyPattern = createDiagonalPattern('rgba(156, 163, 175, 1)')
+            if (greyPattern && !map.current.hasImage('diagonal-stripe-grey')) {
+              map.current.addImage('diagonal-stripe-grey', greyPattern)
+            }
+            
+            // Type 3: Restrictions - Blue stripes
+            const bluePattern = createDiagonalPattern('rgba(59, 130, 246, 1)')
+            if (bluePattern && !map.current.hasImage('diagonal-stripe-blue')) {
+              map.current.addImage('diagonal-stripe-blue', bluePattern)
+            }
 
-            if (redStripe) map.current.addImage('stripe-red', redStripe)
-            if (blackStripe) map.current.addImage('stripe-black', blackStripe)
-            if (whiteStripe) map.current.addImage('stripe-white', whiteStripe)
-            if (blueStripe) map.current.addImage('stripe-blue', blueStripe)
-
-            console.log('✅ Stripe patterns created')
+            console.log('✅ Colored stripe patterns created (red, black, grey, blue)')
 
             console.log('➕ Adding country-border source')
             map.current.addSource('country-border', {
@@ -863,7 +924,7 @@ export default function SimpleMapContainer({
               url: 'pmtiles://https://overlanding.io/country-borders.pmtiles'
             })
 
-          // Add country layer (bottom layer)
+          // Add country layer (bottom layer) - insert before waterway_river
           map.current.addLayer({
             id: 'country',
             type: 'fill',
@@ -873,25 +934,51 @@ export default function SimpleMapContainer({
               'fill-color': generateOverlandingColorExpression() as any,
               'fill-opacity': 0.6
             }
-          })
+          }, 'waterway_river')
 
-          // Add zones layer (restricted areas) with diagonal stripe patterns - above countries
+          // Add zones layer (restricted areas) with color-coded diagonal stripe patterns - above countries, before waterway
           map.current.addLayer({
             id: 'zones',
             type: 'fill',
             source: 'country-border',
             'source-layer': 'zones',
             paint: {
+              // Background color based on zone type
+              'fill-color': [
+                'case',
+                ['==', ['get', 'type'], 0], '#ef4444', // Closed - red
+                ['==', ['get', 'type'], 1], '#000000', // Guide/Escort - black
+                ['==', ['get', 'type'], 2], '#9ca3af', // Permit - grey
+                ['==', ['get', 'type'], 3], '#3b82f6', // Restrictions - blue
+                '#9ca3af' // Default - grey
+              ],
+              // Pattern based on zone type
               'fill-pattern': [
                 'case',
-                ['==', ['get', 'type'], 1], 'stripe-black',   // Type 1: Black - Guide/Escort Needed
-                ['==', ['get', 'type'], 2], 'stripe-white',   // Type 2: White - Permit Needed
-                ['==', ['get', 'type'], 3], 'stripe-blue',    // Type 3: Blue - Restrictions apply
-                'stripe-red'  // Type 0: Red - Closed (default)
+                ['==', ['get', 'type'], 0], 'diagonal-stripe-red',
+                ['==', ['get', 'type'], 1], 'diagonal-stripe-black',
+                ['==', ['get', 'type'], 2], 'diagonal-stripe-blue',
+                ['==', ['get', 'type'], 3], 'diagonal-stripe-grey',
+                'diagonal-stripe-grey' // Default
               ],
-              'fill-opacity': 1.0
+              'fill-opacity': 0.7
             }
           }, 'waterway_river')
+          
+          console.log('✅ Zones layer added with diagonal stripe pattern')
+          
+          // Debug: Check if zones layer has features
+          setTimeout(() => {
+            if (map.current) {
+              const features = map.current.querySourceFeatures('country-border', {
+                sourceLayer: 'zones'
+              })
+              console.log('🔍 Zones features found:', features.length)
+              if (features.length > 0) {
+                console.log('🔍 Sample zone feature:', features[0])
+              }
+            }
+          }, 2000)
 
           // Add border layer (middle layer)
           map.current.addLayer({
@@ -1342,15 +1429,15 @@ export default function SimpleMapContainer({
                   </div>
                   <div className="flex items-center space-x-2">
                     <div className="w-3 h-3 rounded-sm" style={{ 
-                      background: 'repeating-linear-gradient(45deg, #9ca3af, #9ca3af 2px, rgba(255,255,255,0.5) 2px, rgba(255,255,255,0.5) 4px)',
-                      border: '1px solid #9ca3af'
+                      background: 'repeating-linear-gradient(45deg, #3b82f6, #3b82f6 2px, rgba(255,255,255,0.5) 2px, rgba(255,255,255,0.5) 4px)',
+                      border: '1px solid #3b82f6'
                     }}></div>
                     <span className="text-gray-700">{getTranslatedLabel('zone_permit', language)}</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <div className="w-3 h-3 rounded-sm" style={{ 
-                      background: 'repeating-linear-gradient(45deg, #3b82f6, #3b82f6 2px, rgba(255,255,255,0.5) 2px, rgba(255,255,255,0.5) 4px)',
-                      border: '1px solid #3b82f6'
+                      background: 'repeating-linear-gradient(45deg, #9ca3af, #9ca3af 2px, rgba(255,255,255,0.5) 2px, rgba(255,255,255,0.5) 4px)',
+                      border: '1px solid #9ca3af'
                     }}></div>
                     <span className="text-gray-700">{getTranslatedLabel('zone_restrictions', language)}</span>
                   </div>
