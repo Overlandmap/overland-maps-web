@@ -50,6 +50,7 @@ export default function SimpleMapContainer({
   const [showBorderPosts, setShowBorderPosts] = useState(true)
   const [selectedMonth, setSelectedMonth] = useState<number>(0) // 0 = January, 11 = December
   const [climateDataType, setClimateDataType] = useState<'temperature' | 'precipitation'>('temperature')
+  const [showLegend, setShowLegend] = useState(false) // Will be set based on screen size
 
   // Store selected country ID in a ref for paint property updates
   const selectedCountryIdRef = useRef<string | null>(null)
@@ -61,6 +62,8 @@ export default function SimpleMapContainer({
   const previousLanguageRef = useRef<string>(language)
   // Track if initial colors have been applied
   const initialColorsAppliedRef = useRef<boolean>(false)
+  // Track if initial legend visibility has been set
+  const initialLegendSetRef = useRef<boolean>(false)
 
   // Clear all highlights function
   const clearAllHighlights = useCallback(() => {
@@ -908,6 +911,28 @@ export default function SimpleMapContainer({
     }
   }, [colorScheme, isLoaded])
 
+  // Set initial legend visibility based on screen size
+  useEffect(() => {
+    if (initialLegendSetRef.current) return
+    
+    const checkScreenSize = () => {
+      // Show legend on desktop/tablet (768px and above), hide on mobile
+      const isDesktopOrTablet = window.innerWidth >= 768
+      setShowLegend(isDesktopOrTablet)
+      initialLegendSetRef.current = true
+    }
+    
+    // Check immediately
+    checkScreenSize()
+    
+    // Also listen for resize events in case the user rotates their device
+    window.addEventListener('resize', checkScreenSize)
+    
+    return () => {
+      window.removeEventListener('resize', checkScreenSize)
+    }
+  }, [])
+
   useEffect(() => {
     if (!mapContainer.current || map.current) return
 
@@ -1338,8 +1363,31 @@ export default function SimpleMapContainer({
         <TopMenu />
       </div>
 
-      <div className="absolute top-4 left-4 bg-white bg-opacity-95 rounded-lg shadow-lg z-10 max-w-xs">
-        <div className="p-3">
+      {/* Legend Toggle Button */}
+      <button
+        onClick={() => setShowLegend(!showLegend)}
+        className="absolute top-4 left-4 bg-white bg-opacity-95 rounded-lg shadow-lg z-20 p-2 hover:bg-opacity-100 transition-all"
+        title={showLegend ? "Hide Legend" : "Show Legend"}
+      >
+        <svg 
+          className="w-5 h-5 text-gray-700" 
+          fill="none" 
+          stroke="currentColor" 
+          viewBox="0 0 24 24"
+        >
+          <path 
+            strokeLinecap="round" 
+            strokeLinejoin="round" 
+            strokeWidth={2} 
+            d="M4 6h16M4 12h16M4 18h16" 
+          />
+        </svg>
+      </button>
+
+      {/* Legend Panel */}
+      {showLegend && (
+        <div className="absolute top-4 left-16 bg-white bg-opacity-95 rounded-lg shadow-lg z-10 max-w-xs">
+          <div className="p-3">
           {/* Color Scheme Selector */}
           <div className="mb-4">
             <div className="flex space-x-1 mb-3">
@@ -1635,8 +1683,9 @@ export default function SimpleMapContainer({
               </div>
             </>
           )}
+          </div>
         </div>
-      </div>
+      )}
     </div>
   )
 }
