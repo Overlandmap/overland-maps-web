@@ -8,6 +8,7 @@ import { useLanguage } from '../contexts/LanguageContext'
 import { ColorSchemeProvider } from '../contexts/ColorSchemeContext'
 import SimpleMapContainer from './SimpleMapContainer'
 import DetailSidebar from './DetailSidebar'
+import DisclaimerPopup from './DisclaimerPopup'
 import { generateEntityUrl } from '../lib/url-utils'
 
 interface SelectedFeature {
@@ -39,6 +40,21 @@ export default function WorldMapApp({ initialCountry, initialBorder, initialBord
   const [mapInteractions, setMapInteractions] = useState<any>(null)
   const [isHandlingPopState, setIsHandlingPopState] = useState(false)
   const [hasHandledInitialSelection, setHasHandledInitialSelection] = useState(false)
+  const [showDisclaimer, setShowDisclaimer] = useState(false)
+
+  // Check if disclaimer has been shown before
+  useEffect(() => {
+    const disclaimerShown = localStorage.getItem('disclaimer-accepted')
+    if (!disclaimerShown) {
+      setShowDisclaimer(true)
+    }
+  }, [])
+
+  // Handle disclaimer acceptance
+  const handleDisclaimerAccept = useCallback(() => {
+    localStorage.setItem('disclaimer-accepted', 'true')
+    setShowDisclaimer(false)
+  }, [])
 
   /**
    * Initialize the application
@@ -593,6 +609,12 @@ export default function WorldMapApp({ initialCountry, initialBorder, initialBord
           onBorderClick={handleBorderClick}
           onBorderPostClick={handleBorderPostClick}
           onBorderPostZoom={handleBorderPostZoom}
+        />
+
+        {/* Disclaimer Popup */}
+        <DisclaimerPopup
+          isOpen={showDisclaimer}
+          onAccept={handleDisclaimerAccept}
         />
       </div>
     </ColorSchemeProvider>

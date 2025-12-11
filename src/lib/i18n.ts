@@ -450,7 +450,12 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'zone_closed': 'Closed',
     'zone_guide_escort': 'Guide/Escort Needed',
     'zone_permit': 'Permit Needed',
-    'zone_restrictions': 'Restrictions apply'
+    'zone_restrictions': 'Restrictions apply',
+    'disclaimer_title': 'Travel Disclaimer & Privacy Notice',
+    'disclaimer_message': 'The information provided on this website is for general guidance only. While we make every effort to ensure that the content is accurate, complete, and up to date, we cannot guarantee its correctness or current validity. Travel conditions, visa requirements, and border regulations can change at any time without notice. You are responsible for verifying all information with official sources and for exercising your own judgment when making travel decisions. All travel is undertaken at your own risk.',
+    'gdpr_title': 'Privacy & Data Protection',
+    'gdpr_message': 'We use essential cookies and local storage to improve your experience and remember your preferences (such as language settings). We do not collect personal data or use tracking cookies. By continuing to use this site, you consent to our use of essential cookies and local storage.',
+    'disclaimer_accept': 'Accept & Continue'
   },
   de: {
     'overlanding': 'Overlanding',
@@ -485,7 +490,12 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'zone_closed': 'Geschlossen',
     'zone_guide_escort': 'Führer/Begleitung erforderlich',
     'zone_permit': 'Genehmigung erforderlich',
-    'zone_restrictions': 'Einschränkungen gelten'
+    'zone_restrictions': 'Einschränkungen gelten',
+    'disclaimer_title': 'Reise-Haftungsausschluss & Datenschutzhinweis',
+    'disclaimer_message': 'Die auf dieser Website bereitgestellten Informationen dienen nur der allgemeinen Orientierung. Obwohl wir uns bemühen sicherzustellen, dass der Inhalt genau, vollständig und aktuell ist, können wir seine Richtigkeit oder aktuelle Gültigkeit nicht garantieren. Reisebedingungen, Visa-Anforderungen und Grenzbestimmungen können sich jederzeit ohne Vorankündigung ändern. Sie sind dafür verantwortlich, alle Informationen bei offiziellen Quellen zu überprüfen und Ihr eigenes Urteilsvermögen bei Reiseentscheidungen zu verwenden. Alle Reisen erfolgen auf eigenes Risiko.',
+    'gdpr_title': 'Datenschutz & Datenschutz',
+    'gdpr_message': 'Wir verwenden wesentliche Cookies und lokale Speicherung, um Ihre Erfahrung zu verbessern und Ihre Einstellungen (wie Spracheinstellungen) zu speichern. Wir sammeln keine persönlichen Daten und verwenden keine Tracking-Cookies. Durch die weitere Nutzung dieser Website stimmen Sie unserer Verwendung von wesentlichen Cookies und lokaler Speicherung zu.',
+    'disclaimer_accept': 'Akzeptieren & Fortfahren'
   },
   es: {
     'overlanding': 'Overlanding',
@@ -520,7 +530,12 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'zone_closed': 'Cerrado',
     'zone_guide_escort': 'Guía/Escolta necesario',
     'zone_permit': 'Permiso necesario',
-    'zone_restrictions': 'Se aplican restricciones'
+    'zone_restrictions': 'Se aplican restricciones',
+    'disclaimer_title': 'Descargo de Responsabilidad de Viaje y Aviso de Privacidad',
+    'disclaimer_message': 'La información proporcionada en este sitio web es solo para orientación general. Aunque hacemos todo lo posible para asegurar que el contenido sea preciso, completo y actualizado, no podemos garantizar su exactitud o validez actual. Las condiciones de viaje, requisitos de visa y regulaciones fronterizas pueden cambiar en cualquier momento sin previo aviso. Usted es responsable de verificar toda la información con fuentes oficiales y de ejercer su propio juicio al tomar decisiones de viaje. Todo viaje se realiza bajo su propio riesgo.',
+    'gdpr_title': 'Privacidad y Protección de Datos',
+    'gdpr_message': 'Utilizamos cookies esenciales y almacenamiento local para mejorar su experiencia y recordar sus preferencias (como la configuración de idioma). No recopilamos datos personales ni utilizamos cookies de seguimiento. Al continuar usando este sitio, usted consiente nuestro uso de cookies esenciales y almacenamiento local.',
+    'disclaimer_accept': 'Aceptar y Continuar'
   },
   fr: {
     'overlanding': 'Overlanding',
@@ -555,7 +570,12 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'zone_closed': 'Fermé',
     'zone_guide_escort': 'Guide/Escorte nécessaire',
     'zone_permit': 'Permis nécessaire',
-    'zone_restrictions': 'Restrictions applicables'
+    'zone_restrictions': 'Restrictions applicables',
+    'disclaimer_title': 'Avertissement de Voyage et Avis de Confidentialité',
+    'disclaimer_message': 'Les informations fournies sur ce site web sont uniquement à des fins d\'orientation générale. Bien que nous fassions tous les efforts pour nous assurer que le contenu soit précis, complet et à jour, nous ne pouvons garantir son exactitude ou sa validité actuelle. Les conditions de voyage, les exigences de visa et les réglementations frontalières peuvent changer à tout moment sans préavis. Vous êtes responsable de vérifier toutes les informations auprès de sources officielles et d\'exercer votre propre jugement lors de la prise de décisions de voyage. Tous les voyages sont entrepris à vos propres risques.',
+    'gdpr_title': 'Confidentialité et Protection des Données',
+    'gdpr_message': 'Nous utilisons des cookies essentiels et le stockage local pour améliorer votre expérience et mémoriser vos préférences (comme les paramètres de langue). Nous ne collectons pas de données personnelles et n\'utilisons pas de cookies de suivi. En continuant à utiliser ce site, vous consentez à notre utilisation de cookies essentiels et du stockage local.',
+    'disclaimer_accept': 'Accepter et Continuer'
   },
   it: {
     'overlanding': 'Overlanding',
@@ -590,7 +610,12 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'zone_closed': 'Chiuso',
     'zone_guide_escort': 'Guida/Scorta necessaria',
     'zone_permit': 'Permesso necessario',
-    'zone_restrictions': 'Si applicano restrizioni'
+    'zone_restrictions': 'Si applicano restrizioni',
+    'disclaimer_title': 'Disclaimer di Viaggio e Informativa sulla Privacy',
+    'disclaimer_message': 'Le informazioni fornite su questo sito web sono solo per orientamento generale. Sebbene facciamo ogni sforzo per assicurare che il contenuto sia accurato, completo e aggiornato, non possiamo garantire la sua correttezza o validità attuale. Le condizioni di viaggio, i requisiti per i visti e le normative di frontiera possono cambiare in qualsiasi momento senza preavviso. Sei responsabile di verificare tutte le informazioni con fonti ufficiali e di esercitare il tuo giudizio quando prendi decisioni di viaggio. Tutti i viaggi sono intrapresi a tuo rischio.',
+    'gdpr_title': 'Privacy e Protezione dei Dati',
+    'gdpr_message': 'Utilizziamo cookie essenziali e archiviazione locale per migliorare la tua esperienza e ricordare le tue preferenze (come le impostazioni della lingua). Non raccogliamo dati personali né utilizziamo cookie di tracciamento. Continuando a utilizzare questo sito, acconsenti al nostro uso di cookie essenziali e archiviazione locale.',
+    'disclaimer_accept': 'Accetta e Continua'
   },
   ja: {
     'overlanding': 'オーバーランディング',
@@ -625,7 +650,12 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'zone_closed': '閉鎖',
     'zone_guide_escort': 'ガイド/エスコート必要',
     'zone_permit': '許可証必要',
-    'zone_restrictions': '制限が適用されます'
+    'zone_restrictions': '制限が適用されます',
+    'disclaimer_title': '旅行免責事項とプライバシー通知',
+    'disclaimer_message': 'このウェブサイトで提供される情報は、一般的なガイダンスのみを目的としています。コンテンツが正確で完全かつ最新であることを確保するためにあらゆる努力をしていますが、その正確性や現在の有効性を保証することはできません。旅行条件、ビザ要件、国境規制は予告なくいつでも変更される可能性があります。すべての情報を公式ソースで確認し、旅行の決定を行う際には自分の判断を行使する責任があります。すべての旅行は自己責任で行われます。',
+    'gdpr_title': 'プライバシーとデータ保護',
+    'gdpr_message': '私たちは、あなたの体験を向上させ、設定（言語設定など）を記憶するために、必須のクッキーとローカルストレージを使用しています。個人データは収集せず、トラッキングクッキーは使用していません。このサイトを継続して使用することで、必須のクッキーとローカルストレージの使用に同意したものとみなされます。',
+    'disclaimer_accept': '同意して続行'
   },
   nl: {
     'overlanding': 'Overlanding',
@@ -660,7 +690,12 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'zone_closed': 'Gesloten',
     'zone_guide_escort': 'Gids/Begeleiding vereist',
     'zone_permit': 'Vergunning vereist',
-    'zone_restrictions': 'Beperkingen van toepassing'
+    'zone_restrictions': 'Beperkingen van toepassing',
+    'disclaimer_title': 'Reis Disclaimer & Privacyverklaring',
+    'disclaimer_message': 'De informatie op deze website is alleen bedoeld voor algemene begeleiding. Hoewel we er alles aan doen om ervoor te zorgen dat de inhoud accuraat, compleet en up-to-date is, kunnen we de juistheid of huidige geldigheid ervan niet garanderen. Reisomstandigheden, visumvereisten en grensreglementen kunnen op elk moment zonder kennisgeving veranderen. U bent verantwoordelijk voor het verifiëren van alle informatie bij officiële bronnen en voor het gebruiken van uw eigen oordeel bij het nemen van reisbeslissingen. Alle reizen worden ondernomen op eigen risico.',
+    'gdpr_title': 'Privacy & Gegevensbescherming',
+    'gdpr_message': 'We gebruiken essentiële cookies en lokale opslag om uw ervaring te verbeteren en uw voorkeuren (zoals taalinstellingen) te onthouden. We verzamelen geen persoonlijke gegevens en gebruiken geen tracking cookies. Door deze site te blijven gebruiken, stemt u in met ons gebruik van essentiële cookies en lokale opslag.',
+    'disclaimer_accept': 'Accepteren & Doorgaan'
   },
   ru: {
     'overlanding': 'Оверлендинг',
@@ -695,7 +730,12 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'zone_closed': 'Закрыто',
     'zone_guide_escort': 'Требуется гид/сопровождение',
     'zone_permit': 'Требуется разрешение',
-    'zone_restrictions': 'Применяются ограничения'
+    'zone_restrictions': 'Применяются ограничения',
+    'disclaimer_title': 'Отказ от ответственности за путешествие и Уведомление о конфиденциальности',
+    'disclaimer_message': 'Информация, представленная на этом веб-сайте, предназначена только для общего руководства. Хотя мы прилагаем все усилия для обеспечения точности, полноты и актуальности контента, мы не можем гарантировать его правильность или текущую действительность. Условия путешествий, визовые требования и пограничные правила могут измениться в любое время без предварительного уведомления. Вы несете ответственность за проверку всей информации в официальных источниках и за использование собственного суждения при принятии решений о путешествиях. Все путешествия предпринимаются на ваш собственный риск.',
+    'gdpr_title': 'Конфиденциальность и Защита данных',
+    'gdpr_message': 'Мы используем необходимые файлы cookie и локальное хранилище для улучшения вашего опыта и запоминания ваших предпочтений (таких как языковые настройки). Мы не собираем личные данные и не используем отслеживающие файлы cookie. Продолжая использовать этот сайт, вы соглашаетесь на наше использование необходимых файлов cookie и локального хранилища.',
+    'disclaimer_accept': 'Принять и Продолжить'
   },
   zh: {
     'overlanding': '越野旅行',
@@ -730,7 +770,12 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'zone_closed': '关闭',
     'zone_guide_escort': '需要向导/护送',
     'zone_permit': '需要许可证',
-    'zone_restrictions': '适用限制'
+    'zone_restrictions': '适用限制',
+    'disclaimer_title': '旅行免责声明和隐私声明',
+    'disclaimer_message': '本网站提供的信息仅供一般指导。虽然我们尽一切努力确保内容准确、完整和最新，但我们不能保证其正确性或当前有效性。旅行条件、签证要求和边境法规可能随时更改，恕不另行通知。您有责任通过官方渠道核实所有信息，并在做出旅行决定时运用自己的判断。所有旅行均由您自担风险。',
+    'gdpr_title': '隐私和数据保护',
+    'gdpr_message': '我们使用必要的cookie和本地存储来改善您的体验并记住您的偏好（如语言设置）。我们不收集个人数据，也不使用跟踪cookie。继续使用本网站即表示您同意我们使用必要的cookie和本地存储。',
+    'disclaimer_accept': '接受并继续'
   }
 }
 
