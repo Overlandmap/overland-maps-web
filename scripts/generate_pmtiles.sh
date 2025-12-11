@@ -10,7 +10,7 @@ npm run merge-countries-geojson
 rm -f b.pmtiles bp.pmtiles c.pmtiles country-borders.pmtiles
 tippecanoe -z6 -o b.pmtiles -l border -x geomstring -x geomtype --force public/data/borders.geojson 
 tippecanoe -z6 -o bp.pmtiles -l border_post -x location -x countries -Bg --force public/data/border-posts.geojson
-tippecanoe -z4 -o c.pmtiles -l country -Bg --force public/data/countries-merged.geojson
+tippecanoe -z6 -o c.pmtiles -l country -Bg --force public/data/countries-merged.geojson
 tippecanoe -z6 -o z.pmtiles -l zones --force public/data/zones.geojson
 tile-join -o country-borders.pmtiles b.pmtiles c.pmtiles bp.pmtiles z.pmtiles --force
 cp public/data/borders.json ../overland-maps-editor/public/data
