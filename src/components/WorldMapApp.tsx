@@ -217,6 +217,14 @@ export default function WorldMapApp({ initialCountry, initialBorder, initialBord
         fromFeature: feature?.properties?.comment 
       })
       
+      // Highlight the zone on the map
+      if (mapInteractions?.highlightZone) {
+        console.log('🎯 Calling highlightZone with zoneId:', zoneId)
+        mapInteractions.highlightZone(zoneId)
+      } else {
+        console.warn('⚠️ highlightZone function not available in mapInteractions')
+      }
+      
       // Show detail sidebar
       setSelectedFeature({
         type: 'zone',
@@ -573,6 +581,7 @@ export default function WorldMapApp({ initialCountry, initialBorder, initialBord
           selectedCountryId={selectedFeature?.type === 'country' ? selectedFeature.id : null}
           selectedBorderId={selectedFeature?.type === 'border' ? selectedFeature.id : null}
           selectedBorderPostId={selectedFeature?.type === 'border-post' ? selectedFeature.id : null}
+          selectedZoneId={selectedFeature?.type === 'zone' ? selectedFeature.id : null}
         />
 
         {/* Detail Sidebar */}

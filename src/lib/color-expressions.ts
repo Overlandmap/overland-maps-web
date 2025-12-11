@@ -35,10 +35,10 @@ export const COLOR_SCHEMES: Record<ColorScheme, SchemeDefinition> = {
     name: 'Carnet Requirements',
     colors: {
       '-1': { color: '#000000', label: 'Access forbidden' },
-      0: { color: '#16a34a', label: 'Not required' },
-      1: { color: '#eab308', label: 'Required in some situations' },
-      2: { color: '#dc2626', label: 'Mandatory' },
-      default: { color: '#16a34a', label: 'Not required' }
+      0: { color: '#9ca3af', label: 'Not required' },
+      1: { color: '#ec05f8', label: 'Required in some situations' },
+      2: { color: '#0732e2', label: 'Mandatory' },
+      default: { color: '#9ca3af', label: 'Not required' }
     }
   },
   climate: {

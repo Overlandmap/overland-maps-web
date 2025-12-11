@@ -8,6 +8,7 @@ import TopMenu from './TopMenu'
 import { useLanguage } from '../contexts/LanguageContext'
 import { useColorScheme } from '../contexts/ColorSchemeContext'
 import { getTranslatedLabel } from '../lib/i18n'
+import { COLOR_SCHEMES } from '../lib/color-expressions'
 
 
 type ColorScheme = 'overlanding' | 'carnet' | 'climate'
@@ -24,6 +25,7 @@ interface SimpleMapContainerProps {
   selectedCountryId?: string | null
   selectedBorderId?: string | null
   selectedBorderPostId?: string | null
+  selectedZoneId?: string | null
 }
 
 export default function SimpleMapContainer({
@@ -36,7 +38,8 @@ export default function SimpleMapContainer({
   onMapReady,
   selectedCountryId,
   selectedBorderId,
-  selectedBorderPostId
+  selectedBorderPostId,
+  selectedZoneId
 }: SimpleMapContainerProps) {
   const { language } = useLanguage()
   const { colorScheme, setColorScheme } = useColorScheme()
@@ -50,6 +53,8 @@ export default function SimpleMapContainer({
 
   // Store selected country ID in a ref for paint property updates
   const selectedCountryIdRef = useRef<string | null>(null)
+  // Store selected zone ID in a ref for pattern updates
+  const selectedZoneIdRef = useRef<string | null>(null)
   // Store updateMapColors ref to avoid circular dependencies
   const updateMapColorsRef = useRef<((scheme: ColorScheme) => void) | null>(null)
   // Track previous language to detect changes
@@ -61,8 +66,8 @@ export default function SimpleMapContainer({
   const clearAllHighlights = useCallback(() => {
     if (!map.current) return
 
-    console.log('🧹 Clearing all highlights')
     selectedCountryIdRef.current = null
+    selectedZoneIdRef.current = null
     
     // Clear border highlights
     if (map.current.getLayer('border-highlight')) {
@@ -71,6 +76,13 @@ export default function SimpleMapContainer({
     // Clear border post highlights
     if (map.current.getLayer('border-post-highlight')) {
       map.current.setFilter('border-post-highlight', ['==', ['get', 'id'], ''])
+    }
+    // Clear zone highlights
+    if (map.current.getLayer('zone-highlight')) {
+      map.current.setFilter('zone-highlight', ['==', ['get', 'id'], ''])
+      // Reset zone highlight paint properties to default
+      map.current.setPaintProperty('zone-highlight', 'fill-color', '#ffffff')
+      map.current.setPaintProperty('zone-highlight', 'fill-opacity', 0.5)
     }
     // Reset country colors to base (no selection)
     if (updateMapColorsRef.current) {
@@ -125,6 +137,25 @@ export default function SimpleMapContainer({
     }
   }, [clearAllHighlights])
 
+  const highlightZone = useCallback((zoneId: string) => {
+    if (!map.current || !zoneId) return
+
+    // Clear all other highlights first
+    clearAllHighlights()
+    
+    // Store the selected zone ID
+    selectedZoneIdRef.current = zoneId
+    
+    // Use the zone-highlight layer with a more visible highlight
+    if (map.current.getLayer('zone-highlight')) {
+      map.current.setFilter('zone-highlight', ['==', ['get', 'id'], zoneId])
+      
+      // Make the highlight more visible by updating paint properties
+      map.current.setPaintProperty('zone-highlight', 'fill-color', '#ffffff')
+      map.current.setPaintProperty('zone-highlight', 'fill-opacity', 0.5)
+    }
+  }, [clearAllHighlights])
+
   // Legacy function for backward compatibility
   const clearHighlights = clearAllHighlights
 
@@ -152,7 +183,6 @@ export default function SimpleMapContainer({
     if (!map.current) return
 
     const features = map.current.queryRenderedFeatures(e.point)
-    console.log('🖱️ Map clicked at:', e.lngLat, 'features found:', features.length)
 
     // Look for border post features FIRST (highest priority - smallest targets)
     const borderPostFeature = features.find(f => f.source === 'country-border' && f.sourceLayer === 'border_post')
@@ -172,11 +202,12 @@ export default function SimpleMapContainer({
     // Look for zone features SECOND (high priority - restricted areas)
     const zoneFeature = features.find(f => f.source === 'country-border' && f.sourceLayer === 'zones')
     if (zoneFeature) {
-      console.log('🚫 Zone clicked:', zoneFeature.properties)
       const zoneId = zoneFeature.properties?.id
-      if (zoneId && onZoneClick) {
-        console.log('🔄 Calling onZoneClick with:', zoneId)
-        onZoneClick(zoneId, null, zoneFeature)
+      if (zoneId) {
+        highlightZone(zoneId) // Highlight the clicked zone immediately
+        if (onZoneClick) {
+          onZoneClick(zoneId, null, zoneFeature)
+        }
       }
       return
     }
@@ -212,7 +243,6 @@ export default function SimpleMapContainer({
     }
 
     // Clear selection if clicking on empty area
-    console.log('🧹 No features clicked, clearing selection')
     clearAllHighlights()
     if (onSelectionClear) {
       onSelectionClear()
@@ -237,61 +267,63 @@ export default function SimpleMapContainer({
 
   // Generate color expression for overlanding scheme
   const generateOverlandingColorExpression = useCallback(() => {
+    const overlandingColors = COLOR_SCHEMES.overlanding.colors
     return [
       'case',
       // Handle overlanding value 0 (Forbidden) - black
       ['any',
         ['==', ['get', 'overlanding'], 0],
         ['==', ['get', 'overlanding'], '0']
-      ], '#1a1a1a',
+      ], overlandingColors[0].color,
       // Handle overlanding value 1 (Unsafe) - red
       ['any',
         ['==', ['get', 'overlanding'], 1],
         ['==', ['get', 'overlanding'], '1']
-      ], '#dc2626',
+      ], overlandingColors[1].color,
       // Handle overlanding value 2 (Restrictions Apply) - yellow
       ['any',
         ['==', ['get', 'overlanding'], 2],
         ['==', ['get', 'overlanding'], '2']
-      ], '#eab308',
+      ], overlandingColors[2].color,
       // Handle overlanding value 3 (Open) - green
       ['any',
         ['==', ['get', 'overlanding'], 3],
         ['==', ['get', 'overlanding'], '3']
-      ], '#16a34a',
+      ], overlandingColors[3].color,
       // Fallback to default (Unknown)
-      '#9ca3af'
+      overlandingColors.default.color
     ]
   }, [])
 
   // Generate color expression for carnet scheme
   const generateCarnetColorExpression = useCallback(() => {
+    const carnetColors = COLOR_SCHEMES.carnet.colors
     return [
       'case',
       // Handle carnet value -1 (Access Forbidden) - black
       ['any',
         ['==', ['get', 'carnet'], -1],
         ['==', ['get', 'carnet'], '-1']
-      ], '#000000',
+      ], carnetColors['-1'].color,
       // Handle null, 0, or missing carnet field - gray (no carnet required)
       ['any',
         ['==', ['get', 'carnet'], null],
         ['==', ['get', 'carnet'], 0],
         ['==', ['get', 'carnet'], '0'],
         ['!', ['has', 'carnet']]
-      ], '#9ca3af',
+      ], carnetColors[0].color,
       // Handle carnet value 1 (Required in Some Situations) - bright purple
       ['any',
         ['==', ['get', 'carnet'], 1],
         ['==', ['get', 'carnet'], '1']
-      ], '#ec05f8',
+      ], carnetColors[1].color,
       // Handle carnet value 2 (Mandatory) - bright blue
       ['any',
         ['==', ['get', 'carnet'], 2],
         ['==', ['get', 'carnet'], '2']
-      ], '#0732e2',
+      ], carnetColors[2].color,
       // Fallback to default (no carnet required - gray)
-      '#9ca3af'
+      carnetColors.default.color
     ]
   }, [])
 
@@ -472,9 +504,68 @@ export default function SimpleMapContainer({
           map.current.addImage('diagonal-stripe-grey', greyPattern)
         }
         
-        const bluePattern = createDiagonalPattern('rgba(6, 92, 230, 1)')
+        const bluePattern = createDiagonalPattern('rgba(59, 130, 246, 1)')
         if (bluePattern && !map.current.hasImage('diagonal-stripe-blue')) {
           map.current.addImage('diagonal-stripe-blue', bluePattern)
+        }
+
+        // Re-create highlighted diagonal stripe patterns with gray background
+        const createHighlightedDiagonalPattern = (color: string) => {
+          const canvas = document.createElement('canvas')
+          const size = 16
+          canvas.width = size
+          canvas.height = size
+          const ctx = canvas.getContext('2d')
+          
+          if (ctx) {
+            // Fill background with gray for highlighted state
+            ctx.fillStyle = 'rgba(156, 163, 175, 0.8)' // More visible gray background
+            ctx.fillRect(0, 0, size, size)
+            
+            // Draw diagonal stripes with the specified color
+            ctx.strokeStyle = color
+            ctx.lineWidth = 3
+            
+            // Draw multiple diagonal lines to create stripe pattern
+            ctx.beginPath()
+            ctx.moveTo(0, size)
+            ctx.lineTo(size, 0)
+            ctx.stroke()
+            
+            ctx.beginPath()
+            ctx.moveTo(-size/2, size/2)
+            ctx.lineTo(size/2, -size/2)
+            ctx.stroke()
+            
+            ctx.beginPath()
+            ctx.moveTo(size/2, size * 1.5)
+            ctx.lineTo(size * 1.5, size/2)
+            ctx.stroke()
+            
+            return ctx.getImageData(0, 0, size, size)
+          }
+          return null
+        }
+
+        // Create highlighted versions with gray background
+        const redHighlightPattern = createHighlightedDiagonalPattern('rgba(239, 68, 68, 1)')
+        if (redHighlightPattern && !map.current.hasImage('diagonal-stripe-red-highlight')) {
+          map.current.addImage('diagonal-stripe-red-highlight', redHighlightPattern)
+        }
+        
+        const blackHighlightPattern = createHighlightedDiagonalPattern('rgba(0, 0, 0, 1)')
+        if (blackHighlightPattern && !map.current.hasImage('diagonal-stripe-black-highlight')) {
+          map.current.addImage('diagonal-stripe-black-highlight', blackHighlightPattern)
+        }
+        
+        const greyHighlightPattern = createHighlightedDiagonalPattern('rgba(156, 163, 175, 1)')
+        if (greyHighlightPattern && !map.current.hasImage('diagonal-stripe-grey-highlight')) {
+          map.current.addImage('diagonal-stripe-grey-highlight', greyHighlightPattern)
+        }
+        
+        const blueHighlightPattern = createHighlightedDiagonalPattern('rgba(59, 130, 246, 1)')
+        if (blueHighlightPattern && !map.current.hasImage('diagonal-stripe-blue-highlight')) {
+          map.current.addImage('diagonal-stripe-blue-highlight', blueHighlightPattern)
         }
         
         // Re-add country-border source (only if it doesn't exist)
@@ -598,13 +689,29 @@ export default function SimpleMapContainer({
           'source-layer': 'border_post',
           paint: {
             'circle-color': '#ffffff',
-            'circle-radius': 12,
-            'circle-stroke-width': 3,
+            'circle-radius': 8,
+            'circle-stroke-width': 2,
             'circle-stroke-color': '#1e40af'
           },
           filter: ['==', ['get', 'id'], '']
           })
         }
+        
+        if (!map.current.getLayer('zone-highlight')) {
+          map.current.addLayer({
+          id: 'zone-highlight',
+          type: 'fill',
+          source: 'country-border',
+          'source-layer': 'zones',
+          paint: {
+            'fill-color': '#ffffff', // White color for better visibility
+            'fill-opacity': 0.5 // 50% opacity for solid white fill
+          },
+          filter: ['==', ['get', 'id'], '']
+          }, 'border') // Position before border layer to ensure it's above zones but below borders
+        }
+        
+
         
           console.log('✅ Custom layers re-added')
           
@@ -727,6 +834,8 @@ export default function SimpleMapContainer({
       } else if (selectedBorderPostId) {
         console.log('🎯 Prop-driven border post highlight:', selectedBorderPostId)
         highlightBorderPost(selectedBorderPostId)
+      } else if (selectedZoneId) {
+        highlightZone(selectedZoneId)
       }
 
       const endTime = performance.now()
@@ -740,7 +849,7 @@ export default function SimpleMapContainer({
     } catch (error) {
       console.error('❌ Error applying prop-driven highlight:', error)
     }
-  }, [isLoaded, selectedCountryId, selectedBorderId, selectedBorderPostId, highlightCountry, highlightBorder, highlightBorderPost, clearAllHighlights])
+  }, [isLoaded, selectedCountryId, selectedBorderId, selectedBorderPostId, selectedZoneId, highlightCountry, highlightBorder, highlightBorderPost, highlightZone, clearAllHighlights])
 
   // Toggle border posts layer visibility
   useEffect(() => {
@@ -790,6 +899,12 @@ export default function SimpleMapContainer({
     if (map.current.getLayer('zones')) {
       const zonesVisibility = colorScheme === 'overlanding' ? 'visible' : 'none'
       map.current.setLayoutProperty('zones', 'visibility', zonesVisibility)
+    }
+    
+    // Also control zone-highlight layer visibility
+    if (map.current.getLayer('zone-highlight')) {
+      const zonesVisibility = colorScheme === 'overlanding' ? 'visible' : 'none'
+      map.current.setLayoutProperty('zone-highlight', 'visibility', zonesVisibility)
     }
   }, [colorScheme, isLoaded])
 
@@ -842,6 +957,7 @@ export default function SimpleMapContainer({
             highlightCountry,
             highlightBorder,
             highlightBorderPost,
+            highlightZone,
             zoomToLocation
           }
           console.log('🔄 Calling onMapReady with interactions:', Object.keys(interactions))
@@ -863,6 +979,44 @@ export default function SimpleMapContainer({
             if (ctx) {
               // Clear background (transparent)
               ctx.clearRect(0, 0, size, size)
+              
+              // Draw diagonal stripes with the specified color
+              ctx.strokeStyle = color
+              ctx.lineWidth = 3
+              
+              // Draw multiple diagonal lines to create stripe pattern
+              ctx.beginPath()
+              ctx.moveTo(0, size)
+              ctx.lineTo(size, 0)
+              ctx.stroke()
+              
+              ctx.beginPath()
+              ctx.moveTo(-size/2, size/2)
+              ctx.lineTo(size/2, -size/2)
+              ctx.stroke()
+              
+              ctx.beginPath()
+              ctx.moveTo(size/2, size * 1.5)
+              ctx.lineTo(size * 1.5, size/2)
+              ctx.stroke()
+              
+              return ctx.getImageData(0, 0, size, size)
+            }
+            return null
+          }
+
+          // Create highlighted diagonal stripe patterns with gray background
+          const createHighlightedDiagonalPattern = (color: string) => {
+            const canvas = document.createElement('canvas')
+            const size = 16
+            canvas.width = size
+            canvas.height = size
+            const ctx = canvas.getContext('2d')
+            
+            if (ctx) {
+              // Fill background with gray for highlighted state
+              ctx.fillStyle = 'rgba(156, 163, 175, 0.8)' // More visible gray background
+              ctx.fillRect(0, 0, size, size)
               
               // Draw diagonal stripes with the specified color
               ctx.strokeStyle = color
@@ -916,7 +1070,32 @@ export default function SimpleMapContainer({
               map.current.addImage('diagonal-stripe-blue', bluePattern)
             }
 
-            console.log('✅ Colored stripe patterns created (red, black, grey, blue)')
+            // Create highlighted versions with gray background
+            // Type 0: Closed - Red stripes with gray background
+            const redHighlightPattern = createHighlightedDiagonalPattern('rgba(239, 68, 68, 1)')
+            if (redHighlightPattern && !map.current.hasImage('diagonal-stripe-red-highlight')) {
+              map.current.addImage('diagonal-stripe-red-highlight', redHighlightPattern)
+            }
+            
+            // Type 1: Guide/Escort - Black stripes with gray background
+            const blackHighlightPattern = createHighlightedDiagonalPattern('rgba(0, 0, 0, 1)')
+            if (blackHighlightPattern && !map.current.hasImage('diagonal-stripe-black-highlight')) {
+              map.current.addImage('diagonal-stripe-black-highlight', blackHighlightPattern)
+            }
+            
+            // Type 2: Permit - Grey stripes with gray background
+            const greyHighlightPattern = createHighlightedDiagonalPattern('rgba(156, 163, 175, 1)')
+            if (greyHighlightPattern && !map.current.hasImage('diagonal-stripe-grey-highlight')) {
+              map.current.addImage('diagonal-stripe-grey-highlight', greyHighlightPattern)
+            }
+            
+            // Type 3: Restrictions - Blue stripes with gray background
+            const blueHighlightPattern = createHighlightedDiagonalPattern('rgba(59, 130, 246, 1)')
+            if (blueHighlightPattern && !map.current.hasImage('diagonal-stripe-blue-highlight')) {
+              map.current.addImage('diagonal-stripe-blue-highlight', blueHighlightPattern)
+            }
+
+            console.log('✅ Colored stripe patterns created (red, black, grey, blue) with highlighted versions')
 
             console.log('➕ Adding country-border source')
             map.current.addSource('country-border', {
@@ -1062,16 +1241,27 @@ export default function SimpleMapContainer({
             'source-layer': 'border_post',
             paint: {
               'circle-color': '#ffffff',
-              'circle-radius': 12,
-              'circle-stroke-width': 3,
+              'circle-radius': 8,
+              'circle-stroke-width': 2,
               'circle-stroke-color': '#1e40af'
             },
             filter: ['==', ['get', 'id'], ''] // Initially show nothing
           })
 
+          // Zone highlight layer - solid white fill for selected zones
+          map.current.addLayer({
+            id: 'zone-highlight',
+            type: 'fill',
+            source: 'country-border',
+            'source-layer': 'zones',
+            paint: {
+              'fill-color': '#ffffff', // White color for better visibility
+              'fill-opacity': 0.5 // 50% opacity for solid white fill
+            },
+            filter: ['==', ['get', 'id'], ''] // Initially show nothing
+          }, 'border') // Position before border layer to ensure it's above zones but below borders
 
-
-          console.log('✅ Highlight layers added: border-highlight, border-post-highlight')
+          console.log('✅ Highlight layers added: border-highlight, border-post-highlight, zone-highlight')
           } else {
             console.log('🌡️ Climate mode: Using climate.json style, no additional layers needed')
           }
