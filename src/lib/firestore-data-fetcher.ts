@@ -210,6 +210,41 @@ export class FirestoreDataFetcher {
   }
 
   /**
+   * Fetch all documents from the Itinerary Collection where editor='GOA'
+   */
+  async fetchItineraries(): Promise<any[]> {
+    console.log('🔄 Fetching itineraries from Firestore (editor=GOA)...')
+    
+    return withRetry(async () => {
+      const snapshot = await this.db
+        .collection('itinerary')
+        .where('editor', '==', 'GOA')
+        .get()
+      
+      if (snapshot.empty) {
+        console.warn('⚠️ No itineraries found with editor=GOA in Firestore')
+        return []
+      }
+
+      const itineraries: any[] = []
+      
+      snapshot.forEach((doc: any) => {
+        const data = doc.data()
+        
+        const itinerary = {
+          id: doc.id,
+          ...data // Include all fields from the document
+        }
+        
+        itineraries.push(itinerary)
+      })
+
+      console.log(`✅ Fetched ${itineraries.length} itineraries with editor=GOA`)
+      return itineraries
+    })
+  }
+
+  /**
    * Validate that required collections exist and have data
    */
   async validateCollections(): Promise<{ countries: boolean; borders: boolean; borderPosts: boolean }> {

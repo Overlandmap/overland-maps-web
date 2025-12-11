@@ -19,6 +19,7 @@ interface SimpleMapContainerProps {
   onBorderClick?: (borderId: string, borderData: any, feature: any) => void
   onBorderPostClick?: (borderPostId: string, borderPostData: any, feature: any) => void
   onZoneClick?: (zoneId: string, zoneData: any, feature: any) => void
+  onItineraryClick?: (itineraryId: string, itineraryData: any, feature: any) => void
   onSelectionClear?: () => void
   onMapReady?: (interactions: any) => void
   // Selection props for URL-driven highlighting
@@ -26,6 +27,7 @@ interface SimpleMapContainerProps {
   selectedBorderId?: string | null
   selectedBorderPostId?: string | null
   selectedZoneId?: string | null
+  selectedItineraryId?: string | null
 }
 
 export default function SimpleMapContainer({
@@ -34,12 +36,14 @@ export default function SimpleMapContainer({
   onBorderClick,
   onBorderPostClick,
   onZoneClick,
+  onItineraryClick,
   onSelectionClear,
   onMapReady,
   selectedCountryId,
   selectedBorderId,
   selectedBorderPostId,
-  selectedZoneId
+  selectedZoneId,
+  selectedItineraryId
 }: SimpleMapContainerProps) {
   const { language } = useLanguage()
   const { colorScheme, setColorScheme } = useColorScheme()
@@ -215,7 +219,28 @@ export default function SimpleMapContainer({
       return
     }
 
-    // Look for border features THIRD (medium priority)
+    // Look for itinerary features THIRD (high priority - travel routes)
+    // Look for itinerary features THIRD (high priority - travel routes)
+    const itineraryFeature = features.find(f => f.source === 'country-border' && f.sourceLayer === 'itinerary')
+    if (itineraryFeature) {
+      // Use the Firestore document ID (stored in 'itineraryDocId' property)
+      // The 'itineraryDocId' property contains the Firestore document ID like "0ANgc4146W8cMQqwfaB0"
+      // The 'itineraryId' property contains the human-readable ID like "G6"
+      const itineraryDocId = itineraryFeature.properties?.itineraryDocId
+      
+      if (itineraryDocId) {
+        // Clear all other highlights first
+        clearAllHighlights()
+        if (onItineraryClick) {
+          onItineraryClick(itineraryDocId, null, itineraryFeature)
+        }
+      } else {
+        console.warn('⚠️ Itinerary feature missing document ID:', itineraryFeature.properties)
+      }
+      return
+    }
+
+    // Look for border features FOURTH (medium priority)
     const borderFeature = features.find(f => f.source === 'country-border' && f.sourceLayer === 'border')
     if (borderFeature) {
       console.log('🚧 Border clicked:', borderFeature.properties)
@@ -250,7 +275,7 @@ export default function SimpleMapContainer({
     if (onSelectionClear) {
       onSelectionClear()
     }
-  }, [onCountryClick, onBorderClick, onBorderPostClick, onZoneClick, onSelectionClear, highlightBorder, highlightCountry, highlightBorderPost, clearAllHighlights])
+  }, [onCountryClick, onBorderClick, onBorderPostClick, onZoneClick, onItineraryClick, onSelectionClear, highlightBorder, highlightCountry, highlightBorderPost, clearAllHighlights])
 
 
   // Helper function to create darker color expressions for highlights
@@ -432,7 +457,7 @@ export default function SimpleMapContainer({
         }
       })
       map.current.setStyle(climateStyleUrl)
-    } else if (previousScheme === 'climate' || previousScheme === 'itineraries') {
+    } else if (previousScheme === 'climate') {
       // Save current map position before switching style
       const currentCenter = map.current.getCenter()
       const currentZoom = map.current.getZoom()
@@ -458,6 +483,8 @@ export default function SimpleMapContainer({
           
           // Re-add all custom layers that were in the basemap
           console.log('🔄 Re-adding custom layers after style switch')
+          
+
         
         // Re-create diagonal stripe patterns with different colors
         const createDiagonalPattern = (color: string) => {
@@ -614,16 +641,37 @@ export default function SimpleMapContainer({
         
         // Re-add country layer (only if it doesn't exist) - insert before waterway_river
         if (!map.current.getLayer('country')) {
-          map.current.addLayer({
-          id: 'country',
-          type: 'fill',
-          source: 'country-border',
-          'source-layer': 'country',
-          paint: {
-            'fill-color': generateOverlandingColorExpression() as any,
-            'fill-opacity': 0.6
+          try {
+            // Check if insertion point exists
+            const hasWaterwayRiver = map.current.getLayer('waterway_river')
+            
+            if (hasWaterwayRiver) {
+              map.current.addLayer({
+                id: 'country',
+                type: 'fill',
+                source: 'country-border',
+                'source-layer': 'country',
+                paint: {
+                  'fill-color': generateOverlandingColorExpression() as any,
+                  'fill-opacity': 0.6
+                }
+              }, 'waterway_river')
+            } else {
+              // Add without insertion point if waterway_river doesn't exist
+              map.current.addLayer({
+                id: 'country',
+                type: 'fill',
+                source: 'country-border',
+                'source-layer': 'country',
+                paint: {
+                  'fill-color': generateOverlandingColorExpression() as any,
+                  'fill-opacity': 0.6
+                }
+              })
+            }
+          } catch (error) {
+            console.error('❌ Error adding country layer:', error)
           }
-          }, 'waterway_river')
         }
         
         // Re-add zones layer (only if it doesn't exist) - above countries, before waterway
@@ -772,21 +820,49 @@ export default function SimpleMapContainer({
           // Wait a tick for layers to be fully registered, then apply colors and visibility
           setTimeout(() => {
             if (map.current && map.current.getLayer('country')) {
-              console.log('🎨 Applying color scheme after layer re-add')
               updateMapColors(colorScheme)
               
-              // Apply border posts visibility based on current state
-              // Border posts are visible only in overlanding mode when the toggle is on
-              const visibility = (showBorderPosts && colorScheme === 'overlanding') ? 'visible' : 'none'
-              if (map.current.getLayer('border_post')) {
-                map.current.setLayoutProperty('border_post', 'visibility', visibility)
+              // If switching to itineraries mode, explicitly set layer visibility
+              if (colorScheme === 'itineraries') {
+                // Hide overlanding layers
+                if (map.current.getLayer('country')) {
+                  map.current.setLayoutProperty('country', 'visibility', 'none')
+                }
+                if (map.current.getLayer('border')) {
+                  map.current.setLayoutProperty('border', 'visibility', 'none')
+                }
+                if (map.current.getLayer('border-highlight')) {
+                  map.current.setLayoutProperty('border-highlight', 'visibility', 'none')
+                }
+                if (map.current.getLayer('zones')) {
+                  map.current.setLayoutProperty('zones', 'visibility', 'none')
+                }
+                if (map.current.getLayer('zone-highlight')) {
+                  map.current.setLayoutProperty('zone-highlight', 'visibility', 'none')
+                }
+                if (map.current.getLayer('border_post')) {
+                  map.current.setLayoutProperty('border_post', 'visibility', 'none')
+                }
+                if (map.current.getLayer('border-post-highlight')) {
+                  map.current.setLayoutProperty('border-post-highlight', 'visibility', 'none')
+                }
+                
+                // Show itineraries layers
+                if (map.current.getLayer('itinerary')) {
+                  map.current.setLayoutProperty('itinerary', 'visibility', 'visible')
+                }
+                if (map.current.getLayer('hillshade')) {
+                  map.current.setLayoutProperty('hillshade', 'visibility', 'visible')
+                }
+                
+                // Set terrain for itineraries mode
+                if (map.current.getSource('terrainSource')) {
+                  map.current.setTerrain({
+                    source: 'terrainSource',
+                    exaggeration: 1
+                  })
+                }
               }
-              if (map.current.getLayer('border-post-highlight')) {
-                map.current.setLayoutProperty('border-post-highlight', 'visibility', visibility)
-              }
-              console.log(`👁️ Border posts visibility set to: ${visibility}`)
-            } else {
-              console.warn('⚠️ Country layer still not found after re-add')
             }
           }, 0)
         } catch (error) {
@@ -1435,7 +1511,7 @@ export default function SimpleMapContainer({
           map.current.on('click', handleMapClick)
 
           // Add cursor pointer for clickable layers
-          const clickableLayers = ['country', 'border', 'border_post', 'zones']
+          const clickableLayers = ['country', 'border', 'border_post', 'zones', 'itinerary']
 
           clickableLayers.forEach(layerId => {
             // Change cursor to pointer when hovering over clickable features

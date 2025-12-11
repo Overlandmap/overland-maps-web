@@ -186,6 +186,32 @@ export class StaticFileGenerator {
   }
 
   /**
+   * Generate itineraries JSON file (for detail lookups)
+   */
+  generateItinerariesJSONFile(itineraries: any[]): void {
+    console.log('🔄 Generating itineraries JSON file...')
+    
+    try {
+      const jsonData = {
+        metadata: {
+          generatedAt: new Date().toISOString(),
+          totalItineraries: itineraries.length,
+          editor: 'GOA'
+        },
+        itineraries: itineraries
+      }
+      
+      const filePath = join(this.outputDir, 'itineraries.json')
+      this.writeJSONFile(filePath, jsonData)
+      
+      console.log(`✅ Generated itineraries.json with ${itineraries.length} entries`)
+    } catch (error) {
+      console.warn('⚠️ Failed to generate itineraries JSON:', error)
+      console.log('Continuing with build...')
+    }
+  }
+
+  /**
    * Generate zone GeoJSON files
    */
   generateZoneGeoJSONFiles(geoData: GeoJSON.FeatureCollection): void {
@@ -236,7 +262,8 @@ export class StaticFileGenerator {
     countries: ProcessedCountryData[], 
     borders: ProcessedBorderData[], 
     borderPosts: ProcessedBorderPostData[],
-    lookup: ISO3Lookup
+    lookup: ISO3Lookup,
+    itineraries?: any[]
   ): void {
     console.log('🔄 Generating data manifest...')
     
@@ -277,7 +304,14 @@ export class StaticFileGenerator {
             description: 'ISO A3 code to country data lookup table',
             mappingCount: Object.keys(lookup).length,
             sizeEstimate: this.estimateFileSize(lookup)
-          }
+          },
+          ...(itineraries && {
+            'itineraries.json': {
+              description: 'Travel itineraries with editor=GOA filter',
+              recordCount: itineraries.length,
+              sizeEstimate: this.estimateFileSize(itineraries)
+            }
+          })
         },
         statistics: {
           totalCountries: countries.length,

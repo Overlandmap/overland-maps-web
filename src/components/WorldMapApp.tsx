@@ -12,7 +12,7 @@ import DisclaimerPopup from './DisclaimerPopup'
 import { generateEntityUrl } from '../lib/url-utils'
 
 interface SelectedFeature {
-  type: 'country' | 'border' | 'border-post' | 'zone'
+  type: 'country' | 'border' | 'border-post' | 'zone' | 'itinerary'
   id: string
   data: CountryData | BorderData | any | null
   feature: any
@@ -29,9 +29,10 @@ interface WorldMapAppProps {
   initialBorderPost?: string
   initialBorderPostData?: any
   initialZone?: string
+  initialItinerary?: string
 }
 
-export default function WorldMapApp({ initialCountry, initialBorder, initialBorderPost, initialBorderPostData, initialZone }: WorldMapAppProps = {}) {
+export default function WorldMapApp({ initialCountry, initialBorder, initialBorderPost, initialBorderPostData, initialZone, initialItinerary }: WorldMapAppProps = {}) {
   const { language } = useLanguage()
   const router = useRouter()
   const [selectedFeature, setSelectedFeature] = useState<SelectedFeature | null>(null)
@@ -253,6 +254,40 @@ export default function WorldMapApp({ initialCountry, initialBorder, initialBord
   }, [isHandlingPopState])
 
   /**
+   * Handle itinerary clicks
+   */
+  const handleItineraryClick = useCallback(async (itineraryId: string, itineraryData: any | null, feature: any) => {
+    console.log('🛣️ Itinerary clicked:', itineraryId)
+    
+    if (itineraryId) {
+      // Update URL without navigation (unless handling popstate)
+      if (!isHandlingPopState) {
+        window.history.pushState({ type: 'itinerary', id: itineraryId }, '', generateEntityUrl('itinerary', itineraryId))
+      }
+      
+      // Use feature properties as itinerary data
+      const completeData = {
+        id: itineraryId,
+        name: feature?.properties?.name || 'Unnamed Itinerary',
+        length: feature?.properties?.length,
+        nbSteps: feature?.properties?.nbSteps,
+        titlePhotoUrl: feature?.properties?.titlePhotoUrl,
+        geometry: feature?.geometry,
+        ...feature?.properties
+      }
+      
+      // Show detail sidebar
+      setSelectedFeature({
+        type: 'itinerary',
+        id: itineraryId,
+        data: completeData,
+        feature: feature
+      })
+      setSidebarOpen(true)
+    }
+  }, [isHandlingPopState])
+
+  /**
    * Handle selection clear
    */
   const handleSelectionClear = useCallback(() => {
@@ -392,6 +427,7 @@ export default function WorldMapApp({ initialCountry, initialBorder, initialBord
       const borderMatch = pathWithoutBase.match(/^\/border\/([^\/]+)/)
       const borderPostMatch = pathWithoutBase.match(/^\/border_post\/([^\/]+)/)
       const zoneMatch = pathWithoutBase.match(/^\/zone\/([^\/]+)/)
+      const itineraryMatch = pathWithoutBase.match(/^\/itinerary\/([^\/]+)/)
 
       if (countryMatch) {
         const countryCode = countryMatch[1]
@@ -409,6 +445,10 @@ export default function WorldMapApp({ initialCountry, initialBorder, initialBord
         const zoneId = zoneMatch[1]
         console.log('🚫 Loading zone from URL:', zoneId)
         await handleZoneClick(zoneId, null, null)
+      } else if (itineraryMatch) {
+        const itineraryId = itineraryMatch[1]
+        console.log('🛣️ Loading itinerary from URL:', itineraryId)
+        await handleItineraryClick(itineraryId, null, null)
       }
       
       // Reset flag after handling
@@ -417,7 +457,7 @@ export default function WorldMapApp({ initialCountry, initialBorder, initialBord
 
     window.addEventListener('popstate', handlePopState)
     return () => window.removeEventListener('popstate', handlePopState)
-  }, [handleCountryClick, handleBorderClick, handleBorderPostClick, handleZoneClick])
+  }, [handleCountryClick, handleBorderClick, handleBorderPostClick, handleZoneClick, handleItineraryClick])
 
   // Initialize app on mount
   useEffect(() => {
@@ -554,6 +594,15 @@ export default function WorldMapApp({ initialCountry, initialBorder, initialBord
     }
   }, [initialZone, hasHandledInitialSelection, handleZoneClick])
 
+  // Handle initial itinerary selection from URL
+  useEffect(() => {
+    if (initialItinerary && !hasHandledInitialSelection) {
+      console.log('🎯 Setting initial itinerary selection:', initialItinerary)
+      handleItineraryClick(initialItinerary, null, null)
+      setHasHandledInitialSelection(true)
+    }
+  }, [initialItinerary, hasHandledInitialSelection, handleItineraryClick])
+
   if (appState.isLoading) {
     return (
       <div className="h-screen flex items-center justify-center bg-gray-100">
@@ -592,12 +641,14 @@ export default function WorldMapApp({ initialCountry, initialBorder, initialBord
           onBorderClick={handleBorderClick}
           onBorderPostClick={handleBorderPostClick}
           onZoneClick={handleZoneClick}
+          onItineraryClick={handleItineraryClick}
           onSelectionClear={handleSelectionClear}
           onMapReady={handleMapReady}
           selectedCountryId={selectedFeature?.type === 'country' ? selectedFeature.id : null}
           selectedBorderId={selectedFeature?.type === 'border' ? selectedFeature.id : null}
           selectedBorderPostId={selectedFeature?.type === 'border-post' ? selectedFeature.id : null}
           selectedZoneId={selectedFeature?.type === 'zone' ? selectedFeature.id : null}
+          selectedItineraryId={selectedFeature?.type === 'itinerary' ? selectedFeature.id : null}
         />
 
         {/* Detail Sidebar */}

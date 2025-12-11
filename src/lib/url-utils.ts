@@ -9,12 +9,12 @@ function getBasePath(): string {
 
 /**
  * Generate a URL path for a given entity type and ID
- * @param type - The entity type ('country', 'border', 'border_post', 'zone')
+ * @param type - The entity type ('country', 'border', 'border_post', 'zone', 'itinerary')
  * @param id - The entity identifier
  * @returns The complete URL path including basePath, with no double slashes
  */
 export function generateEntityUrl(
-  type: 'country' | 'border' | 'border_post' | 'zone',
+  type: 'country' | 'border' | 'border_post' | 'zone' | 'itinerary',
   id: string
 ): string {
   // Handle edge cases: undefined or empty values
