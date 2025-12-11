@@ -12,7 +12,8 @@ tippecanoe -z6 -o b.pmtiles -l border -x geomstring -x geomtype --force public/d
 tippecanoe -z6 -o bp.pmtiles -l border_post -x location -x countries -Bg --force public/data/border-posts.geojson
 tippecanoe -z6 -o c.pmtiles -l country -Bg --force public/data/countries-merged.geojson
 tippecanoe -z6 -o z.pmtiles -l zones --force public/data/zones.geojson
-tile-join -o country-borders.pmtiles b.pmtiles c.pmtiles bp.pmtiles z.pmtiles --force
+tippecanoe -z6 -o i.pmtiles -l itinerary --force public/data/itineraries.ndjson
+tile-join -o country-borders.pmtiles b.pmtiles c.pmtiles bp.pmtiles z.pmtiles i.pmtiles --force
 cp public/data/borders.json ../overland-maps-editor/public/data
 cp public/data/countries.json ../overland-maps-editor/public/data
 cp public/data/border-posts.json ../overland-maps-editor/public/data

@@ -5,7 +5,7 @@
  */
 
 // Color scheme types
-export type ColorScheme = 'overlanding' | 'carnet' | 'climate'
+export type ColorScheme = 'overlanding' | 'carnet' | 'climate' | 'itineraries'
 
 // Color definition interface
 export interface ColorDefinition {
@@ -45,6 +45,12 @@ export const COLOR_SCHEMES: Record<ColorScheme, SchemeDefinition> = {
     name: 'Climate Data',
     colors: {
       default: { color: '#9ca3af', label: 'Climate' }
+    }
+  },
+  itineraries: {
+    name: 'Travel Itineraries',
+    colors: {
+      default: { color: '#ef4444', label: 'Itinerary' }
     }
   }
 }

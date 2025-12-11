@@ -11,7 +11,7 @@ import { getTranslatedLabel } from '../lib/i18n'
 import { COLOR_SCHEMES } from '../lib/color-expressions'
 
 
-type ColorScheme = 'overlanding' | 'carnet' | 'climate'
+type ColorScheme = 'overlanding' | 'carnet' | 'climate' | 'itineraries'
 
 interface SimpleMapContainerProps {
   className?: string
@@ -354,6 +354,11 @@ export default function SimpleMapContainer({
       return
     }
 
+    // Only update colors for overlanding and carnet modes
+    if (scheme === 'climate' || scheme === 'itineraries') {
+      return
+    }
+
     if (!map.current.getLayer('country')) {
       console.warn('⚠️ Country layer not found for color update')
       return
@@ -427,7 +432,7 @@ export default function SimpleMapContainer({
         }
       })
       map.current.setStyle(climateStyleUrl)
-    } else if (previousScheme === 'climate') {
+    } else if (previousScheme === 'climate' || previousScheme === 'itineraries') {
       // Save current map position before switching style
       const currentCenter = map.current.getCenter()
       const currentZoom = map.current.getZoom()
@@ -579,6 +584,34 @@ export default function SimpleMapContainer({
           })
         }
         
+        // Re-add hillshade source (only if it doesn't exist)
+        if (!map.current.getSource('hillshadeSource')) {
+          map.current.addSource('hillshadeSource', {
+            type: 'raster-dem',
+            url: 'https://tiles.mapterhorn.com/tilejson.json'
+          })
+        }
+        
+        // Re-add terrain source (only if it doesn't exist)
+        if (!map.current.getSource('terrainSource')) {
+          map.current.addSource('terrainSource', {
+            type: 'raster-dem',
+            url: 'https://tiles.mapterhorn.com/tilejson.json'
+          })
+        }
+        
+        // Re-add hillshade layer (only if it doesn't exist) - insert before waterway_river
+        if (!map.current.getLayer('hillshade')) {
+          map.current.addLayer({
+          id: 'hillshade',
+          type: 'hillshade',
+          source: 'hillshadeSource',
+          layout: {
+            'visibility': 'none' // Hidden when switching from climate/itineraries to overlanding/carnet
+          }
+          }, 'waterway_river')
+        }
+        
         // Re-add country layer (only if it doesn't exist) - insert before waterway_river
         if (!map.current.getLayer('country')) {
           map.current.addLayer({
@@ -664,6 +697,24 @@ export default function SimpleMapContainer({
             'circle-radius': 6,
             'circle-stroke-width': 1.5,
             'circle-stroke-color': '#ffffff'
+          }
+          })
+        }
+        
+        // Re-add itinerary layer (only if it doesn't exist)
+        if (!map.current.getLayer('itinerary')) {
+          map.current.addLayer({
+          id: 'itinerary',
+          type: 'line',
+          source: 'country-border',
+          'source-layer': 'itinerary',
+          paint: {
+            'line-color': '#ef4444',
+            'line-width': 4,
+            'line-opacity': 0.5
+          },
+          layout: {
+            'visibility': 'none' // Hidden when switching from climate/itineraries to overlanding/carnet
           }
           })
         }
@@ -809,7 +860,7 @@ export default function SimpleMapContainer({
 
   // Apply color scheme when map becomes loaded (initial load only)
   useEffect(() => {
-    if (isLoaded && map.current && !initialColorsAppliedRef.current && colorScheme !== 'climate') {
+    if (isLoaded && map.current && !initialColorsAppliedRef.current && colorScheme !== 'climate' && colorScheme !== 'itineraries') {
       console.log(`🎨 Applying ${colorScheme} color scheme to loaded map (initial load)`)
       updateMapColors(colorScheme)
       initialColorsAppliedRef.current = true
@@ -858,8 +909,8 @@ export default function SimpleMapContainer({
   useEffect(() => {
     if (!map.current || !isLoaded) return
 
-    // Hide border posts when carnet or climate is selected, or when toggle is off
-    const visibility = (showBorderPosts && colorScheme !== 'carnet' && colorScheme !== 'climate') ? 'visible' : 'none'
+    // Hide border posts when carnet, climate, or itineraries is selected, or when toggle is off
+    const visibility = (showBorderPosts && colorScheme !== 'carnet' && colorScheme !== 'climate' && colorScheme !== 'itineraries') ? 'visible' : 'none'
 
     if (map.current.getLayer('border_post')) {
       map.current.setLayoutProperty('border_post', 'visibility', visibility)
@@ -898,7 +949,7 @@ export default function SimpleMapContainer({
   useEffect(() => {
     if (!map.current || !isLoaded || colorScheme === 'climate') return
     
-    // Show zones layer only for overlanding scheme (not in climate mode)
+    // Show zones layer only for overlanding scheme (not in climate, carnet, or itineraries mode)
     if (map.current.getLayer('zones')) {
       const zonesVisibility = colorScheme === 'overlanding' ? 'visible' : 'none'
       map.current.setLayoutProperty('zones', 'visibility', zonesVisibility)
@@ -909,6 +960,55 @@ export default function SimpleMapContainer({
       const zonesVisibility = colorScheme === 'overlanding' ? 'visible' : 'none'
       map.current.setLayoutProperty('zone-highlight', 'visibility', zonesVisibility)
     }
+  }, [colorScheme, isLoaded])
+
+  // Handle itinerary, hillshade, and terrain for itineraries mode
+  useEffect(() => {
+    if (!map.current || !isLoaded || colorScheme === 'climate') return
+    
+    const isItinerariesMode = colorScheme === 'itineraries'
+    const itinerariesVisibility = isItinerariesMode ? 'visible' : 'none'
+    
+    // Show itinerary layer only for itineraries scheme
+    if (map.current.getLayer('itinerary')) {
+      map.current.setLayoutProperty('itinerary', 'visibility', itinerariesVisibility)
+    }
+    
+    // Show hillshade layer only for itineraries scheme
+    if (map.current.getLayer('hillshade')) {
+      map.current.setLayoutProperty('hillshade', 'visibility', itinerariesVisibility)
+    }
+    
+    // Set terrain only for itineraries scheme
+    if (isItinerariesMode && map.current.getSource('terrainSource')) {
+      map.current.setTerrain({
+        source: 'terrainSource',
+        exaggeration: 1
+      })
+    } else {
+      // Remove terrain when not in itineraries mode
+      map.current.setTerrain(null)
+    }
+  }, [colorScheme, isLoaded])
+
+  // Handle all other layers visibility for itineraries mode
+  useEffect(() => {
+    if (!map.current || !isLoaded || colorScheme === 'climate') return
+    
+    const isItinerariesMode = colorScheme === 'itineraries'
+    
+    // Always visible layers (in overlanding and carnet modes)
+    // Note: border-post-highlight is handled by the border posts visibility effect
+    const alwaysVisibleLayers = ['country', 'border', 'border-highlight']
+    alwaysVisibleLayers.forEach(layerId => {
+      if (map.current!.getLayer(layerId)) {
+        const visibility = isItinerariesMode ? 'none' : 'visible'
+        map.current!.setLayoutProperty(layerId, 'visibility', visibility)
+      }
+    })
+    
+    // Zones and zone-highlight are handled by their own effect (only visible in overlanding)
+    // Border posts and border-post-highlight are handled by their own effect (with toggle logic)
   }, [colorScheme, isLoaded])
 
   // Set initial legend visibility based on screen size
@@ -1128,6 +1228,28 @@ export default function SimpleMapContainer({
               url: 'pmtiles://https://overlanding.io/country-borders.pmtiles'
             })
 
+            console.log('➕ Adding hillshade source')
+            map.current.addSource('hillshadeSource', {
+              type: 'raster-dem',
+              url: 'https://tiles.mapterhorn.com/tilejson.json'
+            })
+
+            console.log('➕ Adding terrain source')
+            map.current.addSource('terrainSource', {
+              type: 'raster-dem',
+              url: 'https://tiles.mapterhorn.com/tilejson.json'
+            })
+
+          // Add hillshade layer (above basemap, below all other layers) - insert before waterway_river
+          map.current.addLayer({
+            id: 'hillshade',
+            type: 'hillshade',
+            source: 'hillshadeSource',
+            layout: {
+              'visibility': colorScheme === 'itineraries' ? 'visible' : 'none'
+            }
+          }, 'waterway_river')
+
           // Add country layer (bottom layer) - insert before waterway_river
           map.current.addLayer({
             id: 'country',
@@ -1242,6 +1364,24 @@ export default function SimpleMapContainer({
           })
 
           console.log('✅ PMTiles layers added: country, zones, border, border_post')
+
+          // Add itinerary layer (for itineraries mode)
+          map.current.addLayer({
+            id: 'itinerary',
+            type: 'line',
+            source: 'country-border',
+            'source-layer': 'itinerary',
+            paint: {
+              'line-color': '#ef4444',
+              'line-width': 4,
+              'line-opacity': 0.5
+            },
+            layout: {
+              'visibility': colorScheme === 'itineraries' ? 'visible' : 'none'
+            }
+          })
+
+          console.log('✅ Itinerary layer added')
 
           // Add highlight layers (on top of regular layers)
           // Border highlight layer - white, wider line for selected borders
@@ -1386,7 +1526,7 @@ export default function SimpleMapContainer({
 
       {/* Legend Panel */}
       {showLegend && (
-        <div className="absolute top-4 left-16 bg-white bg-opacity-95 rounded-lg shadow-lg z-10 max-w-xs">
+        <div className="absolute top-4 left-16 bg-white bg-opacity-95 rounded-lg shadow-lg z-10 max-w-sm">
           <div className="p-3">
           {/* Color Scheme Selector */}
           <div className="mb-4">
@@ -1417,6 +1557,15 @@ export default function SimpleMapContainer({
                   }`}
               >
                 Climate
+              </button>
+              <button
+                onClick={() => setColorScheme('itineraries')}
+                className={`px-3 py-1 text-xs rounded transition-colors ${colorScheme === 'itineraries'
+                  ? 'bg-blue-600 text-white'
+                  : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                  }`}
+              >
+                Itineraries
               </button>
             </div>
 
@@ -1467,11 +1616,23 @@ export default function SimpleMapContainer({
             )}
 
             <h3 className="text-sm font-semibold mb-2">
-              {colorScheme === 'overlanding' ? 'Overlanding' : colorScheme === 'carnet' ? 'Carnet de passage en Douane (CpD)' : `Climate - ${climateDataType === 'temperature' ? 'Temperature' : 'Precipitation'}`}
+              {colorScheme === 'overlanding' ? 'Overlanding' : colorScheme === 'carnet' ? 'Carnet de passage en Douane (CpD)' : colorScheme === 'itineraries' ? 'Travel Itineraries' : `Climate - ${climateDataType === 'temperature' ? 'Temperature' : 'Precipitation'}`}
             </h3>
 
             <div className="space-y-1 text-xs">
-              {colorScheme === 'climate' ? (
+              {colorScheme === 'itineraries' ? (
+                <>
+                  <div className="text-gray-700 space-y-2">
+                    <p className="text-xs text-gray-600 mb-3">Travel routes and itineraries</p>
+                    <div className="space-y-1">
+                      <div className="flex items-center space-x-2">
+                        <div className="w-4 h-2 bg-red-500 opacity-50 rounded-sm"></div>
+                        <span className="text-gray-700">Itinerary Route</span>
+                      </div>
+                    </div>
+                  </div>
+                </>
+              ) : colorScheme === 'climate' ? (
                 <>
                   {climateDataType === 'temperature' ? (
                     <div className="text-gray-700 space-y-2">
