@@ -303,5 +303,103 @@ describe('Layer Visibility Verification Utilities', () => {
       expect(results[1].success).toBe(false);
       expect(results[1].error).toContain('country-border source not found');
     });
+
+    it('should handle layer creation errors gracefully', async () => {
+      // Setup
+      mockMap.getLayer.mockReturnValue(false);
+      mockMap.getSource = jest.fn().mockReturnValue({ type: 'vector' });
+      mockMap.addLayer = jest.fn().mockImplementation(() => {
+        throw new Error('Layer creation failed');
+      });
+
+      // Execute
+      const results = await verifyAndCreateItineraryLayers(mockMap as any);
+
+      // Verify
+      expect(results).toHaveLength(2);
+      expect(results[0].success).toBe(false);
+      expect(results[0].error).toContain('Layer creation failed');
+      expect(results[1].success).toBe(false);
+      expect(results[1].error).toContain('Layer creation failed');
+    });
+  });
+
+  describe('Error Recovery and Stability', () => {
+    it('should handle null map gracefully in all functions', async () => {
+      // Test all main functions with null map
+      const verifyResult = await verifyLayerVisibility(null, 'test', 'visible');
+      expect(verifyResult.success).toBe(false);
+      expect(verifyResult.error).toBe('Map not available for verification');
+
+      const multiVerifyResult = await verifyMultipleLayersVisibility(null, { 'test': 'visible' });
+      expect(multiVerifyResult.length).toBe(1);
+      expect(multiVerifyResult[0].success).toBe(false);
+
+      const transitionResult = await verifyItineraryModeTransition(null, 'itineraries');
+      expect(transitionResult.success).toBe(false);
+
+      const cleanupResult = await performItineraryCleanup(null);
+      expect(cleanupResult.success).toBe(false);
+
+      const createResult = await verifyAndCreateItineraryLayers(null);
+      expect(createResult[0].success).toBe(false);
+    });
+
+    it('should handle map method errors gracefully', async () => {
+      // Setup map that throws errors
+      const errorMap = {
+        getLayer: jest.fn().mockImplementation(() => {
+          throw new Error('getLayer failed');
+        }),
+        getLayoutProperty: jest.fn(),
+        setLayoutProperty: jest.fn()
+      };
+
+      const result = await verifyLayerVisibility(errorMap as any, 'test', 'visible');
+      expect(result.success).toBe(false);
+      expect(result.error).toBe('getLayer failed');
+    });
+
+    it('should handle concurrent verification requests', async () => {
+      // Setup
+      mockMap.getLayer.mockReturnValue(true);
+      mockMap.getLayoutProperty.mockReturnValue('visible');
+
+      // Execute multiple concurrent verifications
+      const promises = Array.from({ length: 10 }, (_, i) =>
+        verifyLayerVisibility(mockMap as any, `layer-${i}`, 'visible', { timeout: 100 })
+      );
+
+      const results = await Promise.all(promises);
+
+      // Verify all succeeded
+      expect(results).toHaveLength(10);
+      results.forEach((result, i) => {
+        expect(result.success).toBe(true);
+        expect(result.layerId).toBe(`layer-${i}`);
+      });
+    });
+
+    it('should handle rapid successive operations', async () => {
+      // Setup
+      mockMap.getLayer.mockReturnValue(true);
+      mockMap.getLayoutProperty.mockReturnValue('none');
+      mockMap.setLayoutProperty = jest.fn();
+      mockMap.setTerrain = jest.fn();
+
+      // Execute rapid successive cleanup operations with shorter timeout
+      const promises = Array.from({ length: 3 }, () =>
+        performItineraryCleanup(mockMap as any, { timeout: 10 })
+      );
+
+      const results = await Promise.all(promises);
+
+      // All should complete successfully
+      expect(results).toHaveLength(3);
+      results.forEach(result => {
+        expect(result.success).toBe(true);
+        expect(result.results.length).toBeGreaterThan(0);
+      });
+    }, 10000); // Increase timeout for this test
   });
 });

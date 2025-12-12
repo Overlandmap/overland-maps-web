@@ -70,8 +70,8 @@ const TestWrapper = ({ children, initialColorScheme = 'overlanding' }: {
   const [language, setLanguage] = useState('en');
 
   return (
-    <LanguageProvider value={{ language, setLanguage }}>
-      <ColorSchemeProvider value={{ colorScheme, setColorScheme }}>
+    <LanguageProvider language={language} setLanguage={setLanguage}>
+      <ColorSchemeProvider colorScheme={colorScheme} setColorScheme={setColorScheme}>
         {children}
       </ColorSchemeProvider>
     </LanguageProvider>
@@ -95,7 +95,7 @@ describe('SimpleMapContainer Integration Tests - Final Validation', () => {
         setTimeout(() => callback(), 0);
       } else if (event === 'click') {
         // Store click handler for later use
-        mockMap._clickHandler = callback;
+        (mockMap as any)._clickHandler = callback;
       }
     });
     
@@ -111,7 +111,7 @@ describe('SimpleMapContainer Integration Tests - Final Validation', () => {
     mockMap.getLayer.mockImplementation(() => null);
     
     // Mock querySourceFeatures to return sample itinerary data
-    mockMap.querySourceFeatures.mockImplementation((source, options) => {
+    mockMap.querySourceFeatures.mockImplementation((source: string, options: any) => {
       if (source === 'country-border' && options?.sourceLayer === 'itinerary') {
         return [
           {
@@ -574,7 +574,7 @@ describe('SimpleMapContainer Integration Tests - Final Validation', () => {
       // Query for itinerary features (simulating real PMTiles data)
       const features = mockMap.querySourceFeatures('country-border', {
         sourceLayer: 'itinerary'
-      });
+      }) as any[];
       
       expect(features.length).toBe(2);
       expect(features[0].properties.itineraryId).toBe('G6');
@@ -590,7 +590,7 @@ describe('SimpleMapContainer Integration Tests - Final Validation', () => {
 
     test('should handle missing itineraryId properties in real data gracefully', async () => {
       // Mock data with missing itineraryId
-      mockMap.querySourceFeatures.mockImplementation((source, options) => {
+      mockMap.querySourceFeatures.mockImplementation((source: string, options: any) => {
         if (source === 'country-border' && options?.sourceLayer === 'itinerary') {
           return [
             {

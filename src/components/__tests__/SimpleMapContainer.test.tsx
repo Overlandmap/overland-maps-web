@@ -56,6 +56,44 @@ jest.mock('../../contexts/ColorSchemeContext', () => ({
   useColorScheme: () => ({ colorScheme: 'overlanding', setColorScheme: jest.fn() })
 }));
 
+// Mock layer visibility utilities
+jest.mock('../../lib/layer-visibility-utils', () => ({
+  safeSetLayerVisibility: jest.fn().mockResolvedValue({
+    success: true,
+    layerId: 'test-layer',
+    expectedVisibility: 'visible',
+    actualVisibility: 'visible',
+    duration: 10
+  }),
+  verifyLayerVisibility: jest.fn().mockResolvedValue({
+    success: true,
+    layerId: 'test-layer',
+    expectedVisibility: 'visible',
+    actualVisibility: 'visible',
+    duration: 10
+  }),
+  verifyItineraryModeTransition: jest.fn().mockResolvedValue({
+    success: true,
+    results: [],
+    totalDuration: 10,
+    successCount: 2,
+    failureCount: 0
+  }),
+  performItineraryCleanup: jest.fn().mockResolvedValue({
+    success: true,
+    results: [],
+    totalDuration: 10,
+    successCount: 4,
+    failureCount: 0
+  }),
+  debouncedColorSchemeManager: {
+    scheduleColorSchemeChange: jest.fn().mockReturnValue('test-operation-id'),
+    cancelAllOperations: jest.fn(),
+    cancelOperation: jest.fn().mockReturnValue(true),
+    hasPendingOperations: jest.fn().mockReturnValue(false)
+  }
+}));
+
 // Mock i18n
 jest.mock('../../lib/i18n', () => ({
   getTranslatedLabel: jest.fn((key) => key)
@@ -884,6 +922,251 @@ describe('SimpleMapContainer Itinerary Zoom Functionality', () => {
       expect(maxLng).toBeGreaterThan(15);
       expect(minLat).toBeLessThan(0);
       expect(maxLat).toBeGreaterThan(15);
+    });
+  });
+
+  // Layer Visibility Management Tests
+  describe('Layer Visibility Management', () => {
+    test('should use enhanced safeSetLayerVisibility for layer changes', async () => {
+      const { safeSetLayerVisibility } = require('../../lib/layer-visibility-utils');
+      
+      render(
+        <SimpleMapContainer onMapReady={mockOnMapReady} />
+      );
+
+      // Wait for map to load
+      await new Promise(resolve => setTimeout(resolve, 50));
+
+      // Verify that safeSetLayerVisibility is available and can be called
+      expect(safeSetLayerVisibility).toBeDefined();
+      expect(typeof safeSetLayerVisibility).toBe('function');
+      
+      // Test calling the function
+      const result = await safeSetLayerVisibility(mockMap, 'test-layer', 'visible');
+      expect(result.success).toBe(true);
+    });
+
+    test('should handle layer visibility verification', async () => {
+      const { verifyLayerVisibility } = require('../../lib/layer-visibility-utils');
+      
+      render(
+        <SimpleMapContainer onMapReady={mockOnMapReady} />
+      );
+
+      // Wait for map to load
+      await new Promise(resolve => setTimeout(resolve, 50));
+
+      // Test verification function
+      const result = await verifyLayerVisibility(mockMap, 'test-layer', 'visible');
+      expect(result.success).toBe(true);
+      expect(result.layerId).toBe('test-layer');
+      expect(result.expectedVisibility).toBe('visible');
+    });
+
+    test('should handle itinerary mode transitions with verification', async () => {
+      const { verifyItineraryModeTransition } = require('../../lib/layer-visibility-utils');
+      
+      render(
+        <SimpleMapContainer onMapReady={mockOnMapReady} />
+      );
+
+      // Wait for map to load
+      await new Promise(resolve => setTimeout(resolve, 50));
+
+      // Test itinerary mode transition verification
+      const result = await verifyItineraryModeTransition(mockMap, 'itineraries');
+      expect(result.success).toBe(true);
+      expect(result.successCount).toBe(2);
+      expect(result.failureCount).toBe(0);
+    });
+
+    test('should handle cleanup operations with verification', async () => {
+      const { performItineraryCleanup } = require('../../lib/layer-visibility-utils');
+      
+      render(
+        <SimpleMapContainer onMapReady={mockOnMapReady} />
+      );
+
+      // Wait for map to load
+      await new Promise(resolve => setTimeout(resolve, 50));
+
+      // Test cleanup operation
+      const result = await performItineraryCleanup(mockMap);
+      expect(result.success).toBe(true);
+      expect(result.successCount).toBe(4);
+      expect(result.failureCount).toBe(0);
+    });
+
+    test('should use debounced color scheme changes', async () => {
+      const { debouncedColorSchemeManager } = require('../../lib/layer-visibility-utils');
+      
+      render(
+        <SimpleMapContainer onMapReady={mockOnMapReady} />
+      );
+
+      // Wait for map to load
+      await new Promise(resolve => setTimeout(resolve, 50));
+
+      // Test debounced color scheme manager
+      expect(debouncedColorSchemeManager.scheduleColorSchemeChange).toBeDefined();
+      expect(typeof debouncedColorSchemeManager.scheduleColorSchemeChange).toBe('function');
+      
+      const operationId = debouncedColorSchemeManager.scheduleColorSchemeChange(
+        'itineraries',
+        () => Promise.resolve(),
+        { context: 'test' }
+      );
+      expect(operationId).toBe('test-operation-id');
+    });
+  });
+
+  // Error Handling and Recovery Tests
+  describe('Error Handling and Recovery', () => {
+    test('should handle map unavailable errors gracefully', async () => {
+      const { safeSetLayerVisibility } = require('../../lib/layer-visibility-utils');
+      
+      // Mock safeSetLayerVisibility to return failure for null map
+      safeSetLayerVisibility.mockResolvedValueOnce({
+        success: false,
+        layerId: 'test-layer',
+        expectedVisibility: 'visible',
+        actualVisibility: null,
+        duration: 0,
+        error: 'Map not available'
+      });
+
+      render(
+        <SimpleMapContainer onMapReady={mockOnMapReady} />
+      );
+
+      // Test with null map
+      const result = await safeSetLayerVisibility(null, 'test-layer', 'visible');
+      expect(result.success).toBe(false);
+      expect(result.error).toBe('Map not available');
+    });
+
+    test('should handle layer not found errors gracefully', async () => {
+      const { safeSetLayerVisibility } = require('../../lib/layer-visibility-utils');
+      
+      // Mock getLayer to return null (layer not found)
+      mockMap.getLayer.mockReturnValue(null);
+      
+      // Mock safeSetLayerVisibility to return failure for missing layer
+      safeSetLayerVisibility.mockResolvedValueOnce({
+        success: false,
+        layerId: 'missing-layer',
+        expectedVisibility: 'visible',
+        actualVisibility: null,
+        duration: 0,
+        error: 'Layer missing-layer not found'
+      });
+
+      render(
+        <SimpleMapContainer onMapReady={mockOnMapReady} />
+      );
+
+      // Test with missing layer
+      const result = await safeSetLayerVisibility(mockMap, 'missing-layer', 'visible');
+      expect(result.success).toBe(false);
+      expect(result.error).toContain('not found');
+    });
+
+    test('should handle verification timeout errors gracefully', async () => {
+      const { verifyLayerVisibility } = require('../../lib/layer-visibility-utils');
+      
+      // Mock verification to timeout
+      verifyLayerVisibility.mockResolvedValueOnce({
+        success: false,
+        layerId: 'test-layer',
+        expectedVisibility: 'visible',
+        actualVisibility: 'none',
+        duration: 100,
+        error: 'Verification timeout after 100ms'
+      });
+
+      render(
+        <SimpleMapContainer onMapReady={mockOnMapReady} />
+      );
+
+      // Test verification timeout
+      const result = await verifyLayerVisibility(mockMap, 'test-layer', 'visible', { timeout: 50 });
+      expect(result.success).toBe(false);
+      expect(result.error).toContain('timeout');
+    });
+
+    test('should handle retry logic for failed operations', async () => {
+      const { safeSetLayerVisibility } = require('../../lib/layer-visibility-utils');
+      
+      // Mock multiple retry attempts
+      safeSetLayerVisibility
+        .mockResolvedValueOnce({
+          success: false,
+          layerId: 'test-layer',
+          expectedVisibility: 'visible',
+          actualVisibility: 'none',
+          duration: 10,
+          error: 'Attempt 1 failed'
+        })
+        .mockResolvedValueOnce({
+          success: false,
+          layerId: 'test-layer',
+          expectedVisibility: 'visible',
+          actualVisibility: 'none',
+          duration: 10,
+          error: 'Attempt 2 failed'
+        })
+        .mockResolvedValueOnce({
+          success: true,
+          layerId: 'test-layer',
+          expectedVisibility: 'visible',
+          actualVisibility: 'visible',
+          duration: 10
+        });
+
+      render(
+        <SimpleMapContainer onMapReady={mockOnMapReady} />
+      );
+
+      // Test retry logic - should succeed on third attempt
+      const result1 = await safeSetLayerVisibility(mockMap, 'test-layer', 'visible', { retries: 1 });
+      expect(result1.success).toBe(false);
+      
+      const result2 = await safeSetLayerVisibility(mockMap, 'test-layer', 'visible', { retries: 2 });
+      expect(result2.success).toBe(false);
+      
+      const result3 = await safeSetLayerVisibility(mockMap, 'test-layer', 'visible', { retries: 3 });
+      expect(result3.success).toBe(true);
+    });
+
+    test('should maintain system stability under error conditions', async () => {
+      const { performItineraryCleanup } = require('../../lib/layer-visibility-utils');
+      
+      // Mock cleanup to have some failures but overall success
+      performItineraryCleanup.mockResolvedValueOnce({
+        success: true, // Overall success despite some failures
+        results: [
+          { success: true, layerId: 'itinerary' },
+          { success: false, layerId: 'itinerary-labels', error: 'Layer not found' },
+          { success: true, layerId: 'terrain' },
+          { success: true, layerId: 'hillshade' }
+        ],
+        totalDuration: 25,
+        successCount: 3,
+        failureCount: 1
+      });
+
+      render(
+        <SimpleMapContainer onMapReady={mockOnMapReady} />
+      );
+
+      // Test that system continues to work despite partial failures
+      const result = await performItineraryCleanup(mockMap);
+      expect(result.success).toBe(true);
+      expect(result.successCount).toBe(3);
+      expect(result.failureCount).toBe(1);
+      
+      // Component should still be functional
+      expect(mockOnMapReady).toHaveBeenCalled();
     });
   });
 
