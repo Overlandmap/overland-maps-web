@@ -1038,54 +1038,159 @@ export default function SimpleMapContainer({
     }
   }, [colorScheme, isLoaded])
 
-  // Handle itinerary, hillshade, and terrain for itineraries mode
-  useEffect(() => {
-    if (!map.current || !isLoaded || colorScheme === 'climate') return
-    
-    const isItinerariesMode = colorScheme === 'itineraries'
-    const itinerariesVisibility = isItinerariesMode ? 'visible' : 'none'
-    
-    // Show itinerary layer only for itineraries scheme
-    if (map.current.getLayer('itinerary')) {
-      map.current.setLayoutProperty('itinerary', 'visibility', itinerariesVisibility)
-    }
-    
-    // Show hillshade layer only for itineraries scheme
-    if (map.current.getLayer('hillshade')) {
-      map.current.setLayoutProperty('hillshade', 'visibility', itinerariesVisibility)
-    }
-    
-    // Set terrain only for itineraries scheme
-    if (isItinerariesMode && map.current.getSource('terrainSource')) {
-      map.current.setTerrain({
-        source: 'terrainSource',
-        exaggeration: 1
-      })
-    } else {
-      // Remove terrain when not in itineraries mode
-      map.current.setTerrain(null)
-    }
-  }, [colorScheme, isLoaded])
-
-  // Handle all other layers visibility for itineraries mode
+  // Centralized itinerary layer visibility management with enhanced debounced cleanup
+  // Consolidates all itinerary-related layer visibility logic into a single effect
+  // Implements Requirements: 1.1, 1.2, 1.3, 1.4, 2.1, 2.4, 3.2, 3.4
   useEffect(() => {
     if (!map.current || !isLoaded || colorScheme === 'climate') return
     
     const isItinerariesMode = colorScheme === 'itineraries'
     
-    // Always visible layers (in overlanding and carnet modes)
-    // Note: border-post-highlight is handled by the border posts visibility effect
-    const alwaysVisibleLayers = ['country', 'border', 'border-highlight']
-    alwaysVisibleLayers.forEach(layerId => {
-      if (map.current!.getLayer(layerId)) {
-        const visibility = isItinerariesMode ? 'none' : 'visible'
-        map.current!.setLayoutProperty(layerId, 'visibility', visibility)
-      }
+    // Use enhanced debounced color scheme manager for better stability
+    const operationId = import('../lib/layer-visibility-utils').then(({ debouncedColorSchemeManager }) => {
+      return debouncedColorSchemeManager.scheduleColorSchemeChange(
+        colorScheme,
+        async () => {
+          if (!map.current) return
+          
+          try {
+            console.log(`🔄 Enhanced itinerary layer management - mode: ${colorScheme}`)
+            
+            if (isItinerariesMode) {
+              // === SWITCHING TO ITINERARIES MODE ===
+              
+              // Import layer visibility utilities dynamically
+              const { verifyAndCreateItineraryLayers, verifyItineraryModeTransition } = await import('../lib/layer-visibility-utils')
+              
+              // 1. Verify and create missing itinerary layers before making them visible
+              const creationResults = await verifyAndCreateItineraryLayers(map.current, {
+                context: `switching to ${colorScheme} mode`
+              })
+              
+              const creationFailed = creationResults.some(result => !result.success)
+              if (creationFailed) {
+                console.error('❌ Some itinerary layers could not be created/verified')
+                creationResults.forEach(result => {
+                  if (!result.success) {
+                    console.error(`❌ Layer ${result.layerId}: ${result.error}`)
+                  }
+                })
+              }
+              
+              // 2. Hide all overlanding layers first
+              const overlandingLayers = ['country', 'border', 'border-highlight', 'zones', 'zone-highlight', 'border_post', 'border-post-highlight']
+              for (const layerId of overlandingLayers) {
+                if (map.current.getLayer(layerId)) {
+                  map.current.setLayoutProperty(layerId, 'visibility', 'none')
+                  console.log(`✅ Hidden ${layerId} for itineraries mode`)
+                }
+              }
+              
+              // 3. Show itinerary layers (only if they exist)
+              if (map.current.getLayer('itinerary')) {
+                map.current.setLayoutProperty('itinerary', 'visibility', 'visible')
+                console.log('✅ Itinerary layer shown')
+              }
+              
+              if (map.current.getLayer('itinerary-labels')) {
+                map.current.setLayoutProperty('itinerary-labels', 'visibility', 'visible')
+                console.log('✅ Itinerary labels layer shown')
+              }
+              
+              // 4. Configure hillshade for itineraries mode
+              if (map.current.getLayer('hillshade')) {
+                map.current.setLayoutProperty('hillshade', 'visibility', 'visible')
+                console.log('✅ Hillshade shown for itineraries mode')
+              }
+              
+              // 5. Enable terrain for itineraries mode
+              if (map.current.getSource('terrainSource')) {
+                try {
+                  map.current.setTerrain({
+                    source: 'terrainSource',
+                    exaggeration: 1
+                  })
+                  console.log('✅ Terrain enabled for itineraries mode')
+                } catch (error) {
+                  console.error('❌ Error enabling terrain:', error)
+                }
+              }
+              
+              // 6. Verify that the transition was successful
+              const verificationResult = await verifyItineraryModeTransition(map.current, 'itineraries', {
+                context: `switching to ${colorScheme} mode`
+              })
+              
+              if (!verificationResult.success) {
+                console.error(`❌ Itinerary mode transition verification failed: ${verificationResult.failureCount} failures`)
+              }
+              
+            } else {
+              // === SWITCHING AWAY FROM ITINERARIES MODE ===
+              
+              // Import enhanced cleanup function
+              const { performItineraryCleanup } = await import('../lib/layer-visibility-utils')
+              
+              // 1. Perform enhanced cleanup with verification
+              const cleanupResult = await performItineraryCleanup(map.current, {
+                context: `switching from itineraries to ${colorScheme} mode`
+              })
+              
+              if (!cleanupResult.success) {
+                console.error(`❌ Enhanced itinerary cleanup failed: ${cleanupResult.failureCount} failures`)
+                cleanupResult.results.forEach(result => {
+                  if (!result.success) {
+                    console.error(`❌ Cleanup failed for ${result.layerId}: ${result.error}`)
+                  }
+                })
+              }
+              
+              // 2. Show overlanding layers based on current mode
+              const overlandingLayers = ['country', 'border', 'border-highlight']
+              for (const layerId of overlandingLayers) {
+                if (map.current.getLayer(layerId)) {
+                  map.current.setLayoutProperty(layerId, 'visibility', 'visible')
+                  console.log(`✅ Shown ${layerId} for ${colorScheme} mode`)
+                }
+              }
+              
+              // 3. Apply appropriate colors for overlanding/carnet modes
+              if (colorScheme === 'overlanding' || colorScheme === 'carnet') {
+                // Small delay to ensure layers are visible before applying colors
+                setTimeout(() => {
+                  if (map.current && map.current.getLayer('country')) {
+                    updateMapColors(colorScheme)
+                    console.log(`✅ Applied ${colorScheme} colors`)
+                  }
+                }, 50)
+              }
+            }
+            
+            console.log(`✅ Enhanced itinerary layer management completed for ${colorScheme} mode`)
+            
+          } catch (error) {
+            console.error('❌ Error in enhanced itinerary layer management:', error)
+          }
+        },
+        {
+          debounceMs: 150, // Enhanced debounce timing for better stability
+          context: `itinerary-layer-management-${colorScheme}`,
+          maxPendingOperations: 3
+        }
+      )
     })
     
-    // Zones and zone-highlight are handled by their own effect (only visible in overlanding)
-    // Border posts and border-post-highlight are handled by their own effect (with toggle logic)
-  }, [colorScheme, isLoaded])
+    // Cleanup function to cancel pending operations
+    return () => {
+      operationId.then(id => {
+        import('../lib/layer-visibility-utils').then(({ debouncedColorSchemeManager }) => {
+          debouncedColorSchemeManager.cancelOperation(id)
+        })
+      }).catch(() => {
+        // Ignore errors during cleanup
+      })
+    }
+  }, [colorScheme, isLoaded, updateMapColors])
 
   // Set initial legend visibility based on screen size
   useEffect(() => {
@@ -1108,6 +1213,39 @@ export default function SimpleMapContainer({
       window.removeEventListener('resize', checkScreenSize)
     }
   }, [])
+
+  // Performance monitoring for layer visibility changes
+  // Requirements: 3.1 - Add metrics for debugging performance issues
+  useEffect(() => {
+    if (!isLoaded) return
+
+    // Log performance stats periodically (every 30 seconds) for debugging
+    const performanceLogInterval = setInterval(() => {
+      import('../lib/layer-visibility-utils').then(({ getLayerVisibilityPerformanceStats }) => {
+        const stats = getLayerVisibilityPerformanceStats();
+        
+        // Only log if there have been operations
+        if (stats.totalOperations > 0) {
+          console.group('📊 Layer Visibility Performance (Periodic Report)');
+          console.log(`Operations: ${stats.totalOperations} (${stats.successfulOperations} successful, ${stats.failedOperations} failed)`);
+          console.log(`Average Duration: ${stats.averageDuration.toFixed(2)}ms`);
+          console.log(`Slow Operations: ${stats.slowOperations} (${stats.slowOperationPercentage.toFixed(1)}%)`);
+          
+          if (stats.slowOperationPercentage > 20) {
+            console.warn(`⚠️ High percentage of slow operations detected: ${stats.slowOperationPercentage.toFixed(1)}%`);
+          }
+          
+          console.groupEnd();
+        }
+      }).catch(() => {
+        // Ignore import errors
+      });
+    }, 30000); // 30 seconds
+
+    return () => {
+      clearInterval(performanceLogInterval);
+    };
+  }, [isLoaded])
 
   useEffect(() => {
     if (!mapContainer.current || map.current) return

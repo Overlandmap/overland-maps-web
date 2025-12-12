@@ -4,6 +4,7 @@ import { join } from 'path'
 import { LanguageProvider } from '../../../contexts/LanguageContext'
 import { AuthProvider } from '../../../contexts/AuthContext'
 import WorldMapApp from '../../../components/WorldMapApp'
+import TopMenu from '../../../components/TopMenu'
 
 interface BorderPostPageProps {
   params: {
@@ -40,7 +41,10 @@ export default function BorderPostPage({ params }: BorderPostPageProps) {
   return (
     <AuthProvider>
       <LanguageProvider>
-        <main className="h-screen">
+        <main className="h-screen relative">
+          <div className="absolute top-4 right-4 z-50">
+            <TopMenu />
+          </div>
           <BorderPostMapWrapper borderPostData={borderPostData} borderPostId={params.id} />
         </main>
       </LanguageProvider>

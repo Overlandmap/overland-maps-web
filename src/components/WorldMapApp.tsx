@@ -357,6 +357,24 @@ export default function WorldMapApp({ initialCountry, initialBorder, initialBord
   }, [mapInteractions])
 
   /**
+   * Handle itinerary zoom
+   */
+  const handleItineraryZoom = useCallback(async (bounds: [[number, number], [number, number]]) => {
+    console.log('🛣️ Itinerary zoom requested:', bounds)
+    
+    try {
+      if (mapInteractions?.fitBounds) {
+        await mapInteractions.fitBounds(bounds)
+        console.log(`✅ Zoomed to itinerary bounds: [[${bounds[0][0]}, ${bounds[0][1]}], [${bounds[1][0]}, ${bounds[1][1]}]]`)
+      } else {
+        console.warn('⚠️ fitBounds not available in map interactions')
+      }
+    } catch (error) {
+      console.error('❌ Failed to zoom to itinerary bounds:', error)
+    }
+  }, [mapInteractions])
+
+  /**
    * Handle map ready callback
    */
   const handleMapReady = useCallback((interactions: any) => {
@@ -660,6 +678,7 @@ export default function WorldMapApp({ initialCountry, initialBorder, initialBord
           onBorderClick={handleBorderClick}
           onBorderPostClick={handleBorderPostClick}
           onBorderPostZoom={handleBorderPostZoom}
+          onItineraryZoom={handleItineraryZoom}
         />
 
         {/* Disclaimer Popup */}
