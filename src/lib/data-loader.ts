@@ -242,6 +242,30 @@ export async function getZoneById(zoneId: string, options?: LoadingOptions): Pro
 }
 
 /**
+ * Load itinerary data with enhanced caching and error handling
+ */
+export async function loadItineraryData(options?: LoadingOptions): Promise<{
+  itineraries: any[]
+  metadata: any
+}> {
+  return loadDataWithRetry(`${getDataBasePath()}/itineraries.json`, 'itineraries', options)
+}
+
+/**
+ * Get itinerary by ID from loaded itinerary data
+ */
+export async function getItineraryById(itineraryId: string, options?: LoadingOptions): Promise<any | null> {
+  try {
+    const data = await loadItineraryData(options)
+    const itinerary = data.itineraries.find((item: any) => item.id === itineraryId)
+    return itinerary || null
+  } catch (error) {
+    console.error(`Failed to load itinerary ${itineraryId}:`, error)
+    return null
+  }
+}
+
+/**
  * Load border GeoJSON for MapLibre with enhanced error handling
  */
 export async function loadBorderGeoJSON(
@@ -327,12 +351,6 @@ export async function getCountryByADM0A3(adm0a3: string, options?: LoadingOption
     
     if (!country) {
       console.log(`❌ No match found for ADM0_A3: "${normalizedADM0A3}"`)
-      // Log a few sample countries for debugging
-      console.log('Sample countries:', countries.slice(0, 3).map(c => ({
-        id: c.id,
-        name: c.name,
-        adm0_a3: c.parameters?.adm0_a3
-      })))
     }
     
     return country || null

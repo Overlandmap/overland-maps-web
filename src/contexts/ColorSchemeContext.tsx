@@ -53,7 +53,7 @@ const getStoredColorScheme = (): ColorScheme => {
       }
       
       const stored = localStorage.getItem(COLOR_SCHEME_STORAGE_KEY)
-      if (stored && (stored === 'overlanding' || stored === 'carnet')) {
+      if (stored && isValidColorScheme(stored)) {
         return stored as ColorScheme
       }
     }
@@ -83,8 +83,7 @@ export function ColorSchemeProvider({ children }: ColorSchemeProviderProps) {
   // Setter function - no localStorage persistence for now
   const setColorScheme = (newScheme: ColorScheme) => {
     setColorSchemeState(newScheme)
-    // TODO: Re-enable localStorage persistence once synchronization is confirmed working
-    // setStoredColorScheme(newScheme)
+    setStoredColorScheme(newScheme)
   }
 
   const value: ColorSchemeContextType = {

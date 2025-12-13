@@ -315,11 +315,7 @@ export default function DetailSidebar({
     const loadBorderPostsForBorder = () => {
       if (selectedFeature?.type === 'border' && selectedFeature.data) {
         const borderData = selectedFeature.data
-        console.log('🔍 DEBUG: Border data:', borderData)
-        
         const borderPostsField = (borderData as any).border_posts
-        console.log('🔍 DEBUG: border_posts field:', borderPostsField)
-        console.log('🔍 DEBUG: border_posts type:', typeof borderPostsField)
         
         // border_posts is a map of ID → name from Firestore
         if (borderPostsField && typeof borderPostsField === 'object') {
@@ -1163,6 +1159,7 @@ export default function DetailSidebar({
    */
   const renderItineraryDetails = (feature: any) => {
     const properties = feature?.properties || {}
+    console.log('🎨 Rendering itinerary details with properties:', properties)
     
     return (
       <div className="space-y-4">

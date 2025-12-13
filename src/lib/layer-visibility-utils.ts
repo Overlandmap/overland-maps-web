@@ -186,7 +186,7 @@ export async function verifyMultipleLayersVisibility(
 ): Promise<VisibilityVerificationResult[]> {
   const { context = '' } = options;
   
-  console.log(`🔍 Verifying visibility for ${Object.keys(layerVisibilityMap).length} layers${context ? ` (${context})` : ''}`);
+;
   
   const verificationPromises = Object.entries(layerVisibilityMap).map(([layerId, expectedVisibility]) =>
     verifyLayerVisibility(map, layerId, expectedVisibility, options)
@@ -197,9 +197,7 @@ export async function verifyMultipleLayersVisibility(
   const successCount = results.filter(r => r.success).length;
   const totalCount = results.length;
   
-  if (successCount === totalCount) {
-    console.log(`✅ All ${totalCount} layer visibility verifications succeeded${context ? ` (${context})` : ''}`);
-  } else {
+  if (successCount !== totalCount) {
     console.error(`❌ ${totalCount - successCount} of ${totalCount} layer visibility verifications failed${context ? ` (${context})` : ''}`);
   }
   
@@ -233,10 +231,11 @@ export async function verifyItineraryModeTransition(
   const expectedVisibility: 'visible' | 'none' = targetMode === 'itineraries' ? 'visible' : 'none';
   const layersToVerify: Record<string, 'visible' | 'none'> = {
     'itinerary': expectedVisibility,
-    'itinerary-labels': expectedVisibility
+    'itinerary-labels': expectedVisibility,
+    'itinerary-highlight': expectedVisibility
   };
   
-  console.log(`🔍 Verifying itinerary mode transition to ${targetMode}${context ? ` (${context})` : ''}`);
+;
   
   const results = await verifyMultipleLayersVisibility(map, layersToVerify, {
     ...options,
@@ -256,9 +255,7 @@ export async function verifyItineraryModeTransition(
     context: `${context} - ${targetMode} transition`
   };
   
-  if (batchResult.success) {
-    console.log(`✅ Itinerary mode transition to ${targetMode} verified successfully in ${totalDuration.toFixed(2)}ms${context ? ` (${context})` : ''}`);
-  } else {
+  if (!batchResult.success) {
     console.error(`❌ Itinerary mode transition to ${targetMode} verification failed: ${failureCount} failures in ${totalDuration.toFixed(2)}ms${context ? ` (${context})` : ''}`);
   }
   
@@ -279,7 +276,7 @@ export async function performItineraryCleanup(
   
   // Start performance monitoring for cleanup operation
   layerVisibilityPerformanceMonitor.startOperation(operationId, 'itinerary-cleanup', 'cleanup', context);
-  console.log(`🧹 Starting enhanced itinerary cleanup${context ? ` (${context})` : ''}`);
+;
   
   if (!map) {
     const result: BatchVerificationResult = {
@@ -297,14 +294,14 @@ export async function performItineraryCleanup(
 
   const cleanupOperations: Array<() => Promise<VisibilityVerificationResult>> = [];
 
-  // 1. Hide both itinerary and itinerary-labels layers
-  const itineraryLayers = ['itinerary', 'itinerary-labels'];
+  // 1. Hide itinerary, itinerary-labels, and itinerary-highlight layers
+  const itineraryLayers = ['itinerary', 'itinerary-labels', 'itinerary-highlight'];
   for (const layerId of itineraryLayers) {
     cleanupOperations.push(async () => {
       try {
         if (map.getLayer(layerId)) {
           map.setLayoutProperty(layerId, 'visibility', 'none');
-          console.log(`✅ Hidden ${layerId} layer during cleanup`);
+;
         }
         return await verifyLayerVisibility(map, layerId, 'none', {
           ...options,
@@ -328,7 +325,7 @@ export async function performItineraryCleanup(
   cleanupOperations.push(async () => {
     try {
       map.setTerrain(null);
-      console.log('✅ Terrain disabled during itinerary cleanup');
+;
       return {
         success: true,
         layerId: 'terrain',
@@ -354,7 +351,7 @@ export async function performItineraryCleanup(
     try {
       if (map.getLayer('hillshade')) {
         map.setLayoutProperty('hillshade', 'visibility', 'none');
-        console.log('✅ Hillshade hidden during itinerary cleanup');
+;
       }
       return await verifyLayerVisibility(map, 'hillshade', 'none', {
         ...options,
@@ -392,9 +389,7 @@ export async function performItineraryCleanup(
   // End performance monitoring for cleanup operation
   layerVisibilityPerformanceMonitor.endOperation(operationId, 'itinerary-cleanup', 'cleanup', batchResult.success, context);
   
-  if (batchResult.success) {
-    console.log(`✅ Enhanced itinerary cleanup completed successfully in ${totalDuration.toFixed(2)}ms${context ? ` (${context})` : ''}`);
-  } else {
+  if (!batchResult.success) {
     console.error(`❌ Enhanced itinerary cleanup failed: ${failureCount} failures in ${totalDuration.toFixed(2)}ms${context ? ` (${context})` : ''}`);
   }
   
@@ -426,7 +421,7 @@ export async function verifyAndCreateItineraryLayers(
   
   // Start performance monitoring for layer creation
   layerVisibilityPerformanceMonitor.startOperation(operationId, 'itinerary-layers', 'create', context);
-  console.log(`🔍 Verifying and creating itinerary layers${context ? ` (${context})` : ''}`);
+;
   
   if (!map) {
     layerVisibilityPerformanceMonitor.endOperation(operationId, 'itinerary-layers', 'create', false, context);
@@ -481,6 +476,24 @@ export async function verifyAndCreateItineraryLayers(
   }, context);
   results.push(labelsResult);
 
+  // Check and create itinerary-highlight layer if it doesn't exist
+  const highlightResult = await verifyAndCreateLayer(map, 'itinerary-highlight', {
+    id: 'itinerary-highlight',
+    type: 'line',
+    source: 'country-border',
+    'source-layer': 'itinerary',
+    paint: {
+      'line-color': '#ffffff', // White color for visibility
+      'line-width': 6, // Wider than default itinerary line (4px)
+      'line-opacity': 1.0 // Full opacity for better visibility
+    },
+    filter: ['==', ['get', 'itineraryDocId'], ''], // Initially show nothing
+    layout: {
+      'visibility': 'none' // Start hidden, will be shown when switching to itineraries mode
+    }
+  }, context);
+  results.push(highlightResult);
+
   const successCount = results.filter(r => r.success).length;
   const totalCount = results.length;
   const allSuccessful = successCount === totalCount;
@@ -488,9 +501,7 @@ export async function verifyAndCreateItineraryLayers(
   // End performance monitoring for layer creation
   layerVisibilityPerformanceMonitor.endOperation(operationId, 'itinerary-layers', 'create', allSuccessful, context);
   
-  if (allSuccessful) {
-    console.log(`✅ All ${totalCount} itinerary layers verified/created successfully${context ? ` (${context})` : ''}`);
-  } else {
+  if (!allSuccessful) {
     console.error(`❌ ${totalCount - successCount} of ${totalCount} itinerary layer verifications failed${context ? ` (${context})` : ''}`);
   }
   
@@ -510,7 +521,7 @@ async function verifyAndCreateLayer(
     const existed = !!map.getLayer(layerId);
     
     if (existed) {
-      console.log(`✅ Layer ${layerId} already exists${context ? ` (${context})` : ''}`);
+;
       return {
         success: true,
         layerId,
@@ -533,7 +544,7 @@ async function verifyAndCreateLayer(
 
     // Create the layer
     map.addLayer(layerSpec);
-    console.log(`✅ Created layer ${layerId}${context ? ` (${context})` : ''}`);
+;
     
     return {
       success: true,
@@ -607,7 +618,6 @@ export class DebouncedColorSchemeManager {
       this.cancelOldestOperation();
     }
 
-    console.log(`⏱️ Scheduling debounced color scheme change to '${colorScheme}' (${operationId}) - ${context}`);
     performanceMonitor.mark(`debounced-color-change-${operationId}`);
 
     // Create timeout for the operation
@@ -619,13 +629,12 @@ export class DebouncedColorSchemeManager {
       }
 
       try {
-        console.log(`🚀 Executing debounced color scheme change to '${colorScheme}' (${operationId}) - ${context}`);
+
         
         // Execute the operation
         await operation();
         
         const duration = performanceMonitor.measure(`debounced-color-change-${operationId}`);
-        console.log(`✅ Debounced color scheme change to '${colorScheme}' completed in ${duration.toFixed(2)}ms (${operationId}) - ${context}`);
         
         // Log warning if operation took longer than 100ms (requirement 3.1)
         if (duration > 100) {
@@ -671,9 +680,7 @@ export class DebouncedColorSchemeManager {
       canceledCount++;
     });
 
-    if (canceledCount > 0) {
-      console.log(`🚫 Canceled ${canceledCount} pending color scheme operations for context: ${context}`);
-    }
+
   }
 
   /**
@@ -696,7 +703,7 @@ export class DebouncedColorSchemeManager {
         operation.cleanup();
       }
       this.pendingOperations.delete(oldestOperationId);
-      console.log(`🚫 Canceled oldest pending operation: ${oldestOperationId}`);
+;
     }
   }
 
@@ -714,7 +721,7 @@ export class DebouncedColorSchemeManager {
     }
     
     this.pendingOperations.delete(operationId);
-    console.log(`🚫 Canceled operation: ${operationId}`);
+;
     return true;
   }
 
@@ -733,9 +740,7 @@ export class DebouncedColorSchemeManager {
     
     this.pendingOperations.clear();
     
-    if (operationCount > 0) {
-      console.log(`🚫 Canceled all ${operationCount} pending color scheme operations`);
-    }
+
   }
 
   /**
@@ -807,7 +812,7 @@ export class LayerVisibilityPerformanceMonitor {
    */
   startOperation(operationId: string, layerId: string, operation: LayerVisibilityPerformanceMetrics['operation'], context?: string): void {
     this.operationStartTimes.set(operationId, performance.now());
-    console.log(`⏱️ Starting ${operation} operation for layer '${layerId}' (${operationId})${context ? ` - ${context}` : ''}`);
+;
   }
 
   /**
@@ -832,8 +837,6 @@ export class LayerVisibilityPerformanceMonitor {
     if (duration > this.performanceThreshold) {
       warning = `Operation exceeded ${this.performanceThreshold}ms threshold`;
       console.warn(`⚠️ Layer visibility ${operation} for '${layerId}' took ${duration.toFixed(2)}ms (exceeds ${this.performanceThreshold}ms requirement) (${operationId})${context ? ` - ${context}` : ''}`);
-    } else {
-      console.log(`✅ Layer visibility ${operation} for '${layerId}' completed in ${duration.toFixed(2)}ms (${operationId})${context ? ` - ${context}` : ''}`);
     }
 
     const metric: LayerVisibilityPerformanceMetrics = {
@@ -940,7 +943,7 @@ export class LayerVisibilityPerformanceMonitor {
    */
   clearMetrics(): void {
     this.metrics = [];
-    console.log('🧹 Cleared layer visibility performance metrics');
+;
   }
 
   /**
@@ -976,7 +979,7 @@ export class LayerVisibilityPerformanceMonitor {
    */
   setPerformanceThreshold(thresholdMs: number): void {
     this.performanceThreshold = thresholdMs;
-    console.log(`📏 Layer visibility performance threshold set to ${thresholdMs}ms`);
+;
   }
 
   /**
@@ -1057,7 +1060,7 @@ export async function safeSetLayerVisibility(
 
       // Set the visibility
       map.setLayoutProperty(layerId, 'visibility', visibility);
-      console.log(`🔄 Set ${layerId} visibility to ${visibility} (attempt ${attempt}/${retries})${context ? ` (${context})` : ''}`);
+;
 
       // Verify the change was applied
       const verificationResult = await verifyLayerVisibility(map, layerId, visibility, {
@@ -1068,7 +1071,6 @@ export async function safeSetLayerVisibility(
 
       if (verificationResult.success) {
         layerVisibilityPerformanceMonitor.endOperation(operationId, layerId, operation, true, context);
-        console.log(`✅ Safe layer visibility change succeeded for ${layerId}: ${visibility} (attempt ${attempt}/${retries})${context ? ` (${context})` : ''}`);
         return verificationResult;
       }
 
@@ -1107,7 +1109,6 @@ export async function safeSetLayerVisibility(
 }
 /**
  * Utility functions for accessing performance monitoring from components
- * Requirements: 3.1 - Add metrics for debugging performance issues
  */
 
 /**
@@ -1139,7 +1140,7 @@ export function setLayerVisibilityPerformanceThreshold(thresholdMs: number): voi
 }
 
 /**
- * Get recent slow operations for debugging
+ * Get recent slow operations
  */
 export function getRecentSlowLayerOperations(count: number = 10) {
   const stats = layerVisibilityPerformanceMonitor.getPerformanceStats();

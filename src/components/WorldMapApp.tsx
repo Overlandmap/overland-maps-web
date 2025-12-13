@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation'
 import { CountryData, BorderData } from '../types'
 import { loadCountryData, getBorderById, getZoneById } from '../lib/data-loader'
 import { useLanguage } from '../contexts/LanguageContext'
-import { ColorSchemeProvider } from '../contexts/ColorSchemeContext'
+import { ColorSchemeProvider, useColorScheme } from '../contexts/ColorSchemeContext'
 import SimpleMapContainer from './SimpleMapContainer'
 import DetailSidebar from './DetailSidebar'
 import DisclaimerPopup from './DisclaimerPopup'
@@ -32,8 +32,9 @@ interface WorldMapAppProps {
   initialItinerary?: string
 }
 
-export default function WorldMapApp({ initialCountry, initialBorder, initialBorderPost, initialBorderPostData, initialZone, initialItinerary }: WorldMapAppProps = {}) {
+function WorldMapAppInner({ initialCountry, initialBorder, initialBorderPost, initialBorderPostData, initialZone, initialItinerary }: WorldMapAppProps = {}) {
   const { language } = useLanguage()
+  const { setColorScheme } = useColorScheme()
   const router = useRouter()
   const [selectedFeature, setSelectedFeature] = useState<SelectedFeature | null>(null)
   const [sidebarOpen, setSidebarOpen] = useState(false)
@@ -260,20 +261,61 @@ export default function WorldMapApp({ initialCountry, initialBorder, initialBord
     console.log('🛣️ Itinerary clicked:', itineraryId)
     
     if (itineraryId) {
+      // Set color scheme to 'itineraries' before highlighting
+      console.log('🎨 Setting color scheme to itineraries for itinerary selection')
+      setColorScheme('itineraries')
+      
       // Update URL without navigation (unless handling popstate)
       if (!isHandlingPopState) {
         window.history.pushState({ type: 'itinerary', id: itineraryId }, '', generateEntityUrl('itinerary', itineraryId))
       }
       
-      // Use feature properties as itinerary data
+      // Load itinerary data if not provided in feature
+      let loadedData = itineraryData
+      if (!feature?.properties && !loadedData) {
+        try {
+          console.log('🔄 Loading itinerary data for ID:', itineraryId)
+          const { getItineraryById } = await import('../lib/data-loader')
+          loadedData = await getItineraryById(itineraryId)
+          console.log('📊 Loaded itinerary data:', loadedData)
+        } catch (error) {
+          console.error('❌ Failed to load itinerary data:', error)
+        }
+      } else {
+        console.log('📋 Using provided data - feature properties:', !!feature?.properties, 'itineraryData:', !!itineraryData)
+      }
+      
+      // Use feature properties or loaded data as itinerary data
       const completeData = {
         id: itineraryId,
-        name: feature?.properties?.name || 'Unnamed Itinerary',
-        length: feature?.properties?.length,
-        nbSteps: feature?.properties?.nbSteps,
-        titlePhotoUrl: feature?.properties?.titlePhotoUrl,
+        name: feature?.properties?.name || loadedData?.name || 'Unnamed Itinerary',
+        lengthKM: feature?.properties?.lengthKM || loadedData?.lengthKM,
+        lengthDays: feature?.properties?.lengthDays || loadedData?.lengthDays,
+        nbSteps: feature?.properties?.nbSteps || loadedData?.nbSteps,
+        titlePhotoUrl: feature?.properties?.titlePhotoUrl || loadedData?.titlePhotoUrl,
+        itineraryId: feature?.properties?.itineraryId || loadedData?.itineraryId,
+        description: feature?.properties?.description || loadedData?.description,
+        difficulty: feature?.properties?.difficulty || loadedData?.difficulty,
         geometry: feature?.geometry,
-        ...feature?.properties
+        ...feature?.properties,
+        ...loadedData
+      }
+      
+      // Highlight the itinerary on the map (after color scheme change)
+      // Use a small delay to ensure color scheme change is applied first
+      setTimeout(() => {
+        if (mapInteractions?.highlightItinerary) {
+          console.log('🎯 Calling highlightItinerary with itineraryId:', itineraryId)
+          mapInteractions.highlightItinerary(itineraryId)
+        } else {
+          console.warn('⚠️ highlightItinerary function not available in mapInteractions')
+        }
+      }, 100)
+      
+      // Create feature object if not provided
+      const featureObject = feature || {
+        properties: completeData,
+        geometry: completeData.geometry || null
       }
       
       // Show detail sidebar
@@ -281,11 +323,11 @@ export default function WorldMapApp({ initialCountry, initialBorder, initialBord
         type: 'itinerary',
         id: itineraryId,
         data: completeData,
-        feature: feature
+        feature: featureObject
       })
       setSidebarOpen(true)
     }
-  }, [isHandlingPopState])
+  }, [isHandlingPopState, setColorScheme, mapInteractions])
 
   /**
    * Handle selection clear
@@ -616,10 +658,13 @@ export default function WorldMapApp({ initialCountry, initialBorder, initialBord
   useEffect(() => {
     if (initialItinerary && !hasHandledInitialSelection) {
       console.log('🎯 Setting initial itinerary selection:', initialItinerary)
+      // Set color scheme to 'itineraries' for initial selection
+      console.log('🎨 Setting color scheme to itineraries for initial itinerary selection')
+      setColorScheme('itineraries')
       handleItineraryClick(initialItinerary, null, null)
       setHasHandledInitialSelection(true)
     }
-  }, [initialItinerary, hasHandledInitialSelection, handleItineraryClick])
+  }, [initialItinerary, hasHandledInitialSelection, handleItineraryClick, setColorScheme])
 
   if (appState.isLoading) {
     return (
@@ -650,43 +695,49 @@ export default function WorldMapApp({ initialCountry, initialBorder, initialBord
   }
 
   return (
+    <div className="relative h-screen overflow-hidden">
+      {/* Map Container */}
+      <SimpleMapContainer
+        className="w-full h-full"
+        onCountryClick={handleCountryClick}
+        onBorderClick={handleBorderClick}
+        onBorderPostClick={handleBorderPostClick}
+        onZoneClick={handleZoneClick}
+        onItineraryClick={handleItineraryClick}
+        onSelectionClear={handleSelectionClear}
+        onMapReady={handleMapReady}
+        selectedCountryId={selectedFeature?.type === 'country' ? selectedFeature.id : null}
+        selectedBorderId={selectedFeature?.type === 'border' ? selectedFeature.id : null}
+        selectedBorderPostId={selectedFeature?.type === 'border-post' ? selectedFeature.id : null}
+        selectedZoneId={selectedFeature?.type === 'zone' ? selectedFeature.id : null}
+        selectedItineraryId={selectedFeature?.type === 'itinerary' ? selectedFeature.id : null}
+      />
+
+      {/* Detail Sidebar */}
+      <DetailSidebar
+        isOpen={sidebarOpen}
+        onClose={handleSidebarClose}
+        selectedFeature={selectedFeature}
+        onCountrySelect={handleCountrySelection}
+        onBorderClick={handleBorderClick}
+        onBorderPostClick={handleBorderPostClick}
+        onBorderPostZoom={handleBorderPostZoom}
+        onItineraryZoom={handleItineraryZoom}
+      />
+
+      {/* Disclaimer Popup */}
+      <DisclaimerPopup
+        isOpen={showDisclaimer}
+        onAccept={handleDisclaimerAccept}
+      />
+    </div>
+  )
+}
+
+export default function WorldMapApp(props: WorldMapAppProps) {
+  return (
     <ColorSchemeProvider>
-      <div className="relative h-screen overflow-hidden">
-        {/* Map Container */}
-        <SimpleMapContainer
-          className="w-full h-full"
-          onCountryClick={handleCountryClick}
-          onBorderClick={handleBorderClick}
-          onBorderPostClick={handleBorderPostClick}
-          onZoneClick={handleZoneClick}
-          onItineraryClick={handleItineraryClick}
-          onSelectionClear={handleSelectionClear}
-          onMapReady={handleMapReady}
-          selectedCountryId={selectedFeature?.type === 'country' ? selectedFeature.id : null}
-          selectedBorderId={selectedFeature?.type === 'border' ? selectedFeature.id : null}
-          selectedBorderPostId={selectedFeature?.type === 'border-post' ? selectedFeature.id : null}
-          selectedZoneId={selectedFeature?.type === 'zone' ? selectedFeature.id : null}
-          selectedItineraryId={selectedFeature?.type === 'itinerary' ? selectedFeature.id : null}
-        />
-
-        {/* Detail Sidebar */}
-        <DetailSidebar
-          isOpen={sidebarOpen}
-          onClose={handleSidebarClose}
-          selectedFeature={selectedFeature}
-          onCountrySelect={handleCountrySelection}
-          onBorderClick={handleBorderClick}
-          onBorderPostClick={handleBorderPostClick}
-          onBorderPostZoom={handleBorderPostZoom}
-          onItineraryZoom={handleItineraryZoom}
-        />
-
-        {/* Disclaimer Popup */}
-        <DisclaimerPopup
-          isOpen={showDisclaimer}
-          onAccept={handleDisclaimerAccept}
-        />
-      </div>
+      <WorldMapAppInner {...props} />
     </ColorSchemeProvider>
   )
 }
