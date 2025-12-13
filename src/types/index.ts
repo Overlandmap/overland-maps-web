@@ -4,11 +4,31 @@ export interface CountryData {
   id: string
   iso_a3?: string // Three-letter country code for linking with map features
   name: string
-  parameters: Record<string, any>
+  parameters: CountryParameters
   borderIds?: string[] // Optional, may not be present in all data
   translations?: Record<string, string> // Optional translations for country names
   capital_translations?: Record<string, string> // Optional translations for capital names
   disputed?: string // Optional field for disputed territory information
+}
+
+export interface CountryParameters {
+  // Existing fields
+  capital?: string
+  visa_comment?: string
+  comment?: string
+  insurance_comment?: string
+  tip?: string
+  stay_duration?: string
+  
+  // Translation fields for country detail comments
+  comment_translations?: Record<string, string>
+  visa_comment_translations?: Record<string, string>
+  insurance_comment_translations?: Record<string, string>
+  tip_translations?: Record<string, string>
+  stay_duration_translations?: Record<string, string>
+  
+  // Other existing parameters (flexible for backward compatibility)
+  [key: string]: any
 }
 
 export interface ProcessedCountryData extends CountryData {

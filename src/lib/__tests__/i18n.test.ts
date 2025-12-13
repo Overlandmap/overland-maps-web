@@ -1,10 +1,13 @@
 import * as fc from 'fast-check';
 import { 
   getTranslatedLabel, 
+  getTranslatedTip,
+  getTranslatedStayDuration,
   SUPPORTED_LANGUAGES, 
   SupportedLanguage,
   DEFAULT_LANGUAGE 
-} from '../i18n';
+} from '../i18n'
+import { CountryData } from '../../types';
 
 describe('i18n Translation System', () => {
   
@@ -123,4 +126,63 @@ describe('i18n Translation System', () => {
       );
     });
   });
+
+  // Tests for new country detail translation functions
+  describe('Country Detail Translation Functions', () => {
+    test('getTranslatedTip should return translated tip when available', () => {
+      const countryData: CountryData = {
+        id: 'test-country',
+        name: 'Test Country',
+        parameters: {
+          tip: 'Original tip',
+          tip_translations: {
+            'en': 'English tip',
+            'fr': 'Conseil français'
+          }
+        }
+      }
+
+      expect(getTranslatedTip(countryData, 'en')).toBe('English tip')
+      expect(getTranslatedTip(countryData, 'fr')).toBe('Conseil français')
+      expect(getTranslatedTip(countryData, 'de')).toBe('Original tip') // Fallback
+    })
+
+    test('getTranslatedTip should return null when no tip exists', () => {
+      const countryData: CountryData = {
+        id: 'test-country',
+        name: 'Test Country',
+        parameters: {}
+      }
+
+      expect(getTranslatedTip(countryData, 'en')).toBeNull()
+    })
+
+    test('getTranslatedStayDuration should return translated stay duration when available', () => {
+      const countryData: CountryData = {
+        id: 'test-country',
+        name: 'Test Country',
+        parameters: {
+          stay_duration: '90 days',
+          stay_duration_translations: {
+            'en': '90 days',
+            'fr': '90 jours'
+          }
+        }
+      }
+
+      expect(getTranslatedStayDuration(countryData, 'en')).toBe('90 days')
+      expect(getTranslatedStayDuration(countryData, 'fr')).toBe('90 jours')
+      expect(getTranslatedStayDuration(countryData, 'de')).toBe('90 days') // Fallback
+    })
+
+    test('getTranslatedStayDuration should return null when no stay duration exists', () => {
+      const countryData: CountryData = {
+        id: 'test-country',
+        name: 'Test Country',
+        parameters: {}
+      }
+
+      expect(getTranslatedStayDuration(countryData, 'en')).toBeNull()
+    })
+  })
 });

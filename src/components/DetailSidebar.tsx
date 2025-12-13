@@ -14,7 +14,7 @@ import {
 } from '../lib/data-formatters'
 import { getBorderById, loadCountryData } from '../lib/data-loader'
 import { useLanguage } from '../contexts/LanguageContext'
-import { getTranslatedCountryName, getTranslatedBorderStatus, getBorderStatusColorClasses, getTranslatedCarnetStatus, getTranslatedOverlandingStatus, getTranslatedLabel } from '../lib/i18n'
+import { getTranslatedCountryName, getTranslatedBorderStatus, getBorderStatusColorClasses, getTranslatedCarnetStatus, getTranslatedOverlandingStatus, getTranslatedLabel, getTranslatedComment, getTranslatedVisaComment, getTranslatedInsuranceComment, getTranslatedTip, getTranslatedStayDuration } from '../lib/i18n'
 import { hasFlagAvailable } from '../lib/flag-utils'
 import CountryFlag from './CountryFlag'
 
@@ -536,14 +536,69 @@ export default function DetailSidebar({
             </div>
             
             {/* Visa Comment */}
-            {countryData.parameters?.visa_comment && (
-              <div className="space-y-1">
-                <span className="text-gray-600 font-semibold">{getTranslatedLabel('visa', language)}:</span>
-                <div className="text-gray-800 font-normal">
-                  {countryData.parameters.visa_comment}
+            {(() => {
+              const visaComment = getTranslatedVisaComment(countryData, language)
+              return visaComment && (
+                <div className="space-y-1">
+                  <span className="text-gray-600 font-semibold">{getTranslatedLabel('visa', language)}:</span>
+                  <div className="text-gray-800 font-normal">
+                    {visaComment}
+                  </div>
                 </div>
-              </div>
-            )}
+              )
+            })()}
+            
+            {/* General Comment */}
+            {(() => {
+              const generalComment = getTranslatedComment(countryData, language)
+              return generalComment && (
+                <div className="space-y-1">
+                  <span className="text-gray-600 font-semibold">{getTranslatedLabel('comment', language)}:</span>
+                  <div className="text-gray-800 font-normal">
+                    {generalComment}
+                  </div>
+                </div>
+              )
+            })()}
+            
+            {/* Insurance Comment */}
+            {(() => {
+              const insuranceComment = getTranslatedInsuranceComment(countryData, language)
+              return insuranceComment && (
+                <div className="space-y-1">
+                  <span className="text-gray-600 font-semibold">Insurance:</span>
+                  <div className="text-gray-800 font-normal">
+                    {insuranceComment}
+                  </div>
+                </div>
+              )
+            })()}
+            
+            {/* Tip */}
+            {(() => {
+              const tip = getTranslatedTip(countryData, language)
+              return tip && (
+                <div className="space-y-1">
+                  <span className="text-gray-600 font-semibold">Tip:</span>
+                  <div className="text-gray-800 font-normal">
+                    {tip}
+                  </div>
+                </div>
+              )
+            })()}
+            
+            {/* Stay Duration */}
+            {(() => {
+              const stayDuration = getTranslatedStayDuration(countryData, language)
+              return stayDuration && (
+                <div className="space-y-1">
+                  <span className="text-gray-600 font-semibold">Stay Duration:</span>
+                  <div className="text-gray-800 font-normal">
+                    {stayDuration}
+                  </div>
+                </div>
+              )
+            })()}
             
             {/* Driving */}
             {countryData.parameters?.driving && (

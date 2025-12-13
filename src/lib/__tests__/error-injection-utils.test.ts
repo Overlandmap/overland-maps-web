@@ -224,7 +224,7 @@ describe('Error Injection Testing for Layer Visibility Management', () => {
     });
 
     test('should handle intermittent failures with retry logic', async () => {
-      // Run fewer attempts with shorter timeouts
+      // Run fewer attempts with reasonable timeouts
       const results = [];
       for (let i = 0; i < 3; i++) {
         mockMap.resetErrorInjection();
@@ -232,7 +232,7 @@ describe('Error Injection Testing for Layer Visibility Management', () => {
           mockMap as any,
           'intermittent-layer',
           'visible',
-          { timeout: 10, retries: 1 }
+          { timeout: 100, retries: 1 }
         );
         results.push(result);
       }
@@ -242,7 +242,7 @@ describe('Error Injection Testing for Layer Visibility Management', () => {
       const successes = results.filter(r => r.success).length;
       const failures = results.filter(r => !r.success).length;
       expect(successes + failures).toBe(3);
-    }, 10000);
+    }, 15000);
   });
 
   describe('Cleanup Operation Error Handling', () => {

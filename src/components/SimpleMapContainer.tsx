@@ -1307,23 +1307,400 @@ export default function SimpleMapContainer({
       })
       map.current.setStyle(climateStyleUrl)
     } else {
-      // For overlanding/carnet, we need to reload basemap which will trigger re-adding layers
+      // For overlanding/carnet, we need to reload basemap and re-add all custom layers
       const basemapLangSuffix = supportedLanguages.includes(language) && language !== 'en' ? `-${language}` : ''
       const styleUrl = `${basePath}/styles/basemap${basemapLangSuffix}.json`
       console.log('🌐 Reloading basemap style for language change:', styleUrl)
       
-      // Restore position after style loads
-      map.current.once('style.load', () => {
-        if (map.current) {
+      // Create a handler to restore position and re-add layers after style loads
+      const handleLanguageStyleLoad = () => {
+        console.log('🎬 styledata event fired for language change!')
+        if (!map.current) {
+          console.error('❌ map.current is null in language styledata handler')
+          return
+        }
+        
+        try {
+          // Restore position
           map.current.setCenter(currentCenter)
           map.current.setZoom(currentZoom)
+          console.log(`📍 Position restored after language style load`)
+          
+          // Re-add all custom layers that were in the basemap
+          console.log('🔄 Re-adding custom layers after language change')
+          
+          // Re-create diagonal stripe patterns with different colors
+          const createDiagonalPattern = (color: string) => {
+            const canvas = document.createElement('canvas')
+            const size = 16
+            canvas.width = size
+            canvas.height = size
+            const ctx = canvas.getContext('2d')
+            
+            if (ctx) {
+              // Clear background (transparent)
+              ctx.clearRect(0, 0, size, size)
+              
+              // Draw diagonal stripes with the specified color
+              ctx.strokeStyle = color
+              ctx.lineWidth = 3
+              
+              // Draw multiple diagonal lines to create stripe pattern
+              ctx.beginPath()
+              ctx.moveTo(0, size)
+              ctx.lineTo(size, 0)
+              ctx.stroke()
+              
+              ctx.beginPath()
+              ctx.moveTo(-size/2, size/2)
+              ctx.lineTo(size/2, -size/2)
+              ctx.stroke()
+              
+              ctx.beginPath()
+              ctx.moveTo(size/2, size * 1.5)
+              ctx.lineTo(size * 1.5, size/2)
+              ctx.stroke()
+              
+              return ctx.getImageData(0, 0, size, size)
+            }
+            return null
+          }
+          
+          // Add all colored stripe patterns
+          const redPattern = createDiagonalPattern('rgba(239, 68, 68, 1)')
+          if (redPattern && !map.current.hasImage('diagonal-stripe-red')) {
+            map.current.addImage('diagonal-stripe-red', redPattern)
+          }
+          
+          const blackPattern = createDiagonalPattern('rgba(0, 0, 0, 0.8)')
+          if (blackPattern && !map.current.hasImage('diagonal-stripe-black')) {
+            map.current.addImage('diagonal-stripe-black', blackPattern)
+          }
+          
+          const greyPattern = createDiagonalPattern('rgba(156, 163, 175, 1)')
+          if (greyPattern && !map.current.hasImage('diagonal-stripe-grey')) {
+            map.current.addImage('diagonal-stripe-grey', greyPattern)
+          }
+          
+          const bluePattern = createDiagonalPattern('rgba(59, 130, 246, 1)')
+          if (bluePattern && !map.current.hasImage('diagonal-stripe-blue')) {
+            map.current.addImage('diagonal-stripe-blue', bluePattern)
+          }
+
+          // Re-create highlighted diagonal stripe patterns with gray background
+          const createHighlightedDiagonalPattern = (color: string) => {
+            const canvas = document.createElement('canvas')
+            const size = 16
+            canvas.width = size
+            canvas.height = size
+            const ctx = canvas.getContext('2d')
+            
+            if (ctx) {
+              // Fill background with gray for highlighted state
+              ctx.fillStyle = 'rgba(156, 163, 175, 0.8)' // More visible gray background
+              ctx.fillRect(0, 0, size, size)
+              
+              // Draw diagonal stripes with the specified color
+              ctx.strokeStyle = color
+              ctx.lineWidth = 3
+              
+              // Draw multiple diagonal lines to create stripe pattern
+              ctx.beginPath()
+              ctx.moveTo(0, size)
+              ctx.lineTo(size, 0)
+              ctx.stroke()
+              
+              ctx.beginPath()
+              ctx.moveTo(-size/2, size/2)
+              ctx.lineTo(size/2, -size/2)
+              ctx.stroke()
+              
+              ctx.beginPath()
+              ctx.moveTo(size/2, size * 1.5)
+              ctx.lineTo(size * 1.5, size/2)
+              ctx.stroke()
+              
+              return ctx.getImageData(0, 0, size, size)
+            }
+            return null
+          }
+
+          // Create highlighted versions with gray background
+          const redHighlightPattern = createHighlightedDiagonalPattern('rgba(239, 68, 68, 1)')
+          if (redHighlightPattern && !map.current.hasImage('diagonal-stripe-red-highlight')) {
+            map.current.addImage('diagonal-stripe-red-highlight', redHighlightPattern)
+          }
+          
+          const blackHighlightPattern = createHighlightedDiagonalPattern('rgba(0, 0, 0, 1)')
+          if (blackHighlightPattern && !map.current.hasImage('diagonal-stripe-black-highlight')) {
+            map.current.addImage('diagonal-stripe-black-highlight', blackHighlightPattern)
+          }
+          
+          const greyHighlightPattern = createHighlightedDiagonalPattern('rgba(156, 163, 175, 1)')
+          if (greyHighlightPattern && !map.current.hasImage('diagonal-stripe-grey-highlight')) {
+            map.current.addImage('diagonal-stripe-grey-highlight', greyHighlightPattern)
+          }
+          
+          const blueHighlightPattern = createHighlightedDiagonalPattern('rgba(59, 130, 246, 1)')
+          if (blueHighlightPattern && !map.current.hasImage('diagonal-stripe-blue-highlight')) {
+            map.current.addImage('diagonal-stripe-blue-highlight', blueHighlightPattern)
+          }
+          
+          // Re-add country-border source (only if it doesn't exist)
+          if (!map.current.getSource('country-border')) {
+            map.current.addSource('country-border', {
+              type: 'vector',
+              url: 'pmtiles://https://overlanding.io/country-borders.pmtiles'
+            })
+          }
+          
+          // Re-add hillshade source (only if it doesn't exist)
+          if (!map.current.getSource('hillshadeSource')) {
+            map.current.addSource('hillshadeSource', {
+              type: 'raster-dem',
+              url: 'https://tiles.mapterhorn.com/tilejson.json'
+            })
+          }
+          
+          // Re-add terrain source (only if it doesn't exist)
+          if (!map.current.getSource('terrainSource')) {
+            map.current.addSource('terrainSource', {
+              type: 'raster-dem',
+              url: 'https://tiles.mapterhorn.com/tilejson.json'
+            })
+          }
+          
+          // Re-add hillshade layer (only if it doesn't exist) - insert before waterway_river
+          if (!map.current.getLayer('hillshade')) {
+            map.current.addLayer({
+            id: 'hillshade',
+            type: 'hillshade',
+            source: 'hillshadeSource',
+            layout: {
+              'visibility': 'none' // Hidden when switching from climate/itineraries to overlanding/carnet
+            }
+            }, 'waterway_river')
+          }
+          
+          // Re-add country layer (only if it doesn't exist) - insert before waterway_river
+          if (!map.current.getLayer('country')) {
+            try {
+              // Check if insertion point exists
+              const hasWaterwayRiver = map.current.getLayer('waterway_river')
+              
+              if (hasWaterwayRiver) {
+                map.current.addLayer({
+                  id: 'country',
+                  type: 'fill',
+                  source: 'country-border',
+                  'source-layer': 'country',
+                  paint: {
+                    'fill-color': generateOverlandingColorExpression() as any,
+                    'fill-opacity': 0.6
+                  }
+                }, 'waterway_river')
+              } else {
+                // Add without insertion point if waterway_river doesn't exist
+                map.current.addLayer({
+                  id: 'country',
+                  type: 'fill',
+                  source: 'country-border',
+                  'source-layer': 'country',
+                  paint: {
+                    'fill-color': generateOverlandingColorExpression() as any,
+                    'fill-opacity': 0.6
+                  }
+                })
+              }
+            } catch (error) {
+              console.error('❌ Error adding country layer:', error)
+            }
+          }
+          
+          // Re-add zones layer (only if it doesn't exist) - above countries, before waterway
+          if (!map.current.getLayer('zones')) {
+            map.current.addLayer({
+            id: 'zones',
+            type: 'fill',
+            source: 'country-border',
+            'source-layer': 'zones',
+            paint: {
+              // Background color based on zone type
+              'fill-color': [
+                'case',
+                ['==', ['get', 'type'], 0], '#ef4444', // Closed - red
+                ['==', ['get', 'type'], 1], '#000000', // Guide/Escort - black
+                ['==', ['get', 'type'], 2], '#9ca3af', // Permit - grey
+                ['==', ['get', 'type'], 3], '#3b82f6', // Restrictions - blue
+                '#9ca3af' // Default - grey
+              ],
+              // Pattern based on zone type
+              'fill-pattern': [
+                'case',
+                ['==', ['get', 'type'], 0], 'diagonal-stripe-red',
+                ['==', ['get', 'type'], 1], 'diagonal-stripe-black',
+                ['==', ['get', 'type'], 2], 'diagonal-stripe-grey',
+                ['==', ['get', 'type'], 3], 'diagonal-stripe-blue',
+                'diagonal-stripe-grey' // Default
+              ],
+              'fill-opacity': 0.7
+            }
+            })
+          }
+          
+          // Re-add border layer (only if it doesn't exist)
+          if (!map.current.getLayer('border')) {
+            map.current.addLayer({
+            id: 'border',
+            type: 'line',
+            source: 'country-border',
+            'source-layer': 'border',
+            paint: {
+              'line-color': [
+                'case',
+                ['any', ['==', ['get', 'is_open'], 2], ['==', ['get', 'is_open'], '2']], '#15803d',
+                ['any', ['==', ['get', 'is_open'], 1], ['==', ['get', 'is_open'], '1']], '#eab308',
+                ['any', ['==', ['get', 'is_open'], 3], ['==', ['get', 'is_open'], '3']], '#eab308',
+                ['any', ['==', ['get', 'is_open'], -1], ['==', ['get', 'is_open'], '-1']], '#9ca3af',
+                '#ef4444'
+              ],
+              'line-width': 2,
+              'line-opacity': 0.8
+            }
+            })
+          }
+          
+          // Re-add border post layer (only if it doesn't exist)
+          if (!map.current.getLayer('border_post')) {
+            map.current.addLayer({
+            id: 'border_post',
+            type: 'circle',
+            source: 'country-border',
+            'source-layer': 'border_post',
+            paint: {
+              'circle-color': [
+                'case',
+                ['==', ['get', 'is_open'], 1], '#3b82f6',
+                ['==', ['get', 'is_open'], 2], '#22c55e',
+                ['==', ['get', 'is_open'], 3], '#eab308',
+                '#ef4444'
+              ],
+              'circle-radius': 6,
+              'circle-stroke-width': 1.5,
+              'circle-stroke-color': '#ffffff'
+            }
+            })
+          }
+          
+          // Re-add itinerary layer (only if it doesn't exist)
+          if (!map.current.getLayer('itinerary')) {
+            map.current.addLayer({
+            id: 'itinerary',
+            type: 'line',
+            source: 'country-border',
+            'source-layer': 'itinerary',
+            paint: {
+              'line-color': '#ef4444',
+              'line-width': 4,
+              'line-opacity': 0.5
+            },
+            layout: {
+              'visibility': 'none' // Hidden when switching from climate/itineraries to overlanding/carnet
+            }
+            })
+          }
+          
+          // Re-add highlight layers (only if they don't exist)
+          if (!map.current.getLayer('border-highlight')) {
+            map.current.addLayer({
+            id: 'border-highlight',
+            type: 'line',
+            source: 'country-border',
+            'source-layer': 'border',
+            paint: {
+              'line-color': '#ffffff',
+              'line-width': 4,
+              'line-opacity': 1.0
+            },
+            filter: ['==', ['get', 'id'], '']
+            })
+          }
+          
+          if (!map.current.getLayer('border-post-highlight')) {
+            map.current.addLayer({
+            id: 'border-post-highlight',
+            type: 'circle',
+            source: 'country-border',
+            'source-layer': 'border_post',
+            paint: {
+              'circle-color': '#ffffff',
+              'circle-radius': 8,
+              'circle-stroke-width': 2,
+              'circle-stroke-color': '#1e40af'
+            },
+            filter: ['==', ['get', 'id'], '']
+            })
+          }
+          
+          if (!map.current.getLayer('zone-highlight')) {
+            map.current.addLayer({
+            id: 'zone-highlight',
+            type: 'fill',
+            source: 'country-border',
+            'source-layer': 'zones',
+            paint: {
+              'fill-color': '#ffffff', // White color for better visibility
+              'fill-opacity': 0.5 // 50% opacity for solid white fill
+            },
+            filter: ['==', ['get', 'id'], '']
+            }, 'border') // Position before border layer to ensure it's above zones but below borders
+          }
+          
+          if (!map.current.getLayer('itinerary-highlight')) {
+            map.current.addLayer({
+            id: 'itinerary-highlight',
+            type: 'line',
+            source: 'country-border',
+            'source-layer': 'itinerary',
+            paint: {
+              'line-color': '#ffffff', // White color for visibility
+              'line-width': 6, // Wider than default itinerary line (4px)
+              'line-opacity': 1.0 // Full opacity for better visibility
+            },
+            filter: ['==', ['get', 'itineraryDocId'], ''] // Initially show nothing
+            })
+          }
+          
+          console.log('✅ Custom layers re-added after language change')
+          
+          // Wait a tick for layers to be fully registered, then apply colors and visibility
+          setTimeout(() => {
+            if (map.current && map.current.getLayer('country')) {
+              updateMapColors(colorScheme)
+              
+              // If switching to itineraries mode, explicitly set layer visibility
+              if (colorScheme === 'itineraries') {
+                // Note: Layer visibility is now handled by the enhanced itinerary layer management effect
+                
+                // Set terrain for itineraries mode
+                if (map.current.getSource('terrainSource')) {
+                  map.current.setTerrain({
+                    source: 'terrainSource',
+                    exaggeration: 1
+                  })
+                }
+              }
+            }
+          }, 0)
+        } catch (error) {
+          console.error('❌ Error re-adding layers after language change:', error)
         }
-      })
-      map.current.setStyle(styleUrl)
+      }
       
-      // Note: The 'load' event handler will re-add all custom layers automatically
+      map.current.once('styledata', handleLanguageStyleLoad)
+      map.current.setStyle(styleUrl)
     }
-  }, [language, isLoaded, colorScheme])
+  }, [language, isLoaded, colorScheme, generateOverlandingColorExpression, updateMapColors])
 
   // Apply color scheme when map becomes loaded (initial load only)
   useEffect(() => {

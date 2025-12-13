@@ -2,6 +2,8 @@
  * Internationalization utilities for multi-language support
  */
 
+import { CountryData } from '../types'
+
 export type SupportedLanguage = 'en' | 'de' | 'es' | 'fr' | 'it' | 'ja' | 'nl' | 'ru' | 'zh'
 
 export interface LanguageInfo {
@@ -29,7 +31,7 @@ export const DEFAULT_LANGUAGE: SupportedLanguage = 'en'
  * Get translated country name from country data
  */
 export function getTranslatedCountryName(
-  countryData: any, 
+  countryData: CountryData, 
   language: SupportedLanguage = DEFAULT_LANGUAGE
 ): string {
   // Try to get translation from the translations object (check both locations)
@@ -47,7 +49,7 @@ export function getTranslatedCountryName(
  * Get translated capital name from country data
  */
 export function getTranslatedCapitalName(
-  countryData: any, 
+  countryData: CountryData, 
   language: SupportedLanguage = DEFAULT_LANGUAGE
 ): string {
   // Try to get translation from the capital_translations object (check both locations)
@@ -841,4 +843,86 @@ export function getTranslatedLabel(
   language: SupportedLanguage = DEFAULT_LANGUAGE
 ): string {
   return INTERFACE_TRANSLATIONS[language]?.[key] || INTERFACE_TRANSLATIONS[DEFAULT_LANGUAGE][key] || key
+}
+
+/**
+ * Get translated field value with fallback chain
+ * This is a generic utility that handles the translation lookup logic for any field
+ */
+export function getTranslatedField(
+  data: any,
+  fieldName: string,
+  translationFieldName: string,
+  language: SupportedLanguage
+): string | null {
+  if (!data) {
+    return null
+  }
+
+  // Check both direct field access and parameters field access for flexibility
+  const directTranslations = data[translationFieldName]
+  const parametersTranslations = data.parameters?.[translationFieldName]
+  const translations = directTranslations || parametersTranslations
+
+  // If translation map exists and is valid, try to get the translation for the selected language
+  if (translations && typeof translations === 'object' && translations[language]) {
+    return translations[language]
+  }
+
+  // Fallback to original field value (check both locations)
+  const directField = data[fieldName]
+  const parametersField = data.parameters?.[fieldName]
+  const originalValue = directField || parametersField
+
+  return originalValue || null
+}
+
+/**
+ * Get translated comment from country data
+ */
+export function getTranslatedComment(
+  countryData: CountryData,
+  language: SupportedLanguage
+): string | null {
+  return getTranslatedField(countryData, 'comment', 'comment_translations', language)
+}
+
+/**
+ * Get translated visa comment from country data
+ */
+export function getTranslatedVisaComment(
+  countryData: CountryData,
+  language: SupportedLanguage
+): string | null {
+  return getTranslatedField(countryData, 'visa_comment', 'visa_comment_translations', language)
+}
+
+/**
+ * Get translated insurance comment from country data
+ */
+export function getTranslatedInsuranceComment(
+  countryData: CountryData,
+  language: SupportedLanguage
+): string | null {
+  return getTranslatedField(countryData, 'insurance_comment', 'insurance_comment_translations', language)
+}
+
+/**
+ * Get translated tip from country data
+ */
+export function getTranslatedTip(
+  countryData: CountryData,
+  language: SupportedLanguage
+): string | null {
+  return getTranslatedField(countryData, 'tip', 'tip_translations', language)
+}
+
+/**
+ * Get translated stay duration from country data
+ */
+export function getTranslatedStayDuration(
+  countryData: CountryData,
+  language: SupportedLanguage
+): string | null {
+  return getTranslatedField(countryData, 'stay_duration', 'stay_duration_translations', language)
 }
