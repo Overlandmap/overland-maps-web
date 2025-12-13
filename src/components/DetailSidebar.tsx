@@ -13,6 +13,7 @@ import {
   formatParameterValue
 } from '../lib/data-formatters'
 import { getBorderById, loadCountryData } from '../lib/data-loader'
+import { getBorderPostById } from '../lib/border-post-data'
 import { useLanguage } from '../contexts/LanguageContext'
 import { getTranslatedCountryName, getTranslatedBorderStatus, getBorderStatusColorClasses, getTranslatedCarnetStatus, getTranslatedOverlandingStatus, getTranslatedLabel, getTranslatedComment, getTranslatedVisaComment, getTranslatedInsuranceComment, getTranslatedTip, getTranslatedStayDuration } from '../lib/i18n'
 import { hasFlagAvailable } from '../lib/flag-utils'
@@ -977,18 +978,70 @@ export default function DetailSidebar({
                   <div 
                     key={borderPost.id} 
                     className="bg-gray-50 p-3 rounded-lg hover:bg-blue-50 transition-colors cursor-pointer border border-transparent hover:border-blue-200"
-                    onClick={() => {
+                    onClick={async () => {
                       if (onBorderPostClick) {
                         console.log('🔄 Border post clicked from list:', borderPost.id)
-                        // Structure the feature object to match what handleBorderPostClick expects
-                        const feature = {
-                          properties: {
-                            id: borderPost.id,
-                            name: borderPost.name
-                          },
-                          geometry: null
+                        
+                        try {
+                          // Fetch full border post data
+                          const fullBorderPostData = await getBorderPostById(borderPost.id)
+                          
+                          if (fullBorderPostData) {
+                            // Structure the feature object with full data
+                            // Extract coordinates from location field (Firebase format)
+                            let coordinates = null
+                            if (fullBorderPostData.location && 
+                                typeof fullBorderPostData.location === 'object' && 
+                                '_longitude' in fullBorderPostData.location && 
+                                '_latitude' in fullBorderPostData.location) {
+                              coordinates = [
+                                fullBorderPostData.location._longitude,
+                                fullBorderPostData.location._latitude
+                              ]
+                            } else if (fullBorderPostData.coordinates) {
+                              coordinates = fullBorderPostData.coordinates
+                            }
+                            
+                            const feature = {
+                              properties: {
+                                ...fullBorderPostData,
+                                // Ensure we have the basic properties
+                                id: borderPost.id,
+                                name: borderPost.name,
+                                coordinates: coordinates
+                              },
+                              geometry: coordinates ? {
+                                type: 'Point',
+                                coordinates: coordinates
+                              } : null
+                            }
+                            
+                            console.log('✅ Loaded full border post data:', fullBorderPostData)
+                            onBorderPostClick(borderPost.id, fullBorderPostData, feature)
+                          } else {
+                            console.warn('⚠️ Could not load full border post data, using minimal data')
+                            // Fallback to minimal data if full data is not available
+                            const feature = {
+                              properties: {
+                                id: borderPost.id,
+                                name: borderPost.name
+                              },
+                              geometry: null
+                            }
+                            onBorderPostClick(borderPost.id, borderPost, feature)
+                          }
+                        } catch (error) {
+                          console.error('❌ Error loading border post data:', error)
+                          // Fallback to minimal data on error
+                          const feature = {
+                            properties: {
+                              id: borderPost.id,
+                              name: borderPost.name
+                            },
+                            geometry: null
+                          }
+                          onBorderPostClick(borderPost.id, borderPost, feature)
                         }
-                        onBorderPostClick(borderPost.id, borderPost, feature)
                       }
                     }}
                   >
@@ -1008,6 +1061,18 @@ export default function DetailSidebar({
       </div>
     )
   }
+
+  // Helper functions for location field type validation
+  const isValidLocationString = (location: any): location is string => {
+    return typeof location === 'string' && location.trim().length > 0;
+  };
+
+  const isFirebaseCoordinate = (location: any): boolean => {
+    return !!(location && 
+              typeof location === 'object' && 
+              '_latitude' in location && 
+              '_longitude' in location);
+  };
 
   /**
    * Render border post information (read-only)
@@ -1065,7 +1130,7 @@ export default function DetailSidebar({
         <div className="space-y-4">
           <div className="grid grid-cols-1 gap-3">
             {/* Location */}
-            {properties.location && (
+            {isValidLocationString(properties.location) && (
               <div className="flex justify-between">
                 <span className="text-gray-600">Location:</span>
                 <span className="font-medium">{properties.location}</span>
