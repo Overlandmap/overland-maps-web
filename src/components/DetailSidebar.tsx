@@ -619,7 +619,7 @@ export default function DetailSidebar({
         {borderDetails.length > 0 && (
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-gray-900">
-              Borders
+              {getTranslatedLabel('borders', language)}
             </h3>
             
             {loadingBorders ? (
@@ -907,7 +907,7 @@ export default function DetailSidebar({
 
         {/* Adjacent Countries */}
         <div className="space-y-4">
-          <h3 className="text-lg font-semibold text-gray-900">Adjacent Countries</h3>
+          <h3 className="text-lg font-semibold text-gray-900">{getTranslatedLabel('adjacent_countries', language)}</h3>
           
           {(() => {
             // Parse country codes from border name (e.g., "KAZ - KGZ" -> ["KAZ", "KGZ"])
@@ -936,14 +936,6 @@ export default function DetailSidebar({
         {/* Border Information */}
         <div className="space-y-4">
           <div className="grid grid-cols-1 gap-3">
-            {/* Geometry Type */}
-            {properties.geomType && (
-              <div className="flex justify-between">
-                <span className="text-gray-600">Geometry:</span>
-                <span className="font-medium">{properties.geomType}</span>
-              </div>
-            )}
-            
             {/* Last Updated */}
             {properties.updatedAt && (
               <div className="flex justify-between">
@@ -969,7 +961,7 @@ export default function DetailSidebar({
         {(selectedFeature?.type === 'border' && selectedFeature.data) && (
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-gray-900">
-              Border Posts {borderPosts.length > 0 ? `(${borderPosts.length})` : ''}
+              {getTranslatedLabel('border_posts', language)} {borderPosts.length > 0 ? `(${borderPosts.length})` : ''}
             </h3>
             
             {borderPosts.length > 0 ? (
@@ -994,9 +986,10 @@ export default function DetailSidebar({
                                 typeof fullBorderPostData.location === 'object' && 
                                 '_longitude' in fullBorderPostData.location && 
                                 '_latitude' in fullBorderPostData.location) {
+                              const location = fullBorderPostData.location as { _longitude: number; _latitude: number }
                               coordinates = [
-                                fullBorderPostData.location._longitude,
-                                fullBorderPostData.location._latitude
+                                location._longitude,
+                                location._latitude
                               ]
                             } else if (fullBorderPostData.coordinates) {
                               coordinates = fullBorderPostData.coordinates
@@ -1074,12 +1067,199 @@ export default function DetailSidebar({
               '_longitude' in location);
   };
 
+  // Helper functions for translation field validation
+  const isValidTranslationField = (translations: any): translations is Record<string, string> => {
+    if (!translations || typeof translations !== 'object' || Array.isArray(translations)) {
+      return false;
+    }
+    
+    // Check if all values are strings
+    return Object.values(translations).every(value => typeof value === 'string');
+  };
+
+  const getTranslatedFieldValue = (
+    translations: any, 
+    originalValue: any, 
+    currentLanguage: string
+  ): string | null => {
+    // Return null if no valid content exists
+    if (!originalValue && (!translations || !isValidTranslationField(translations))) {
+      return null;
+    }
+
+    // If translations exist and are valid, try to get translated value
+    if (isValidTranslationField(translations)) {
+      // Try current language first
+      if (translations[currentLanguage] && typeof translations[currentLanguage] === 'string') {
+        return translations[currentLanguage];
+      }
+      
+      // Fallback to English
+      if (translations['en'] && typeof translations['en'] === 'string') {
+        return translations['en'];
+      }
+    }
+
+    // Fallback to original value if it's a valid string
+    if (typeof originalValue === 'string' && originalValue.trim().length > 0) {
+      return originalValue;
+    }
+
+    return null;
+  };
+
+  const validateTranslationStructure = (data: any): { 
+    hasValidTranslations: boolean; 
+    hasValidOriginal: boolean; 
+    warnings: string[] 
+  } => {
+    const warnings: string[] = [];
+    const hasValidTranslations = isValidTranslationField(data?.comment_translations);
+    const hasValidOriginal = typeof data?.comment === 'string' && data.comment.trim().length > 0;
+
+    if (data?.comment_translations && !hasValidTranslations) {
+      warnings.push('comment_translations field exists but is malformed');
+    }
+
+    if (!hasValidTranslations && !hasValidOriginal) {
+      warnings.push('No valid comment data available');
+    }
+
+    return {
+      hasValidTranslations,
+      hasValidOriginal,
+      warnings
+    };
+  };
+
   /**
    * Render border post information (read-only)
    */
   const renderBorderPostDetails = (borderPostData: any, feature: any) => {
-    const properties = feature?.properties || borderPostData || {}
+    // Handle case where both data sources are null/empty
+    if (!borderPostData && !feature) {
+      return (
+        <div className="space-y-6">
+          <div className="border-b border-gray-200 pb-4">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center space-x-4 flex-1">
+                <h2 className="text-2xl font-bold text-gray-900">
+                  🛂 Border Post
+                </h2>
+                <button
+                  onClick={onClose}
+                  className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className="text-center py-8 text-gray-500">
+            No border post data available
+          </div>
+        </div>
+      )
+    }
+
+    // Implement prioritization logic for translation fields
+    // Prioritize the data source that has the most complete translation data
+    const borderPostTranslations = borderPostData?.comment_translations;
+    const featureTranslations = feature?.properties?.comment_translations;
+    
+    // Determine which source has better translation data
+    const borderPostHasValidTranslations = isValidTranslationField(borderPostTranslations);
+    const featureHasValidTranslations = isValidTranslationField(featureTranslations);
+    
+    // Choose the best translation source
+    let bestTranslationSource: any;
+    let bestCommentSource: any;
+    
+    if (borderPostHasValidTranslations && featureHasValidTranslations) {
+      // Both have valid translations, prefer the one with more languages
+      const borderPostLangCount = Object.keys(borderPostTranslations).length;
+      const featureLangCount = Object.keys(featureTranslations).length;
+      
+      if (borderPostLangCount >= featureLangCount) {
+        bestTranslationSource = borderPostTranslations;
+        bestCommentSource = borderPostData?.comment;
+      } else {
+        bestTranslationSource = featureTranslations;
+        bestCommentSource = feature?.properties?.comment;
+      }
+    } else if (borderPostHasValidTranslations) {
+      bestTranslationSource = borderPostTranslations;
+      bestCommentSource = borderPostData?.comment;
+    } else if (featureHasValidTranslations) {
+      bestTranslationSource = featureTranslations;
+      bestCommentSource = feature?.properties?.comment;
+    } else {
+      // Neither has valid translations, use fallback logic
+      bestTranslationSource = borderPostTranslations || featureTranslations;
+      bestCommentSource = borderPostData?.comment || feature?.properties?.comment;
+    }
+    
+    // Merge data sources with proper prioritization
+    const properties = {
+      // Start with feature properties as base
+      ...feature?.properties,
+      // Override with borderPostData for most fields
+      ...borderPostData,
+      // Apply prioritization logic for translation fields
+      comment_translations: bestTranslationSource,
+      comment: bestCommentSource,
+      // Preserve important fields from both sources with proper fallbacks
+      name: borderPostData?.name || feature?.properties?.name,
+      location: borderPostData?.location || feature?.properties?.location,
+      countries: borderPostData?.countries || feature?.properties?.countries,
+      coordinates: (() => {
+        // Handle different coordinate formats
+        if (borderPostData?.coordinates) {
+          return borderPostData.coordinates
+        }
+        if (borderPostData?.location && typeof borderPostData.location === 'object') {
+          // Handle Firebase GeoPoint format
+          if (borderPostData.location._latitude && borderPostData.location._longitude) {
+            return [borderPostData.location._longitude, borderPostData.location._latitude]
+          }
+        }
+        // Fallback to feature geometry coordinates
+        return feature?.geometry?.coordinates
+      })(),
+      is_open: borderPostData?.is_open ?? feature?.properties?.is_open
+    }
+    
     const status = getBorderPostStatus(properties.is_open ?? -1)
+    
+    console.log('🔍 Rendering border post details:', { 
+      hasCommentTranslations: !!properties.comment_translations, 
+      hasComment: !!properties.comment,
+      currentLanguage: language,
+      comment_translations_type: typeof properties.comment_translations,
+      comment_translations_keys: properties.comment_translations ? Object.keys(properties.comment_translations) : null,
+      comment_translations_current: properties.comment_translations?.[language],
+      comment: properties.comment,
+      dataMerging: {
+        borderPostHasValidTranslations: borderPostHasValidTranslations,
+        featureHasValidTranslations: featureHasValidTranslations,
+        selectedTranslationSource: bestTranslationSource === borderPostTranslations ? 'borderPostData' : 
+                                   bestTranslationSource === featureTranslations ? 'feature' : 'none',
+        selectedCommentSource: bestCommentSource === borderPostData?.comment ? 'borderPostData' : 
+                              bestCommentSource === feature?.properties?.comment ? 'feature' : 'none'
+      },
+      fromBorderPostData: { 
+        comment_translations_type: typeof borderPostData?.comment_translations,
+        comment_translations_keys: borderPostData?.comment_translations ? Object.keys(borderPostData.comment_translations) : null,
+        comment: borderPostData?.comment 
+      },
+      fromFeature: { 
+        comment_translations_type: typeof feature?.properties?.comment_translations,
+        comment_translations_keys: feature?.properties?.comment_translations ? Object.keys(feature.properties.comment_translations) : null,
+        comment: feature?.properties?.comment 
+      }
+    })
     
     return (
       <div className="space-y-6">
@@ -1106,25 +1286,41 @@ export default function DetailSidebar({
         </div>
 
         {/* Zoom Button */}
-        {(properties.coordinates || (feature?.geometry?.type === 'Point' && feature?.geometry?.coordinates)) && (
-          <div>
-            <button
-              onClick={() => {
-                const coords = properties.coordinates || feature?.geometry?.coordinates
-                if (coords && onBorderPostZoom) {
-                  const [lng, lat] = coords
+        {(() => {
+          // Check for valid coordinates from either source
+          const borderPostCoords = properties.coordinates
+          const featureCoords = feature?.geometry?.type === 'Point' ? feature?.geometry?.coordinates : null
+          
+          // Validate coordinates are arrays with 2 numeric values
+          const isValidCoords = (coords: any) => 
+            Array.isArray(coords) && 
+            coords.length >= 2 && 
+            typeof coords[0] === 'number' && 
+            typeof coords[1] === 'number' &&
+            isFinite(coords[0]) && 
+            isFinite(coords[1])
+          
+          const validBorderPostCoords = isValidCoords(borderPostCoords) ? borderPostCoords : null
+          const validFeatureCoords = isValidCoords(featureCoords) ? featureCoords : null
+          const finalCoords = validBorderPostCoords || validFeatureCoords
+          
+          return finalCoords && onBorderPostZoom && (
+            <div>
+              <button
+                onClick={() => {
+                  const [lng, lat] = finalCoords
                   onBorderPostZoom({ lng, lat })
-                }
-              }}
-              className="w-full inline-flex items-center justify-center px-4 py-2.5 text-sm font-medium text-white bg-blue-600 border border-blue-600 rounded-lg hover:bg-blue-700 hover:border-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 shadow-sm"
-            >
-              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
-              </svg>
-              {getTranslatedLabel('zoom_to_location', language)}
-            </button>
-          </div>
-        )}
+                }}
+                className="w-full inline-flex items-center justify-center px-4 py-2.5 text-sm font-medium text-white bg-blue-600 border border-blue-600 rounded-lg hover:bg-blue-700 hover:border-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 shadow-sm"
+              >
+                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                </svg>
+                {getTranslatedLabel('zoom_to_location', language)}
+              </button>
+            </div>
+          )
+        })()}
 
         {/* Border Post Information */}
         <div className="space-y-4">
@@ -1140,7 +1336,7 @@ export default function DetailSidebar({
             {/* Countries */}
             {properties.countries && (
               <div className="space-y-2">
-                <span className="text-gray-600 text-sm font-medium">Countries:</span>
+                <span className="text-gray-600 text-sm font-medium">{getTranslatedLabel('countries', language)}:</span>
                 <div className="flex flex-wrap gap-2">
                   {properties.countries.split(',').map((country: string, index: number) => (
                     <span key={index} className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">
@@ -1151,26 +1347,33 @@ export default function DetailSidebar({
               </div>
             )}
             
-            {/* Coordinates */}
-            {properties.coordinates && (
-              <div className="flex justify-between">
-                <span className="text-gray-600">Coordinates:</span>
-                <span className="font-medium text-xs">
-                  {properties.coordinates[1]?.toFixed(4)}, {properties.coordinates[0]?.toFixed(4)}
-                </span>
-              </div>
-            )}
+
           </div>
           
           {/* Comment */}
-          {properties.comment && (
-            <div className="space-y-2">
-              <span className="text-gray-600 text-sm font-medium">Comment:</span>
-              <div className="bg-gray-50 p-3 rounded-lg">
-                <p className="text-sm text-gray-800">{properties.comment}</p>
+          {(() => {
+            // Validate translation structure and log warnings
+            const validation = validateTranslationStructure(properties);
+            if (validation.warnings.length > 0) {
+              console.warn('Border post translation validation warnings:', validation.warnings);
+            }
+
+            // Get the translated comment using the validation helper
+            const displayComment = getTranslatedFieldValue(
+              properties.comment_translations,
+              properties.comment,
+              language
+            );
+            
+            return displayComment && (
+              <div className="space-y-2">
+                <span className="text-gray-600 text-sm font-medium">{getTranslatedLabel('comment', language)}:</span>
+                <div className="bg-gray-50 p-3 rounded-lg">
+                  <p className="text-sm text-gray-800">{displayComment}</p>
+                </div>
               </div>
-            </div>
-          )}
+            )
+          })()}
         </div>
       </div>
     )
@@ -1203,21 +1406,35 @@ export default function DetailSidebar({
    * Render zone information (read-only)
    */
   const renderZoneDetails = (zoneData: any, feature: any) => {
-    // Merge zoneData with feature properties, prioritizing zoneData for fields like comment
+    // Merge zoneData with feature properties, prioritizing zoneData for fields like comment_translations
     const properties = {
       ...zoneData,
       ...feature?.properties,
       // Preserve important fields from zoneData if not in feature
+      comment_translations: feature?.properties?.comment_translations || zoneData?.comment_translations,
       comment: feature?.properties?.comment || zoneData?.comment,
       description: feature?.properties?.description || zoneData?.description
     }
     const zoneType = getZoneTypeLabel(properties.type ?? 0)
     
     console.log('🔍 Rendering zone details:', { 
-      hasComment: !!properties.comment, 
+      hasCommentTranslations: !!properties.comment_translations, 
+      hasComment: !!properties.comment,
+      currentLanguage: language,
+      comment_translations_type: typeof properties.comment_translations,
+      comment_translations_keys: properties.comment_translations ? Object.keys(properties.comment_translations) : null,
+      comment_translations_current: properties.comment_translations?.[language],
       comment: properties.comment,
-      fromZoneData: zoneData?.comment,
-      fromFeature: feature?.properties?.comment 
+      fromZoneData: { 
+        comment_translations_type: typeof zoneData?.comment_translations,
+        comment_translations_keys: zoneData?.comment_translations ? Object.keys(zoneData.comment_translations) : null,
+        comment: zoneData?.comment 
+      },
+      fromFeature: { 
+        comment_translations_type: typeof feature?.properties?.comment_translations,
+        comment_translations_keys: feature?.properties?.comment_translations ? Object.keys(feature.properties.comment_translations) : null,
+        comment: feature?.properties?.comment 
+      }
     })
     
     return (
@@ -1261,14 +1478,26 @@ export default function DetailSidebar({
           </div>
           
           {/* Comment */}
-          {properties.comment && (
-            <div className="space-y-2">
-              <span className="text-gray-600 text-sm font-medium">{getTranslatedLabel('comment', language)}:</span>
-              <div className="bg-yellow-50 p-3 rounded-lg border border-yellow-200">
-                <p className="text-sm text-gray-800">{properties.comment}</p>
+          {(() => {
+            // Get the translated comment based on current language
+            let displayComment = properties.comment
+            
+            if (properties.comment_translations && typeof properties.comment_translations === 'object') {
+              // Try to get translation for current language, fallback to English, then to comment
+              displayComment = properties.comment_translations[language] || 
+                              properties.comment_translations['en'] || 
+                              properties.comment
+            }
+            
+            return displayComment && (
+              <div className="space-y-2">
+                <span className="text-gray-600 text-sm font-medium">{getTranslatedLabel('comment', language)}:</span>
+                <div className="bg-yellow-50 p-3 rounded-lg border border-yellow-200">
+                  <p className="text-sm text-gray-800">{displayComment}</p>
+                </div>
               </div>
-            </div>
-          )}
+            )
+          })()}
         </div>
       </div>
     )
@@ -1438,7 +1667,7 @@ export default function DetailSidebar({
             {selectedFeature.type === 'border' && selectedFeature.data && 
               renderBorderDetails(selectedFeature.data, selectedFeature.feature)}
             
-            {selectedFeature.type === 'border-post' && selectedFeature.data && 
+            {selectedFeature.type === 'border-post' && 
               renderBorderPostDetails(selectedFeature.data, selectedFeature.feature)}
             
             {selectedFeature.type === 'zone' && selectedFeature.data && 

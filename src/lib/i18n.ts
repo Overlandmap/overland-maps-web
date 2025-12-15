@@ -444,6 +444,8 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'zoom_to_location': 'Zoom to location',
     'borders': 'Borders',
     'border_posts': 'Border Posts',
+    'adjacent_countries': 'Adjacent Countries',
+    'countries': 'Countries',
     'bilateral': 'Bilateral',
     'restrictions_apply': 'Restrictions apply',
     'temporary_closed': 'Temporary Closed',
@@ -463,7 +465,9 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'app_store': 'App Store',
     'play_store': 'Play Store',
     'length_unknown': 'Length unknown',
-    'steps': 'steps'
+    'steps': 'steps',
+    'climate': 'Climate',
+    'itineraries': 'Itineraries'
   },
   de: {
     'overlanding': 'Overlanding',
@@ -490,6 +494,8 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'zoom_to_location': 'Zum Standort zoomen',
     'borders': 'Grenzen',
     'border_posts': 'Grenzposten',
+    'adjacent_countries': 'Angrenzende Länder',
+    'countries': 'Länder',
     'bilateral': 'Bilateral',
     'restrictions_apply': 'Einschränkungen gelten',
     'temporary_closed': 'Vorübergehend geschlossen',
@@ -509,7 +515,9 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'app_store': 'App Store',
     'play_store': 'Play Store',
     'length_unknown': 'Länge unbekannt',
-    'steps': 'Schritte'
+    'steps': 'Schritte',
+    'climate': 'Klima',
+    'itineraries': 'Reiserouten'
   },
   es: {
     'overlanding': 'Overlanding',
@@ -536,6 +544,8 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'zoom_to_location': 'Acercar a la ubicación',
     'borders': 'Fronteras',
     'border_posts': 'Puestos fronterizos',
+    'adjacent_countries': 'Países adyacentes',
+    'countries': 'Países',
     'bilateral': 'Bilateral',
     'restrictions_apply': 'Se aplican restricciones',
     'temporary_closed': 'Cerrado temporalmente',
@@ -555,7 +565,9 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'app_store': 'App Store',
     'play_store': 'Play Store',
     'length_unknown': 'Longitud desconocida',
-    'steps': 'pasos'
+    'steps': 'pasos',
+    'climate': 'Clima',
+    'itineraries': 'Itinerarios'
   },
   fr: {
     'overlanding': 'Overlanding',
@@ -582,6 +594,8 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'zoom_to_location': 'Zoomer sur l\'emplacement',
     'borders': 'Frontières',
     'border_posts': 'Postes frontières',
+    'adjacent_countries': 'Pays adjacents',
+    'countries': 'Pays',
     'bilateral': 'Bilatéral',
     'restrictions_apply': 'Restrictions applicables',
     'temporary_closed': 'Fermé temporairement',
@@ -601,7 +615,9 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'app_store': 'App Store',
     'play_store': 'Play Store',
     'length_unknown': 'Longueur inconnue',
-    'steps': 'étapes'
+    'steps': 'étapes',
+    'climate': 'Climat',
+    'itineraries': 'Itinéraires'
   },
   it: {
     'overlanding': 'Overlanding',
@@ -628,6 +644,8 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'zoom_to_location': 'Zoom sulla posizione',
     'borders': 'Confini',
     'border_posts': 'Posti di frontiera',
+    'adjacent_countries': 'Paesi adiacenti',
+    'countries': 'Paesi',
     'bilateral': 'Bilaterale',
     'restrictions_apply': 'Si applicano restrizioni',
     'temporary_closed': 'Chiuso temporaneamente',
@@ -647,7 +665,9 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'app_store': 'App Store',
     'play_store': 'Play Store',
     'length_unknown': 'Lunghezza sconosciuta',
-    'steps': 'passi'
+    'steps': 'passi',
+    'climate': 'Clima',
+    'itineraries': 'Itinerari'
   },
   ja: {
     'overlanding': 'オーバーランディング',
@@ -674,6 +694,8 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'zoom_to_location': '場所にズーム',
     'borders': '国境',
     'border_posts': '国境検問所',
+    'adjacent_countries': '隣接国',
+    'countries': '国',
     'bilateral': '二国間',
     'restrictions_apply': '制限が適用されます',
     'temporary_closed': '一時閉鎖',
@@ -693,7 +715,9 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'app_store': 'App Store',
     'play_store': 'Play Store',
     'length_unknown': '長さ不明',
-    'steps': 'ステップ'
+    'steps': 'ステップ',
+    'climate': '気候',
+    'itineraries': '旅程'
   },
   nl: {
     'overlanding': 'Overlanding',
@@ -720,6 +744,8 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'zoom_to_location': 'Zoom naar locatie',
     'borders': 'Grenzen',
     'border_posts': 'Grensposten',
+    'adjacent_countries': 'Aangrenzende landen',
+    'countries': 'Landen',
     'bilateral': 'Bilateraal',
     'restrictions_apply': 'Beperkingen van toepassing',
     'temporary_closed': 'Tijdelijk gesloten',
@@ -739,7 +765,9 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'app_store': 'App Store',
     'play_store': 'Play Store',
     'length_unknown': 'Lengte onbekend',
-    'steps': 'stappen'
+    'steps': 'stappen',
+    'climate': 'Klimaat',
+    'itineraries': 'Reisroutes'
   },
   ru: {
     'overlanding': 'Оверлендинг',
@@ -766,6 +794,8 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'zoom_to_location': 'Увеличить до местоположения',
     'borders': 'Границы',
     'border_posts': 'Пограничные посты',
+    'adjacent_countries': 'Соседние страны',
+    'countries': 'Страны',
     'bilateral': 'Двусторонний',
     'restrictions_apply': 'Применяются ограничения',
     'temporary_closed': 'Временно закрыто',
@@ -785,7 +815,9 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'app_store': 'App Store',
     'play_store': 'Play Store',
     'length_unknown': 'Длина неизвестна',
-    'steps': 'шагов'
+    'steps': 'шагов',
+    'climate': 'Климат',
+    'itineraries': 'Маршруты'
   },
   zh: {
     'overlanding': '越野旅行',
@@ -812,6 +844,8 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'zoom_to_location': '缩放到位置',
     'borders': '边界',
     'border_posts': '边境哨所',
+    'adjacent_countries': '邻国',
+    'countries': '国家',
     'bilateral': '双边',
     'restrictions_apply': '适用限制',
     'temporary_closed': '暂时关闭',
@@ -831,7 +865,9 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'app_store': 'App Store',
     'play_store': 'Play Store',
     'length_unknown': '长度未知',
-    'steps': '步骤'
+    'steps': '步骤',
+    'climate': '气候',
+    'itineraries': '行程'
   }
 }
 

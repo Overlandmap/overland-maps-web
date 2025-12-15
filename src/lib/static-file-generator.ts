@@ -212,6 +212,32 @@ export class StaticFileGenerator {
   }
 
   /**
+   * Generate track packs JSON file (for detail lookups)
+   */
+  generateTrackPackJSONFile(trackPacks: any[]): void {
+    console.log('🔄 Generating track packs JSON file...')
+    
+    try {
+      const jsonData = {
+        metadata: {
+          generatedAt: new Date().toISOString(),
+          totalTrackPacks: trackPacks.length,
+          editor: 'GOA'
+        },
+        trackPacks: trackPacks
+      }
+      
+      const filePath = join(this.outputDir, 'trackpack.json')
+      this.writeJSONFile(filePath, jsonData)
+      
+      console.log(`✅ Generated trackpack.json with ${trackPacks.length} entries`)
+    } catch (error) {
+      console.warn('⚠️ Failed to generate track pack JSON:', error)
+      console.log('Continuing with build...')
+    }
+  }
+
+  /**
    * Generate zone GeoJSON files
    */
   generateZoneGeoJSONFiles(geoData: GeoJSON.FeatureCollection): void {
@@ -263,7 +289,8 @@ export class StaticFileGenerator {
     borders: ProcessedBorderData[], 
     borderPosts: ProcessedBorderPostData[],
     lookup: ISO3Lookup,
-    itineraries?: any[]
+    itineraries?: any[],
+    trackPacks?: any[]
   ): void {
     console.log('🔄 Generating data manifest...')
     
@@ -310,6 +337,13 @@ export class StaticFileGenerator {
               description: 'Travel itineraries with editor=GOA filter',
               recordCount: itineraries.length,
               sizeEstimate: this.estimateFileSize(itineraries)
+            }
+          }),
+          ...(trackPacks && {
+            'trackpack.json': {
+              description: 'Track packs with editor=GOA filter',
+              recordCount: trackPacks.length,
+              sizeEstimate: this.estimateFileSize(trackPacks)
             }
           })
         },

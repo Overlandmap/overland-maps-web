@@ -76,10 +76,10 @@ class DataBuildPipeline {
       await this.validateCollections()
       
       // Step 2: Fetch raw data from Firestore
-      const { countries, borders, borderPosts, zones, itineraries } = await this.fetchData()
+      const { countries, borders, borderPosts, zones, itineraries, trackPacks } = await this.fetchData()
       
       // Step 3: Process and transform data
-      const { processedCountries, processedBorders, processedBorderPosts, processedItineraries, iso3Lookup } = await this.processData(countries, borders, borderPosts, itineraries)
+      const { processedCountries, processedBorders, processedBorderPosts, processedItineraries, processedTrackPacks, iso3Lookup } = await this.processData(countries, borders, borderPosts, itineraries, trackPacks)
       
       // Step 4: Validate processed data
       if (!this.options.skipValidation) {
@@ -89,7 +89,7 @@ class DataBuildPipeline {
       }
       
       // Step 5: Generate static files
-      await this.generateStaticFiles(processedCountries, processedBorders, processedBorderPosts, zones, processedItineraries, iso3Lookup)
+      await this.generateStaticFiles(processedCountries, processedBorders, processedBorderPosts, zones, processedItineraries, processedTrackPacks, iso3Lookup)
       
       // Step 6: Generate build report
       await this.generateBuildReport(countries, processedCountries, borders, processedBorders, iso3Lookup)
@@ -176,15 +176,18 @@ class DataBuildPipeline {
     // Fetch all itineraries with editor='GOA'
     const itineraries = await this.fetcher.fetchItineraries()
     
-    console.log(`✅ Fetched ${countries.length} countries, ${borders.length} borders, ${borderPosts.length} border posts, ${zones.length} zones, and ${itineraries.length} itineraries`)
+    // Fetch all track packs with editor='GOA'
+    const trackPacks = await this.fetcher.fetchTrackPacks()
     
-    return { countries, borders, borderPosts, zones, itineraries }
+    console.log(`✅ Fetched ${countries.length} countries, ${borders.length} borders, ${borderPosts.length} border posts, ${zones.length} zones, ${itineraries.length} itineraries, and ${trackPacks.length} track packs`)
+    
+    return { countries, borders, borderPosts, zones, itineraries, trackPacks }
   }
 
   /**
    * Process and transform the raw data
    */
-  private async processData(countries: any[], borders: any[], borderPosts: any[], itineraries: any[]) {
+  private async processData(countries: any[], borders: any[], borderPosts: any[], itineraries: any[], trackPacks: any[]) {
     console.log('\n⚙️ Step 3: Processing and transforming data...')
     
     // Process countries
@@ -199,6 +202,9 @@ class DataBuildPipeline {
     // Itineraries don't need processing - they're used as-is
     const processedItineraries = itineraries
     
+    // Track packs don't need processing - they're used as-is
+    const processedTrackPacks = trackPacks
+    
     // Create ISO3 lookup table
     const iso3Lookup = this.processor.createISO3Lookup(processedCountries)
     
@@ -210,9 +216,10 @@ class DataBuildPipeline {
     console.log(`   Borders: ${stats.borders.processed}/${stats.borders.original} (${stats.borders.successRate}%)`)
     console.log(`   Border Posts: ${processedBorderPosts.length}/${borderPosts.length} (${Math.round((processedBorderPosts.length / borderPosts.length) * 100)}%)`)
     console.log(`   Itineraries: ${processedItineraries.length}/${itineraries.length} (100%)`)
+    console.log(`   Track Packs: ${processedTrackPacks.length}/${trackPacks.length} (100%)`)
     console.log(`   ISO3 mappings: ${Object.keys(iso3Lookup).length}`)
     
-    return { processedCountries, processedBorders, processedBorderPosts, processedItineraries, iso3Lookup }
+    return { processedCountries, processedBorders, processedBorderPosts, processedItineraries, processedTrackPacks, iso3Lookup }
   }
 
   /**
@@ -236,7 +243,7 @@ class DataBuildPipeline {
   /**
    * Generate all static files
    */
-  private async generateStaticFiles(processedCountries: any[], processedBorders: any[], processedBorderPosts: any[], zones: any[], processedItineraries: any[], iso3Lookup: any): Promise<void> {
+  private async generateStaticFiles(processedCountries: any[], processedBorders: any[], processedBorderPosts: any[], zones: any[], processedItineraries: any[], processedTrackPacks: any[], iso3Lookup: any): Promise<void> {
     console.log('\n📄 Step 5: Generating static files...')
     
     // Generate country JSON
@@ -262,11 +269,14 @@ class DataBuildPipeline {
     // Generate itineraries JSON (for detail lookups - used by app)
     this.generator.generateItinerariesJSONFile(processedItineraries)
     
+    // Generate track packs JSON (for detail lookups - used by app)
+    this.generator.generateTrackPackJSONFile(processedTrackPacks)
+    
     // Generate ISO3 lookup
     this.generator.generateISO3LookupJSON(iso3Lookup)
     
     // Generate manifest
-    this.generator.generateManifest(processedCountries, processedBorders, processedBorderPosts, iso3Lookup, processedItineraries)
+    this.generator.generateManifest(processedCountries, processedBorders, processedBorderPosts, iso3Lookup, processedItineraries, processedTrackPacks)
     
     console.log('✅ All static files generated successfully')
   }

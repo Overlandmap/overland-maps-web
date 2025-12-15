@@ -245,6 +245,41 @@ export class FirestoreDataFetcher {
   }
 
   /**
+   * Fetch all documents from the Track Pack Collection where editor='GOA'
+   */
+  async fetchTrackPacks(): Promise<any[]> {
+    console.log('🔄 Fetching track packs from Firestore (editor=GOA)...')
+    
+    return withRetry(async () => {
+      const snapshot = await this.db
+        .collection('track_pack')
+        .where('editor', '==', 'GOA')
+        .get()
+      
+      if (snapshot.empty) {
+        console.warn('⚠️ No track packs found with editor=GOA in Firestore')
+        return []
+      }
+
+      const trackPacks: any[] = []
+      
+      snapshot.forEach((doc: any) => {
+        const data = doc.data()
+        
+        const trackPack = {
+          id: doc.id,
+          ...data // Include all fields from the document
+        }
+        
+        trackPacks.push(trackPack)
+      })
+
+      console.log(`✅ Fetched ${trackPacks.length} track packs with editor=GOA`)
+      return trackPacks
+    })
+  }
+
+  /**
    * Validate that required collections exist and have data
    */
   async validateCollections(): Promise<{ countries: boolean; borders: boolean; borderPosts: boolean }> {

@@ -2724,7 +2724,7 @@ export default function SimpleMapContainer({
                   : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
                   }`}
               >
-                Climate
+                {getTranslatedLabel('climate', language)}
               </button>
               <button
                 onClick={() => setColorScheme('itineraries')}
@@ -2733,7 +2733,7 @@ export default function SimpleMapContainer({
                   : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
                   }`}
               >
-                Itineraries
+                {getTranslatedLabel('itineraries', language)}
               </button>
             </div>
 
