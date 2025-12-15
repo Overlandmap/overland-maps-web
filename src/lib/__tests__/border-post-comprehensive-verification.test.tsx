@@ -110,6 +110,9 @@ describe('Border Post Comprehensive Verification', () => {
         />
       )
 
+      // Capture content before cleanup
+      const mapClickContent = mapClickContainer.textContent
+
       cleanup()
 
       // Simulate URL access (data from feature properties)
@@ -134,13 +137,13 @@ describe('Border Post Comprehensive Verification', () => {
       )
 
       // Both should contain the same essential content
-      expect(mapClickContainer.textContent).toContain('Test Border Post')
+      expect(mapClickContent).toContain('Test Border Post')
       expect(urlAccessContainer.textContent).toContain('Test Border Post')
       
-      expect(mapClickContainer.textContent).toContain('English comment')
+      expect(mapClickContent).toContain('English comment')
       expect(urlAccessContainer.textContent).toContain('English comment')
       
-      expect(mapClickContainer.textContent).toContain('Zoom to Location')
+      expect(mapClickContent).toContain('Zoom to Location')
       expect(urlAccessContainer.textContent).toContain('Zoom to Location')
     })
 

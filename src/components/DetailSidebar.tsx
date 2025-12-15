@@ -948,13 +948,29 @@ export default function DetailSidebar({
           </div>
           
           {/* Comment */}
-          {properties.comment && (
-            <div className="space-y-2">
-              <div className="bg-gray-50 p-3 rounded-lg border border-gray-200">
-                <p className="text-sm text-gray-800">{properties.comment}</p>
+          {(() => {
+            // Validate translation structure and log warnings
+            const validation = validateTranslationStructure(properties);
+            if (validation.warnings.length > 0) {
+              console.warn('Border translation validation warnings:', validation.warnings);
+            }
+
+            // Get the translated comment using the validation helper
+            const displayComment = getTranslatedFieldValue(
+              properties.comment_translations,
+              properties.comment,
+              language
+            );
+            
+            return displayComment && (
+              <div className="space-y-2">
+                <span className="text-gray-600 text-sm font-medium">{getTranslatedLabel('comment', language)}:</span>
+                <div className="bg-gray-50 p-3 rounded-lg border border-gray-200">
+                  <p className="text-sm text-gray-800">{displayComment}</p>
+                </div>
               </div>
-            </div>
-          )}
+            )
+          })()}
         </div>
 
         {/* Border Posts */}
@@ -1073,8 +1089,8 @@ export default function DetailSidebar({
       return false;
     }
     
-    // Check if all values are strings
-    return Object.values(translations).every(value => typeof value === 'string');
+    // Check if at least one value is a valid string
+    return Object.values(translations).some(value => typeof value === 'string' && value.trim().length > 0);
   };
 
   const getTranslatedFieldValue = (
@@ -1133,11 +1149,54 @@ export default function DetailSidebar({
   };
 
   /**
-   * Render border post information (read-only)
+   * Normalize border post data from different sources into a unified structure
    */
-  const renderBorderPostDetails = (borderPostData: any, feature: any) => {
+  const normalizeBorderPostData = (borderPostData: any, feature: any) => {
     // Handle case where both data sources are null/empty
     if (!borderPostData && !feature) {
+      return null;
+    }
+
+    // Create a unified data structure by merging both sources
+    // Priority: borderPostData (from database) > feature.properties (from map data)
+    const rawData = {
+      ...feature?.properties,
+      ...borderPostData
+    };
+
+    // Normalize coordinates from different formats
+    let coordinates = rawData.coordinates;
+    if (!coordinates && rawData.location && typeof rawData.location === 'object') {
+      // Handle Firebase GeoPoint format
+      if (rawData.location._latitude && rawData.location._longitude) {
+        coordinates = [rawData.location._longitude, rawData.location._latitude];
+      }
+    }
+    if (!coordinates && feature?.geometry?.coordinates) {
+      coordinates = feature.geometry.coordinates;
+    }
+
+    return {
+      id: rawData.id,
+      name: rawData.name,
+      location: rawData.location,
+      countries: rawData.countries,
+      coordinates: coordinates,
+      is_open: rawData.is_open,
+      comment: rawData.comment,
+      comment_translations: rawData.comment_translations
+    };
+  };
+
+  /**
+   * Render border post information (read-only) - unified implementation
+   */
+  const renderBorderPostDetails = (borderPostData: any, feature: any) => {
+    // Normalize data from both sources into a unified structure
+    const properties = normalizeBorderPostData(borderPostData, feature);
+    
+    // Handle case where no valid data is available
+    if (!properties) {
       return (
         <div className="space-y-6">
           <div className="border-b border-gray-200 pb-4">
@@ -1163,103 +1222,8 @@ export default function DetailSidebar({
         </div>
       )
     }
-
-    // Implement prioritization logic for translation fields
-    // Prioritize the data source that has the most complete translation data
-    const borderPostTranslations = borderPostData?.comment_translations;
-    const featureTranslations = feature?.properties?.comment_translations;
-    
-    // Determine which source has better translation data
-    const borderPostHasValidTranslations = isValidTranslationField(borderPostTranslations);
-    const featureHasValidTranslations = isValidTranslationField(featureTranslations);
-    
-    // Choose the best translation source
-    let bestTranslationSource: any;
-    let bestCommentSource: any;
-    
-    if (borderPostHasValidTranslations && featureHasValidTranslations) {
-      // Both have valid translations, prefer the one with more languages
-      const borderPostLangCount = Object.keys(borderPostTranslations).length;
-      const featureLangCount = Object.keys(featureTranslations).length;
-      
-      if (borderPostLangCount >= featureLangCount) {
-        bestTranslationSource = borderPostTranslations;
-        bestCommentSource = borderPostData?.comment;
-      } else {
-        bestTranslationSource = featureTranslations;
-        bestCommentSource = feature?.properties?.comment;
-      }
-    } else if (borderPostHasValidTranslations) {
-      bestTranslationSource = borderPostTranslations;
-      bestCommentSource = borderPostData?.comment;
-    } else if (featureHasValidTranslations) {
-      bestTranslationSource = featureTranslations;
-      bestCommentSource = feature?.properties?.comment;
-    } else {
-      // Neither has valid translations, use fallback logic
-      bestTranslationSource = borderPostTranslations || featureTranslations;
-      bestCommentSource = borderPostData?.comment || feature?.properties?.comment;
-    }
-    
-    // Merge data sources with proper prioritization
-    const properties = {
-      // Start with feature properties as base
-      ...feature?.properties,
-      // Override with borderPostData for most fields
-      ...borderPostData,
-      // Apply prioritization logic for translation fields
-      comment_translations: bestTranslationSource,
-      comment: bestCommentSource,
-      // Preserve important fields from both sources with proper fallbacks
-      name: borderPostData?.name || feature?.properties?.name,
-      location: borderPostData?.location || feature?.properties?.location,
-      countries: borderPostData?.countries || feature?.properties?.countries,
-      coordinates: (() => {
-        // Handle different coordinate formats
-        if (borderPostData?.coordinates) {
-          return borderPostData.coordinates
-        }
-        if (borderPostData?.location && typeof borderPostData.location === 'object') {
-          // Handle Firebase GeoPoint format
-          if (borderPostData.location._latitude && borderPostData.location._longitude) {
-            return [borderPostData.location._longitude, borderPostData.location._latitude]
-          }
-        }
-        // Fallback to feature geometry coordinates
-        return feature?.geometry?.coordinates
-      })(),
-      is_open: borderPostData?.is_open ?? feature?.properties?.is_open
-    }
     
     const status = getBorderPostStatus(properties.is_open ?? -1)
-    
-    console.log('🔍 Rendering border post details:', { 
-      hasCommentTranslations: !!properties.comment_translations, 
-      hasComment: !!properties.comment,
-      currentLanguage: language,
-      comment_translations_type: typeof properties.comment_translations,
-      comment_translations_keys: properties.comment_translations ? Object.keys(properties.comment_translations) : null,
-      comment_translations_current: properties.comment_translations?.[language],
-      comment: properties.comment,
-      dataMerging: {
-        borderPostHasValidTranslations: borderPostHasValidTranslations,
-        featureHasValidTranslations: featureHasValidTranslations,
-        selectedTranslationSource: bestTranslationSource === borderPostTranslations ? 'borderPostData' : 
-                                   bestTranslationSource === featureTranslations ? 'feature' : 'none',
-        selectedCommentSource: bestCommentSource === borderPostData?.comment ? 'borderPostData' : 
-                              bestCommentSource === feature?.properties?.comment ? 'feature' : 'none'
-      },
-      fromBorderPostData: { 
-        comment_translations_type: typeof borderPostData?.comment_translations,
-        comment_translations_keys: borderPostData?.comment_translations ? Object.keys(borderPostData.comment_translations) : null,
-        comment: borderPostData?.comment 
-      },
-      fromFeature: { 
-        comment_translations_type: typeof feature?.properties?.comment_translations,
-        comment_translations_keys: feature?.properties?.comment_translations ? Object.keys(feature.properties.comment_translations) : null,
-        comment: feature?.properties?.comment 
-      }
-    })
     
     return (
       <div className="space-y-6">
@@ -1479,15 +1443,18 @@ export default function DetailSidebar({
           
           {/* Comment */}
           {(() => {
-            // Get the translated comment based on current language
-            let displayComment = properties.comment
-            
-            if (properties.comment_translations && typeof properties.comment_translations === 'object') {
-              // Try to get translation for current language, fallback to English, then to comment
-              displayComment = properties.comment_translations[language] || 
-                              properties.comment_translations['en'] || 
-                              properties.comment
+            // Validate translation structure and log warnings
+            const validation = validateTranslationStructure(properties);
+            if (validation.warnings.length > 0) {
+              console.warn('Zone translation validation warnings:', validation.warnings);
             }
+
+            // Get the translated comment using the validation helper
+            const displayComment = getTranslatedFieldValue(
+              properties.comment_translations,
+              properties.comment,
+              language
+            );
             
             return displayComment && (
               <div className="space-y-2">
