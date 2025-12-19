@@ -221,14 +221,14 @@ export default function SimpleMapContainer({
         try {
           // Clear the filter first
           map.current.setFilter('itinerary-highlight', ['==', ['get', 'itineraryDocId'], ''])
-          console.log('✅ Itinerary highlight filter cleared')
+
           
           // Reset itinerary highlight paint properties to default state
           try {
             map.current.setPaintProperty('itinerary-highlight', 'line-color', '#ffffff')
             map.current.setPaintProperty('itinerary-highlight', 'line-width', 6)
             map.current.setPaintProperty('itinerary-highlight', 'line-opacity', 1.0)
-            console.log('✅ Itinerary highlight paint properties reset')
+
           } catch (paintError) {
             console.error('❌ Failed to reset itinerary highlight paint properties:', paintError)
             // Continue execution even if paint property reset fails
@@ -254,7 +254,7 @@ export default function SimpleMapContainer({
         }
       }
       
-      console.log('✅ All highlights cleared successfully')
+
     } catch (error) {
       console.error('❌ Unexpected error while clearing highlights:', error)
     }
@@ -287,7 +287,7 @@ export default function SimpleMapContainer({
       // Apply highlight filter
       map.current.setFilter('border-highlight', ['==', ['get', 'id'], borderId])
       
-      console.log('✅ Border highlight applied successfully:', borderId)
+
     } catch (error) {
       console.error('❌ Failed to highlight border:', borderId, error)
     }
@@ -331,7 +331,7 @@ export default function SimpleMapContainer({
       if (updateMapColorsRef.current) {
         try {
           updateMapColorsRef.current(colorScheme)
-          console.log('✅ Country highlight applied successfully:', countryId)
+
         } catch (error) {
           console.error('❌ Failed to update country colors:', error)
           // Clear the stored ID if color update failed
@@ -373,7 +373,7 @@ export default function SimpleMapContainer({
       // Apply highlight filter
       map.current.setFilter('border-post-highlight', ['==', ['get', 'id'], borderPostId])
       
-      console.log('✅ Border post highlight applied successfully:', borderPostId)
+
     } catch (error) {
       console.error('❌ Failed to highlight border post:', borderPostId, error)
     }
@@ -416,7 +416,7 @@ export default function SimpleMapContainer({
         console.error('❌ Failed to update zone highlight paint properties:', error)
       }
       
-      console.log('✅ Zone highlight applied successfully:', zoneId)
+
     } catch (error) {
       console.error('❌ Failed to highlight zone:', zoneId, error)
       // Clear the stored ID if highlighting failed
@@ -472,8 +472,6 @@ export default function SimpleMapContainer({
           console.warn('⚠️ No itinerary found with ID:', itineraryId)
           console.warn('⚠️ This may indicate the itinerary data is not loaded or the ID is incorrect')
           // Still apply the filter to maintain consistent state
-        } else {
-          console.log('✅ Found', itineraryFeatures.length, 'feature(s) for itinerary:', itineraryId)
         }
       } catch (queryError) {
         console.error('❌ Failed to query itinerary features:', queryError)
@@ -483,7 +481,7 @@ export default function SimpleMapContainer({
       // Apply highlight filter with enhanced error handling
       try {
         map.current.setFilter('itinerary-highlight', ['==', ['get', 'itineraryDocId'], itineraryId])
-        console.log('✅ Itinerary highlight filter applied successfully:', itineraryId)
+
       } catch (filterError) {
         console.error('❌ Failed to set itinerary highlight filter:', filterError)
         selectedItineraryIdRef.current = null
@@ -496,17 +494,13 @@ export default function SimpleMapContainer({
         const currentWidth = map.current.getPaintProperty('itinerary-highlight', 'line-width')
         const currentOpacity = map.current.getPaintProperty('itinerary-highlight', 'line-opacity')
         
-        console.log('✅ Itinerary highlight paint properties:', {
-          color: currentColor,
-          width: currentWidth,
-          opacity: currentOpacity
-        })
+
       } catch (paintError) {
         console.warn('⚠️ Could not verify itinerary highlight paint properties:', paintError)
         // This is not critical, so we don't fail the highlighting
       }
       
-      console.log('✅ Itinerary highlight applied successfully:', itineraryId)
+
     } catch (error) {
       console.error('❌ Failed to highlight itinerary:', itineraryId, error)
       console.error('❌ Error details:', {
@@ -541,7 +535,7 @@ export default function SimpleMapContainer({
         zoom: zoom,
         duration: 1500 // Animation duration in ms
       })
-      console.log(`✅ Zoomed to location [${lng}, ${lat}] with zoom level ${zoom}`)
+
     } catch (error) {
       console.error('Failed to zoom to location:', error)
     }
@@ -568,7 +562,7 @@ export default function SimpleMapContainer({
       if (borderPostId) {
         highlightBorderPost(borderPostId) // Highlight the clicked border post (white circle)
         if (onBorderPostClick) {
-          console.log('🔄 Calling onBorderPostClick with:', borderPostId)
+
           onBorderPostClick(borderPostId, null, borderPostFeature)
         }
       }
@@ -598,8 +592,7 @@ export default function SimpleMapContainer({
         const itineraryDocId = itineraryFeature.properties?.itineraryDocId
         
         if (itineraryDocId && typeof itineraryDocId === 'string' && itineraryDocId.trim() !== '') {
-          console.log('🎯 Itinerary clicked:', itineraryDocId)
-          console.log('🔍 Itinerary feature properties:', itineraryFeature.properties)
+
           
           // Clear all other highlights first
           try {
@@ -645,7 +638,7 @@ export default function SimpleMapContainer({
       if (borderId) {
         highlightBorder(borderId) // Highlight the clicked border (white, wider line)
         if (onBorderClick) {
-          console.log('🔄 Calling onBorderClick with:', borderId)
+
           onBorderClick(borderId, null, borderFeature)
         }
       }
@@ -660,7 +653,7 @@ export default function SimpleMapContainer({
       if (countryId) {
         highlightCountry(countryId) // Highlight the clicked country (darker blue fill)
         if (onCountryClick) {
-          console.log('🔄 Calling onCountryClick with:', countryId)
+
           onCountryClick(countryId, null, countryFeature)
         }
       }
@@ -778,7 +771,7 @@ export default function SimpleMapContainer({
 
     // Only update colors for overlanding and carnet modes
     if (scheme === 'climate' || scheme === 'itineraries') {
-      console.log(`ℹ️ Skipping color update for ${scheme} mode (handled by style)`)
+
       return
     }
 
@@ -806,7 +799,7 @@ export default function SimpleMapContainer({
           map.current.setPaintProperty('country', 'fill-color', conditionalColorExpression as any)
           map.current.setPaintProperty('country', 'fill-opacity', 0.6)
           
-          console.log(`✅ Map colors updated to ${scheme} scheme with country selection:`, selectedCountryIdRef.current)
+
         } catch (error) {
           console.error('❌ Failed to apply country selection colors, falling back to base colors:', error)
           // Fallback to base colors if selection highlighting fails
@@ -819,7 +812,7 @@ export default function SimpleMapContainer({
           map.current.setPaintProperty('country', 'fill-color', baseColorExpression as any)
           map.current.setPaintProperty('country', 'fill-opacity', 0.6)
           
-          console.log(`✅ Map colors updated to ${scheme} scheme (no selection)`)
+
         } catch (error) {
           console.error('❌ Failed to apply base colors for scheme:', scheme, error)
         }
@@ -844,7 +837,7 @@ export default function SimpleMapContainer({
     const previousScheme = previousColorSchemeRef.current
     if (previousScheme === colorScheme) return
     
-    console.log(`🔄 Color scheme changed from ${previousScheme} to: ${colorScheme}`)
+
     previousColorSchemeRef.current = colorScheme
 
     const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
@@ -877,7 +870,7 @@ export default function SimpleMapContainer({
       // Switching from climate to overlanding/carnet - reload basemap
       const basemapLangSuffix = supportedLanguages.includes(language) && language !== 'en' ? `-${language}` : ''
       const styleUrl = `${basePath}/styles/basemap${basemapLangSuffix}.json`
-      console.log('🗺️ Switching back to basemap style:', styleUrl)
+
       
       // Set style and restore position after load, then re-add custom layers
       const handleStyleLoad = () => {
@@ -894,7 +887,6 @@ export default function SimpleMapContainer({
           console.log(`📍 Position restored after basemap style load`)
           
           // Re-add all custom layers that were in the basemap
-          console.log('🔄 Re-adding custom layers after style switch')
           
 
         
@@ -1242,7 +1234,7 @@ export default function SimpleMapContainer({
         
 
         
-          console.log('✅ Custom layers re-added')
+
           
           // Wait a tick for layers to be fully registered, then apply colors and visibility
           setTimeout(() => {
@@ -1334,7 +1326,6 @@ export default function SimpleMapContainer({
           console.log(`📍 Position restored after language style load`)
           
           // Re-add all custom layers that were in the basemap
-          console.log('🔄 Re-adding custom layers after language change')
           
           // Re-create diagonal stripe patterns with different colors
           const createDiagonalPattern = (color: string) => {
@@ -1678,7 +1669,7 @@ export default function SimpleMapContainer({
             })
           }
           
-          console.log('✅ Custom layers re-added after language change')
+
           
           // Wait a tick for layers to be fully registered, then apply colors and visibility
           setTimeout(() => {
@@ -1792,7 +1783,7 @@ export default function SimpleMapContainer({
       if (duration > 100) {
         console.warn(`⚠️ Prop-driven highlight took ${duration.toFixed(2)}ms (target: <100ms)`)
       } else {
-        console.log(`✅ Prop-driven highlight applied in ${duration.toFixed(2)}ms`)
+
       }
     } catch (error) {
       console.error('❌ Unexpected error in prop-driven highlighting effect:', error)
@@ -1872,7 +1863,7 @@ export default function SimpleMapContainer({
           if (!map.current) return
           
           try {
-            console.log(`🔄 Enhanced itinerary layer management - mode: ${colorScheme}`)
+
             
             if (isItinerariesMode) {
               // === SWITCHING TO ITINERARIES MODE ===
@@ -1900,30 +1891,30 @@ export default function SimpleMapContainer({
               for (const layerId of overlandingLayers) {
                 if (map.current.getLayer(layerId)) {
                   map.current.setLayoutProperty(layerId, 'visibility', 'none')
-                  console.log(`✅ Hidden ${layerId} for itineraries mode`)
+
                 }
               }
               
               // 3. Show itinerary layers (only if they exist)
               if (map.current.getLayer('itinerary')) {
                 map.current.setLayoutProperty('itinerary', 'visibility', 'visible')
-                console.log('✅ Itinerary layer shown')
+
               }
               
               if (map.current.getLayer('itinerary-highlight')) {
                 map.current.setLayoutProperty('itinerary-highlight', 'visibility', 'visible')
-                console.log('✅ Itinerary highlight layer shown')
+
               }
               
               if (map.current.getLayer('itinerary-labels')) {
                 map.current.setLayoutProperty('itinerary-labels', 'visibility', 'visible')
-                console.log('✅ Itinerary labels layer shown')
+
               }
               
               // 4. Configure hillshade for itineraries mode
               if (map.current.getLayer('hillshade')) {
                 map.current.setLayoutProperty('hillshade', 'visibility', 'visible')
-                console.log('✅ Hillshade shown for itineraries mode')
+
               }
               
               // 5. Enable terrain for itineraries mode
@@ -1933,7 +1924,7 @@ export default function SimpleMapContainer({
                     source: 'terrainSource',
                     exaggeration: 1
                   })
-                  console.log('✅ Terrain enabled for itineraries mode')
+
                 } catch (error) {
                   console.error('❌ Error enabling terrain:', error)
                 }
@@ -1973,7 +1964,7 @@ export default function SimpleMapContainer({
               for (const layerId of overlandingLayers) {
                 if (map.current.getLayer(layerId)) {
                   map.current.setLayoutProperty(layerId, 'visibility', 'visible')
-                  console.log(`✅ Shown ${layerId} for ${colorScheme} mode`)
+
                 }
               }
               
@@ -1983,13 +1974,13 @@ export default function SimpleMapContainer({
                 setTimeout(() => {
                   if (map.current && map.current.getLayer('country')) {
                     updateMapColors(colorScheme)
-                    console.log(`✅ Applied ${colorScheme} colors`)
+
                   }
                 }, 50)
               }
             }
             
-            console.log(`✅ Enhanced itinerary layer management completed for ${colorScheme} mode`)
+
             
           } catch (error) {
             console.error('❌ Error in enhanced itinerary layer management:', error)
@@ -2048,6 +2039,7 @@ export default function SimpleMapContainer({
       // Register PMTiles protocol
       const protocol = new Protocol()
       maplibregl.addProtocol('pmtiles', protocol.tile)
+
 
 
       // Load style from JSON file based on color scheme and language
@@ -2233,6 +2225,18 @@ export default function SimpleMapContainer({
 
           // Skip adding layers if in climate mode - climate.json style handles everything
           if (colorScheme !== 'climate') {
+            // Wait for style to be fully loaded before adding custom layers
+            const addCustomLayers = () => {
+              if (!map.current) return
+              
+              // Double-check that style is loaded
+              if (!map.current.isStyleLoaded()) {
+                console.log('⚠️ Style not fully loaded, waiting longer...')
+                setTimeout(addCustomLayers, 200)
+                return
+              }
+              
+
             // Add diagonal stripe patterns for each zone type
             // Type 0: Closed - Red stripes
             const redPattern = createDiagonalPattern('rgba(239, 68, 68, 1)')
@@ -2284,149 +2288,208 @@ export default function SimpleMapContainer({
             }
 
 
-            map.current.addSource('country-border', {
-              type: 'vector',
-              url: 'pmtiles://https://overlanding.io/country-borders.pmtiles'
-            })
+            try {
+              map.current.addSource('country-border', {
+                type: 'vector',
+                url: 'pmtiles://https://overlanding.io/country-borders.pmtiles'
+              })
 
-            map.current.addSource('hillshadeSource', {
-              type: 'raster-dem',
-              url: 'https://tiles.mapterhorn.com/tilejson.json'
-            })
-            map.current.addSource('terrainSource', {
-              type: 'raster-dem',
-              url: 'https://tiles.mapterhorn.com/tilejson.json'
-            })
-
-          // Add hillshade layer (above basemap, below all other layers) - insert before waterway_river
-          map.current.addLayer({
-            id: 'hillshade',
-            type: 'hillshade',
-            source: 'hillshadeSource',
-            layout: {
-              'visibility': colorScheme === 'itineraries' ? 'visible' : 'none'
+              
+            } catch (error) {
+              console.error('❌ Failed to add country-border source:', error)
             }
-          }, 'waterway_river')
 
-          // Add country layer (bottom layer) - insert before waterway_river
-          map.current.addLayer({
-            id: 'country',
-            type: 'fill',
-            source: 'country-border',
-            'source-layer': 'country',
-            paint: {
-              'fill-color': generateOverlandingColorExpression() as any,
-              'fill-opacity': 0.6
-            }
-          }, 'waterway_river')
+            try {
+              map.current.addSource('hillshadeSource', {
+                type: 'raster-dem',
+                url: 'https://tiles.mapterhorn.com/tilejson.json'
+              })
 
-          // Add zones layer (restricted areas) with color-coded diagonal stripe patterns - above countries, before waterway
-          map.current.addLayer({
-            id: 'zones',
-            type: 'fill',
-            source: 'country-border',
-            'source-layer': 'zones',
-            paint: {
-              // Background color based on zone type
-              'fill-color': [
-                'case',
-                ['==', ['get', 'type'], 0], '#ef4444', // Closed - red
-                ['==', ['get', 'type'], 1], '#000000', // Guide/Escort - black
-                ['==', ['get', 'type'], 2], '#9ca3af', // Permit - grey
-                ['==', ['get', 'type'], 3], '#3b82f6', // Restrictions - blue
-                '#9ca3af' // Default - grey
-              ],
-              // Pattern based on zone type
-              'fill-pattern': [
-                'case',
-                ['==', ['get', 'type'], 0], 'diagonal-stripe-red',
-                ['==', ['get', 'type'], 1], 'diagonal-stripe-black',
-                ['==', ['get', 'type'], 2], 'diagonal-stripe-blue',
-                ['==', ['get', 'type'], 3], 'diagonal-stripe-grey',
-                'diagonal-stripe-grey' // Default
-              ],
-              'fill-opacity': 0.7
+            } catch (error) {
+              console.error('❌ Failed to add hillshadeSource:', error)
             }
-          }, 'waterway_river')
+            
+            try {
+              map.current.addSource('terrainSource', {
+                type: 'raster-dem',
+                url: 'https://tiles.mapterhorn.com/tilejson.json'
+              })
+
+            } catch (error) {
+              console.error('❌ Failed to add terrainSource:', error)
+            }
+
+              // Add hillshade layer (above basemap, below all other layers)
+              try {
+                if (!map.current.getLayer('hillshade')) {
+                  const insertionPoint = map.current.getLayer('waterway_river') ? 'waterway_river' : undefined
+                  
+                  map.current.addLayer({
+                    id: 'hillshade',
+                    type: 'hillshade',
+                    source: 'hillshadeSource',
+                    layout: {
+                      'visibility': colorScheme === 'itineraries' ? 'visible' : 'none'
+                    }
+                  }, insertionPoint)
+                }
+              } catch (error) {
+                console.error('❌ Error adding hillshade layer:', error)
+              }
+
+              // Add country layer (bottom layer)
+              try {
+                if (!map.current.getLayer('country')) {
+                  const insertionPoint = map.current.getLayer('waterway_river') ? 'waterway_river' : undefined
+                  
+                  map.current.addLayer({
+                    id: 'country',
+                    type: 'fill',
+                    source: 'country-border',
+                    'source-layer': 'country',
+                    paint: {
+                      'fill-color': generateOverlandingColorExpression() as any,
+                      'fill-opacity': 0.6
+                    }
+                  }, insertionPoint)
+                }
+              } catch (error) {
+                console.error('❌ Error adding country layer:', error)
+              }
+
+              // Add zones layer (restricted areas) with color-coded diagonal stripe patterns
+              try {
+                if (!map.current.getLayer('zones')) {
+                  const insertionPoint = map.current.getLayer('waterway_river') ? 'waterway_river' : undefined
+                  
+                  map.current.addLayer({
+                    id: 'zones',
+                    type: 'fill',
+                    source: 'country-border',
+                    'source-layer': 'zones',
+                    paint: {
+                      // Background color based on zone type
+                      'fill-color': [
+                        'case',
+                        ['==', ['get', 'type'], 0], '#ef4444', // Closed - red
+                        ['==', ['get', 'type'], 1], '#000000', // Guide/Escort - black
+                        ['==', ['get', 'type'], 2], '#9ca3af', // Permit - grey
+                        ['==', ['get', 'type'], 3], '#3b82f6', // Restrictions - blue
+                        '#9ca3af' // Default - grey
+                      ],
+                      // Pattern based on zone type
+                      'fill-pattern': [
+                        'case',
+                        ['==', ['get', 'type'], 0], 'diagonal-stripe-red',
+                        ['==', ['get', 'type'], 1], 'diagonal-stripe-black',
+                        ['==', ['get', 'type'], 2], 'diagonal-stripe-blue',
+                        ['==', ['get', 'type'], 3], 'diagonal-stripe-grey',
+                        'diagonal-stripe-grey' // Default
+                      ],
+                      'fill-opacity': 0.7
+                    }
+                  }, insertionPoint)
+                }
+              } catch (error) {
+                console.error('❌ Error adding zones layer:', error)
+              }
           
           console.log('✅ Zones layer added with diagonal stripe pattern')
           
 
 
-          // Add border layer (middle layer)
-          map.current.addLayer({
-            id: 'border',
-            type: 'line',
-            source: 'country-border',
-            'source-layer': 'border',
-            paint: {
-              'line-color': [
-                'case',
-                // Open (2) - dark green
-                ['any',
-                  ['==', ['get', 'is_open'], 2],
-                  ['==', ['get', 'is_open'], '2']
-                ], '#15803d',
-                // Dangerous/Bilateral (1) - yellow
-                ['any',
-                  ['==', ['get', 'is_open'], 1],
-                  ['==', ['get', 'is_open'], '1']
-                ], '#eab308',
-                // Restrictions apply (3) - yellow
-                ['any',
-                  ['==', ['get', 'is_open'], 3],
-                  ['==', ['get', 'is_open'], '3']
-                ], '#eab308',
-                // Unknown (-1) - grey
-                ['any',
-                  ['==', ['get', 'is_open'], -1],
-                  ['==', ['get', 'is_open'], '-1']
-                ], '#9ca3af',
-                // Closed (0) or default - red
-                '#ef4444'
-              ],
-              'line-width': 2,
-              'line-opacity': 0.8
-            }
-          })
+              // Add border layer (middle layer)
+              try {
+                if (!map.current.getLayer('border')) {
+                  map.current.addLayer({
+                    id: 'border',
+                    type: 'line',
+                    source: 'country-border',
+                    'source-layer': 'border',
+                    paint: {
+                      'line-color': [
+                        'case',
+                        // Open (2) - dark green
+                        ['any',
+                          ['==', ['get', 'is_open'], 2],
+                          ['==', ['get', 'is_open'], '2']
+                        ], '#15803d',
+                        // Dangerous/Bilateral (1) - yellow
+                        ['any',
+                          ['==', ['get', 'is_open'], 1],
+                          ['==', ['get', 'is_open'], '1']
+                        ], '#eab308',
+                        // Restrictions apply (3) - yellow
+                        ['any',
+                          ['==', ['get', 'is_open'], 3],
+                          ['==', ['get', 'is_open'], '3']
+                        ], '#eab308',
+                        // Unknown (-1) - grey
+                        ['any',
+                          ['==', ['get', 'is_open'], -1],
+                          ['==', ['get', 'is_open'], '-1']
+                        ], '#9ca3af',
+                        // Closed (0) or default - red
+                        '#ef4444'
+                      ],
+                      'line-width': 2,
+                      'line-opacity': 0.8
+                    }
+                  })
+                }
+              } catch (error) {
+                console.error('❌ Error adding border layer:', error)
+              }
 
-          // Add border post layer (top layer - most important for clicking)
-          map.current.addLayer({
-            id: 'border_post',
-            type: 'circle',
-            source: 'country-border',
-            'source-layer': 'border_post',
-            paint: {
-              'circle-color': [
-                'case',
-                ['==', ['get', 'is_open'], 1], '#3b82f6',  // Bilateral - blue
-                ['==', ['get', 'is_open'], 2], '#22c55e',  // Open - green
-                ['==', ['get', 'is_open'], 3], '#eab308',  // Restrictions - yellow
-                '#ef4444'  // Closed (0) or null - red (default)
-              ],
-              'circle-radius': 6,
-              'circle-stroke-width': 1.5,
-              'circle-stroke-color': '#ffffff'
-            }
-          })
+              // Add border post layer (top layer - most important for clicking)
+              try {
+                if (!map.current.getLayer('border_post')) {
+                  map.current.addLayer({
+                    id: 'border_post',
+                    type: 'circle',
+                    source: 'country-border',
+                    'source-layer': 'border_post',
+                    paint: {
+                      'circle-color': [
+                        'case',
+                        ['==', ['get', 'is_open'], 1], '#3b82f6',  // Bilateral - blue
+                        ['==', ['get', 'is_open'], 2], '#22c55e',  // Open - green
+                        ['==', ['get', 'is_open'], 3], '#eab308',  // Restrictions - yellow
+                        '#ef4444'  // Closed (0) or null - red (default)
+                      ],
+                      'circle-radius': 6,
+                      'circle-stroke-width': 1.5,
+                      'circle-stroke-color': '#ffffff'
+                    }
+                  })
+                }
+              } catch (error) {
+                console.error('❌ Error adding border post layer:', error)
+              }
 
 
 
-          // Add itinerary layer (for itineraries mode)
-          map.current.addLayer({
-            id: 'itinerary',
-            type: 'line',
-            source: 'country-border',
-            'source-layer': 'itinerary',
-            paint: {
-              'line-color': '#ef4444',
-              'line-width': 4,
-              'line-opacity': 0.5
-            },
-            layout: {
-              'visibility': colorScheme === 'itineraries' ? 'visible' : 'none'
-            }
-          })
+              // Add itinerary layer (for itineraries mode)
+              try {
+                if (!map.current.getLayer('itinerary')) {
+                  map.current.addLayer({
+                    id: 'itinerary',
+                    type: 'line',
+                    source: 'country-border',
+                    'source-layer': 'itinerary',
+                    paint: {
+                      'line-color': '#ef4444',
+                      'line-width': 4,
+                      'line-opacity': 0.5
+                    },
+                    layout: {
+                      'visibility': colorScheme === 'itineraries' ? 'visible' : 'none'
+                    }
+                  })
+                }
+              } catch (error) {
+                console.error('❌ Error adding itinerary layer:', error)
+              }
 
 
 
@@ -2522,93 +2585,115 @@ export default function SimpleMapContainer({
 
 
 
-          // Add highlight layers (on top of regular layers)
-          // Border highlight layer - white, wider line for selected borders
-          map.current.addLayer({
-            id: 'border-highlight',
-            type: 'line',
-            source: 'country-border',
-            'source-layer': 'border',
-            paint: {
-              'line-color': '#ffffff', // Plain white
-              'line-width': 4, // Double the default width
-              'line-opacity': 1.0
-            },
-            filter: ['==', ['get', 'id'], ''] // Initially show nothing
-          })
-
-          // Border post highlight layer - white circle for selected border posts
-          map.current.addLayer({
-            id: 'border-post-highlight',
-            type: 'circle',
-            source: 'country-border',
-            'source-layer': 'border_post',
-            paint: {
-              'circle-color': '#ffffff',
-              'circle-radius': 8,
-              'circle-stroke-width': 2,
-              'circle-stroke-color': '#1e40af'
-            },
-            filter: ['==', ['get', 'id'], ''] // Initially show nothing
-          })
-
-          // Zone highlight layer - solid white fill for selected zones
-          map.current.addLayer({
-            id: 'zone-highlight',
-            type: 'fill',
-            source: 'country-border',
-            'source-layer': 'zones',
-            paint: {
-              'fill-color': '#ffffff', // White color for better visibility
-              'fill-opacity': 0.5 // 50% opacity for solid white fill
-            },
-            filter: ['==', ['get', 'id'], ''] // Initially show nothing
-          }, 'border') // Position before border layer to ensure it's above zones but below borders
-
-          // Itinerary highlight layer - white, wider line for selected itineraries
-          try {
-            // Check if source exists before adding layer
-            if (!map.current.getSource('country-border')) {
-              console.error('❌ Cannot add itinerary highlight layer: country-border source not found')
-              throw new Error('country-border source not available')
-            }
-
-            map.current.addLayer({
-              id: 'itinerary-highlight',
-              type: 'line',
-              source: 'country-border',
-              'source-layer': 'itinerary',
-              paint: {
-                'line-color': '#ffffff', // White color for visibility
-                'line-width': 6, // Wider than default itinerary line (4px)
-                'line-opacity': 1.0 // Full opacity for better visibility
-              },
-              filter: ['==', ['get', 'itineraryDocId'], ''] // Initially show nothing
-            })
-
-          } catch (error) {
-            console.error('❌ Failed to add itinerary highlight layer:', error)
-            console.error('❌ Layer creation error details:', {
-              message: error instanceof Error ? error.message : 'Unknown error',
-              sourceExists: !!map.current.getSource('country-border'),
-              mapAvailable: !!map.current,
-              existingLayers: (() => {
-                try {
-                  return map.current?.getStyle()?.layers?.map(l => l.id) || []
-                } catch (styleError) {
-                  console.warn('⚠️ Could not get style layers:', styleError)
-                  return []
+              // Add highlight layers (on top of regular layers)
+              try {
+                // Border highlight layer - white, wider line for selected borders
+                if (!map.current.getLayer('border-highlight')) {
+                  map.current.addLayer({
+                    id: 'border-highlight',
+                    type: 'line',
+                    source: 'country-border',
+                    'source-layer': 'border',
+                    paint: {
+                      'line-color': '#ffffff', // Plain white
+                      'line-width': 4, // Double the default width
+                      'line-opacity': 1.0
+                    },
+                    filter: ['==', ['get', 'id'], ''] // Initially show nothing
+                  })
                 }
-              })()
-            })
+              } catch (error) {
+                console.error('❌ Error adding border highlight layer:', error)
+              }
+
+              try {
+                // Border post highlight layer - white circle for selected border posts
+                if (!map.current.getLayer('border-post-highlight')) {
+                  map.current.addLayer({
+                    id: 'border-post-highlight',
+                    type: 'circle',
+                    source: 'country-border',
+                    'source-layer': 'border_post',
+                    paint: {
+                      'circle-color': '#ffffff',
+                      'circle-radius': 8,
+                      'circle-stroke-width': 2,
+                      'circle-stroke-color': '#1e40af'
+                    },
+                    filter: ['==', ['get', 'id'], ''] // Initially show nothing
+                  })
+                }
+              } catch (error) {
+                console.error('❌ Error adding border post highlight layer:', error)
+              }
+
+              try {
+                // Zone highlight layer - solid white fill for selected zones
+                if (!map.current.getLayer('zone-highlight')) {
+                  const insertionPoint = map.current.getLayer('border') ? 'border' : undefined
+                  map.current.addLayer({
+                    id: 'zone-highlight',
+                    type: 'fill',
+                    source: 'country-border',
+                    'source-layer': 'zones',
+                    paint: {
+                      'fill-color': '#ffffff', // White color for better visibility
+                      'fill-opacity': 0.5 // 50% opacity for solid white fill
+                    },
+                    filter: ['==', ['get', 'id'], ''] // Initially show nothing
+                  }, insertionPoint) // Position before border layer to ensure it's above zones but below borders
+                }
+              } catch (error) {
+                console.error('❌ Error adding zone highlight layer:', error)
+              }
+
+              try {
+                // Itinerary highlight layer - white, wider line for selected itineraries
+                if (!map.current.getLayer('itinerary-highlight')) {
+                  // Check if source exists before adding layer
+                  if (!map.current.getSource('country-border')) {
+                    console.error('❌ Cannot add itinerary highlight layer: country-border source not found')
+                    throw new Error('country-border source not available')
+                  }
+
+                  map.current.addLayer({
+                    id: 'itinerary-highlight',
+                    type: 'line',
+                    source: 'country-border',
+                    'source-layer': 'itinerary',
+                    paint: {
+                      'line-color': '#ffffff', // White color for visibility
+                      'line-width': 6, // Wider than default itinerary line (4px)
+                      'line-opacity': 1.0 // Full opacity for better visibility
+                    },
+                    filter: ['==', ['get', 'itineraryDocId'], ''] // Initially show nothing
+                  })
+                }
+              } catch (error) {
+                console.error('❌ Failed to add itinerary highlight layer:', error)
+                console.error('❌ Layer creation error details:', {
+                  message: error instanceof Error ? error.message : 'Unknown error',
+                  sourceExists: !!map.current.getSource('country-border'),
+                  mapAvailable: !!map.current,
+                  existingLayers: (() => {
+                    try {
+                      return map.current?.getStyle()?.layers?.map(l => l.id) || []
+                    } catch (styleError) {
+                      console.warn('⚠️ Could not get style layers:', styleError)
+                      return []
+                    }
+                  })()
+                })
+                
+                // Set error state to indicate highlighting may not work
+                console.warn('⚠️ Itinerary highlighting functionality may be impaired due to layer creation failure')
+              }
+
+
+            }
             
-            // Set error state to indicate highlighting may not work
-            console.warn('⚠️ Itinerary highlighting functionality may be impaired due to layer creation failure')
-          }
-
-
-          } else {
-
+            // Start the process
+            addCustomLayers()
           }
 
           // Add click handler
