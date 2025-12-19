@@ -266,6 +266,30 @@ export async function getItineraryById(itineraryId: string, options?: LoadingOpt
 }
 
 /**
+ * Load track pack data with enhanced caching and error handling
+ */
+export async function loadTrackPackData(options?: LoadingOptions): Promise<{
+  trackPacks: any[]
+  metadata: any
+}> {
+  return loadDataWithRetry(`${getDataBasePath()}/trackpack.json`, 'trackpacks', options)
+}
+
+/**
+ * Get track pack by ID from loaded track pack data
+ */
+export async function getTrackPackById(trackPackId: string, options?: LoadingOptions): Promise<any | null> {
+  try {
+    const data = await loadTrackPackData(options)
+    const trackPack = data.trackPacks.find((item: any) => item.id === trackPackId)
+    return trackPack || null
+  } catch (error) {
+    console.error(`Failed to load track pack ${trackPackId}:`, error)
+    return null
+  }
+}
+
+/**
  * Load border GeoJSON for MapLibre with enhanced error handling
  */
 export async function loadBorderGeoJSON(

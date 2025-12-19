@@ -50,7 +50,7 @@ export const COLOR_SCHEMES: Record<ColorScheme, SchemeDefinition> = {
   itineraries: {
     name: 'Travel Itineraries',
     colors: {
-      default: { color: '#ef4444', label: 'Itinerary' }
+      default: { color: '#ec4899', label: 'Itinerary' }
     }
   }
 }

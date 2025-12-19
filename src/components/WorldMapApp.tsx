@@ -272,8 +272,20 @@ function WorldMapAppInner({ initialCountry, initialBorder, initialBorderPost, in
       // This ensures we have all properties including description, highlights, translatedDesc, translatedHighlights
       let completeData = null
       try {
-        const { getItineraryById } = await import('../lib/data-loader')
+        const { getItineraryById, getTrackPackById } = await import('../lib/data-loader')
         completeData = await getItineraryById(itineraryId)
+        
+        // If we have complete data and a trackPackId, fetch the track pack name
+        if (completeData && completeData.trackPackId) {
+          try {
+            const trackPack = await getTrackPackById(completeData.trackPackId)
+            if (trackPack) {
+              completeData.trackPackName = trackPack.name
+            }
+          } catch (trackPackError) {
+            console.warn('⚠️ Failed to load track pack name:', trackPackError)
+          }
+        }
       } catch (error) {
         console.error('❌ Failed to load complete itinerary data:', error)
       }
@@ -292,9 +304,23 @@ function WorldMapAppInner({ initialCountry, initialBorder, initialBorderPost, in
           translatedDesc: itineraryData?.translatedDesc || feature?.properties?.translatedDesc,
           translatedHighlights: itineraryData?.translatedHighlights || feature?.properties?.translatedHighlights,
           difficulty: itineraryData?.difficulty || feature?.properties?.difficulty,
+          trackPackId: itineraryData?.trackPackId || feature?.properties?.trackPackId,
           geometry: feature?.geometry,
           ...itineraryData,
           ...feature?.properties
+        }
+        
+        // Try to fetch track pack name even in fallback case
+        if (completeData.trackPackId) {
+          try {
+            const { getTrackPackById } = await import('../lib/data-loader')
+            const trackPack = await getTrackPackById(completeData.trackPackId)
+            if (trackPack) {
+              completeData.trackPackName = trackPack.name
+            }
+          } catch (trackPackError) {
+            console.warn('⚠️ Failed to load track pack name in fallback:', trackPackError)
+          }
         }
       } else {
         // Merge geometry from feature if available
@@ -724,6 +750,7 @@ function WorldMapAppInner({ initialCountry, initialBorder, initialBorderPost, in
         onBorderPostClick={handleBorderPostClick}
         onBorderPostZoom={handleBorderPostZoom}
         onItineraryZoom={handleItineraryZoom}
+        onItineraryClick={handleItineraryClick}
       />
 
       {/* Disclaimer Popup */}

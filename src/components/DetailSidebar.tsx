@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, useRef } from 'react'
 import { CountryData, BorderData } from '../types'
 import { 
   formatCountryName, 
@@ -17,6 +17,7 @@ import { getBorderPostById } from '../lib/border-post-data'
 import { useLanguage } from '../contexts/LanguageContext'
 import { getTranslatedCountryName, getTranslatedBorderStatus, getBorderStatusColorClasses, getTranslatedCarnetStatus, getTranslatedOverlandingStatus, getTranslatedLabel, getTranslatedComment, getTranslatedVisaComment, getTranslatedInsuranceComment, getTranslatedTip, getTranslatedStayDuration } from '../lib/i18n'
 import { hasFlagAvailable } from '../lib/flag-utils'
+import { processItineraryText, setupItineraryLinkHandlers } from '../lib/text-filters'
 import CountryFlag from './CountryFlag'
 
 interface DetailSidebarProps {
@@ -33,6 +34,7 @@ interface DetailSidebarProps {
   onBorderPostClick?: (borderPostId: string, borderPostData: any, feature?: any) => void
   onBorderPostZoom?: (location: { lng: number, lat: number }) => void
   onItineraryZoom?: (bounds: [[number, number], [number, number]]) => void
+  onItineraryClick?: (itineraryId: string, itineraryData: any, feature?: any) => void
   className?: string
 }
 
@@ -230,6 +232,7 @@ export default function DetailSidebar({
   onBorderPostClick,
   onBorderPostZoom,
   onItineraryZoom,
+  onItineraryClick,
   className = ""
 }: DetailSidebarProps) {
   const { language } = useLanguage()
@@ -1497,6 +1500,35 @@ export default function DetailSidebar({
   }
 
   /**
+   * Component for rendering processed itinerary text with HTML and link handlers
+   */
+  const ProcessedTextDisplay = ({ 
+    text, 
+    className = "" 
+  }: { 
+    text: string
+    className?: string 
+  }) => {
+    const containerRef = useRef<HTMLDivElement>(null)
+
+    useEffect(() => {
+      if (containerRef.current && onItineraryClick) {
+        setupItineraryLinkHandlers(containerRef.current, onItineraryClick)
+      }
+    }, [text])
+
+    const processedText = processItineraryText(text)
+
+    return (
+      <div 
+        ref={containerRef}
+        className={className}
+        dangerouslySetInnerHTML={{ __html: processedText }}
+      />
+    )
+  }
+
+  /**
    * Render itinerary information
    */
   const renderItineraryDetails = (feature: any) => {
@@ -1610,9 +1642,10 @@ export default function DetailSidebar({
             <div className="space-y-2">
               <span className="text-gray-600 text-sm font-medium">{getTranslatedLabel('description', language)}:</span>
               <div className="bg-gray-50 p-3 rounded-lg border border-gray-200">
-                <p className="text-sm text-gray-800 whitespace-pre-line leading-relaxed">
-                  {description}
-                </p>
+                <ProcessedTextDisplay 
+                  text={description}
+                  className="text-sm text-gray-800 whitespace-pre-line leading-relaxed"
+                />
               </div>
             </div>
           )
@@ -1625,9 +1658,10 @@ export default function DetailSidebar({
             <div className="space-y-2">
               <span className="text-gray-600 text-sm font-medium">{getTranslatedLabel('highlights', language)}:</span>
               <div className="bg-blue-50 p-3 rounded-lg border border-blue-200">
-                <p className="text-sm text-gray-800 whitespace-pre-line leading-relaxed">
-                  {highlights}
-                </p>
+                <ProcessedTextDisplay 
+                  text={highlights}
+                  className="text-sm text-gray-800 whitespace-pre-line leading-relaxed"
+                />
               </div>
             </div>
           )
