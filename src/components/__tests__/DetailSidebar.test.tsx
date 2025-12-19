@@ -173,10 +173,10 @@ describe('DetailSidebar Itinerary Translation Properties', () => {
     });
   });
 
-  // **Feature: itinerary-detail-translations, Property 4: Steps label translation**
+  // **Feature: itinerary-detail-translations, Property 4: Days label translation**
   // **Validates: Requirements 1.4**
-  describe('Property 4: Steps label translation', () => {
-    test('should display steps label in correct language when nbSteps is present', () => {
+  describe('Property 4: Days label translation', () => {
+    test('should display days label in correct language when lengthDays is present', () => {
       fc.assert(
         fc.property(
           fc.constantFrom(...SUPPORTED_LANGUAGES.map(lang => lang.code)),
@@ -195,7 +195,7 @@ describe('DetailSidebar Itinerary Translation Properties', () => {
                   name: `Test Itinerary ${stepCount}`,
                   trackPackName: `Test Track Pack ${stepCount}`,
                   lengthKM: 100,
-                  nbSteps: stepCount
+                  lengthDays: stepCount
                 }
               }
             };
@@ -208,11 +208,11 @@ describe('DetailSidebar Itinerary Translation Properties', () => {
               />
             );
 
-            const expectedStepsText = getTranslatedLabel('steps', language);
-            const stepsElement = screen.getByText(new RegExp(`${stepCount}\\s+${expectedStepsText.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`));
+            const expectedDaysText = getTranslatedLabel('days', language);
+            const daysElement = screen.getByText(new RegExp(`${stepCount}\\s+${expectedDaysText.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`));
             
-            expect(stepsElement).toBeInTheDocument();
-            expect(stepsElement.textContent).toContain(`${stepCount} ${expectedStepsText}`);
+            expect(daysElement).toBeInTheDocument();
+            expect(daysElement.textContent).toContain(`${stepCount} ${expectedDaysText}`);
           }
         ),
         { numRuns: 100 }
@@ -293,7 +293,7 @@ describe('DetailSidebar Itinerary Translation Properties', () => {
             name: 'Complete Test Itinerary',
             trackPackName: 'Full Track Pack',
             lengthKM: 250,
-            nbSteps: 12,
+            lengthDays: 12,
             titlePhotoUrl: 'https://example.com/photo.jpg'
           }
         }
@@ -310,7 +310,7 @@ describe('DetailSidebar Itinerary Translation Properties', () => {
       // Check that all elements are rendered
       expect(screen.getByText('Full Track Pack')).toBeInTheDocument();
       expect(screen.getByText('TEST001: Complete Test Itinerary')).toBeInTheDocument();
-      expect(screen.getByText('250 km, 12 steps')).toBeInTheDocument();
+      expect(screen.getByText('250 km, 12 days')).toBeInTheDocument();
       expect(screen.getByText('For more information, to download and explore the detailed steps of the itinerary, download the mobile app')).toBeInTheDocument();
       expect(screen.getByText('App Store')).toBeInTheDocument();
       expect(screen.getByText('Play Store')).toBeInTheDocument();
@@ -358,7 +358,7 @@ describe('DetailSidebar Itinerary Translation Properties', () => {
             itineraryId: 'TEST003',
             name: 'No Length Itinerary',
             trackPackName: 'Test Track Pack',
-            nbSteps: 5
+            lengthDays: 5
           }
         }
       };
@@ -373,7 +373,7 @@ describe('DetailSidebar Itinerary Translation Properties', () => {
 
       // Should show fallback text for length
       expect(screen.getByText(/Length unknown/)).toBeInTheDocument();
-      expect(screen.getByText(/5 steps/)).toBeInTheDocument();
+      expect(screen.getByText(/5 days/)).toBeInTheDocument();
     });
 
     test('should render itinerary with missing steps information', () => {
@@ -450,7 +450,7 @@ describe('DetailSidebar Itinerary Translation Properties', () => {
             itineraryId: 'TEST006',
             name: 'French Itinerary',
             lengthKM: 200,
-            nbSteps: 10
+            lengthDays: 10
           }
         }
       };
@@ -465,7 +465,7 @@ describe('DetailSidebar Itinerary Translation Properties', () => {
 
       // Should show French translations
       expect(screen.getByText('Pack de Piste')).toBeInTheDocument(); // French for Track Pack
-      expect(screen.getByText('200 km, 10 étapes')).toBeInTheDocument(); // French for steps in the length line
+      expect(screen.getByText('200 km, 10 jours')).toBeInTheDocument(); // French for days in the length line
     });
 
     test('should handle empty or undefined properties gracefully', () => {

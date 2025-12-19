@@ -466,8 +466,11 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'play_store': 'Play Store',
     'length_unknown': 'Length unknown',
     'steps': 'steps',
+    'days': 'days',
     'climate': 'Climate',
-    'itineraries': 'Itineraries'
+    'itineraries': 'Itineraries',
+    'description': 'Description',
+    'highlights': 'Highlights'
   },
   de: {
     'overlanding': 'Overlanding',
@@ -516,8 +519,11 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'play_store': 'Play Store',
     'length_unknown': 'Länge unbekannt',
     'steps': 'Schritte',
+    'days': 'Tage',
     'climate': 'Klima',
-    'itineraries': 'Reiserouten'
+    'itineraries': 'Reiserouten',
+    'description': 'Beschreibung',
+    'highlights': 'Höhepunkte'
   },
   es: {
     'overlanding': 'Overlanding',
@@ -566,8 +572,11 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'play_store': 'Play Store',
     'length_unknown': 'Longitud desconocida',
     'steps': 'pasos',
+    'days': 'días',
     'climate': 'Clima',
-    'itineraries': 'Itinerarios'
+    'itineraries': 'Itinerarios',
+    'description': 'Descripción',
+    'highlights': 'Aspectos destacados'
   },
   fr: {
     'overlanding': 'Overlanding',
@@ -616,8 +625,11 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'play_store': 'Play Store',
     'length_unknown': 'Longueur inconnue',
     'steps': 'étapes',
+    'days': 'jours',
     'climate': 'Climat',
-    'itineraries': 'Itinéraires'
+    'itineraries': 'Itinéraires',
+    'description': 'Description',
+    'highlights': 'Points forts'
   },
   it: {
     'overlanding': 'Overlanding',
@@ -666,8 +678,11 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'play_store': 'Play Store',
     'length_unknown': 'Lunghezza sconosciuta',
     'steps': 'passi',
+    'days': 'giorni',
     'climate': 'Clima',
-    'itineraries': 'Itinerari'
+    'itineraries': 'Itinerari',
+    'description': 'Descrizione',
+    'highlights': 'Punti salienti'
   },
   ja: {
     'overlanding': 'オーバーランディング',
@@ -716,8 +731,11 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'play_store': 'Play Store',
     'length_unknown': '長さ不明',
     'steps': 'ステップ',
+    'days': '日',
     'climate': '気候',
-    'itineraries': '旅程'
+    'itineraries': '旅程',
+    'description': '説明',
+    'highlights': 'ハイライト'
   },
   nl: {
     'overlanding': 'Overlanding',
@@ -766,8 +784,11 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'play_store': 'Play Store',
     'length_unknown': 'Lengte onbekend',
     'steps': 'stappen',
+    'days': 'dagen',
     'climate': 'Klimaat',
-    'itineraries': 'Reisroutes'
+    'itineraries': 'Reisroutes',
+    'description': 'Beschrijving',
+    'highlights': 'Hoogtepunten'
   },
   ru: {
     'overlanding': 'Оверлендинг',
@@ -816,8 +837,11 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'play_store': 'Play Store',
     'length_unknown': 'Длина неизвестна',
     'steps': 'шагов',
+    'days': 'дней',
     'climate': 'Климат',
-    'itineraries': 'Маршруты'
+    'itineraries': 'Маршруты',
+    'description': 'Описание',
+    'highlights': 'Основные моменты'
   },
   zh: {
     'overlanding': '越野旅行',
@@ -866,8 +890,11 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'play_store': 'Play Store',
     'length_unknown': '长度未知',
     'steps': '步骤',
+    'days': '天',
     'climate': '气候',
-    'itineraries': '行程'
+    'itineraries': '行程',
+    'description': '描述',
+    'highlights': '亮点'
   }
 }
 

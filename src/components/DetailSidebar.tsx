@@ -325,14 +325,11 @@ export default function DetailSidebar({
             name: name as string || 'Unnamed Border Post'
           }))
           
-          console.log(`✅ Loaded ${borderPostsList.length} border posts from border data:`, borderPostsList)
           setBorderPosts(borderPostsList)
         } else {
-          console.log('⚠️ No border_posts field found or invalid type')
           setBorderPosts([])
         }
       } else {
-        console.log('⚠️ No border selected or no border data')
         setBorderPosts([])
       }
     }
@@ -988,7 +985,7 @@ export default function DetailSidebar({
                     className="bg-gray-50 p-3 rounded-lg hover:bg-blue-50 transition-colors cursor-pointer border border-transparent hover:border-blue-200"
                     onClick={async () => {
                       if (onBorderPostClick) {
-                        console.log('🔄 Border post clicked from list:', borderPost.id)
+
                         
                         try {
                           // Fetch full border post data
@@ -1025,7 +1022,7 @@ export default function DetailSidebar({
                               } : null
                             }
                             
-                            console.log('✅ Loaded full border post data:', fullBorderPostData)
+
                             onBorderPostClick(borderPost.id, fullBorderPostData, feature)
                           } else {
                             console.warn('⚠️ Could not load full border post data, using minimal data')
@@ -1386,26 +1383,6 @@ export default function DetailSidebar({
     }
     const zoneType = getZoneTypeLabel(properties.type ?? 0)
     
-    console.log('🔍 Rendering zone details:', { 
-      hasCommentTranslations: !!properties.comment_translations, 
-      hasComment: !!properties.comment,
-      currentLanguage: language,
-      comment_translations_type: typeof properties.comment_translations,
-      comment_translations_keys: properties.comment_translations ? Object.keys(properties.comment_translations) : null,
-      comment_translations_current: properties.comment_translations?.[language],
-      comment: properties.comment,
-      fromZoneData: { 
-        comment_translations_type: typeof zoneData?.comment_translations,
-        comment_translations_keys: zoneData?.comment_translations ? Object.keys(zoneData.comment_translations) : null,
-        comment: zoneData?.comment 
-      },
-      fromFeature: { 
-        comment_translations_type: typeof feature?.properties?.comment_translations,
-        comment_translations_keys: feature?.properties?.comment_translations ? Object.keys(feature.properties.comment_translations) : null,
-        comment: feature?.properties?.comment 
-      }
-    })
-    
     return (
       <div className="space-y-6">
         {/* Header */}
@@ -1476,11 +1453,54 @@ export default function DetailSidebar({
   }
 
   /**
+   * Get translated description with fallback logic
+   */
+  const getTranslatedDescription = (properties: any, language: string): string | null => {
+    // Try to get translation for current language
+    if (properties.translatedDesc && properties.translatedDesc[language]) {
+      return properties.translatedDesc[language]
+    }
+    
+    // Fallback to English translation
+    if (properties.translatedDesc && properties.translatedDesc['en']) {
+      return properties.translatedDesc['en']
+    }
+    
+    // Fallback to original description
+    if (properties.description) {
+      return properties.description
+    }
+    
+    return null
+  }
+
+  /**
+   * Get translated highlights with fallback logic
+   */
+  const getTranslatedHighlights = (properties: any, language: string): string | null => {
+    // Try to get translation for current language
+    if (properties.translatedHighlights && properties.translatedHighlights[language]) {
+      return properties.translatedHighlights[language]
+    }
+    
+    // Fallback to English translation
+    if (properties.translatedHighlights && properties.translatedHighlights['en']) {
+      return properties.translatedHighlights['en']
+    }
+    
+    // Fallback to original highlights
+    if (properties.highlights) {
+      return properties.highlights
+    }
+    
+    return null
+  }
+
+  /**
    * Render itinerary information
    */
   const renderItineraryDetails = (feature: any) => {
     const properties = feature?.properties || {}
-    console.log('🎨 Rendering itinerary details with properties:', properties)
     
     return (
       <div className="space-y-4">
@@ -1578,10 +1598,40 @@ export default function DetailSidebar({
         <div>
           <p className="text-lg text-gray-700">
             {properties.lengthKM ? `${properties.lengthKM} km` : getTranslatedLabel('length_unknown', language)}
-            {properties.lengthKM && properties.nbSteps && ', '}
-            {properties.nbSteps ? `${properties.nbSteps} ${getTranslatedLabel('steps', language)}` : ''}
+            {properties.lengthKM && properties.lengthDays && ', '}
+            {properties.lengthDays ? `${properties.lengthDays} ${getTranslatedLabel('days', language)}` : ''}
           </p>
         </div>
+
+        {/* Description Section */}
+        {(() => {
+          const description = getTranslatedDescription(properties, language)
+          return description && (
+            <div className="space-y-2">
+              <span className="text-gray-600 text-sm font-medium">{getTranslatedLabel('description', language)}:</span>
+              <div className="bg-gray-50 p-3 rounded-lg border border-gray-200">
+                <p className="text-sm text-gray-800 whitespace-pre-line leading-relaxed">
+                  {description}
+                </p>
+              </div>
+            </div>
+          )
+        })()}
+
+        {/* Highlights Section */}
+        {(() => {
+          const highlights = getTranslatedHighlights(properties, language)
+          return highlights && (
+            <div className="space-y-2">
+              <span className="text-gray-600 text-sm font-medium">{getTranslatedLabel('highlights', language)}:</span>
+              <div className="bg-blue-50 p-3 rounded-lg border border-blue-200">
+                <p className="text-sm text-gray-800 whitespace-pre-line leading-relaxed">
+                  {highlights}
+                </p>
+              </div>
+            </div>
+          )
+        })()}
 
         {/* Mobile App Promotion */}
         <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">

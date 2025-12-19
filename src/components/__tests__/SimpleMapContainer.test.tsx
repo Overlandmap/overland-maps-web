@@ -32,7 +32,8 @@ const mockMap = {
   querySourceFeatures: jest.fn(() => []),
   getCanvas: jest.fn(() => ({ style: {} })),
   removeLayer: jest.fn(),
-  setTerrain: jest.fn()
+  setTerrain: jest.fn(),
+  isStyleLoaded: jest.fn(() => true)
 };
 
 jest.mock('maplibre-gl', () => ({

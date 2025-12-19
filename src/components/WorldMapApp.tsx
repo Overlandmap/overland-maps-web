@@ -69,7 +69,7 @@ function WorldMapAppInner({ initialCountry, initialBorder, initialBorderPost, in
       await loadCountryData()
       
       setAppState({ isLoading: false })
-      console.log('✅ App initialized successfully')
+
     } catch (error) {
       console.error('❌ Failed to initialize app:', error)
       setAppState({ 
@@ -83,7 +83,7 @@ function WorldMapAppInner({ initialCountry, initialBorder, initialBorderPost, in
    * Handle country clicks
    */
   const handleCountryClick = useCallback(async (iso3: string, countryData: CountryData | null, feature: any) => {
-    console.log('🌍 Country clicked:', iso3, countryData?.name)
+
     
     if (iso3) {
       // Update URL without navigation (unless handling popstate)
@@ -122,7 +122,7 @@ function WorldMapAppInner({ initialCountry, initialBorder, initialBorderPost, in
    * Handle border clicks
    */
   const handleBorderClick = useCallback(async (borderId: string, borderData: BorderData | null, feature: any) => {
-    console.log('🔗 Border clicked:', borderId)
+
     
     if (borderId) {
       // Update URL without navigation (unless handling popstate)
@@ -155,7 +155,7 @@ function WorldMapAppInner({ initialCountry, initialBorder, initialBorderPost, in
    * Handle border post clicks
    */
   const handleBorderPostClick = useCallback(async (borderPostId: string, borderPostData: any | null, feature: any) => {
-    console.log('📍 Border post clicked:', borderPostId)
+
     
     if (borderPostId) {
       // Update URL without navigation (unless handling popstate)
@@ -194,7 +194,7 @@ function WorldMapAppInner({ initialCountry, initialBorder, initialBorderPost, in
    * Handle zone clicks
    */
   const handleZoneClick = useCallback(async (zoneId: string, zoneData: any | null, feature: any) => {
-    console.log('🚫 Zone clicked:', zoneId)
+
     
     if (zoneId) {
       // Update URL without navigation (unless handling popstate)
@@ -231,16 +231,11 @@ function WorldMapAppInner({ initialCountry, initialBorder, initialBorderPost, in
         geometry: feature?.geometry
       }
       
-      console.log('🔍 Zone data merged:', { 
-        hasComment: !!completeData.comment, 
-        comment: completeData.comment,
-        fromData: baseData?.comment,
-        fromFeature: feature?.properties?.comment 
-      })
+
       
       // Highlight the zone on the map
       if (mapInteractions?.highlightZone) {
-        console.log('🎯 Calling highlightZone with zoneId:', zoneId)
+
         mapInteractions.highlightZone(zoneId)
       } else {
         console.warn('⚠️ highlightZone function not available in mapInteractions')
@@ -261,11 +256,11 @@ function WorldMapAppInner({ initialCountry, initialBorder, initialBorderPost, in
    * Handle itinerary clicks
    */
   const handleItineraryClick = useCallback(async (itineraryId: string, itineraryData: any | null, feature: any) => {
-    console.log('🛣️ Itinerary clicked:', itineraryId)
+
     
     if (itineraryId) {
       // Set color scheme to 'itineraries' before highlighting
-      console.log('🎨 Setting color scheme to itineraries for itinerary selection')
+
       setColorScheme('itineraries')
       
       // Update URL without navigation (unless handling popstate)
@@ -273,50 +268,55 @@ function WorldMapAppInner({ initialCountry, initialBorder, initialBorderPost, in
         window.history.pushState({ type: 'itinerary', id: itineraryId }, '', generateEntityUrl('itinerary', itineraryId))
       }
       
-      // Load itinerary data if not provided in feature
-      let loadedData = itineraryData
-      if (!feature?.properties && !loadedData) {
-        try {
-          console.log('🔄 Loading itinerary data for ID:', itineraryId)
-          const { getItineraryById } = await import('../lib/data-loader')
-          loadedData = await getItineraryById(itineraryId)
-          console.log('📊 Loaded itinerary data:', loadedData)
-        } catch (error) {
-          console.error('❌ Failed to load itinerary data:', error)
-        }
-      } else {
-        console.log('📋 Using provided data - feature properties:', !!feature?.properties, 'itineraryData:', !!itineraryData)
+      // Always load complete itinerary data from the JSON file
+      // This ensures we have all properties including description, highlights, translatedDesc, translatedHighlights
+      let completeData = null
+      try {
+        const { getItineraryById } = await import('../lib/data-loader')
+        completeData = await getItineraryById(itineraryId)
+      } catch (error) {
+        console.error('❌ Failed to load complete itinerary data:', error)
       }
       
-      // Use feature properties or loaded data as itinerary data
-      const completeData = {
-        id: itineraryId,
-        name: feature?.properties?.name || loadedData?.name || 'Unnamed Itinerary',
-        lengthKM: feature?.properties?.lengthKM || loadedData?.lengthKM,
-        lengthDays: feature?.properties?.lengthDays || loadedData?.lengthDays,
-        nbSteps: feature?.properties?.nbSteps || loadedData?.nbSteps,
-        titlePhotoUrl: feature?.properties?.titlePhotoUrl || loadedData?.titlePhotoUrl,
-        itineraryId: feature?.properties?.itineraryId || loadedData?.itineraryId,
-        description: feature?.properties?.description || loadedData?.description,
-        difficulty: feature?.properties?.difficulty || loadedData?.difficulty,
-        geometry: feature?.geometry,
-        ...feature?.properties,
-        ...loadedData
+      // If we couldn't load from JSON, fall back to provided data or feature properties
+      if (!completeData) {
+        completeData = {
+          id: itineraryId,
+          name: itineraryData?.name || feature?.properties?.name || 'Unnamed Itinerary',
+          lengthKM: itineraryData?.lengthKM || feature?.properties?.lengthKM,
+          lengthDays: itineraryData?.lengthDays || feature?.properties?.lengthDays,
+          titlePhotoUrl: itineraryData?.titlePhotoUrl || feature?.properties?.titlePhotoUrl,
+          itineraryId: itineraryData?.itineraryId || feature?.properties?.itineraryId || itineraryId,
+          description: itineraryData?.description || feature?.properties?.description,
+          highlights: itineraryData?.highlights || feature?.properties?.highlights,
+          translatedDesc: itineraryData?.translatedDesc || feature?.properties?.translatedDesc,
+          translatedHighlights: itineraryData?.translatedHighlights || feature?.properties?.translatedHighlights,
+          difficulty: itineraryData?.difficulty || feature?.properties?.difficulty,
+          geometry: feature?.geometry,
+          ...itineraryData,
+          ...feature?.properties
+        }
+      } else {
+        // Merge geometry from feature if available
+        completeData = {
+          ...completeData,
+          geometry: feature?.geometry || completeData.geometry
+        }
       }
       
       // Highlight the itinerary on the map (after color scheme change)
       // Use a small delay to ensure color scheme change is applied first
       setTimeout(() => {
         if (mapInteractions?.highlightItinerary) {
-          console.log('🎯 Calling highlightItinerary with itineraryId:', itineraryId)
+
           mapInteractions.highlightItinerary(itineraryId)
         } else {
           console.warn('⚠️ highlightItinerary function not available in mapInteractions')
         }
       }, 100)
       
-      // Create feature object if not provided
-      const featureObject = feature || {
+      // Create feature object with complete data
+      const featureObject = {
         properties: completeData,
         geometry: completeData.geometry || null
       }
@@ -336,7 +336,7 @@ function WorldMapAppInner({ initialCountry, initialBorder, initialBorderPost, in
    * Handle selection clear
    */
   const handleSelectionClear = useCallback(() => {
-    console.log('🧹 Selection cleared')
+
     setSelectedFeature(null)
     setSidebarOpen(false)
   }, [])
@@ -364,7 +364,7 @@ function WorldMapAppInner({ initialCountry, initialBorder, initialBorderPost, in
    * Handle country selection from sidebar
    */
   const handleCountrySelection = useCallback(async (countryCode: string) => {
-    console.log('🌍 Country selected from sidebar:', countryCode)
+
     
     try {
       const { countries } = await loadCountryData()
@@ -387,12 +387,12 @@ function WorldMapAppInner({ initialCountry, initialBorder, initialBorderPost, in
    * Handle border post zoom
    */
   const handleBorderPostZoom = useCallback(async (location: { lng: number, lat: number }) => {
-    console.log('🔍 Border post zoom requested:', location)
+
     
     try {
       if (mapInteractions?.zoomToLocation) {
         await mapInteractions.zoomToLocation(location.lng, location.lat, 10)
-        console.log(`✅ Zoomed to border post location [${location.lng}, ${location.lat}] with zoom level 10`)
+
       } else {
         console.warn('⚠️ zoomToLocation not available in map interactions')
       }
@@ -405,12 +405,12 @@ function WorldMapAppInner({ initialCountry, initialBorder, initialBorderPost, in
    * Handle itinerary zoom
    */
   const handleItineraryZoom = useCallback(async (bounds: [[number, number], [number, number]]) => {
-    console.log('🛣️ Itinerary zoom requested:', bounds)
+
     
     try {
       if (mapInteractions?.fitBounds) {
         await mapInteractions.fitBounds(bounds)
-        console.log(`✅ Zoomed to itinerary bounds: [[${bounds[0][0]}, ${bounds[0][1]}], [${bounds[1][0]}, ${bounds[1][1]}]]`)
+
       } else {
         console.warn('⚠️ fitBounds not available in map interactions')
       }
@@ -423,7 +423,7 @@ function WorldMapAppInner({ initialCountry, initialBorder, initialBorderPost, in
    * Handle map ready callback
    */
   const handleMapReady = useCallback((interactions: any) => {
-    console.log('🗺️ Map interactions ready:', Object.keys(interactions))
+
     setMapInteractions(interactions)
   }, [])
 
@@ -463,7 +463,7 @@ function WorldMapAppInner({ initialCountry, initialBorder, initialBorderPost, in
   useEffect(() => {
     const handlePopState = async () => {
       const path = window.location.pathname
-      console.log('🔙 Browser navigation detected:', path)
+
       
       // Set flag to prevent pushState in handlers
       setIsHandlingPopState(true)
@@ -494,23 +494,23 @@ function WorldMapAppInner({ initialCountry, initialBorder, initialBorderPost, in
 
       if (countryMatch) {
         const countryCode = countryMatch[1]
-        console.log('🌍 Loading country from URL:', countryCode)
+
         await handleCountryClick(countryCode, null, null)
       } else if (borderMatch) {
         const borderId = borderMatch[1]
-        console.log('🔗 Loading border from URL:', borderId)
+
         await handleBorderClick(borderId, null, null)
       } else if (borderPostMatch) {
         const borderPostId = borderPostMatch[1]
-        console.log('📍 Loading border post from URL:', borderPostId)
+
         await handleBorderPostClick(borderPostId, null, null)
       } else if (zoneMatch) {
         const zoneId = zoneMatch[1]
-        console.log('🚫 Loading zone from URL:', zoneId)
+
         await handleZoneClick(zoneId, null, null)
       } else if (itineraryMatch) {
         const itineraryId = itineraryMatch[1]
-        console.log('🛣️ Loading itinerary from URL:', itineraryId)
+
         await handleItineraryClick(itineraryId, null, null)
       }
       
@@ -530,7 +530,7 @@ function WorldMapAppInner({ initialCountry, initialBorder, initialBorderPost, in
   // Handle initial country selection from URL
   useEffect(() => {
     if (initialCountry && !hasHandledInitialSelection) {
-      console.log('🎯 Setting initial country selection:', initialCountry)
+
       handleCountryClick(initialCountry, null, null)
       setHasHandledInitialSelection(true)
     }
@@ -539,7 +539,7 @@ function WorldMapAppInner({ initialCountry, initialBorder, initialBorderPost, in
   // Handle initial border selection from URL
   useEffect(() => {
     if (initialBorder && !hasHandledInitialSelection) {
-      console.log('🎯 Setting initial border selection:', initialBorder)
+
       handleBorderClick(initialBorder, null, null)
       setHasHandledInitialSelection(true)
     }
@@ -549,7 +549,7 @@ function WorldMapAppInner({ initialCountry, initialBorder, initialBorderPost, in
   useEffect(() => {
     const loadInitialBorderPost = async () => {
       if (initialBorderPost && !hasHandledInitialSelection) {
-        console.log('🎯 Setting initial border post selection:', initialBorderPost)
+
         setHasHandledInitialSelection(true)
         
         // If we have pre-loaded data with a name, use it
@@ -651,7 +651,7 @@ function WorldMapAppInner({ initialCountry, initialBorder, initialBorderPost, in
   // Handle initial zone selection from URL
   useEffect(() => {
     if (initialZone && !hasHandledInitialSelection) {
-      console.log('🎯 Setting initial zone selection:', initialZone)
+
       handleZoneClick(initialZone, null, null)
       setHasHandledInitialSelection(true)
     }
@@ -660,9 +660,7 @@ function WorldMapAppInner({ initialCountry, initialBorder, initialBorderPost, in
   // Handle initial itinerary selection from URL
   useEffect(() => {
     if (initialItinerary && !hasHandledInitialSelection) {
-      console.log('🎯 Setting initial itinerary selection:', initialItinerary)
       // Set color scheme to 'itineraries' for initial selection
-      console.log('🎨 Setting color scheme to itineraries for initial itinerary selection')
       setColorScheme('itineraries')
       handleItineraryClick(initialItinerary, null, null)
       setHasHandledInitialSelection(true)
