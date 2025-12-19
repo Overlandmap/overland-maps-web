@@ -8,6 +8,7 @@ export interface BorderPostDetail {
   is_open?: number
   name?: string
   comment?: string
+  comment_translations?: Record<string, string>
   location?: string | { _latitude: number; _longitude: number }
   countries?: string
   coordinates?: [number, number]

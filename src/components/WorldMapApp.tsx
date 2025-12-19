@@ -169,12 +169,15 @@ function WorldMapAppInner({ initialCountry, initialBorder, initialBorderPost, in
         name: feature?.properties?.name || 'Unnamed Border Post',
         is_open: feature?.properties?.is_open ?? -1,
         comment: feature?.properties?.comment,
+        comment_translations: feature?.properties?.comment_translations,
         countries: feature?.properties?.countries,
         location: feature?.properties?.location,
         geometry: feature?.geometry,
         coordinates: feature?.geometry?.type === 'Point' ? feature.geometry.coordinates : null,
         ...feature?.properties
       }
+      
+
       
       // Show detail sidebar
       setSelectedFeature({

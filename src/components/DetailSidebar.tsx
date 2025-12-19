@@ -1159,10 +1159,15 @@ export default function DetailSidebar({
 
     // Create a unified data structure by merging both sources
     // Priority: borderPostData (from database) > feature.properties (from map data)
+    // Exception: preserve translation data from feature if not available in database
     const rawData = {
       ...feature?.properties,
       ...borderPostData
     };
+
+    // Special handling for translation fields - preserve from feature if database doesn't have them
+    const comment_translations = borderPostData?.comment_translations || feature?.properties?.comment_translations;
+    const comment = borderPostData?.comment || feature?.properties?.comment;
 
     // Normalize coordinates from different formats
     let coordinates = rawData.coordinates;
@@ -1183,8 +1188,8 @@ export default function DetailSidebar({
       countries: rawData.countries,
       coordinates: coordinates,
       is_open: rawData.is_open,
-      comment: rawData.comment,
-      comment_translations: rawData.comment_translations
+      comment: comment,
+      comment_translations: comment_translations
     };
   };
 

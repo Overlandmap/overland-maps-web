@@ -554,9 +554,16 @@ export default function SimpleMapContainer({
     const features = map.current.queryRenderedFeatures(e.point)
 
     // Look for border post features FIRST (highest priority - smallest targets)
-    const borderPostFeature = features.find(f => f.source === 'country-border' && f.sourceLayer === 'border_post')
+    // Try GeoJSON source first (has complete data including translations)
+    let borderPostFeature = features.find(f => f.source === 'border-posts')
+    // Fallback to vector tile source if GeoJSON not found
+    if (!borderPostFeature) {
+      borderPostFeature = features.find(f => f.source === 'country-border' && f.sourceLayer === 'border_post')
+    }
+    
     if (borderPostFeature) {
       console.log('📍 Border post clicked:', borderPostFeature.properties)
+      console.log('📍 Border post source:', borderPostFeature.source, borderPostFeature.sourceLayer)
       const borderPostId = borderPostFeature.properties?.id
       if (borderPostId) {
         highlightBorderPost(borderPostId) // Highlight the clicked border post (white circle)
