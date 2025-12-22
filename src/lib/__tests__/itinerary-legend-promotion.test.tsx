@@ -79,6 +79,15 @@ jest.mock('../../lib/i18n', () => ({
     }
     return translations[key] || key
   }),
+  getLanguageInfo: jest.fn((code) => ({
+    code,
+    name: 'English',
+    nativeName: 'English',
+    flag: '🇺🇸'
+  })),
+  SUPPORTED_LANGUAGES: [
+    { code: 'en', name: 'English', nativeName: 'English', flag: '🇺🇸' }
+  ],
   getLanguagePreference: jest.fn(() => 'en'),
   setLanguagePreference: jest.fn(),
   getBrowserLanguage: jest.fn(() => 'en'),

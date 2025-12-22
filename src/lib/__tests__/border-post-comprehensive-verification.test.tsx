@@ -417,6 +417,7 @@ describe('Border Post Comprehensive Verification', () => {
         { is_open: 0, expectedStatus: 'Closed' },
         { is_open: 1, expectedStatus: 'Bilateral' },
         { is_open: 2, expectedStatus: 'Open' },
+        { is_open: 3, expectedStatus: 'Restricted' }, // Added restricted status
         { is_open: -1, expectedStatus: 'unknown' }, // Invalid status
         { is_open: undefined, expectedStatus: 'unknown' } // Missing status
       ]

@@ -97,7 +97,17 @@ jest.mock('../../lib/layer-visibility-utils', () => ({
 
 // Mock i18n
 jest.mock('../../lib/i18n', () => ({
-  getTranslatedLabel: jest.fn((key) => key)
+  getTranslatedLabel: jest.fn((key) => key),
+  getTranslatedMonths: jest.fn(() => ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']),
+  getLanguageInfo: jest.fn((code) => ({
+    code,
+    name: 'English',
+    nativeName: 'English',
+    flag: '🇺🇸'
+  })),
+  SUPPORTED_LANGUAGES: [
+    { code: 'en', name: 'English', nativeName: 'English', flag: '🇺🇸' }
+  ]
 }));
 
 import SimpleMapContainer from '../SimpleMapContainer';

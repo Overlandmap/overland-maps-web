@@ -3107,7 +3107,7 @@ export default function SimpleMapContainer({
                   </div>
                   <div className="flex items-center space-x-2">
                     <div className="w-3 h-3 rounded-full" style={{ backgroundColor: '#eab308' }}></div>
-                    <span className="text-gray-700">{getTranslatedLabel('restrictions_apply', language)}</span>
+                    <span className="text-gray-700">{getTranslatedLabel('restricted', language)}</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <div className="w-3 h-3 rounded-full" style={{ backgroundColor: '#ef4444' }}></div>

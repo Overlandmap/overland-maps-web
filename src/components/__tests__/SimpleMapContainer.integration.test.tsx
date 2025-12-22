@@ -51,6 +51,16 @@ jest.mock('pmtiles', () => ({
 // Mock i18n
 jest.mock('../../lib/i18n', () => ({
   getTranslatedLabel: jest.fn((key) => key),
+  getTranslatedMonths: jest.fn(() => ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']),
+  getLanguageInfo: jest.fn((code) => ({
+    code,
+    name: 'English',
+    nativeName: 'English',
+    flag: '🇺🇸'
+  })),
+  SUPPORTED_LANGUAGES: [
+    { code: 'en', name: 'English', nativeName: 'English', flag: '🇺🇸' }
+  ],
   getLanguagePreference: jest.fn(() => 'en'),
   setLanguagePreference: jest.fn(),
   getBrowserLanguage: jest.fn(() => 'en'),

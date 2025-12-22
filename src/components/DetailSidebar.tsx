@@ -243,6 +243,7 @@ export default function DetailSidebar({
   const [loadingBorders, setLoadingBorders] = useState(false)
   const [borderPosts, setBorderPosts] = useState<any[]>([])
   const [translatedBorderTitle, setTranslatedBorderTitle] = useState<string>('')
+  const [crossingText, setCrossingText] = useState<string>('')
 
   // Reset state when feature changes
   useEffect(() => {
@@ -316,19 +317,45 @@ export default function DetailSidebar({
 
   // Load border posts when a border is selected
   useEffect(() => {
-    const loadBorderPostsForBorder = () => {
+    const loadBorderPostsForBorder = async () => {
       if (selectedFeature?.type === 'border' && selectedFeature.data) {
         const borderData = selectedFeature.data
         const borderPostsField = (borderData as any).border_posts
         
         // border_posts is a map of ID → name from Firestore
         if (borderPostsField && typeof borderPostsField === 'object') {
-          const borderPostsList = Object.entries(borderPostsField).map(([id, name]) => ({
-            id,
-            name: name as string || 'Unnamed Border Post'
-          }))
-          
-          setBorderPosts(borderPostsList)
+          try {
+            // Fetch full data for each border post to get status information
+            const borderPostPromises = Object.entries(borderPostsField).map(async ([id, name]) => {
+              try {
+                const fullData = await getBorderPostById(id)
+                return {
+                  id,
+                  name: name as string || 'Unnamed Border Post',
+                  is_open: fullData?.is_open ?? -1 // Default to unknown if not available
+                }
+              } catch (error) {
+                console.warn(`Failed to load border post ${id}:`, error)
+                return {
+                  id,
+                  name: name as string || 'Unnamed Border Post',
+                  is_open: -1 // Default to unknown on error
+                }
+              }
+            })
+            
+            const borderPostsList = await Promise.all(borderPostPromises)
+            setBorderPosts(borderPostsList)
+          } catch (error) {
+            console.error('Failed to load border posts with status:', error)
+            // Fallback to basic data without status
+            const borderPostsList = Object.entries(borderPostsField).map(([id, name]) => ({
+              id,
+              name: name as string || 'Unnamed Border Post',
+              is_open: -1 // Default to unknown
+            }))
+            setBorderPosts(borderPostsList)
+          }
         } else {
           setBorderPosts([])
         }
@@ -339,6 +366,31 @@ export default function DetailSidebar({
 
     loadBorderPostsForBorder()
   }, [selectedFeature])
+
+  // Load crossing text when a border post is selected
+  useEffect(() => {
+    const loadCrossingText = async () => {
+      if (selectedFeature?.type === 'border-post') {
+        const properties = normalizeBorderPostData(selectedFeature.data, selectedFeature.feature)
+        
+        if (properties?.countries) {
+          try {
+            const crossingTextResult = await generateCrossingText(properties.countries, language)
+            setCrossingText(crossingTextResult)
+          } catch (error) {
+            console.warn('Failed to generate crossing text:', error)
+            setCrossingText('')
+          }
+        } else {
+          setCrossingText('')
+        }
+      } else {
+        setCrossingText('')
+      }
+    }
+
+    loadCrossingText()
+  }, [selectedFeature, language])
 
   /**
    * Get translated border title from country codes
@@ -425,6 +477,57 @@ export default function DetailSidebar({
   }
 
   /**
+   * Generate crossing text from countries field (e.g., "RUS-KAZ" -> "Crossing between Russia and Kazakhstan")
+   */
+  const generateCrossingText = async (countriesField: string, selectedLanguage?: string): Promise<string> => {
+    if (!countriesField || typeof countriesField !== 'string') {
+      return ''
+    }
+
+    try {
+      // Parse country codes from the pattern "ID1-ID2"
+      const countryCodes = countriesField.split('-').map(code => code.trim()).filter(code => code)
+      
+      if (countryCodes.length !== 2) {
+        return countriesField // Fallback to original if parsing fails
+      }
+
+      // Get translated names for both countries
+      const [country1Name, country2Name] = await Promise.all([
+        getTranslatedCountryNameByCode(countryCodes[0]),
+        getTranslatedCountryNameByCode(countryCodes[1])
+      ])
+
+      // Get the translated template using the current language or provided language
+      const currentLanguage = selectedLanguage || language
+      const template = getTranslatedLabel('crossing_between', currentLanguage as any)
+      
+      // Handle string interpolation for {country1} and {country2} placeholders
+      const crossingText = template
+        .replace('{country1}', country1Name)
+        .replace('{country2}', country2Name)
+
+      return crossingText
+    } catch (error) {
+      console.warn('Failed to generate crossing text:', error)
+      // Fallback to English template if translation fails
+      try {
+        const countryCodes = countriesField.split('-').map(code => code.trim()).filter(code => code)
+        if (countryCodes.length === 2) {
+          const [country1Name, country2Name] = await Promise.all([
+            getTranslatedCountryNameByCode(countryCodes[0]),
+            getTranslatedCountryNameByCode(countryCodes[1])
+          ])
+          return `Crossing between ${country1Name} and ${country2Name}`
+        }
+      } catch (fallbackError) {
+        console.warn('Fallback crossing text generation also failed:', fallbackError)
+      }
+      return countriesField // Final fallback to original field
+    }
+  }
+
+  /**
    * Handle border post zoom
    */
   const handleBorderPostZoom = (borderPost: any) => {
@@ -446,6 +549,7 @@ export default function DetailSidebar({
    * 0 = Closed (red)
    * 1 = Bilateral (orange)
    * 2 = Open/Multilateral (green)
+   * 3 = Restricted (yellow)
    */
   const getBorderPostStatus = (isOpen: number) => {
     switch (isOpen) {
@@ -455,6 +559,8 @@ export default function DetailSidebar({
         return { label: getTranslatedLabel('bilateral', language as any), color: 'bg-orange-100 text-orange-800' }
       case 2:
         return { label: getTranslatedLabel('open', language as any), color: 'bg-green-100 text-green-800' }
+      case 3:
+        return { label: getTranslatedLabel('restricted', language as any), color: 'bg-yellow-100 text-yellow-800' }
       default:
         return { label: getTranslatedLabel('unknown', language as any), color: 'bg-gray-100 text-gray-800' }
     }
@@ -1054,8 +1160,16 @@ export default function DetailSidebar({
                       }
                     }}
                   >
-                    <div className="font-medium text-sm text-gray-900">
-                      🛂 {borderPost.name}
+                    <div className="flex items-center justify-between">
+                      <div className="font-medium text-sm text-gray-900">
+                        🛂 {borderPost.name}
+                      </div>
+                      {/* Status swatch */}
+                      {borderPost.is_open !== undefined && (
+                        <span className={`px-2 py-1 text-xs font-medium rounded ${getBorderPostStatus(borderPost.is_open).color}`}>
+                          {getBorderPostStatus(borderPost.is_open).label}
+                        </span>
+                      )}
                     </div>
                   </div>
                 ))}
@@ -1302,17 +1416,10 @@ export default function DetailSidebar({
               </div>
             )}
             
-            {/* Countries */}
-            {properties.countries && (
-              <div className="space-y-2">
-                <span className="text-gray-600 text-sm font-medium">{getTranslatedLabel('countries', language)}:</span>
-                <div className="flex flex-wrap gap-2">
-                  {properties.countries.split(',').map((country: string, index: number) => (
-                    <span key={index} className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">
-                      {country.trim()}
-                    </span>
-                  ))}
-                </div>
+            {/* Crossing Information */}
+            {crossingText && (
+              <div className="flex justify-between">
+                <span className="font-medium">{crossingText}</span>
               </div>
             )}
             
