@@ -723,7 +723,7 @@ export default function SimpleMapContainer({
       ['any',
         ['==', ['get', 'carnet'], -1],
         ['==', ['get', 'carnet'], '-1']
-      ], carnetColors['-1'].color,
+      ], carnetColors[3].color,
       // Handle null, 0, or missing carnet field - gray (no carnet required)
       ['any',
         ['==', ['get', 'carnet'], null],
@@ -731,12 +731,12 @@ export default function SimpleMapContainer({
         ['==', ['get', 'carnet'], '0'],
         ['!', ['has', 'carnet']]
       ], carnetColors[0].color,
-      // Handle carnet value 1 (Required in Some Situations) - bright purple
+      // Handle carnet value 1 (Required in Some Situations) - light pink
       ['any',
         ['==', ['get', 'carnet'], 1],
         ['==', ['get', 'carnet'], '1']
       ], carnetColors[1].color,
-      // Handle carnet value 2 (Mandatory) - bright blue
+      // Handle carnet value 2 (Mandatory) - dark pink
       ['any',
         ['==', ['get', 'carnet'], 2],
         ['==', ['get', 'carnet'], '2']
@@ -3047,11 +3047,11 @@ export default function SimpleMapContainer({
                     <span className="text-gray-700">{getTranslatedLabel('not_required', language)}</span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <div className="w-3 h-3 rounded-sm" style={{ backgroundColor: '#ec05f8' }}></div>
+                    <div className="w-3 h-3 rounded-sm" style={{ backgroundColor: '#dc8dc7' }}></div>
                     <span className="text-gray-700">{getTranslatedLabel('required_in_some_situations', language)}</span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <div className="w-3 h-3 rounded-sm" style={{ backgroundColor: '#0732e2' }}></div>
+                    <div className="w-3 h-3 rounded-sm" style={{ backgroundColor: '#0c15c3' }}></div>
                     <span className="text-gray-700">{getTranslatedLabel('mandatory', language)}</span>
                   </div>
                   <div className="flex items-center space-x-2">

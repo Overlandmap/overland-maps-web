@@ -34,10 +34,10 @@ export const COLOR_SCHEMES: Record<ColorScheme, SchemeDefinition> = {
   carnet: {
     name: 'Carnet Requirements',
     colors: {
-      '-1': { color: '#000000', label: 'Access forbidden' },
       0: { color: '#9ca3af', label: 'Not required' },
-      1: { color: '#ec05f8', label: 'Required in some situations' },
-      2: { color: '#0732e2', label: 'Mandatory' },
+      1: { color: '#dc8dc7', label: 'Required in some situations' },
+      2: { color: '#0c15c3', label: 'Mandatory' },
+      3: { color: '#000000', label: 'Access forbidden' },
       default: { color: '#9ca3af', label: 'Not required' }
     }
   },
@@ -92,24 +92,24 @@ function generateCarnetColorExpression(): any[] {
   
   return [
     'case',
-    // Handle carnet value -1 (Access Forbidden) - black color
+    // Handle carnet value 3 (Access Forbidden) - black color
     ['any',
-      ['==', ['get', 'carnet'], -1],
-      ['==', ['get', 'carnet'], '-1']
-    ], scheme.colors['-1'].color,
-    // Handle null, 0, or missing carnet field - all should be green (no carnet required)
+      ['==', ['get', 'carnet'], 3],
+      ['==', ['get', 'carnet'], '3']
+    ], scheme.colors[3].color,
+    // Handle null, 0, or missing carnet field - all should be gray (no carnet required)
     ['any',
       ['==', ['get', 'carnet'], null],
       ['==', ['get', 'carnet'], 0],
       ['==', ['get', 'carnet'], '0'],
       ['!', ['has', 'carnet']]
     ], scheme.colors[0].color,
-    // Handle carnet value 1 (Required in Some Situations) - yellow
+    // Handle carnet value 1 (Required in Some Situations) - light pink
     ['any',
       ['==', ['get', 'carnet'], 1],
       ['==', ['get', 'carnet'], '1']
     ], scheme.colors[1].color,
-    // Handle carnet value 2 (Mandatory) - red
+    // Handle carnet value 2 (Mandatory) - dark pink
     ['any',
       ['==', ['get', 'carnet'], 2],
       ['==', ['get', 'carnet'], '2']
