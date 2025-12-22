@@ -1083,7 +1083,7 @@ export default function DetailSidebar({
         {(selectedFeature?.type === 'border' && selectedFeature.data) && (
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-gray-900">
-              {getTranslatedLabel('border_posts', language)} {borderPosts.length > 0 ? `(${borderPosts.length})` : ''}
+              {getTranslatedLabel('border_posts', language)}
             </h3>
             
             {borderPosts.length > 0 ? (

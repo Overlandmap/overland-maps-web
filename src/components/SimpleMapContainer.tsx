@@ -10,6 +10,7 @@ import { useColorScheme } from '../contexts/ColorSchemeContext'
 import { getTranslatedLabel, getTranslatedMonths } from '../lib/i18n'
 import { COLOR_SCHEMES } from '../lib/color-expressions'
 import LanguageSelector from './LanguageSelector'
+import LegendExplanationPopup from './LegendExplanationPopup'
 
 
 type ColorScheme = 'overlanding' | 'carnet' | 'climate' | 'itineraries'
@@ -56,6 +57,13 @@ export default function SimpleMapContainer({
   const [selectedMonth, setSelectedMonth] = useState<number>(0) // 0 = January, 11 = December
   const [climateDataType, setClimateDataType] = useState<'temperature' | 'precipitation'>('temperature')
   const [showLegend, setShowLegend] = useState(false) // Will be set based on screen size
+  const [explanationPopup, setExplanationPopup] = useState<{
+    isOpen: boolean
+    category: 'overlanding' | 'carnet' | 'borders' | 'border_posts' | 'zones' | null
+  }>({
+    isOpen: false,
+    category: null
+  })
 
   // Store selected country ID in a ref for paint property updates
   const selectedCountryIdRef = useRef<string | null>(null)
@@ -71,6 +79,22 @@ export default function SimpleMapContainer({
   const initialColorsAppliedRef = useRef<boolean>(false)
   // Track if initial legend visibility has been set
   const initialLegendSetRef = useRef<boolean>(false)
+
+  // Handle legend group click to show explanation
+  const handleLegendGroupClick = (category: 'overlanding' | 'carnet' | 'borders' | 'border_posts' | 'zones') => {
+    setExplanationPopup({
+      isOpen: true,
+      category
+    })
+  }
+
+  // Close explanation popup
+  const closeExplanationPopup = () => {
+    setExplanationPopup({
+      isOpen: false,
+      category: null
+    })
+  }
 
   // Calculate bounds for itinerary geometry
   const calculateItineraryBounds = useCallback((geometry: any): [[number, number], [number, number]] | null => {
@@ -3022,16 +3046,20 @@ export default function SimpleMapContainer({
                   )}
                 </>
               ) : colorScheme === 'overlanding' ? (
-                <>
-                  <div className="flex items-center space-x-2">
+                <div 
+                  className="cursor-pointer hover:bg-gray-100 p-2 rounded transition-colors"
+                  onClick={() => handleLegendGroupClick('overlanding')}
+                  title="Click for detailed explanations"
+                >
+                  <div className="flex items-center space-x-2 mb-1">
                     <div className="w-3 h-3 rounded-sm" style={{ backgroundColor: '#16a34a' }}></div>
                     <span className="text-gray-700">{getTranslatedLabel('open', language)}</span>
                   </div>
-                  <div className="flex items-center space-x-2">
+                  <div className="flex items-center space-x-2 mb-1">
                     <div className="w-3 h-3 rounded-sm" style={{ backgroundColor: '#eab308' }}></div>
                     <span className="text-gray-700">{getTranslatedLabel('restricted_access', language)}</span>
                   </div>
-                  <div className="flex items-center space-x-2">
+                  <div className="flex items-center space-x-2 mb-1">
                     <div className="w-3 h-3 rounded-sm" style={{ backgroundColor: '#dc2626' }}></div>
                     <span className="text-gray-700">{getTranslatedLabel('war_dangerous', language)}</span>
                   </div>
@@ -3039,18 +3067,22 @@ export default function SimpleMapContainer({
                     <div className="w-3 h-3 rounded-sm" style={{ backgroundColor: '#1a1a1a' }}></div>
                     <span className="text-gray-700">{getTranslatedLabel('forbidden', language)}</span>
                   </div>
-                </>
+                </div>
               ) : (
-                <>
-                  <div className="flex items-center space-x-2">
+                <div 
+                  className="cursor-pointer hover:bg-gray-100 p-2 rounded transition-colors"
+                  onClick={() => handleLegendGroupClick('carnet')}
+                  title="Click for detailed explanations"
+                >
+                  <div className="flex items-center space-x-2 mb-1">
                     <div className="w-3 h-3 rounded-sm" style={{ backgroundColor: '#9ca3af' }}></div>
                     <span className="text-gray-700">{getTranslatedLabel('not_required', language)}</span>
                   </div>
-                  <div className="flex items-center space-x-2">
+                  <div className="flex items-center space-x-2 mb-1">
                     <div className="w-3 h-3 rounded-sm" style={{ backgroundColor: '#dc8dc7' }}></div>
                     <span className="text-gray-700">{getTranslatedLabel('required_in_some_situations', language)}</span>
                   </div>
-                  <div className="flex items-center space-x-2">
+                  <div className="flex items-center space-x-2 mb-1">
                     <div className="w-3 h-3 rounded-sm" style={{ backgroundColor: '#0c15c3' }}></div>
                     <span className="text-gray-700">{getTranslatedLabel('mandatory', language)}</span>
                   </div>
@@ -3058,14 +3090,18 @@ export default function SimpleMapContainer({
                     <div className="w-3 h-3 rounded-sm" style={{ backgroundColor: '#000000' }}></div>
                     <span className="text-gray-700">{getTranslatedLabel('access_forbidden', language)}</span>
                   </div>
-                </>
+                </div>
               )}
             </div>
           </div>
 
           {colorScheme === 'overlanding' && (
             <>
-              <div>
+              <div 
+                className="cursor-pointer hover:bg-gray-100 p-2 rounded transition-colors"
+                onClick={() => handleLegendGroupClick('borders')}
+                title="Click for detailed explanations"
+              >
                 <h3 className="text-sm font-semibold mb-2">{getTranslatedLabel('borders', language)}</h3>
                 <div className="space-y-1 text-xs">
                   <div className="flex items-center space-x-2">
@@ -3096,7 +3132,11 @@ export default function SimpleMapContainer({
                   </label>
                   <h3 className="text-sm font-semibold ml-2">{getTranslatedLabel('border_posts', language)}</h3>
                 </div>
-                <div className="space-y-1 text-xs">
+                <div 
+                  className="cursor-pointer hover:bg-gray-100 p-2 rounded transition-colors space-y-1 text-xs"
+                  onClick={() => handleLegendGroupClick('border_posts')}
+                  title="Click for detailed explanations"
+                >
                   <div className="flex items-center space-x-2">
                     <div className="w-3 h-3 rounded-full" style={{ backgroundColor: '#22c55e' }}></div>
                     <span className="text-gray-700">{getTranslatedLabel('open', language)}</span>
@@ -3117,35 +3157,41 @@ export default function SimpleMapContainer({
               </div>
 
               <div className="mt-4">
-                <h3 className="text-sm font-semibold mb-2">{getTranslatedLabel('restricted_areas', language)}</h3>
-                <div className="space-y-1 text-xs">
-                  <div className="flex items-center space-x-2">
-                    <div className="w-3 h-3 rounded-sm" style={{ 
-                      background: 'repeating-linear-gradient(45deg, #ef4444, #ef4444 2px, rgba(255,255,255,0.5) 2px, rgba(255,255,255,0.5) 4px)',
-                      border: '1px solid #ef4444'
-                    }}></div>
-                    <span className="text-gray-700">{getTranslatedLabel('zone_closed', language)}</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-3 h-3 rounded-sm" style={{ 
-                      background: 'repeating-linear-gradient(45deg, #000000, #000000 2px, rgba(255,255,255,0.5) 2px, rgba(255,255,255,0.5) 4px)',
-                      border: '1px solid #000000'
-                    }}></div>
-                    <span className="text-gray-700">{getTranslatedLabel('zone_guide_escort', language)}</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-3 h-3 rounded-sm" style={{ 
-                      background: 'repeating-linear-gradient(45deg, #3b82f6, #3b82f6 2px, rgba(255,255,255,0.5) 2px, rgba(255,255,255,0.5) 4px)',
-                      border: '1px solid #3b82f6'
-                    }}></div>
-                    <span className="text-gray-700">{getTranslatedLabel('zone_permit', language)}</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-3 h-3 rounded-sm" style={{ 
-                      background: 'repeating-linear-gradient(45deg, #9ca3af, #9ca3af 2px, rgba(255,255,255,0.5) 2px, rgba(255,255,255,0.5) 4px)',
-                      border: '1px solid #9ca3af'
-                    }}></div>
-                    <span className="text-gray-700">{getTranslatedLabel('zone_restrictions', language)}</span>
+                <div 
+                  className="cursor-pointer hover:bg-gray-100 p-2 rounded transition-colors"
+                  onClick={() => handleLegendGroupClick('zones')}
+                  title="Click for detailed explanations"
+                >
+                  <h3 className="text-sm font-semibold mb-2">{getTranslatedLabel('restricted_areas', language)}</h3>
+                  <div className="space-y-1 text-xs">
+                    <div className="flex items-center space-x-2">
+                      <div className="w-3 h-3 rounded-sm" style={{ 
+                        background: 'repeating-linear-gradient(45deg, #ef4444, #ef4444 2px, rgba(255,255,255,0.5) 2px, rgba(255,255,255,0.5) 4px)',
+                        border: '1px solid #ef4444'
+                      }}></div>
+                      <span className="text-gray-700">{getTranslatedLabel('zone_closed', language)}</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <div className="w-3 h-3 rounded-sm" style={{ 
+                        background: 'repeating-linear-gradient(45deg, #000000, #000000 2px, rgba(255,255,255,0.5) 2px, rgba(255,255,255,0.5) 4px)',
+                        border: '1px solid #000000'
+                      }}></div>
+                      <span className="text-gray-700">{getTranslatedLabel('zone_guide_escort', language)}</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <div className="w-3 h-3 rounded-sm" style={{ 
+                        background: 'repeating-linear-gradient(45deg, #3b82f6, #3b82f6 2px, rgba(255,255,255,0.5) 2px, rgba(255,255,255,0.5) 4px)',
+                        border: '1px solid #3b82f6'
+                      }}></div>
+                      <span className="text-gray-700">{getTranslatedLabel('zone_permit', language)}</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <div className="w-3 h-3 rounded-sm" style={{ 
+                        background: 'repeating-linear-gradient(45deg, #9ca3af, #9ca3af 2px, rgba(255,255,255,0.5) 2px, rgba(255,255,255,0.5) 4px)',
+                        border: '1px solid #9ca3af'
+                      }}></div>
+                      <span className="text-gray-700">{getTranslatedLabel('zone_restrictions', language)}</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -3154,6 +3200,13 @@ export default function SimpleMapContainer({
           </div>
         </div>
       )}
+
+      {/* Legend Explanation Popup */}
+      <LegendExplanationPopup
+        isOpen={explanationPopup.isOpen}
+        onClose={closeExplanationPopup}
+        category={explanationPopup.category}
+      />
     </div>
   )
 }
