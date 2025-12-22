@@ -1513,7 +1513,11 @@ export default function DetailSidebar({
 
     useEffect(() => {
       if (containerRef.current && onItineraryClick) {
-        setupItineraryLinkHandlers(containerRef.current, onItineraryClick)
+        // Create a wrapper function that matches the expected signature
+        const handleItineraryLinkClick = (itineraryId: string) => {
+          onItineraryClick(itineraryId, null, null)
+        }
+        setupItineraryLinkHandlers(containerRef.current, handleItineraryLinkClick)
       }
     }, [text])
 

@@ -470,7 +470,23 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'climate': 'Climate',
     'itineraries': 'Itineraries',
     'description': 'Description',
-    'highlights': 'Highlights'
+    'highlights': 'Highlights',
+    'monthly_max_temperature': 'Monthly maximum temperature',
+    'monthly_precipitation': 'Monthly precipitation',
+    'temperature': 'Temperature',
+    'precipitation': 'Precipitation',
+    'jan': 'Jan',
+    'feb': 'Feb',
+    'mar': 'Mar',
+    'apr': 'Apr',
+    'may': 'May',
+    'jun': 'Jun',
+    'jul': 'Jul',
+    'aug': 'Aug',
+    'sep': 'Sep',
+    'oct': 'Oct',
+    'nov': 'Nov',
+    'dec': 'Dec'
   },
   de: {
     'overlanding': 'Overlanding',
@@ -523,7 +539,23 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'climate': 'Klima',
     'itineraries': 'Reiserouten',
     'description': 'Beschreibung',
-    'highlights': 'Höhepunkte'
+    'highlights': 'Höhepunkte',
+    'monthly_max_temperature': 'Monatliche Höchsttemperatur',
+    'monthly_precipitation': 'Monatlicher Niederschlag',
+    'temperature': 'Temperatur',
+    'precipitation': 'Niederschlag',
+    'jan': 'Jan',
+    'feb': 'Feb',
+    'mar': 'Mär',
+    'apr': 'Apr',
+    'may': 'Mai',
+    'jun': 'Jun',
+    'jul': 'Jul',
+    'aug': 'Aug',
+    'sep': 'Sep',
+    'oct': 'Okt',
+    'nov': 'Nov',
+    'dec': 'Dez'
   },
   es: {
     'overlanding': 'Overlanding',
@@ -576,7 +608,23 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'climate': 'Clima',
     'itineraries': 'Itinerarios',
     'description': 'Descripción',
-    'highlights': 'Aspectos destacados'
+    'highlights': 'Aspectos destacados',
+    'monthly_max_temperature': 'Temperatura máxima mensual',
+    'monthly_precipitation': 'Precipitación mensual',
+    'temperature': 'Temperatura',
+    'precipitation': 'Precipitación',
+    'jan': 'Ene',
+    'feb': 'Feb',
+    'mar': 'Mar',
+    'apr': 'Abr',
+    'may': 'May',
+    'jun': 'Jun',
+    'jul': 'Jul',
+    'aug': 'Ago',
+    'sep': 'Sep',
+    'oct': 'Oct',
+    'nov': 'Nov',
+    'dec': 'Dic'
   },
   fr: {
     'overlanding': 'Overlanding',
@@ -629,7 +677,23 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'climate': 'Climat',
     'itineraries': 'Itinéraires',
     'description': 'Description',
-    'highlights': 'Points forts'
+    'highlights': 'Points forts',
+    'monthly_max_temperature': 'Température maximale mensuelle',
+    'monthly_precipitation': 'Précipitations mensuelles',
+    'temperature': 'Température',
+    'precipitation': 'Précipitations',
+    'jan': 'Jan',
+    'feb': 'Fév',
+    'mar': 'Mar',
+    'apr': 'Avr',
+    'may': 'Mai',
+    'jun': 'Jun',
+    'jul': 'Jul',
+    'aug': 'Aoû',
+    'sep': 'Sep',
+    'oct': 'Oct',
+    'nov': 'Nov',
+    'dec': 'Déc'
   },
   it: {
     'overlanding': 'Overlanding',
@@ -682,7 +746,23 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'climate': 'Clima',
     'itineraries': 'Itinerari',
     'description': 'Descrizione',
-    'highlights': 'Punti salienti'
+    'highlights': 'Punti salienti',
+    'monthly_max_temperature': 'Temperatura massima mensile',
+    'monthly_precipitation': 'Precipitazioni mensili',
+    'temperature': 'Temperatura',
+    'precipitation': 'Precipitazioni',
+    'jan': 'Gen',
+    'feb': 'Feb',
+    'mar': 'Mar',
+    'apr': 'Apr',
+    'may': 'Mag',
+    'jun': 'Giu',
+    'jul': 'Lug',
+    'aug': 'Ago',
+    'sep': 'Set',
+    'oct': 'Ott',
+    'nov': 'Nov',
+    'dec': 'Dic'
   },
   ja: {
     'overlanding': 'オーバーランディング',
@@ -735,7 +815,23 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'climate': '気候',
     'itineraries': '旅程',
     'description': '説明',
-    'highlights': 'ハイライト'
+    'highlights': 'ハイライト',
+    'monthly_max_temperature': '月間最高気温',
+    'monthly_precipitation': '月間降水量',
+    'temperature': '気温',
+    'precipitation': '降水量',
+    'jan': '1月',
+    'feb': '2月',
+    'mar': '3月',
+    'apr': '4月',
+    'may': '5月',
+    'jun': '6月',
+    'jul': '7月',
+    'aug': '8月',
+    'sep': '9月',
+    'oct': '10月',
+    'nov': '11月',
+    'dec': '12月'
   },
   nl: {
     'overlanding': 'Overlanding',
@@ -788,7 +884,23 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'climate': 'Klimaat',
     'itineraries': 'Reisroutes',
     'description': 'Beschrijving',
-    'highlights': 'Hoogtepunten'
+    'highlights': 'Hoogtepunten',
+    'monthly_max_temperature': 'Maandelijkse maximumtemperatuur',
+    'monthly_precipitation': 'Maandelijkse neerslag',
+    'temperature': 'Temperatuur',
+    'precipitation': 'Neerslag',
+    'jan': 'Jan',
+    'feb': 'Feb',
+    'mar': 'Mrt',
+    'apr': 'Apr',
+    'may': 'Mei',
+    'jun': 'Jun',
+    'jul': 'Jul',
+    'aug': 'Aug',
+    'sep': 'Sep',
+    'oct': 'Okt',
+    'nov': 'Nov',
+    'dec': 'Dec'
   },
   ru: {
     'overlanding': 'Оверлендинг',
@@ -841,7 +953,23 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'climate': 'Климат',
     'itineraries': 'Маршруты',
     'description': 'Описание',
-    'highlights': 'Основные моменты'
+    'highlights': 'Основные моменты',
+    'monthly_max_temperature': 'Месячная максимальная температура',
+    'monthly_precipitation': 'Месячные осадки',
+    'temperature': 'Температура',
+    'precipitation': 'Осадки',
+    'jan': 'Янв',
+    'feb': 'Фев',
+    'mar': 'Мар',
+    'apr': 'Апр',
+    'may': 'Май',
+    'jun': 'Июн',
+    'jul': 'Июл',
+    'aug': 'Авг',
+    'sep': 'Сен',
+    'oct': 'Окт',
+    'nov': 'Ноя',
+    'dec': 'Дек'
   },
   zh: {
     'overlanding': '越野旅行',
@@ -894,7 +1022,23 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'climate': '气候',
     'itineraries': '行程',
     'description': '描述',
-    'highlights': '亮点'
+    'highlights': '亮点',
+    'monthly_max_temperature': '月最高气温',
+    'monthly_precipitation': '月降水量',
+    'temperature': '气温',
+    'precipitation': '降水量',
+    'jan': '1月',
+    'feb': '2月',
+    'mar': '3月',
+    'apr': '4月',
+    'may': '5月',
+    'jun': '6月',
+    'jul': '7月',
+    'aug': '8月',
+    'sep': '9月',
+    'oct': '10月',
+    'nov': '11月',
+    'dec': '12月'
   }
 }
 
@@ -906,6 +1050,14 @@ export function getTranslatedLabel(
   language: SupportedLanguage = DEFAULT_LANGUAGE
 ): string {
   return INTERFACE_TRANSLATIONS[language]?.[key] || INTERFACE_TRANSLATIONS[DEFAULT_LANGUAGE][key] || key
+}
+
+/**
+ * Get translated month abbreviations
+ */
+export function getTranslatedMonths(language: SupportedLanguage = DEFAULT_LANGUAGE): string[] {
+  const monthKeys = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec']
+  return monthKeys.map(key => getTranslatedLabel(key, language))
 }
 
 /**

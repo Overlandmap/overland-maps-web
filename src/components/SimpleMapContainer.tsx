@@ -7,7 +7,7 @@ import 'maplibre-gl/dist/maplibre-gl.css'
 
 import { useLanguage } from '../contexts/LanguageContext'
 import { useColorScheme } from '../contexts/ColorSchemeContext'
-import { getTranslatedLabel } from '../lib/i18n'
+import { getTranslatedLabel, getTranslatedMonths } from '../lib/i18n'
 import { COLOR_SCHEMES } from '../lib/color-expressions'
 
 
@@ -2840,7 +2840,7 @@ export default function SimpleMapContainer({
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                       }`}
                   >
-                    Temperature
+                    {getTranslatedLabel('temperature', language)}
                   </button>
                   <button
                     onClick={() => setClimateDataType('precipitation')}
@@ -2849,7 +2849,7 @@ export default function SimpleMapContainer({
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                       }`}
                   >
-                    Precipitation
+                    {getTranslatedLabel('precipitation', language)}
                   </button>
                 </div>
               </div>
@@ -2859,7 +2859,7 @@ export default function SimpleMapContainer({
             {colorScheme === 'climate' && (
               <div className="mb-3">
                 <div className="grid grid-cols-6 gap-1">
-                  {['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'].map((month, index) => (
+                  {getTranslatedMonths(language).map((month, index) => (
                     <button
                       key={month}
                       onClick={() => setSelectedMonth(index)}
@@ -2875,60 +2875,94 @@ export default function SimpleMapContainer({
               </div>
             )}
 
-            <h3 className="text-sm font-semibold mb-2">
-              {colorScheme === 'overlanding' ? 'Overlanding' : colorScheme === 'carnet' ? 'Carnet de passage en Douane (CpD)' : colorScheme === 'itineraries' ? 'Travel Itineraries' : `Climate - ${climateDataType === 'temperature' ? 'Temperature' : 'Precipitation'}`}
-            </h3>
+            {colorScheme !== 'itineraries' && (
+              <h3 className="text-sm font-semibold mb-2">
+                {colorScheme === 'overlanding' ? getTranslatedLabel('overlanding', language) : colorScheme === 'carnet' ? getTranslatedLabel('carnet', language) : `${getTranslatedLabel('climate', language)} - ${climateDataType === 'temperature' ? getTranslatedLabel('temperature', language) : getTranslatedLabel('precipitation', language)}`}
+              </h3>
+            )}
 
             <div className="space-y-1 text-xs">
               {colorScheme === 'itineraries' ? (
                 <>
-                  <div className="text-gray-700 space-y-2">
-                    <p className="text-xs text-gray-600 mb-3">Travel routes and itineraries</p>
-                    <div className="space-y-1">
-                      <div className="flex items-center space-x-2">
-                        <div className="w-4 h-2 bg-red-500 opacity-50 rounded-sm"></div>
-                        <span className="text-gray-700">Itinerary Route</span>
+                  {/* Mobile App Promotion */}
+                  <div className="bg-blue-50 p-3 rounded-lg border border-blue-200">
+                      <p className="text-xs text-gray-800 mb-3">
+                        {getTranslatedLabel('itinerary_app_promotion', language)}
+                      </p>
+                      
+                      <div className="flex space-x-2">
+                        {/* App Store Button */}
+                        <a
+                          href="https://apps.apple.com/us/app/overland-map/id6741202903"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center space-x-1 bg-black text-white px-2 py-1 rounded text-xs hover:bg-gray-800 transition-colors"
+                        >
+                          <svg className="w-3 h-3" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                          </svg>
+                          <span className="text-xs font-medium">{getTranslatedLabel('app_store', language)}</span>
+                        </a>
+
+                        {/* Play Store Button */}
+                        <a
+                          href="https://play.google.com/store/apps/details?id=ch.overlandmap.map"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center space-x-1 bg-green-600 text-white px-2 py-1 rounded text-xs hover:bg-green-700 transition-colors"
+                        >
+                          <svg className="w-3 h-3" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
+                          </svg>
+                          <span className="text-xs font-medium">{getTranslatedLabel('play_store', language)}</span>
+                        </a>
                       </div>
                     </div>
-                  </div>
                 </>
               ) : colorScheme === 'climate' ? (
                 <>
                   {climateDataType === 'temperature' ? (
                     <div className="text-gray-700 space-y-2">
-                      <p className="text-xs text-gray-600 mb-3">Monthly average temperature (°C)</p>
+                      <p className="text-xs text-gray-600 mb-3">{getTranslatedLabel('monthly_max_temperature', language)}</p>
                       <div className="space-y-1">
                       <div className="flex items-center justify-between">
                         <div className="flex items-center space-x-2">
-                          <div className="w-4 h-3 rounded-sm" style={{ backgroundColor: 'rgb(111,159,205)' }}></div>
+                          <div className="w-4 h-3 rounded-sm" style={{ backgroundColor: 'rgb(16,39,69)' }}></div>
+                          <span>-45°C</span>
+                        </div>
+                        <span className="text-gray-500">-50°F</span>
+                      </div>
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center space-x-2">
+                          <div className="w-4 h-3 rounded-sm" style={{ backgroundColor: 'rgb(69,117,180)' }}></div>
                           <span>-20°C</span>
                         </div>
                         <span className="text-gray-500">-4°F</span>
                       </div>
                       <div className="flex items-center justify-between">
                         <div className="flex items-center space-x-2">
-                          <div className="w-4 h-3 rounded-sm" style={{ backgroundColor: 'rgb(189,222,236)' }}></div>
+                          <div className="w-4 h-3 rounded-sm" style={{ backgroundColor: 'rgb(153,196,225)' }}></div>
                           <span>-10°C</span>
                         </div>
                         <span className="text-gray-500">14°F</span>
                       </div>
                       <div className="flex items-center justify-between">
                         <div className="flex items-center space-x-2">
-                          <div className="w-4 h-3 rounded-sm" style={{ backgroundColor: 'rgb(243,246,212)' }}></div>
+                          <div className="w-4 h-3 rounded-sm" style={{ backgroundColor: 'rgb(219,237,237)' }}></div>
                           <span>0°C</span>
                         </div>
                         <span className="text-gray-500">32°F</span>
                       </div>
                       <div className="flex items-center justify-between">
                         <div className="flex items-center space-x-2">
-                          <div className="w-4 h-3 rounded-sm" style={{ backgroundColor: 'rgb(254,227,149)' }}></div>
+                          <div className="w-4 h-3 rounded-sm" style={{ backgroundColor: 'rgb(255,243,182)' }}></div>
                           <span>10°C</span>
                         </div>
                         <span className="text-gray-500">50°F</span>
                       </div>
                       <div className="flex items-center justify-between">
                         <div className="flex items-center space-x-2">
-                          <div className="w-4 h-3 rounded-sm" style={{ backgroundColor: 'rgb(250,153,87)' }}></div>
+                          <div className="w-4 h-3 rounded-sm" style={{ backgroundColor: 'rgb(253,195,116)' }}></div>
                           <span>20°C</span>
                         </div>
                         <span className="text-gray-500">68°F</span>
@@ -2940,11 +2974,18 @@ export default function SimpleMapContainer({
                         </div>
                         <span className="text-gray-500">86°F</span>
                       </div>
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center space-x-2">
+                          <div className="w-4 h-3 rounded-sm" style={{ backgroundColor: 'rgb(115,27,21)' }}></div>
+                          <span>45°C</span>
+                        </div>
+                        <span className="text-gray-500">113°F</span>
+                      </div>
                     </div>
                     </div>
                   ) : (
                     <div className="text-gray-700 space-y-2">
-                      <p className="text-xs text-gray-600 mb-3">Monthly precipitation (mm)</p>
+                      <p className="text-xs text-gray-600 mb-3">{getTranslatedLabel('monthly_precipitation', language)} (mm)</p>
                       <div className="space-y-1">
                         <div className="flex items-center space-x-2">
                           <div className="w-4 h-3 rounded-sm" style={{ backgroundColor: 'rgb(255,255,204)' }}></div>
