@@ -841,7 +841,7 @@ export default function SimpleMapContainer({
     previousColorSchemeRef.current = colorScheme
 
     const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
-    const supportedLanguages = ['en', 'fr', 'de', 'es', 'pt', 'it', 'nl', 'ru']
+    const supportedLanguages = ['en', 'fr', 'de', 'es', 'pt', 'it', 'nl', 'ru', 'ja']
     
     if (colorScheme === 'climate') {
       // Save current map position before switching style
@@ -1288,7 +1288,7 @@ export default function SimpleMapContainer({
     const currentZoom = map.current.getZoom()
     
     const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
-    const supportedLanguages = ['en', 'fr', 'de', 'es', 'pt', 'it', 'nl', 'ru']
+    const supportedLanguages = ['en', 'fr', 'de', 'es', 'pt', 'it', 'nl', 'ru', 'ja']
     
     // Reload style with new language for both climate and basemap modes
     if (colorScheme === 'climate') {
@@ -2044,7 +2044,7 @@ export default function SimpleMapContainer({
 
       // Load style from JSON file based on color scheme and language
       const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
-      const supportedLanguages = ['en', 'fr', 'de', 'es', 'pt', 'it', 'nl', 'ru']
+      const supportedLanguages = ['en', 'fr', 'de', 'es', 'pt', 'it', 'nl', 'ru', 'ja']
       let styleUrl: string
       
       if (colorScheme === 'climate') {
