@@ -1162,8 +1162,8 @@ export default function SimpleMapContainer({
           source: 'country-border',
           'source-layer': 'itinerary',
           paint: {
-            'line-color': '#ec4899',
-            'line-width': 4,
+            'line-color': '#1e3a8a',
+            'line-width': 5,
             'line-opacity': 0.5
           },
           layout: {
@@ -1599,8 +1599,8 @@ export default function SimpleMapContainer({
             source: 'country-border',
             'source-layer': 'itinerary',
             paint: {
-              'line-color': '#ec4899',
-              'line-width': 4,
+              'line-color': '#1e3a8a',
+              'line-width': 5,
               'line-opacity': 0.5
             },
             layout: {
@@ -2479,8 +2479,8 @@ export default function SimpleMapContainer({
                     source: 'country-border',
                     'source-layer': 'itinerary',
                     paint: {
-                      'line-color': '#3b82f6',
-                      'line-width': 4,
+                      'line-color': '#1e3a8a',
+                      'line-width': 5,
                       'line-opacity': 0.5
                     },
                     layout: {
