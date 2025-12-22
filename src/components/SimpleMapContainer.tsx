@@ -9,6 +9,7 @@ import { useLanguage } from '../contexts/LanguageContext'
 import { useColorScheme } from '../contexts/ColorSchemeContext'
 import { getTranslatedLabel, getTranslatedMonths } from '../lib/i18n'
 import { COLOR_SCHEMES } from '../lib/color-expressions'
+import LanguageSelector from './LanguageSelector'
 
 
 type ColorScheme = 'overlanding' | 'carnet' | 'climate' | 'itineraries'
@@ -2827,6 +2828,11 @@ export default function SimpleMapContainer({
               >
                 {getTranslatedLabel('itineraries', language)}
               </button>
+            </div>
+
+            {/* Language Selector */}
+            <div className="mb-3">
+              <LanguageSelector />
             </div>
 
             {/* Climate Data Type Selector */}
