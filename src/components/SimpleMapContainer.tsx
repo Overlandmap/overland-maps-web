@@ -2906,9 +2906,20 @@ export default function SimpleMapContainer({
             )}
 
             {colorScheme !== 'itineraries' && (
-              <h3 className="text-sm font-semibold mb-2">
-                {colorScheme === 'overlanding' ? getTranslatedLabel('overlanding', language) : colorScheme === 'carnet' ? getTranslatedLabel('carnet', language) : `${getTranslatedLabel('climate', language)} - ${climateDataType === 'temperature' ? getTranslatedLabel('temperature', language) : getTranslatedLabel('precipitation', language)}`}
-              </h3>
+              <div className="flex items-center mb-2">
+                <h3 className="text-sm font-semibold">
+                  {colorScheme === 'overlanding' ? getTranslatedLabel('overlanding', language) : colorScheme === 'carnet' ? getTranslatedLabel('carnet', language) : `${getTranslatedLabel('climate', language)} - ${climateDataType === 'temperature' ? getTranslatedLabel('temperature', language) : getTranslatedLabel('precipitation', language)}`}
+                </h3>
+                {(colorScheme === 'overlanding' || colorScheme === 'carnet') && (
+                  <button
+                    onClick={() => handleLegendGroupClick(colorScheme)}
+                    className="ml-2 w-4 h-4 rounded-full bg-gray-200 hover:bg-gray-300 flex items-center justify-center text-xs text-gray-600 hover:text-gray-800 transition-colors"
+                    title="Click for detailed explanations"
+                  >
+                    ?
+                  </button>
+                )}
+              </div>
             )}
 
             <div className="space-y-1 text-xs">
@@ -3102,7 +3113,19 @@ export default function SimpleMapContainer({
                 onClick={() => handleLegendGroupClick('borders')}
                 title="Click for detailed explanations"
               >
-                <h3 className="text-sm font-semibold mb-2">{getTranslatedLabel('borders', language)}</h3>
+                <div className="flex items-center mb-2">
+                  <h3 className="text-sm font-semibold">{getTranslatedLabel('borders', language)}</h3>
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation()
+                      handleLegendGroupClick('borders')
+                    }}
+                    className="ml-2 w-4 h-4 rounded-full bg-gray-200 hover:bg-gray-300 flex items-center justify-center text-xs text-gray-600 hover:text-gray-800 transition-colors"
+                    title="Click for detailed explanations"
+                  >
+                    ?
+                  </button>
+                </div>
                 <div className="space-y-1 text-xs">
                   <div className="flex items-center space-x-2">
                     <div className="w-4 h-2" style={{ backgroundColor: '#15803d' }}></div>
@@ -3131,6 +3154,13 @@ export default function SimpleMapContainer({
                     <div className="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-blue-600"></div>
                   </label>
                   <h3 className="text-sm font-semibold ml-2">{getTranslatedLabel('border_posts', language)}</h3>
+                  <button
+                    onClick={() => handleLegendGroupClick('border_posts')}
+                    className="ml-2 w-4 h-4 rounded-full bg-gray-200 hover:bg-gray-300 flex items-center justify-center text-xs text-gray-600 hover:text-gray-800 transition-colors"
+                    title="Click for detailed explanations"
+                  >
+                    ?
+                  </button>
                 </div>
                 <div 
                   className="cursor-pointer hover:bg-gray-100 p-2 rounded transition-colors space-y-1 text-xs"
@@ -3162,7 +3192,19 @@ export default function SimpleMapContainer({
                   onClick={() => handleLegendGroupClick('zones')}
                   title="Click for detailed explanations"
                 >
-                  <h3 className="text-sm font-semibold mb-2">{getTranslatedLabel('restricted_areas', language)}</h3>
+                  <div className="flex items-center mb-2">
+                    <h3 className="text-sm font-semibold">{getTranslatedLabel('restricted_areas', language)}</h3>
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation()
+                        handleLegendGroupClick('zones')
+                      }}
+                      className="ml-2 w-4 h-4 rounded-full bg-gray-200 hover:bg-gray-300 flex items-center justify-center text-xs text-gray-600 hover:text-gray-800 transition-colors"
+                      title="Click for detailed explanations"
+                    >
+                      ?
+                    </button>
+                  </div>
                   <div className="space-y-1 text-xs">
                     <div className="flex items-center space-x-2">
                       <div className="w-3 h-3 rounded-sm" style={{ 

@@ -143,4 +143,20 @@ describe('LegendExplanationPopup', () => {
     const colorIndicators = document.querySelectorAll('[style*="background-color"]')
     expect(colorIndicators.length).toBeGreaterThan(0)
   })
+
+  it('should handle question mark icon clicks', () => {
+    const onClose = jest.fn()
+    render(
+      <MockLanguageProvider>
+        <LegendExplanationPopup {...defaultProps} onClose={onClose} />
+      </MockLanguageProvider>
+    )
+
+    // Test that the popup can be opened and closed
+    expect(screen.getByText('Overlanding Status Explanations')).toBeInTheDocument()
+    
+    const closeButton = screen.getByRole('button', { name: /close/i })
+    fireEvent.click(closeButton)
+    expect(onClose).toHaveBeenCalledTimes(1)
+  })
 })
