@@ -1477,6 +1477,16 @@ export function getTranslatedCarnetComment(
 }
 
 /**
+ * Get translated disputed text from country data
+ */
+export function getTranslatedDisputed(
+  countryData: CountryData,
+  language: SupportedLanguage
+): string | null {
+  return getTranslatedField(countryData, 'disputed', 'disputed_translations', language)
+}
+
+/**
  * Translation dictionary for insurance scheme
  */
 const INSURANCE_SCHEME_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> = {
