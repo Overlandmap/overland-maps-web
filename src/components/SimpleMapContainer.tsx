@@ -2474,6 +2474,7 @@ export default function SimpleMapContainer({
                     type: 'circle',
                     source: 'country-border',
                     'source-layer': 'border_post',
+                    minzoom: 3,
                     paint: {
                       'circle-color': [
                         'case',
@@ -2482,7 +2483,16 @@ export default function SimpleMapContainer({
                         ['==', ['get', 'is_open'], 3], '#eab308',  // Restrictions - yellow
                         '#ef4444'  // Closed (0) or null - red (default)
                       ],
-                      'circle-radius': 6,
+                      'circle-radius': [
+                        'interpolate',
+                        ['linear'],
+                        ['zoom'],
+                        3, 0,
+                        4, 4,
+                        6, 6,
+                        8, 8,
+                        22, 8
+                      ],
                       'circle-stroke-width': 1.5,
                       'circle-stroke-color': '#ffffff'
                     }
@@ -2639,9 +2649,18 @@ export default function SimpleMapContainer({
                     type: 'circle',
                     source: 'country-border',
                     'source-layer': 'border_post',
+                    minzoom: 4,
                     paint: {
                       'circle-color': '#ffffff',
-                      'circle-radius': 8,
+                      'circle-radius': [
+                        'interpolate',
+                        ['linear'],
+                        ['zoom'],
+                        4, 6,
+                        6, 8,
+                        8, 10,
+                        22, 10
+                      ],
                       'circle-stroke-width': 2,
                       'circle-stroke-color': '#1e40af'
                     },
