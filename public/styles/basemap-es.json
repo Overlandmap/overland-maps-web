@@ -1465,7 +1465,7 @@
       ],
       "layout": {
         "text-font": ["Roboto Medium"],
-        "text-size": {"base": 1.2, "stops": [[7, 14], [11, 24]]},
+        "text-size": {"base": 12, "stops": [[4, 12], [6, 14], [11, 24]]},
         "icon-image": {"base": 1, "stops": [[0, "circle-city"], [8, ""]]},
         "text-field": ["coalesce", ["get", "name:es"], ["get", "name:en"], ["get", "name"]],
         "visibility": "visible",
@@ -1473,12 +1473,13 @@
         "text-offset": [0, 0],
         "icon-optional": false,
         "text-max-width": 8,
-        "icon-allow-overlap": true
+        "icon-allow-overlap": true,
+        "icon-size": {"stops": [[4, 0.6], [7, 0.8]]}
       },
       "paint": {
         "text-color": "#333",
         "text-halo-color": "rgba(255,255,255,0.8)",
-        "text-halo-width": 1.2
+        "text-halo-width": 0.5
       }
     },
     {
