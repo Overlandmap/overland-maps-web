@@ -416,6 +416,122 @@ export function getTranslatedOverlandingStatus(
 }
 
 /**
+ * Translation dictionary for visa status
+ */
+const VISA_STATUS_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> = {
+  en: {
+    'no_visa_required': 'No visa required',
+    'visa_on_arrival': 'Visa at the border (VOA)',
+    'evisa_online': 'e-visa available online',
+    'visa_at_embassy': 'Visa can be obtained at an embassy',
+    'visa_difficult': 'Visa is difficult to get',
+    'unknown': 'Unknown'
+  },
+  de: {
+    'no_visa_required': 'Kein Visum erforderlich',
+    'visa_on_arrival': 'Visum an der Grenze (VOA)',
+    'evisa_online': 'e-Visum online verfügbar',
+    'visa_at_embassy': 'Visum kann bei einer Botschaft erhalten werden',
+    'visa_difficult': 'Visum ist schwer zu bekommen',
+    'unknown': 'Unbekannt'
+  },
+  es: {
+    'no_visa_required': 'No se requiere visa',
+    'visa_on_arrival': 'Visa en la frontera (VOA)',
+    'evisa_online': 'e-visa disponible en línea',
+    'visa_at_embassy': 'La visa se puede obtener en una embajada',
+    'visa_difficult': 'La visa es difícil de obtener',
+    'unknown': 'Desconocido'
+  },
+  fr: {
+    'no_visa_required': 'Aucun visa requis',
+    'visa_on_arrival': 'Visa à la frontière (VOA)',
+    'evisa_online': 'e-visa disponible en ligne',
+    'visa_at_embassy': 'Le visa peut être obtenu auprès d\'une ambassade',
+    'visa_difficult': 'Le visa est difficile à obtenir',
+    'unknown': 'Inconnu'
+  },
+  it: {
+    'no_visa_required': 'Nessun visto richiesto',
+    'visa_on_arrival': 'Visto alla frontiera (VOA)',
+    'evisa_online': 'e-visto disponibile online',
+    'visa_at_embassy': 'Il visto può essere ottenuto presso un\'ambasciata',
+    'visa_difficult': 'Il visto è difficile da ottenere',
+    'unknown': 'Sconosciuto'
+  },
+  ja: {
+    'no_visa_required': 'ビザ不要',
+    'visa_on_arrival': '国境でビザ取得可能（VOA）',
+    'evisa_online': 'オンラインでe-ビザ取得可能',
+    'visa_at_embassy': '大使館でビザを取得できます',
+    'visa_difficult': 'ビザの取得が困難',
+    'unknown': '不明'
+  },
+  nl: {
+    'no_visa_required': 'Geen visum vereist',
+    'visa_on_arrival': 'Visum aan de grens (VOA)',
+    'evisa_online': 'e-visum online beschikbaar',
+    'visa_at_embassy': 'Visum kan bij een ambassade worden verkregen',
+    'visa_difficult': 'Visum is moeilijk te verkrijgen',
+    'unknown': 'Onbekend'
+  },
+  ru: {
+    'no_visa_required': 'Виза не требуется',
+    'visa_on_arrival': 'Виза на границе (VOA)',
+    'evisa_online': 'Электронная виза доступна онлайн',
+    'visa_at_embassy': 'Визу можно получить в посольстве',
+    'visa_difficult': 'Визу сложно получить',
+    'unknown': 'Неизвестно'
+  },
+  zh: {
+    'no_visa_required': '无需签证',
+    'visa_on_arrival': '落地签（VOA）',
+    'evisa_online': '可在线申请电子签证',
+    'visa_at_embassy': '可在大使馆获得签证',
+    'visa_difficult': '签证难以获得',
+    'unknown': '未知'
+  }
+}
+
+/**
+ * Get translated visa status
+ */
+export function getTranslatedVisaStatus(
+  visa: number | null | undefined,
+  language: SupportedLanguage = DEFAULT_LANGUAGE
+): string {
+  if (visa === null || visa === undefined || visa === 0) {
+    return VISA_STATUS_TRANSLATIONS[language]?.no_visa_required || VISA_STATUS_TRANSLATIONS[DEFAULT_LANGUAGE].no_visa_required
+  }
+  
+  const numValue = Number(visa)
+  
+  if (isNaN(numValue)) {
+    return VISA_STATUS_TRANSLATIONS[language]?.unknown || VISA_STATUS_TRANSLATIONS[DEFAULT_LANGUAGE].unknown
+  }
+  
+  let key: string
+  switch (numValue) {
+    case 1:
+      key = 'visa_on_arrival'
+      break
+    case 2:
+      key = 'evisa_online'
+      break
+    case 3:
+      key = 'visa_at_embassy'
+      break
+    case 4:
+      key = 'visa_difficult'
+      break
+    default:
+      key = 'unknown'
+  }
+  
+  return VISA_STATUS_TRANSLATIONS[language]?.[key] || VISA_STATUS_TRANSLATIONS[DEFAULT_LANGUAGE][key]
+}
+
+/**
  * Translation dictionary for interface labels
  */
 const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> = {
@@ -439,6 +555,7 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'closed': 'Closed',
     'loading_map': 'Loading map...',
     'visa': 'Visa',
+    'vehicle': 'Vehicle',
     'driving': 'Driving',
     'left': 'Left',
     'right': 'Right',
@@ -489,7 +606,25 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'sep': 'Sep',
     'oct': 'Oct',
     'nov': 'Nov',
-    'dec': 'Dec'
+    'dec': 'Dec',
+    'general': 'General',
+    'capital': 'Capital',
+    'currency': 'Currency',
+    'comment': 'Comment',
+    'visa_comment': 'Visa Comment',
+    'visa_url': 'Visa URL',
+    'official_website': 'Official website',
+    'carnet_comment': 'Carnet Comment',
+    'tip': 'Tip',
+    'tip_label': 'TIP (temporary import permit)',
+    'tip_comment': 'Tip Comment',
+    'stay_duration': 'Stay Duration',
+    'maximum_stay': 'Maximum stay',
+    'insurance': 'Insurance',
+    'insurance_comment': 'Insurance Comment',
+    'insurance_url': 'Insurance URL',
+    'insurance_system': 'Insurance system',
+    'no_borders': 'No borders available'
   },
   de: {
     'overlanding': 'Overlanding',
@@ -511,6 +646,7 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'closed': 'Geschlossen',
     'loading_map': 'Karte wird geladen...',
     'visa': 'Visum',
+    'vehicle': 'Fahrzeug',
     'driving': 'Fahren',
     'left': 'Links',
     'right': 'Rechts',
@@ -561,7 +697,25 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'sep': 'Sep',
     'oct': 'Okt',
     'nov': 'Nov',
-    'dec': 'Dez'
+    'dec': 'Dez',
+    'general': 'Allgemein',
+    'capital': 'Hauptstadt',
+    'currency': 'Währung',
+    'comment': 'Kommentar',
+    'visa_comment': 'Visum-Kommentar',
+    'visa_url': 'Visum-URL',
+    'official_website': 'Offizielle Website',
+    'carnet_comment': 'Carnet-Kommentar',
+    'tip': 'Tipp',
+    'tip_label': 'TIP (vorübergehende Einfuhrgenehmigung)',
+    'tip_comment': 'Tipp-Kommentar',
+    'stay_duration': 'Aufenthaltsdauer',
+    'maximum_stay': 'Maximale Aufenthaltsdauer',
+    'insurance': 'Versicherung',
+    'insurance_comment': 'Versicherungs-Kommentar',
+    'insurance_url': 'Versicherungs-URL',
+    'insurance_system': 'Versicherungssystem',
+    'no_borders': 'Keine Grenzen verfügbar'
   },
   es: {
     'overlanding': 'Overlanding',
@@ -583,6 +737,7 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'closed': 'Cerrado',
     'loading_map': 'Cargando mapa...',
     'visa': 'Visa',
+    'vehicle': 'Vehículo',
     'driving': 'Conducción',
     'left': 'Izquierda',
     'right': 'Derecha',
@@ -633,7 +788,25 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'sep': 'Sep',
     'oct': 'Oct',
     'nov': 'Nov',
-    'dec': 'Dic'
+    'dec': 'Dic',
+    'general': 'General',
+    'capital': 'Capital',
+    'currency': 'Moneda',
+    'comment': 'Comentario',
+    'visa_comment': 'Comentario de Visa',
+    'visa_url': 'URL de Visa',
+    'official_website': 'Sitio web oficial',
+    'carnet_comment': 'Comentario de Carnet',
+    'tip': 'Consejo',
+    'tip_label': 'TIP (permiso de importación temporal)',
+    'tip_comment': 'Comentario de Consejo',
+    'stay_duration': 'Duración de Estancia',
+    'maximum_stay': 'Estancia máxima',
+    'insurance': 'Seguro',
+    'insurance_comment': 'Comentario de Seguro',
+    'insurance_url': 'URL de Seguro',
+    'insurance_system': 'Sistema de seguro',
+    'no_borders': 'No hay fronteras disponibles'
   },
   fr: {
     'overlanding': 'Overlanding',
@@ -655,6 +828,7 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'closed': 'Fermé',
     'loading_map': 'Chargement de la carte...',
     'visa': 'Visa',
+    'vehicle': 'Véhicule',
     'driving': 'Conduite',
     'left': 'Gauche',
     'right': 'Droite',
@@ -699,13 +873,31 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'mar': 'Mar',
     'apr': 'Avr',
     'may': 'Mai',
-    'jun': 'Jun',
-    'jul': 'Jul',
-    'aug': 'Aoû',
+    'jun': 'Juin',
+    'jul': 'Juil',
+    'aug': 'Août',
     'sep': 'Sep',
     'oct': 'Oct',
     'nov': 'Nov',
-    'dec': 'Déc'
+    'dec': 'Déc',
+    'general': 'Général',
+    'capital': 'Capitale',
+    'currency': 'Monnaie',
+    'comment': 'Commentaire',
+    'visa_comment': 'Commentaire Visa',
+    'visa_url': 'URL Visa',
+    'official_website': 'Site officiel',
+    'carnet_comment': 'Commentaire Carnet',
+    'tip': 'Conseil',
+    'tip_label': 'TIP (permis d\'importation temporaire)',
+    'tip_comment': 'Commentaire Conseil',
+    'stay_duration': 'Durée de Séjour',
+    'maximum_stay': 'Séjour maximum',
+    'insurance': 'Assurance',
+    'insurance_comment': 'Commentaire Assurance',
+    'insurance_url': 'URL Assurance',
+    'insurance_system': 'Système d\'assurance',
+    'no_borders': 'Aucune frontière disponible'
   },
   it: {
     'overlanding': 'Overlanding',
@@ -727,6 +919,7 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'closed': 'Chiuso',
     'loading_map': 'Caricamento mappa...',
     'visa': 'Visto',
+    'vehicle': 'Veicolo',
     'driving': 'Guida',
     'left': 'Sinistra',
     'right': 'Destra',
@@ -777,7 +970,25 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'sep': 'Set',
     'oct': 'Ott',
     'nov': 'Nov',
-    'dec': 'Dic'
+    'dec': 'Dic',
+    'general': 'Generale',
+    'capital': 'Capitale',
+    'currency': 'Valuta',
+    'comment': 'Commento',
+    'visa_comment': 'Commento Visto',
+    'visa_url': 'URL Visto',
+    'official_website': 'Sito ufficiale',
+    'carnet_comment': 'Commento Carnet',
+    'tip': 'Suggerimento',
+    'tip_label': 'TIP (permesso di importazione temporanea)',
+    'tip_comment': 'Commento Suggerimento',
+    'stay_duration': 'Durata del Soggiorno',
+    'maximum_stay': 'Soggiorno massimo',
+    'insurance': 'Assicurazione',
+    'insurance_comment': 'Commento Assicurazione',
+    'insurance_url': 'URL Assicurazione',
+    'insurance_system': 'Sistema assicurativo',
+    'no_borders': 'Nessun confine disponibile'
   },
   ja: {
     'overlanding': 'オーバーランディング',
@@ -799,6 +1010,7 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'closed': '閉鎖',
     'loading_map': 'マップを読み込み中...',
     'visa': 'ビザ',
+    'vehicle': '車両',
     'driving': '運転',
     'left': '左',
     'right': '右',
@@ -849,7 +1061,25 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'sep': '9月',
     'oct': '10月',
     'nov': '11月',
-    'dec': '12月'
+    'dec': '12月',
+    'general': '一般',
+    'capital': '首都',
+    'currency': '通貨',
+    'comment': 'コメント',
+    'visa_comment': 'ビザコメント',
+    'visa_url': 'ビザURL',
+    'official_website': '公式ウェブサイト',
+    'carnet_comment': 'カルネコメント',
+    'tip': 'ヒント',
+    'tip_label': 'TIP（一時輸入許可証）',
+    'tip_comment': 'ヒントコメント',
+    'stay_duration': '滞在期間',
+    'maximum_stay': '最大滞在期間',
+    'insurance': '保険',
+    'insurance_comment': '保険コメント',
+    'insurance_url': '保険URL',
+    'insurance_system': '保険システム',
+    'no_borders': '利用可能な国境がありません'
   },
   nl: {
     'overlanding': 'Overlanding',
@@ -871,6 +1101,7 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'closed': 'Gesloten',
     'loading_map': 'Kaart laden...',
     'visa': 'Visum',
+    'vehicle': 'Voertuig',
     'driving': 'Rijden',
     'left': 'Links',
     'right': 'Rechts',
@@ -921,7 +1152,25 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'sep': 'Sep',
     'oct': 'Okt',
     'nov': 'Nov',
-    'dec': 'Dec'
+    'dec': 'Dec',
+    'general': 'Algemeen',
+    'capital': 'Hoofdstad',
+    'currency': 'Valuta',
+    'comment': 'Opmerking',
+    'visa_comment': 'Visum Opmerking',
+    'visa_url': 'Visum URL',
+    'official_website': 'Officiële website',
+    'carnet_comment': 'Carnet Opmerking',
+    'tip': 'Tip',
+    'tip_label': 'TIP (tijdelijke invoervergunning)',
+    'tip_comment': 'Tip Opmerking',
+    'stay_duration': 'Verblijfsduur',
+    'maximum_stay': 'Maximaal verblijf',
+    'insurance': 'Verzekering',
+    'insurance_comment': 'Verzekering Opmerking',
+    'insurance_url': 'Verzekering URL',
+    'insurance_system': 'Verzekeringssysteem',
+    'no_borders': 'Geen grenzen beschikbaar'
   },
   ru: {
     'overlanding': 'Оверлендинг',
@@ -943,6 +1192,7 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'closed': 'Закрыто',
     'loading_map': 'Загрузка карты...',
     'visa': 'Виза',
+    'vehicle': 'Транспорт',
     'driving': 'Вождение',
     'left': 'Левостороннее',
     'right': 'Правостороннее',
@@ -993,7 +1243,25 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'sep': 'Сен',
     'oct': 'Окт',
     'nov': 'Ноя',
-    'dec': 'Дек'
+    'dec': 'Дек',
+    'general': 'Общее',
+    'capital': 'Столица',
+    'currency': 'Валюта',
+    'comment': 'Комментарий',
+    'visa_comment': 'Комментарий к визе',
+    'visa_url': 'URL визы',
+    'official_website': 'Официальный сайт',
+    'carnet_comment': 'Комментарий к карне',
+    'tip': 'Совет',
+    'tip_label': 'TIP (разрешение на временный ввоз)',
+    'tip_comment': 'Комментарий к совету',
+    'stay_duration': 'Продолжительность пребывания',
+    'maximum_stay': 'Максимальное пребывание',
+    'insurance': 'Страхование',
+    'insurance_comment': 'Комментарий к страхованию',
+    'insurance_url': 'URL страхования',
+    'insurance_system': 'Система страхования',
+    'no_borders': 'Нет доступных границ'
   },
   zh: {
     'overlanding': '越野旅行',
@@ -1015,6 +1283,7 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'closed': '关闭',
     'loading_map': '正在加载地图...',
     'visa': '签证',
+    'vehicle': '车辆',
     'driving': '驾驶',
     'left': '左侧',
     'right': '右侧',
@@ -1065,7 +1334,25 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'sep': '9月',
     'oct': '10月',
     'nov': '11月',
-    'dec': '12月'
+    'dec': '12月',
+    'general': '一般',
+    'capital': '首都',
+    'currency': '货币',
+    'comment': '评论',
+    'visa_comment': '签证评论',
+    'visa_url': '签证URL',
+    'official_website': '官方网站',
+    'carnet_comment': '通行证评论',
+    'tip': '提示',
+    'tip_label': 'TIP（临时进口许可证）',
+    'tip_comment': '提示评论',
+    'stay_duration': '停留时间',
+    'maximum_stay': '最长停留时间',
+    'insurance': '保险',
+    'insurance_comment': '保险评论',
+    'insurance_url': '保险URL',
+    'insurance_system': '保险系统',
+    'no_borders': '没有可用的边界'
   }
 }
 
@@ -1167,4 +1454,107 @@ export function getTranslatedStayDuration(
   language: SupportedLanguage
 ): string | null {
   return getTranslatedField(countryData, 'stay_duration', 'stay_duration_translations', language)
+}
+
+/**
+ * Get translated tip comment from country data
+ */
+export function getTranslatedTipComment(
+  countryData: CountryData,
+  language: SupportedLanguage
+): string | null {
+  return getTranslatedField(countryData, 'tip_comment', 'tip_comment_translations', language)
+}
+
+/**
+ * Get translated carnet comment from country data
+ */
+export function getTranslatedCarnetComment(
+  countryData: CountryData,
+  language: SupportedLanguage
+): string | null {
+  return getTranslatedField(countryData, 'carnet_comment', 'carnet_comment_translations', language)
+}
+
+/**
+ * Translation dictionary for insurance scheme
+ */
+const INSURANCE_SCHEME_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> = {
+  en: {
+    'brown_card': 'Brown card',
+    'yellow_card': 'Yellow card COMESA',
+    'green_card': 'Green card',
+    'soat': 'SOAT',
+    'mercosur': 'Mercosur'
+  },
+  de: {
+    'brown_card': 'Brown card',
+    'yellow_card': 'Yellow card COMESA',
+    'green_card': 'Grüne Karte',
+    'soat': 'SOAT',
+    'mercosur': 'Mercosur'
+  },
+  es: {
+    'brown_card': 'Brown card',
+    'yellow_card': 'Yellow card COMESA',
+    'green_card': 'Tarjeta verde',
+    'soat': 'SOAT',
+    'mercosur': 'Mercosur'
+  },
+  fr: {
+    'brown_card': 'Carte brune',
+    'yellow_card': 'Carte jaune COMESA',
+    'green_card': 'Carte verte',
+    'soat': 'SOAT',
+    'mercosur': 'Mercosur'
+  },
+  it: {
+    'brown_card': 'Brown card',
+    'yellow_card': 'Yellow card COMESA',
+    'green_card': 'Carta verde',
+    'soat': 'SOAT',
+    'mercosur': 'Mercosur'
+  },
+  ja: {
+    'brown_card': 'Brown card',
+    'yellow_card': 'Yellow card COMESA',
+    'green_card': 'グリーンカード',
+    'soat': 'SOAT',
+    'mercosur': 'Mercosur'
+  },
+  nl: {
+    'brown_card': 'Brown card',
+    'yellow_card': 'Yellow card COMESA',
+    'green_card': 'Groene kaart',
+    'soat': 'SOAT',
+    'mercosur': 'Mercosur'
+  },
+  ru: {
+    'brown_card': 'Brown card',
+    'yellow_card': 'Yellow card COMESA',
+    'green_card': 'Зелёная карта',
+    'soat': 'SOAT',
+    'mercosur': 'Mercosur'
+  },
+  zh: {
+    'brown_card': 'Brown card',
+    'yellow_card': 'Yellow card COMESA',
+    'green_card': '绿卡',
+    'soat': 'SOAT',
+    'mercosur': 'Mercosur'
+  }
+}
+
+/**
+ * Get translated insurance scheme
+ */
+export function getTranslatedInsuranceScheme(
+  scheme: string | undefined | null,
+  language: SupportedLanguage = DEFAULT_LANGUAGE
+): string {
+  if (!scheme) {
+    return ''
+  }
+  
+  return INSURANCE_SCHEME_TRANSLATIONS[language]?.[scheme] || scheme
 }
