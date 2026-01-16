@@ -575,6 +575,12 @@ export default function DetailSidebar({
     const summary = generateCountrySummary(countryData, properties, language)
     const additionalParams = prepareParametersForDisplay(countryData.parameters || {}, 15)
     
+    // Check if all travel data is missing
+    const hasNoTravelData = !countryData.parameters?.visa && !countryData.parameters?.comment
+                            !getTranslatedVisaComment(countryData, language) &&
+                            !getTranslatedTip(countryData, language) &&
+                            !countryData.parameters?.insurance
+    
     return (
       <div className="space-y-6">
         {/* Header */}
@@ -625,6 +631,15 @@ export default function DetailSidebar({
             }`}>
               {getTranslatedOverlandingStatus(countryData.parameters.overlanding, language)}
             </span>
+          </div>
+        )}
+
+        {/* Data Coming Soon Message */}
+        {hasNoTravelData && (
+          <div className="px-4 -mt-2">
+            <p className="text-sm text-gray-500 italic">
+              {getTranslatedLabel('data_coming_soon', language)}
+            </p>
           </div>
         )}
 
@@ -918,167 +933,187 @@ export default function DetailSidebar({
           {/* Visa Tab */}
           {activeCountryTab === 'visa' && (
             <div className="space-y-4">
-              {/* Visa Status */}
-              {countryData.parameters?.visa !== undefined && (
-                <div>
-                  {countryData.parameters?.visa_url ? (
-                    <a 
-                      href={countryData.parameters.visa_url} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="font-bold text-blue-600 hover:text-blue-800 underline"
-                    >
-                      {getTranslatedVisaStatus(countryData.parameters.visa, language as any)}
-                    </a>
-                  ) : (
-                    <span className="font-bold text-gray-900">
-                      {getTranslatedVisaStatus(countryData.parameters.visa, language as any)}
-                    </span>
-                  )}
+              {hasNoTravelData ? (
+                <div className="text-center py-8">
+                  <p className="text-gray-500 italic">
+                    {getTranslatedLabel('data_coming_soon', language)}
+                  </p>
                 </div>
+              ) : (
+                <>
+                  {/* Visa Status */}
+                  {countryData.parameters?.visa !== undefined && (
+                    <div>
+                      {countryData.parameters?.visa_url ? (
+                        <a 
+                          href={countryData.parameters.visa_url} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="font-bold text-blue-600 hover:text-blue-800 underline"
+                        >
+                          {getTranslatedVisaStatus(countryData.parameters.visa, language as any)}
+                        </a>
+                      ) : (
+                        <span className="font-bold text-gray-900">
+                          {getTranslatedVisaStatus(countryData.parameters.visa, language as any)}
+                        </span>
+                      )}
+                    </div>
+                  )}
+                  
+                  {/* Visa Comment */}
+                  {(() => {
+                    const visaComment = getTranslatedVisaComment(countryData, language)
+                    return visaComment && (
+                      <div className="bg-gray-50 border border-gray-200 rounded-lg p-3 shadow-inner">
+                        <p className="text-gray-800 text-sm leading-relaxed">
+                          {visaComment}
+                        </p>
+                      </div>
+                    )
+                  })()}
+                </>
               )}
-              
-              {/* Visa Comment */}
-              {(() => {
-                const visaComment = getTranslatedVisaComment(countryData, language)
-                return visaComment && (
-                  <div className="bg-gray-50 border border-gray-200 rounded-lg p-3 shadow-inner">
-                    <p className="text-gray-800 text-sm leading-relaxed">
-                      {visaComment}
-                    </p>
-                  </div>
-                )
-              })()}
             </div>
           )}
 
           {/* Vehicle Tab */}
           {activeCountryTab === 'driving' && (
             <div className="space-y-4">
-              {/* Driving Side */}
-              {countryData.parameters?.driving && (
-                <div className="flex justify-between">
-                  <span className="text-gray-600 font-semibold">{getTranslatedLabel('driving', language)}:</span>
-                  <span className="font-normal">
-                    {countryData.parameters.driving === 'l' ? getTranslatedLabel('left', language) : 
-                     countryData.parameters.driving === 'r' ? getTranslatedLabel('right', language) : 
-                     countryData.parameters.driving}
-                  </span>
+              {hasNoTravelData ? (
+                <div className="text-center py-8">
+                  <p className="text-gray-500 italic">
+                    {getTranslatedLabel('data_coming_soon', language)}
+                  </p>
                 </div>
-              )}
-              
-              {/* Carnet */}
-              <div className="flex justify-between">
-                <span className="text-gray-600 font-semibold">{getTranslatedLabel('carnet', language)}:</span>
-                <span className="font-normal">
-                  {getTranslatedCarnetStatus(countryData.parameters?.carnet, language)}
-                </span>
-              </div>
-              
-              {/* Carnet Comment (no label) */}
-              {(() => {
-                const carnetComment = getTranslatedCarnetComment(countryData, language)
-                return carnetComment && (
-                  <div className="bg-gray-50 border border-gray-200 rounded-lg p-3 shadow-inner">
-                    <p className="text-gray-800 text-sm leading-relaxed">
-                      {carnetComment}
-                    </p>
-                  </div>
-                )
-              })()}
-              
-              {/* Separator */}
-              {(getTranslatedTip(countryData, language) || getTranslatedTipComment(countryData, language) || getTranslatedStayDuration(countryData, language)) && (
-                <div className="border-t border-gray-200"></div>
-              )}
-              
-              {/* TIP (temporary import permit) */}
-              {(() => {
-                const tip = getTranslatedTip(countryData, language)
-                return tip && (
-                  <div className="space-y-2">
-                    <span className="text-gray-600 font-semibold">{getTranslatedLabel('tip_label', language)}:</span>
-                    <div className="bg-gray-50 border border-gray-200 rounded-lg p-3 shadow-inner">
-                      <p className="text-gray-800 text-sm leading-relaxed">
-                        {tip}
-                      </p>
+              ) : (
+                <>
+                  {/* Driving Side */}
+                  {countryData.parameters?.driving && (
+                    <div className="flex justify-between">
+                      <span className="text-gray-600 font-semibold">{getTranslatedLabel('driving', language)}:</span>
+                      <span className="font-normal">
+                        {countryData.parameters.driving === 'l' ? getTranslatedLabel('left', language) : 
+                         countryData.parameters.driving === 'r' ? getTranslatedLabel('right', language) : 
+                         countryData.parameters.driving}
+                      </span>
                     </div>
+                  )}
+                  
+                  {/* Carnet */}
+                  <div className="flex justify-between">
+                    <span className="text-gray-600 font-semibold">{getTranslatedLabel('carnet', language)}:</span>
+                    <span className="font-normal">
+                      {getTranslatedCarnetStatus(countryData.parameters?.carnet, language)}
+                    </span>
                   </div>
-                )
-              })()}
+                  
+                  {/* Carnet Comment (no label) */}
+                  {(() => {
+                    const carnetComment = getTranslatedCarnetComment(countryData, language)
+                    return carnetComment && (
+                      <div className="bg-gray-50 border border-gray-200 rounded-lg p-3 shadow-inner">
+                        <p className="text-gray-800 text-sm leading-relaxed">
+                          {carnetComment}
+                        </p>
+                      </div>
+                    )
+                  })()}
+                  
+                  {/* Separator */}
+                  {(getTranslatedTip(countryData, language) || getTranslatedTipComment(countryData, language) || getTranslatedStayDuration(countryData, language)) && (
+                    <div className="border-t border-gray-200"></div>
+                  )}
+                  
+                  {/* TIP (temporary import permit) */}
+                  {(() => {
+                    const tip = getTranslatedTip(countryData, language)
+                    return tip && (
+                      <div className="space-y-2">
+                        <span className="text-gray-600 font-semibold">{getTranslatedLabel('tip_label', language)}:</span>
+                        <div className="bg-gray-50 border border-gray-200 rounded-lg p-3 shadow-inner">
+                          <p className="text-gray-800 text-sm leading-relaxed">
+                            {tip}
+                          </p>
+                        </div>
+                      </div>
+                    )
+                  })()}
+                  
+                  {/* Tip Comment (no label) */}
+                  {(() => {
+                    const tipComment = getTranslatedTipComment(countryData, language)
+                    return tipComment && (
+                      <div className="bg-gray-50 border border-gray-200 rounded-lg p-3 shadow-inner">
+                        <p className="text-gray-800 text-sm leading-relaxed">
+                          {tipComment}
+                        </p>
+                      </div>
+                    )
+                  })()}
+                  
+                  {/* Maximum stay */}
+                  {(() => {
+                    const stayDuration = getTranslatedStayDuration(countryData, language)
+                    return stayDuration && (
+                      <div className="space-y-1">
+                        <span className="text-gray-600 font-semibold">{getTranslatedLabel('maximum_stay', language)}:</span>
+                        <div className="text-gray-800 font-normal">{stayDuration}</div>
+                      </div>
+                    )
+                  })()}
+                  
+                  {/* Separator */}
+                  {(countryData.parameters?.insurance !== undefined || getTranslatedInsuranceComment(countryData, language) || countryData.parameters?.insurance_url) && (
+                    <div className="border-t border-gray-200"></div>
+                  )}
+                  
+                  {/* Insurance */}
+                  {countryData.parameters?.insurance !== undefined && (
+                    <div className="flex justify-between">
+                      <span className="text-gray-600 font-semibold">{getTranslatedLabel('insurance', language)}:</span>
+                      <span className="font-normal">
+                        {countryData.parameters.insurance === 1 ? getTranslatedLabel('mandatory', language) : 
+                         countryData.parameters.insurance === 0 ? getTranslatedLabel('not_required', language) : 
+                         countryData.parameters.insurance}
+                      </span>
+                    </div>
+                  )}
+                  
+                  {/* Insurance Scheme (System) */}
+                  {countryData.parameters?.insurance_scheme && (
+                    <div className="flex justify-between">
+                      <span className="text-gray-600 font-semibold">{getTranslatedLabel('insurance_system', language)}:</span>
+                      <span className="font-normal">{getTranslatedInsuranceScheme(countryData.parameters.insurance_scheme, language as any)}</span>
+                    </div>
+                  )}
               
-              {/* Tip Comment (no label) */}
-              {(() => {
-                const tipComment = getTranslatedTipComment(countryData, language)
-                return tipComment && (
-                  <div className="bg-gray-50 border border-gray-200 rounded-lg p-3 shadow-inner">
-                    <p className="text-gray-800 text-sm leading-relaxed">
-                      {tipComment}
-                    </p>
-                  </div>
-                )
-              })()}
-              
-              {/* Maximum stay */}
-              {(() => {
-                const stayDuration = getTranslatedStayDuration(countryData, language)
-                return stayDuration && (
-                  <div className="space-y-1">
-                    <span className="text-gray-600 font-semibold">{getTranslatedLabel('maximum_stay', language)}:</span>
-                    <div className="text-gray-800 font-normal">{stayDuration}</div>
-                  </div>
-                )
-              })()}
-              
-              {/* Separator */}
-              {(countryData.parameters?.insurance !== undefined || getTranslatedInsuranceComment(countryData, language) || countryData.parameters?.insurance_url) && (
-                <div className="border-t border-gray-200"></div>
-              )}
-              
-              {/* Insurance */}
-              {countryData.parameters?.insurance !== undefined && (
-                <div className="flex justify-between">
-                  <span className="text-gray-600 font-semibold">{getTranslatedLabel('insurance', language)}:</span>
-                  <span className="font-normal">
-                    {countryData.parameters.insurance === 1 ? getTranslatedLabel('mandatory', language) : 
-                     countryData.parameters.insurance === 0 ? getTranslatedLabel('not_required', language) : 
-                     countryData.parameters.insurance}
-                  </span>
-                </div>
-              )}
-              
-              {/* Insurance Scheme (System) */}
-              {countryData.parameters?.insurance_scheme && (
-                <div className="flex justify-between">
-                  <span className="text-gray-600 font-semibold">{getTranslatedLabel('insurance_system', language)}:</span>
-                  <span className="font-normal">{getTranslatedInsuranceScheme(countryData.parameters.insurance_scheme, language as any)}</span>
-                </div>
-              )}
-              
-              {/* Insurance Comment (no label) */}
-              {(() => {
-                const insuranceComment = getTranslatedInsuranceComment(countryData, language)
-                return insuranceComment && (
-                  <div className="bg-gray-50 border border-gray-200 rounded-lg p-3 shadow-inner">
-                    <p className="text-gray-800 text-sm leading-relaxed">
-                      {insuranceComment}
-                    </p>
-                  </div>
-                )
-              })()}
-              
-              {/* Insurance URL (Official website link) */}
-              {countryData.parameters?.insurance_url && (
-                <div>
-                  <a 
-                    href={countryData.parameters.insurance_url} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-blue-600 hover:text-blue-800 underline"
-                  >
-                    {getTranslatedLabel('official_website', language)}
-                  </a>
-                </div>
+                  {/* Insurance Comment (no label) */}
+                  {(() => {
+                    const insuranceComment = getTranslatedInsuranceComment(countryData, language)
+                    return insuranceComment && (
+                      <div className="bg-gray-50 border border-gray-200 rounded-lg p-3 shadow-inner">
+                        <p className="text-gray-800 text-sm leading-relaxed">
+                          {insuranceComment}
+                        </p>
+                      </div>
+                    )
+                  })()}
+                  
+                  {/* Insurance URL (Official website link) */}
+                  {countryData.parameters?.insurance_url && (
+                    <div>
+                      <a 
+                        href={countryData.parameters.insurance_url} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-blue-600 hover:text-blue-800 underline"
+                      >
+                        {getTranslatedLabel('official_website', language)}
+                      </a>
+                    </div>
+                  )}
+                </>
               )}
             </div>
           )}

@@ -624,7 +624,8 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'insurance_comment': 'Insurance Comment',
     'insurance_url': 'Insurance URL',
     'insurance_system': 'Insurance system',
-    'no_borders': 'No borders available'
+    'no_borders': 'No borders available',
+    'data_coming_soon': 'Data is coming, come back later...'
   },
   de: {
     'overlanding': 'Overlanding',
@@ -715,7 +716,8 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'insurance_comment': 'Versicherungs-Kommentar',
     'insurance_url': 'Versicherungs-URL',
     'insurance_system': 'Versicherungssystem',
-    'no_borders': 'Keine Grenzen verfügbar'
+    'no_borders': 'Keine Grenzen verfügbar',
+    'data_coming_soon': 'Daten kommen bald, schauen Sie später vorbei...'
   },
   es: {
     'overlanding': 'Overlanding',
@@ -806,7 +808,8 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'insurance_comment': 'Comentario de Seguro',
     'insurance_url': 'URL de Seguro',
     'insurance_system': 'Sistema de seguro',
-    'no_borders': 'No hay fronteras disponibles'
+    'no_borders': 'No hay fronteras disponibles',
+    'data_coming_soon': 'Los datos están llegando, vuelve más tarde...'
   },
   fr: {
     'overlanding': 'Overlanding',
@@ -897,7 +900,8 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'insurance_comment': 'Commentaire Assurance',
     'insurance_url': 'URL Assurance',
     'insurance_system': 'Système d\'assurance',
-    'no_borders': 'Aucune frontière disponible'
+    'no_borders': 'Aucune frontière disponible',
+    'data_coming_soon': 'Les données arrivent, revenez plus tard...'
   },
   it: {
     'overlanding': 'Overlanding',
@@ -988,7 +992,8 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'insurance_comment': 'Commento Assicurazione',
     'insurance_url': 'URL Assicurazione',
     'insurance_system': 'Sistema assicurativo',
-    'no_borders': 'Nessun confine disponibile'
+    'no_borders': 'Nessun confine disponibile',
+    'data_coming_soon': 'I dati stanno arrivando, torna più tardi...'
   },
   ja: {
     'overlanding': 'オーバーランディング',
@@ -1079,7 +1084,8 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'insurance_comment': '保険コメント',
     'insurance_url': '保険URL',
     'insurance_system': '保険システム',
-    'no_borders': '利用可能な国境がありません'
+    'no_borders': '利用可能な国境がありません',
+    'data_coming_soon': 'データは近日公開予定です。後でまたお越しください...'
   },
   nl: {
     'overlanding': 'Overlanding',
@@ -1170,7 +1176,8 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'insurance_comment': 'Verzekering Opmerking',
     'insurance_url': 'Verzekering URL',
     'insurance_system': 'Verzekeringssysteem',
-    'no_borders': 'Geen grenzen beschikbaar'
+    'no_borders': 'Geen grenzen beschikbaar',
+    'data_coming_soon': 'Gegevens komen eraan, kom later terug...'
   },
   ru: {
     'overlanding': 'Оверлендинг',
@@ -1261,7 +1268,8 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'insurance_comment': 'Комментарий к страхованию',
     'insurance_url': 'URL страхования',
     'insurance_system': 'Система страхования',
-    'no_borders': 'Нет доступных границ'
+    'no_borders': 'Нет доступных границ',
+    'data_coming_soon': 'Данные скоро появятся, зайдите позже...'
   },
   zh: {
     'overlanding': '越野旅行',
@@ -1352,7 +1360,8 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'insurance_comment': '保险评论',
     'insurance_url': '保险URL',
     'insurance_system': '保险系统',
-    'no_borders': '没有可用的边界'
+    'no_borders': '没有可用的边界',
+    'data_coming_soon': '数据即将推出，请稍后再来...'
   }
 }
 
