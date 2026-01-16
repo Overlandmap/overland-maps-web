@@ -12,6 +12,69 @@ import { COLOR_SCHEMES } from '../lib/color-expressions'
 import LanguageSelector from './LanguageSelector'
 import LegendExplanationPopup from './LegendExplanationPopup'
 
+/**
+ * Get the border post layer configuration
+ * This ensures consistent styling across all instances of the border_post layer
+ */
+function getBorderPostLayerConfig(): maplibregl.LayerSpecification {
+  return {
+    id: 'border_post',
+    type: 'circle',
+    source: 'country-border',
+    'source-layer': 'border_post',
+    minzoom: 3,
+    paint: {
+      'circle-color': [
+        'case',
+        ['==', ['get', 'is_open'], 1], '#3b82f6',  // Bilateral - blue
+        ['==', ['get', 'is_open'], 2], '#22c55e',  // Open - green
+        ['==', ['get', 'is_open'], 3], '#eab308',  // Restrictions - yellow
+        '#ef4444'  // Closed (0) or null - red (default)
+      ],
+      'circle-radius': [
+        'interpolate',
+        ['linear'],
+        ['zoom'],
+        3, 0,
+        4, 4,
+        6, 6,
+        8, 8,
+        22, 8
+      ],
+      'circle-stroke-width': 1.5,
+      'circle-stroke-color': '#ffffff'
+    }
+  } as maplibregl.LayerSpecification
+}
+
+/**
+ * Get the border post highlight layer configuration
+ * This ensures consistent styling across all instances of the border-post-highlight layer
+ */
+function getBorderPostHighlightLayerConfig(): maplibregl.LayerSpecification {
+  return {
+    id: 'border-post-highlight',
+    type: 'circle',
+    source: 'country-border',
+    'source-layer': 'border_post',
+    minzoom: 4,
+    paint: {
+      'circle-color': '#ffffff',
+      'circle-radius': [
+        'interpolate',
+        ['linear'],
+        ['zoom'],
+        4, 6,
+        6, 8,
+        8, 10,
+        22, 10
+      ],
+      'circle-stroke-width': 2,
+      'circle-stroke-color': '#1e40af'
+    },
+    filter: ['==', ['get', 'id'], ''] // Initially show nothing
+  } as maplibregl.LayerSpecification
+}
 
 type ColorScheme = 'overlanding' | 'carnet' | 'climate' | 'itineraries'
 
@@ -1158,24 +1221,7 @@ export default function SimpleMapContainer({
         
         // Re-add border post layer (only if it doesn't exist)
         if (!map.current.getLayer('border_post')) {
-          map.current.addLayer({
-          id: 'border_post',
-          type: 'circle',
-          source: 'country-border',
-          'source-layer': 'border_post',
-          paint: {
-            'circle-color': [
-              'case',
-              ['==', ['get', 'is_open'], 1], '#3b82f6',
-              ['==', ['get', 'is_open'], 2], '#22c55e',
-              ['==', ['get', 'is_open'], 3], '#eab308',
-              '#ef4444'
-            ],
-            'circle-radius': 6,
-            'circle-stroke-width': 1.5,
-            'circle-stroke-color': '#ffffff'
-          }
-          })
+          map.current.addLayer(getBorderPostLayerConfig())
         }
         
         // Re-add itinerary layer (only if it doesn't exist)
@@ -1213,19 +1259,7 @@ export default function SimpleMapContainer({
         }
         
         if (!map.current.getLayer('border-post-highlight')) {
-          map.current.addLayer({
-          id: 'border-post-highlight',
-          type: 'circle',
-          source: 'country-border',
-          'source-layer': 'border_post',
-          paint: {
-            'circle-color': '#ffffff',
-            'circle-radius': 8,
-            'circle-stroke-width': 2,
-            'circle-stroke-color': '#1e40af'
-          },
-          filter: ['==', ['get', 'id'], '']
-          })
+          map.current.addLayer(getBorderPostHighlightLayerConfig())
         }
         
         if (!map.current.getLayer('zone-highlight')) {
@@ -1595,24 +1629,7 @@ export default function SimpleMapContainer({
           
           // Re-add border post layer (only if it doesn't exist)
           if (!map.current.getLayer('border_post')) {
-            map.current.addLayer({
-            id: 'border_post',
-            type: 'circle',
-            source: 'country-border',
-            'source-layer': 'border_post',
-            paint: {
-              'circle-color': [
-                'case',
-                ['==', ['get', 'is_open'], 1], '#3b82f6',
-                ['==', ['get', 'is_open'], 2], '#22c55e',
-                ['==', ['get', 'is_open'], 3], '#eab308',
-                '#ef4444'
-              ],
-              'circle-radius': 6,
-              'circle-stroke-width': 1.5,
-              'circle-stroke-color': '#ffffff'
-            }
-            })
+            map.current.addLayer(getBorderPostLayerConfig())
           }
           
           // Re-add itinerary layer (only if it doesn't exist)
@@ -1650,19 +1667,7 @@ export default function SimpleMapContainer({
           }
           
           if (!map.current.getLayer('border-post-highlight')) {
-            map.current.addLayer({
-            id: 'border-post-highlight',
-            type: 'circle',
-            source: 'country-border',
-            'source-layer': 'border_post',
-            paint: {
-              'circle-color': '#ffffff',
-              'circle-radius': 8,
-              'circle-stroke-width': 2,
-              'circle-stroke-color': '#1e40af'
-            },
-            filter: ['==', ['get', 'id'], '']
-            })
+            map.current.addLayer(getBorderPostHighlightLayerConfig())
           }
           
           if (!map.current.getLayer('zone-highlight')) {
@@ -2469,34 +2474,7 @@ export default function SimpleMapContainer({
               // Add border post layer (top layer - most important for clicking)
               try {
                 if (!map.current.getLayer('border_post')) {
-                  map.current.addLayer({
-                    id: 'border_post',
-                    type: 'circle',
-                    source: 'country-border',
-                    'source-layer': 'border_post',
-                    minzoom: 3,
-                    paint: {
-                      'circle-color': [
-                        'case',
-                        ['==', ['get', 'is_open'], 1], '#3b82f6',  // Bilateral - blue
-                        ['==', ['get', 'is_open'], 2], '#22c55e',  // Open - green
-                        ['==', ['get', 'is_open'], 3], '#eab308',  // Restrictions - yellow
-                        '#ef4444'  // Closed (0) or null - red (default)
-                      ],
-                      'circle-radius': [
-                        'interpolate',
-                        ['linear'],
-                        ['zoom'],
-                        3, 0,
-                        4, 4,
-                        6, 6,
-                        8, 8,
-                        22, 8
-                      ],
-                      'circle-stroke-width': 1.5,
-                      'circle-stroke-color': '#ffffff'
-                    }
-                  })
+                  map.current.addLayer(getBorderPostLayerConfig())
                 }
               } catch (error) {
                 console.error('❌ Error adding border post layer:', error)
@@ -2644,28 +2622,7 @@ export default function SimpleMapContainer({
               try {
                 // Border post highlight layer - white circle for selected border posts
                 if (!map.current.getLayer('border-post-highlight')) {
-                  map.current.addLayer({
-                    id: 'border-post-highlight',
-                    type: 'circle',
-                    source: 'country-border',
-                    'source-layer': 'border_post',
-                    minzoom: 4,
-                    paint: {
-                      'circle-color': '#ffffff',
-                      'circle-radius': [
-                        'interpolate',
-                        ['linear'],
-                        ['zoom'],
-                        4, 6,
-                        6, 8,
-                        8, 10,
-                        22, 10
-                      ],
-                      'circle-stroke-width': 2,
-                      'circle-stroke-color': '#1e40af'
-                    },
-                    filter: ['==', ['get', 'id'], ''] // Initially show nothing
-                  })
+                  map.current.addLayer(getBorderPostHighlightLayerConfig())
                 }
               } catch (error) {
                 console.error('❌ Error adding border post highlight layer:', error)
