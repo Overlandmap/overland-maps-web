@@ -15,7 +15,7 @@ import {
 import { getBorderById, loadCountryData } from '../lib/data-loader'
 import { getBorderPostById } from '../lib/border-post-data'
 import { useLanguage } from '../contexts/LanguageContext'
-import { getTranslatedCountryName, getTranslatedBorderStatus, getBorderStatusColorClasses, getTranslatedCarnetStatus, getTranslatedOverlandingStatus, getTranslatedLabel, getTranslatedComment, getTranslatedVisaComment, getTranslatedInsuranceComment, getTranslatedTip, getTranslatedTipComment, getTranslatedStayDuration, getTranslatedVisaStatus, getTranslatedCarnetComment, getTranslatedInsuranceScheme } from '../lib/i18n'
+import { getTranslatedCountryName, getTranslatedBorderStatus, getBorderStatusColorClasses, getTranslatedCarnetStatus, getTranslatedOverlandingStatus, getTranslatedLabel, getTranslatedComment, getTranslatedVisaComment, getTranslatedInsuranceComment, getTranslatedTip, getTranslatedTipComment, getTranslatedStayDuration, getTranslatedVisaStatus, getTranslatedCarnetComment, getTranslatedInsuranceScheme, getTranslatedDisputed } from '../lib/i18n'
 import { hasFlagAvailable } from '../lib/flag-utils'
 import { processItineraryText, setupItineraryLinkHandlers } from '../lib/text-filters'
 import CountryFlag from './CountryFlag'
@@ -592,11 +592,6 @@ export default function DetailSidebar({
                 <h2 className="text-2xl font-bold text-gray-900 truncate">
                   {formatCountryName(countryData, properties, language)}
                 </h2>
-                {(countryData.disputed || countryData.parameters?.disputed) && (
-                  <p className="text-sm text-gray-700 mt-1 italic font-bold">
-                    {countryData.disputed || countryData.parameters?.disputed}
-                  </p>
-                )}
               </div>
               <button
                 onClick={onClose}
@@ -608,6 +603,14 @@ export default function DetailSidebar({
               </button>
             </div>
           </div>
+          {(() => {
+            const disputedText = getTranslatedDisputed(countryData, language)
+            return disputedText && (
+              <p className="px-1.5 pb-2 text-sm text-gray-700 italic">
+                {disputedText}
+              </p>
+            )
+          })()}
         </div>
 
         {/* Overlanding Status Badge */}
