@@ -11,6 +11,7 @@ import { getTranslatedLabel, getTranslatedMonths } from '../lib/i18n'
 import { COLOR_SCHEMES } from '../lib/color-expressions'
 import LanguageSelector from './LanguageSelector'
 import LegendExplanationPopup from './LegendExplanationPopup'
+import ColorSchemeHelpPopup from './ColorSchemeHelpPopup'
 
 /**
  * Get the border post layer configuration
@@ -120,6 +121,7 @@ export default function SimpleMapContainer({
   const [selectedMonth, setSelectedMonth] = useState<number>(0) // 0 = January, 11 = December
   const [climateDataType, setClimateDataType] = useState<'temperature' | 'precipitation'>('temperature')
   const [showLegend, setShowLegend] = useState(false) // Will be set based on screen size
+  const [showColorSchemeHelp, setShowColorSchemeHelp] = useState(false)
   const [explanationPopup, setExplanationPopup] = useState<{
     isOpen: boolean
     category: 'overlanding' | 'carnet' | 'borders' | 'border_posts' | 'zones' | null
@@ -2828,6 +2830,13 @@ export default function SimpleMapContainer({
               >
                 {getTranslatedLabel('itineraries', language)}
               </button>
+              <button
+                onClick={() => setShowColorSchemeHelp(true)}
+                className="ml-2 w-4 h-4 rounded-full bg-gray-200 hover:bg-gray-300 flex items-center justify-center text-xs text-gray-600 hover:text-gray-800 transition-colors"
+                title={getTranslatedLabel('help_button_title', language)}
+              >
+                ?
+              </button>
             </div>
 
             {/* Language Selector */}
@@ -3224,6 +3233,12 @@ export default function SimpleMapContainer({
         isOpen={explanationPopup.isOpen}
         onClose={closeExplanationPopup}
         category={explanationPopup.category}
+      />
+
+      {/* Color Scheme Help Popup */}
+      <ColorSchemeHelpPopup
+        isOpen={showColorSchemeHelp}
+        onClose={() => setShowColorSchemeHelp(false)}
       />
     </div>
   )

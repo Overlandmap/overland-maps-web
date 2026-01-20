@@ -628,7 +628,16 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'data_coming_soon': 'Data is coming, come back later...',
     'onboarding_tooltip_title': 'Explore Different Map Layers',
     'onboarding_tooltip_message': 'Tap the buttons above to switch between different map layers: overlanding friendliness, visa requirements, and vehicle paperwork requirements.',
-    'onboarding_tooltip_got_it': 'Got it!'
+    'onboarding_tooltip_got_it': 'Got it!',
+    'help_button_title': 'Layer Information',
+    'help_overlanding_title': 'Overlanding Friendliness',
+    'help_overlanding_text': 'Shows how easy it is to visit each country as an overlander. Green indicates normal access (easy) - you only need proper visa and standard vehicle paperwork. Black means it is (almost) impossible to visit the country with a motor vehicle, though it may be possible on foot or by bicycle.',
+    'help_carnet_title': 'Carnet Requirements',
+    'help_carnet_text': 'Shows which countries require a Carnet de Passage en Douane, a document provided by your local automobile club that, in exchange for a large refundable deposit, allows you to enter the country without paying import taxes. This represents the on-the-ground reality, which differs from what "official" websites state, as they often contain outdated information. Use the mobile app to log in and discuss the current situation, which will eventually be reflected here when it changes.',
+    'help_climate_title': 'Climate Data',
+    'help_climate_text': 'Displays monthly maximum temperatures and precipitation, averaged over the last 50 years. This gives you an indication of which season is best suited for travel in different parts of the world.',
+    'help_itineraries_title': 'Itineraries',
+    'help_itineraries_text': 'A selection of detailed itineraries specifically crafted for overlanders are available to test and download in the mobile app (purchase optional).'
   },
   de: {
     'overlanding': 'Overlanding',
@@ -723,7 +732,16 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'data_coming_soon': 'Daten kommen bald, schauen Sie später vorbei...',
     'onboarding_tooltip_title': 'Verschiedene Kartenebenen erkunden',
     'onboarding_tooltip_message': 'Tippen Sie auf die Schaltflächen oben, um zwischen verschiedenen Kartenebenen zu wechseln: Overlanding-Freundlichkeit, Visaanforderungen und Fahrzeugpapieranforderungen.',
-    'onboarding_tooltip_got_it': 'Verstanden!'
+    'onboarding_tooltip_got_it': 'Verstanden!',
+    'help_button_title': 'Ebeneninformationen',
+    'help_overlanding_title': 'Overlanding-Freundlichkeit',
+    'help_overlanding_text': 'Zeigt, wie einfach es ist, jedes Land als Overlander zu besuchen. Grün bedeutet normaler Zugang (einfach) - Sie benötigen nur ein ordnungsgemäßes Visum und Standardfahrzeugpapiere. Schwarz bedeutet, dass es (fast) unmöglich ist, das Land mit einem Kraftfahrzeug zu besuchen, obwohl es zu Fuß oder mit dem Fahrrad möglich sein kann.',
+    'help_carnet_title': 'Carnet-Anforderungen',
+    'help_carnet_text': 'Zeigt, welche Länder ein Carnet de Passage en Douane benötigen, ein Dokument Ihres lokalen Automobilclubs, das Ihnen im Austausch gegen eine große rückzahlbare Kaution ermöglicht, das Land ohne Zahlung von Einfuhrsteuern zu betreten. Dies spiegelt die Realität vor Ort wider, die sich von den "offiziellen" Websites unterscheidet, da diese oft veraltete Informationen enthalten. Nutzen Sie die mobile App, um sich anzumelden und die aktuelle Situation zu diskutieren, die hier schließlich widergespiegelt wird, wenn sie sich ändert.',
+    'help_climate_title': 'Klimadaten',
+    'help_climate_text': 'Zeigt monatliche Höchsttemperaturen und Niederschläge, gemittelt über die letzten 50 Jahre. Dies gibt Ihnen einen Hinweis darauf, welche Jahreszeit am besten für Reisen in verschiedenen Teilen der Welt geeignet ist.',
+    'help_itineraries_title': 'Reiserouten',
+    'help_itineraries_text': 'Eine Auswahl detaillierter Reiserouten, speziell für Overlander erstellt, sind in der mobilen App zum Testen und Herunterladen verfügbar (Kauf optional).'
   },
   es: {
     'overlanding': 'Overlanding',
@@ -818,7 +836,16 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'data_coming_soon': 'Los datos están llegando, vuelve más tarde...',
     'onboarding_tooltip_title': 'Explora diferentes capas del mapa',
     'onboarding_tooltip_message': 'Toca los botones de arriba para cambiar entre diferentes capas del mapa: facilidad para overlanding, requisitos de visa y requisitos de documentación del vehículo.',
-    'onboarding_tooltip_got_it': '¡Entendido!'
+    'onboarding_tooltip_got_it': '¡Entendido!',
+    'help_button_title': 'Información de Capas',
+    'help_overlanding_title': 'Facilidad para Overlanding',
+    'help_overlanding_text': 'Muestra qué tan fácil es visitar cada país como overlander. Verde indica acceso normal (fácil) - solo necesitas visa adecuada y documentación vehicular estándar. Negro significa que es (casi) imposible visitar el país con un vehículo motorizado, aunque puede ser posible a pie o en bicicleta.',
+    'help_carnet_title': 'Requisitos de Carnet',
+    'help_carnet_text': 'Muestra qué países requieren un Carnet de Passage en Douane, un documento proporcionado por tu club automovilístico local que, a cambio de un gran depósito reembolsable, te permite ingresar al país sin pagar impuestos de importación. Esto representa la realidad sobre el terreno, que difiere de lo que dicen los sitios web "oficiales", ya que a menudo contienen información desactualizada. Usa la aplicación móvil para iniciar sesión y discutir la situación actual, que eventualmente se reflejará aquí cuando cambie.',
+    'help_climate_title': 'Datos Climáticos',
+    'help_climate_text': 'Muestra temperaturas máximas mensuales y precipitaciones, promediadas durante los últimos 50 años. Esto te da una indicación de qué temporada es más adecuada para viajar en diferentes partes del mundo.',
+    'help_itineraries_title': 'Itinerarios',
+    'help_itineraries_text': 'Una selección de itinerarios detallados específicamente diseñados para overlanders están disponibles para probar y descargar en la aplicación móvil (compra opcional).'
   },
   fr: {
     'overlanding': 'Overlanding',
@@ -913,7 +940,16 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'data_coming_soon': 'Les données arrivent, revenez plus tard...',
     'onboarding_tooltip_title': 'Explorez différentes couches de carte',
     'onboarding_tooltip_message': 'Appuyez sur les boutons ci-dessus pour basculer entre différentes couches de carte : facilité d\'overlanding, exigences de visa et exigences de documents du véhicule.',
-    'onboarding_tooltip_got_it': 'Compris !'
+    'onboarding_tooltip_got_it': 'Compris !',
+    'help_button_title': 'Informations sur les Couches',
+    'help_overlanding_title': 'Facilité d\'Overlanding',
+    'help_overlanding_text': 'Montre à quel point il est facile de visiter chaque pays en tant qu\'overlander. Le vert indique un accès normal (facile) - vous n\'avez besoin que d\'un visa approprié et de documents véhicule standard. Le noir signifie qu\'il est (presque) impossible de visiter le pays avec un véhicule à moteur, bien que cela puisse être possible à pied ou à vélo.',
+    'help_carnet_title': 'Exigences Carnet',
+    'help_carnet_text': 'Montre quels pays nécessitent un Carnet de Passage en Douane, un document fourni par votre club automobile local qui, en échange d\'un dépôt important remboursable, vous permet d\'entrer dans le pays sans payer de taxes d\'importation. Cela représente la réalité sur le terrain, qui diffère de ce que disent les sites web "officiels", car ils contiennent souvent des informations obsolètes. Utilisez l\'application mobile pour vous connecter et discuter de la situation actuelle, qui sera finalement reflétée ici lorsqu\'elle changera.',
+    'help_climate_title': 'Données Climatiques',
+    'help_climate_text': 'Affiche les températures maximales mensuelles et les précipitations, moyennées sur les 50 dernières années. Cela vous donne une indication de la saison la mieux adaptée pour voyager dans différentes parties du monde.',
+    'help_itineraries_title': 'Itinéraires',
+    'help_itineraries_text': 'Une sélection d\'itinéraires détaillés spécialement conçus pour les overlanders sont disponibles pour tester et télécharger dans l\'application mobile (achat optionnel).'
   },
   it: {
     'overlanding': 'Overlanding',
@@ -1008,7 +1044,16 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'data_coming_soon': 'I dati stanno arrivando, torna più tardi...',
     'onboarding_tooltip_title': 'Esplora diversi livelli della mappa',
     'onboarding_tooltip_message': 'Tocca i pulsanti sopra per passare tra diversi livelli della mappa: facilità di overlanding, requisiti per il visto e requisiti per i documenti del veicolo.',
-    'onboarding_tooltip_got_it': 'Capito!'
+    'onboarding_tooltip_got_it': 'Capito!',
+    'help_button_title': 'Informazioni sui Livelli',
+    'help_overlanding_title': 'Facilità di Overlanding',
+    'help_overlanding_text': 'Mostra quanto è facile visitare ogni paese come overlander. Il verde indica accesso normale (facile) - hai solo bisogno di un visto appropriato e documenti del veicolo standard. Il nero significa che è (quasi) impossibile visitare il paese con un veicolo a motore, anche se potrebbe essere possibile a piedi o in bicicletta.',
+    'help_carnet_title': 'Requisiti Carnet',
+    'help_carnet_text': 'Mostra quali paesi richiedono un Carnet de Passage en Douane, un documento fornito dal tuo club automobilistico locale che, in cambio di un grande deposito rimborsabile, ti permette di entrare nel paese senza pagare tasse di importazione. Questo rappresenta la realtà sul campo, che differisce da ciò che dicono i siti web "ufficiali", poiché spesso contengono informazioni obsolete. Usa l\'app mobile per accedere e discutere della situazione attuale, che sarà eventualmente riflessa qui quando cambierà.',
+    'help_climate_title': 'Dati Climatici',
+    'help_climate_text': 'Visualizza le temperature massime mensili e le precipitazioni, mediate negli ultimi 50 anni. Questo ti dà un\'indicazione di quale stagione è più adatta per viaggiare in diverse parti del mondo.',
+    'help_itineraries_title': 'Itinerari',
+    'help_itineraries_text': 'Una selezione di itinerari dettagliati specificamente creati per overlanders sono disponibili per testare e scaricare nell\'app mobile (acquisto opzionale).'
   },
   ja: {
     'overlanding': 'オーバーランディング',
@@ -1103,7 +1148,16 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'data_coming_soon': 'データは近日公開予定です。後でまたお越しください...',
     'onboarding_tooltip_title': '異なる地図レイヤーを探索',
     'onboarding_tooltip_message': '上のボタンをタップして、異なる地図レイヤーを切り替えます：オーバーランディングの利便性、ビザ要件、車両書類要件。',
-    'onboarding_tooltip_got_it': 'わかりました！'
+    'onboarding_tooltip_got_it': 'わかりました！',
+    'help_button_title': 'レイヤー情報',
+    'help_overlanding_title': 'オーバーランディングの利便性',
+    'help_overlanding_text': '各国をオーバーランダーとして訪問することがどれだけ簡単かを示します。緑は通常のアクセス（簡単）を示します - 適切なビザと標準的な車両書類のみが必要です。黒は、自動車で国を訪問することが（ほぼ）不可能であることを意味しますが、徒歩や自転車では可能かもしれません。',
+    'help_carnet_title': 'カルネ要件',
+    'help_carnet_text': 'どの国がカルネ・ド・パッサージュ・アン・ドゥアーヌを必要とするかを示します。これは、地元の自動車クラブが提供する文書で、大きな返金可能な保証金と引き換えに、輸入税を支払わずに国に入国できます。これは現地の実情を表しており、「公式」ウェブサイトが述べていることとは異なります。それらはしばしば古い情報を含んでいます。モバイルアプリを使用してログインし、現在の状況について議論してください。それが変更されると、最終的にここに反映されます。',
+    'help_climate_title': '気候データ',
+    'help_climate_text': '過去50年間の平均月間最高気温と降水量を表示します。これにより、世界のさまざまな地域で旅行に最適な季節がわかります。',
+    'help_itineraries_title': '旅程',
+    'help_itineraries_text': 'オーバーランダー向けに特別に作成された詳細な旅程の選択は、モバイルアプリでテストおよびダウンロードできます（購入はオプション）。'
   },
   nl: {
     'overlanding': 'Overlanding',
@@ -1198,7 +1252,16 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'data_coming_soon': 'Gegevens komen eraan, kom later terug...',
     'onboarding_tooltip_title': 'Verken verschillende kaartlagen',
     'onboarding_tooltip_message': 'Tik op de knoppen hierboven om te schakelen tussen verschillende kaartlagen: overlanding-vriendelijkheid, visumvereisten en voertuigdocumentenvereisten.',
-    'onboarding_tooltip_got_it': 'Begrepen!'
+    'onboarding_tooltip_got_it': 'Begrepen!',
+    'help_button_title': 'Laaginformatie',
+    'help_overlanding_title': 'Overlanding-vriendelijkheid',
+    'help_overlanding_text': 'Toont hoe gemakkelijk het is om elk land als overlander te bezoeken. Groen geeft normale toegang aan (gemakkelijk) - je hebt alleen een juist visum en standaard voertuigdocumenten nodig. Zwart betekent dat het (bijna) onmogelijk is om het land met een motorvoertuig te bezoeken, hoewel het te voet of per fiets mogelijk kan zijn.',
+    'help_carnet_title': 'Carnet Vereisten',
+    'help_carnet_text': 'Toont welke landen een Carnet de Passage en Douane vereisen, een document verstrekt door je lokale automobielclub dat, in ruil voor een grote terugbetaalbare borg, je toestaat het land binnen te komen zonder invoerbelasting te betalen. Dit vertegenwoordigt de realiteit ter plaatse, die verschilt van wat "officiële" websites zeggen, omdat ze vaak verouderde informatie bevatten. Gebruik de mobiele app om in te loggen en de huidige situatie te bespreken, die uiteindelijk hier zal worden weergegeven wanneer deze verandert.',
+    'help_climate_title': 'Klimaatgegevens',
+    'help_climate_text': 'Toont maandelijkse maximumtemperaturen en neerslag, gemiddeld over de afgelopen 50 jaar. Dit geeft je een indicatie van welk seizoen het beste geschikt is om te reizen in verschillende delen van de wereld.',
+    'help_itineraries_title': 'Reisroutes',
+    'help_itineraries_text': 'Een selectie van gedetailleerde reisroutes speciaal gemaakt voor overlanders zijn beschikbaar om te testen en te downloaden in de mobiele app (aankoop optioneel).'
   },
   ru: {
     'overlanding': 'Оверлендинг',
@@ -1293,7 +1356,16 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'data_coming_soon': 'Данные скоро появятся, зайдите позже...',
     'onboarding_tooltip_title': 'Изучите различные слои карты',
     'onboarding_tooltip_message': 'Нажмите на кнопки выше, чтобы переключаться между различными слоями карты: удобство оверлендинга, визовые требования и требования к документам на транспорт.',
-    'onboarding_tooltip_got_it': 'Понятно!'
+    'onboarding_tooltip_got_it': 'Понятно!',
+    'help_button_title': 'Информация о слоях',
+    'help_overlanding_title': 'Удобство оверлендинга',
+    'help_overlanding_text': 'Показывает, насколько легко посетить каждую страну как оверлендер. Зеленый цвет указывает на нормальный доступ (легко) - вам нужна только правильная виза и стандартные документы на транспорт. Черный означает, что посетить страну на автомобиле (почти) невозможно, хотя это может быть возможно пешком или на велосипеде.',
+    'help_carnet_title': 'Требования к карне',
+    'help_carnet_text': 'Показывает, какие страны требуют Carnet de Passage en Douane, документ, предоставляемый вашим местным автомобильным клубом, который в обмен на большой возвратный депозит позволяет вам въехать в страну без уплаты импортных налогов. Это отражает реальность на местах, которая отличается от того, что говорят "официальные" веб-сайты, поскольку они часто содержат устаревшую информацию. Используйте мобильное приложение, чтобы войти и обсудить текущую ситуацию, которая в конечном итоге будет отражена здесь, когда она изменится.',
+    'help_climate_title': 'Климатические данные',
+    'help_climate_text': 'Отображает месячные максимальные температуры и осадки, усредненные за последние 50 лет. Это дает вам представление о том, какой сезон лучше всего подходит для путешествий в разных частях мира.',
+    'help_itineraries_title': 'Маршруты',
+    'help_itineraries_text': 'Подборка подробных маршрутов, специально созданных для оверлендеров, доступна для тестирования и загрузки в мобильном приложении (покупка необязательна).'
   },
   zh: {
     'overlanding': '越野旅行',
@@ -1388,7 +1460,16 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'data_coming_soon': '数据即将推出，请稍后再来...',
     'onboarding_tooltip_title': '探索不同的地图图层',
     'onboarding_tooltip_message': '点击上方按钮在不同的地图图层之间切换：越野旅行友好度、签证要求和车辆文件要求。',
-    'onboarding_tooltip_got_it': '明白了！'
+    'onboarding_tooltip_got_it': '明白了！',
+    'help_button_title': '图层信息',
+    'help_overlanding_title': '越野旅行友好度',
+    'help_overlanding_text': '显示作为越野旅行者访问每个国家的难易程度。绿色表示正常访问（容易）- 您只需要适当的签证和标准车辆文件。黑色表示用机动车访问该国（几乎）不可能，尽管步行或骑自行车可能可行。',
+    'help_carnet_title': '通行证要求',
+    'help_carnet_text': '显示哪些国家需要Carnet de Passage en Douane（海关通行证），这是由您当地的汽车俱乐部提供的文件，通过支付大额可退还押金，允许您在不支付进口税的情况下进入该国。这代表了实地情况，与"官方"网站所说的不同，因为它们通常包含过时的信息。使用移动应用程序登录并讨论当前情况，当情况发生变化时，最终会在这里反映出来。',
+    'help_climate_title': '气候数据',
+    'help_climate_text': '显示过去50年的月最高温度和降水量平均值。这为您提供了世界不同地区最适合旅行的季节指示。',
+    'help_itineraries_title': '行程',
+    'help_itineraries_text': '专为越野旅行者精心设计的详细行程可在移动应用程序中测试和下载（购买可选）。'
   }
 }
 
