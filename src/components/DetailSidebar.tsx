@@ -576,11 +576,10 @@ export default function DetailSidebar({
     const additionalParams = prepareParametersForDisplay(countryData.parameters || {}, 15)
     
     // Check if all travel data is missing
-    const hasNoTravelData = !countryData.parameters?.visa && !countryData.parameters?.comment
+    const hasNoTravelData = (countryData.parameters?.visa === undefined || countryData.parameters?.visa === null) &&
                             !getTranslatedVisaComment(countryData, language) &&
                             !getTranslatedTip(countryData, language) &&
                             !countryData.parameters?.insurance
-    
     return (
       <div className="space-y-6">
         {/* Header */}
