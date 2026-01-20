@@ -16,16 +16,27 @@
   {
     "id": "0OWDO48nJ8OqAdSiNquA",
     "is_open": 3,
-    "comment": "Only pedestrians (and bicycles) are allowed to cross, no motor vehicles.\nIf you'd like to visit Israel from Jordan, this is worth knowing:\nThis border is controlled by the Israelis, but they stamp you on a separate piece of paper, and on the Syrian side they don't stamp you out, so if you come back to Syria using this same border post, there will be no trace of your visit to Israel in your passport (which is important for some countries such as Iran or Sudan).",
     "countries": "JOR-PSX",
     "location": {
       "_latitude": 31.8738717,
       "_longitude": 35.5409112
     },
     "name": "Allenby Bridge",
+    "comment": "Only pedestrians (and bicycles) are allowed to cross, no motor vehicles.\nIf you'd like to visit Israel from Jordan, this is worth knowing:\nThis border is controlled by the Israelis, but they stamp you on a separate piece of paper, and on the Syrian side they don't stamp you out, so if you come back to Syria using this same border post, there will be no trace of your visit to Israel in your passport (which is important for some countries such as Iran or Sudan).\nNote that Jordanian visas are not available at this border: if you're crossing from Israel, you'll need to have purchased an e-visa beforehand.",
     "updatedAt": {
-      "_seconds": 1764257220,
-      "_nanoseconds": 766000000
+      "_seconds": 1764752326,
+      "_nanoseconds": 898000000
+    },
+    "comment_translations": {
+      "en": "Only pedestrians (and bicycles) are allowed to cross, no motor vehicles.\nIf you'd like to visit Israel from Jordan, this is worth knowing:\nThis border is controlled by the Israelis, but they stamp you on a separate piece of paper, and on the Syrian side they don't stamp you out, so if you come back to Syria using this same border post, there will be no trace of your visit to Israel in your passport (which is important for some countries such as Iran or Sudan).\nNote that Jordanian visas are not available at this border: if you're crossing from Israel, you'll need to have purchased an e-visa beforehand.",
+      "fr": "Seuls les piétons (et les cyclistes) sont autorisés à franchir la frontière ; aucun véhicule motorisé n'est autorisé.\n\nSi vous souhaitez vous rendre en Israël depuis la Jordanie, voici quelques informations utiles :\n\nCette frontière est contrôlée par les Israéliens, mais un tampon est apposé sur un document séparé. Du côté syrien, aucun tampon n'est apposé sur votre passeport. Ainsi, si vous retournez en Syrie par ce même poste frontière, votre passage en Israël ne fera l'objet d'aucune mention dans votre passeport (ce qui est important pour certains pays comme l'Iran ou le Soudan).\n\nVeuillez noter que les visas jordaniens ne sont pas délivrés à cette frontière : si vous traversez la frontière depuis Israël, vous devez avoir obtenu un visa électronique au préalable.",
+      "de": "Nur Fußgänger (und Fahrräder) dürfen die Grenze überqueren, Kraftfahrzeuge sind nicht erlaubt.\nWenn Sie von Jordanien nach Israel reisen möchten, sollten Sie Folgendes wissen: Die Grenze wird zwar von Israel kontrolliert, aber Ihr Einreisestempel wird auf einem separaten Blatt Papier angebracht. Auf syrischer Seite erhalten Sie keinen Ausreisestempel. Wenn Sie also über denselben Grenzübergang nach Syrien zurückkehren, findet sich kein Hinweis auf Ihren Israel-Besuch in Ihrem Pass (was für Länder wie Iran oder Sudan wichtig ist). Bitte beachten Sie, dass an dieser Grenze keine jordanischen Visa erhältlich sind. Wenn Sie aus Israel einreisen, benötigen Sie ein zuvor beantragtes E-Visum.",
+      "it": "L'attraversamento è consentito solo ai pedoni (e alle biciclette), non ai veicoli a motore.\nSe desiderate visitare Israele dalla Giordania, è importante sapere questo:\nQuesto confine è controllato dagli israeliani, ma vi timbrano su un foglio di carta separato, e sul lato siriano non vi timbrano l'uscita, quindi se tornate in Siria passando per questo stesso valico di frontiera, non ci sarà traccia della vostra visita in Israele sul vostro passaporto (il che è importante per alcuni paesi come l'Iran o il Sudan).\nSi noti che i visti giordani non sono disponibili a questo confine: se attraversate da Israele, dovrete aver acquistato un visto elettronico in anticipo.",
+      "es": "Solo se permite el cruce a peatones (y bicicletas), no a vehículos motorizados.\nSi desea visitar Israel desde Jordania, le conviene saber lo siguiente:\nEsta frontera está controlada por los israelíes, pero le sellan en un papel aparte, y en el lado sirio no le sellan la salida. Por lo tanto, si regresa a Siria por este mismo puesto fronterizo, no habrá rastro de su visita a Israel en su pasaporte (lo cual es importante para algunos países como Irán o Sudán).\nTenga en cuenta que no se ofrecen visados jordanos en esta frontera: si cruza desde Israel, deberá adquirir un visado electrónico con antelación.",
+      "pt": "Somente pedestres (e bicicletas) podem atravessar, veículos motorizados não.\nSe você quiser visitar Israel vindo da Jordânia, é importante saber o seguinte:\nEsta fronteira é controlada pelos israelenses, mas eles carimbam seu passaporte em um papel separado, e do lado sírio eles não carimbam sua saída, então se você voltar para a Síria usando este mesmo posto de fronteira, não haverá nenhum registro da sua visita a Israel no seu passaporte (o que é importante para alguns países como Irã ou Sudão).\nObserve que vistos jordanianos não estão disponíveis nesta fronteira: se você estiver atravessando vindo de Israel, precisará ter comprado um visto eletrônico com antecedência.",
+      "nl": "Alleen voetgangers (en fietsers) mogen de grens oversteken, geen motorvoertuigen.\n\nAls u vanuit Jordanië naar Israël wilt reizen, is het goed om te weten:\nDeze grens wordt gecontroleerd door de Israëliërs, maar ze stempelen u op een apart document. Aan de Syrische kant stempelen ze u niet uit, dus als u via dezelfde grenspost terugkeert naar Syrië, zal er geen spoor van uw bezoek aan Israël in uw paspoort staan (wat belangrijk is voor sommige landen zoals Iran of Soedan).\n\nLet op: Jordaanse visa zijn niet verkrijgbaar aan deze grens: als u vanuit Israël reist, moet u vooraf een e-visum hebben aangevraagd.",
+      "pl": "Przejście przez granicę jest dozwolone tylko dla pieszych (i rowerzystów), pojazdy mechaniczne są zabronione.\nJeśli chcesz odwiedzić Izrael z Jordanii, warto wiedzieć:\nGranica ta jest kontrolowana przez Izraelczyków, ale pieczątka jest umieszczana na osobnej kartce papieru, a po stronie syryjskiej nie jest ona wydawana, więc jeśli wrócisz do Syrii przez ten sam punkt graniczny, w Twoim paszporcie nie będzie śladu Twojej wizyty w Izraelu (co jest ważne w przypadku niektórych krajów, takich jak Iran czy Sudan).\nPamiętaj, że wizy jordańskie nie są dostępne na tej granicy: jeśli przekraczasz granicę z Izraela, musisz wcześniej wykupić wizę elektroniczną.",
+      "ru": "Пересечение границы разрешено только пешеходам (и велосипедистам), автомобили запрещены.\nЕсли вы хотите посетить Израиль из Иордании, стоит знать следующее:\nЭта граница контролируется Израилем, но они ставят штамп на отдельном листе бумаги, а на сирийской стороне штампа о выезде не ставят, поэтому, если вы вернетесь в Сирию через этот же пограничный пункт, в вашем паспорте не будет никаких следов вашего визита в Израиль (что важно для некоторых стран, таких как Иран или Судан).\nОбратите внимание, что иорданские визы на этой границе не выдаются: если вы пересекаете границу из Израиля, вам необходимо заранее приобрести электронную визу."
     }
   },
   {
@@ -67,6 +78,28 @@
     }
   },
   {
+    "id": "0qY7bEc3FDWjy3TrvOq6",
+    "is_open": 2,
+    "name": "Mohan/Boten",
+    "countries": "CHN-LAO",
+    "location": {
+      "_latitude": 21.185879,
+      "_longitude": 101.6824838
+    },
+    "comment": "Lao VOA available and eVisa accepted.",
+    "comment_translations": {
+      "en": "Lao VOA available and eVisa accepted.",
+      "fr": "Le visa à l'arrivée pour le Laos est disponible et le visa électronique est accepté.",
+      "de": "Laotisches Visum bei Ankunft erhältlich und eVisa werden akzeptiert.",
+      "it": "Disponibile il visto d'ingresso per il Laos e accettati i visti elettronici.",
+      "es": "VOA de Laos disponible y se acepta eVisa.",
+      "pt": "Visto para o Laos disponível e visto eletrônico aceito.",
+      "nl": "Een visum bij aankomst in Laos is beschikbaar en een e-visum wordt geaccepteerd.",
+      "pl": "Dostępna jest usługa Lao VOA i akceptowane są wizy elektroniczne.",
+      "ru": "Визы в Лаос при получении принимаются, также принимаются электронные визы."
+    }
+  },
+  {
     "id": "0v4FWzEZCR51TGxHlQeR",
     "is_open": 1,
     "countries": "OMN-ARE",
@@ -77,6 +110,63 @@
     "name": "Al Buraimi south"
   },
   {
+    "id": "19BGsVo5b66SehZfsygK",
+    "is_open": 2,
+    "name": "Dak Ta Ock/Nam Giang",
+    "countries": "LAO-VNM",
+    "location": {
+      "_latitude": 15.5414131,
+      "_longitude": 107.3737389
+    },
+    "comment": "Lao VOA not available and eVisa not accepted.\nVietnam eVisa not accepted.",
+    "updatedAt": {
+      "_seconds": 1765195082,
+      "_nanoseconds": 157000000
+    },
+    "comment_translations": {
+      "en": "Lao VOA not available and eVisa not accepted.\nVietnam eVisa not accepted.",
+      "fr": "Le visa à l'arrivée pour le Laos n'est pas disponible et le visa électronique n'est pas accepté.\n\nLe visa électronique pour le Vietnam n'est pas accepté.",
+      "de": "Laotische Visa bei Ankunft (VOA) und elektronische Visa (eVisa) werden nicht akzeptiert. Vietnamesische eVisa werden nicht akzeptiert.",
+      "it": "Il visto elettronico per il Laos non è disponibile e il visto elettronico non è accettato.\nIl visto elettronico per il Vietnam non è accettato.",
+      "es": "La VOA de Laos no está disponible y no se acepta la visa electrónica. No se acepta la visa electrónica de Vietnam.",
+      "pt": "Visto de chegada (VOA) para o Laos não disponível e visto eletrônico (eVisa) não aceito.\nVisto eletrônico para o Vietnã não aceito.",
+      "nl": "Visum bij aankomst in Laos niet beschikbaar en e-visum niet geaccepteerd.\n\ne-visum voor Vietnam niet geaccepteerd.",
+      "pl": "Laotańska VOA niedostępna, a e-wizy nie są akceptowane.\nWietnamska e-wiza nie jest akceptowana.",
+      "ru": "Лаосская виза по прибытии недоступна, электронная виза не принимается.\nВьетнамская электронная виза не принимается."
+    }
+  },
+  {
+    "id": "1NKE2quODtPBVDDMNNLk",
+    "is_open": 3,
+    "name": "Madaniyat",
+    "countries": "KGZ-UZB",
+    "location": {
+      "_latitude": 41.0483801,
+      "_longitude": 72.3415166
+    },
+    "comment": "You can cross here on foot, or on bicycle, but motor vehicles are forbidden."
+  },
+  {
+    "id": "1Q6vaLUnHW1Es3nDOJ9f",
+    "is_open": 0,
+    "name": "Chong Jom/O Smach",
+    "countries": "THA-KHM",
+    "location": {
+      "_latitude": 14.435037,
+      "_longitude": 103.7001715
+    }
+  },
+  {
+    "id": "1RQqFDnlLC5P376oK6Gk",
+    "is_open": 2,
+    "name": "Kuala Lurah/Tedungan",
+    "countries": "BRN-MYS",
+    "location": {
+      "_latitude": 4.7404993,
+      "_longitude": 114.8135744
+    }
+  },
+  {
     "id": "1T7RELzq01PoJ8RABPHg",
     "is_open": 2,
     "comment": "Note: UAE demands 125 AED to stamp the carnet, all other border posts between Oman and UAE are free.",
@@ -85,7 +175,18 @@
       "_latitude": 24.8074753,
       "_longitude": 56.201921
     },
-    "name": "Hatta-Al Wajajajh"
+    "name": "Hatta-Al Wajajajh",
+    "comment_translations": {
+      "en": "Note: UAE demands 125 AED to stamp the carnet, all other border posts between Oman and UAE are free.",
+      "fr": "Remarque : Les Émirats arabes unis exigent 125 AED pour tamponner le carnet ATA ; tous les autres postes frontières entre Oman et les Émirats arabes unis sont gratuits.",
+      "de": "Hinweis: Die VAE verlangen 125 AED für die Abstempelung des Carnets, alle anderen Grenzübergänge zwischen Oman und den VAE sind kostenlos.",
+      "it": "Nota: gli Emirati Arabi Uniti richiedono 125 AED per timbrare il carnet; tutti gli altri valichi di frontiera tra Oman ed Emirati Arabi Uniti sono gratuiti.",
+      "es": "Nota: Los Emiratos Árabes Unidos exigen 125 AED para sellar el carnet, todos los demás puestos fronterizos entre Omán y los Emiratos Árabes Unidos son gratuitos.",
+      "pt": "Observação: Os Emirados Árabes Unidos cobram 125 AED para carimbar o Carnet de Fronteira; todos os outros postos de fronteira entre Omã e os Emirados Árabes Unidos são gratuitos.",
+      "nl": "Let op: de VAE vragen 125 AED voor het afstempelen van het carnet; alle andere grensposten tussen Oman en de VAE zijn gratis.",
+      "pl": "Uwaga: ZEA żądają opłaty 125 AED za podstemplowanie karnetu, na wszystkich innych przejściach granicznych między Omanem i ZEA opłata jest bezpłatna.",
+      "ru": "Примечание: ОАЭ требуют 125 дирхамов ОАЭ за проставление штампа в карнете, на всех остальных пограничных пунктах между Оманом и ОАЭ вход бесплатный."
+    }
   },
   {
     "id": "1otZHxYJ3H4QMm4RnmOO",
@@ -95,6 +196,16 @@
     "location": {
       "_latitude": 30.9681395,
       "_longitude": 61.8212714
+    }
+  },
+  {
+    "id": "2GsgydjaHpd5uOAUcWvT",
+    "is_open": "2",
+    "name": "Bukit Bunga",
+    "countries": "THA-MYS",
+    "location": {
+      "_latitude": 5.8388222,
+      "_longitude": 101.8946038
     }
   },
   {
@@ -118,6 +229,32 @@
     "name": "Ergneti"
   },
   {
+    "id": "3kaRrp6Eky2S3gn46Goq",
+    "is_open": 0,
+    "name": "Aranyaprathet/Poipet",
+    "countries": "THA-KHM",
+    "location": {
+      "_latitude": 13.6614405,
+      "_longitude": 102.5498443
+    },
+    "comment": "Cambodian VOA available here (if border is open).",
+    "updatedAt": {
+      "_seconds": 1765189108,
+      "_nanoseconds": 494000000
+    },
+    "comment_translations": {
+      "en": "Cambodian VOA available here (if border is open).",
+      "fr": "Visa de voyage cambodgien disponible ici (si la frontière est ouverte).",
+      "de": "Kambodschanisches Visum bei Ankunft (VOA) hier erhältlich (sofern die Grenze geöffnet ist).",
+      "it": "VOA cambogiano disponibile qui (se il confine è aperto).",
+      "es": "VOA camboyano disponible aquí (si la frontera está abierta).",
+      "pt": "Visto cambojano disponível aqui (se a fronteira estiver aberta).",
+      "nl": "Cambodjaans visum bij aankomst is hier beschikbaar (indien de grens open is).",
+      "pl": "Kambodżańska VOA dostępna tutaj (jeśli granica jest otwarta).",
+      "ru": "Камбоджийская виза по прибытии доступна здесь (если граница открыта)."
+    }
+  },
+  {
     "id": "42XM8ThVjtU8iy8sAZH4",
     "is_open": 3,
     "countries": "ISR-EGY",
@@ -125,10 +262,22 @@
       "_latitude": 29.4909641,
       "_longitude": 34.90283
     },
-    "comment": "No guarantee you can pass. Sinai has been closed for a long time. \nNote: motorbikes and 4x4 are forbidden in Sinai.",
+    "name": "Taba",
+    "comment": "The border is open to all, but the Sinai is a very sensitive area; you can go to Sharm el Sheikh and St Catherine monastery but that's about it.\nNote: motorbikes and 4x4 are forbidden in Sinai.",
     "updatedAt": {
-      "_seconds": 1764257255,
-      "_nanoseconds": 54000000
+      "_seconds": 1764753368,
+      "_nanoseconds": 424000000
+    },
+    "comment_translations": {
+      "en": "The border is open to all, but the Sinai is a very sensitive area; you can go to Sharm el Sheikh and St Catherine monastery but that's about it.\nNote: motorbikes and 4x4 are forbidden in Sinai.",
+      "fr": "La frontière est ouverte à tous, mais le Sinaï est une zone très sensible ; vous pouvez vous rendre à Charm el-Cheikh et au monastère Sainte-Catherine, mais c'est à peu près tout.\n\nRemarque : les motos et les 4x4 sont interdits dans le Sinaï.",
+      "de": "Die Grenze ist für alle offen, aber der Sinai ist ein sehr sensibles Gebiet. Sie können Sharm el Sheikh und das Katharinenkloster besuchen, aber das ist auch schon alles.\n\nHinweis: Motorräder und Geländewagen sind im Sinai verboten.",
+      "it": "Il confine è aperto a tutti, ma il Sinai è una zona molto sensibile; è possibile recarsi a Sharm el Sheikh e al monastero di Santa Caterina, ma questo è tutto.\nNota: moto e fuoristrada sono vietati nel Sinai.",
+      "es": "La frontera está abierta a todos, pero el Sinaí es una zona muy vulnerable; se puede ir a Sharm el-Sheikh y al monasterio de Santa Catalina, pero eso es todo.\nNota: Las motos y los vehículos 4x4 están prohibidos en el Sinaí.",
+      "pt": "A fronteira está aberta a todos, mas o Sinai é uma área muito sensível; você pode ir a Sharm el Sheikh e ao Mosteiro de Santa Catarina, mas é só isso.\nNota: motocicletas e veículos 4x4 são proibidos no Sinai.",
+      "nl": "De grens is voor iedereen open, maar de Sinaï is een zeer gevoelig gebied; je kunt Sharm el Sheikh en het Sint-Catharinaklooster bezoeken, maar daar houdt het wel zo'n beetje op.\n\nLet op: motorfietsen en 4x4's zijn verboden in de Sinaï.",
+      "pl": "Granica jest otwarta dla wszystkich, ale Synaj to bardzo wrażliwy obszar; można pojechać do Sharm el Sheikh i klasztoru św. Katarzyny, ale to tyle.\nUwaga: na Synaju obowiązuje zakaz jazdy motocyklami i samochodami terenowymi.",
+      "ru": "Граница открыта для всех, но Синай — очень чувствительная зона; вы можете посетить Шарм-эль-Шейх и монастырь Святой Екатерины, но на этом, пожалуй, всё.\nПримечание: мотоциклы и внедорожники на Синае запрещены."
     }
   },
   {
@@ -163,6 +312,11 @@
     "createdAt": {
       "_seconds": 1764172634,
       "_nanoseconds": 418000000
+    },
+    "comment": "Russian eVisa valid.",
+    "updatedAt": {
+      "_seconds": 1768482628,
+      "_nanoseconds": 951000000
     }
   },
   {
@@ -183,7 +337,11 @@
       "_latitude": 36.665452,
       "_longitude": 45.0682256
     },
-    "name": "Haji Omaran"
+    "name": "Tamarchin / Haji Omaran",
+    "updatedAt": {
+      "_seconds": 1767279622,
+      "_nanoseconds": 117000000
+    }
   },
   {
     "id": "4fpi7SjPS9ssU8n0Oakr",
@@ -223,7 +381,11 @@
       "_latitude": 32.53057,
       "_longitude": 36.2006898
     },
-    "name": "Jaber"
+    "name": "Naseem/Jaber",
+    "updatedAt": {
+      "_seconds": 1764703142,
+      "_nanoseconds": 854000000
+    }
   },
   {
     "id": "6DSBFMBXMUgFCs27hh05",
@@ -264,7 +426,18 @@
       "_latitude": 39.6543628,
       "_longitude": 44.7998079
     },
-    "name": "Sadarak/Dilicu"
+    "name": "Sadarak/Dilicu",
+    "comment_translations": {
+      "en": "Gives acces to Nakchivan enclave. Azerbaijan has closed its land borders since COVID.",
+      "fr": "Donne accès à l'enclave de Nakhitchevan. L'Azerbaïdjan a fermé ses frontières terrestres depuis la pandémie de COVID-19.",
+      "de": "Ermöglicht den Zugang zur Exklave Nachitschewan. Aserbaidschan hat seine Landgrenzen seit COVID geschlossen.",
+      "it": "Dà accesso all'enclave di Nakchivan. L'Azerbaigian ha chiuso i suoi confini terrestri a causa del COVID.",
+      "es": "Da acceso al enclave de Nakchivan. Azerbaiyán ha cerrado sus fronteras terrestres desde la pandemia.",
+      "pt": "Dá acesso ao enclave de Nakchivan. O Azerbaijão fechou suas fronteiras terrestres desde a COVID-19.",
+      "nl": "Geeft toegang tot de enclave Nachitsjevan. Azerbeidzjan heeft zijn landsgrenzen sinds COVID gesloten.",
+      "pl": "Umożliwia dostęp do enklawy Nakchiwan. Azerbejdżan zamknął swoje granice lądowe z powodu pandemii COVID.",
+      "ru": "Предоставляет доступ к Накчиванскому анклаву. Азербайджан закрыл свои сухопутные границы после начала пандемии COVID-19."
+    }
   },
   {
     "id": "72Pd0mkXI39Bej71uxA8",
@@ -275,7 +448,18 @@
       "_latitude": 16.6710831,
       "_longitude": 53.0992821
     },
-    "name": "Sarfayt"
+    "name": "Sarfayt",
+    "comment_translations": {
+      "en": "You need a Yemeni visa to get through, which is normally only given to tourists heading to Soccotra.",
+      "fr": "Il vous faut un visa yéménite pour passer, qui n'est normalement délivré qu'aux touristes se rendant à Soccotra.",
+      "de": "Zur Einreise benötigen Sie ein jemenitisches Visum, das normalerweise nur Touristen ausgestellt wird, die nach Sokotra reisen.",
+      "it": "Per entrare è necessario un visto yemenita, che normalmente viene rilasciato solo ai turisti diretti a Soccotra.",
+      "es": "Para pasar se necesita una visa yemení, que normalmente sólo se otorga a los turistas que se dirigen a Soccotra.",
+      "pt": "Você precisa de um visto iemenita para entrar no país, que normalmente só é concedido a turistas que se dirigem a Socotra.",
+      "nl": "Je hebt een Jemenitisch visum nodig om het land binnen te komen, dat normaal gesproken alleen wordt verstrekt aan toeristen die naar Socotra reizen.",
+      "pl": "Aby przejechać przez Jemen, potrzebna jest wiza jemeńska, która jest zazwyczaj wydawana wyłącznie turystom udającym się do Soccotra.",
+      "ru": "Для въезда в Йемен необходима виза, которая обычно выдается только туристам, направляющимся на Соккотру."
+    }
   },
   {
     "id": "7DJGp721SPe26xkuChh5",
@@ -337,14 +521,29 @@
   },
   {
     "id": "8UxeNbLsYqdkkXgmvHDi",
-    "is_open": 4,
+    "is_open": 0,
     "comment": "Single border crossing between Pakistan and India.\nIt's been closed since the 2025 air war between both countries.",
     "countries": "PAK-IND",
     "location": {
       "_latitude": 31.6046353,
       "_longitude": 74.5731088
     },
-    "name": "Wagah - Attari"
+    "name": "Wagah - Attari",
+    "updatedAt": {
+      "_seconds": 1765207940,
+      "_nanoseconds": 473000000
+    },
+    "comment_translations": {
+      "en": "Single border crossing between Pakistan and India.\nIt's been closed since the 2025 air war between both countries.",
+      "fr": "Point de passage frontalier unique entre le Pakistan et l'Inde.\n\nIl est fermé depuis les affrontements aériens de 2025 entre les deux pays.",
+      "de": "Einziger Grenzübergang zwischen Pakistan und Indien.\nDieser ist seit dem geplanten Luftkrieg zwischen den beiden Ländern im Jahr 2025 geschlossen.",
+      "it": "Unico valico di frontiera tra Pakistan e India.\nÈ chiuso dalla guerra aerea tra i due Paesi del 2025.",
+      "es": "Paso fronterizo único entre Pakistán e India. Está cerrado desde la guerra aérea de 2025 entre ambos países.",
+      "pt": "Única passagem de fronteira entre o Paquistão e a Índia.\nEstá fechada desde a guerra aérea de 2025 entre os dois países.",
+      "nl": "De enige grensovergang tussen Pakistan en India.\n\nDeze is gesloten sinds de luchtoorlog tussen beide landen in 2025.",
+      "pl": "Jedyne przejście graniczne między Pakistanem a Indiami.\nJest zamknięte od czasu wojny powietrznej między oboma krajami w 2025 roku.",
+      "ru": "Единственный пограничный переход между Пакистаном и Индией.\nОн закрыт с момента окончания воздушной войны между двумя странами в 2025 году."
+    }
   },
   {
     "id": "9C5Ap0WBJwJ5yQgfk1HK",
@@ -407,6 +606,17 @@
     "updatedAt": {
       "_seconds": 1764010152,
       "_nanoseconds": 22000000
+    },
+    "comment_translations": {
+      "en": "The border has been closed since the skirmishes of 2025.",
+      "fr": "La frontière est fermée depuis les escarmouches de 2025.",
+      "de": "Die Grenze ist seit den Scharmützeln von 2025 geschlossen.",
+      "it": "Il confine è chiuso dopo gli scontri del 2025.",
+      "es": "La frontera está cerrada desde los enfrentamientos de 2025.",
+      "pt": "A fronteira está fechada desde os confrontos de 2025.",
+      "nl": "De grens is sinds de schermutselingen van 2025 gesloten.",
+      "pl": "Granica jest zamknięta od czasu potyczek w 2025 roku.",
+      "ru": "Граница закрыта с момента столкновений 2025 года."
     }
   },
   {
@@ -430,6 +640,28 @@
     }
   },
   {
+    "id": "An700BBHHPBQxsRY0hcJ",
+    "is_open": 2,
+    "name": "Motamasin/Salele",
+    "countries": "IDN-TLS",
+    "location": {
+      "_latitude": -9.4510476,
+      "_longitude": 125.0871901
+    },
+    "comment": "Indonesian eVisa not accepted.",
+    "comment_translations": {
+      "en": "Indonesian eVisa not accepted.",
+      "fr": "Le visa électronique indonésien n'est pas accepté.",
+      "de": "Indonesisches eVisum wird nicht akzeptiert.",
+      "it": "Visto elettronico indonesiano non accettato.",
+      "es": "No se acepta la eVisa de Indonesia.",
+      "pt": "Visto eletrônico indonésio não aceito.",
+      "nl": "Het Indonesische e-visum wordt niet geaccepteerd.",
+      "pl": "Indonezyjska e-wiza nie jest akceptowana.",
+      "ru": "Электронные визы Индонезии не принимаются."
+    }
+  },
+  {
     "id": "AqR3DUxCM1v1Y3QEQN6r",
     "is_open": 2,
     "comment": "It feels like a normal border crossing. Coming from Russia, you need the proper visa (see country info).\nIf you enter Abkhazia here, you must also exit from here, crossing from Russia to Abkhazia to Georgia isn't permitted.",
@@ -442,6 +674,17 @@
     "updatedAt": {
       "_seconds": 1764167347,
       "_nanoseconds": 691000000
+    },
+    "comment_translations": {
+      "en": "It feels like a normal border crossing. Coming from Russia, you need the proper visa (see country info).\nIf you enter Abkhazia here, you must also exit from here, crossing from Russia to Abkhazia to Georgia isn't permitted.",
+      "fr": "Cela ressemble à un passage de frontière classique. En venant de Russie, vous avez besoin du visa approprié (voir les informations par pays).\n\nSi vous entrez en Abkhazie par ce point, vous devez également en sortir ; le passage de la Russie vers l'Abkhazie puis la Géorgie n'est pas autorisé.",
+      "de": "Es fühlt sich an wie ein normaler Grenzübergang. Bei Einreise aus Russland benötigen Sie das entsprechende Visum (siehe Länderinformationen). Wenn Sie hier nach Abchasien einreisen, müssen Sie auch hier wieder ausreisen. Die Einreise von Russland über Abchasien nach Georgien ist nicht gestattet.",
+      "it": "Sembra un normale attraversamento di frontiera. Provenendo dalla Russia, è necessario il visto appropriato (vedi informazioni sul paese).\nSe entri in Abkhazia da qui, devi anche uscirne; attraversare dalla Russia all'Abkhazia e alla Georgia non è consentito.",
+      "es": "Parece un cruce de frontera normal. Si vienes de Rusia, necesitas el visado correspondiente (consulta la información del país).\nSi entras en Abjasia por aquí, también debes salir por aquí. No está permitido cruzar de Rusia a Abjasia y a Georgia.",
+      "pt": "Parece uma travessia de fronteira normal. Vindo da Rússia, você precisa do visto apropriado (veja as informações sobre o país).\nSe você entrar na Abkházia por aqui, também deverá sair por aqui, pois a travessia da Rússia para a Abkházia e depois para a Geórgia não é permitida.",
+      "nl": "Het voelt als een normale grensovergang. Komend vanuit Rusland heb je het juiste visum nodig (zie landinformatie).\n\nAls je Abchazië hier binnenkomt, moet je het ook hier weer verlaten; het is niet toegestaan om van Rusland naar Abchazië en vervolgens naar Georgië te reizen.",
+      "pl": "To jak normalne przekraczanie granicy. Jadąc z Rosji, potrzebujesz odpowiedniej wizy (zobacz informacje o kraju).\nJeśli wjeżdżasz tutaj do Abchazji, musisz również stąd wyjechać. Przejazd z Rosji do Abchazji i Gruzji nie jest dozwolony.",
+      "ru": "Ощущения от прохождения границы обычные. При въезде из России необходима соответствующая виза (см. информацию о стране).\nЕсли вы въезжаете в Абхазию здесь, вы также должны выехать отсюда; пересечение границы из России в Абхазию и далее в Грузию запрещено."
     }
   },
   {
@@ -452,7 +695,12 @@
       "_latitude": 49.6435814,
       "_longitude": 89.4419003
     },
-    "name": "Tashanta/Tsagaannuur"
+    "name": "Tashanta/Tsagaannuur",
+    "comment": "Russian eVisa is valid here.",
+    "updatedAt": {
+      "_seconds": 1768482168,
+      "_nanoseconds": 763000000
+    }
   },
   {
     "id": "C67qpfwoB3CXUVUbPYpi",
@@ -463,6 +711,46 @@
       "_longitude": 44.8343471
     },
     "name": "Bagratashen/Sadakhlo"
+  },
+  {
+    "id": "CccQziRFs8p7RsE0Jcmz",
+    "is_open": 2,
+    "name": "Sultan Abu Bakar/Tuas",
+    "countries": "MYS-SGP",
+    "location": {
+      "_latitude": 1.3780939,
+      "_longitude": 103.5990862
+    }
+  },
+  {
+    "id": "CgEbeDzRufqr4wZwaZey",
+    "is_open": 2,
+    "name": "Sungai Kolok/Rantau Panjang",
+    "countries": "THA-MYS",
+    "location": {
+      "_latitude": 6.0211525,
+      "_longitude": 101.9762501
+    }
+  },
+  {
+    "id": "CpOK2JFdpXpry4BlCs6Z",
+    "is_open": 2,
+    "name": "Korday",
+    "countries": "KGZ-UZB",
+    "location": {
+      "_latitude": 40.57256,
+      "_longitude": 72.76007
+    }
+  },
+  {
+    "id": "CqeLWnDWOCgD7Sgjqr6x",
+    "is_open": 2,
+    "name": "Tebedu/Entikong",
+    "countries": "IDN-MYS",
+    "location": {
+      "_latitude": 0.9879238,
+      "_longitude": 110.3529132
+    }
   },
   {
     "id": "CrdxwhHXv8zzsKAnG3dI",
@@ -503,6 +791,20 @@
     }
   },
   {
+    "id": "DIYThVlvFhIXlSuZqm17",
+    "is_open": 2,
+    "countries": "VNM-CHN",
+    "location": {
+      "_latitude": 21.9747708,
+      "_longitude": 106.7113061
+    },
+    "name": "Huu Nghi/Friendship Gate",
+    "updatedAt": {
+      "_seconds": 1765193861,
+      "_nanoseconds": 426000000
+    }
+  },
+  {
     "id": "DMqrZp9YxmLEjs643SK4",
     "is_open": 1,
     "countries": "RUS-CHN",
@@ -511,6 +813,26 @@
       "_longitude": 134.0232183
     },
     "name": "Pokrovka/Zhaohe"
+  },
+  {
+    "id": "DNlQZ1ODbtVmeDg37fMK",
+    "is_open": 2,
+    "name": "Mukdahan/Savannakhet",
+    "countries": "THA-LAO",
+    "location": {
+      "_latitude": 16.6016708,
+      "_longitude": 104.72631
+    }
+  },
+  {
+    "id": "DiW6oFJDSGh7ue4YzUYg",
+    "is_open": 2,
+    "name": "Chazabeh",
+    "countries": "IRN-IRQ",
+    "location": {
+      "_latitude": 31.8537069,
+      "_longitude": 47.8021389
+    }
   },
   {
     "id": "DrK5OofQhBLTaNDRzd4t",
@@ -543,6 +865,16 @@
     }
   },
   {
+    "id": "EfYnSXCdnXaQDaDxLaf1",
+    "is_open": 2,
+    "countries": "THA-MMR",
+    "location": {
+      "_latitude": 20.4436803,
+      "_longitude": 99.8807897
+    },
+    "name": "Mae Sai/Tachilek"
+  },
+  {
     "id": "EgbujVzgvsQV1ck2nxzD",
     "is_open": 2,
     "name": "Bugristoe / Kayrak",
@@ -567,6 +899,36 @@
     }
   },
   {
+    "id": "Ew2oUH9Or7g4KrStT1CA",
+    "is_open": 2,
+    "name": "Mae Sot/Myawaddy",
+    "countries": "THA-MMR",
+    "location": {
+      "_latitude": 16.7254183,
+      "_longitude": 98.4949374
+    }
+  },
+  {
+    "id": "F3R0T8CJgjwQgfOd5zj7",
+    "is_open": 2,
+    "name": "Sadao/Bukit Kayu Hitam",
+    "countries": "THA-MYS",
+    "location": {
+      "_latitude": 6.5194489,
+      "_longitude": 100.4190222
+    }
+  },
+  {
+    "id": "FGc7AwGswQ1CPpSN5ttD",
+    "is_open": 2,
+    "name": "Betong/Bukit Berapit",
+    "countries": "THA-MYS",
+    "location": {
+      "_latitude": 5.7479521,
+      "_longitude": 101.030565
+    }
+  },
+  {
     "id": "FPHVD1BAmgoOoGpN2rjG",
     "is_open": 2,
     "comment": "On Iraqi side you arrive in Kurdistan. Visa on arrival is not possible, you need to have bought beforehand an e-visa for (federal) Iraq.",
@@ -575,7 +937,18 @@
       "_latitude": 35.6142215,
       "_longitude": 46.016787
     },
-    "name": "Bashmaq"
+    "name": "Bashmaq",
+    "comment_translations": {
+      "en": "On Iraqi side you arrive in Kurdistan. Visa on arrival is not possible, you need to have bought beforehand an e-visa for (federal) Iraq.",
+      "fr": "Du côté irakien, vous arrivez au Kurdistan. Un visa à l'arrivée n'est pas possible ; vous devez avoir acheté au préalable un visa électronique pour l'Irak (fédéral).",
+      "de": "Auf irakischer Seite erreichen Sie Kurdistan. Ein Visum bei Ankunft ist nicht möglich; Sie müssen zuvor ein E-Visum für den (föderalen) Irak erworben haben.",
+      "it": "Dal lato iracheno si arriva in Kurdistan. Non è possibile ottenere il visto all'arrivo, è necessario aver acquistato in anticipo un visto elettronico per l'Iraq (federale).",
+      "es": "Al llegar al Kurdistán iraquí, no es posible obtener una visa a la llegada; es necesario adquirir previamente una visa electrónica para Irak (federal).",
+      "pt": "Do lado iraquiano, você chega ao Curdistão. Não é possível obter visto na chegada; é necessário ter adquirido previamente um visto eletrônico para o Iraque (federal).",
+      "nl": "Aan de Iraakse kant kom je in Koerdistan aan. Een visum bij aankomst is niet mogelijk; je moet vooraf een e-visum voor (federaal) Irak hebben aangevraagd.",
+      "pl": "Po stronie irackiej przylatujesz do Kurdystanu. Wiza po przylocie nie jest możliwa, musisz wcześniej wykupić wizę elektroniczną do (federalnego) Iraku.",
+      "ru": "На иракской стороне вы прибываете в Курдистан. Виза по прибытии невозможна, необходимо заранее приобрести электронную визу в (федеральный) Ирак."
+    }
   },
   {
     "id": "FZ7O1yTaFpAIwOBj00Zi",
@@ -599,6 +972,26 @@
     "createdAt": {
       "_seconds": 1764172634,
       "_nanoseconds": 535000000
+    }
+  },
+  {
+    "id": "FdeTDMAlY8IyAzsBWFQz",
+    "is_open": 2,
+    "name": "Petrapole/Benapole",
+    "countries": "IND-BGD",
+    "location": {
+      "_latitude": 23.0388718,
+      "_longitude": 88.8842795
+    }
+  },
+  {
+    "id": "Flk0fjDHi6kfgi9N5rjj",
+    "is_open": 2,
+    "countries": "BRN-MYS",
+    "name": "Sungai Tujoh",
+    "location": {
+      "_latitude": 4.583552,
+      "_longitude": 114.0746331
     }
   },
   {
@@ -660,6 +1053,38 @@
     "name": "Sheikh Hussein/Jordan River"
   },
   {
+    "id": "HEDiVq2Y5TTl1ulNJgu5",
+    "is_open": 0,
+    "name": "Chong Sa Ngam/Anlong Veng",
+    "countries": "THA-KHM",
+    "location": {
+      "_latitude": 14.3451789,
+      "_longitude": 104.0581437
+    }
+  },
+  {
+    "id": "HRyS0r56CV7HRBiJyCES",
+    "is_open": 2,
+    "name": "Phoudou",
+    "countries": "THA-LAO",
+    "location": {
+      "_latitude": 18.1034689,
+      "_longitude": 101.1598178
+    },
+    "comment": "Lao VOA is not available and eVisa not accepted.",
+    "comment_translations": {
+      "en": "Lao VOA is not available and eVisa not accepted.",
+      "fr": "Le visa à l'arrivée pour le Laos n'est pas disponible et le visa électronique n'est pas accepté.",
+      "de": "Ein laotisches Visum bei Ankunft (VOA) ist nicht verfügbar und ein elektronisches Visum (eVisa) wird nicht akzeptiert.",
+      "it": "Il visto elettronico per il Laos non è disponibile e non è accettato.",
+      "es": "La VOA de Laos no está disponible y no se acepta eVisa.",
+      "pt": "O visto de chegada (VOA) para o Laos não está disponível e o visto eletrônico (eVisa) não é aceito.",
+      "nl": "Een visum bij aankomst in Laos is niet beschikbaar en een e-visum wordt niet geaccepteerd.",
+      "pl": "Usługa Lao VOA jest niedostępna, a eVisa nie jest akceptowana.",
+      "ru": "Визы по прибытии в Лаос не предоставляются, электронные визы не принимаются."
+    }
+  },
+  {
     "id": "HrbZHwtljGrJJrFLUS9m",
     "is_open": 1,
     "name": "Ludonka / Vientuli",
@@ -681,7 +1106,11 @@
       "_latitude": 33.7021842,
       "_longitude": 35.9238448
     },
-    "name": "Masnaa"
+    "name": "Masnaa/Jdeideh",
+    "updatedAt": {
+      "_seconds": 1764703105,
+      "_nanoseconds": 736000000
+    }
   },
   {
     "id": "IB226kMiBA6mUwXbwoRC",
@@ -728,6 +1157,38 @@
     "name": "Kolzhat/Dolat"
   },
   {
+    "id": "IdXMZwUij9ueqv5WkCZE",
+    "is_open": 2,
+    "name": "Nam Phao/Cau Treo",
+    "countries": "LAO-VNM",
+    "location": {
+      "_latitude": 18.3881777,
+      "_longitude": 105.1588253
+    },
+    "comment": "Lao VOA not available and eVisa not accepted.",
+    "comment_translations": {
+      "en": "Lao VOA not available and eVisa not accepted.",
+      "fr": "Le visa à l'arrivée pour le Laos n'est pas disponible et le visa électronique n'est pas accepté.",
+      "de": "Laotische Visa bei Ankunft (VOA) sind nicht verfügbar und elektronische Visa (eVisa) werden nicht akzeptiert.",
+      "it": "Il visto d'ingresso per il Laos non è disponibile e il visto elettronico non è accettato.",
+      "es": "Lao VOA no está disponible y eVisa no se acepta.",
+      "pt": "Visto Laosiano na chegada (VOA) não disponível e visto eletrônico (eVisa) não aceito.",
+      "nl": "Een visum bij aankomst in Laos is niet beschikbaar en een e-visum wordt niet geaccepteerd.",
+      "pl": "Usługa VOA w Laosie jest niedostępna, a e-wiza nie jest akceptowana.",
+      "ru": "Визы по прибытии в Лаос не предоставляются, электронные визы не принимаются."
+    }
+  },
+  {
+    "id": "Ie7cKflU0hcST09yoUzg",
+    "is_open": 2,
+    "name": "Nong Khai/Vientiane",
+    "countries": "THA-LAO",
+    "location": {
+      "_latitude": 17.8646345,
+      "_longitude": 102.7307591
+    }
+  },
+  {
     "id": "IfKChReQMjseN8R3EsHc",
     "is_open": 1,
     "name": "Teploe / Shagan",
@@ -752,6 +1213,16 @@
     "name": "Khaviragiin/Ar-Khunshuut"
   },
   {
+    "id": "JSXsh8Pr5izA5jz4sBqj",
+    "is_open": 2,
+    "name": "Wang Prajan/Wang Kelian",
+    "countries": "THA-MYS",
+    "location": {
+      "_latitude": 6.6962594,
+      "_longitude": 100.1793761
+    }
+  },
+  {
     "id": "JbF9h2iPcOzWjSyBnvtq",
     "is_open": 0,
     "name": "Vyartsilya / Niirala",
@@ -770,6 +1241,16 @@
     }
   },
   {
+    "id": "Jgc7YesrAtPTqiOVzCdg",
+    "is_open": 2,
+    "name": "Padang Besar",
+    "countries": "THA-MYS",
+    "location": {
+      "_latitude": 6.6653385,
+      "_longitude": 100.3268058
+    }
+  },
+  {
     "id": "K8TYxOcH9Ba9pbvZRvnQ",
     "is_open": 2,
     "name": "Medininkai / Kamenny Log",
@@ -777,6 +1258,16 @@
     "location": {
       "_latitude": 54.544123,
       "_longitude": 25.7000408
+    }
+  },
+  {
+    "id": "K9OA4D6N3YFIIUf1F8Hx",
+    "is_open": 2,
+    "name": "Lao Cai/Hekou",
+    "countries": "CHN-VNM",
+    "location": {
+      "_latitude": 22.5067918,
+      "_longitude": 103.9659126
     }
   },
   {
@@ -810,6 +1301,28 @@
     }
   },
   {
+    "id": "LBZ10Yxtgw3cPz9hzja2",
+    "is_open": 2,
+    "name": "Chong Mek/Vang Tao",
+    "countries": "THA-LAO",
+    "location": {
+      "_latitude": 15.1316501,
+      "_longitude": 105.4693732
+    },
+    "comment": "Lao VOA available but eVisa is not accepted.",
+    "comment_translations": {
+      "en": "Lao VOA available but eVisa is not accepted.",
+      "fr": "Le visa à l'arrivée pour le Laos est disponible, mais le visa électronique n'est pas accepté.",
+      "de": "Laotische Visa bei Ankunft (VOA) sind verfügbar, eVisa werden jedoch nicht akzeptiert.",
+      "it": "È disponibile il visto d'ingresso per il Laos, ma non è accettato il visto elettronico.",
+      "es": "Laos VOA está disponible, pero no se acepta eVisa.",
+      "pt": "Visto para o Laos disponível, mas visto eletrônico (eVisa) não aceito.",
+      "nl": "Een visum bij aankomst in Laos is beschikbaar, maar een e-visum wordt niet geaccepteerd.",
+      "pl": "Usługa Lao VOA jest dostępna, ale eVisa nie jest akceptowana.",
+      "ru": "Визы по прибытии в Лаос принимаются, но электронные визы не принимаются."
+    }
+  },
+  {
     "id": "LBg6mGCdbNvapKGjLU9u",
     "is_open": 2,
     "name": "Mamonovo / Gronovo",
@@ -832,7 +1345,18 @@
       "_latitude": 44.8959036,
       "_longitude": 55.9969816
     },
-    "comment": "Closed for renovation. Should re-open in 2026."
+    "comment": "Closed for renovation. Should re-open in 2026.",
+    "comment_translations": {
+      "en": "Closed for renovation. Should re-open in 2026.",
+      "fr": "Fermé pour rénovation. Réouverture prévue en 2026.",
+      "de": "Wegen Renovierungsarbeiten geschlossen. Voraussichtliche Wiedereröffnung im Jahr 2026.",
+      "it": "Chiuso per ristrutturazione. Riapertura prevista nel 2026.",
+      "es": "Cerrado por reformas. Debería reabrir en 2026.",
+      "pt": "Fechado para reforma. Deve reabrir em 2026.",
+      "nl": "Gesloten vanwege renovatie. Naar verwachting heropent het in 2026.",
+      "pl": "Zamknięte z powodu remontu. Powinno zostać ponownie otwarte w 2026 roku.",
+      "ru": "Закрыто на реконструкцию. Ожидается открытие в 2026 году."
+    }
   },
   {
     "id": "LW4ksNtKpaEoQW8d3DDh",
@@ -939,6 +1463,26 @@
     }
   },
   {
+    "id": "NkFV9IJNqmcm54MSuHBY",
+    "is_open": 2,
+    "name": "Prek Chak/Ha Tien",
+    "countries": "VNM-KHM",
+    "location": {
+      "_latitude": 10.4263788,
+      "_longitude": 104.4536647
+    }
+  },
+  {
+    "id": "NqyYJ8IEUrgoTfFhK9hJ",
+    "is_open": 2,
+    "name": "Motaain/Batugade",
+    "countries": "IDN-TLS",
+    "location": {
+      "_latitude": -8.9589752,
+      "_longitude": 124.950624
+    }
+  },
+  {
     "id": "O8MX9FOvNNCOQEJ9yPM6",
     "is_open": 2,
     "countries": "UZB-TKM",
@@ -987,6 +1531,16 @@
       "_longitude": 83.4698147
     },
     "name": "Sonauli"
+  },
+  {
+    "id": "OedEiwEdDEBWkGRCfWyG",
+    "is_open": 2,
+    "countries": "IDN-MYS",
+    "location": {
+      "_latitude": 1.6116537,
+      "_longitude": 109.679578
+    },
+    "name": "Biawak/Aruk"
   },
   {
     "id": "OoUeMg5qQZlp6WN5XItS",
@@ -1053,7 +1607,18 @@
       "_latitude": 30.2329056,
       "_longitude": 81.0285145
     },
-    "name": "Lipulekh"
+    "name": "Lipulekh",
+    "comment_translations": {
+      "en": "Only open for bilateral trade, no tourists allowed, except Indian pilgrims to Kailash, with special permit.",
+      "fr": "Ouvert uniquement aux échanges bilatéraux, aucun touriste n'est autorisé, à l'exception des pèlerins indiens se rendant au Kailash, munis d'un permis spécial.",
+      "de": "Nur für den bilateralen Handel geöffnet, Touristen sind nicht zugelassen, ausgenommen indische Pilger nach Kailash mit Sondergenehmigung.",
+      "it": "Aperto solo per il commercio bilaterale, non sono ammessi turisti, eccetto i pellegrini indiani al Kailash, per i quali è previsto un permesso speciale.",
+      "es": "Abierto únicamente para comercio bilateral, no se permiten turistas, excepto peregrinos indios a Kailash, con un permiso especial.",
+      "pt": "Aberto apenas para comércio bilateral, turistas não são permitidos, exceto peregrinos indianos ao Kailash, com permissão especial.",
+      "nl": "Alleen open voor bilaterale handel, geen toeristen toegestaan, behalve Indiase pelgrims naar Kailash met een speciale vergunning.",
+      "pl": "Otwarte tylko na handel dwustronny, wstęp wzbroniony turystom, z wyjątkiem pielgrzymów z Indii do Kailash, którzy muszą uzyskać specjalne zezwolenie.",
+      "ru": "Открыто только для двусторонней торговли, туристам вход воспрещен, за исключением индийских паломников на Кайлаш, при наличии специального разрешения."
+    }
   },
   {
     "id": "Pclxp29gTCUMF2mdzpOp",
@@ -1108,6 +1673,28 @@
     }
   },
   {
+    "id": "PywjXKPMj0M5mdkLL6bP",
+    "is_open": 2,
+    "name": "Trapaing Sre/Hoa Lur",
+    "countries": "VNM-KHM",
+    "location": {
+      "_latitude": 11.9684548,
+      "_longitude": 106.5427217
+    },
+    "comment": "Vietnam eVisa not accepted.",
+    "comment_translations": {
+      "en": "Vietnam eVisa not accepted.",
+      "fr": "Visa électronique vietnamien non accepté.",
+      "de": "Vietnam eVisum wird nicht akzeptiert.",
+      "it": "Visto elettronico per il Vietnam non accettato.",
+      "es": "No se acepta la eVisa de Vietnam.",
+      "pt": "O visto eletrônico para o Vietnã não é aceito.",
+      "nl": "Het e-visum voor Vietnam wordt niet geaccepteerd.",
+      "pl": "Wietnamska wiza elektroniczna nie jest akceptowana.",
+      "ru": "Электронные визы во Вьетнам не принимаются."
+    }
+  },
+  {
     "id": "Q6pZ09C5JYcXzw42adqP",
     "is_open": 0,
     "comment": "Generally closed, except for local traders and Indian pilgrims to the Kailash Mansarovar Yatra (special permit).\nIndian tourists can drive up to the border, but foreigners can't.",
@@ -1116,7 +1703,18 @@
       "_latitude": 27.3868289,
       "_longitude": 88.8308961
     },
-    "name": "Nathu La"
+    "name": "Nathu La",
+    "comment_translations": {
+      "en": "Generally closed, except for local traders and Indian pilgrims to the Kailash Mansarovar Yatra (special permit).\nIndian tourists can drive up to the border, but foreigners can't.",
+      "fr": "Généralement fermée, sauf pour les commerçants locaux et les pèlerins indiens effectuant le pèlerinage de Kailash Mansarovar (munis d'un permis spécial).\n\nLes touristes indiens peuvent s'approcher de la frontière en voiture, mais pas les étrangers.",
+      "de": "Die Grenze ist in der Regel geschlossen, außer für lokale Händler und indische Pilger der Kailash-Mansarovar-Yatra (mit Sondergenehmigung). Indische Touristen dürfen bis zur Grenze fahren, Ausländer jedoch nicht.",
+      "it": "Generalmente chiuso, fatta eccezione per i commercianti locali e i pellegrini indiani diretti al Kailash Mansarovar Yatra (con permesso speciale).\nI turisti indiani possono arrivare in auto fino al confine, ma gli stranieri no.",
+      "es": "Generalmente cerrado, excepto para comerciantes locales y peregrinos indios que asisten al Kailash Mansarovar Yatra (permiso especial). Los turistas indios pueden conducir hasta la frontera, pero los extranjeros no.",
+      "pt": "Geralmente fechado, exceto para comerciantes locais e peregrinos indianos que participam da Kailash Mansarovar Yatra (com permissão especial).\nTuristas indianos podem dirigir até a fronteira, mas estrangeiros não.",
+      "nl": "Over het algemeen gesloten, behalve voor lokale handelaren en Indiase pelgrims naar de Kailash Mansarovar Yatra (speciale vergunning vereist).\nIndiase toeristen kunnen tot aan de grens rijden, maar buitenlanders niet.",
+      "pl": "Generalnie zamknięte, z wyjątkiem lokalnych handlarzy i indyjskich pielgrzymów do Kailash Mansarovar Yatra (ze specjalnym zezwoleniem).\nTuryści z Indii mogą dojechać do granicy samochodem, ale obcokrajowcy nie.",
+      "ru": "В целом закрыто, за исключением местных торговцев и индийских паломников, совершающих паломничество к Кайлаш-Мансаровару (по специальному разрешению).\nИндийские туристы могут подъехать к границе на автомобиле, а иностранцы — нет."
+    }
   },
   {
     "id": "QR1l83ADhazmritzRotj",
@@ -1126,6 +1724,38 @@
     "location": {
       "_latitude": 37.6299086,
       "_longitude": 58.4058167
+    }
+  },
+  {
+    "id": "Qj9qRmXP0hyigP8og9yP",
+    "is_open": 2,
+    "countries": "IND-BGD",
+    "location": {
+      "_latitude": 24.8719821,
+      "_longitude": 92.2485568
+    },
+    "name": "Sutarkandi/Sheola"
+  },
+  {
+    "id": "Qp43yzgBhsLqVElYkXiA",
+    "is_open": 2,
+    "countries": "THA-LAO",
+    "location": {
+      "_latitude": 19.4730845,
+      "_longitude": 104.0823499
+    },
+    "comment": "Lao VOA not available and eVisa not accepted.",
+    "name": "Nam Can",
+    "comment_translations": {
+      "en": "Lao VOA not available and eVisa not accepted.",
+      "fr": "Le visa à l'arrivée pour le Laos n'est pas disponible et le visa électronique n'est pas accepté.",
+      "de": "Laotische Visa bei Ankunft (VOA) sind nicht verfügbar und elektronische Visa (eVisa) werden nicht akzeptiert.",
+      "it": "Il visto d'ingresso per il Laos non è disponibile e il visto elettronico non è accettato.",
+      "es": "Lao VOA no está disponible y eVisa no se acepta.",
+      "pt": "Visto Laosiano na chegada (VOA) não disponível e visto eletrônico (eVisa) não aceito.",
+      "nl": "Een visum bij aankomst in Laos is niet beschikbaar en een e-visum wordt niet geaccepteerd.",
+      "pl": "Usługa VOA w Laosie jest niedostępna, a e-wiza nie jest akceptowana.",
+      "ru": "Визы по прибытии в Лаос не предоставляются, электронные визы не принимаются."
     }
   },
   {
@@ -1140,6 +1770,32 @@
     "updatedAt": {
       "_seconds": 1764167137,
       "_nanoseconds": 101000000
+    }
+  },
+  {
+    "id": "RHP0lYaZ4JL8vxF5O8iy",
+    "is_open": 2,
+    "countries": "VNM-KHM",
+    "name": "Bavet/Moc Bai",
+    "location": {
+      "_latitude": 11.0759503,
+      "_longitude": 106.1715268
+    },
+    "comment": "Cambodia VOA available, eVisa accepted.",
+    "updatedAt": {
+      "_seconds": 1765188670,
+      "_nanoseconds": 539000000
+    },
+    "comment_translations": {
+      "en": "Cambodia VOA available, eVisa accepted.",
+      "fr": "VOA cambodgien disponible, visa électronique accepté.",
+      "de": "Kambodschanisches Visum bei Ankunft erhältlich, e-Visum akzeptiert.",
+      "it": "Cambogia: disponibile il visto d'ingresso, eVisa accettato.",
+      "es": "VOA de Camboya disponible, se acepta eVisa.",
+      "pt": "Visto para Camboja disponível, visto eletrônico aceito.",
+      "nl": "Visum bij aankomst in Cambodja beschikbaar, e-visum wordt geaccepteerd.",
+      "pl": "Dostępna usługa VOA dla Kambodży, akceptowana jest wiza elektroniczna.",
+      "ru": "Виза по прибытии в Камбоджу доступна, электронная виза принимается."
     }
   },
   {
@@ -1186,6 +1842,16 @@
     "name": "Norduz"
   },
   {
+    "id": "RncggZSryCLVG42aoucy",
+    "is_open": 2,
+    "name": "Mong Cai/Dongxing",
+    "countries": "VNM-CHN",
+    "location": {
+      "_latitude": 21.5378694,
+      "_longitude": 107.968127
+    }
+  },
+  {
     "id": "SE56D1N3m9fEODXuat0z",
     "is_open": 1,
     "countries": "RUS-MNG",
@@ -1204,7 +1870,18 @@
       "_latitude": 30.1532053,
       "_longitude": 81.3329027
     },
-    "name": "Purang"
+    "name": "Purang",
+    "comment_translations": {
+      "en": "Open for bilateral trade, but also for Indian pilgrims doing the Kailash Mansarovar Yatra, with special permits needed.",
+      "fr": "Ouvert au commerce bilatéral, mais aussi aux pèlerins indiens effectuant le Kailash Mansarovar Yatra, moyennant des permis spéciaux.",
+      "de": "Offen für den bilateralen Handel, aber auch für indische Pilger, die die Kailash Mansarovar Yatra unternehmen, wofür spezielle Genehmigungen erforderlich sind.",
+      "it": "Aperto al commercio bilaterale, ma anche ai pellegrini indiani che partecipano al Kailash Mansarovar Yatra, per i quali sono necessari permessi speciali.",
+      "es": "Abierto al comercio bilateral, pero también para peregrinos indios que realizan el Kailash Mansarovar Yatra, con permisos especiales necesarios.",
+      "pt": "Aberto ao comércio bilateral, mas também para peregrinos indianos que realizam a Kailash Mansarovar Yatra, mediante a necessidade de autorizações especiais.",
+      "nl": "Open voor bilaterale handel, maar ook voor Indiase pelgrims die de Kailash Mansarovar Yatra maken, waarvoor speciale vergunningen nodig zijn.",
+      "pl": "Otwarte na handel dwustronny, ale także dla indyjskich pielgrzymów odbywających trasę Kailash Mansarovar Yatra, ale wymagane są specjalne zezwolenia.",
+      "ru": "Открыто для двусторонней торговли, а также для индийских паломников, совершающих паломничество к Кайлаш-Мансаровару, при необходимости получения специальных разрешений."
+    }
   },
   {
     "id": "SizKPFyAawVAOKZCBWI3",
@@ -1284,7 +1961,54 @@
       "_latitude": 36.8503858,
       "_longitude": 75.4283294
     },
-    "name": "Khunjerab Pass"
+    "name": "Khunjerab Pass",
+    "comment_translations": {
+      "en": "Note to cyclists: it's forbidden to ride between Sost and Tashkurgan; you need to take a bus instead, and put the bike on the bus. Motorcycles and cars are OK.\nYou need to to pay 30$ pp on Pakistani side for the entrance into Khunjerab National Park.",
+      "fr": "Avis aux cyclistes : il est interdit de circuler à vélo entre Sost et Tashkurgan ; vous devez prendre le bus et y placer votre vélo. Les motos et les voitures sont autorisées.\n\nL’entrée au parc national de Khunjerab coûte 30 $ par personne côté pakistanais.",
+      "de": "Hinweis für Radfahrer: Die Strecke zwischen Sost und Tashkurgan ist mit dem Fahrrad verboten. Bitte benutzen Sie stattdessen den Bus und transportieren Sie Ihr Fahrrad dort. Motorräder und Autos sind erlaubt.\nDer Eintritt in den Khunjerab-Nationalpark kostet 30 US-Dollar pro Person auf pakistanischer Seite.",
+      "it": "Nota per i ciclisti: è vietato pedalare tra Sost e Tashkurgan; è necessario prendere un autobus e caricare la bicicletta. Motociclette e auto sono ammesse.\nÈ necessario pagare 30$ a persona sul lato pakistano per l'ingresso al Parco Nazionale di Khunjerab.",
+      "es": "Nota para ciclistas: está prohibido circular entre Sost y Tashkurgan; es necesario tomar un autobús y subir la bicicleta. Se permiten motocicletas y coches.\nLa entrada al Parque Nacional Khunjerab cuesta 30 $ por persona en el lado pakistaní.",
+      "pt": "Atenção ciclistas: é proibido andar de bicicleta entre Sost e Tashkurgan; você precisa pegar um ônibus e levar a bicicleta a bordo. Motocicletas e carros são permitidos.\nVocê precisa pagar US$ 30 por pessoa no lado paquistanês para entrar no Parque Nacional de Khunjerab.",
+      "nl": "Let op voor fietsers: het is verboden om tussen Sost en Tashkurgan te fietsen; neem in plaats daarvan de bus en vervoer de fiets in de bus. Motorfietsen en auto's zijn wel toegestaan.\n\nAan de Pakistaanse kant moet je 30 dollar per persoon betalen voor de toegang tot het Khunjerab Nationaal Park.",
+      "pl": "Uwaga dla rowerzystów: jazda między Sost a Tashkurgan jest zabroniona; zamiast tego należy wsiąść do autobusu i umieścić rower w autobusie. Motocykle i samochody są dozwolone.\nPo stronie pakistańskiej za wjazd do Parku Narodowego Khunjerab należy uiścić opłatę 30 USD od osoby.",
+      "ru": "Примечание для велосипедистов: езда на велосипеде между Состом и Ташкурганом запрещена; вместо этого необходимо доехать на автобусе и перевезти велосипед в автобусе. Мотоциклы и автомобили разрешены.\nЗа въезд в национальный парк Хунджераб с пакистанской стороны необходимо заплатить 30 долларов с человека."
+    }
+  },
+  {
+    "id": "TcLBOln9SdLIwNetiJkr",
+    "is_open": 1,
+    "name": "Mengkang/Lanetoui",
+    "countries": "CHN-LAO",
+    "location": {
+      "_latitude": 22.4794025,
+      "_longitude": 101.7151593
+    }
+  },
+  {
+    "id": "TuNquqeB5XLGOGWra6Rk",
+    "is_open": 2,
+    "name": "Nong Nok Khiene/Tropaeng Kreal",
+    "countries": "LAO-KHM",
+    "location": {
+      "_latitude": 13.9232755,
+      "_longitude": 106.0298901
+    },
+    "comment": "Lao VOA available, but eVisa is not accepted.\nCambodian VOA available and eVisa accepted.",
+    "updatedAt": {
+      "_seconds": 1765190116,
+      "_nanoseconds": 388000000
+    },
+    "comment_translations": {
+      "en": "Lao VOA available, but eVisa is not accepted.\nCambodian VOA available and eVisa accepted.",
+      "fr": "Le visa à l'arrivée pour le Laos est disponible, mais le visa électronique n'est pas accepté.\n\nLe visa à l'arrivée pour le Cambodge est disponible et le visa électronique est accepté.",
+      "de": "Laotisches Visum bei Ankunft (VOA) erhältlich, e-Visum wird jedoch nicht akzeptiert. Kambodschanisches Visum bei Ankunft (VOA) erhältlich, e-Visum wird akzeptiert.",
+      "it": "Disponibile il visto d'ingresso per il Laos, ma non è accettato il visto elettronico.\nDisponibile il visto d'ingresso per la Cambogia e il visto elettronico accettato.",
+      "es": "VOA de Laos disponible, pero no se acepta visa electrónica. VOA de Camboya disponible, pero se acepta visa electrónica.",
+      "pt": "Visto de chegada (VOA) para o Laos disponível, mas visto eletrônico (eVisa) não aceito.\nVoto de chegada (VOA) para o Camboja disponível e visto eletrônico (eVisa) aceito.",
+      "nl": "Visum bij aankomst in Laos beschikbaar, maar e-visum wordt niet geaccepteerd.\n\nVisum bij aankomst in Cambodja beschikbaar en e-visum wordt geaccepteerd.",
+      "pl": "Dostępna jest VOA dla Laosu, ale e-wiza nie jest akceptowana.\nDostępna jest VOA dla Kambodży i akceptowane są e-wizy.",
+      "ru": "Лаосская виза по прибытии (VOA) принимается, но электронная виза не принимается.\nКамбоджийская виза по прибытии (VOA) принимается, а электронная виза — нет."
+    }
   },
   {
     "id": "UK4JsG7P7t1QaRXwcFCH",
@@ -1305,7 +2029,18 @@
       "_latitude": 55.8200478,
       "_longitude": 27.625134
     },
-    "comment": "Mandatory reservation: https://lvrobeza.lv/en/reserve/"
+    "comment": "Mandatory reservation: https://lvrobeza.lv/en/reserve/",
+    "comment_translations": {
+      "en": "Mandatory reservation: https://lvrobeza.lv/en/reserve/",
+      "fr": "Réservation obligatoire : https://lvrobeza.lv/en/reserve/",
+      "de": "Reservierung erforderlich: https://lvrobeza.lv/en/reserve/",
+      "it": "Prenotazione obbligatoria: https://lvrobeza.lv/en/reserve/",
+      "es": "Reserva obligatoria: https://lvrobeza.lv/en/reserve/",
+      "pt": "Reserva obrigatória: https://lvrobeza.lv/en/reserve/",
+      "nl": "Reserveren is verplicht: https://lvrobeza.lv/en/reserve/",
+      "pl": "Obowiązkowa rezerwacja: https://lvrobeza.lv/en/reserve/",
+      "ru": "Обязательное бронирование: https://lvrobeza.lv/en/reserve/"
+    }
   },
   {
     "id": "Ue15AAMOxHyDqcmlLaHi",
@@ -1370,7 +2105,32 @@
       "_latitude": 28.2785926,
       "_longitude": 85.3780088
     },
-    "name": "Rasuwagadhi-Gyirong"
+    "name": "Rasuwagadhi/Gyirong",
+    "comment_translations": {
+      "en": "Temporary closed in 2025 when the road was destroyed. Meanwhile the Kodari border post has been reactivated.\nAfter it's fixed, it will again be the only crossing between Tibet and Nepal for tourists.",
+      "fr": "Fermé temporairement en 2025 suite à la destruction de la route, le poste frontière de Kodari a depuis rouvert ses portes.\n\nUne fois les travaux de réparation terminés, il redeviendra le seul point de passage touristique entre le Tibet et le Népal.",
+      "de": "Der Grenzübergang wurde 2025 aufgrund der Zerstörung der Straße vorübergehend geschlossen. Inzwischen ist der Grenzübergang Kodari wieder in Betrieb. Nach der Instandsetzung wird er wieder der einzige Grenzübergang zwischen Tibet und Nepal für Touristen sein.",
+      "it": "Chiuso temporaneamente nel 2025, quando la strada fu distrutta. Nel frattempo, il valico di frontiera di Kodari è stato riattivato.\nUna volta riparato, tornerà ad essere l'unico valico tra Tibet e Nepal per i turisti.",
+      "es": "Cerrado temporalmente en 2025 cuando la carretera fue destruida. Mientras tanto, el puesto fronterizo de Kodari ha sido reactivado.\nTras su reparación, volverá a ser el único cruce entre el Tíbet y Nepal para turistas.",
+      "pt": "Fechado temporariamente em 2025, quando a estrada foi destruída. Entretanto, o posto fronteiriço de Kodari foi reativado.\nApós ser consertado, voltará a ser a única passagem entre o Tibete e o Nepal para turistas.",
+      "nl": "De grenspost Kodari werd in 2025 tijdelijk gesloten vanwege wegverwoesting. Inmiddels is de grenspost Kodari weer in gebruik genomen.\n\nNa de reparatie zal het opnieuw de enige grensovergang tussen Tibet en Nepal voor toeristen zijn.",
+      "pl": "Tymczasowo zamknięta w 2025 roku, kiedy droga została zniszczona. W międzyczasie ponownie uruchomiono posterunek graniczny w Kodari.\nPo naprawie ponownie będzie to jedyne przejście graniczne między Tybetem a Nepalem dla turystów.",
+      "ru": "Временно закрыт в 2025 году из-за разрушения дороги. Тем временем пограничный пункт Кодари был вновь введен в эксплуатацию.\nПосле его ремонта он снова станет единственным пунктом пересечения границы между Тибетом и Непалом для туристов."
+    }
+  },
+  {
+    "id": "VQZBmeuwgTuwX2suFrYb",
+    "is_open": 2,
+    "countries": "VNM-KHM",
+    "location": {
+      "_latitude": 11.6678998,
+      "_longitude": 105.9812093
+    },
+    "name": "Xa Mat/Trapeang Plong",
+    "updatedAt": {
+      "_seconds": 1765188057,
+      "_nanoseconds": 60000000
+    }
   },
   {
     "id": "VeKhuAJDNHIdK18KjDDs",
@@ -1397,6 +2157,28 @@
     "name": "Oybek / Fotehobod"
   },
   {
+    "id": "VtKRctYlIxloOh1g36kD",
+    "is_open": 2,
+    "name": "Diama",
+    "countries": "MRT-SEN",
+    "location": {
+      "_latitude": 16.2136813,
+      "_longitude": -16.4151308
+    },
+    "comment": "The road is difficult during the rains, avoid.\nThere's a toll to cross the bridge: 4000 CFA (motorbike), 10000CFA (car) or 20000 (truck).\nEntering Senegal:\nPasse-avant is valid for 48h, sometimes 5 days (5000-6000 CFA); do not pay more !\nWith a CdP, you have to get it stamped in Dakar within 48 hours.\nCarte brune insurance available here. It's cheaper in St-Louis, but you risk being pulled over and fined while driving there.\nEntering Mauritania (everything to be paid in cash) :\n100 MRU community tax\n200 MRU/pp for the national park\n55€ for the eVisa\nInsurance available at the border.",
+    "comment_translations": {
+      "en": "The road is difficult during the rains, avoid.\nThere's a toll to cross the bridge: 4000 CFA (motorbike), 10000CFA (car) or 20000 (truck).\nEntering Senegal:\nPasse-avant is valid for 48h, sometimes 5 days (5000-6000 CFA); do not pay more !\nWith a CdP, you have to get it stamped in Dakar within 48 hours.\nCarte brune insurance available here. It's cheaper in St-Louis, but you risk being pulled over and fined while driving there.\nEntering Mauritania (everything to be paid in cash) :\n100 MRU community tax\n200 MRU/pp for the national park\n55€ for the eVisa\nInsurance available at the border.",
+      "fr": "La route est difficile pendant la saison des pluies, à éviter.\n\nLe passage du pont est payant : 4 000 CFA (moto), 10 000 CFA (voiture) ou 20 000 CFA (camion).\n\nEntrée au Sénégal :\n\nLe laissez-passer est valable 48 h, parfois 5 jours (5 000 à 6 000 CFA) ; ne payez pas plus !\n\nAvec un CDP, vous devez le faire tamponner à Dakar dans les 48 heures.\n\nL’assurance « carte brune » est disponible ici. Elle est moins chère à Saint-Louis, mais vous risquez d’être contrôlé et verbalisé.\n\nEntrée en Mauritanie (tout est à payer en espèces) :\n\n100 MRU de taxe communautaire\n200 MRU/personne pour le parc national\n55 € pour le visa électronique\nAssurance disponible à la frontière.",
+      "de": "Die Straße ist bei Regen schwer befahrbar, meiden Sie sie.\nFür die Brückenüberquerung wird eine Mautgebühr erhoben: 4000 CFA (Motorrad), 10000 CFA (Pkw) oder 20000 CFA (Lkw).\nEinreise nach Senegal: Der Passe-avant ist 48 Stunden, manchmal 5 Tage gültig (5000–6000 CFA); zahlen Sie nicht mehr!\nMit einem CdP (Certificate de Passeau) müssen Sie diesen innerhalb von 48 Stunden in Dakar abstempeln lassen.\nEine Kfz-Versicherung (Carte Brune) ist hier erhältlich. In St. Louis ist sie günstiger, aber dort riskieren Sie, angehalten und mit einem Bußgeld belegt zu werden.\nEinreise nach Mauretanien (alles bar zu bezahlen):\n100 MRU Gemeinschaftssteuer\n200 MRU pro Person für den Nationalpark\n55 € für das e-Visum\nVersicherung an der Grenze erhältlich.",
+      "it": "La strada è difficile durante le piogge, evitatela.\nC'è un pedaggio per attraversare il ponte: 4000 CFA (moto), 10000 CFA (auto) o 20000 (camion).\nIngresso in Senegal:\nIl Passe-avant è valido per 48 ore, a volte 5 giorni (5000-6000 CFA); non pagate di più!\nCon un Passe-avant, dovete farlo timbrare a Dakar entro 48 ore.\nL'assicurazione Carte Brune è disponibile qui. È più economica a St. Louis, ma rischiate di essere fermati e multati mentre guidate lì.\nIngresso in Mauritania (tutto da pagare in contanti):\n100 MRU di tassa comunitaria\n200 MRU/persona per il parco nazionale\n55 € per il visto elettronico\nAssicurazione disponibile alla frontiera.",
+      "es": "El camino es difícil cuando llueve, así que evítelo.\nHay un peaje para cruzar el puente: 4000 CFA (moto), 10000 CFA (coche) o 20000 CFA (camión).\nEntrada a Senegal:\nEl pase de avante es válido por 48 horas, a veces por 5 días (5000-6000 CFA); ¡no pague más!\nCon un CdP, debe sellarlo en Dakar en un plazo de 48 horas.\nHay seguro de tarjeta brune disponible aquí. Es más barato en Saint-Louis, pero corre el riesgo de ser detenido y multado conduciendo allí.\nEntrada a Mauritania (todo a pagar en efectivo):\n100 MRU de impuesto comunitario\n200 MRU/persona para el parque nacional\n55 € para la visa electrónica\nSeguro disponible en la frontera.",
+      "pt": "A estrada fica difícil durante as chuvas, evite.\nHá um pedágio para atravessar a ponte: 4000 CFA (motocicleta), 10000 CFA (carro) ou 20000 CFA (caminhão).\nEntrando no Senegal:\nO Passe-avant é válido por 48 horas, às vezes 5 dias (5000-6000 CFA); não pague mais!\n\nCom um CDP, você precisa carimbá-lo em Dakar em até 48 horas.\nSeguro Carte Brune disponível aqui. É mais barato em St-Louis, mas você corre o risco de ser parado e multado enquanto dirige lá.\nEntrando na Mauritânia (tudo a ser pago em dinheiro):\n100 MRU de taxa comunitária\n200 MRU/pessoa para o parque nacional\n55€ para o eVisa\nSeguro disponível na fronteira.",
+      "nl": "De weg is moeilijk begaanbaar tijdens regenachtig weer, vermijd deze route.\n\nEr is tol voor de brug: 4000 CFA (motor), 10000 CFA (auto) of 20000 CFA (vrachtwagen).\n\nSenegal binnenrijden:\nEen Passe-avant is 48 uur geldig, soms 5 dagen (5000-6000 CFA); betaal niet meer!\n\nMet een CdP moet je deze binnen 48 uur in Dakar laten afstempelen.\n\nEen Carte Bruné-verzekering is hier verkrijgbaar. In Saint-Louis is het goedkoper, maar je loopt het risico aangehouden te worden en een boete te krijgen.\n\nMauritanië binnenrijden (alles contant te betalen):\n100 MRU gemeentebelasting\n200 MRU per persoon voor het nationale park\n55 € voor het e-visum\nVerzekering verkrijgbaar aan de grens.",
+      "pl": "Droga jest trudna w czasie deszczu, należy jej unikać.\nPrzejazd przez most jest płatny: 4000 CFA (motocykl), 10000 CFA (samochód) lub 20000 (ciężarówka).\nWjazd do Senegalu:\nPasse-avant jest ważny przez 48 godzin, czasami 5 dni (5000-6000 CFA); nie płać więcej!\nZ kartą CdP musisz uzyskać pieczątkę w Dakarze w ciągu 48 godzin.\nUbezpieczenie Carte brune dostępne tutaj. Jest tańsze w St. Louis, ale ryzykujesz zatrzymanie i mandat podczas jazdy.\nWjazd do Mauretanii (płatność gotówką):\n100 MRU podatku lokalnego\n200 MRU/os. za wstęp do parku narodowego\n55 EUR za e-wizę\nUbezpieczenie dostępne na granicy.",
+      "ru": "Дорога в дождливую погоду труднопроходима, избегайте её.\nЗа проезд по мосту взимается плата: 4000 CFA (мотоцикл), 10000 CFA (легковой автомобиль) или 20000 CFA (грузовик).\nВъезд в Сенегал:\nPasse-avant действителен в течение 48 часов, иногда 5 дней (5000-6000 CFA); не платите больше!\nС CdP необходимо получить штамп в Дакаре в течение 48 часов.\nЗдесь можно оформить страховку Carte brune. В Сен-Луи она дешевле, но есть риск быть остановленным и оштрафованным за рулём.\nВъезд в Мавританию (все оплачивается наличными):\n100 MRU муниципальный налог\n200 MRU с человека за посещение национального парка\n55€ за электронную визу\nСтраховка доступна на границе."
+    }
+  },
+  {
     "id": "VuQmmQMRHxIzG7z2VEeP",
     "is_open": 1,
     "countries": "RUS-CHN",
@@ -1417,6 +2199,32 @@
     "name": "Mudayrah"
   },
   {
+    "id": "WCK2OS7Wv0S4uKLtSOBi",
+    "is_open": 2,
+    "name": "Bu Prang/Dak Dam",
+    "countries": "VNM-KHM",
+    "location": {
+      "_latitude": 12.3352202,
+      "_longitude": 107.3147594
+    },
+    "comment": "Vietnam eVisa not accepted.",
+    "updatedAt": {
+      "_seconds": 1765195517,
+      "_nanoseconds": 10000000
+    },
+    "comment_translations": {
+      "en": "Vietnam eVisa not accepted.",
+      "fr": "Visa électronique vietnamien non accepté.",
+      "de": "Vietnam eVisum wird nicht akzeptiert.",
+      "it": "Visto elettronico per il Vietnam non accettato.",
+      "es": "No se acepta la eVisa de Vietnam.",
+      "pt": "O visto eletrônico para o Vietnã não é aceito.",
+      "nl": "Het e-visum voor Vietnam wordt niet geaccepteerd.",
+      "pl": "Wietnamska wiza elektroniczna nie jest akceptowana.",
+      "ru": "Электронные визы во Вьетнам не принимаются."
+    }
+  },
+  {
     "id": "WMu80EhfVrssmJR3kCKc",
     "is_open": 2,
     "name": "Kunichina Gora / Koydula",
@@ -1428,6 +2236,11 @@
     "createdAt": {
       "_seconds": 1764172634,
       "_nanoseconds": 351000000
+    },
+    "comment": "Russian eVisa valid.",
+    "updatedAt": {
+      "_seconds": 1768482642,
+      "_nanoseconds": 843000000
     }
   },
   {
@@ -1484,8 +2297,23 @@
       "_seconds": 1764258327,
       "_nanoseconds": 839000000
     },
-    "comment": "Mandatory reservation: https://lvrobeza.lv/en/reserve/",
-    "name": "Ubylinka / Grebneva"
+    "name": "Ubylinka / Grebneva",
+    "comment_translations": {
+      "en": "Mandatory reservation: https://lvrobeza.lv/en/reserve/",
+      "fr": "Réservation obligatoire : https://lvrobeza.lv/en/reserve/",
+      "de": "Reservierung erforderlich: https://lvrobeza.lv/en/reserve/",
+      "it": "Prenotazione obbligatoria: https://lvrobeza.lv/en/reserve/",
+      "es": "Reserva obligatoria: https://lvrobeza.lv/en/reserve/",
+      "pt": "Reserva obrigatória: https://lvrobeza.lv/en/reserve/",
+      "nl": "Reserveren is verplicht: https://lvrobeza.lv/en/reserve/",
+      "pl": "Obowiązkowa rezerwacja: https://lvrobeza.lv/en/reserve/",
+      "ru": "Обязательное бронирование: https://lvrobeza.lv/en/reserve/"
+    },
+    "comment": "Russian eVisa valid.",
+    "updatedAt": {
+      "_seconds": 1768482564,
+      "_nanoseconds": 29000000
+    }
   },
   {
     "id": "XLvWFTaEexJOnMuYjt2j",
@@ -1508,6 +2336,28 @@
     "name": "Dibba"
   },
   {
+    "id": "Y8fSPxePRvvoFdWvTKvM",
+    "is_open": 2,
+    "name": "Namheuang/Ban Na Kraseng",
+    "countries": "THA-LAO",
+    "location": {
+      "_latitude": 17.6921808,
+      "_longitude": 101.3955455
+    },
+    "comment": "Lao VOA is available but eVisa is not accepted.",
+    "comment_translations": {
+      "en": "Lao VOA is available but eVisa is not accepted.",
+      "fr": "Le visa à l'arrivée pour le Laos est disponible, mais le visa électronique n'est pas accepté.",
+      "de": "Ein laotisches Visum bei Ankunft (VOA) ist erhältlich, ein elektronisches Visum (eVisa) wird jedoch nicht akzeptiert.",
+      "it": "È disponibile il visto elettronico per il Laos, ma non è accettato.",
+      "es": "La VOA de Laos está disponible, pero no se acepta eVisa.",
+      "pt": "O visto de chegada (VOA) para o Laos está disponível, mas o visto eletrônico (eVisa) não é aceito.",
+      "nl": "Een visum bij aankomst in Laos is beschikbaar, maar een e-visum wordt niet geaccepteerd.",
+      "pl": "Usługa Lao VOA jest dostępna, ale eVisa nie jest akceptowana.",
+      "ru": "Визы по прибытии в Лаос принимаются, но электронные визы не принимаются."
+    }
+  },
+  {
     "id": "YLK5aGk81d37JsoRjIiK",
     "is_open": 2,
     "countries": "IRN-IRQ",
@@ -1515,7 +2365,11 @@
       "_latitude": 34.5565427,
       "_longitude": 45.5912218
     },
-    "name": "Parwezkhan"
+    "name": "Parviz Khan",
+    "updatedAt": {
+      "_seconds": 1767279650,
+      "_nanoseconds": 33000000
+    }
   },
   {
     "id": "YSv6TOAkl7ZxGlfX5Qaq",
@@ -1633,9 +2487,10 @@
       "_longitude": 39.0071786
     },
     "name": "Ruwaished / Turaibil",
+    "comment": "You'll have to be escorted on Iraqi side, sometimes all the way between the border and Baghdad, sometimes just a few km from the border.",
     "updatedAt": {
-      "_seconds": 1764256891,
-      "_nanoseconds": 411000000
+      "_seconds": 1766353224,
+      "_nanoseconds": 685000000
     }
   },
   {
@@ -1667,7 +2522,18 @@
       "_latitude": 42.5761528,
       "_longitude": 41.8635247
     },
-    "name": "Inguri"
+    "name": "Inguri",
+    "comment_translations": {
+      "en": "It used to be possible to cross from Georgia to Abkhazia with the right Abkhazia visa, but it seems nobody has been able to cross for a long time.\nComing from Georgia, you're supposed to return to Georgia using the same crossing after your visit to Abkhazia (not continue into Russia).",
+      "fr": "Auparavant, il était possible de traverser la frontière entre la Géorgie et l'Abkhazie avec un visa abkhaze valide, mais il semble que ce ne soit plus possible depuis longtemps.\n\nEn venant de Géorgie, vous devez retourner en Géorgie par le même point de passage après votre visite en Abkhazie (et non poursuivre votre voyage vers la Russie).",
+      "de": "Früher war es mit dem entsprechenden Visum für Abchasien möglich, von Georgien nach Abchasien einzureisen, doch anscheinend gelingt dies seit Langem niemandem mehr. Bei der Einreise aus Georgien muss man nach dem Besuch Abchasiens denselben Grenzübergang für die Rückreise nach Georgien nutzen (und darf nicht weiter nach Russland einreisen).",
+      "it": "Un tempo era possibile attraversare il confine dalla Georgia all'Abkhazia con il visto abkhazo appropriato, ma a quanto pare nessuno è più riuscito ad attraversare il confine da molto tempo.\nProvenendo dalla Georgia, si dovrebbe tornare in Georgia attraverso lo stesso valico dopo la visita in Abkhazia (non proseguire verso la Russia).",
+      "es": "Antes era posible cruzar de Georgia a Abjasia con el visado correspondiente, pero parece que nadie ha podido hacerlo desde hace mucho tiempo.\nSi vienes de Georgia, debes regresar a Georgia por el mismo cruce después de tu visita a Abjasia (no continuar hacia Rusia).",
+      "pt": "Antes era possível atravessar da Geórgia para a Abcásia com o visto correto para a Abcásia, mas parece que ninguém consegue fazer essa travessia há muito tempo.\nVindo da Geórgia, você deve retornar à Geórgia usando a mesma passagem de fronteira após sua visita à Abcásia (e não continuar para a Rússia).",
+      "nl": "Vroeger was het mogelijk om met het juiste Abchazië-visum van Georgië naar Abchazië te reizen, maar het lijkt erop dat niemand dat al lange tijd meer lukt.\n\nAls je vanuit Georgië komt, moet je na je bezoek aan Abchazië via dezelfde grensovergang terugkeren naar Georgië (en niet doorreizen naar Rusland).",
+      "pl": "Kiedyś można było przekroczyć granicę z Gruzji do Abchazji z odpowiednią wizą abchaską, ale wygląda na to, że od dawna nikomu się to nie udaje.\nJadąc z Gruzji, należy wrócić do Gruzji tym samym przejściem granicznym po wizycie w Abchazji (a nie kontynuować podróży do Rosji).",
+      "ru": "Раньше можно было пересечь границу из Грузии в Абхазию при наличии соответствующей абхазской визы, но, похоже, уже давно это не удаётся.\nЕсли вы приехали из Грузии, то после посещения Абхазии вам нужно вернуться в Грузию через тот же пограничный переход (а не продолжать путь в Россию)."
+    }
   },
   {
     "id": "a5XtXZDzjKNYz0VQW1sj",
@@ -1678,7 +2544,62 @@
       "_latitude": 47.9614125,
       "_longitude": 132.6691294
     },
-    "name": "Nizhneleninskoye/Tongjiang"
+    "name": "Nizhneleninskoye/Tongjiang",
+    "comment_translations": {
+      "en": "Ferry terminal.",
+      "fr": "Terminal de ferry.",
+      "de": "Fährterminal.",
+      "it": "Terminal dei traghetti.",
+      "es": "Terminal de ferry.",
+      "pt": "Terminal de balsas.",
+      "nl": "Veerterminal.",
+      "pl": "Terminal promowy.",
+      "ru": "Паромный терминал."
+    }
+  },
+  {
+    "id": "a9jcsj8492Bma0p8TupG",
+    "is_open": 2,
+    "name": "La Lay",
+    "countries": "LAO-VNM",
+    "location": {
+      "_latitude": 16.3132451,
+      "_longitude": 106.9668996
+    },
+    "comment": "Lao VOA not available and eVisa not accepted.",
+    "comment_translations": {
+      "en": "Lao VOA not available and eVisa not accepted.",
+      "fr": "Le visa à l'arrivée pour le Laos n'est pas disponible et le visa électronique n'est pas accepté.",
+      "de": "Laotische Visa bei Ankunft (VOA) sind nicht verfügbar und elektronische Visa (eVisa) werden nicht akzeptiert.",
+      "it": "Il visto d'ingresso per il Laos non è disponibile e il visto elettronico non è accettato.",
+      "es": "Lao VOA no está disponible y eVisa no se acepta.",
+      "pt": "Visto Laosiano na chegada (VOA) não disponível e visto eletrônico (eVisa) não aceito.",
+      "nl": "Een visum bij aankomst in Laos is niet beschikbaar en een e-visum wordt niet geaccepteerd.",
+      "pl": "Usługa VOA w Laosie jest niedostępna, a e-wiza nie jest akceptowana.",
+      "ru": "Визы по прибытии в Лаос не предоставляются, электронные визы не принимаются."
+    }
+  },
+  {
+    "id": "aHthAd2I1kp4l5TNPvpu",
+    "is_open": 2,
+    "name": "Dansavan/Lao Bao",
+    "location": {
+      "_latitude": 16.6227646,
+      "_longitude": 106.5878984
+    },
+    "comment": "Lao VOA is available, but eVisa is not accepted.",
+    "countries": "LAO-VNM",
+    "comment_translations": {
+      "en": "Lao VOA is available, but eVisa is not accepted.",
+      "fr": "Le visa à l'arrivée pour le Laos est disponible, mais le visa électronique n'est pas accepté.",
+      "de": "Ein laotisches Visum bei Ankunft (VOA) ist erhältlich, ein elektronisches Visum (eVisa) wird jedoch nicht akzeptiert.",
+      "it": "È disponibile il visto elettronico per il Laos, ma non è accettato.",
+      "es": "La VOA de Laos está disponible, pero no se acepta eVisa.",
+      "pt": "O visto de chegada (VOA) para o Laos está disponível, mas o visto eletrônico (eVisa) não é aceito.",
+      "nl": "Een visum bij aankomst in Laos is beschikbaar, maar een e-visum wordt niet geaccepteerd.",
+      "pl": "Usługa Lao VOA jest dostępna, ale eVisa nie jest akceptowana.",
+      "ru": "Визы по прибытии в Лаос принимаются, но электронные визы не принимаются."
+    }
   },
   {
     "id": "aKdNLxdtWyoJHfMdPbRB",
@@ -1709,7 +2630,18 @@
       "_latitude": 37.0891808,
       "_longitude": 42.3484312
     },
-    "comment": "Border between Syria and Kurdistan."
+    "comment": "Border between Syria and Kurdistan.",
+    "comment_translations": {
+      "en": "Border between Syria and Kurdistan.",
+      "fr": "Frontière entre la Syrie et le Kurdistan.",
+      "de": "Grenze zwischen Syrien und Kurdistan.",
+      "it": "Confine tra Siria e Kurdistan.",
+      "es": "Frontera entre Siria y Kurdistán.",
+      "pt": "Fronteira entre a Síria e o Curdistão.",
+      "nl": "Grens tussen Syrië en Koerdistan.",
+      "pl": "Granica między Syrią i Kurdystanem.",
+      "ru": "Граница между Сирией и Курдистаном."
+    }
   },
   {
     "id": "aseezburxfT2N37eIeAj",
@@ -1759,7 +2691,34 @@
       "_latitude": 28.0189568,
       "_longitude": 81.6004603
     },
-    "name": "Napalganj"
+    "comment": "On this border post, the Indian eVisa is accepted, even for the first entry.",
+    "name": "Napalganj / Rupaidiha",
+    "updatedAt": {
+      "_seconds": 1768898943,
+      "_nanoseconds": 429000000
+    }
+  },
+  {
+    "id": "c7nG4cZWiYrmOobFQrAP",
+    "is_open": 2,
+    "name": " Lubok Antu/Nanga Badau",
+    "countries": "IDN-MYS",
+    "location": {
+      "_latitude": 1.028699,
+      "_longitude": 111.8785335
+    },
+    "comment": "Indonesian eVisa not accepted.",
+    "comment_translations": {
+      "en": "Indonesian eVisa not accepted.",
+      "fr": "Le visa électronique indonésien n'est pas accepté.",
+      "de": "Indonesisches eVisum wird nicht akzeptiert.",
+      "it": "Visto elettronico indonesiano non accettato.",
+      "es": "No se acepta la eVisa de Indonesia.",
+      "pt": "Visto eletrônico indonésio não aceito.",
+      "nl": "Het Indonesische e-visum wordt niet geaccepteerd.",
+      "pl": "Indonezyjska e-wiza nie jest akceptowana.",
+      "ru": "Электронные визы Индонезии не принимаются."
+    }
   },
   {
     "id": "c929zr2Gf4hv0hemkMom",
@@ -1800,7 +2759,18 @@
       "_latitude": 50.2481192,
       "_longitude": 127.5334528
     },
-    "name": "Blagoveschensk/Heihe"
+    "name": "Blagoveschensk/Heihe",
+    "comment_translations": {
+      "en": "Ferry terminal",
+      "fr": "Terminal de ferry",
+      "de": "Fährterminal",
+      "it": "Terminal dei traghetti",
+      "es": "Terminal de ferry",
+      "pt": "Terminal de balsas",
+      "nl": "Veerterminal",
+      "pl": "Terminal promowy",
+      "ru": "Паромный терминал"
+    }
   },
   {
     "id": "cqs9sIv2aQHAmrX2GiIP",
@@ -1811,6 +2781,32 @@
       "_longitude": 71.7209223
     },
     "name": "Karamyk / Jirgital"
+  },
+  {
+    "id": "cySROnciTDufxiTuJMkv",
+    "is_open": 2,
+    "name": "Pahang/Long Sap",
+    "countries": "LAO-NVM",
+    "location": {
+      "_latitude": 20.7244799,
+      "_longitude": 104.4918251
+    },
+    "comment": "Lao VOA not available and eVisa not accepted.\nVietnam eVisa not accepted.",
+    "updatedAt": {
+      "_seconds": 1765195058,
+      "_nanoseconds": 581000000
+    },
+    "comment_translations": {
+      "en": "Lao VOA not available and eVisa not accepted.\nVietnam eVisa not accepted.",
+      "fr": "Le visa à l'arrivée pour le Laos n'est pas disponible et le visa électronique n'est pas accepté.\n\nLe visa électronique pour le Vietnam n'est pas accepté.",
+      "de": "Laotische Visa bei Ankunft (VOA) und elektronische Visa (eVisa) werden nicht akzeptiert. Vietnamesische eVisa werden nicht akzeptiert.",
+      "it": "Il visto elettronico per il Laos non è disponibile e il visto elettronico non è accettato.\nIl visto elettronico per il Vietnam non è accettato.",
+      "es": "La VOA de Laos no está disponible y no se acepta la visa electrónica. No se acepta la visa electrónica de Vietnam.",
+      "pt": "Visto de chegada (VOA) para o Laos não disponível e visto eletrônico (eVisa) não aceito.\nVisto eletrônico para o Vietnã não aceito.",
+      "nl": "Laotiaans visum bij aankomst niet beschikbaar en e-visum niet geaccepteerd.\n\nVietnamees e-visum niet geaccepteerd.",
+      "pl": "Laotańska VOA niedostępna, a e-wizy nie są akceptowane.\nWietnamska e-wiza nie jest akceptowana.",
+      "ru": "Лаосская виза по прибытии недоступна, электронная виза не принимается.\nВьетнамская электронная виза не принимается."
+    }
   },
   {
     "id": "czBwGyqwbHfETo5LOdFY",
@@ -1843,6 +2839,32 @@
     "name": "Kyzyl-Art / Bor Dobo"
   },
   {
+    "id": "d7KWlaQ2w9BAV1gbaA56",
+    "is_open": 2,
+    "countries": "VNM-KHM",
+    "location": {
+      "_latitude": 13.7681326,
+      "_longitude": 107.4983219
+    },
+    "name": "Le Thanh",
+    "comment": "Vietnam eVisa not accepted.",
+    "updatedAt": {
+      "_seconds": 1765195498,
+      "_nanoseconds": 934000000
+    },
+    "comment_translations": {
+      "en": "Vietnam eVisa not accepted.",
+      "fr": "Visa électronique vietnamien non accepté.",
+      "de": "Vietnam eVisum wird nicht akzeptiert.",
+      "it": "Visto elettronico per il Vietnam non accettato.",
+      "es": "No se acepta la eVisa de Vietnam.",
+      "pt": "O visto eletrônico para o Vietnã não é aceito.",
+      "nl": "Het e-visum voor Vietnam wordt niet geaccepteerd.",
+      "pl": "Wietnamska wiza elektroniczna nie jest akceptowana.",
+      "ru": "Электронные визы во Вьетнам не принимаются."
+    }
+  },
+  {
     "id": "dRIneQLPGq90jSTmBpNo",
     "is_open": 2,
     "comment": "Ferry terminal.",
@@ -1850,7 +2872,18 @@
       "_latitude": 47.6904053,
       "_longitude": 131.0727982
     },
-    "name": "Amurzet/Lobei"
+    "name": "Amurzet/Lobei",
+    "comment_translations": {
+      "en": "Ferry terminal.",
+      "fr": "Terminal de ferry.",
+      "de": "Fährterminal.",
+      "it": "Terminal dei traghetti.",
+      "es": "Terminal de ferry.",
+      "pt": "Terminal de balsas.",
+      "nl": "Veerterminal.",
+      "pl": "Terminal promowy.",
+      "ru": "Паромный терминал."
+    }
   },
   {
     "id": "dTWtmsCFrWcKf5gmUjhu",
@@ -1861,7 +2894,18 @@
       "_latitude": 31.8319529,
       "_longitude": 78.7338942
     },
-    "name": "Shipki La"
+    "name": "Shipki La",
+    "comment_translations": {
+      "en": "Only open for bilateral trade, no tourists allowed.",
+      "fr": "Ouvert uniquement aux échanges bilatéraux, les touristes ne sont pas admis.",
+      "de": "Nur für den bilateralen Handel geöffnet, Touristen sind nicht zugelassen.",
+      "it": "Aperto solo per scambi bilaterali, non sono ammessi turisti.",
+      "es": "Abierto únicamente para comercio bilateral, no se permiten turistas.",
+      "pt": "Aberto apenas para comércio bilateral, turistas não são permitidos.",
+      "nl": "Alleen open voor bilaterale handel, geen toeristen toegestaan.",
+      "pl": "Otwarte tylko na handel dwustronny, wstęp wzbroniony turystom.",
+      "ru": "Открыто только для двусторонней торговли, туристам вход воспрещен."
+    }
   },
   {
     "id": "dWgQe0fkBfJih4XqJLpK",
@@ -1976,6 +3020,26 @@
     }
   },
   {
+    "id": "gL0cAkfYuF7OxCdVMeV7",
+    "is_open": 2,
+    "name": "Labu/Mengkalap",
+    "countries": "BRN-MYS",
+    "location": {
+      "_latitude": 4.7930764,
+      "_longitude": 115.2357124
+    }
+  },
+  {
+    "id": "gQYBElaEa5jyigHTwwwM",
+    "is_open": 2,
+    "name": "Johor Bahru/Woodlands",
+    "countries": "IDN-SGP",
+    "location": {
+      "_latitude": 1.4642546,
+      "_longitude": 103.7665923
+    }
+  },
+  {
     "id": "gtJhWdfhYDgbVAbcsgBX",
     "is_open": 1,
     "coutries": "KAZ-UZB",
@@ -2004,6 +3068,28 @@
       "_longitude": 61.8465359
     },
     "name": "Mand-Pishin"
+  },
+  {
+    "id": "h8g4CnR1ZgosLK9cqkdE",
+    "is_open": 2,
+    "name": "Ban Vang/Ban Khok Phai",
+    "countries": "THA-LAO",
+    "location": {
+      "_latitude": 18.0402368,
+      "_longitude": 101.8578645
+    },
+    "comment": "Ferry crossing.\nLao VOA not available and eVisa not accepted.",
+    "comment_translations": {
+      "en": "Ferry crossing.\nLao VOA not available and eVisa not accepted.",
+      "fr": "Traversée en ferry.\n\nLe visa à l'arrivée pour le Laos n'est pas disponible et le visa électronique n'est pas accepté.",
+      "de": "Fährüberfahrt. Laotisches Visum bei Ankunft nicht erhältlich, elektronisches Visum wird nicht akzeptiert.",
+      "it": "Traghetto.\nVOA per il Laos non disponibile e visto elettronico non accettato.",
+      "es": "Cruce en ferry.\nVOA de Laos no disponible y no se acepta visa electrónica.",
+      "pt": "Travessia de balsa.\nO visto laosiano na chegada (VOA) não está disponível e o visto eletrônico (eVisa) não é aceito.",
+      "nl": "Veerbootovertocht.\n\nLao VAA is niet beschikbaar en e-visum wordt niet geaccepteerd.",
+      "pl": "Przeprawa promowa.\nLaotańska VOA niedostępna, a e-wizy nie są akceptowane.",
+      "ru": "Переправа на пароме.\nЛаосская виза по прибытии недоступна, электронная виза не принимается."
+    }
   },
   {
     "id": "hErDL8fXcYBfciEOQFD4",
@@ -2038,6 +3124,28 @@
       "_longitude": 133.322976
     },
     "name": "Lesozavodsk"
+  },
+  {
+    "id": "hWyPmzlxbftJrpLfVgtP",
+    "is_open": 2,
+    "name": "Serikin/Jagoi Babang",
+    "countries": "IDN-MYS",
+    "location": {
+      "_latitude": 1.3177484,
+      "_longitude": 109.9675976
+    },
+    "comment": "Indonesian eVisa not accepted.",
+    "comment_translations": {
+      "en": "Indonesian eVisa not accepted.",
+      "fr": "Le visa électronique indonésien n'est pas accepté.",
+      "de": "Indonesisches eVisum wird nicht akzeptiert.",
+      "it": "Visto elettronico indonesiano non accettato.",
+      "es": "No se acepta la eVisa de Indonesia.",
+      "pt": "Visto eletrônico indonésio não aceito.",
+      "nl": "Het Indonesische e-visum wordt niet geaccepteerd.",
+      "pl": "Indonezyjska e-wiza nie jest akceptowana.",
+      "ru": "Электронные визы Индонезии не принимаются."
+    }
   },
   {
     "id": "hpZKyhjo1l8FLSpdhNG6",
@@ -2096,6 +3204,26 @@
     }
   },
   {
+    "id": "i38dLuXvET4r6hoHIwf4",
+    "is_open": 0,
+    "name": "Ban Laem/Daung",
+    "countries": "THA-KHM",
+    "location": {
+      "_latitude": 13.086883,
+      "_longitude": 102.445235
+    }
+  },
+  {
+    "id": "i4ZZYTHtXABJdE60hgPx",
+    "is_open": 2,
+    "name": "Phnom Den/Tinh Bien",
+    "countries": "VNM-KHM",
+    "location": {
+      "_latitude": 10.6027341,
+      "_longitude": 104.9269809
+    }
+  },
+  {
     "id": "i99u5Tk8JBF8oiSSSRdj",
     "is_open": 1,
     "name": "Ak-Tilek / Karasu",
@@ -2120,14 +3248,28 @@
     }
   },
   {
-    "id": "ilVNTpnUzfy3bzTAry5b",
+    "id": "iNhVzzFbEr8pXwrRnhd6",
     "is_open": 2,
+    "name": "Srimantapur/Bibirbazar",
+    "countries": "IND-BGD",
+    "location": {
+      "_latitude": 23.4593701,
+      "_longitude": 91.2534307
+    }
+  },
+  {
+    "id": "ilVNTpnUzfy3bzTAry5b",
+    "is_open": 0,
     "countries": "JOR-SYR",
     "location": {
       "_latitude": 32.5793322,
       "_longitude": 36.0424049
     },
-    "name": "Ramtha"
+    "name": "Ramtha",
+    "updatedAt": {
+      "_seconds": 1764703154,
+      "_nanoseconds": 762000000
+    }
   },
   {
     "id": "j5B6OeN9BXJe1OtvDl1G",
@@ -2144,19 +3286,62 @@
     }
   },
   {
+    "id": "jiqbTiYs6WL0EjqLDHyY",
+    "is_open": 0,
+    "name": "Phasar Prom/Ban Phakkat",
+    "countries": "THA-KHM",
+    "location": {
+      "_latitude": 12.9267365,
+      "_longitude": 102.492859
+    }
+  },
+  {
+    "id": "jlWPwPg9AJ5c2BixrI7v",
+    "is_open": 2,
+    "countries": "THA-LAO",
+    "location": {
+      "_latitude": 17.4795199,
+      "_longitude": 104.7172617
+    },
+    "comment": "Lao eVisa no accepted here.",
+    "name": "Nakhon Phanom/ Friendship Bridge 3",
+    "comment_translations": {
+      "en": "Lao eVisa no accepted here.",
+      "fr": "Le visa électronique laotien n'est pas accepté ici.",
+      "de": "Lao eVisa werden hier nicht akzeptiert.",
+      "it": "Qui non si accettano visti elettronici per il Laos.",
+      "es": "Aquí no se acepta la visa electrónica de Laos.",
+      "pt": "O visto eletrônico do Laos não é aceito aqui.",
+      "nl": "Het Laotiaanse e-visum wordt hier niet geaccepteerd.",
+      "pl": "Wiza elektroniczna do Laosu nie jest tutaj akceptowana.",
+      "ru": "Здесь не принимаются электронные визы Лаоса."
+    }
+  },
+  {
     "id": "kAMpDv9bssFYsRYLpbSd",
     "is_open": 1,
-    "comment": "Close to tourists. Only open for Iraqi pilgrims heading to Mecca.",
     "countries": "SAU-IRQ",
     "location": {
       "_latitude": 31.3718846,
       "_longitude": 41.4450791
     },
+    "name": "An Nukhayb / Arar",
+    "comment": "Closed to tourists. Only open for Iraqi pilgrims heading to Mecca.",
     "updatedAt": {
-      "_seconds": 1764256971,
-      "_nanoseconds": 301000000
+      "_seconds": 1765721960,
+      "_nanoseconds": 771000000
     },
-    "name": "An Nukhayb / Arar"
+    "comment_translations": {
+      "en": "Closed to tourists. Only open for Iraqi pilgrims heading to Mecca.",
+      "fr": "Fermé aux touristes. Ouvert uniquement aux pèlerins irakiens se rendant à La Mecque.",
+      "de": "Für Touristen geschlossen. Nur für irakische Pilger auf dem Weg nach Mekka geöffnet.",
+      "it": "Chiuso ai turisti. Aperto solo ai pellegrini iracheni diretti alla Mecca.",
+      "es": "Cerrado al turismo. Abierto solo para peregrinos iraquíes que se dirigen a La Meca.",
+      "pt": "Fechado para turistas. Aberto apenas para peregrinos iraquianos a caminho de Meca.",
+      "nl": "Gesloten voor toeristen. Alleen open voor Iraakse pelgrims op weg naar Mekka.",
+      "pl": "Zamknięte dla turystów. Otwarte tylko dla pielgrzymów z Iraku udających się do Mekki.",
+      "ru": "Закрыто для туристов. Открыто только для иракских паломников, направляющихся в Мекку."
+    }
   },
   {
     "id": "kAtL1DkSZ0BbwMAb0baH",
@@ -2177,7 +3362,18 @@
       "_latitude": 27.9730991,
       "_longitude": 85.9631132
     },
-    "name": "Kodari"
+    "name": "Kodari",
+    "comment_translations": {
+      "en": "Border post linking Tatopani and Zhangmu on the Araniko highway. It had been the only crossing from Nepal to Tibet from the 1960s until the large earthquake of 2015 destroyed it. From then on, the Rasuwagadhi-Gyirong border took over.\nThe Kodari border post is normally closed, but it was reopened after the Gyirong road was destroyed (2025 monsoon season).\nSo it's expected that it will be closed down again after the Gyirong crossing is accessible again.",
+      "fr": "Le poste frontière reliant Tatopani et Zhangmu sur la route d'Araniko était le seul point de passage entre le Népal et le Tibet des années 1960 jusqu'à sa destruction par le séisme de 2015. Depuis lors, le poste frontière de Rasuwagadhi-Gyirong assure la liaison.\n\nLe poste frontière de Kodari est normalement fermé, mais il a rouvert après la destruction de la route de Gyirong (pendant la mousson de 2025).\n\nIl devrait donc être de nouveau fermé une fois le passage de Gyirong rouvert.",
+      "de": "Der Grenzübergang Kodari zwischen Tatopani und Zhangmu am Araniko Highway war von den 1960er Jahren bis zu seiner Zerstörung durch das schwere Erdbeben von 2015 der einzige Übergang von Nepal nach Tibet. Seitdem dient der Grenzübergang Rasuwagadhi-Gyirong als solcher.\nDer Grenzübergang Kodari ist normalerweise geschlossen, wurde aber nach der Zerstörung der Straße nach Gyirong (Monsunzeit 2025) wieder geöffnet.\nEs ist daher zu erwarten, dass er erneut geschlossen wird, sobald der Grenzübergang Gyirong wieder befahrbar ist.",
+      "it": "Posto di frontiera che collega Tatopani e Zhangmu sull'autostrada Araniko. Era stato l'unico valico dal Nepal al Tibet dagli anni '60 fino a quando il grande terremoto del 2015 lo distrusse. Da allora in poi, è stato sostituito dal confine Rasuwagadhi-Gyirong.\nIl posto di frontiera di Kodari è normalmente chiuso, ma è stato riaperto dopo la distruzione della strada di Gyirong (stagione dei monsoni del 2025).\nSi prevede quindi che verrà nuovamente chiuso non appena il valico di Gyirong sarà nuovamente accessibile.",
+      "es": "Puesto fronterizo que une Tatopani y Zhangmu en la carretera de Araniko. Fue el único cruce entre Nepal y el Tíbet desde la década de 1960 hasta que el gran terremoto de 2015 lo destruyó. A partir de entonces, la frontera entre Rasuwagadhi y Gyirong tomó el relevo.\nEl puesto fronterizo de Kodari suele estar cerrado, pero se reabrió tras la destrucción de la carretera de Gyirong (temporada de monzones de 2025).\nPor lo tanto, se espera que vuelva a cerrarse cuando el cruce de Gyirong vuelva a ser accesible.",
+      "pt": "Posto fronteiriço que liga Tatopani e Zhangmu na rodovia Araniko. Era a única passagem do Nepal para o Tibete desde a década de 1960 até que o grande terremoto de 2015 a destruiu. A partir de então, a fronteira Rasuwagadhi-Gyirong assumiu essa função.\nO posto fronteiriço de Kodari normalmente fica fechado, mas foi reaberto após a destruição da estrada de Gyirong (temporada de monções de 2025).\nPortanto, espera-se que seja fechado novamente assim que a passagem de Gyirong estiver acessível novamente.",
+      "nl": "Grenspost die Tatopani en Zhangmu verbindt aan de Araniko-snelweg. Het was de enige grensovergang van Nepal naar Tibet van de jaren 60 tot de grote aardbeving van 2015 die de post verwoestte. Sindsdien is de grenspost Rasuwagadhi-Gyirong de enige grensovergang.\n\nDe grenspost Kodari is normaal gesproken gesloten, maar werd heropend nadat de weg naar Gyirong was verwoest (moessonseizoen 2025).\n\nHet is dus te verwachten dat de grenspost weer gesloten zal worden zodra de grensovergang bij Gyirong weer toegankelijk is.",
+      "pl": "Słup graniczny łączący Tatopani i Zhangmu na autostradzie Araniko. Było to jedyne przejście graniczne z Nepalu do Tybetu od lat 60. XX wieku, aż do zniszczenia go przez silne trzęsienie ziemi w 2015 roku. Od tego czasu funkcję tę przejęła granica Rasuwagadhi-Gyirong.\nSłup graniczny w Kodari jest zazwyczaj zamknięty, ale został ponownie otwarty po zniszczeniu drogi Gyirong (sezon monsunowy 2025).\nOczekuje się więc, że zostanie ponownie zamknięty, gdy przejście graniczne w Gyirong będzie ponownie dostępne.",
+      "ru": "Пограничный пункт, соединяющий Татопани и Чжанму на шоссе Аранико. С 1960-х годов это был единственный пункт пересечения границы из Непала в Тибет, пока его не разрушило сильное землетрясение 2015 года. С тех пор его место занял пограничный пункт Расувагадхи-Гьиронг.\nПограничный пункт Кодари обычно закрыт, но он был вновь открыт после разрушения дороги на Гиронг (сезон муссонов 2025 года).\nПоэтому ожидается, что он будет снова закрыт после того, как станет доступен пункт пересечения границы на Гиронг."
+    }
   },
   {
     "id": "kIwk04OygLnBgltsx8dy",
@@ -2224,6 +3420,16 @@
     "name": "Saryasiya / Bratstvo"
   },
   {
+    "id": "lMCJVgkWJE5aT4BPEodU",
+    "is_open": 2,
+    "countries": "THA-LAO",
+    "location": {
+      "_latitude": 20.2168403,
+      "_longitude": 100.4617298
+    },
+    "name": "Friendship Bridge 4/Chiang Khong"
+  },
+  {
     "id": "lRpyyyEUach4aQ0SwQHv",
     "is_open": 2,
     "countries": "OMN-SAU",
@@ -2241,7 +3447,11 @@
       "_latitude": 30.9548,
       "_longitude": 66.43805
     },
-    "name": "Chaman-Spin Boldak"
+    "name": "Chaman/Spin Boldak",
+    "updatedAt": {
+      "_seconds": 1764932129,
+      "_nanoseconds": 580000000
+    }
   },
   {
     "id": "mIQgR769fGkeuhFbiTPp",
@@ -2282,9 +3492,10 @@
       "_longitude": 44.6266035
     },
     "name": "Verkhniy Lars / Kazbegi",
+    "comment": "Russian eVisa is valid here.",
     "updatedAt": {
-      "_seconds": 1764167371,
-      "_nanoseconds": 795000000
+      "_seconds": 1768482197,
+      "_nanoseconds": 231000000
     }
   },
   {
@@ -2294,7 +3505,12 @@
       "_latitude": 50.321868,
       "_longitude": 106.4891507
     },
-    "name": "Kyakhta/Altanbulag"
+    "name": "Kyakhta/Altanbulag",
+    "comment": "Russian eVisa is valid here.",
+    "updatedAt": {
+      "_seconds": 1768482183,
+      "_nanoseconds": 433000000
+    }
   },
   {
     "id": "nffDEigzPtt4G0dGarZj",
@@ -2308,6 +3524,50 @@
     "createdAt": {
       "_seconds": 1764172688,
       "_nanoseconds": 349000000
+    }
+  },
+  {
+    "id": "noecRoYHe1Mw8JXbFool",
+    "is_open": 2,
+    "name": "Na Phao/Cha Lo",
+    "countries": "LAO-VNM",
+    "location": {
+      "_latitude": 17.6719281,
+      "_longitude": 105.7651563
+    },
+    "comment": "Lao VOA not available and eVisa not accepted.",
+    "comment_translations": {
+      "en": "Lao VOA not available and eVisa not accepted.",
+      "fr": "Le visa à l'arrivée pour le Laos n'est pas disponible et le visa électronique n'est pas accepté.",
+      "de": "Laotische Visa bei Ankunft (VOA) sind nicht verfügbar und elektronische Visa (eVisa) werden nicht akzeptiert.",
+      "it": "Il visto d'ingresso per il Laos non è disponibile e il visto elettronico non è accettato.",
+      "es": "Lao VOA no está disponible y eVisa no se acepta.",
+      "pt": "Visto Laosiano na chegada (VOA) não disponível e visto eletrônico (eVisa) não aceito.",
+      "nl": "Een visum bij aankomst in Laos is niet beschikbaar en een e-visum wordt niet geaccepteerd.",
+      "pl": "Usługa VOA w Laosie jest niedostępna, a e-wiza nie jest akceptowana.",
+      "ru": "Визы по прибытии в Лаос не предоставляются, электронные визы не принимаются."
+    }
+  },
+  {
+    "id": "nylTdydVyFWbb3IqJqgy",
+    "is_open": 2,
+    "name": "Nam Soi/Na Meo",
+    "countries": "THA-LAO",
+    "location": {
+      "_latitude": 20.2944413,
+      "_longitude": 104.6204667
+    },
+    "comment": "Lao VOA not available and eVisa not accepted.",
+    "comment_translations": {
+      "en": "Lao VOA not available and eVisa not accepted.",
+      "fr": "Le visa à l'arrivée pour le Laos n'est pas disponible et le visa électronique n'est pas accepté.",
+      "de": "Laotische Visa bei Ankunft (VOA) sind nicht verfügbar und elektronische Visa (eVisa) werden nicht akzeptiert.",
+      "it": "Il visto d'ingresso per il Laos non è disponibile e il visto elettronico non è accettato.",
+      "es": "Lao VOA no está disponible y eVisa no se acepta.",
+      "pt": "Visto Laosiano na chegada (VOA) não disponível e visto eletrônico (eVisa) não aceito.",
+      "nl": "Een visum bij aankomst in Laos is niet beschikbaar en een e-visum wordt niet geaccepteerd.",
+      "pl": "Usługa VOA w Laosie jest niedostępna, a e-wiza nie jest akceptowana.",
+      "ru": "Визы по прибытии в Лаос не предоставляются, электронные визы не принимаются."
     }
   },
   {
@@ -2332,14 +3592,67 @@
   },
   {
     "id": "oC2Hph7XGGKOWAx5fxEL",
-    "is_open": 4,
+    "is_open": 0,
     "comment": "Closed since the military takeover in Myanmar.",
     "countries": "IND-MMR",
     "location": {
       "_latitude": 24.2467876,
       "_longitude": 94.3082127
     },
-    "name": "Moreh"
+    "name": "Moreh",
+    "comment_translations": {
+      "en": "Closed since the military takeover in Myanmar.",
+      "fr": "Fermé depuis la prise de pouvoir militaire au Myanmar.",
+      "de": "Geschlossen seit der Machtübernahme des Militärs in Myanmar.",
+      "it": "Chiuso dopo la presa del potere da parte dei militari in Myanmar.",
+      "es": "Cerrado desde la toma militar del poder en Myanmar.",
+      "pt": "Fechado desde a tomada do poder pelos militares em Myanmar.",
+      "nl": "Gesloten sinds de militaire machtsovername in Myanmar.",
+      "pl": "Zamknięte od czasu przejęcia władzy w Mjanmie przez wojsko.",
+      "ru": "Закрыто с момента военного переворота в Мьянме."
+    }
+  },
+  {
+    "id": "oZ2mWa4E21DCivQ1ZoRS",
+    "is_open": 2,
+    "name": "Phu Nam Ron/Htee Khee",
+    "countries": "THA-MMR",
+    "location": {
+      "_latitude": 13.8946896,
+      "_longitude": 99.0819825
+    }
+  },
+  {
+    "id": "oehB60ygPHeSHlVsBUG9",
+    "is_open": 2,
+    "countries": "IND-BGD",
+    "name": "Agartala/Akhaura",
+    "location": {
+      "_latitude": 23.8394518,
+      "_longitude": 91.2550016
+    }
+  },
+  {
+    "id": "onRYLQ9ranpusij7qLCr",
+    "is_open": 2,
+    "name": "Phou Keau/Bo Y",
+    "countries": "LAO-VNM",
+    "comment": "Lao VOA not available and eVisa not accepted.",
+    "location": {
+      "_latitude": 14.7087624,
+      "_longitude": 107.5575083
+    },
+    "comment_translations": {
+      "en": "Lao VOA not available and eVisa not accepted.",
+      "fr": "Le visa à l'arrivée pour le Laos n'est pas disponible et le visa électronique n'est pas accepté.",
+      "de": "Laotische Visa bei Ankunft (VOA) sind nicht verfügbar und elektronische Visa (eVisa) werden nicht akzeptiert.",
+      "it": "Il visto d'ingresso per il Laos non è disponibile e il visto elettronico non è accettato.",
+      "es": "Lao VOA no está disponible y eVisa no se acepta.",
+      "pt": "Visto Laosiano na chegada (VOA) não disponível e visto eletrônico (eVisa) não aceito.",
+      "nl": "Een visum bij aankomst in Laos is niet beschikbaar en een e-visum wordt niet geaccepteerd.",
+      "pl": "Usługa VOA w Laosie jest niedostępna, a e-wiza nie jest akceptowana.",
+      "ru": "Визы по прибытии в Лаос не предоставляются, электронные визы не принимаются."
+    }
   },
   {
     "id": "p3GrseRa4UmjVcmNrWzu",
@@ -2431,7 +3744,18 @@
       "_latitude": 34.3826511,
       "_longitude": 45.4670285
     },
-    "name": "Khosravi"
+    "name": "Khosravi",
+    "comment_translations": {
+      "en": "Only on foot, no motor vehicles allowed.",
+      "fr": "Accès piéton uniquement, aucun véhicule motorisé n'est autorisé.",
+      "de": "Nur zu Fuß erreichbar, Kraftfahrzeuge sind nicht erlaubt.",
+      "it": "Solo a piedi, non sono ammessi veicoli a motore.",
+      "es": "Sólo a pie, no se permiten vehículos a motor.",
+      "pt": "Somente a pé, veículos motorizados não são permitidos.",
+      "nl": "Alleen te voet, geen motorvoertuigen toegestaan.",
+      "pl": "Tylko pieszo, zakaz poruszania się pojazdami mechanicznymi.",
+      "ru": "Передвижение только пешком, автомобили запрещены."
+    }
   },
   {
     "id": "rKoPQhaWGho8IyVLm8Ds",
@@ -2490,7 +3814,28 @@
       "_latitude": 29.3231404,
       "_longitude": 83.9863704
     },
-    "name": "Korala"
+    "name": "Korala",
+    "comment_translations": {
+      "en": "This crossing is only open for trade between the 2 countries.",
+      "fr": "Ce point de passage est uniquement ouvert aux échanges commerciaux entre les deux pays.",
+      "de": "Dieser Grenzübergang ist nur für den Handel zwischen den beiden Ländern geöffnet.",
+      "it": "Questo valico è aperto solo per gli scambi commerciali tra i due Paesi.",
+      "es": "Este cruce sólo está abierto para el comercio entre los dos países.",
+      "pt": "Esta passagem está aberta apenas para o comércio entre os dois países.",
+      "nl": "Deze grensovergang is alleen open voor handel tussen de twee landen.",
+      "pl": "To przejście graniczne jest otwarte wyłącznie w celu handlu między tymi dwoma krajami.",
+      "ru": "Этот пограничный переход открыт только для торговли между двумя странами."
+    }
+  },
+  {
+    "id": "sixl1sBMTXhOhi2EsU7U",
+    "is_open": 0,
+    "countries": "KGZ-UZB",
+    "location": {
+      "_latitude": 40.8229199,
+      "_longitude": 72.9775511
+    },
+    "name": "Khanabad"
   },
   {
     "id": "t96A5xT3nrVXktJ2Iqch",
@@ -2501,7 +3846,18 @@
       "_longitude": 44.0910908
     },
     "comment": "Also known as the Roki tunnel.",
-    "name": "Nizhny Zaramag"
+    "name": "Nizhny Zaramag",
+    "comment_translations": {
+      "en": "Also known as the Roki tunnel.",
+      "fr": "Également connu sous le nom de tunnel de Roki.",
+      "de": "Auch bekannt als Roki-Tunnel.",
+      "it": "Noto anche come tunnel Roki.",
+      "es": "También conocido como el túnel de Roki.",
+      "pt": "Também conhecido como túnel de Roki.",
+      "nl": "Ook wel bekend als de Roki-tunnel.",
+      "pl": "Znany również jako tunel Roki.",
+      "ru": "Также известен как туннель Роки."
+    }
   },
   {
     "id": "tGj4CHvZ9raj8HTbttMu",
@@ -2532,6 +3888,16 @@
       "_longitude": 68.7275182
     },
     "name": "Yalama / Konysbayeva"
+  },
+  {
+    "id": "ti902UD7Jwm51JSVu5LX",
+    "is_open": 2,
+    "countries": "IRN-IRQ",
+    "location": {
+      "_latitude": 33.1225012,
+      "_longitude": 46.0511099
+    },
+    "name": "Mehran"
   },
   {
     "id": "ty9ywDR5HQLd9Wu0zO7D",
@@ -2566,6 +3932,16 @@
       "_longitude": 56.087357
     },
     "name": "Al Dhara"
+  },
+  {
+    "id": "uRiGDUVVDD3NXXAscLpb",
+    "is_open": 2,
+    "name": "Skouw/Wutung",
+    "countries": "IDN-PNG",
+    "location": {
+      "_latitude": -2.6086255,
+      "_longitude": 140.9980302
+    }
   },
   {
     "id": "uW5JdikVcnRfekYBo0B0",
@@ -2604,7 +3980,22 @@
       "_nanoseconds": 977000000
     },
     "name": "Burachki / Terehova",
-    "comment": "Mandatory reservation: https://lvrobeza.lv/en/reserve/"
+    "comment_translations": {
+      "en": "Mandatory reservation: https://lvrobeza.lv/en/reserve/",
+      "fr": "Réservation obligatoire : https://lvrobeza.lv/en/reserve/",
+      "de": "Reservierung erforderlich: https://lvrobeza.lv/en/reserve/",
+      "it": "Prenotazione obbligatoria: https://lvrobeza.lv/en/reserve/",
+      "es": "Reserva obligatoria: https://lvrobeza.lv/en/reserve/",
+      "pt": "Reserva obrigatória: https://lvrobeza.lv/en/reserve/",
+      "nl": "Reserveren is verplicht: https://lvrobeza.lv/en/reserve/",
+      "pl": "Obowiązkowa rezerwacja: https://lvrobeza.lv/en/reserve/",
+      "ru": "Обязательное бронирование: https://lvrobeza.lv/en/reserve/"
+    },
+    "comment": "Mandatory reservation: https://lvrobeza.lv/en/reserve/\nRussian eVisa valid.",
+    "updatedAt": {
+      "_seconds": 1768482591,
+      "_nanoseconds": 930000000
+    }
   },
   {
     "id": "ufbWqYAVmtiOA82c7Jbl",
@@ -2624,7 +4015,23 @@
       "_latitude": 25.6093449,
       "_longitude": 56.2312487
     },
-    "name": "Dibba Al Fujairah"
+    "name": "Wam Dibba",
+    "comment": "This new crossing opened in 2025. It's able to process foreigners, so it's open to all.",
+    "updatedAt": {
+      "_seconds": 1764671698,
+      "_nanoseconds": 269000000
+    },
+    "comment_translations": {
+      "en": "This new crossing opened in 2025. It's able to process foreigners, so it's open to all.",
+      "fr": "Ce nouveau point de passage a ouvert en 2025. Il est en mesure de traiter les demandes des étrangers, il est donc ouvert à tous.",
+      "de": "Dieser neue Grenzübergang wurde 2025 eröffnet. Er kann auch Ausländer abfertigen und steht somit allen offen.",
+      "it": "Questo nuovo valico è stato inaugurato nel 2025. È in grado di accogliere gli stranieri, quindi è aperto a tutti.",
+      "es": "Este nuevo cruce se inauguró en 2025. Está capacitado para procesar extranjeros, por lo que está abierto a todos.",
+      "pt": "Essa nova travessia foi inaugurada em 2025. Ela tem capacidade para processar estrangeiros, portanto está aberta a todos.",
+      "nl": "Deze nieuwe grensovergang is in 2025 geopend. Ze is geschikt voor buitenlanders en dus voor iedereen toegankelijk.",
+      "pl": "To nowe przejście graniczne zostanie otwarte w 2025 roku. Może ono obsługiwać cudzoziemców, jest więc otwarte dla wszystkich.",
+      "ru": "Этот новый пункт пропуска открылся в 2025 году. Он способен обслуживать иностранцев, поэтому открыт для всех."
+    }
   },
   {
     "id": "vSdiAOojVHtZGDJTiaUe",
@@ -2675,6 +4082,38 @@
     "name": "Zafarobod / Xovosobod"
   },
   {
+    "id": "wYpKGJxZLTsGVvvHZ0c6",
+    "is_open": 2,
+    "name": "Ujung Jalan/Pandaruan",
+    "countries": "BRN-MYS",
+    "location": {
+      "_latitude": 4.6911944,
+      "_longitude": 115.0294271
+    }
+  },
+  {
+    "id": "wb89fzzMEfvesb5OKe2S",
+    "is_open": 2,
+    "name": "Namngeun/Huai Kon",
+    "countries": "THA-LAO",
+    "location": {
+      "_latitude": 19.5962892,
+      "_longitude": 101.0860357
+    },
+    "comment": "Lao VOA not available and eVisa not accepted.",
+    "comment_translations": {
+      "en": "Lao VOA not available and eVisa not accepted.",
+      "fr": "Le visa à l'arrivée pour le Laos n'est pas disponible et le visa électronique n'est pas accepté.",
+      "de": "Laotische Visa bei Ankunft (VOA) sind nicht verfügbar und elektronische Visa (eVisa) werden nicht akzeptiert.",
+      "it": "Il visto d'ingresso per il Laos non è disponibile e il visto elettronico non è accettato.",
+      "es": "Lao VOA no está disponible y eVisa no se acepta.",
+      "pt": "Visto Laosiano na chegada (VOA) não disponível e visto eletrônico (eVisa) não aceito.",
+      "nl": "Een visum bij aankomst in Laos is niet beschikbaar en een e-visum wordt niet geaccepteerd.",
+      "pl": "Usługa VOA w Laosie jest niedostępna, a e-wiza nie jest akceptowana.",
+      "ru": "Визы по прибытии в Лаос не предоставляются, электронные визы не принимаются."
+    }
+  },
+  {
     "id": "wcLuHV3bFiURvB9MCPaz",
     "is_open": 2,
     "name": "Sypatay Batyr / Chaldybar",
@@ -2706,6 +4145,38 @@
     "location": {
       "_latitude": 42.7915914,
       "_longitude": 71.5033786
+    }
+  },
+  {
+    "id": "woAaGOI2VaGQQPuH3dyH",
+    "is_open": 2,
+    "name": "Golden Triangle International",
+    "countries": "THA-LAO",
+    "location": {
+      "_latitude": 20.3548046,
+      "_longitude": 100.0872619
+    },
+    "comment": "Ferry crossing.\nOn Lao side, VOA is available but eVisa is not accepted.",
+    "comment_translations": {
+      "en": "Ferry crossing.\nOn Lao side, VOA is available but eVisa is not accepted.",
+      "fr": "Traversée en ferry.\n\nCôté laotien, le visa à l'arrivée est disponible, mais le visa électronique n'est pas accepté.",
+      "de": "Fährüberfahrt.\nAuf laotischer Seite ist ein Visum bei Ankunft (VOA) erhältlich, ein elektronisches Visum (eVisa) wird jedoch nicht akzeptiert.",
+      "it": "Traghetto.\nSul lato laotiano è disponibile il visto elettronico (VOA), ma non è accettato.",
+      "es": "Cruce en ferry.\nEn Laos, se puede solicitar la visa VOA, pero no se acepta la visa electrónica.",
+      "pt": "Travessia de balsa.\nDo lado laosiano, o visto na chegada está disponível, mas o visto eletrônico não é aceito.",
+      "nl": "Veerbootovertocht.\n\nAan de Laotiaanse kant is een visum bij aankomst (VOA) mogelijk, maar een e-visum wordt niet geaccepteerd.",
+      "pl": "Przeprawa promowa.\nPo stronie Laosu VOA jest dostępna, ale e-wiza nie jest akceptowana.",
+      "ru": "Переправа на пароме.\nНа лаосской стороне виза по прибытии доступна, но электронная виза не принимается."
+    }
+  },
+  {
+    "id": "x9y4tQsUxVIDCOlVQEj8",
+    "is_open": 0,
+    "name": "Rafah",
+    "countries": "PSX-EGY",
+    "location": {
+      "_latitude": 31.2483171,
+      "_longitude": 34.2574284
     }
   },
   {
@@ -2751,6 +4222,28 @@
     }
   },
   {
+    "id": "yCeD4ofAap1Elrspku55",
+    "is_open": 2,
+    "name": "Rosso",
+    "countries": "MRT-SEN",
+    "location": {
+      "_latitude": 16.5041878,
+      "_longitude": -15.8098886
+    },
+    "comment": "Ferry crossing.\nLots of bad feedback from corrupt officials at this border, so if possible cross at Diama instead (during the rains, the muddy track to Diama may be too difficult).",
+    "comment_translations": {
+      "en": "Ferry crossing.\nLots of bad feedback from corrupt officials at this border, so if possible cross at Diama instead (during the rains, the muddy track to Diama may be too difficult).",
+      "fr": "Traversée en ferry.\n\nDe nombreux témoignages négatifs font état de la corruption des agents à cette frontière ; si possible, il est donc préférable de traverser à Diama (pendant la saison des pluies, la piste boueuse menant à Diama peut être impraticable).",
+      "de": "Fährüberfahrt. Es gibt viele negative Berichte über korrupte Beamte an dieser Grenze. Überqueren Sie die Grenze daher nach Möglichkeit in Diama (während der Regenzeit kann der schlammige Weg nach Diama zu schwierig sein).",
+      "it": "Attraversamento in traghetto.\nMolti feedback negativi da parte di funzionari corrotti a questo confine, quindi se possibile, attraversate a Diama (durante le piogge, il sentiero fangoso per Diama potrebbe essere troppo difficoltoso).",
+      "es": "Cruce en ferry. Hay muchos comentarios negativos de funcionarios corruptos en esta frontera, así que, si es posible, cruce por Diama (durante las lluvias, el camino fangoso hacia Diama puede ser demasiado difícil).",
+      "pt": "Travessia de balsa.\nHá muitos relatos negativos sobre funcionários corruptos nesta fronteira, portanto, se possível, atravesse em Diama (durante as chuvas, a estrada de terra até Diama pode ser muito difícil).",
+      "nl": "Veerbootovertocht.\n\nEr zijn veel negatieve ervaringen met corrupte ambtenaren aan deze grens, dus steek indien mogelijk over bij Diama (tijdens het regenseizoen kan het modderige pad naar Diama te moeilijk begaanbaar zijn).",
+      "pl": "Przeprawa promowa.\nWiele negatywnych opinii od skorumpowanych urzędników na tej granicy, więc jeśli to możliwe, przekraczajcie granicę w Diamie (podczas deszczu błotnista droga do Diamy może być zbyt trudna).",
+      "ru": "Переправа на пароме.\nМного негативных отзывов от коррумпированных чиновников на этой границе, поэтому, если возможно, пересекайте границу в Диаме (во время дождей грязная дорога до Диамы может быть слишком сложной)."
+    }
+  },
+  {
     "id": "yOGju1hDt6Ra3mpWS9Nh",
     "is_open": 1,
     "name": "Zverinogolovskoe / Ubagan",
@@ -2762,6 +4255,28 @@
     "createdAt": {
       "_seconds": 1764172689,
       "_nanoseconds": 190000000
+    }
+  },
+  {
+    "id": "yOcHZhiyKjy0U14M71ej",
+    "is_open": 2,
+    "name": "Pang Hok/Tay Trang",
+    "countries": "LAO-VNM",
+    "location": {
+      "_latitude": 21.214869,
+      "_longitude": 102.8902314
+    },
+    "comment": "Lao VOA not available and eVisa not accepted.",
+    "comment_translations": {
+      "en": "Lao VOA not available and eVisa not accepted.",
+      "fr": "Le visa à l'arrivée pour le Laos n'est pas disponible et le visa électronique n'est pas accepté.",
+      "de": "Laotische Visa bei Ankunft (VOA) sind nicht verfügbar und elektronische Visa (eVisa) werden nicht akzeptiert.",
+      "it": "Il visto d'ingresso per il Laos non è disponibile e il visto elettronico non è accettato.",
+      "es": "Lao VOA no está disponible y eVisa no se acepta.",
+      "pt": "Visto Laosiano na chegada (VOA) não disponível e visto eletrônico (eVisa) não aceito.",
+      "nl": "Een visum bij aankomst in Laos is niet beschikbaar en een e-visum wordt niet geaccepteerd.",
+      "pl": "Usługa VOA w Laosie jest niedostępna, a e-wiza nie jest akceptowana.",
+      "ru": "Визы по прибытии в Лаос не предоставляются, электронные визы не принимаются."
     }
   },
   {
@@ -2803,6 +4318,54 @@
     }
   },
   {
+    "id": "yaM5m8ELv62U51W4iWZ6",
+    "is_open": 2,
+    "name": "Paksan/Bueng Kan",
+    "countries": "THA-LAO",
+    "location": {
+      "_latitude": 18.39013,
+      "_longitude": 103.64165
+    },
+    "comment": "Ferry crossing.\nLao VOA not available and eVisa not accepted.",
+    "comment_translations": {
+      "en": "Ferry crossing.\nLao VOA not available and eVisa not accepted.",
+      "fr": "Traversée en ferry.\n\nLe visa à l'arrivée pour le Laos n'est pas disponible et le visa électronique n'est pas accepté.",
+      "de": "Fährüberfahrt. Laotisches Visum bei Ankunft nicht erhältlich, elektronisches Visum wird nicht akzeptiert.",
+      "it": "Traghetto.\nVOA per il Laos non disponibile e visto elettronico non accettato.",
+      "es": "Cruce en ferry.\nVOA de Laos no disponible y no se acepta visa electrónica.",
+      "pt": "Travessia de balsa.\nO visto laosiano na chegada (VOA) não está disponível e o visto eletrônico (eVisa) não é aceito.",
+      "nl": "Veerbootovertocht.\n\nLaotiaans visum bij aankomst niet beschikbaar en e-visum wordt niet geaccepteerd.",
+      "pl": "Przeprawa promowa.\nLaotańska VOA niedostępna, a e-wizy nie są akceptowane.",
+      "ru": "Переправа на пароме.\nЛаосская виза по прибытии недоступна, электронная виза не принимается."
+    }
+  },
+  {
+    "id": "ysfARiNJWC6bcU8XLt6b",
+    "is_open": 0,
+    "location": {
+      "_latitude": 11.6509201,
+      "_longitude": 102.9097177
+    },
+    "countries": "THA-KHM",
+    "name": "Hat Lek/Cham Yeam",
+    "comment": "Cambodian VOA available here (if border is open).",
+    "updatedAt": {
+      "_seconds": 1765189073,
+      "_nanoseconds": 489000000
+    },
+    "comment_translations": {
+      "en": "Cambodian VOA available here (if border is open).",
+      "fr": "Visa de voyage cambodgien disponible ici (si la frontière est ouverte).",
+      "de": "Kambodschanische Visa bei Ankunft (VOA) hier erhältlich (sofern die Grenze geöffnet ist).",
+      "it": "VOA cambogiano disponibile qui (se il confine è aperto).",
+      "es": "VOA camboyano disponible aquí (si la frontera está abierta).",
+      "pt": "Visto cambojano disponível aqui (se a fronteira estiver aberta).",
+      "nl": "Cambodjaans visum bij aankomst is hier beschikbaar (indien de grens open is).",
+      "pl": "Kambodżańska informacja VOA dostępna tutaj (jeśli granica jest otwarta).",
+      "ru": "Камбоджийская виза по прибытии доступна здесь (если граница открыта)."
+    }
+  },
+  {
     "id": "ywqcERpxn769fEhV5s8p",
     "is_open": -1,
     "name": "Imam Nazar",
@@ -2831,7 +4394,18 @@
       "_latitude": 26.6446682,
       "_longitude": 88.1625578
     },
-    "name": "Panitanki/Kakarbhitta"
+    "name": "Panitanki/Kakarbhitta",
+    "comment_translations": {
+      "en": "As a tourist, you need to look for the immigration offices on either sides of the border, because 99.99% of the traffic is bilateral and they only need to show an ID to cross, so this is very unformal.\nHave your visa checked and carnet stamped before crossing actual border, where they'll only check for your entry/exit stamps.\nNote that the large 2-lanes highway is restricted to cars and trucks, motorcycles need to take the smaller road that runs parallel and which is congested with rickshaws.",
+      "fr": "En tant que touriste, vous devez repérer les bureaux de l'immigration de part et d'autre de la frontière, car la quasi-totalité du trafic est bilatéral et une simple pièce d'identité suffit pour passer. La procédure est donc très informelle.\n\nFaites vérifier votre visa et tamponner votre carnet de passage en douane avant de franchir la frontière. Seuls les tampons d'entrée et de sortie seront contrôlés.\n\nNotez que la grande route à deux voies est réservée aux voitures et aux camions. Les motos doivent emprunter la route parallèle, plus petite et souvent encombrée de rickshaws.",
+      "de": "Als Tourist sollten Sie die Einwanderungsbehörden auf beiden Seiten der Grenze aufsuchen, da der Verkehr zu 99,99 % bilateral ist und für die Einreise lediglich ein Ausweis benötigt wird – die Abläufe sind also sehr informell. Lassen Sie Ihr Visum und Ihr Carnet vor dem eigentlichen Grenzübertritt prüfen und abstempeln. Dort werden lediglich Ihre Ein- und Ausreisestempel kontrolliert. Beachten Sie, dass die breite, zweispurige Autobahn nur für Pkw und Lkw zugelassen ist. Motorräder müssen die parallel verlaufende, kleinere Straße benutzen, die oft von Rikschas befahren wird.",
+      "it": "Come turista, è necessario cercare gli uffici immigrazione su entrambi i lati del confine, perché il 99,99% del traffico è bilaterale e per attraversare è sufficiente mostrare un documento d'identità, quindi è molto informale.\nFate controllare il visto e timbrare il carnet prima di attraversare il confine vero e proprio, dove controlleranno solo i timbri di ingresso/uscita.\nSi noti che la grande autostrada a due corsie è riservata ad auto e camion; le motociclette devono prendere la strada parallela più piccola, congestionata dai risciò.",
+      "es": "Como turista, debe buscar las oficinas de inmigración a ambos lados de la frontera, ya que el 99,99% del tráfico es bilateral y solo necesitan mostrar una identificación para cruzar, lo cual es muy informal.\nRevise su visa y selle su carnet antes de cruzar la frontera, donde solo verificarán sus sellos de entrada y salida.\nTenga en cuenta que la autopista de dos carriles está restringida a automóviles y camiones; las motocicletas deben tomar la carretera paralela, que está congestionada por rickshaws.",
+      "pt": "Como turista, você precisa procurar os escritórios de imigração em ambos os lados da fronteira, porque 99,99% do tráfego é bilateral e eles só precisam mostrar um documento de identidade para atravessar, então é muito informal.\nVerifique seu visto e carimbe o Carnet antes de cruzar a fronteira propriamente dita, onde eles só verificarão seus carimbos de entrada/saída.\nObserve que a grande rodovia de duas faixas é restrita a carros e caminhões; as motocicletas precisam usar a estrada menor que corre paralela e que está congestionada com riquixás.",
+      "nl": "Als toerist moet je de immigratiekantoren aan beide zijden van de grens opzoeken, omdat 99,99% van het verkeer tweezijdig is en je alleen een identiteitsbewijs hoeft te laten zien om de grens over te steken, dus het is erg informeel.\n\nLaat je visum controleren en je carnet afstempelen voordat je de grens oversteekt. Daar controleren ze alleen je in- en uitreisstempels.\n\nHoud er rekening mee dat de brede tweebaansweg alleen toegankelijk is voor auto's en vrachtwagens. Motorfietsen moeten de kleinere, parallel lopende weg nemen, die vol zit met riksja's.",
+      "pl": "Jako turysta musisz szukać urzędów imigracyjnych po obu stronach granicy, ponieważ 99,99% ruchu odbywa się w obie strony i wymaga jedynie okazania dokumentu tożsamości, co jest bardzo nieformalne.\nPrzed przekroczeniem granicy sprawdź wizę i podstempluj karnet. Tam sprawdzą tylko pieczątki wjazdowe i wyjazdowe.\nPamiętaj, że duża, dwupasmowa autostrada jest przeznaczona wyłącznie dla samochodów osobowych i ciężarowych, a motocykle muszą korzystać z mniejszej, równoległej drogi, na której często jeżdżą riksze.",
+      "ru": "Туристам необходимо искать иммиграционные пункты по обе стороны границы, поскольку 99,99% движения является двусторонним, и для пересечения границы достаточно предъявить удостоверение личности, поэтому это очень неформально.\nПроверьте визу и поставьте штамп в карнете до пересечения границы, где проверят только штампы въезда/выезда.\nОбратите внимание, что большая двухполосная автомагистраль предназначена только для легковых автомобилей и грузовиков, мотоциклам необходимо ехать по меньшей дороге, которая идет параллельно и которая перегружена рикшами."
+    }
   },
   {
     "id": "zlysr78S8OIhONjFzstt",

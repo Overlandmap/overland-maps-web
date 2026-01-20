@@ -1,0 +1,341 @@
+{
+  "metadata": {
+    "generatedAt": "2026-01-20T10:32:57.216Z",
+    "totalTrackPacks": 5,
+    "editor": "GOA"
+  },
+  "trackPacks": [
+    {
+      "id": "2kGHC7VtNDJGUrdSVSIa",
+      "createdAt": {
+        "_seconds": 1716457021,
+        "_nanoseconds": 884000000
+      },
+      "editor": "GOA",
+      "email": "info@overlandaventure.com",
+      "name": "Tajikistan",
+      "online": true,
+      "region": "Central Asia",
+      "titleBlurHash": "LKHB=0%09F%1*0x]Rk%1^cR.R-oz",
+      "titlePhotoFSId": "GOA/af7b4392-2340-4a7b-ba01-497962391ab3.jpeg",
+      "vehicle": "motorbike, 4x4",
+      "website": "https://www.overlandaventure.com",
+      "otherPhotoUrls": [],
+      "type": "itineraries",
+      "latMin": 36.674251556396484,
+      "lonMax": 74.83999633789062,
+      "lonMin": 67.41144561767578,
+      "latMax": 40.55495071411133,
+      "productId": "tajikistan",
+      "offlineMap": "6FBxDAQ5URpJ60xtvDGw",
+      "offlineMap_version": 5,
+      "hillshade": "9VtINeO6dqaMUIErIzGq",
+      "hillshade_version": 1,
+      "contour_version": 1,
+      "contour": "2yqcncJ2ZS0TPr3uBIzX",
+      "titlePhotoId": "3e3e7e71-1a7e-400c-7096-930659bbdd00",
+      "mbtilesName": "",
+      "titlePhotoUrl": "https://imagedelivery.net/kLFoGYyvldGdieKRrzQmRQ/3e3e7e71-1a7e-400c-7096-930659bbdd00/public",
+      "translatedName": {
+        "fr": "Tadjikistan"
+      },
+      "price": 39.9,
+      "lastUpdate": {
+        "_seconds": 1749229441,
+        "_nanoseconds": 438000000
+      },
+      "description": "A small mountainous country in Central Asia, Tajikistan is relatively mysterious and is often confused with its \"-stan\" neighbors. Yet it is one of the most stunning destinations for overlanders, no matter their vehicle. It offers a perfect mix of spectacular landscapes and ancient history, with sun-scorched fertile plains and high plateaus dominated by eternal glaciers.\nThe Pamir Mountains and the famous Pamir Highway are often the highlight of an overlanding trip through Central Asia—and for good reason. For cyclists and motorcyclists, it’s a once-in-a-lifetime journey; for everyone else, it’s an absolute must.\nWe offer several different itineraries for exploring the Pamirs, with the M41 (the famous Pamir Highway) being just one of them. The Wakhan Valley is another well-known and relatively easy route, while the Bartang is a favorite among off-road enthusiasts seeking a challenge.\nThanks to our deep knowledge of the region, we also propose much lesser-known but equally stunning routes, such as the Shakhdara Valley and the road to Lake Zorkul. And if that’s not enough, we describe fantastic, little-used variants, ranging in difficulty depending on your vehicle.\nOf course, Tajikistan is not only about the Pamirs. The west of the country, centered around the Fann Mountains, offers superb landscapes and small mountain tracks that will delight adventure seekers.\nThroughout the itineraries, we point out the various monuments and archaeological or historical sites you’ll come across, to ensure your experience is complete — geographically, historically, and culturally.\nGear up for an unforgettable trip of epic proportions.",
+      "translatedDesc": {
+        "fr": "Petit pays montagneux d'Asie centrale, le Tadjikistan est relativement méconnu, souvent confondu avec ses voisins en \"-stan\". C’est pourtant l’une des plus belles destinations pour les overlanders, quel que soit leur véhicule. On y trouve un mélange parfait de paysages spectaculaires et d’histoire ancienne, de plaines fertiles baignées de soleil brûlant et de hauts plateaux dominés par des glaciers éternels.\nLes montagnes du Pamir et sa fameuse Pamir Highway sont souvent le point d’orgue d’un long voyage en Asie centrale — et pour de bonnes raisons. Pour les cyclistes et les motards, c’est une route à faire au moins une fois dans sa vie ; pour tous les autres, c’est un incontournable.\nNous vous proposons plusieurs itinéraires pour visiter le Pamir, dont la M41 (la fameuse Pamir Highway) n’est qu’un exemple. La vallée du Wakhan est une autre route très connue et relativement facile, tandis que la Bartang est la préférée des amateurs de tout-terrain en quête de défis.\nMais grâce à notre connaissance approfondie de la région, nous vous proposons aussi des itinéraires beaucoup moins connus mais tout aussi magnifiques : la vallée de Shakhdara et la route du lac Zorkul, entre autres. Et comme si cela ne suffisait pas, nous y ajoutons des variantes fantastiques, très peu fréquentées, plus ou moins difficiles, selon votre véhicule.\nBien sûr, le Tadjikistan ne se résume pas au Pamir. L’ouest du pays, notamment les montagnes du Fann, offre des paysages grandioses et des petites pistes de montagne qui raviront les amateurs.\nTout au long des itinéraires, nous signalons les différents monuments et sites archéologiques ou historiques que vous croiserez, afin que votre expérience soit complète — géographiquement, historiquement et culturellement.\nAlors lancez-vous : le Tadjikistan n’attend que vous."
+      },
+      "generationDate": {
+        "_nanoseconds": 199942000,
+        "_seconds": 1753291357
+      },
+      "nbItineraries": 16,
+      "updatedAt": {
+        "_seconds": 1753291432,
+        "_nanoseconds": 244622000
+      },
+      "version": 21,
+      "trackPackZip_version": 23,
+      "trackPackZip": "FctT1bye6fwELl0Y7Owy",
+      "freeItineraryZip": "NRwjzZRALifL6L9Ys7XY",
+      "freeItineraryZip_version": 22
+    },
+    {
+      "id": "Fh1H3yWIttiixo79a0Xp",
+      "createdAt": {
+        "_seconds": 1710424812,
+        "_nanoseconds": 769000000
+      },
+      "editor": "GOA",
+      "email": "info@overlandaventure.com",
+      "latMax": 26.243898391723633,
+      "latMin": 16.740997314453125,
+      "lonMax": 59.26436996459961,
+      "lonMin": 53.047218322753906,
+      "name": "Oman",
+      "online": true,
+      "otherPhotoFSIds": [
+        "GOA/173bd307-daa9-45fc-aad3-821970b5c3d8.jpeg",
+        "GOA/3d12f900-c555-46d2-b17a-43ef0ddcdca5.jpeg",
+        "GOA/1c1e5ce4-f52c-42fa-94d3-55868809ab84.jpeg",
+        "GOA/bf46004c-2e6c-4f39-b77f-5be4248aa68d.jpeg"
+      ],
+      "price": 29.9,
+      "region": "Middle-East",
+      "titleBlurHash": "LJGuaj~oX4IAMy8{9FM{0Kxa%L?b",
+      "titlePhotoFSId": "GOA/d3827c59-15ce-4054-930c-0d0416dbb9db.jpeg",
+      "translatedName": {
+        "fr": "Oman"
+      },
+      "type": "offroad",
+      "vehicle": "4x4",
+      "website": "http://www.overlandaventure.com",
+      "productId": "oman",
+      "otherPhotoIds": [
+        "6e8130b1-7345-4f78-44cd-f070b3773400",
+        "d4a39315-4a97-4a3e-5a1d-81c5f3fcf700",
+        "bcc57e45-da70-40c3-34f6-edd701287d00",
+        "b1661186-8081-4b38-27c5-bc1ddba1d300"
+      ],
+      "titlePhotoUrl": "https://imagedelivery.net/kLFoGYyvldGdieKRrzQmRQ/d1265aa2-33ea-46d7-f938-af6bd0f78c00/public",
+      "titlePhotoId": "d1265aa2-33ea-46d7-f938-af6bd0f78c00",
+      "zipSize": 198.71539199999998,
+      "zipHash": "bb8abc031e6081327b9da34b5c5c4ea6e99ac37d0d51976c39c02817635188e6",
+      "otherPhotoUrls": [
+        "https://imagedelivery.net/kLFoGYyvldGdieKRrzQmRQ/GOA/Fh1H3yWIttiixo79a0Xp/6e8130b1-7345-4f78-44cd-f070b3773400.jpg/public",
+        "https://imagedelivery.net/kLFoGYyvldGdieKRrzQmRQ/GOA/Fh1H3yWIttiixo79a0Xp/d4a39315-4a97-4a3e-5a1d-81c5f3fcf700.jpg/public",
+        "https://imagedelivery.net/kLFoGYyvldGdieKRrzQmRQ/GOA/Fh1H3yWIttiixo79a0Xp/bcc57e45-da70-40c3-34f6-edd701287d00.jpg/public",
+        "https://imagedelivery.net/kLFoGYyvldGdieKRrzQmRQ/GOA/Fh1H3yWIttiixo79a0Xp/b1661186-8081-4b38-27c5-bc1ddba1d300.jpg/public"
+      ],
+      "mbtilesName": "",
+      "lastUpdate": {
+        "_seconds": 1749363726,
+        "_nanoseconds": 550000000
+      },
+      "description": "Oman is a dream destination for travelers due to its incredible diversity, from the steep winding road of [Musandam](::Om1) to the babobas of [Dhofar](::Om21) in the far south. With its vast deserts, dramatic mountain ranges, pristine coastline, and welcoming culture, the country offers an incredible variety of landscapes and experiences—often just hours apart. Camp under the stars in the [Wahiba Sands](::Om14), drive the hairpin bends of [Jebel Shams](::Om7) for stunning canyon views, drive to the end of the world and camp on stunning beaches in [Bar al Hikman](::Om16) or follow the [coastal road](::Om18) to discover hidden wadis and turquoise pools. Oman’s well-maintained roads, open wild camping policy, and low crime rate make it one of the safest and most rewarding countries for self-drive adventures in the Middle East.",
+      "translatedDesc": {
+        "fr": "L'Oman est une destination de rêve pour les voyageurs en raison de son incroyable diversité, depuis les routes escarpées de [Musandam](::Om1) jusqu'aux baobabs du [Dhofar](::Om21) dans l'extrême sud, en passant par les champs de dunes immenses de [Rub Al-Khali](::Om23). Avec ses vastes déserts, ses chaînes montagneuses spectaculaires, son littoral immaculé et sa culture accueillante, le pays offre une variété incroyable de paysages et d'expériences, où les distances à parcourir restent modestes. Campez sous les étoiles dans les sables de [Wahiba](::Om14), parcourez les lacets du [Jebel Shams](::Om7) pour admirer des vues époustouflantes sur les canyons, partez au bout du monde sur les plages de rêve de [Bar al Hikman](::Om16) ou suivez la [route côtière](::Om18) pour découvrir des wadis cachés et des vasques turquoise pour se baigner. Les routes bien entretenues d'Oman, les possibilités infinie de camping suavages et son faible taux de criminalité en font l'un des pays les plus sûrs et les plus gratifiants pour une aventure inoubliable au Moyen-Orient."
+      },
+      "freeItineraryZip_version": 7,
+      "offlineMap": "TAYquxxUzUMBq0vVCuqm",
+      "offlineMap_version": 4,
+      "hillshade": "tXUV56NHn9sbBGF83PTM",
+      "hillshade_version": 2,
+      "generationDate": {
+        "_nanoseconds": 806868000,
+        "_seconds": 1764536394
+      },
+      "nbItineraries": 22,
+      "version": 8,
+      "updatedAt": {
+        "_seconds": 1764536744,
+        "_nanoseconds": 497448000
+      },
+      "trackPackZip": "yCPR8PQUoq5goKLYtvei",
+      "trackPackZip_version": 8,
+      "freeItineraryZip": "9HCJhw9Q0H3o6wxAdEld"
+    },
+    {
+      "id": "MKPLji4UsbEGj2Qh4XKU",
+      "createdAt": {
+        "_seconds": 1713527457,
+        "_nanoseconds": 131000000
+      },
+      "editor": "GOA",
+      "email": "info@overlandaventure.com",
+      "latMax": 43.60517501831055,
+      "latMin": 39.50251388549805,
+      "lonMax": 79.45393371582031,
+      "lonMin": 70.42051696777344,
+      "name": "Kyrgyzstan",
+      "nbItineraries": 25,
+      "online": true,
+      "price": 19.99,
+      "region": "Central Asia",
+      "titleBlurHash": "LYE{kJs.M{j?X=WEadj@A2R*oIj[",
+      "translatedDesc": {
+        "fr": "Le Kirghizstan est un pays essentiellement montagneux dans lequel la construction et l’entretien des routes sont particulièrement difficiles et reviennent très cher. Du temps de l’URSS, de nombreuses pistes avaient été construites à grands coups de pelle mécanique à travers les hautes montagnes. Beaucoup sont aujourd’hui abandonnées, praticables uniquement à pied, à cheval ou à vélo (en le portant parfois).\nEn hiver, seuls les axes principaux goudronnés et entretenus sont ouverts. Les deux principales villes, Bishkek et Osh, respectivement situées dans les plaines de la Chuy et de la Ferghana, sont reliées par une [grande route goudronnée](::K1), un axe stratégique et très fréquenté. Cette route donne accès à l'Ouzbékistan, au Pamir et, par le col d'Irkeshtam, à la Chine, ce voisin si important commercialement. Cet axe capital est entretenu toute l’année. Seule la traversée de la chaîne des Kyrgyz Ala-Too au-dessus de Bishkek peut poser problème : des chutes de neige peuvent se produire même en été, quoique la route est régulièrement déneigée.\nUn autre axe bien entretenu dessert les hauts plateaux moins peuplés du centre du pays et relie [Bishkek à Naryn](::K4) et à la Chine via le col de Torugart.\nUne route goudronnée permet d’aller de Bishkek à Karakol par la [rive nord du lac Issyk Kul](::K2). Les alentours du lac bénéficient d’un microclimat plus clément que dans le reste du pays. La route, assez bien entretenue, est donc toujours ouverte même en hiver. En revanche, la rive sud du lac est moins fréquentée, moins peuplée et la route peut être fermée temporairement.\nEn hiver, traverser le pays dans le sens ouest-est, par exemple relier Osh à Naryn, est impossible car la [seule route](::K5) qui franchit les monts Ferghana est fermée. Il faut faire un grand tour par la capitale. Le centre du pays est ainsi complètement enclavé. En pratique, le pays s’engourdit et les échanges de biens et de personnes tournent au ralenti. Afin d’améliorer la situation, un [nouvel axe de transit](::K5) est en construction entre Balykchy, Kazarman et Jalalabad. Les ingénieurs chinois ont commencé en 2018 par construire une nouvelle route et deux grands viaducs pour traverser la vallée de la Naryn, qui est malheureusement souvent obstruée par les éboulements. Inexplicablement, en 2024 le tunnel sous le col de Kök Art, qui permet d'éviter le col de Kaldama, n'était toujours pas achevé, et la route est donc largement inutilisée.\nÀ la fonte des neiges, les hauts cols deviennent enfin praticables et en été de nombreux itinéraires s’offrent à vous. Notamment, la [route](::K5) reliant Jalalabad à Naryn via Kazarman ouvre enfin. C’est un axe assez fréquenté, donc pas trop mal entretenu. Bien que très partiellement goudronné, vous pouvez l’emprunter avec un véhicule normal. Le long de cette route, vous pourrez découvrir des sites archéologiques intéressants, parfois au prix d’une grosse randonnée en montagne comme pour atteindre les gravures rupestres de [Saimaluu Tash](::K5:4).\nEn revanche, dès que vous sortez de ces grands axes, il faut un véhicule plus robuste : les ornières sont légion, des éboulis ou éboulements peuvent encombrer les pistes, et il faut pouvoir traverser des gués.\nPlusieurs itinéraires (K5, K6, K7, K11) donnent accès au très célèbre [lac Son Kul](?Son Kul), la perle bleue du Kirghizstan, l’un des sites les plus photogéniques du pays. C’est aussi une région très fréquentée en été, surtout lorsque se tient le festival des jeux équestres. Mais les alentours du lac sont vastes et vous n’aurez pas de mal à trouver un endroit calme.\nSi vous rêvez de franchir de très beaux cols dans les montagnes au pied des glaciers, dans de fantastiques déserts d’altitude et de riches pâturages fleuris, dirigez-vous vers les montagnes des Terskey Ala-Too dans les Tian Shan centrales. Un des cols les plus célèbres et les plus intéressants est celui de [Tosor](::K8) qui permet de relier le centre du pays au lac Issyk Kul. Non loin, on peut monter facilement jusqu’à 3820 m au col de [Barskoon](::K11), et de là poursuivre l’exploration au cœur des hautes montagnes ou rejoindre le centre du pays. Vous pouvez aussi explorer des régions très peu fréquentées comme les environs d’[Engilchek](::K10), la ville fantôme à l’est du pays près de la frontière chinoise (K10), ou au sud le fantastique [lac Kel Suu](::K9) en espérant qu’il ne soit pas à sec.\nSi vous êtes plutôt attirés par la baignade, rejoignez les rives d’Issyk Kul, un des plus grands lacs alpins au monde. Les routes qui en font le tour sont bonnes et si vous êtes bien équipés, de nombreuses excursions vers des sites isolés de montagne sont possibles. Ne manquez pas la splendide vallée alpine d’[Altyn Arashan](::K3) et ses célèbres sources chaudes. Si vous avez du temps et que vous voulez lier Bishkek à Almaty, ne passez pas par la route la plus courte (frontière de Qorday au nord de Bishkek) mais suivez la [rive nord du lac Issyk Kul](::K2), puis contournez la chaîne de montagnes qui forme la frontière avec le Kazakhstan par l'est. Vous découvrirez des sites exceptionnels coté kazakh (les lacs Kolsay, Kaindy et Charyn canyon).\nLe centre du pays (région de Kazarman – Baetov – Naryn) est moins montagneux et plus sec. Les paysages sont tout aussi spectaculaires, avec des reliefs colorés où se mélangent les teintes rouges, orangées et blanches. Ne ratez pas la [vallée de la Kökömeren](::K6). Les sites archéologiques sont plus nombreux qu’ailleurs dans le pays, certainement en raison d’un relief moins accentué. C’est là que se trouve le célèbre caravansérail de [Tash Rabat](::K4), l’un des mieux conservés d’Asie centrale.\nSi vous ne faites que traverser le pays par la route principale (K1) plusieurs excursions sont possibles vers des lacs comme celui de [Sary-Chelek](::K1:12) ou dans les forêts de noyers d’[Arslanbob](::K1:14). Et surtout, ne manquez pas de bivouaquer au pied du Pic Lénine, dans la région exceptionnelle des montagnes de l'Alaï.\nEnfin, les cyclistes très déterminés pourront traverser le pays quasiment sans toucher le goudron, en empruntant les anciennes pistes soviétiques partiellement détruites ou très peu fréquentées. Il s'agit du col de Kegety ou de Kök-Airyk en partant de Bishkek (voir K2), du col de Juuku (voir K3) et du col d'Ara-Bel (voir K11) entre Naryn et le lac Issyk Kul."
+      },
+      "translatedName": {
+        "fr": "Kirghizstan"
+      },
+      "type": "offroad",
+      "vehicle": "4x4, motorbike",
+      "website": "https://www.overlandaventure.com",
+      "productId": "kyrgyzstan",
+      "freeZipMd5": "YJ526UIS/LrDI4eBnTLzag==",
+      "titlePhotoFSId": "GOA/7105ec5e-a6f8-4039-9c22-49ea04aec0d7.jpeg",
+      "titlePhotoId": "cd3d3409-3291-4951-26f0-cb111b3e8700",
+      "mbtilesName": "",
+      "lastUpdate": {
+        "_seconds": 1739834045,
+        "_nanoseconds": 453000000
+      },
+      "zipMd5": "ueYy5Qw5SVf/y6N5cN05Sg==",
+      "generationDate": {
+        "_nanoseconds": 838151000,
+        "_seconds": 1744393249
+      },
+      "description": "Kyrgyzstan is a predominantly mountainous country where the construction and maintenance of roads are particularly costly and challenging. During the Soviet era, many tracks were built with heavy machinery through the high mountains. Many of these are now abandoned, only passable on foot, horseback, or bicycle (which even then might sometimes need to be carried).\nDuring the winter months, only the main paved roads remain open. The two largest cities, Bishkek and Osh, respectively located in the Chüy and Fergana valleys, are connected by a [major paved road](::K1), a strategic and very busy route. This route is crucial for trade and travel, providing access to neighbouring countries such as Uzbekistan, China via the Irkeshtam Pass, and the Pamir in Tajikistan. However, even these main roads can present challenges, especially when crossing the Kyrgyz Ala-Too range near Bishkek, where snowfall can occur unexpectedly, thankfully it is quickly cleared.\nAnother, well-maintained route links the less populated high plateaus in the centre of the country, connecting [Bishkek to Naryn](::K4) and on to China via Torugart Pass.\nAnother good road runs from Bishkek to Karakol along the [northern shore of Lake Issyk Kul](::K2). The area around the lake benefits from a milder climate than the rest of the country. Thus, the road, which is paved and well-maintained, remains open throughout the winter. However, the road that runs along the southern shore of the lake, which is less populated, can be temporarily closed.\nCrossing the country from West to East, for example from Osh to Naryn, is impossible during winter, because the only road [crossing the Fergana mountains](::K5) is closed by snow. Instead, one must take a long detour via the capital.Thus, the entire centre of the country is isolated during winter. In practice, during that time the country slows down, and commerce and personal travel grind to a halt. To improve the situation, a new highway is under construction between [Balykchy, Kazarman, and Jalalabad](::K5). In 2018, Chinese engineers started building two large viaducts to cross the Naryn valley, which will itself be submerged by a new dam, and a tunnel has been dug under the Kök Art Pass, not far from the Kaldama Pass (although as of 2023 it still isn’t open).\nAs spring arrives and the snow melts away, the high mountain passes gradually become passable, opening up a plethora of routes for adventurous souls. [K5](::K5) is an important route, so it gets the needed attention and remains in good condition. Although only partially paved, you can drive it with any vehicle. Along this road, you can visit important archaeological sites, although it sometimes requires a long mountain hike, such as reaching the rock carvings of [Saimaluu Tash](::K5:4).\nHowever, once you venture off these main routes, a more robust vehicle is necessary: ruts are deep, landslides can obstruct the tracks, and you may need to cross rivers.\nFor those seeking remote beauty, routes to iconic destinations like Son Kul Lake offer unparalleled opportunities for discovery ([K5](::K5), [K6](::K6), [K7](::K7), [K11](::K11)).The azure waters of this mountain gem attract visitors from far and wide, especially during the annual festival of equestrian games. It’s easy to find a yurt to sleep in, but you’ll also have no trouble finding a peaceful campsite anywhere on the huge grassy area around the [lake](?Song Kul).\nBeyond the beaten path, intrepid travellers can venture into the Terskey Ala-Too mountains in the central Tian Shan, where soaring peaks and untouched wilderness await. Here, Tosor Pass offers connections to the shores of Lake Issyk Kul, while the relatively unknown [Engilchek region](::K10) promises encounters with Kyrgyzstan's untamed frontier. [K11](::K11) brings you over Barskoon Pass (3820 m) and continues deep into the high mountains. You can also explore the fantastic [Kel Suu Lake](::K9), provided there is water in it.\nIf you fancy a swim, head to the shores of Issyk Kul, one of the largest alpine lakes in the world (Son Kul is far too cold for bathing). The roads around it are good, and provided that you are well-equipped, numerous excursions to isolated mountain sites are possible. Do not miss the splendid alpine valley of [Altyn Arashan](::K3) and its famous hot springs. If you have time and want to connect Bishkek to Almaty, do not take the shortest route (Qorday border north of Bishkek) but follow the [northern shore of Lake Issyk Kul](::K2), along the mountain range that forms the border with Kazakhstan to the east. You will discover exceptional sites on the Kazakh side too (lake Kolsay and Kaindy, and Charyn Canyon).\nThe central part of the country (Kazarman - Baetov - Naryn area) is arid and less mountainous. The landscapes are equally spectacular, made of colourful rocks of red, orange, and white hues. Do not miss the [Kökömeren valley](::K6). There are more archaeological sites here than elsewhere in the country, likely due to flatter terrain. This is where you'll find the famous [Tash Rabat caravanserai](::K4), one of the best-preserved in Central Asia.\nIf you are just passing through the country on the [main road](::K1), several detours are possible, such as [Lake Sary-Chelek](::K1:12) or the walnut forests of [Arslanbob](::K18:6). If you drive on after Osh, make sure to go and camp at the foot of Peak Lenin, in the spectacular Alai mountains.\nFinally, very determined cyclists can traverse the country almost without touching pavement, by taking the partially destroyed and rarely used old Soviet double-tracks. These include [Kegety](Kegety Pass) or [Kök-Airyk Pass](Kök-Airyk Pass), [Juuku Pass](Juuku Pass) (K3), and [Ara-Bel Pass](::K11:5) (K11) between Naryn and Lake Issyk Kul.",
+      "titlePhotoUrl": "https://imagedelivery.net/kLFoGYyvldGdieKRrzQmRQ/cd3d3409-3291-4951-26f0-cb111b3e8700/public",
+      "otherPhotoUrls": [],
+      "version": 23,
+      "updatedAt": {
+        "_seconds": 1744393311,
+        "_nanoseconds": 90317000
+      },
+      "offlineMap": "Kau6AdneZffSvazBHryA",
+      "offlineMap_version": 3,
+      "hillshade": "DcF0ymy8RZMW1WrrZPBe",
+      "hillshade_version": 2,
+      "contour_version": 2,
+      "contour": "BQPOlBc9MdBOufQOk13P",
+      "trackPackZip_version": 30,
+      "trackPackZip": "yMbZA6HsHdFfPU9IoIts",
+      "freeItineraryZip": "4YjqkPxKkwdJJlBW2gt2",
+      "freeItineraryZip_version": 30
+    },
+    {
+      "id": "suWHrUUD6S4ZwVdGvyPt",
+      "editor": "GOA",
+      "email": "info@himalayaoffroad.com",
+      "mbtilesName": "",
+      "name": "Ladakh",
+      "otherPhotoUrls": [],
+      "productId": "ladakh",
+      "region": "Middle-East",
+      "titleBlurHash": "LOF~guxbRjkCEYo#t7t7NhM{xuxt",
+      "titlePhotoFSId": "GOA/8bc273ec-af63-48a4-b2ab-5bf0fd69678d.jpeg",
+      "titlePhotoId": "449b155a-2c6e-4e8a-1f5f-74e1c8b00900",
+      "titlePhotoUrl": "https://imagedelivery.net/kLFoGYyvldGdieKRrzQmRQ/449b155a-2c6e-4e8a-1f5f-74e1c8b00900/public",
+      "type": "offroad",
+      "vehicle": "Motorbike",
+      "website": "https://www.himalayaoffroad.com",
+      "createdAt": {
+        "_seconds": 1710491390,
+        "_nanoseconds": 578000000
+      },
+      "description": "For many years, Ladakh has been a mythical country; nested high up in the Himalaya, inaccessible for most of the year, inhabited by the nature-loving Ladakhi who cherish their own culture. Until the 70s, when the Srinagar-Leh road was opened to civilians, Ladakh was only reachable by foot, or by plane. Then in the 90s, a new road from Manali was carved over the highest passes of the country, exceeding 5000m in altitude (16,500 ft). At that time, it was an adventure in its own right, more like an expedition. More recently, the road has been improved, resurfaced and snow-clearing equipment allows it to be open earlier in the season, in June and even May.\nThe accessibility of Ladakh has accelerated a great deal in the last few years, fueled by the necessity to be able to rush troops to the Indian border in case of trouble, and by the exponential growth of domestic tourism. In 2020, the Atal tunnel opened, shortening the trip to Ladakh by several hours and allowing Lahaul to be connected to the rest of the country year round. Despite this, the Manali-Leh highway is closed during the winter due to heavy snowfall on Baralacha La.\nMeanwhile, work has started drilling tunnels on the Srinagar-Leh highway to be able to keep it open year round. The Z-Morh tunnel (between Srinagar and Sonamarg) is expected to open in 2023 and the longer Zoji La tunnel (between Sonamarg and Kargil) will take another few years. When it opens, it will be the first time Ladakh is reachable by road during the winter.\nUnfortunately, this road runs very close to the Pakistani border, which means, as the 1999 Kargil war showed, it is easily cut off. Consequently, another project was started to build an all-weather road that would be far from the Chinese and Pakistani borders: the Darcha-Pad- um-Nimmu road, an old dream that was actually started in the 70s to offer a better link to Zanskar. In 2019, a rough road was opened over Shinku La, which was improved in 2020 with the surfacing of the Shinku La road on Darcha side. A project has been started to drill a tunnel under Shinku La, so that with the completion of the \"Chadar\" road along the Zanskar river, Leh will be reachable year-round from Himachal Pradesh side too.\nThat gives us drivers, bikers and cyclists alike three different ways to reach Ladakh, with two more alternative ways to reach Lahaul from Spiti and Sach pass. In Ladakh itself, BRO (Border Roads Organisation), the branch of the Indian army responsible for these titanic pro- jects, is also busy opening new roads to the outer reaches of the country: the Shyok-DBO road along the Tibetan border was opened in 2019 (only for military use); the road to Umling La, the highest pass in the world was built in 2017, although it's only after it was surfaced in 2021 that it became officially open to tourists. New roads are being worked on every year, e.g, the Chard Road, which opened in 2024, the new road from Hanle to Ryul Tso and the Ming La road, which when completed will become the hghest in the world.\n",
+      "offlineMap": "XZu9W0CYMJupRs5t5CYF",
+      "offlineMap_version": 1,
+      "hillshade": "1CDAo9sbyqhFxoe9APGM",
+      "hillshade_version": 1,
+      "contour_version": 1,
+      "contour": "9gw7U4WW4tczwYzzeRbO",
+      "lonMax": 79.44384002685547,
+      "latMin": 31.085987091064453,
+      "latMax": 34.94496154785156,
+      "lonMin": 74.64934539794922,
+      "online": true,
+      "zipDate": {
+        "_seconds": 1755782534,
+        "_nanoseconds": 636000000
+      },
+      "price": 0,
+      "lovesCount": 0,
+      "lastUpdate": {
+        "_seconds": 1755782534,
+        "_nanoseconds": 637000000
+      },
+      "generationDate": {
+        "_seconds": 1759208199,
+        "_nanoseconds": 544862000
+      },
+      "nbItineraries": 39,
+      "version": 17,
+      "updatedAt": {
+        "_seconds": 1759208466,
+        "_nanoseconds": 903745000
+      },
+      "trackPackZip": "GCXWd1ncsDQA2C0vnZt8",
+      "trackPackZip_version": 17,
+      "freeItineraryZip": "5reybLoACXrCEXfsvVcA",
+      "freeItineraryZip_version": 17,
+      "translatedName": {
+        "en": "Ladakh",
+        "fr": "Ladakh",
+        "de": "Ladakh",
+        "it": "Ladakh",
+        "es": "Ladakh",
+        "pt": "Ladakh",
+        "nl": "Ladakh",
+        "pl": "Ladakh",
+        "ru": "Ладакх"
+      },
+      "translatedDesc": {
+        "en": "For many years, Ladakh has been a mythical country; nested high up in the Himalaya, inaccessible for most of the year, inhabited by the nature-loving Ladakhi who cherish their own culture. Until the 70s, when the Srinagar-Leh road was opened to civilians, Ladakh was only reachable by foot, or by plane. Then in the 90s, a new road from Manali was carved over the highest passes of the country, exceeding 5000m in altitude (16,500 ft). At that time, it was an adventure in its own right, more like an expedition. More recently, the road has been improved, resurfaced and snow-clearing equipment allows it to be open earlier in the season, in June and even May.\nThe accessibility of Ladakh has accelerated a great deal in the last few years, fueled by the necessity to be able to rush troops to the Indian border in case of trouble, and by the exponential growth of domestic tourism. In 2020, the Atal tunnel opened, shortening the trip to Ladakh by several hours and allowing Lahaul to be connected to the rest of the country year round. Despite this, the Manali-Leh highway is closed during the winter due to heavy snowfall on Baralacha La.\nMeanwhile, work has started drilling tunnels on the Srinagar-Leh highway to be able to keep it open year round. The Z-Morh tunnel (between Srinagar and Sonamarg) is expected to open in 2023 and the longer Zoji La tunnel (between Sonamarg and Kargil) will take another few years. When it opens, it will be the first time Ladakh is reachable by road during the winter.\nUnfortunately, this road runs very close to the Pakistani border, which means, as the 1999 Kargil war showed, it is easily cut off. Consequently, another project was started to build an all-weather road that would be far from the Chinese and Pakistani borders: the Darcha-Pad- um-Nimmu road, an old dream that was actually started in the 70s to offer a better link to Zanskar. In 2019, a rough road was opened over Shinku La, which was improved in 2020 with the surfacing of the Shinku La road on Darcha side. A project has been started to drill a tunnel under Shinku La, so that with the completion of the \"Chadar\" road along the Zanskar river, Leh will be reachable year-round from Himachal Pradesh side too.\nThat gives us drivers, bikers and cyclists alike three different ways to reach Ladakh, with two more alternative ways to reach Lahaul from Spiti and Sach pass. In Ladakh itself, BRO (Border Roads Organisation), the branch of the Indian army responsible for these titanic pro- jects, is also busy opening new roads to the outer reaches of the country: the Shyok-DBO road along the Tibetan border was opened in 2019 (only for military use); the road to Umling La, the highest pass in the world was built in 2017, although it's only after it was surfaced in 2021 that it became officially open to tourists. New roads are being worked on every year, e.g, the Chard Road, which opened in 2024, the new road from Hanle to Ryul Tso and the Ming La road, which when completed will become the hghest in the world.\n",
+        "fr": "Pendant de nombreuses années, le Ladakh a été un pays mythique, niché au cœur de l'Himalaya, inaccessible la majeure partie de l'année, peuplé par les Ladakhis, amoureux de la nature et profondément attachés à leur culture. Jusque dans les années 1970, date d'ouverture de la route Srinagar-Leh aux civils, le Ladakh n'était accessible qu'à pied ou par avion. Puis, dans les années 1990, une nouvelle route fut tracée depuis Manali, franchissant les plus hauts cols du pays, à plus de 5 000 mètres d'altitude. À l'époque, le trajet constituait une véritable aventure, une expédition. Plus récemment, la route a été améliorée et refaite, et des engins de déneigement permettent son ouverture plus tôt dans la saison, dès juin et même mai.\n\nL'accessibilité du Ladakh s'est considérablement accrue ces dernières années, sous l'effet de la nécessité de pouvoir déployer rapidement des troupes à la frontière indienne en cas de conflit, et de la croissance exponentielle du tourisme intérieur. En 2020, l'ouverture du tunnel Atal a permis de réduire de plusieurs heures le trajet vers le Ladakh et de relier Lahaul au reste du pays toute l'année. Malgré cela, la route Manali-Leh reste fermée en hiver en raison des fortes chutes de neige au col de Baralacha La.\n\nParallèlement, des travaux de forage de tunnels ont débuté sur la route Srinagar-Leh afin de la maintenir ouverte toute l'année. Le tunnel Z-Morh (entre Srinagar et Sonamarg) devrait ouvrir en 2023, tandis que le tunnel Zoji La (entre Sonamarg et Kargil), plus long, nécessitera encore quelques années. Son ouverture permettra pour la première fois d'accéder au Ladakh par la route en hiver.\n\nMalheureusement, cette route longe la frontière pakistanaise, ce qui signifie, comme l'a montré la guerre de Kargil en 1999, qu'elle est facilement coupée. Par conséquent, un autre projet a été lancé pour construire une route praticable en toutes saisons, loin des frontières chinoise et pakistanaise : la route Darcha-Padum-Nimmu, un vieux rêve initié dans les années 70 pour améliorer la liaison avec le Zanskar. En 2019, une route rudimentaire a été ouverte au col de Shinku La, puis améliorée en 2020 avec le revêtement de la route de Shinku La côté Darcha. Un projet de forage d’un tunnel sous le col de Shinku La est en cours, afin qu’avec l’achèvement de la route « Chadar » le long du fleuve Zanskar, Leh soit accessible toute l’année depuis l’Himachal Pradesh également.\n\nAinsi, automobilistes, motards et cyclistes disposent de trois itinéraires différents pour rejoindre le Ladakh, avec deux autres possibilités d’accéder à Lahaul depuis les cols de Spiti et de Sach. Au Ladakh même, la BRO (Organisation des routes frontalières), branche de l'armée indienne chargée de ces projets titanesques, s'emploie également à ouvrir de nouvelles routes vers les régions les plus reculées du pays : la route Shyok-DBO, le long de la frontière tibétaine, a été ouverte en 2019 (uniquement à usage militaire) ; la route menant à Umling La, le plus haut col du monde, a été construite en 2017, mais n'a été officiellement ouverte aux touristes qu'après son revêtement en 2021. De nouvelles routes sont en construction chaque année, comme la route de Chard, ouverte en 2024, la nouvelle route reliant Hanle à Ryul Tso et la route de Ming La, qui, une fois achevée, deviendra la plus haute du monde.",
+        "de": "Ladakh galt lange Zeit als mythisches Land: hoch oben im Himalaya gelegen, den Großteil des Jahres unzugänglich und bewohnt von den naturverbundenen Ladakhi, die ihre Kultur pflegen. Bis in die 70er-Jahre, als die Straße Srinagar-Leh für Zivilisten geöffnet wurde, war Ladakh nur zu Fuß oder mit dem Flugzeug erreichbar. In den 90er-Jahren wurde dann eine neue Straße von Manali über die höchsten Pässe des Landes gebaut, die über 5000 Meter Höhe führt. Damals war dies ein Abenteuer für sich, eher eine Expedition. In jüngster Zeit wurde die Straße ausgebaut und neu asphaltiert, und Schneeräumgeräte ermöglichen es, sie bereits im Juni und sogar im Mai zu öffnen. Die Erreichbarkeit Ladakhs hat sich in den letzten Jahren rasant verbessert, angetrieben durch die Notwendigkeit, im Konfliktfall Truppen schnell an die indische Grenze verlegen zu können, und durch das exponentielle Wachstum des Inlandstourismus. Im Jahr 2020 wurde der Atal-Tunnel eröffnet, wodurch sich die Fahrt nach Ladakh um mehrere Stunden verkürzte und Lahaul ganzjährig mit dem Rest des Landes verbunden wurde. Trotzdem ist die Manali-Leh-Straße im Winter aufgrund starker Schneefälle am Baralacha La gesperrt. Parallel dazu haben die Arbeiten zum Bau von Tunneln entlang der Srinagar-Leh-Straße begonnen, um diese ganzjährig befahrbar zu machen. Der Z-Morh-Tunnel (zwischen Srinagar und Sonamarg) soll voraussichtlich 2023 eröffnet werden, der längere Zoji-La-Tunnel (zwischen Sonamarg und Kargil) wird noch einige Jahre in Anspruch nehmen. Nach seiner Eröffnung wird Ladakh erstmals auch im Winter über eine Straße erreichbar sein. Leider verläuft diese Straße sehr nahe an der pakistanischen Grenze, was bedeutet, dass sie – wie der Kargil-Krieg von 1999 gezeigt hat – leicht abgeschnitten werden kann. Folglich wurde ein weiteres Projekt gestartet, um eine ganzjährig befahrbare Straße fernab der chinesischen und pakistanischen Grenzen zu bauen: die Darcha-Padum-Nimmu-Straße. Dieser Traum, der bereits in den 1970er-Jahren ins Leben gerufen wurde, um eine bessere Verbindung nach Zanskar zu schaffen, wird nun verwirklicht. 2019 wurde eine unbefestigte Straße über den Shinku La eröffnet, die 2020 durch die Asphaltierung der Shinku La-Straße auf der Darcha-Seite verbessert wurde. Derzeit wird ein Tunnel unter dem Shinku La gebohrt, sodass Leh nach Fertigstellung der „Chadar“-Straße entlang des Zanskar-Flusses auch von Himachal Pradesh aus ganzjährig erreichbar sein wird.\nDamit stehen Autofahrern, Motorradfahrern und Radfahrern drei verschiedene Wege nach Ladakh zur Verfügung, sowie zwei weitere alternative Routen von Spiti und dem Sach-Pass nach Lahaul. In Ladakh selbst arbeitet die BRO (Border Roads Organisation), der für diese gigantischen Projekte zuständige Zweig der indischen Armee, ebenfalls eifrig am Bau neuer Straßen in die entlegensten Gebiete des Landes: Die Shyok-DBO-Straße entlang der tibetischen Grenze wurde 2019 eröffnet (bisher nur für militärische Zwecke); die Straße zum Umling La, dem höchsten Pass der Welt, wurde 2017 gebaut, aber erst nach ihrer Fertigstellung im Jahr 2021 offiziell für Touristen freigegeben. Jedes Jahr werden neue Straßen gebaut, z. B. die Chard-Straße, die 2024 eröffnet wurde, die neue Straße von Hanle nach Ryul Tso und die Ming-La-Straße, die nach ihrer Fertigstellung die höchste Straße der Welt sein wird.\n\n",
+        "it": "Per molti anni, il Ladakh è stato un paese mitico; incastonato nelle vette dell'Himalaya, inaccessibile per gran parte dell'anno, abitato da ladakhi amanti della natura e della propria cultura. Fino agli anni '70, quando la strada Srinagar-Leh fu aperta ai civili, il Ladakh era raggiungibile solo a piedi o in aereo. Poi, negli anni '90, fu aperta una nuova strada da Manali che attraversava i passi più alti del paese, superando i 5000 metri di altitudine (16.500 piedi). All'epoca, era un'avventura a sé stante, più simile a una spedizione. Più recentemente, la strada è stata migliorata, riasfaltata e dotata di attrezzature per lo sgombero della neve che ne consentono l'apertura anticipata nella stagione, a giugno e persino a maggio.\nL'accessibilità del Ladakh ha subito una notevole accelerazione negli ultimi anni, alimentata dalla necessità di poter inviare rapidamente le truppe al confine indiano in caso di problemi e dalla crescita esponenziale del turismo interno. Nel 2020 è stato inaugurato il tunnel Atal, accorciando di diverse ore il viaggio verso il Ladakh e consentendo a Lahaul di essere collegata al resto del paese tutto l'anno. Ciononostante, l'autostrada Manali-Leh è chiusa durante l'inverno a causa delle forti nevicate sul Baralacha La.\nNel frattempo, sono iniziati i lavori di perforazione dei tunnel sull'autostrada Srinagar-Leh per mantenerla aperta tutto l'anno. L'apertura del tunnel Z-Morh (tra Srinagar e Sonamarg) è prevista per il 2023, mentre il tunnel più lungo Zoji La (tra Sonamarg e Kargil) richiederà ancora qualche anno. Quando aprirà, sarà la prima volta che il Ladakh sarà raggiungibile su strada durante l'inverno.\nPurtroppo, questa strada corre molto vicina al confine con il Pakistan, il che significa, come ha dimostrato la guerra di Kargil del 1999, che è facilmente interdetta. Di conseguenza, è stato avviato un altro progetto per costruire una strada adatta a tutte le condizioni atmosferiche, lontana dai confini con Cina e Pakistan: la strada Darcha-Padum-Nimmu, un vecchio sogno che in realtà era nato negli anni '70 per offrire un collegamento migliore con lo Zanskar. Nel 2019 è stata aperta una strada dissestata sopra Shinku La, che è stata migliorata nel 2020 con la pavimentazione della strada Shinku La sul lato Darcha. È stato avviato un progetto per scavare un tunnel sotto Shinku La, in modo che, con il completamento della strada \"Chadar\" lungo il fiume Zanskar, Leh sarà raggiungibile tutto l'anno anche dal lato dell'Himachal Pradesh.\nQuesto offre a noi automobilisti, motociclisti e ciclisti tre modi diversi per raggiungere il Ladakh, con altri due modi alternativi per raggiungere Lahaul dai passi Spiti e Sach. Nello stesso Ladakh, la BRO (Border Roads Organisation), il ramo dell'esercito indiano responsabile di questi progetti titanici, è impegnata anche nell'apertura di nuove strade verso le zone più remote del paese: la strada Shyok-DBO lungo il confine tibetano è stata aperta nel 2019 (solo per uso militare); la strada per Umling La, il passo più alto del mondo, è stata costruita nel 2017, anche se è solo dopo la sua asfaltatura nel 2021 che è diventata ufficialmente aperta al turismo. Ogni anno si lavorano nuove strade, ad esempio la Chard Road, inaugurata nel 2024, la nuova strada da Hanle a Ryul Tso e la strada Ming La, che una volta completata diventerà la più alta del mondo.",
+        "es": "Durante muchos años, Ladakh ha sido un país mítico; enclavado en lo alto del Himalaya, inaccesible la mayor parte del año, habitado por los ladakhíes, amantes de la naturaleza y de su propia cultura. Hasta la década de 1970, cuando se abrió al público la carretera Srinagar-Leh, solo se podía llegar a Ladakh a pie o en avión. Posteriormente, en la década de 1990, se construyó una nueva carretera desde Manali que cruzaba los pasos más altos del país, superando los 5000 m de altitud (16 500 pies). En aquel entonces, era una aventura en sí misma, más parecida a una expedición. Recientemente, la carretera ha sido mejorada, repavimentada y el equipo de limpieza de nieve permite que esté abierta a principios de la temporada, en junio e incluso mayo.\nLa accesibilidad a Ladakh se ha acelerado considerablemente en los últimos años, impulsada por la necesidad de poder enviar tropas urgentemente a la frontera con la India en caso de problemas, y por el crecimiento exponencial del turismo interno. En 2020, se inauguró el túnel Atal, acortando el viaje a Ladakh en varias horas y permitiendo que Lahaul esté conectada con el resto del país durante todo el año. A pesar de ello, la carretera Manali-Leh permanece cerrada durante el invierno debido a las fuertes nevadas en Baralacha La.\nMientras tanto, se han iniciado las obras de perforación de túneles en la carretera Srinagar-Leh para mantenerla abierta todo el año. Se espera que el túnel Z-Morh (entre Srinagar y Sonamarg) se inaugure en 2023, y el túnel Zoji La, más largo (entre Sonamarg y Kargil), tardará algunos años más. Cuando se inaugure, será la primera vez que se pueda acceder a Ladakh por carretera durante el invierno.\nLamentablemente, esta carretera discurre muy cerca de la frontera con Pakistán, lo que significa que, como demostró la guerra de Kargil de 1999, es fácilmente inaccesible. En consecuencia, se inició otro proyecto para construir una carretera transitable todo el año lejos de las fronteras con China y Pakistán: la carretera Darcha-Padum-Nimmu, un viejo sueño que nació en la década de 1970 para ofrecer una mejor conexión con Zanskar. En 2019, se inauguró una carretera en mal estado sobre Shinku La, que se mejoró en 2020 con la pavimentación de la carretera de Shinku La en el lado de Darcha. Se ha iniciado un proyecto para perforar un túnel bajo Shinku La, de modo que, con la finalización de la carretera \"Chadar\" a lo largo del río Zanskar, Leh será accesible durante todo el año también desde el lado de Himachal Pradesh.\nEsto nos ofrece a conductores, ciclistas y ciclistas tres maneras diferentes de llegar a Ladakh, con dos alternativas más para llegar a Lahaul desde Spiti y el paso de Sach. En Ladakh, la Organización de Carreteras Fronterizas (BRO), la rama del ejército indio responsable de estos proyectos titánicos, también está ocupada abriendo nuevas carreteras hacia las zonas más alejadas del país: la carretera Shyok-DBO, a lo largo de la frontera tibetana, se inauguró en 2019 (solo para uso militar); la carretera a Umling La, el paso más alto del mundo, se construyó en 2017, aunque solo tras su pavimentación en 2021 se abrió oficialmente al turismo. Cada año se construyen nuevas carreteras, como la carretera Chard, inaugurada en 2024, la nueva carretera de Hanle a Ryul Tso y la carretera Ming La, que, una vez finalizada, se convertirá en la más alta del mundo.",
+        "pt": "Durante muitos anos, Ladakh foi um país mítico; aninhado no alto do Himalaia, inacessível durante a maior parte do ano, habitado pelos ladakhi, amantes da natureza que prezam sua própria cultura. Até a década de 70, quando a estrada Srinagar-Leh foi aberta aos civis, Ladakh só era acessível a pé ou de avião. Então, na década de 90, uma nova estrada de Manali foi construída sobre os passos mais altos do país, ultrapassando os 5.000 metros de altitude (16.500 pés). Naquela época, era uma aventura por si só, mais como uma expedição. Mais recentemente, a estrada foi melhorada, recapeada e o equipamento de remoção de neve permite que ela seja aberta mais cedo na temporada, em junho e até mesmo em maio.\nA acessibilidade de Ladakh acelerou muito nos últimos anos, impulsionada pela necessidade de poder enviar tropas rapidamente para a fronteira indiana em caso de problemas e pelo crescimento exponencial do turismo interno. Em 2020, o túnel Atal foi inaugurado, encurtando a viagem para Ladakh em várias horas e permitindo que Lahaul ficasse conectada ao resto do país durante todo o ano. Apesar disso, a rodovia Manali-Leh fica fechada durante o inverno devido à forte queda de neve em Baralacha La.\nEnquanto isso, começaram as obras de perfuração de túneis na rodovia Srinagar-Leh para que ela possa permanecer aberta durante todo o ano. O túnel Z-Morh (entre Srinagar e Sonamarg) deve ser inaugurado em 2023 e o túnel Zoji La, mais longo (entre Sonamarg e Kargil), levará mais alguns anos. Quando for inaugurado, será a primeira vez que Ladakh poderá ser acessado por estrada durante o inverno.\nInfelizmente, essa estrada passa muito perto da fronteira com o Paquistão, o que significa que, como mostrou a guerra de Kargil em 1999, ela pode ser facilmente isolada. Consequentemente, outro projeto foi iniciado para construir uma estrada transitável em qualquer clima, que ficasse longe das fronteiras chinesas e paquistanesas: a estrada Darcha-Padum-Nimmu, um antigo sonho que, na verdade, começou na década de 70 para oferecer uma melhor ligação com Zanskar. Em 2019, uma estrada precária foi aberta sobre Shinku La, que foi melhorada em 2020 com o asfaltamento da estrada Shinku La no lado de Darcha. Um projeto foi iniciado para perfurar um túnel sob Shinku La, de modo que, com a conclusão da estrada \"Chadar\" ao longo do rio Zanskar, Leh também será acessível durante todo o ano a partir do lado de Himachal Pradesh.\nIsso nos dá, motoristas, motociclistas e ciclistas, três maneiras diferentes de chegar a Ladakh, com mais duas alternativas para chegar a Lahaul a partir de Spiti e do passo de Sach. Na própria região de Ladakh, a BRO (Organização de Estradas de Fronteira), o ramo do exército indiano responsável por esses projetos gigantescos, também está ocupada abrindo novas estradas para as áreas mais remotas do país: a estrada Shyok-DBO ao longo da fronteira tibetana foi inaugurada em 2019 (apenas para uso militar); a estrada para Umling La, o passo mais alto do mundo, foi construída em 2017, embora só tenha sido pavimentada em 2021 que se tornou oficialmente aberta aos turistas. Novas estradas estão sendo construídas todos os anos, por exemplo, a Chard Road, que foi inaugurada em 2024, a nova estrada de Hanle para Ryul Tso e a estrada Ming La, que, quando concluída, se tornará a mais alta do mundo.\n",
+        "nl": "Ladakh is jarenlang een mythisch land geweest; hoog in de Himalaya gelegen, het grootste deel van het jaar ontoegankelijk, bewoond door de natuurminnende Ladakhi die hun eigen cultuur koesteren. Tot de jaren 70, toen de weg tussen Srinagar en Leh werd opengesteld voor burgers, was Ladakh alleen te voet of per vliegtuig bereikbaar. In de jaren 90 werd een nieuwe weg aangelegd vanuit Manali over de hoogste passen van het land, boven de 5000 meter. Destijds was het een avontuur op zich, meer een expeditie. Recentelijk is de weg verbeterd, opnieuw geasfalteerd en dankzij sneeuwruimingsapparatuur kan deze nu al eerder in het seizoen, in juni en zelfs mei, worden geopend.\nDe bereikbaarheid van Ladakh is de afgelopen jaren enorm verbeterd, aangewakkerd door de noodzaak om troepen snel naar de Indiase grens te kunnen sturen in geval van problemen, en door de exponentiële groei van het binnenlands toerisme. In 2020 werd de Atal-tunnel geopend, waardoor de reis naar Ladakh met enkele uren werd verkort en Lahaul het hele jaar door met de rest van het land verbonden kon worden. Desondanks is de snelweg Manali-Leh in de winter gesloten vanwege de zware sneeuwval op de Baralacha La.\nOndertussen is men begonnen met het boren van tunnels op de snelweg Srinagar-Leh om deze het hele jaar door open te kunnen houden. De Z-Morh-tunnel (tussen Srinagar en Sonamarg) zal naar verwachting in 2023 openen en de langere Zoji La-tunnel (tussen Sonamarg en Kargil) zal nog een paar jaar op zich laten wachten. Wanneer deze tunnels openen, zal Ladakh voor het eerst in de winter over de weg bereikbaar zijn.\n\nHelaas loopt deze weg zeer dicht langs de Pakistaanse grens, wat betekent dat, zoals de Kargil-oorlog van 1999 aantoonde, de verbinding gemakkelijk kan worden verbroken. Als gevolg hiervan werd een ander project gestart om een weg aan te leggen die het hele jaar door begaanbaar is en ver van de Chinese en Pakistaanse grens ligt: de Darcha-Padum-Nimmu-weg, een oude droom die eigenlijk al in de jaren 70 begon om een betere verbinding met Zanskar te bieden. In 2019 werd een onverharde weg over Shinku La geopend, die in 2020 werd verbeterd met de verharding van de Shinku La-weg aan de Darcha-kant. Er is een project gestart om een tunnel onder Shinku La te boren, zodat Leh, met de voltooiing van de \"Chadar\"-weg langs de Zanskar-rivier, ook het hele jaar door bereikbaar zal zijn vanuit Himachal Pradesh.\nDat geeft ons, automobilisten, motorrijders en fietsers, drie verschillende manieren om Ladakh te bereiken, met nog twee alternatieve routes naar Lahaul vanuit Spiti en de Sach-pas. In Ladakh zelf is de BRO (Border Roads Organisation), de tak van het Indiase leger die verantwoordelijk is voor deze gigantische projecten, ook druk bezig met het aanleggen van nieuwe wegen naar de afgelegen gebieden van het land: de Shyok-DBO-weg langs de Tibetaanse grens werd in 2019 geopend (alleen voor militair gebruik); de weg naar Umling La, de hoogste pas ter wereld, werd in 2017 aangelegd, hoewel deze pas na de asfaltering in 2021 officieel open werd gesteld voor toeristen. Er wordt elk jaar gewerkt aan nieuwe wegen, zoals de Chard Road, die in 2024 werd geopend, de nieuwe weg van Hanle naar Ryul Tso en de Ming La-weg, die na voltooiing de hoogste ter wereld zal zijn.\n\n",
+        "pl": "Przez wiele lat Ladakh był mitycznym krajem; położonym wysoko w Himalajach, niedostępnym przez większość roku, zamieszkanym przez kochających naturę Ladakhów, którzy pielęgnują swoją kulturę. Do lat 70., kiedy droga Srinagar-Leh została otwarta dla cywilów, do Ladakhu można było dotrzeć tylko pieszo lub samolotem. Następnie, w latach 90., wytyczono nową drogę z Manali, prowadzącą przez najwyższe przełęcze kraju, przekraczające 5000 m n.p.m. (16 500 stóp). Wówczas była to prawdziwa przygoda, niczym wyprawa. Niedawno droga została ulepszona, odnowiona, a sprzęt do odśnieżania pozwala na jej wcześniejsze otwarcie w sezonie, w czerwcu, a nawet maju.\nDostępność Ladakhu znacznie wzrosła w ciągu ostatnich kilku lat, napędzana koniecznością szybkiego przerzutu wojsk na granicę z Indiami w razie problemów oraz gwałtownym wzrostem turystyki krajowej. W 2020 roku otwarto tunel Atal, skracając podróż do Ladakhu o kilka godzin i umożliwiając Lahaulowi połączenie z resztą kraju przez cały rok. Mimo to autostrada Manali-Leh jest zamknięta zimą z powodu obfitych opadów śniegu na Baralacha La.\nW międzyczasie rozpoczęto prace nad drążeniem tuneli na autostradzie Srinagar-Leh, aby umożliwić jej całoroczne funkcjonowanie. Otwarcie tunelu Z-Morh (pomiędzy Srinagarem a Sonamargiem) planowane jest na 2023 rok, a budowa dłuższego tunelu Zoji La (pomiędzy Sonamargiem a Kargilem) potrwa kolejne kilka lat. Po jego otwarciu Ladakh będzie po raz pierwszy możliwy dojazd drogą lądową zimą.\nNiestety, droga ta biegnie bardzo blisko granicy z Pakistanem, co oznacza, jak pokazała wojna w Kargil w 1999 roku, że jest ona łatwo odcięta. W związku z tym rozpoczęto kolejny projekt budowy całorocznej drogi, która miałaby przebiegać z dala od granic Chin i Pakistanu: Darcha-Padum-Nimmu. To marzenie zrodziło się już w latach 70. XX wieku, aby zapewnić lepsze połączenie z Zanskarem. W 2019 roku otwarto drogę gruntową nad Shinku La, którą w 2020 roku ulepszono, kładąc nawierzchnię drogi Shinku La po stronie Darchy. Rozpoczęto również projekt budowy tunelu pod Shinku La, dzięki czemu po ukończeniu drogi „Chadar” wzdłuż rzeki Zanskar, Leh będzie dostępny przez cały rok również od strony Himachal Pradesh. Daje to kierowcom, rowerzystom i rowerzystom trzy różne sposoby dotarcia do Ladakhu, a także dwie alternatywne drogi do Lahaul ze Spiti i przełęczy Sach. W samym Ladakhu BRO (Border Roads Organisation), oddział indyjskiej armii odpowiedzialny za te tytaniczne projekty, również aktywnie otwiera nowe drogi na obrzeża kraju: droga Shyok-DBO wzdłuż granicy tybetańskiej została otwarta w 2019 roku (wyłącznie do użytku wojskowego); droga do Umling La, najwyższej przełęczy na świecie, została zbudowana w 2017 roku, choć dopiero po jej odsłonięciu w 2021 roku została oficjalnie otwarta dla turystów. Co roku trwają prace nad nowymi drogami, np. nad drogą Chard, która została otwarta w 2024 roku, nową drogą z Hanle do Ryul Tso i drogą Ming La, która po ukończeniu stanie się najwyższą drogą na świecie.",
+        "ru": "На протяжении многих лет Ладакх был мифической страной; расположенный высоко в Гималаях, недоступный большую часть года, населенный любящими природу ладакхцами, которые бережно хранят свою культуру. До 70-х годов, когда дорога Сринагар-Лех была открыта для гражданского населения, в Ладакх можно было добраться только пешком или на самолете. Затем, в 90-х годах, была проложена новая дорога из Манали через самые высокие перевалы страны, превышающие 5000 метров (16 500 футов). В то время это было само по себе приключением, скорее похоже на экспедицию. Совсем недавно дорога была улучшена, отремонтирована, а снегоуборочная техника позволяет открывать ее раньше в сезоне, в июне и даже мае.\nДоступность Ладакха значительно возросла за последние несколько лет, чему способствовала необходимость оперативной доставки войск к индийской границе в случае возникновения проблем, а также экспоненциальный рост внутреннего туризма. В 2020 году открылся туннель Атал, сокративший время в пути до Ладакха на несколько часов и позволивший круглый год связывать Лахаул с остальной частью страны. Несмотря на это, трасса Манали-Лех закрыта зимой из-за сильных снегопадов на перевале Баралача Ла.\nТем временем начались работы по бурению туннелей на трассе Сринагар-Лех, чтобы обеспечить ее круглогодичное движение. Ожидается, что туннель З-Морх (между Сринагаром и Сонамаргом) откроется в 2023 году, а более длинный туннель Зоджи Ла (между Сонамаргом и Каргилом) откроется еще через несколько лет. После его открытия Ладакх впервые станет доступен по дороге зимой.\nК сожалению, эта дорога проходит очень близко к пакистанской границе, а это значит, как показала Каргильская война 1999 года, что ее легко перекрыть. В результате был начат еще один проект по строительству всепогодной дороги, которая находилась бы вдали от китайской и пакистанской границ: дорога Дарча-Падум-Нимму, давняя мечта, которая фактически зародилась еще в 70-х годах, чтобы обеспечить лучшее сообщение с Занскаром. В 2019 году была открыта грунтовая дорога через перевал Шинку Ла, которая была улучшена в 2020 году с укладкой асфальта на дороге Шинку Ла со стороны Дарчи. Начался проект по бурению туннеля под перевалом Шинку Ла, так что после завершения строительства дороги «Чадар» вдоль реки Занскар, Лех станет доступен круглый год и со стороны Химачал-Прадеша.\nЭто дает нам, водителям, мотоциклистам и велосипедистам, три разных способа добраться до Ладакха, а также два дополнительных альтернативных пути в Лахаул со стороны Спити и перевала Сач. В самом Ладакхе BRO (Организация по строительству приграничных дорог), подразделение индийской армии, ответственное за эти грандиозные проекты, также занято открытием новых дорог на окраины страны: дорога Шайок-DBO вдоль тибетской границы была открыта в 2019 году (только для военного использования); дорога к перевалу Умлинг-Ла, самому высокому перевалу в мире, была построена в 2017 году, хотя официально для туристов она была открыта только после того, как ее заасфальтировали в 2021 году. Новые дороги строятся каждый год, например, дорога Чард, открытая в 2024 году, новая дорога от Ханле до озера Рюл-Цо и дорога Минг-Ла, которая после завершения строительства станет самой высокой в мире.\n\n"
+      }
+    },
+    {
+      "id": "uisU0mliXUGARtjlVVZM",
+      "createdAt": {
+        "_seconds": 1678984065,
+        "_nanoseconds": 438000000
+      },
+      "editor": "GOA",
+      "email": "info@overlandaventure.com",
+      "latMax": 50.654206993058324,
+      "latMin": 45.807112818583846,
+      "lonMax": 106.9162739161402,
+      "lonMin": 89.46393337100744,
+      "name": "Mongolia",
+      "nbItineraries": 26,
+      "online": true,
+      "price": 19.99,
+      "productId": "mongolia",
+      "region": "North Asia",
+      "titleBlurHash": "LTDTk%jGRQjYXrWVR*ayH;t6kCkC",
+      "translatedDesc": {
+        "fr": "Vous rêvez d’immensité et de liberté, de steppes verdoyantes, de lacs émeraude, de dunes de sables dorés, d’oasis perdues dans le désert de Gobi ? Vous avez envie de marcher sur les traces du grand Gengis Khan, jouer à l’explorateur, découvrir de mystérieux vestiges archéologiques et des fossiles de dinosaures. Vous voulez rencontrer des peuples nomades aux traditions millénaires préservés de la modernité et à l’hospitalité si généreuse. Ce guide est là pour vous aider à planifier votre voyage en Mongolie et vous emmener à la découverte des endroits les plus connus mais aussi les plus insolites du pays."
+      },
+      "translatedName": {
+        "fr": "Mongolie"
+      },
+      "type": "offroad",
+      "vehicle": "any",
+      "website": "https://www.overlandaventure.com/produit/mongolie/",
+      "otherPhotoUrls": [],
+      "titlePhotoFSId": "GOA/725739b9-f7d4-4da7-9f3a-b12ea84a84ce.jpeg",
+      "titlePhotoId": "b6c30d4f-895f-43ab-7a75-56f260136a00",
+      "mbtilesName": "",
+      "titlePhotoUrl": "https://imagedelivery.net/kLFoGYyvldGdieKRrzQmRQ/b6c30d4f-895f-43ab-7a75-56f260136a00/public",
+      "lastUpdate": {
+        "_seconds": 1744394383,
+        "_nanoseconds": 682000000
+      },
+      "description": "Imagine the vastness and freedom of rolling green steppes, emerald lakes, golden sand dunes and lost oases of the Gobi Desert. Perhaps you'd like to follow in the footsteps of the great Genghis Khan, explore mysterious archaeological remains and dinosaur fossils; meet nomadic peoples whose millennia-old traditions have been preserved from modernity, and whose hospitality is so generous. This guide is here to help you plan your trip to Mongolia, and to take you on a tour of the country's best-known and to the most unusual places.",
+      "version": 36,
+      "updatedAt": {
+        "_seconds": 1747645795,
+        "_nanoseconds": 346973000
+      },
+      "generationDate": {
+        "_nanoseconds": 322967000,
+        "_seconds": 1749368994
+      },
+      "offlineMap": "Lk7xmYuOvAmQrKa0e2sC",
+      "offlineMap_version": 2,
+      "hillshade": "EFG0eigngghFEfI6rmjX",
+      "hillshade_version": 2,
+      "contour_version": 4,
+      "contour": "12wVB1LVLUJywh3SutXJ",
+      "trackPackZip_version": 42,
+      "trackPackZip": "XFhBvbVy7ZM0Jw4N2vML",
+      "freeItineraryZip_version": 42,
+      "freeItineraryZip": "a8xtD5mNfgCN9TEEu5bz",
+      "pmtilesMap_version": 5,
+      "pmtilesMap": "PNSR1Rb2hWxc9rJYpBMo"
+    }
+  ]
+}

@@ -7,7 +7,7 @@
   "sources": {
     "planet": {
       "type": "vector",
-      "url": "pmtiles://https://overlanding.io/planet.pmtiles",
+      "tiles": ["https://pmtiles-cloudflare.overlandmap.workers.dev/planet/{z}/{x}/{y}.mvt"],
       "minzoom": 0,
       "maxzoom": 13
     },

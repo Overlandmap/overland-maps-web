@@ -4,84 +4,216 @@
     "type": 0,
     "name": "Nagorno Karabakh",
     "country": "AZE",
-    "comment": "The Nagorno Karabakh region was regained from Armenia during the 2023 war. It's not clear if any part of it is open to tourism."
+    "comment": "The Nagorno Karabakh region was regained from Armenia during the 2023 war. It's not clear if any part of it is open to tourism.",
+    "comment_translations": {
+      "en": "The Nagorno Karabakh region was regained from Armenia during the 2023 war. It's not clear if any part of it is open to tourism.",
+      "fr": "La région du Haut-Karabakh a été reconquise sur l'Arménie lors de la guerre de 2023. On ignore si une partie de cette région est ouverte au tourisme.",
+      "de": "Die Region Bergkarabach wurde im Krieg von 2023 von Armenien zurückerobert. Es ist unklar, ob Teile davon für den Tourismus zugänglich sind.",
+      "it": "La regione del Nagorno Karabakh è stata riconquistata dall'Armenia durante la guerra del 2023. Non è chiaro se una parte di essa sia aperta al turismo.",
+      "es": "La región de Nagorno Karabaj fue recuperada de Armenia durante la guerra de 2023. No está claro si alguna parte de ella está abierta al turismo.",
+      "pt": "A região de Nagorno-Karabakh foi retomada da Armênia durante a guerra de 2023. Não está claro se alguma parte dela está aberta ao turismo.",
+      "nl": "De regio Nagorno-Karabach werd tijdens de oorlog van 2023 heroverd op Armenië. Het is onduidelijk of een deel ervan openstaat voor toerisme.",
+      "pl": "Region Górskiego Karabachu został odbity od Armenii podczas wojny w 2023 roku. Nie jest jasne, czy jakakolwiek jego część jest dostępna dla turystów.",
+      "ru": "Нагорно-Карабахский регион был отвоеван у Армении во время войны 2023 года. Неясно, открыта ли какая-либо его часть для туризма."
+    }
   },
   "cn-tibet": {
     "id": "cn-tibet",
     "type": 1,
     "name": "Tibet",
     "country": "CHN",
-    "comment": "Foreigners need a guide to visit Tibet (the Tibet Autonomous Region). It's not allowed to travel on your own."
+    "comment": "Foreigners need a guide to visit Tibet (the Tibet Autonomous Region). It's not allowed to travel on your own.",
+    "comment_translations": {
+      "en": "Foreigners need a guide to visit Tibet (the Tibet Autonomous Region). It's not allowed to travel on your own.",
+      "fr": "Les étrangers doivent être accompagnés d'un guide pour visiter le Tibet (Région autonome du Tibet). Il est interdit de voyager seul.",
+      "de": "Ausländer benötigen für einen Besuch in Tibet (Autonome Region Tibet) einen Reiseführer. Alleinreisen sind nicht gestattet.",
+      "it": "Gli stranieri hanno bisogno di una guida per visitare il Tibet (Regione Autonoma del Tibet). Non è consentito viaggiare da soli.",
+      "es": "Los extranjeros necesitan un guía para visitar el Tíbet (Región Autónoma del Tíbet). No está permitido viajar solos.",
+      "pt": "Estrangeiros precisam de um guia para visitar o Tibete (Região Autônoma do Tibete). Não é permitido viajar por conta própria.",
+      "nl": "Buitenlanders hebben een gids nodig om Tibet (de Autonome Regio Tibet) te bezoeken. Het is niet toegestaan om er op eigen houtje te reizen.",
+      "pl": "Cudzoziemcy potrzebują przewodnika, aby odwiedzić Tybet (Tybetański Region Autonomiczny). Podróżowanie samemu jest zabronione.",
+      "ru": "Иностранцам для посещения Тибета (Тибетского автономного района) необходим гид. Самостоятельное путешествие запрещено."
+    }
   },
   "dz-sahara": {
     "id": "dz-sahara",
     "type": 1,
     "name": "South Algeria",
     "country": "DZA",
-    "comment": "A military escort and a guide is required to travel in the region of Tamanrasset and Djanet.\nAlso, an authorization is needed to travel to the border with Mauritania/SADR."
+    "comment": "A military escort and a guide is required to travel in the region of Tamanrasset and Djanet.\nAlso, an authorization is needed to travel to the border with Mauritania/SADR.",
+    "comment_translations": {
+      "en": "A military escort and a guide is required to travel in the region of Tamanrasset and Djanet.\nAlso, an authorization is needed to travel to the border with Mauritania/SADR.",
+      "fr": "Une escorte militaire et un guide sont requis pour se déplacer dans la région de Tamanrasset et Djanet.\n\nUne autorisation est également nécessaire pour se rendre à la frontière avec la Mauritanie/RASD.",
+      "de": "Für Reisen in die Region Tamanrasset und Djanet ist eine militärische Eskorte und ein Führer erforderlich.\nZudem wird für Reisen zur Grenze nach Mauretanien/SADR eine Genehmigung benötigt.",
+      "it": "Per viaggiare nella regione di Tamanrasset e Djanet è necessaria una scorta militare e una guida.\nÈ inoltre necessaria un'autorizzazione per recarsi al confine con la Mauritania/RASD.",
+      "es": "Se requiere escolta militar y guía para viajar por la región de Tamanrasset y Djanet. También se necesita autorización para viajar a la frontera con Mauritania/RASD.",
+      "pt": "É necessário um acompanhamento militar e um guia para viajar na região de Tamanrasset e Djanet.\nAlém disso, é necessária uma autorização para viajar até a fronteira com a Mauritânia/RASD.",
+      "nl": "Een militaire escorte en een gids zijn vereist om in de regio Tamanrasset en Djanet te reizen.\n\nOok is een vergunning nodig om naar de grens met Mauritanië/SADR te reizen.",
+      "pl": "Podróżowanie po regionie Tamanrasset i Dżanet wymaga eskorty wojskowej i przewodnika. Wymagane jest również zezwolenie na podróż do granicy z Mauretanią/SADR.",
+      "ru": "Для передвижения по региону Таманрассет и Джанет требуется военное сопровождение и проводник.\nКроме того, для поездки к границе с Мавританией/САДР необходимо разрешение."
+    }
   },
   "eg-sinai": {
     "id": "eg-sinai",
     "type": 0,
     "name": "Sinai",
     "country": "EGY",
-    "comment": "It's forbidden to cross Sinai with a 4x4 or a motorcycle. So that means it's closed for most overlanders."
+    "comment": "It's forbidden to cross Sinai with a 4x4 or a motorcycle. So that means it's closed for most overlanders.",
+    "comment_translations": {
+      "en": "It's forbidden to cross Sinai with a 4x4 or a motorcycle. So that means it's closed for most overlanders.",
+      "fr": "Il est interdit de traverser le Sinaï en 4x4 ou à moto. Cela signifie donc qu'il est fermé à la plupart des voyageurs au long cours.",
+      "de": "Die Durchquerung des Sinai mit Geländewagen oder Motorrädern ist verboten. Das bedeutet, dass die Region für die meisten Reisenden, die mit dem Auto unterwegs sind, gesperrt ist.",
+      "it": "È vietato attraversare il Sinai con un fuoristrada o una motocicletta. Questo significa che è vietato alla maggior parte dei viaggiatori via terra.",
+      "es": "Está prohibido cruzar el Sinaí en 4x4 o motocicleta. Eso significa que está cerrado para la mayoría de los viajeros.",
+      "pt": "É proibido atravessar o Sinai com um veículo 4x4 ou uma motocicleta. Isso significa que está fechado para a maioria dos viajantes.",
+      "nl": "Het is verboden om met een 4x4 of een motorfiets de Sinaï over te steken. Dat betekent dus dat de route voor de meeste offroad-reizigers gesloten is.",
+      "pl": "Przejazd przez Synaj samochodem z napędem na cztery koła i motocyklem jest zabroniony. Oznacza to, że jest on zamknięty dla większości podróżnych.",
+      "ru": "Пересечение Синая на внедорожниках или мотоциклах запрещено. Это означает, что для большинства путешественников по бездорожью дорога закрыта."
+    }
   },
   "et-danakil": {
     "id": "et-danakil",
     "type": 1,
     "name": "Danakil",
     "country": "ETH",
-    "comment": "You need a local guide to visit the Danakil depression, including the Erta-Ale volcano.\nThat is, if the security situation in Ethiopia allows you to get there in the first place."
+    "comment": "You need a local guide to visit the Danakil depression, including the Erta-Ale volcano.\nThat is, if the security situation in Ethiopia allows you to get there in the first place.",
+    "comment_translations": {
+      "en": "You need a local guide to visit the Danakil depression, including the Erta-Ale volcano.\nThat is, if the security situation in Ethiopia allows you to get there in the first place.",
+      "fr": "Il vous faudra un guide local pour visiter la dépression de Danakil, notamment le volcan Erta-Ale.\n\nÀ condition, bien sûr, que la situation sécuritaire en Éthiopie vous permette d'y accéder.",
+      "de": "Für einen Besuch der Danakil-Senke, einschließlich des Vulkans Erta Ale, benötigen Sie einen ortskundigen Führer.\nVorausgesetzt, die Sicherheitslage in Äthiopien lässt die Einreise überhaupt zu.",
+      "it": "Per visitare la depressione della Dancalia, incluso il vulcano Erta-Ale, è necessaria una guida locale.\nOvviamente, sempre che le condizioni di sicurezza in Etiopia consentano di arrivarci.",
+      "es": "Necesitará un guía local para visitar la depresión de Danakil, incluido el volcán Erta-Ale.\nEso sí, siempre que la situación de seguridad en Etiopía le permita llegar.",
+      "pt": "Você precisa de um guia local para visitar a depressão de Danakil, incluindo o vulcão Erta Ale.\nIsso, claro, se a situação de segurança na Etiópia permitir que você chegue lá.",
+      "nl": "Je hebt een lokale gids nodig om de Danakil-depressie te bezoeken, inclusief de Erta-Ale-vulkaan.\n\nTenminste, als de veiligheidssituatie in Ethiopië het überhaupt toelaat om er te komen.",
+      "pl": "Aby odwiedzić Kotlinę Danakilską, w tym wulkan Erta-Ale, potrzebny jest lokalny przewodnik.\nOczywiście, jeśli sytuacja bezpieczeństwa w Etiopii w ogóle pozwoli Ci się tam dostać.",
+      "ru": "Для посещения Данакильской впадины, включая вулкан Эрта-Але, вам понадобится местный гид.\nЭто при условии, что ситуация с безопасностью в Эфиопии вообще позволит вам туда добраться."
+    }
   },
   "in-arunachal": {
     "id": "in-arunachal",
     "type": 2,
     "name": "Arunachal Pradesh",
     "country": "IND",
-    "comment": "Foreigners need a permit to visit Arunachal Pradesh. Note that permits are not delivered to solo travelers, you'll need to apply as a group of 2 or more people."
+    "comment": "Foreigners need a permit to visit Arunachal Pradesh. Note that permits are not delivered to solo travelers, you'll need to apply as a group of 2 or more people.",
+    "comment_translations": {
+      "en": "Foreigners need a permit to visit Arunachal Pradesh. Note that permits are not delivered to solo travelers, you'll need to apply as a group of 2 or more people.",
+      "fr": "Les étrangers doivent obtenir un permis pour se rendre en Arunachal Pradesh. Veuillez noter que les permis ne sont pas délivrés aux voyageurs individuels ; vous devez faire une demande pour un groupe d'au moins deux personnes.",
+      "de": "Ausländer benötigen eine Genehmigung für die Einreise nach Arunachal Pradesh. Bitte beachten Sie, dass Genehmigungen nicht an Alleinreisende ausgestellt werden; Sie müssen den Antrag als Gruppe von mindestens zwei Personen stellen.",
+      "it": "Gli stranieri hanno bisogno di un permesso per visitare l'Arunachal Pradesh. Si prega di notare che i permessi non vengono rilasciati ai viaggiatori singoli: è necessario presentare domanda come gruppo di almeno 2 persone.",
+      "es": "Los extranjeros necesitan un permiso para visitar Arunachal Pradesh. Tenga en cuenta que no se entregan permisos a viajeros solos; deberán solicitarlo en grupo de dos o más personas.",
+      "pt": "Estrangeiros precisam de uma autorização para visitar Arunachal Pradesh. Observe que as autorizações não são emitidas para viajantes individuais; é necessário solicitar a autorização em grupo, com no mínimo duas pessoas.",
+      "nl": "Buitenlanders hebben een vergunning nodig om Arunachal Pradesh te bezoeken. Houd er rekening mee dat vergunningen niet aan individuele reizigers worden verstrekt; u moet een aanvraag indienen als groep van twee of meer personen.",
+      "pl": "Cudzoziemcy potrzebują zezwolenia na wjazd do Arunachal Pradesh. Należy pamiętać, że zezwolenia nie są wydawane podróżującym samotnie. Należy złożyć wniosek w grupie co najmniej 2 osób.",
+      "ru": "Иностранцам для посещения Аруначал-Прадеша необходимо получить разрешение. Обратите внимание, что разрешения не выдаются одиночным путешественникам; заявку необходимо подавать группой из двух или более человек."
+    }
   },
   "in-galwan-dbo": {
     "id": "in-galwan-dbo",
     "type": 0,
     "name": "Galwan-DBO",
     "comment": "The Shyok-DBO road is for military use only, closed to tourists. Daulat Beg Oldi and the Galwan valley are close to the LaC, where deadly skirmishes have happened in the past.",
-    "country": "IND"
+    "country": "IND",
+    "comment_translations": {
+      "en": "The Shyok-DBO road is for military use only, closed to tourists. Daulat Beg Oldi and the Galwan valley are close to the LaC, where deadly skirmishes have happened in the past.",
+      "fr": "La route Shyok-DBO est réservée à l'usage militaire et interdite aux touristes. Daulat Beg Oldi et la vallée de Galwan sont proches de la Ligne de Contrôle, où de violents affrontements ont eu lieu par le passé.",
+      "de": "Die Straße Shyok-DBO ist ausschließlich für militärische Zwecke bestimmt und für Touristen gesperrt. Daulat Beg Oldi und das Galwan-Tal liegen nahe der Kontrolllinie (LaC), wo es in der Vergangenheit zu tödlichen Gefechten kam.",
+      "it": "La strada Shyok-DBO è riservata esclusivamente all'uso militare e chiusa ai turisti. Daulat Beg Oldi e la valle di Galwan si trovano vicino al LaC, dove in passato si sono verificati scontri mortali.",
+      "es": "La carretera Shyok-DBO es de uso exclusivo militar y está cerrada al turismo. Daulat Beg Oldi y el valle de Galwan están cerca del LaC, donde se produjeron enfrentamientos mortales en el pasado.",
+      "pt": "A estrada Shyok-DBO é de uso exclusivamente militar e está fechada para turistas. Daulat Beg Oldi e o vale de Galwan ficam próximos à Linha de Controle Real (LAC), onde já ocorreram confrontos mortais.",
+      "nl": "De weg tussen Shyok en DBO is uitsluitend voor militair gebruik en gesloten voor toeristen. Daulat Beg Oldi en de Galwan-vallei liggen dicht bij de Line of Control (LaC), waar in het verleden dodelijke schermutselingen hebben plaatsgevonden.",
+      "pl": "Droga Shyok-DBO jest przeznaczona wyłącznie do użytku wojskowego i zamknięta dla turystów. Daulat Beg Oldi i dolina Galwan leżą blisko LaC, gdzie w przeszłości dochodziło do śmiertelnych potyczek.",
+      "ru": "Дорога Шайок-ДБО предназначена только для военных целей и закрыта для туристов. Даулат Бег Олди и долина Галван находятся недалеко от линии контроля, где в прошлом происходили смертоносные столкновения."
+    }
   },
   "in-ladakh": {
     "id": "in-ladakh",
     "type": 2,
     "name": "Ladakh",
     "country": "IND",
-    "comment": "Foreigners need to get a permit in Leh, while Indians can get it online. The permit coverage changes slightly from year to year, so check the latest regulations. It usually covers:\n- Chang La, Wari La, Pangong Tso, Hanle, Tso Moriri, Tso Kar and Umling La.\n- The road along the Indus from Khaltse to Batalik and the Hanu valley.\n- Khardung La, Shyok and Nubra valleys. \nDungti - Demchok and Demchok - Umling La restricted to Indian nationals.\nThe Siachen glacier base camp is restricted to Indian nationals."
+    "comment": "Foreigners need to get a permit in Leh, while Indians can get it online. The permit coverage changes slightly from year to year, so check the latest regulations. It usually covers:\n- Chang La, Wari La, Pangong Tso, Hanle, Tso Moriri, Tso Kar and Umling La.\n- The road along the Indus from Khaltse to Batalik and the Hanu valley.\n- Khardung La, Shyok and Nubra valleys. \nDungti - Demchok and Demchok - Umling La restricted to Indian nationals.\nThe Siachen glacier base camp is restricted to Indian nationals.",
+    "comment_translations": {
+      "en": "Foreigners need to get a permit in Leh, while Indians can get it online. The permit coverage changes slightly from year to year, so check the latest regulations. It usually covers:\n- Chang La, Wari La, Pangong Tso, Hanle, Tso Moriri, Tso Kar and Umling La.\n- The road along the Indus from Khaltse to Batalik and the Hanu valley.\n- Khardung La, Shyok and Nubra valleys. \nDungti - Demchok and Demchok - Umling La restricted to Indian nationals.\nThe Siachen glacier base camp is restricted to Indian nationals.",
+      "fr": "Les étrangers doivent obtenir un permis à Leh, tandis que les Indiens peuvent l'obtenir en ligne. La zone couverte par le permis varie légèrement d'une année à l'autre ; veuillez donc consulter la réglementation en vigueur. Ce permis couvre généralement :\n\n- Chang La, Wari La, Pangong Tso, Hanle, Tso Moriri, Tso Kar et Umling La.\n\n- La route longeant l'Indus de Khaltse à Batalik et la vallée de Hanu.\n\n- Khardung La, les vallées de Shyok et de Nubra.\n\n- Les cols de Dungti-Demchok et de Demchok-Umling La sont réservés aux ressortissants indiens.\n\n- Le camp de base du glacier de Siachen est réservé aux ressortissants indiens.",
+      "de": "Ausländer benötigen in Leh eine Genehmigung, während Inder diese online beantragen können. Der Geltungsbereich der Genehmigung kann sich von Jahr zu Jahr leicht ändern. Bitte informieren Sie sich daher über die aktuellen Bestimmungen. Die Genehmigung umfasst in der Regel folgende Gebiete:\n\n- Chang La, Wari La, Pangong Tso, Hanle, Tso Moriri, Tso Kar und Umling La.\n\n- Die Straße entlang des Indus von Khaltse nach Batalik und das Hanu-Tal.\n\n- Khardung La, Shyok- und Nubra-Tal.\n\nDie Strecken Dungti – Demchok und Demchok – Umling La sind ausschließlich indischen Staatsangehörigen vorbehalten.\n\nDas Basislager am Siachen-Gletscher ist ausschließlich indischen Staatsangehörigen vorbehalten.",
+      "it": "Gli stranieri devono ottenere un permesso a Leh, mentre gli indiani possono ottenerlo online. La copertura del permesso varia leggermente di anno in anno, quindi verificate le normative più recenti. Di solito copre:\n- Chang La, Wari La, Pangong Tso, Hanle, Tso Moriri, Tso Kar e Umling La.\n- La strada lungo l'Indo da Khaltse a Batalik e la valle di Hanu.\n- Valli di Khardung La, Shyok e Nubra.\nDungti-Demchok e Demchok-Umling La riservati ai cittadini indiani.\nIl campo base del ghiacciaio Siachen è riservato ai cittadini indiani.",
+      "es": "Los extranjeros deben obtener un permiso en Leh, mientras que los indios pueden obtenerlo en línea. La cobertura del permiso varía ligeramente de un año a otro, por lo que se recomienda consultar la normativa vigente. Generalmente cubre:\n- Chang La, Wari La, Pangong Tso, Hanle, Tso Moriri, Tso Kar y Umling La.\n- La carretera a lo largo del Indo de Khaltse a Batalik y el valle de Hanu.\n- Los valles de Khardung La, Shyok y Nubra.\nDungti - Demchok y Demchok - Umling La: acceso restringido a ciudadanos indios.\nEl campamento base del glaciar Siachen está restringido a ciudadanos indios.",
+      "pt": "Estrangeiros precisam de uma autorização para entrar em Leh, enquanto indianos podem obtê-la online. A abrangência da autorização varia ligeiramente de ano para ano, portanto, verifique as regulamentações mais recentes. Geralmente, ela cobre:\n- Chang La, Wari La, Pangong Tso, Hanle, Tso Moriri, Tso Kar e Umling La.\n- A estrada ao longo do rio Indo, de Khaltse a Batalik, e o vale de Hanu.\n- Khardung La, Shyok e os vales de Nubra.\n\nOs trechos Dungti - Demchok e Demchok - Umling La são restritos a cidadãos indianos.\n\nO acampamento base da geleira Siachen é restrito a cidadãos indianos.",
+      "nl": "Buitenlanders moeten een vergunning aanvragen in Leh, terwijl Indiërs dit online kunnen doen. De geldigheid van de vergunning kan jaarlijks iets variëren, dus controleer de meest recente regelgeving. De vergunning dekt doorgaans:\n- Chang La, Wari La, Pangong Tso, Hanle, Tso Moriri, Tso Kar en Umling La.\n- De weg langs de Indus van Khaltse naar Batalik en de Hanu-vallei.\n\n- Khardung La, Shyok en Nubra-vallei.\n\nDungti - Demchok en Demchok - Umling La zijn alleen toegankelijk voor Indiase staatsburgers.\n\nHet basiskamp van de Siachen-gletsjer is alleen toegankelijk voor Indiase staatsburgers.",
+      "pl": "Cudzoziemcy muszą uzyskać zezwolenie w Leh, natomiast Hindusi mogą je uzyskać online. Zakres zezwolenia zmienia się nieznacznie z roku na rok, dlatego należy sprawdzić najnowsze przepisy. Zazwyczaj obejmuje ono:\n- Chang La, Wari La, Pangong Tso, Hanle, Tso Moriri, Tso Kar i Umling La.\n- Drogę wzdłuż Indusu z Khaltse do Batalik i doliny Hanu.\n- Doliny Khardung La, Shyok i Nubra.\n\nDungti-Demchok i Demchok-Umling La – wstęp tylko dla obywateli Indii.\n\nDo bazy pod lodowcem Siachen wstęp mają wyłącznie obywatele Indii.",
+      "ru": "Иностранцам необходимо получить разрешение в Лехе, а граждане Индии могут оформить его онлайн. Условия получения разрешения немного меняются из года в год, поэтому проверяйте актуальные правила. Обычно оно распространяется на:\n- перевалы Чанг Ла, Вари Ла, озеро Пангонг Цо, Ханле, озеро Цо Морири, озеро Цо Кар и перевал Умлинг Ла.\n- дорогу вдоль Инда от Халце до Баталика и долину Хану.\n- перевалы Кхардунг Ла, долины Шайок и Нубра.\nПеревалы Дунгти - Демчок и Демчок - Умлинг Ла доступны только гражданам Индии.\nБазовый лагерь ледника Сиачен доступен только гражданам Индии."
+    }
   },
   "in-muskoh": {
     "id": "in-muskoh",
     "type": 0,
     "name": "Muskoh",
     "comment": "Military area, travel to Muskoh and Kaobal Gali is forbidden.",
-    "country": "IND"
+    "country": "IND",
+    "comment_translations": {
+      "en": "Military area, travel to Muskoh and Kaobal Gali is forbidden.",
+      "fr": "Zone militaire, les déplacements vers Muskoh et Kaobal Gali sont interdits.",
+      "de": "Militärgebiet, Reisen nach Muskoh und Kaobal Gali sind verboten.",
+      "it": "Zona militare, è vietato recarsi a Muskoh e Kaobal Gali.",
+      "es": "Zona militar, está prohibido viajar a Muskoh y Kaobal Gali.",
+      "pt": "Área militar; viagens para Muskoh e Kaobal Gali são proibidas.",
+      "nl": "Dit is een militair gebied; reizen naar Muskoh en Kaobal Gali is verboden.",
+      "pl": "Teren wojskowy, podróże do Muskoh i Kaobal Gali są zabronione.",
+      "ru": "Военная зона, поездки в Мускох и Каобаль-Гали запрещены."
+    }
   },
   "in-sikkim": {
     "id": "in-sikkim",
     "type": 2,
     "name": "Sikkim",
     "country": "IND",
-    "comment": "Foreigners need a permit to visit Sikkim; Indians just need to show an ID.\nThe permit is free and easily done at several checkpoints, but it can also be done at Bagdogra airport or in Darjeeling.\nNote that the road to Gurudongmar Lake and to Nathu La are forbidden to foreigners."
+    "comment": "Foreigners need a permit to visit Sikkim; Indians just need to show an ID.\nThe permit is free and easily done at several checkpoints, but it can also be done at Bagdogra airport or in Darjeeling.\nNote that the road to Gurudongmar Lake and to Nathu La are forbidden to foreigners.",
+    "comment_translations": {
+      "en": "Foreigners need a permit to visit Sikkim; Indians just need to show an ID.\nThe permit is free and easily done at several checkpoints, but it can also be done at Bagdogra airport or in Darjeeling.\nNote that the road to Gurudongmar Lake and to Nathu La are forbidden to foreigners.",
+      "fr": "Les étrangers ont besoin d'un permis pour se rendre au Sikkim ; les Indiens doivent simplement présenter une pièce d'identité.\n\nCe permis est gratuit et facile à obtenir à plusieurs points de contrôle, mais il est également possible de l'obtenir à l'aéroport de Bagdogra ou à Darjeeling.\n\nVeuillez noter que la route menant au lac Gurudongmar et au col de Nathu La est interdite aux étrangers.",
+      "de": "Ausländer benötigen für die Einreise nach Sikkim eine Genehmigung; Inder müssen lediglich ihren Ausweis vorzeigen. Die Genehmigung ist kostenlos und kann unkompliziert an mehreren Kontrollpunkten, aber auch am Flughafen Bagdogra oder in Darjeeling beantragt werden. Bitte beachten Sie, dass die Straße zum Gurudongmar-See und zum Nathu La-Pass für Ausländer gesperrt ist.",
+      "it": "Gli stranieri hanno bisogno di un permesso per visitare il Sikkim; gli indiani devono solo mostrare un documento d'identità.\nIl permesso è gratuito e facilmente ottenibile presso diversi posti di blocco, ma può essere richiesto anche all'aeroporto di Bagdogra o a Darjeeling.\nSi prega di notare che la strada per il lago Gurudongmar e per Nathu La è vietata agli stranieri.",
+      "es": "Los extranjeros necesitan un permiso para visitar Sikkim; los indios solo necesitan mostrar un documento de identidad.\nEl permiso es gratuito y se tramita fácilmente en varios puestos de control, pero también se puede obtener en el aeropuerto de Bagdogra o en Darjeeling.\nTenga en cuenta que las carreteras al lago Gurudongmar y a Nathu La están prohibidas para los extranjeros.",
+      "pt": "Estrangeiros precisam de uma autorização para visitar Sikkim; indianos só precisam apresentar um documento de identidade.\nA autorização é gratuita e pode ser obtida facilmente em vários postos de controle, mas também pode ser solicitada no aeroporto de Bagdogra ou em Darjeeling.\nObserve que a estrada para o Lago Gurudongmar e para Nathu La é proibida para estrangeiros.",
+      "nl": "Buitenlanders hebben een vergunning nodig om Sikkim te bezoeken; Indiërs hoeven alleen een identiteitsbewijs te tonen.\n\nDe vergunning is gratis en kan gemakkelijk worden aangevraagd bij verschillende controleposten, maar ook op de luchthaven van Bagdogra of in Darjeeling.\n\nLet op: de weg naar het Gurudongmar-meer en naar Nathu La is verboden voor buitenlanders.",
+      "pl": "Cudzoziemcy potrzebują zezwolenia na wjazd do Sikkimu; Hindusi muszą jedynie okazać dowód tożsamości.\nZezwolenie jest bezpłatne i łatwo dostępne na kilku punktach kontrolnych, ale można je również uzyskać na lotnisku Bagdogra lub w Darjeeling.\nNależy pamiętać, że droga do jeziora Gurudongmar i do Nathu La jest zamknięta dla cudzoziemców.",
+      "ru": "Иностранцам для посещения Сиккима требуется разрешение; гражданам Индии достаточно предъявить удостоверение личности.\nРазрешение бесплатное и легко оформляется на нескольких контрольно-пропускных пунктах, но его также можно получить в аэропорту Багдогра или в Дарджилинге.\nОбратите внимание, что дорога к озеру Гурудонгмар и к перевалу Натху Ла запрещена для иностранцев."
+    }
   },
   "in-spiti": {
     "id": "in-spiti",
     "type": 2,
     "name": "Spiti",
     "country": "IND",
-    "comment": "A permit for Spiti is required for foreigners, and can be done in Rekong Peo or in Pooh, coming from the South, or in Kaza, if you're coming from the North (for a fee). Indians only need to show an ID at the checkpoints."
+    "comment": "A permit for Spiti is required for foreigners, and can be done in Rekong Peo or in Pooh, coming from the South, or in Kaza, if you're coming from the North (for a fee). Indians only need to show an ID at the checkpoints.",
+    "comment_translations": {
+      "en": "A permit for Spiti is required for foreigners, and can be done in Rekong Peo or in Pooh, coming from the South, or in Kaza, if you're coming from the North (for a fee). Indians only need to show an ID at the checkpoints.",
+      "fr": "Un permis d'entrée à Spiti est requis pour les étrangers. Il peut être obtenu à Rekong Peo ou à Pooh en venant du sud, ou à Kaza en venant du nord (moyennant un droit d'entrée). Les ressortissants indiens doivent uniquement présenter une pièce d'identité aux points de contrôle.",
+      "de": "Für Ausländer ist eine Genehmigung für Spiti erforderlich. Diese kann bei Anreise aus dem Süden in Rekong Peo oder Pooh, bei Anreise aus dem Norden in Kaza (gegen Gebühr) beantragt werden. Inder müssen an den Kontrollpunkten lediglich ihren Ausweis vorzeigen.",
+      "it": "Per gli stranieri è richiesto un permesso per lo Spiti, che può essere ottenuto a Rekong Peo o a Pooh, provenendo da sud, oppure a Kaza, provenendo da nord (a pagamento). Gli indiani devono solo mostrare un documento d'identità ai posti di blocco.",
+      "es": "Los extranjeros necesitan un permiso para Spiti, que puede obtenerse en Rekong Peo o en Pooh si viene del sur, o en Kaza si viene del norte (de pago). Los indios solo necesitan mostrar una identificación en los controles.",
+      "pt": "Estrangeiros precisam de uma autorização para entrar em Spiti, que pode ser obtida em Rekong Peo ou em Pooh, para quem vem do sul, ou em Kaza, para quem vem do norte (mediante pagamento de uma taxa). Indianos precisam apenas apresentar um documento de identidade nos postos de controle.",
+      "nl": "Buitenlanders hebben een vergunning nodig voor Spiti. Deze kan worden aangevraagd in Rekong Peo of Pooh als je vanuit het zuiden komt, of in Kaza als je vanuit het noorden komt (tegen betaling). Indiërs hoeven alleen een identiteitsbewijs te tonen bij de controleposten.",
+      "pl": "Obcokrajowcy muszą uzyskać zezwolenie na wjazd do Spiti. Można je uzyskać w Rekong Peo lub Pooh, jeśli przyjeżdża się z południa, albo w Kaza, jeśli przyjeżdża się z północy (za opłatą). Hindusi muszą jedynie okazać dowód tożsamości na punktach kontrolnych.",
+      "ru": "Иностранцам для въезда в Спити требуется разрешение, которое можно оформить в Реконг-Пео или Пухе, если вы едете с юга, или в Казе, если вы едете с севера (за определенную плату). Гражданам Индии достаточно предъявить удостоверение личности на контрольно-пропускных пунктах."
+    }
   },
   "iq-kurdistan": {
     "id": "iq-kurdistan",
     "type": 3,
     "name": "Kurdistan",
     "country": "IRQ",
-    "comment": "The Kurdistan autonomous region is an interesting concept. It is not an independent state, it is part of the federal state of Iraq. It has historically been largely self-governed when the rest of Iraq was riddled by war, so that they started issuing their own visa, valid only within Kurdistan.\nNowadays they still do, but it's also possible to enter the area with a (federal) Iraq visa - the opposite isn't true.\nComing from Turkey, they also don't stamp the carnet, because a carnet is not required if you only visit Kurdistan and if you exit the country back into Turkey. But if you exit to any other country, a carnet will be required to exit (with both entry and exit stamps done at the same time)."
+    "comment": "The Kurdistan autonomous region is an interesting concept. It is not an independent state, it is part of the federal state of Iraq. It has historically been largely self-governed when the rest of Iraq was riddled by war, so that they started issuing their own visa, valid only within Kurdistan.\nNowadays they still do, but it's also possible to enter the area with a (federal) Iraq visa - the opposite isn't true.\nComing from Turkey, they also don't stamp the carnet, because a carnet is not required if you only visit Kurdistan and if you exit the country back into Turkey. But if you exit to any other country, a carnet will be required to exit (with both entry and exit stamps done at the same time).",
+    "comment_translations": {
+      "en": "The Kurdistan autonomous region is an interesting concept. It is not an independent state, it is part of the federal state of Iraq. It has historically been largely self-governed when the rest of Iraq was riddled by war, so that they started issuing their own visa, valid only within Kurdistan.\nNowadays they still do, but it's also possible to enter the area with a (federal) Iraq visa - the opposite isn't true.\nComing from Turkey, they also don't stamp the carnet, because a carnet is not required if you only visit Kurdistan and if you exit the country back into Turkey. But if you exit to any other country, a carnet will be required to exit (with both entry and exit stamps done at the same time).",
+      "fr": "La région autonome du Kurdistan est un concept intéressant. Il ne s'agit pas d'un État indépendant, mais d'une partie intégrante de l'Irak. Historiquement, elle a bénéficié d'une large autonomie alors que le reste de l'Irak était ravagé par la guerre, ce qui a conduit à la délivrance de son propre visa, valable uniquement sur son territoire.\n\nAujourd'hui, ce visa est toujours en vigueur, mais il est également possible d'entrer dans la région avec un visa irakien (fédéral) – l'inverse n'est pas vrai.\n\nEn venant de Turquie, le carnet de passage en douane n'est pas tamponné, car il n'est pas requis pour un simple séjour au Kurdistan et un retour en Turquie. En revanche, pour toute sortie du territoire vers un autre pays, un carnet de passage en douane est obligatoire (les tampons d'entrée et de sortie étant apposés simultanément).",
+      "de": "Die Autonome Region Kurdistan ist ein interessantes Konzept. Sie ist kein unabhängiger Staat, sondern Teil des irakischen Bundesstaates. Historisch gesehen war sie weitgehend selbstverwaltet, da der Rest des Irak vom Krieg gezeichnet war. Daher begann man, ein eigenes Visum auszustellen, das nur innerhalb Kurdistans gültig war. Das gilt auch heute noch, allerdings kann man mit einem (staatlichen) irakischen Visum einreisen – umgekehrt ist dies nicht möglich. Bei der Einreise aus der Türkei wird das Carnet de la carte nicht abgestempelt, da es nicht erforderlich ist, wenn man Kurdistan nur besucht und anschließend wieder in die Türkei ausreist. Bei der Ausreise in ein anderes Land ist jedoch ein Carnet de la carte erforderlich (Ein- und Ausreisestempel werden gleichzeitig angebracht).",
+      "it": "La regione autonoma del Kurdistan è un concetto interessante. Non è uno stato indipendente, ma fa parte dello stato federale dell'Iraq. Storicamente, è stata ampiamente autogovernata quando il resto dell'Iraq era dilaniato dalla guerra, tanto che ha iniziato a rilasciare un proprio visto, valido solo all'interno del Kurdistan.\nAncora oggi lo fanno, ma è possibile entrare nell'area anche con un visto iracheno (federale), il contrario non è vero.\nProvenendo dalla Turchia, inoltre, non timbrano il carnet, perché non è necessario se si visita solo il Kurdistan e si esce dal Paese rientrando in Turchia. Ma se si esce in qualsiasi altro Paese, sarà necessario un carnet per uscire (con timbri di ingresso e di uscita apposti contemporaneamente).",
+      "es": "La región autónoma del Kurdistán es un concepto interesante. No es un estado independiente, sino parte del estado federal de Irak. Históricamente, ha sido en gran medida autónoma mientras el resto de Irak se encontraba asolado por la guerra, por lo que comenzó a emitir su propio visado, válido únicamente dentro del Kurdistán.\nHoy en día, todavía lo hacen, pero también es posible entrar en la zona con un visado iraquí (federal); lo contrario no es cierto.\nSi se viene de Turquía, tampoco se sella el carnet, ya que no se requiere si solo se visita el Kurdistán y se sale del país para regresar a Turquía. Pero si se sale a cualquier otro país, se requerirá un carnet para salir (con los sellos de entrada y salida al mismo tiempo).",
+      "pt": "A região autônoma do Curdistão é um conceito interessante. Não é um estado independente, mas sim parte do estado federal do Iraque. Historicamente, foi amplamente autogovernada enquanto o resto do Iraque estava assolado pela guerra, de modo que começaram a emitir seu próprio visto, válido apenas dentro do Curdistão.\nAtualmente, ainda o fazem, mas também é possível entrar na área com um visto (federal) do Iraque - o contrário não é verdadeiro.\nVindo da Turquia, eles também não carimbam o Carnet de Passagem, porque um Carnet não é necessário se você visitar apenas o Curdistão e sair do país de volta para a Turquia. Mas se você sair para qualquer outro país, um Carnet será necessário para sair (com os carimbos de entrada e saída feitos ao mesmo tempo).",
+      "nl": "De autonome regio Koerdistan is een interessant concept. Het is geen onafhankelijke staat, maar onderdeel van de federale staat Irak. Historisch gezien was het grotendeels zelfbestuurd toen de rest van Irak door oorlog werd geteisterd, waardoor ze hun eigen visa begonnen uit te geven, die alleen geldig waren binnen Koerdistan.\n\nTegenwoordig doen ze dat nog steeds, maar het is ook mogelijk om het gebied binnen te komen met een (federaal) Iraaks visum - het omgekeerde is niet waar.\n\nAls je vanuit Turkije komt, wordt er ook geen carnet afgestempeld, omdat een carnet niet vereist is als je alleen Koerdistan bezoekt en het land weer verlaat via Turkije. Maar als je naar een ander land reist, is een carnet wel vereist (met zowel in- als uitreisstempels tegelijk).",
+      "pl": "Region Autonomiczny Kurdystanu to interesująca koncepcja. Nie jest to niepodległe państwo, lecz część federalnego państwa Iraku. Historycznie, gdy reszta Iraku była ogarnięta wojną, Kurdystan był w dużej mierze autonomiczny, dlatego zaczęto wydawać własne wizy, ważne tylko w obrębie Kurdystanu.\nObecnie nadal tak się dzieje, ale możliwe jest również wjazd na ten obszar z wizą federalną do Iraku – sytuacja odwrotna nie jest możliwa.\nOsoby przyjeżdżające z Turcji również nie stemplują karnetu, ponieważ karnet nie jest wymagany, jeśli odwiedza się Kurdystan tylko raz i jeśli wyjeżdża się z kraju z powrotem do Turcji. Jeśli jednak wyjeżdża się do innego kraju, karnet będzie wymagany do wyjazdu (z jednoczesnym stemplowaniem wjazdu i wyjazdu).",
+      "ru": "Автономный регион Курдистан — интересная концепция. Это не независимое государство, а часть федеративного государства Ирак. Исторически он в значительной степени самоуправлялся, когда остальная часть Ирака была охвачена войной, поэтому там начали выдавать собственные визы, действительные только в пределах Курдистана.\nСейчас это по-прежнему так, но въезд в регион возможен и по (федеральной) иракской визе — обратное неверно.\nПри въезде из Турции карнет также не ставят, поскольку он не требуется, если вы посещаете только Курдистан и выезжаете обратно в Турцию. Но если вы выезжаете в любую другую страну, карнет потребуется для выезда (с одновременным проставлением въездных и выездных штампов)."
+    }
   },
   "kg-chon-kemin": {
     "id": "kg-chon-kemin",
@@ -89,62 +221,183 @@
     "name": "Chon-Kemin",
     "country": "KGZ",
     "comment": "Permit needed for the upper part of the valley.",
-    "itinerary": "Kyrgyzstan:K20"
+    "itinerary": "Kyrgyzstan:K20",
+    "comment_translations": {
+      "en": "Permit needed for the upper part of the valley.",
+      "fr": "Un permis est nécessaire pour la partie supérieure de la vallée.",
+      "de": "Für den oberen Teil des Tals wird eine Genehmigung benötigt.",
+      "it": "Permesso necessario per la parte alta della valle.",
+      "es": "Se necesita permiso para la parte alta del valle.",
+      "pt": "É necessário obter uma autorização para acessar a parte superior do vale.",
+      "nl": "Voor het bovenste deel van het dal is een vergunning nodig.",
+      "pl": "Na górną część doliny potrzebne jest pozwolenie.",
+      "ru": "Для работы в верхней части долины требуется разрешение."
+    }
   },
   "kg-issyk-kul": {
     "id": "kg-issyk-kul",
     "type": 2,
     "name": "Issyk Kul region",
     "country": "KGZ",
-    "comment": "Covers Engilchek, Sary Jaz, and the Aksay valley."
+    "comment": "Covers Engilchek, Sary Jaz, and the Aksay valley.",
+    "comment_translations": {
+      "en": "Covers Engilchek, Sary Jaz, and the Aksay valley.",
+      "fr": "Couvre Engilchek, Sary Jaz et la vallée d'Aksay.",
+      "de": "Beinhaltet Engilchek, Sary Jaz und das Aksay-Tal.",
+      "it": "Copre Engilchek, Sary Jaz e la valle dell'Aksay.",
+      "es": "Cubre Engilchek, Sary Jaz y el valle de Aksay.",
+      "pt": "Abrange Engilchek, Sary Jaz e o vale de Aksay.",
+      "nl": "Omvat Engilchek, Sary Jaz en de Aksay-vallei.",
+      "pl": "Obejmuje Engilczek, Sary Jaz i dolinę Aksaju.",
+      "ru": "Охватывает Энгильчек, Сары-Джаз и долину Аксай."
+    }
   },
   "kg-naryn": {
     "id": "kg-naryn",
     "type": 2,
     "name": "Naryn region",
     "country": "KGZ",
-    "comment": "Covers Kel Suu and Chatyr Kul.\nNote that if you have a valid Chinese visa, you don't need a permit to drive to the Torugart border post."
+    "comment": "Covers Kel Suu and Chatyr Kul.\nNote that if you have a valid Chinese visa, you don't need a permit to drive to the Torugart border post.",
+    "comment_translations": {
+      "en": "Covers Kel Suu and Chatyr Kul.\nNote that if you have a valid Chinese visa, you don't need a permit to drive to the Torugart border post.",
+      "fr": "Cela concerne Kel Suu et Chatyr Kul.\n\nNotez que si vous possédez un visa chinois valide, vous n'avez pas besoin de permis pour vous rendre en voiture au poste frontière de Torugart.",
+      "de": "Beinhaltet Kel Suu und Chatyr Kul.\nHinweis: Wenn Sie ein gültiges chinesisches Visum besitzen, benötigen Sie keine Genehmigung, um bis zum Grenzübergang Torugart zu fahren.",
+      "it": "Copre Kel Suu e Chatyr Kul.\nNota: se si è in possesso di un visto cinese valido, non è necessario un permesso per raggiungere il valico di frontiera di Torugart.",
+      "es": "Cubre Kel Suu y Chatyr Kul.\nTenga en cuenta que si tiene una visa china válida, no necesita un permiso para conducir hasta el puesto fronterizo de Torugart.",
+      "pt": "Abrange Kel Suu e Chatyr Kul.\nObserve que, se você tiver um visto chinês válido, não precisará de uma autorização para dirigir até o posto fronteiriço de Torugart.",
+      "nl": "Omvat Kel Suu en Chatyr Kul.\n\nLet op: als u een geldig Chinees visum heeft, heeft u geen vergunning nodig om naar de grenspost Torugart te rijden.",
+      "pl": "Obejmuje Kel Suu i Chatyr Kul.\nNależy pamiętać, że jeśli posiadasz ważną wizę chińską, nie potrzebujesz zezwolenia, aby dojechać do przejścia granicznego Torugart.",
+      "ru": "Включает в себя Кель-Суу и Чатыр-Куль.\nОбратите внимание, что если у вас есть действующая китайская виза, вам не потребуется разрешение на проезд до пограничного пункта Торугарт."
+    }
   },
   "mn-tavan-bogd": {
     "id": "mn-tavan-bogd",
     "type": 1,
     "name": "Altai Tavan Bogd",
     "country": "MNG",
-    "comment": "Not only do you need a permit to enter the Altai Tavan Bodg national park, but you also need a guide - or at least one Mongolian national in the group."
+    "comment": "Not only do you need a permit to enter the Altai Tavan Bodg national park, but you also need a guide - or at least one Mongolian national in the group.",
+    "comment_translations": {
+      "en": "Not only do you need a permit to enter the Altai Tavan Bodg national park, but you also need a guide - or at least one Mongolian national in the group.",
+      "fr": "Non seulement vous avez besoin d'un permis pour entrer dans le parc national d'Altai Tavan Bodg, mais vous avez également besoin d'un guide – ou au moins d'un ressortissant mongol dans le groupe.",
+      "de": "Für den Zutritt zum Nationalpark Altai Tavan Bodg benötigen Sie nicht nur eine Genehmigung, sondern auch einen Führer – oder zumindest einen mongolischen Staatsangehörigen in der Gruppe.",
+      "it": "Per entrare nel parco nazionale Altai Tavan Bodg non serve solo un permesso, ma anche una guida o almeno un cittadino mongolo nel gruppo.",
+      "es": "No sólo necesitas un permiso para entrar al parque nacional Altai Tavan Bodg, sino que también necesitas un guía, o al menos un ciudadano mongol en el grupo.",
+      "pt": "Não basta apenas uma autorização para entrar no Parque Nacional Altai Tavan Bodg, é preciso também um guia – ou pelo menos um cidadão mongol no grupo.",
+      "nl": "Je hebt niet alleen een vergunning nodig om het nationale park Altai Tavan Bodg te betreden, maar ook een gids – of in ieder geval één Mongool in de groep.",
+      "pl": "Aby wejść do Parku Narodowego Altai Tavan Bodg, potrzebne jest nie tylko zezwolenie, ale także przewodnik – lub co najmniej jeden obywatel Mongolii w grupie.",
+      "ru": "Для посещения национального парка Алтай Таван Бодг вам потребуется не только разрешение, но и гид — или, по крайней мере, один гражданин Монголии в вашей группе."
+    }
   },
   "na-skeleton": {
     "id": "na-skeleton",
     "type": 0,
     "name": "Skeleton Coast",
     "country": "NAM",
-    "comment": "The upper part of the Skeleton Coast is closed to tourism."
+    "comment": "The upper part of the Skeleton Coast is closed to tourism.",
+    "comment_translations": {
+      "en": "The upper part of the Skeleton Coast is closed to tourism.",
+      "fr": "La partie supérieure de la Côte des Squelettes est fermée au tourisme.",
+      "de": "Der obere Teil der Skelettküste ist für den Tourismus gesperrt.",
+      "it": "La parte superiore della Skeleton Coast è chiusa al turismo.",
+      "es": "La parte superior de la Costa de los Esqueletos está cerrada al turismo.",
+      "pt": "A parte superior da Costa dos Esqueletos está fechada ao turismo.",
+      "nl": "Het bovenste deel van de Skeleton Coast is gesloten voor toerisme.",
+      "pl": "Górna część Wybrzeża Szkieletów jest zamknięta dla turystów.",
+      "ru": "Верхняя часть Берега Скелетов закрыта для туризма."
+    }
   },
   "na-sperrgebiet": {
     "id": "na-sperrgebiet",
     "type": 0,
     "name": "Sperrgebiet",
     "country": "NAM",
-    "comment": "This is a diamond-mining area, and as such is closed to public."
+    "comment": "This is a diamond-mining area, and as such is closed to public.",
+    "comment_translations": {
+      "en": "This is a diamond-mining area, and as such is closed to public.",
+      "fr": "Il s'agit d'une zone d'extraction de diamants, et à ce titre, elle est fermée au public.",
+      "de": "Dies ist ein Diamantenabbaugebiet und ist daher für die Öffentlichkeit gesperrt.",
+      "it": "Questa è una zona di estrazione di diamanti e come tale è chiusa al pubblico.",
+      "es": "Esta es una zona de extracción de diamantes y, como tal, está cerrada al público.",
+      "pt": "Esta é uma área de mineração de diamantes e, como tal, está fechada ao público.",
+      "nl": "Dit is een diamantmijngebied en is daarom niet toegankelijk voor het publiek.",
+      "pl": "Jest to teren wydobycia diamentów i jako taki jest niedostępny dla zwiedzających.",
+      "ru": "Это район добычи алмазов, и поэтому он закрыт для посещения."
+    }
+  },
+  "pk-azad": {
+    "id": "pk-azad",
+    "type": 0,
+    "name": "Azad Kashmir",
+    "country": "PAK",
+    "comment": "The Pakistan-controlled part of Kashmir (known in Pakistan as \"Azad Kashmir,\" or \"Free Kashmir,\" and in India as \"PoK,\" or \"Pakistan-occupied Kashmir\") is closed to tourists. A special permit is very hard to obtain for non-Pakistani individuals.",
+    "comment_translations": {
+      "en": "The Pakistan-controlled part of Kashmir (known in Pakistan as \"Azad Kashmir,\" or \"Free Kashmir,\" and in India as \"PoK,\" or \"Pakistan-occupied Kashmir\") is closed to tourists. A special permit is very hard to obtain for non-Pakistani individuals.",
+      "fr": "La partie du Cachemire contrôlée par le Pakistan (connue au Pakistan sous le nom d’« Azad Kashmir » ou « Cachemire libre », et en Inde sous le nom de « PoK » ou « Cachemire occupé par le Pakistan ») est fermée aux touristes. Il est très difficile pour les personnes non pakistanaises d’obtenir un permis spécial.",
+      "de": "Der von Pakistan kontrollierte Teil Kaschmirs (in Pakistan als „Azad Kaschmir“ oder „Freies Kaschmir“ und in Indien als „PoK“ oder „Pakistanisch besetztes Kaschmir“ bekannt) ist für Touristen gesperrt. Für Nicht-Pakistaner ist es sehr schwierig, eine Sondergenehmigung zu erhalten.",
+      "it": "La parte del Kashmir controllata dal Pakistan (conosciuta in Pakistan come \"Azad Kashmir\", ovvero \"Kashmir libero\", e in India come \"PoK\", ovvero \"Kashmir occupato dal Pakistan\") è chiusa ai turisti. È molto difficile ottenere un permesso speciale per i cittadini non pakistani.",
+      "es": "La parte de Cachemira controlada por Pakistán (conocida en Pakistán como \"Cachemira Azad\" o \"Cachemira Libre\" y en India como \"PoK\" o \"Cachemira ocupada por Pakistán\") está cerrada al turismo. Es muy difícil obtener un permiso especial para quienes no son pakistaníes.",
+      "pt": "A parte da Caxemira controlada pelo Paquistão (conhecida no Paquistão como \"Azad Kashmir\" ou \"Caxemira Livre\" e na Índia como \"PoK\" ou \"Caxemira ocupada pelo Paquistão\") está fechada para turistas. É muito difícil obter uma autorização especial para pessoas que não sejam paquistanesas.",
+      "nl": "Het door Pakistan gecontroleerde deel van Kasjmir (in Pakistan bekend als \"Azad Kasjmir\" of \"Vrij Kasjmir\", en in India als \"PoK\" of \"door Pakistan bezet Kasjmir\") is gesloten voor toeristen. Het is voor niet-Pakistaanse burgers zeer moeilijk om een speciale vergunning te verkrijgen.",
+      "pl": "Kontrolowana przez Pakistan część Kaszmiru (znana w Pakistanie jako „Azad Kashmir” lub „Wolny Kaszmir”, a w Indiach jako „PoK” lub „Kaszmir okupowany przez Pakistan”) jest zamknięta dla turystów. Uzyskanie specjalnego zezwolenia dla osób spoza Pakistanu jest bardzo trudne.",
+      "ru": "Часть Кашмира, контролируемая Пакистаном (известная в Пакистане как «Азад Кашмир» или «Свободный Кашмир», а в Индии как «PoK» или «Кашмир, оккупированный Пакистаном»), закрыта для туристов. Получить специальное разрешение для лиц, не являющихся гражданами Пакистана, крайне сложно."
+    }
   },
   "pk-south": {
     "id": "pk-south",
     "type": 1,
     "name": "South Pakistan",
     "country": "PAK",
-    "comment": "A military escort is generally required to travel in the region south of the Peshawar-Islamabad-Lahore road.\nA NOC is also required for certain parts, such as from Quetta to Sukkur (coming from Iran).\nBasically, you can travel to/from Iran on the main road, but it's otherwise difficult or impossible to visit this area.\nIn particular, the tribal areas next to Afghanistan are no-go."
+    "comment": "A military escort is generally required to travel in the region south of the Peshawar-Islamabad-Lahore road, except for Karachi and the area around it.\nA NOC is also required for certain parts, such as from Quetta to Sukkur (coming from Iran).\nBasically, you can travel to/from Iran on the main road, but it's otherwise difficult or impossible to visit this area.\nIn particular, the tribal areas next to Afghanistan are no-go.",
+    "updatedAt": {
+      "_seconds": 1764669767,
+      "_nanoseconds": 622000000
+    },
+    "comment_translations": {
+      "en": "A military escort is generally required to travel in the region south of the Peshawar-Islamabad-Lahore road, except for Karachi and the area around it.\nA NOC is also required for certain parts, such as from Quetta to Sukkur (coming from Iran).\nBasically, you can travel to/from Iran on the main road, but it's otherwise difficult or impossible to visit this area.\nIn particular, the tribal areas next to Afghanistan are no-go.",
+      "fr": "Une escorte militaire est généralement requise pour voyager dans la région au sud de la route Peshawar-Islamabad-Lahore, à l'exception de Karachi et de ses environs.\n\nUne autorisation spéciale est également nécessaire pour certains trajets, comme de Quetta à Sukkur (en venant d'Iran).\n\nEn principe, il est possible de voyager depuis/vers l'Iran par la route principale, mais il est autrement difficile, voire impossible, de se rendre dans cette région.\n\nEn particulier, les zones tribales limitrophes de l'Afghanistan sont à éviter.",
+      "de": "Für Reisen südlich der Straße Peshawar-Islamabad-Lahore ist in der Regel eine militärische Eskorte erforderlich, mit Ausnahme von Karachi und Umgebung.\nFür bestimmte Streckenabschnitte, beispielsweise von Quetta nach Sukkur (aus Richtung Iran), ist außerdem eine Genehmigung (NOC) notwendig. Reisen nach/aus dem Iran sind grundsätzlich über die Hauptstraße möglich, ansonsten ist der Zugang zu diesem Gebiet jedoch schwierig oder unmöglich. Insbesondere die Stammesgebiete an der afghanischen Grenze sind gesperrt.",
+      "it": "Generalmente è richiesta una scorta militare per viaggiare nella regione a sud della strada Peshawar-Islamabad-Lahore, ad eccezione di Karachi e dell'area circostante.\nÈ richiesta anche una NOC per alcuni tratti, come da Quetta a Sukkur (provenienti dall'Iran).\nIn pratica, è possibile viaggiare da/per l'Iran sulla strada principale, ma altrimenti è difficile o impossibile visitare questa zona.\nIn particolare, le aree tribali adiacenti all'Afghanistan sono vietate.",
+      "es": "Generalmente se requiere una escolta militar para viajar en la región al sur de la carretera Peshawar-Islamabad-Lahore, excepto en Karachi y sus alrededores.\nTambién se requiere una escolta militar para ciertos tramos, como de Quetta a Sukkur (desde Irán).\nBásicamente, se puede viajar hacia o desde Irán por la carretera principal, pero de lo contrario es difícil o imposible visitar esta zona.\nEn particular, las zonas tribales cercanas a Afganistán están prohibidas.",
+      "pt": "Geralmente, é necessária uma escolta militar para viajar na região ao sul da estrada Peshawar-Islamabad-Lahore, com exceção de Karachi e seus arredores.\nUm NOC (Certificado de Não Objeção) também é necessário para certos trechos, como de Quetta a Sukkur (vindo do Irã).\nBasicamente, é possível viajar de/para o Irã pela estrada principal, mas, de outra forma, é difícil ou impossível visitar essa área.\n\nEm particular, as áreas tribais próximas ao Afeganistão são proibidas.",
+      "nl": "Een militaire escorte is over het algemeen vereist om te reizen in het gebied ten zuiden van de weg Peshawar-Islamabad-Lahore, met uitzondering van Karachi en de omgeving daarvan.\n\nEen NOC (No Objection Certificate) is ook vereist voor bepaalde trajecten, zoals van Quetta naar Sukkur (komend vanuit Iran).\n\nIn principe kunt u via de hoofdweg van en naar Iran reizen, maar het is verder moeilijk of onmogelijk om dit gebied te bezoeken.\n\nMet name de stamgebieden naast Afghanistan zijn verboden terrein.",
+      "pl": "Eskorta wojskowa jest zazwyczaj wymagana do podróżowania w regionie na południe od drogi Peszawar-Islamabad-Lahaur, z wyjątkiem Karaczi i okolic.\nW niektórych częściach kraju, na przykład z Kwety do Sukkur (z Iranu), wymagane jest również zezwolenie na wjazd.\nZasadniczo można podróżować do/z Iranu główną drogą, ale w przeciwnym razie odwiedzenie tego obszaru jest trudne lub wręcz niemożliwe.\nW szczególności obszary plemienne w pobliżu Afganistanu są wyłączone z ruchu.",
+      "ru": "Для передвижения по региону к югу от дороги Пешавар-Исламабад-Лахор, за исключением Карачи и окрестностей, обычно требуется военное сопровождение.\nДля некоторых участков, например, из Кветты в Суккур (со стороны Ирана), также требуется разрешение.\nВ принципе, по основной дороге можно путешествовать в/из Ирана, но в остальном посещение этого района затруднительно или невозможно.\nВ частности, посещение племенных районов, прилегающих к Афганистану, запрещено."
+    }
   },
   "sa-eq": {
     "id": "sa-eq",
     "type": 0,
     "name": "Empty Quarter Border",
     "country": "SAU",
-    "comment": "The area immediately next to the border with Oman is forbidden, with the exception of the main road leading the border post.\nIn particular, the road hugging the Saudi Arabia - Oman border south of the Rub' al Khali border post is closed."
+    "comment": "The area immediately next to the border with Oman is forbidden, with the exception of the main road leading the border post.\nIn particular, the road hugging the Saudi Arabia - Oman border south of the Rub' al Khali border post is closed.",
+    "comment_translations": {
+      "en": "The area immediately next to the border with Oman is forbidden, with the exception of the main road leading the border post.\nIn particular, the road hugging the Saudi Arabia - Oman border south of the Rub' al Khali border post is closed.",
+      "fr": "La zone immédiatement adjacente à la frontière avec Oman est interdite d'accès, à l'exception de la route principale menant au poste frontière.\n\nPlus précisément, la route longeant la frontière entre l'Arabie saoudite et Oman au sud du poste frontière de Rub' al Khali est fermée.",
+      "de": "Das Gebiet unmittelbar an der Grenze zu Oman ist gesperrt, mit Ausnahme der Hauptstraße, die zum Grenzübergang führt.\nInsbesondere die Straße, die südlich des Grenzübergangs Rub al-Khali entlang der Grenze zwischen Saudi-Arabien und Oman verläuft, ist gesperrt.",
+      "it": "L'area immediatamente adiacente al confine con l'Oman è vietata, ad eccezione della strada principale che conduce al valico di frontiera.\nIn particolare, è chiusa la strada che costeggia il confine tra Arabia Saudita e Oman a sud del valico di frontiera di Rub' al-Khali.",
+      "es": "La zona inmediatamente adyacente a la frontera con Omán está prohibida, con excepción de la carretera principal que conduce al puesto fronterizo. En particular, la carretera que bordea la frontera entre Arabia Saudita y Omán, al sur del puesto fronterizo de Rub al Khali, está cerrada.",
+      "pt": "A área imediatamente adjacente à fronteira com Omã é proibida, com exceção da estrada principal que leva ao posto fronteiriço.\nEm particular, a estrada que acompanha a fronteira entre a Arábia Saudita e Omã, ao sul do posto fronteiriço de Rub' al Khali, está fechada.",
+      "nl": "Het gebied direct grenzend aan Oman is verboden terrein, met uitzondering van de hoofdweg naar de grenspost.\n\nIn het bijzonder is de weg langs de grens tussen Saoedi-Arabië en Oman ten zuiden van de grenspost Rub' al Khali afgesloten.",
+      "pl": "Obszar bezpośrednio przy granicy z Omanem jest objęty zakazem wstępu, z wyjątkiem głównej drogi prowadzącej do posterunku granicznego. W szczególności zamknięta jest droga biegnąca wzdłuż granicy Arabii Saudyjskiej z Omanem na południe od posterunku granicznego w Ar-Rab al-Chali.",
+      "ru": "Запрещена территория, непосредственно прилегающая к границе с Оманом, за исключением главной дороги, ведущей к пограничному посту.\nВ частности, закрыта дорога, идущая вдоль границы Саудовской Аравии и Омана к югу от пограничного поста Руб-эль-Хали."
+    }
   },
   "tj-gbao": {
     "id": "tj-gbao",
     "type": 2,
     "name": "GBAO",
     "country": "TJK",
-    "comment": "The so-called GBAO permit (Gorno-Badakshan autonomous oblast) covers the Pamir in the east of Tajikistan.\nYou can easily obtain your permit together with your e-visa online, if you need one. If you're eligible to enter without visa, you'll have to purchase your permit in Dushanbe - or through a travel agent."
+    "comment": "The so-called GBAO permit (Gorno-Badakshan autonomous oblast) covers the Pamir in the east of Tajikistan.\nYou can easily obtain your permit together with your e-visa online, if you need one. If you're eligible to enter without visa, you'll have to purchase your permit in Dushanbe - or through a travel agent.",
+    "comment_translations": {
+      "en": "The so-called GBAO permit (Gorno-Badakshan autonomous oblast) covers the Pamir in the east of Tajikistan.\nYou can easily obtain your permit together with your e-visa online, if you need one. If you're eligible to enter without visa, you'll have to purchase your permit in Dushanbe - or through a travel agent.",
+      "fr": "Le permis GBAO (oblast autonome du Gorno-Badakshan) couvre le Pamir, à l'est du Tadjikistan.\n\nVous pouvez facilement obtenir votre permis en même temps que votre visa électronique, en ligne si nécessaire. Si vous êtes exempté de visa, vous devrez acheter votre permis à Douchanbé ou auprès d'une agence de voyages.",
+      "de": "Die sogenannte GBAO-Genehmigung (Autonomes Gebiet Gorno-Badachschan) gilt für das Pamirgebirge im Osten Tadschikistans.\nSie können Ihre Genehmigung zusammen mit Ihrem E-Visum online beantragen, falls Sie eines benötigen. Wenn Sie visumfrei einreisen dürfen, müssen Sie Ihre Genehmigung in Duschanbe oder über ein Reisebüro erwerben.",
+      "it": "Il cosiddetto permesso GBAO (oblast' autonoma di Gorno-Badakshan) copre il Pamir, nell'est del Tagikistan.\nÈ possibile ottenere facilmente il permesso insieme al visto elettronico online, se necessario. Se si è idonei all'ingresso senza visto, è necessario acquistare il permesso a Dushanbe o tramite un'agenzia di viaggi.",
+      "es": "El permiso GBAO (Óblast Autónomo de Gorno-Badajshán) cubre el Pamir, al este de Tayikistán. Puede obtenerlo fácilmente en línea, junto con su visa electrónica, si la necesita. Si puede entrar sin visa, deberá adquirirlo en Dusambé o a través de una agencia de viajes.",
+      "pt": "A chamada permissão GBAO (região autônoma de Gorno-Badakshan) abrange o Pamir, no leste do Tadjiquistão.\nVocê pode obter facilmente sua permissão junto com seu visto eletrônico online, se precisar de um. Se você for elegível para entrar sem visto, terá que comprar sua permissão em Dushanbe ou por meio de uma agência de viagens.",
+      "nl": "De zogenaamde GBAO-vergunning (Autonome Oblast Gorno-Badakshan) dekt het Pamirgebergte in het oosten van Tadzjikistan.\nU kunt uw vergunning, indien nodig, eenvoudig online aanvragen, samen met uw e-visum. Als u zonder visum mag reizen, moet u uw vergunning in Doesjanbe of via een reisbureau aanschaffen.",
+      "pl": "Tak zwane zezwolenie GBAO (obwód autonomiczny Górno-Badachszan) obejmuje Pamir na wschodzie Tadżykistanu. Możesz łatwo uzyskać zezwolenie wraz z e-wizą online, jeśli jej potrzebujesz. Jeśli kwalifikujesz się do wjazdu bez wizy, musisz wykupić zezwolenie w Duszanbe – lub za pośrednictwem biura podróży.",
+      "ru": "Так называемое разрешение ГБАО (Горно-Бадакшанская автономная область) распространяется на Памир на востоке Таджикистана.\nВы можете легко получить разрешение вместе с электронной визой онлайн, если она вам нужна. Если вы имеете право на въезд без визы, вам необходимо приобрести разрешение в Душанбе или через туристическое агентство."
+    }
   }
 }
