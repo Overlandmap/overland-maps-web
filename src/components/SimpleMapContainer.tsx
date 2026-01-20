@@ -1026,9 +1026,9 @@ export default function SimpleMapContainer({
           map.current.addImage('diagonal-stripe-black', blackPattern)
         }
         
-        const greyPattern = createDiagonalPattern('rgba(156, 163, 175, 1)')
-        if (greyPattern && !map.current.hasImage('diagonal-stripe-grey')) {
-          map.current.addImage('diagonal-stripe-grey', greyPattern)
+        const whitePattern = createDiagonalPattern('rgba(255, 255, 255, 1)')
+        if (whitePattern && !map.current.hasImage('diagonal-stripe-white')) {
+          map.current.addImage('diagonal-stripe-white', whitePattern)
         }
         
         const bluePattern = createDiagonalPattern('rgba(59, 130, 246, 1)')
@@ -1086,8 +1086,8 @@ export default function SimpleMapContainer({
         }
         
         const greyHighlightPattern = createHighlightedDiagonalPattern('rgba(156, 163, 175, 1)')
-        if (greyHighlightPattern && !map.current.hasImage('diagonal-stripe-grey-highlight')) {
-          map.current.addImage('diagonal-stripe-grey-highlight', greyHighlightPattern)
+        if (greyHighlightPattern && !map.current.hasImage('diagonal-stripe-white-highlight')) {
+          map.current.addImage('diagonal-stripe-white-highlight', greyHighlightPattern)
         }
         
         const blueHighlightPattern = createHighlightedDiagonalPattern('rgba(59, 130, 246, 1)')
@@ -1188,9 +1188,9 @@ export default function SimpleMapContainer({
               'case',
               ['==', ['get', 'type'], 0], 'diagonal-stripe-red',
               ['==', ['get', 'type'], 1], 'diagonal-stripe-black',
-              ['==', ['get', 'type'], 2], 'diagonal-stripe-grey',
+              ['==', ['get', 'type'], 2], 'diagonal-stripe-white',
               ['==', ['get', 'type'], 3], 'diagonal-stripe-blue',
-              'diagonal-stripe-grey' // Default
+              'diagonal-stripe-white' // Default
             ],
             'fill-opacity': 0.7
           }
@@ -1434,9 +1434,9 @@ export default function SimpleMapContainer({
             map.current.addImage('diagonal-stripe-black', blackPattern)
           }
           
-          const greyPattern = createDiagonalPattern('rgba(156, 163, 175, 1)')
-          if (greyPattern && !map.current.hasImage('diagonal-stripe-grey')) {
-            map.current.addImage('diagonal-stripe-grey', greyPattern)
+          const whitePattern = createDiagonalPattern('rgba(255, 255, 255, 1)')
+          if (whitePattern && !map.current.hasImage('diagonal-stripe-white')) {
+            map.current.addImage('diagonal-stripe-white', whitePattern)
           }
           
           const bluePattern = createDiagonalPattern('rgba(59, 130, 246, 1)')
@@ -1494,8 +1494,8 @@ export default function SimpleMapContainer({
           }
           
           const greyHighlightPattern = createHighlightedDiagonalPattern('rgba(156, 163, 175, 1)')
-          if (greyHighlightPattern && !map.current.hasImage('diagonal-stripe-grey-highlight')) {
-            map.current.addImage('diagonal-stripe-grey-highlight', greyHighlightPattern)
+          if (greyHighlightPattern && !map.current.hasImage('diagonal-stripe-white-highlight')) {
+            map.current.addImage('diagonal-stripe-white-highlight', greyHighlightPattern)
           }
           
           const blueHighlightPattern = createHighlightedDiagonalPattern('rgba(59, 130, 246, 1)')
@@ -1596,9 +1596,9 @@ export default function SimpleMapContainer({
                 'case',
                 ['==', ['get', 'type'], 0], 'diagonal-stripe-red',
                 ['==', ['get', 'type'], 1], 'diagonal-stripe-black',
-                ['==', ['get', 'type'], 2], 'diagonal-stripe-grey',
+                ['==', ['get', 'type'], 2], 'diagonal-stripe-white',
                 ['==', ['get', 'type'], 3], 'diagonal-stripe-blue',
-                'diagonal-stripe-grey' // Default
+                'diagonal-stripe-white' // Default
               ],
               'fill-opacity': 0.7
             }
@@ -2281,9 +2281,9 @@ export default function SimpleMapContainer({
             }
             
             // Type 2: Permit - Grey stripes
-            const greyPattern = createDiagonalPattern('rgba(156, 163, 175, 1)')
-            if (greyPattern && !map.current.hasImage('diagonal-stripe-grey')) {
-              map.current.addImage('diagonal-stripe-grey', greyPattern)
+            const whitePattern = createDiagonalPattern('rgba(255, 255, 255, 1)')
+            if (whitePattern && !map.current.hasImage('diagonal-stripe-white')) {
+              map.current.addImage('diagonal-stripe-white', whitePattern)
             }
             
             // Type 3: Restrictions - Blue stripes
@@ -2307,8 +2307,8 @@ export default function SimpleMapContainer({
             
             // Type 2: Permit - Grey stripes with gray background
             const greyHighlightPattern = createHighlightedDiagonalPattern('rgba(156, 163, 175, 1)')
-            if (greyHighlightPattern && !map.current.hasImage('diagonal-stripe-grey-highlight')) {
-              map.current.addImage('diagonal-stripe-grey-highlight', greyHighlightPattern)
+            if (greyHighlightPattern && !map.current.hasImage('diagonal-stripe-white-highlight')) {
+              map.current.addImage('diagonal-stripe-white-highlight', greyHighlightPattern)
             }
             
             // Type 3: Restrictions - Blue stripes with gray background
@@ -2413,8 +2413,8 @@ export default function SimpleMapContainer({
                         ['==', ['get', 'type'], 0], 'diagonal-stripe-red',
                         ['==', ['get', 'type'], 1], 'diagonal-stripe-black',
                         ['==', ['get', 'type'], 2], 'diagonal-stripe-blue',
-                        ['==', ['get', 'type'], 3], 'diagonal-stripe-grey',
-                        'diagonal-stripe-grey' // Default
+                        ['==', ['get', 'type'], 3], 'diagonal-stripe-white',
+                        'diagonal-stripe-white' // Default
                       ],
                       'fill-opacity': 0.7
                     }
