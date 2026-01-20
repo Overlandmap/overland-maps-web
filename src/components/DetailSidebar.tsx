@@ -1475,7 +1475,11 @@ export default function DetailSidebar({
     };
 
     // Special handling for translation fields - preserve from feature if database doesn't have them
-    const comment_translations = borderPostData?.comment_translations || feature?.properties?.comment_translations;
+    // Check both comment_translations and comment_translated field names
+    const comment_translations = borderPostData?.comment_translations || 
+                                 borderPostData?.comment_translated ||
+                                 feature?.properties?.comment_translations ||
+                                 feature?.properties?.comment_translated;
     const comment = borderPostData?.comment || feature?.properties?.comment;
 
     // Normalize coordinates from different formats
@@ -1498,7 +1502,8 @@ export default function DetailSidebar({
       coordinates: coordinates,
       is_open: rawData.is_open,
       comment: comment,
-      comment_translations: comment_translations
+      comment_translations: comment_translations,
+      comment_translated: comment_translations // Alias for compatibility
     };
   };
 
@@ -1629,9 +1634,12 @@ export default function DetailSidebar({
               console.warn('Border post translation validation warnings:', validation.warnings);
             }
 
+            // Check if translations are in comment_translated field instead
+            const translations = properties.comment_translated || properties.comment_translations;
+
             // Get the translated comment using the validation helper
             const displayComment = getTranslatedFieldValue(
-              properties.comment_translations,
+              translations,
               properties.comment,
               language
             );

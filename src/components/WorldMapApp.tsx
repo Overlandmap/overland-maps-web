@@ -4,6 +4,7 @@ import { useState, useCallback, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { CountryData, BorderData } from '../types'
 import { loadCountryData, getBorderById, getZoneById } from '../lib/data-loader'
+import { getBorderPostById } from '../lib/border-post-data'
 import { useLanguage } from '../contexts/LanguageContext'
 import { ColorSchemeProvider, useColorScheme } from '../contexts/ColorSchemeContext'
 import SimpleMapContainer from './SimpleMapContainer'
@@ -195,21 +196,25 @@ function WorldMapAppInner({ initialCountry, initialBorder, initialBorderPost, in
         window.history.pushState({ type: 'border-post', id: borderPostId }, '', generateEntityUrl('border_post', borderPostId))
       }
       
-      // Use feature properties as border post data
+      // Load border post data from JSON file
+      const jsonData = await getBorderPostById(borderPostId)
+      
+      // Merge data from JSON file and feature properties
+      // Priority: jsonData (from border-posts.json) > feature.properties (from map)
       const completeData = {
         id: borderPostId,
-        name: feature?.properties?.name || 'Unnamed Border Post',
-        is_open: feature?.properties?.is_open ?? -1,
-        comment: feature?.properties?.comment,
-        comment_translations: feature?.properties?.comment_translations,
-        countries: feature?.properties?.countries,
-        location: feature?.properties?.location,
+        name: jsonData?.name || feature?.properties?.name || 'Unnamed Border Post',
+        is_open: jsonData?.is_open ?? feature?.properties?.is_open ?? -1,
+        comment: jsonData?.comment || feature?.properties?.comment,
+        comment_translations: jsonData?.comment_translations || feature?.properties?.comment_translations,
+        comment_translated: jsonData?.comment_translated || feature?.properties?.comment_translated,
+        countries: jsonData?.countries || feature?.properties?.countries,
+        location: jsonData?.location || feature?.properties?.location,
         geometry: feature?.geometry,
-        coordinates: feature?.geometry?.type === 'Point' ? feature.geometry.coordinates : null,
-        ...feature?.properties
+        coordinates: jsonData?.coordinates || (feature?.geometry?.type === 'Point' ? feature.geometry.coordinates : null),
+        ...feature?.properties,
+        ...jsonData // JSON data takes priority
       }
-      
-
       
       // Show detail sidebar
       setSelectedFeature({
