@@ -625,7 +625,10 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'insurance_url': 'Insurance URL',
     'insurance_system': 'Insurance system',
     'no_borders': 'No borders available',
-    'data_coming_soon': 'Data is coming, come back later...'
+    'data_coming_soon': 'Data is coming, come back later...',
+    'onboarding_tooltip_title': 'Explore Different Map Layers',
+    'onboarding_tooltip_message': 'Tap the buttons above to switch between different map layers: overlanding friendliness, visa requirements, and vehicle paperwork requirements.',
+    'onboarding_tooltip_got_it': 'Got it!'
   },
   de: {
     'overlanding': 'Overlanding',
@@ -717,7 +720,10 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'insurance_url': 'Versicherungs-URL',
     'insurance_system': 'Versicherungssystem',
     'no_borders': 'Keine Grenzen verfügbar',
-    'data_coming_soon': 'Daten kommen bald, schauen Sie später vorbei...'
+    'data_coming_soon': 'Daten kommen bald, schauen Sie später vorbei...',
+    'onboarding_tooltip_title': 'Verschiedene Kartenebenen erkunden',
+    'onboarding_tooltip_message': 'Tippen Sie auf die Schaltflächen oben, um zwischen verschiedenen Kartenebenen zu wechseln: Overlanding-Freundlichkeit, Visaanforderungen und Fahrzeugpapieranforderungen.',
+    'onboarding_tooltip_got_it': 'Verstanden!'
   },
   es: {
     'overlanding': 'Overlanding',
@@ -809,7 +815,10 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'insurance_url': 'URL de Seguro',
     'insurance_system': 'Sistema de seguro',
     'no_borders': 'No hay fronteras disponibles',
-    'data_coming_soon': 'Los datos están llegando, vuelve más tarde...'
+    'data_coming_soon': 'Los datos están llegando, vuelve más tarde...',
+    'onboarding_tooltip_title': 'Explora diferentes capas del mapa',
+    'onboarding_tooltip_message': 'Toca los botones de arriba para cambiar entre diferentes capas del mapa: facilidad para overlanding, requisitos de visa y requisitos de documentación del vehículo.',
+    'onboarding_tooltip_got_it': '¡Entendido!'
   },
   fr: {
     'overlanding': 'Overlanding',
@@ -901,7 +910,10 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'insurance_url': 'URL Assurance',
     'insurance_system': 'Système d\'assurance',
     'no_borders': 'Aucune frontière disponible',
-    'data_coming_soon': 'Les données arrivent, revenez plus tard...'
+    'data_coming_soon': 'Les données arrivent, revenez plus tard...',
+    'onboarding_tooltip_title': 'Explorez différentes couches de carte',
+    'onboarding_tooltip_message': 'Appuyez sur les boutons ci-dessus pour basculer entre différentes couches de carte : facilité d\'overlanding, exigences de visa et exigences de documents du véhicule.',
+    'onboarding_tooltip_got_it': 'Compris !'
   },
   it: {
     'overlanding': 'Overlanding',
@@ -993,7 +1005,10 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'insurance_url': 'URL Assicurazione',
     'insurance_system': 'Sistema assicurativo',
     'no_borders': 'Nessun confine disponibile',
-    'data_coming_soon': 'I dati stanno arrivando, torna più tardi...'
+    'data_coming_soon': 'I dati stanno arrivando, torna più tardi...',
+    'onboarding_tooltip_title': 'Esplora diversi livelli della mappa',
+    'onboarding_tooltip_message': 'Tocca i pulsanti sopra per passare tra diversi livelli della mappa: facilità di overlanding, requisiti per il visto e requisiti per i documenti del veicolo.',
+    'onboarding_tooltip_got_it': 'Capito!'
   },
   ja: {
     'overlanding': 'オーバーランディング',
@@ -1085,7 +1100,10 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'insurance_url': '保険URL',
     'insurance_system': '保険システム',
     'no_borders': '利用可能な国境がありません',
-    'data_coming_soon': 'データは近日公開予定です。後でまたお越しください...'
+    'data_coming_soon': 'データは近日公開予定です。後でまたお越しください...',
+    'onboarding_tooltip_title': '異なる地図レイヤーを探索',
+    'onboarding_tooltip_message': '上のボタンをタップして、異なる地図レイヤーを切り替えます：オーバーランディングの利便性、ビザ要件、車両書類要件。',
+    'onboarding_tooltip_got_it': 'わかりました！'
   },
   nl: {
     'overlanding': 'Overlanding',
@@ -1177,7 +1195,10 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'insurance_url': 'Verzekering URL',
     'insurance_system': 'Verzekeringssysteem',
     'no_borders': 'Geen grenzen beschikbaar',
-    'data_coming_soon': 'Gegevens komen eraan, kom later terug...'
+    'data_coming_soon': 'Gegevens komen eraan, kom later terug...',
+    'onboarding_tooltip_title': 'Verken verschillende kaartlagen',
+    'onboarding_tooltip_message': 'Tik op de knoppen hierboven om te schakelen tussen verschillende kaartlagen: overlanding-vriendelijkheid, visumvereisten en voertuigdocumentenvereisten.',
+    'onboarding_tooltip_got_it': 'Begrepen!'
   },
   ru: {
     'overlanding': 'Оверлендинг',
@@ -1269,7 +1290,10 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'insurance_url': 'URL страхования',
     'insurance_system': 'Система страхования',
     'no_borders': 'Нет доступных границ',
-    'data_coming_soon': 'Данные скоро появятся, зайдите позже...'
+    'data_coming_soon': 'Данные скоро появятся, зайдите позже...',
+    'onboarding_tooltip_title': 'Изучите различные слои карты',
+    'onboarding_tooltip_message': 'Нажмите на кнопки выше, чтобы переключаться между различными слоями карты: удобство оверлендинга, визовые требования и требования к документам на транспорт.',
+    'onboarding_tooltip_got_it': 'Понятно!'
   },
   zh: {
     'overlanding': '越野旅行',
@@ -1361,7 +1385,10 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'insurance_url': '保险URL',
     'insurance_system': '保险系统',
     'no_borders': '没有可用的边界',
-    'data_coming_soon': '数据即将推出，请稍后再来...'
+    'data_coming_soon': '数据即将推出，请稍后再来...',
+    'onboarding_tooltip_title': '探索不同的地图图层',
+    'onboarding_tooltip_message': '点击上方按钮在不同的地图图层之间切换：越野旅行友好度、签证要求和车辆文件要求。',
+    'onboarding_tooltip_got_it': '明白了！'
   }
 }
 

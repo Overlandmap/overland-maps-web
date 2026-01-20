@@ -9,6 +9,7 @@ import { ColorSchemeProvider, useColorScheme } from '../contexts/ColorSchemeCont
 import SimpleMapContainer from './SimpleMapContainer'
 import DetailSidebar from './DetailSidebar'
 import DisclaimerPopup from './DisclaimerPopup'
+import ColorSchemeOnboardingTooltip from './ColorSchemeOnboardingTooltip'
 import { generateEntityUrl } from '../lib/url-utils'
 
 interface SelectedFeature {
@@ -43,6 +44,7 @@ function WorldMapAppInner({ initialCountry, initialBorder, initialBorderPost, in
   const [isHandlingPopState, setIsHandlingPopState] = useState(false)
   const [hasHandledInitialSelection, setHasHandledInitialSelection] = useState(false)
   const [showDisclaimer, setShowDisclaimer] = useState(false)
+  const [showOnboardingTooltip, setShowOnboardingTooltip] = useState(false)
 
   // Check if disclaimer has been shown before
   useEffect(() => {
@@ -52,10 +54,40 @@ function WorldMapAppInner({ initialCountry, initialBorder, initialBorderPost, in
     }
   }, [])
 
+  // Check if onboarding tooltip has been shown before (only on mobile)
+  useEffect(() => {
+    const onboardingShown = localStorage.getItem('onboarding-tooltip-shown')
+    const isMobile = window.innerWidth < 768
+    
+    if (!onboardingShown && isMobile) {
+      // Show tooltip after disclaimer is accepted and sidebar is closed (with a small delay)
+      const timer = setTimeout(() => {
+        if (!showDisclaimer && !sidebarOpen) {
+          setShowOnboardingTooltip(true)
+        }
+      }, 500)
+      
+      return () => clearTimeout(timer)
+    }
+  }, [showDisclaimer, sidebarOpen])
+
+  // Hide tooltip when sidebar opens
+  useEffect(() => {
+    if (sidebarOpen && showOnboardingTooltip) {
+      setShowOnboardingTooltip(false)
+    }
+  }, [sidebarOpen, showOnboardingTooltip])
+
   // Handle disclaimer acceptance
   const handleDisclaimerAccept = useCallback(() => {
     localStorage.setItem('disclaimer-accepted', 'true')
     setShowDisclaimer(false)
+  }, [])
+
+  // Handle onboarding tooltip close
+  const handleOnboardingTooltipClose = useCallback(() => {
+    localStorage.setItem('onboarding-tooltip-shown', 'true')
+    setShowOnboardingTooltip(false)
   }, [])
 
   /**
@@ -760,6 +792,12 @@ function WorldMapAppInner({ initialCountry, initialBorder, initialBorderPost, in
       <DisclaimerPopup
         isOpen={showDisclaimer}
         onAccept={handleDisclaimerAccept}
+      />
+
+      {/* Onboarding Tooltip */}
+      <ColorSchemeOnboardingTooltip
+        isOpen={showOnboardingTooltip}
+        onClose={handleOnboardingTooltipClose}
       />
     </div>
   )
