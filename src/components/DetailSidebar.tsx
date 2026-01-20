@@ -1692,43 +1692,38 @@ export default function DetailSidebar({
       <div className="space-y-6">
         {/* Header */}
         <div className="border-b border-gray-200 pb-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-4 flex-1">
-              <h2 className="text-2xl font-bold text-gray-900">
-                🚫 {properties.name || 'Restricted Zone'}
-              </h2>
-              <button
-                onClick={onClose}
-                className="p-2 hover:bg-gray-100 rounded-full transition-colors"
-              >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-            </div>
-            <span className={`px-3 py-1 text-sm font-medium rounded-full ${zoneType.color}`}>
-              {zoneType.label}
-            </span>
+          <div className="flex items-center justify-between mb-3">
+            <h2 className="text-2xl font-bold text-gray-900 flex-1">
+              🚫 {properties.name || 'Restricted Zone'}
+            </h2>
+            <button
+              onClick={onClose}
+              className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
           </div>
+          
+          {/* Status Badge */}
+          <span className={`inline-block px-3 py-1 text-sm font-medium rounded-full ${zoneType.color}`}>
+            {zoneType.label}
+          </span>
         </div>
 
         {/* Zone Information */}
         <div className="space-y-4">
-          <div className="grid grid-cols-1 gap-3">
-            {/* Country */}
-            {properties.country && (
-              <div className="space-y-2">
-                <span className="text-gray-600 text-sm font-medium">{getTranslatedLabel('country', language)}:</span>
-                <CountryNameDisplay 
-                  countryCode={properties.country} 
-                  language={language}
-                  onCountryClick={onCountrySelect}
-                />
-              </div>
-            )}
-          </div>
+          {/* Country (without label) */}
+          {properties.country && (
+            <CountryNameDisplay 
+              countryCode={properties.country} 
+              language={language}
+              onCountryClick={onCountrySelect}
+            />
+          )}
           
-          {/* Comment */}
+          {/* Comment (without label) */}
           {(() => {
             // Validate translation structure and log warnings
             const validation = validateTranslationStructure(properties);
@@ -1744,11 +1739,8 @@ export default function DetailSidebar({
             );
             
             return displayComment && (
-              <div className="space-y-2">
-                <span className="text-gray-600 text-sm font-medium">{getTranslatedLabel('comment', language)}:</span>
-                <div className="bg-yellow-50 p-3 rounded-lg border border-yellow-200">
-                  <p className="text-sm text-gray-800">{displayComment}</p>
-                </div>
+              <div className="bg-yellow-50 p-3 rounded-lg border border-yellow-200">
+                <p className="text-sm text-gray-800">{displayComment}</p>
               </div>
             )
           })()}

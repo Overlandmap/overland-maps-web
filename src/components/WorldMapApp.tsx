@@ -390,7 +390,7 @@ function WorldMapAppInner({ initialCountry, initialBorder, initialBorderPost, in
    * Handle country selection from sidebar
    */
   const handleCountrySelection = useCallback(async (countryCode: string) => {
-
+    console.log('🔍 handleCountrySelection called with:', countryCode)
     
     try {
       const { countries } = await loadCountryData()
@@ -401,13 +401,16 @@ function WorldMapAppInner({ initialCountry, initialBorder, initialBorderPost, in
         c.parameters?.adm0_a3 === countryCode
       )
       
-      if (country && mapInteractions?.selectCountryByISO3) {
-        await mapInteractions.selectCountryByISO3(countryCode)
+      if (country) {
+        // Call handleCountryClick to show the country details in the sidebar
+        await handleCountryClick(countryCode, country, null)
+      } else {
+        console.warn('⚠️ Country not found:', countryCode)
       }
     } catch (error) {
       console.error('Failed to select country:', error)
     }
-  }, [mapInteractions])
+  }, [handleCountryClick])
 
   /**
    * Handle border post zoom
