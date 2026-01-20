@@ -713,9 +713,15 @@ export function useMapInteractions(
     if (!map.current) return
 
     try {
-      // Query for country features with this ISO3 code
-      const features = map.current.querySourceFeatures('composite', {
-        filter: ['==', 'iso_a3', iso3]
+      // Query for country features with this ISO3 code from the country-border source
+      const features = map.current.querySourceFeatures('country-border', {
+        sourceLayer: 'country',
+        filter: [
+          'any',
+          ['==', ['get', 'ADM0_A3'], iso3],
+          ['==', ['get', 'ISO_A3'], iso3],
+          ['==', ['get', 'id'], iso3]
+        ]
       })
 
       if (features.length > 0) {

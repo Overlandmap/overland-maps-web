@@ -2006,7 +2006,7 @@ export default function DetailSidebar({
   if (!isOpen) return null
 
   return (
-    <div className={`fixed inset-y-0 right-0 w-96 bg-white shadow-xl z-50 transform transition-transform duration-300 flex flex-col ${className}`}>
+    <div className={`fixed inset-y-0 right-0 w-full md:w-96 bg-white shadow-xl z-50 transform transition-transform duration-300 flex flex-col ${className}`}>
       {/* Content */}
       <div className="flex-1 overflow-y-auto p-4">
         {sidebarState.isLoading ? (
