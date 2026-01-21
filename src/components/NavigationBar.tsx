@@ -82,7 +82,7 @@ export default function NavigationBar({ currentSection, className = '' }: Naviga
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <Link href="/" className="flex items-center">
+              <Link href="/" className="flex items-center space-x-3">
                 <Image
                   src="/full_logo.jpeg"
                   alt="Overland Map Logo"
@@ -91,6 +91,9 @@ export default function NavigationBar({ currentSection, className = '' }: Naviga
                   className="h-10 w-auto rounded-lg"
                   priority
                 />
+                <span className="text-xl font-semibold text-gray-900">
+                  Overland Map
+                </span>
               </Link>
             </div>
 
