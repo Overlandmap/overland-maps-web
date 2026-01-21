@@ -235,7 +235,18 @@
           "_latitude": 41.0483801,
           "_longitude": 72.3415166
         },
-        "comment": "You can cross here on foot, or on bicycle, but motor vehicles are forbidden."
+        "comment": "You can cross here on foot, or on bicycle, but motor vehicles are forbidden.",
+        "comment_translations": {
+          "en": "You can cross here on foot, or on bicycle, but motor vehicles are forbidden.",
+          "fr": "Vous pouvez traverser ici à pied ou à vélo, mais les véhicules motorisés sont interdits.",
+          "de": "Sie können die Straße zu Fuß oder mit dem Fahrrad überqueren, motorisierte Fahrzeuge sind jedoch verboten.",
+          "it": "È possibile attraversare il lago a piedi o in bicicletta, ma i veicoli a motore sono vietati.",
+          "es": "Se puede cruzar a pie o en bicicleta, pero los vehículos a motor están prohibidos.",
+          "pt": "Você pode atravessar a pé ou de bicicleta, mas veículos motorizados são proibidos.",
+          "nl": "Je kunt hier te voet of met de fiets oversteken, maar motorvoertuigen zijn verboden.",
+          "pl": "Można tędy przejść pieszo lub rowerem, ale ruch pojazdów mechanicznych jest zabroniony.",
+          "ru": "Здесь можно перейти дорогу пешком или на велосипеде, но движение автотранспорта запрещено."
+        }
       }
     },
     {
@@ -528,6 +539,17 @@
         "updatedat": {
           "_seconds": 1768482628,
           "_nanoseconds": 951000000
+        },
+        "comment_translations": {
+          "en": "Russian eVisa valid.",
+          "fr": "Visa électronique russe valide.",
+          "de": "Russisches eVisum gültig.",
+          "it": "Visto elettronico russo valido.",
+          "es": "eVisa rusa válida.",
+          "pt": "Visto eletrônico russo válido.",
+          "nl": "Het Russische e-visum is geldig.",
+          "pl": "Rosyjska e-wiza ważna.",
+          "ru": "Российская электронная виза действительна."
         }
       }
     },
@@ -1181,6 +1203,17 @@
         "updatedat": {
           "_seconds": 1768482168,
           "_nanoseconds": 763000000
+        },
+        "comment_translations": {
+          "en": "Russian eVisa is valid here.",
+          "fr": "Le visa électronique russe est valable ici.",
+          "de": "Das russische eVisum ist hier gültig.",
+          "it": "Qui è valido il visto elettronico russo.",
+          "es": "La eVisa rusa es válida aquí.",
+          "pt": "O visto eletrônico russo é válido aqui.",
+          "nl": "Het Russische e-visum is hier geldig.",
+          "pl": "Rosyjska e-wiza jest tutaj ważna.",
+          "ru": "Здесь действительна российская электронная виза."
         }
       }
     },
@@ -3910,6 +3943,17 @@
         "updatedat": {
           "_seconds": 1768482642,
           "_nanoseconds": 843000000
+        },
+        "comment_translations": {
+          "en": "Russian eVisa valid.",
+          "fr": "Visa électronique russe valide.",
+          "de": "Russisches eVisum gültig.",
+          "it": "Visto elettronico russo valido.",
+          "es": "eVisa rusa válida.",
+          "pt": "Visto eletrônico russo válido.",
+          "nl": "Het Russische e-visum is geldig.",
+          "pl": "Rosyjska e-wiza ważna.",
+          "ru": "Российская электронная виза действительна."
         }
       }
     },
@@ -4319,6 +4363,17 @@
         "updatedat": {
           "_seconds": 1766353224,
           "_nanoseconds": 685000000
+        },
+        "comment_translations": {
+          "en": "You'll have to be escorted on Iraqi side, sometimes all the way between the border and Baghdad, sometimes just a few km from the border.",
+          "fr": "Vous devrez être escorté du côté irakien, parfois jusqu'à Bagdad, parfois à quelques kilomètres seulement de la frontière.",
+          "de": "Sie müssen auf irakischer Seite eskortiert werden, manchmal die ganze Strecke zwischen der Grenze und Bagdad, manchmal nur wenige Kilometer von der Grenze entfernt.",
+          "it": "Dovrai essere scortato sul lato iracheno, a volte per tutto il tragitto tra il confine e Baghdad, a volte solo per pochi chilometri dal confine.",
+          "es": "Tendrás que ser escoltado en el lado iraquí, a veces durante todo el camino entre la frontera y Bagdad, a veces sólo unos pocos kilómetros de la frontera.",
+          "pt": "Você precisará de escolta no lado iraquiano, às vezes por todo o trajeto entre a fronteira e Bagdá, outras vezes apenas a poucos quilômetros da fronteira.",
+          "nl": "Aan de Iraakse kant moet je onder begeleiding reizen, soms helemaal tussen de grens en Bagdad, soms slechts een paar kilometer van de grens.",
+          "pl": "Będziesz musiał skorzystać z eskorty po stronie irackiej, czasami aż do Bagdadu, a czasami tylko kilka kilometrów od granicy.",
+          "ru": "На иракской стороне вас будут сопровождать, иногда на всем пути от границы до Багдада, а иногда всего в нескольких километрах от границы."
         }
       }
     },
@@ -4664,6 +4719,17 @@
         "updatedat": {
           "_seconds": 1768898943,
           "_nanoseconds": 429000000
+        },
+        "comment_translations": {
+          "en": "On this border post, the Indian eVisa is accepted, even for the first entry.",
+          "fr": "À ce poste frontière, le visa électronique indien est accepté, même pour une première entrée.",
+          "de": "An diesem Grenzübergang wird das indische e-Visum auch bei der ersten Einreise akzeptiert.",
+          "it": "In questo posto di frontiera viene accettato il visto elettronico indiano, anche per il primo ingresso.",
+          "es": "En este puesto fronterizo se acepta la eVisa india, incluso para la primera entrada.",
+          "pt": "Neste posto fronteiriço, o visto eletrônico indiano é aceito, inclusive para a primeira entrada.",
+          "nl": "Bij deze grenspost wordt het Indiase e-visum geaccepteerd, zelfs bij de eerste binnenkomst.",
+          "pl": "Na tym przejściu granicznym akceptowane są indyjskie wizy elektroniczne, nawet przy pierwszym wjeździe.",
+          "ru": "На этом пограничном пункте принимается индийская электронная виза, даже для первого въезда."
         }
       }
     },
@@ -6064,6 +6130,17 @@
         "updatedat": {
           "_seconds": 1768482197,
           "_nanoseconds": 231000000
+        },
+        "comment_translations": {
+          "en": "Russian eVisa is valid here.",
+          "fr": "Le visa électronique russe est valable ici.",
+          "de": "Das russische eVisum ist hier gültig.",
+          "it": "Qui è valido il visto elettronico russo.",
+          "es": "La eVisa rusa es válida aquí.",
+          "pt": "O visto eletrônico russo é válido aqui.",
+          "nl": "Het Russische e-visum is hier geldig.",
+          "pl": "Rosyjska e-wiza jest tutaj ważna.",
+          "ru": "Здесь действительна российская электронная виза."
         }
       }
     },
@@ -6088,6 +6165,17 @@
         "updatedat": {
           "_seconds": 1768482183,
           "_nanoseconds": 433000000
+        },
+        "comment_translations": {
+          "en": "Russian eVisa is valid here.",
+          "fr": "Le visa électronique russe est valable ici.",
+          "de": "Das russische eVisum ist hier gültig.",
+          "it": "Qui è valido il visto elettronico russo.",
+          "es": "La eVisa rusa es válida aquí.",
+          "pt": "O visto eletrônico russo é válido aqui.",
+          "nl": "Het Russische e-visum is hier geldig.",
+          "pl": "Rosyjska e-wiza jest tutaj ważna.",
+          "ru": "Здесь действительна российская электронная виза."
         }
       }
     },

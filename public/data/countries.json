@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generatedAt": "2026-01-20T10:32:57.159Z",
+    "generatedAt": "2026-01-20T15:55:20.350Z",
     "totalCountries": 242,
     "countriesWithIso3": 0,
     "countriesWithBorders": 0
@@ -47,14 +47,9 @@
           "ru": "Абхазия",
           "zh": "阿布哈茲"
         },
-        "visa": 1,
         "visa_comment": "You need to apply for a visa online:\nhttps://mfaapsny.org/en/consular-service/permission/\nAfter you get an authorization back (e-mail), you'll be able to cross the border, but then you'll need to get your visa at the consular service office in Sukhumi.",
         "disputed": "Breakaway Georgian republic only recognized by Russia and a few other states.",
         "comment": "It used to be possible to enter from Georgian side, but apparently not anymore.\nIt's certainly possible to visit from Russia (with a multiple-entry Russian visa).",
-        "updatedat": {
-          "_seconds": 1763990310,
-          "_nanoseconds": 158000000
-        },
         "foreign_url": {
           "fr_FRA": "georgie"
         },
@@ -91,6 +86,11 @@
           "nl": "De afgescheiden Georgische republiek wordt alleen erkend door Rusland en een paar andere staten.",
           "pl": "Oderwana od reszty kraju republika gruzińska, uznawana jedynie przez Rosję i kilka innych państw.",
           "ru": "Отколовшаяся Грузинская республика признана лишь Россией и несколькими другими государствами."
+        },
+        "visa": 2,
+        "updatedat": {
+          "_seconds": 1768919494,
+          "_nanoseconds": 359000000
         }
       },
       "borderIds": [],
@@ -839,7 +839,6 @@
           "zh": "巴库"
         },
         "carnet_comment": "Before COVID, a carnet was not required.",
-        "comment": "Since COVID, it's impossible to enter the country with a foreign vehicle. On the other hand, it's no problem to exit the country with your own vehicle, so one work-around if you want to visit Azerbaijan, is to ship your vehicle on the back of a truck into the country, then you're free to go wherever you want. It doesn't make much sense, but that's how it is.",
         "continent": "Asia",
         "currency": "AZN",
         "currency_symbol": "ман",
@@ -860,23 +859,7 @@
           "ru": "Азербайджан",
           "zh": "阿塞拜疆"
         },
-        "visa": 0,
         "carnet": 0,
-        "updatedat": {
-          "_seconds": 1764859165,
-          "_nanoseconds": 205000000
-        },
-        "comment_translations": {
-          "en": "Since COVID, it's impossible to enter the country with a foreign vehicle. On the other hand, it's no problem to exit the country with your own vehicle, so one work-around if you want to visit Azerbaijan, is to ship your vehicle on the back of a truck into the country, then you're free to go wherever you want. It doesn't make much sense, but that's how it is.",
-          "fr": "Depuis la pandémie de COVID-19, il est impossible d'entrer dans le pays avec un véhicule étranger. En revanche, il est tout à fait possible de quitter le pays avec son propre véhicule. Une solution de contournement pour visiter l'Azerbaïdjan consiste donc à faire transporter son véhicule par camion jusqu'au pays, ce qui permet ensuite de circuler librement. C'est une solution peu pratique, mais c'est ainsi.",
-          "de": "Seit COVID-19 ist die Einreise mit einem ausländischen Fahrzeug unmöglich. Die Ausreise mit dem eigenen Fahrzeug ist hingegen problemlos möglich. Wer Aserbaidschan besuchen möchte, kann sein Fahrzeug per LKW ins Land transportieren lassen und anschließend frei reisen. Es mag etwas ungewöhnlich klingen, aber so ist es nun mal.",
-          "it": "A causa del COVID, è impossibile entrare nel Paese con un veicolo straniero. D'altra parte, non ci sono problemi a uscire dal Paese con il proprio veicolo, quindi una soluzione alternativa se si desidera visitare l'Azerbaigian è quella di spedire il proprio veicolo sul retro di un camion nel Paese, dopodiché si è liberi di andare dove si vuole. Non ha molto senso, ma è così che funziona.",
-          "es": "Desde la pandemia, es imposible entrar al país con un vehículo extranjero. Por otro lado, no hay problema en salir del país con tu propio vehículo, así que una solución alternativa si quieres visitar Azerbaiyán es transportar tu vehículo en la parte trasera de un camión y así podrás ir a donde quieras. No tiene mucho sentido, pero así es.",
-          "pt": "Desde a COVID, é impossível entrar no país com um veículo estrangeiro. Por outro lado, não há problema em sair do país com o seu próprio veículo. Portanto, uma alternativa para quem deseja visitar o Azerbaijão é enviar o veículo na carroceria de um caminhão para dentro do país, ficando assim livre para ir aonde quiser. Não faz muito sentido, mas é assim que funciona.",
-          "nl": "Sinds COVID is het onmogelijk om met een buitenlands voertuig het land binnen te komen. Aan de andere kant is het geen probleem om met je eigen voertuig het land te verlaten. Een mogelijke oplossing als je Azerbeidzjan wilt bezoeken, is om je voertuig op een vrachtwagen het land in te laten vervoeren. Dan kun je vrij reizen. Het is niet erg logisch, maar zo werkt het nu eenmaal.",
-          "pl": "Od czasu pandemii COVID-19 wjazd do kraju pojazdem zagranicznym jest niemożliwy. Z drugiej strony, bez problemu można wyjechać z kraju własnym pojazdem, więc jednym z rozwiązań, jeśli chcesz odwiedzić Azerbejdżan, jest przewiezienie pojazdu na pace ciężarówki, skąd możesz swobodnie jechać, gdziekolwiek chcesz. To nie ma większego sensu, ale tak właśnie jest.",
-          "ru": "С начала пандемии COVID-19 въезд в страну на иностранном транспортном средстве невозможен. С другой стороны, выезд из страны на собственном автомобиле не представляет проблем, поэтому один из обходных путей для посещения Азербайджана — это перевезти свой автомобиль в страну на грузовике, после чего вы сможете свободно перемещаться куда захотите. Это кажется нелогичным, но так уж сложилось."
-        },
         "carnet_comment_translations": {
           "en": "Before COVID, a carnet was not required.",
           "fr": "Avant la COVID, un carnet ATA n'était pas requis.",
@@ -887,6 +870,36 @@
           "nl": "Vóór COVID was een carnet niet verplicht.",
           "pl": "Przed pandemią COVID-19 karnet nie był wymagany.",
           "ru": "До пандемии COVID-19 карнет не требовался."
+        },
+        "visa": 2,
+        "visa_url": "https://evisa.gov.az/",
+        "visa_comment": "Most nationals can get an eVisa for 30 days (23 €). Nationals from ex-USSR countries, China or Iran can enter visa-free.",
+        "comment": "Since COVID, it's impossible to enter the country with a foreign vehicle. On the other hand, it's no problem to exit the country with your own vehicle, so one work-around if you want to visit Azerbaijan, is to ship your vehicle on the back of a truck into the country, or ship it by boat, then you're free to go wherever you want. It doesn't make much sense, but that's how it is.",
+        "updatedat": {
+          "_seconds": 1768919871,
+          "_nanoseconds": 336000000
+        },
+        "comment_translations": {
+          "en": "Since COVID, it's impossible to enter the country with a foreign vehicle. On the other hand, it's no problem to exit the country with your own vehicle, so one work-around if you want to visit Azerbaijan, is to ship your vehicle on the back of a truck into the country, or ship it by boat, then you're free to go wherever you want. It doesn't make much sense, but that's how it is.",
+          "fr": "Depuis la pandémie de COVID-19, il est impossible d'entrer dans le pays avec un véhicule étranger. En revanche, il est tout à fait possible de quitter le pays avec son propre véhicule. Une solution de contournement pour visiter l'Azerbaïdjan consiste donc à faire transporter son véhicule par camion ou par bateau, ce qui permet ensuite de circuler librement. C'est une solution peu pratique, mais c'est ainsi.",
+          "de": "Seit COVID-19 ist die Einreise mit einem ausländischen Fahrzeug unmöglich. Die Ausreise mit dem eigenen Fahrzeug ist hingegen problemlos möglich. Wer Aserbaidschan besuchen möchte, kann sein Fahrzeug per LKW oder Schiff ins Land transportieren lassen und anschließend frei reisen. Es mag etwas ungewöhnlich klingen, aber so ist es nun mal.",
+          "it": "A causa del COVID, è impossibile entrare nel Paese con un veicolo straniero. D'altra parte, non ci sono problemi a uscire dal Paese con il proprio veicolo, quindi una soluzione alternativa se si desidera visitare l'Azerbaigian è quella di spedire il proprio veicolo nel Paese sul retro di un camion, o via nave, e poi si è liberi di andare dove si vuole. Non ha molto senso, ma è così che funziona.",
+          "es": "Desde la pandemia, es imposible entrar al país con un vehículo extranjero. Por otro lado, no hay problema en salir del país con tu propio vehículo, así que una alternativa si quieres visitar Azerbaiyán es transportar tu vehículo en la parte trasera de un camión o por barco, y así podrás ir a donde quieras. No tiene mucho sentido, pero así es.",
+          "pt": "Desde a COVID, é impossível entrar no país com um veículo estrangeiro. Por outro lado, não há problema em sair do país com o seu próprio veículo. Portanto, uma alternativa para quem deseja visitar o Azerbaijão é enviar o veículo para o país na carroceria de um caminhão ou por barco, e assim ter liberdade para ir aonde quiser. Não faz muito sentido, mas é assim que funciona.",
+          "nl": "Sinds COVID is het onmogelijk om met een buitenlands voertuig het land binnen te komen. Aan de andere kant is het geen probleem om het land met je eigen voertuig te verlaten. Een mogelijke oplossing als je Azerbeidzjan wilt bezoeken, is om je voertuig op een vrachtwagen of per boot het land in te laten vervoeren. Dan kun je vrij reizen. Het is niet erg logisch, maar zo werkt het nu eenmaal.",
+          "pl": "Od czasu pandemii COVID-19 wjazd do kraju pojazdem zagranicznym jest niemożliwy. Z drugiej strony, bez problemu można wyjechać z kraju własnym pojazdem, więc jednym z rozwiązań, jeśli chcesz odwiedzić Azerbejdżan, jest przewiezienie pojazdu na pace ciężarówki lub łodzi, skąd możesz swobodnie jechać, gdziekolwiek chcesz. To nie ma większego sensu, ale tak właśnie jest.",
+          "ru": "С начала пандемии COVID-19 въезд в страну на иностранном транспортном средстве невозможен. С другой стороны, выезд из страны на собственном автомобиле не представляет проблем, поэтому один из обходных путей для посещения Азербайджана — это перевезти свой автомобиль в страну на грузовике или на корабле, после чего вы сможете свободно перемещаться куда захотите. Это кажется нелогичным, но так уж сложилось."
+        },
+        "visa_comment_translations": {
+          "en": "Most nationals can get an eVisa for 30 days (23 €). Nationals from ex-USSR countries, China or Iran can enter visa-free.",
+          "fr": "La plupart des ressortissants peuvent obtenir un visa électronique de 30 jours (23 €). Les ressortissants des pays de l'ex-URSS, de Chine ou d'Iran peuvent entrer sans visa.",
+          "de": "Die meisten Staatsangehörigen können ein eVisum für 30 Tage (23 €) erhalten. Staatsangehörige von ehemaligen Sowjetrepubliken, China oder dem Iran können visumfrei einreisen.",
+          "it": "La maggior parte dei cittadini può ottenere un visto elettronico per 30 giorni (23 €). I cittadini provenienti da paesi dell'ex Unione Sovietica, Cina o Iran possono entrare senza visto.",
+          "es": "La mayoría de los ciudadanos pueden obtener una eVisa por 30 días (23 €). Los ciudadanos de países de la antigua URSS, China o Irán pueden entrar sin visado.",
+          "pt": "A maioria dos cidadãos pode obter um visto eletrônico (eVisa) de 30 dias (23 €). Cidadãos de países da antiga URSS, China ou Irã podem entrar sem visto.",
+          "nl": "De meeste nationaliteiten kunnen een e-visum voor 30 dagen aanvragen (€ 23). Staatsburgers van voormalige Sovjet-Unie-landen, China en Iran kunnen visumvrij het land binnenkomen.",
+          "pl": "Większość obywateli może otrzymać e-wizę na 30 dni (23 €). Obywatele krajów byłego ZSRR, Chin i Iranu mogą wjechać bez wizy.",
+          "ru": "Большинство граждан могут получить электронную визу на 30 дней (23 €). Граждане стран бывшего СССР, Китая или Ирана могут въезжать без визы."
         }
       },
       "borderIds": [],
@@ -4932,14 +4945,9 @@
           "zh": "伊朗"
         },
         "visa": 3,
-        "visa_comment": "An eVisa is theoretically available but not very reliable. A visa is best secured via a travel agency, which will get an official confirmation from the ministry. With this confirmation, you can then walk into any embassy and buy your visa.\nNote that citizens of the USA, UK, Canada and Australia can't travel on their own in Iran, they need a guide at all time.\nThe 30 days visa can be extended in most province capitals.\nSome nationalities can enter visa-free. Israelis can't enter at all.",
         "comment": "Iran is open and a historically has always been a grzat tourist destination, with the caveat that some tourists have been arbitrarily arrested and detained on bogus charges of spying. That's the reason most countries recommend not to visit Iran.",
         "carnet_comment": "A carnet is required. There are ways to get a temporary, Iran-only carnet at the border, which is very expensive and not refundable. So a carnet is a must to enter with their own vehicle.",
         "insurance": 0,
-        "updatedat": {
-          "_seconds": 1764932539,
-          "_nanoseconds": 833000000
-        },
         "comment_translations": {
           "en": "Iran is open and a historically has always been a grzat tourist destination, with the caveat that some tourists have been arbitrarily arrested and detained on bogus charges of spying. That's the reason most countries recommend not to visit Iran.",
           "fr": "L'Iran est un pays ouvert et a toujours été une destination touristique prisée, malgré le fait que certains touristes aient été arrêtés et détenus arbitrairement sous de fausses accusations d'espionnage. C'est pourquoi la plupart des pays déconseillent de se rendre en Iran.",
@@ -4951,20 +4959,26 @@
           "pl": "Iran jest krajem otwartym i historycznie zawsze był atrakcyjnym kierunkiem turystycznym, z zastrzeżeniem, że niektórzy turyści byli arbitralnie aresztowani i zatrzymywani pod fałszywymi zarzutami szpiegostwa. Dlatego większość krajów odradza podróżowanie do Iranu.",
           "ru": "Иран открыт для туристов и исторически всегда был популярным туристическим направлением, за исключением случаев, когда некоторые туристы были произвольно арестованы и задержаны по сфабрикованным обвинениям в шпионаже. Именно поэтому большинство стран не рекомендуют посещать Иран."
         },
+        "stay_duration": "5 months",
+        "visa_comment": "An eVisa is theoretically available but not very reliable. A visa is best secured via a travel agency, which will get an official confirmation from the ministry. With this confirmation, you can then walk into any embassy and buy your visa.\nNote that citizens of the USA, UK, Canada and Australia can't travel on their own in Iran, they need a guide at all time.\nThe 30 days visa can be extended twice in most province capitals, so you could stay a total of 90 consecutive days in the country.\nSome nationalities can enter visa-free. Israelis can't enter at all.",
+        "updatedat": {
+          "_seconds": 1768920787,
+          "_nanoseconds": 105000000
+        },
         "visa_comment_translations": {
-          "en": "An eVisa is theoretically available but not very reliable. A visa is best secured via a travel agency, which will get an official confirmation from the ministry. With this confirmation, you can then walk into any embassy and buy your visa.\nNote that citizens of the USA, UK, Canada and Australia can't travel on their own in Iran, they need a guide at all time.\nThe 30 days visa can be extended in most province capitals.\nSome nationalities can enter visa-free. Israelis can't enter at all.",
-          "fr": "Un visa électronique est théoriquement disponible, mais peu fiable. Il est préférable de passer par une agence de voyages pour obtenir un visa, qui se chargera d'obtenir une confirmation officielle du ministère. Grâce à cette confirmation, vous pourrez ensuite vous rendre dans n'importe quelle ambassade et acheter votre visa.\n\nVeuillez noter que les citoyens des États-Unis, du Royaume-Uni, du Canada et de l'Australie ne peuvent pas voyager seuls en Iran ; ils doivent être accompagnés d'un guide en permanence.\n\nLe visa de 30 jours peut être prolongé dans la plupart des capitales provinciales.\n\nCertaines nationalités peuvent entrer sans visa. Les Israéliens ne sont pas autorisés à entrer en Iran.",
-          "de": "Ein elektronisches Visum (eVisum) ist zwar theoretisch erhältlich, aber nicht sehr zuverlässig. Ein Visum erhalten Sie am besten über ein Reisebüro, das Ihnen eine offizielle Bestätigung vom Ministerium ausstellt. Mit dieser Bestätigung können Sie dann in jeder Botschaft Ihr Visum beantragen.\nBitte beachten Sie, dass Staatsbürger der USA, Großbritanniens, Kanadas und Australiens nicht ohne Begleitung in den Iran reisen dürfen. Sie benötigen jederzeit einen Reiseführer.\nDas 30-Tage-Visum kann in den meisten Provinzhauptstädten verlängert werden.\nEinige Nationalitäten können visumfrei einreisen. Israelis dürfen nicht einreisen.",
-          "it": "Un visto elettronico è teoricamente disponibile, ma non molto affidabile. Il modo migliore per ottenere un visto è tramite un'agenzia di viaggi, che riceverà una conferma ufficiale dal Ministero. Con questa conferma, potrete recarvi in qualsiasi ambasciata e acquistare il visto.\nSi noti che i cittadini di Stati Uniti, Regno Unito, Canada e Australia non possono viaggiare da soli in Iran, ma necessitano di una guida in ogni momento.\nIl visto di 30 giorni può essere esteso nella maggior parte dei capoluoghi di provincia.\nAlcune nazionalità possono entrare senza visto. Gli israeliani non possono entrare affatto.",
-          "es": "En teoría, una visa electrónica está disponible, pero no es muy fiable. La mejor manera de obtenerla es a través de una agencia de viajes, que obtendrá una confirmación oficial del ministerio. Con esta confirmación, podrá acudir a cualquier embajada y comprar su visa.\nTenga en cuenta que los ciudadanos de EE. UU., Reino Unido, Canadá y Australia no pueden viajar solos a Irán; necesitan un guía en todo momento.\nLa visa de 30 días se puede extender en la mayoría de las capitales de provincia.\nAlgunas nacionalidades pueden entrar sin visa. Los israelíes no pueden entrar.",
-          "pt": "Um visto eletrônico (eVisa) está teoricamente disponível, mas não é muito confiável. A melhor maneira de obter um visto é por meio de uma agência de viagens, que conseguirá uma confirmação oficial do ministério. Com essa confirmação, você poderá ir a qualquer embaixada e comprar seu visto.\nObserve que cidadãos dos EUA, Reino Unido, Canadá e Austrália não podem viajar sozinhos para o Irã; eles precisam de um guia o tempo todo.\nO visto de 30 dias pode ser prorrogado na maioria das capitais de província.\nAlgumas nacionalidades podem entrar sem visto. Israelenses não podem entrar de forma alguma.",
-          "nl": "Een e-visum is theoretisch beschikbaar, maar niet erg betrouwbaar. Het is het beste om een visum aan te vragen via een reisbureau, dat een officiële bevestiging van het ministerie zal verkrijgen. Met deze bevestiging kunt u vervolgens naar elke ambassade gaan en uw visum kopen.\n\nLet op: burgers van de VS, het VK, Canada en Australië kunnen niet alleen reizen in Iran; zij hebben te allen tijde een gids nodig.\n\nHet visum voor 30 dagen kan in de meeste provinciehoofdsteden worden verlengd.\n\nSommige nationaliteiten kunnen visumvrij inreizen. Israëliërs kunnen Iran helemaal niet in.",
-          "pl": "Teoretycznie e-wiza jest dostępna, ale nie jest zbyt wiarygodna. Wizę najlepiej uzyskać za pośrednictwem biura podróży, które otrzyma oficjalne potwierdzenie z ministerstwa. Z tym potwierdzeniem można udać się do dowolnej ambasady i kupić wizę.\nNależy pamiętać, że obywatele USA, Wielkiej Brytanii, Kanady i Australii nie mogą podróżować po Iranie samodzielnie, potrzebują przewodnika przez cały czas.\nWizę 30-dniową można przedłużyć w większości stolic prowincji.\nObywatele niektórych państw mogą wjechać bez wizy. Obywatele Izraela nie mogą wjechać w ogóle.",
-          "ru": "Электронная виза теоретически доступна, но не очень надежна. Лучше всего оформить визу через туристическое агентство, которое получит официальное подтверждение от министерства. С этим подтверждением вы можете обратиться в любое посольство и купить визу.\nОбратите внимание, что граждане США, Великобритании, Канады и Австралии не могут путешествовать в Иран самостоятельно, им постоянно необходим гид.\n30-дневную визу можно продлить в большинстве столиц провинций.\nГраждане некоторых стран могут въезжать без визы. Гражданам Израиля въезд вообще запрещен."
+          "en": "An eVisa is theoretically available but not very reliable. A visa is best secured via a travel agency, which will get an official confirmation from the ministry. With this confirmation, you can then walk into any embassy and buy your visa.\nNote that citizens of the USA, UK, Canada and Australia can't travel on their own in Iran, they need a guide at all time.\nThe 30 days visa can be extended twice in most province capitals, so you could stay a total of 90 consecutive days in the country.\nSome nationalities can enter visa-free. Israelis can't enter at all.",
+          "fr": "Un visa électronique est théoriquement disponible, mais peu fiable. Il est préférable de passer par une agence de voyages pour obtenir un visa, qui se chargera d'obtenir une confirmation officielle du ministère. Grâce à cette confirmation, vous pourrez ensuite vous rendre dans n'importe quelle ambassade et acheter votre visa.\n\nVeuillez noter que les citoyens des États-Unis, du Royaume-Uni, du Canada et de l'Australie ne peuvent pas voyager seuls en Iran ; ils doivent être accompagnés d'un guide en permanence.\n\nLe visa de 30 jours peut être prolongé deux fois dans la plupart des capitales provinciales, ce qui vous permet de séjourner jusqu'à 90 jours consécutifs dans le pays.\n\nCertaines nationalités sont exemptées de visa. Les Israéliens ne sont pas autorisés à entrer en Iran.",
+          "de": "Ein elektronisches Visum (eVisum) ist zwar theoretisch erhältlich, aber nicht sehr zuverlässig. Ein Visum erhalten Sie am besten über ein Reisebüro, das Ihnen eine offizielle Bestätigung vom Ministerium ausstellt. Mit dieser Bestätigung können Sie dann in jeder Botschaft Ihr Visum beantragen.\nBitte beachten Sie, dass Staatsbürger der USA, Großbritanniens, Kanadas und Australiens nicht ohne Begleitung in den Iran reisen dürfen. Sie benötigen jederzeit einen Reiseführer.\nDas 30-Tage-Visum kann in den meisten Provinzhauptstädten zweimal verlängert werden, sodass Sie sich insgesamt bis zu 90 Tage am Stück im Land aufhalten können.\nEinige Nationalitäten können visumfrei einreisen. Israelis dürfen nicht einreisen.",
+          "it": "Un visto elettronico è teoricamente disponibile, ma non molto affidabile. Il modo migliore per ottenere un visto è tramite un'agenzia di viaggi, che otterrà una conferma ufficiale dal Ministero. Con questa conferma, potrete recarvi in qualsiasi ambasciata e acquistare il visto.\nSi noti che i cittadini di Stati Uniti, Regno Unito, Canada e Australia non possono viaggiare da soli in Iran, ma necessitano di una guida in ogni momento.\nIl visto di 30 giorni può essere prorogato due volte nella maggior parte dei capoluoghi di provincia, quindi è possibile rimanere nel Paese per un totale di 90 giorni consecutivi.\nAlcune nazionalità possono entrare senza visto. Gli israeliani non possono entrare affatto.",
+          "es": "En teoría, una visa electrónica está disponible, pero no es muy fiable. La mejor manera de obtenerla es a través de una agencia de viajes, que obtendrá una confirmación oficial del ministerio. Con esta confirmación, podrá acudir a cualquier embajada y comprar su visa.\nTenga en cuenta que los ciudadanos de EE. UU., Reino Unido, Canadá y Australia no pueden viajar solos a Irán; necesitan un guía en todo momento.\nLa visa de 30 días se puede extender dos veces en la mayoría de las capitales de provincia, por lo que podría permanecer un total de 90 días consecutivos en el país.\nAlgunas nacionalidades pueden entrar sin visa. Los israelíes no pueden entrar.",
+          "pt": "Um visto eletrônico (eVisa) está teoricamente disponível, mas não é muito confiável. A melhor maneira de obter um visto é por meio de uma agência de viagens, que conseguirá uma confirmação oficial do ministério. Com essa confirmação, você poderá ir a qualquer embaixada e comprar seu visto.\nObserve que cidadãos dos EUA, Reino Unido, Canadá e Austrália não podem viajar sozinhos para o Irã; eles precisam de um guia o tempo todo.\nO visto de 30 dias pode ser prorrogado duas vezes na maioria das capitais de província, então você poderia ficar um total de 90 dias consecutivos no país.\nAlgumas nacionalidades podem entrar sem visto. Israelenses não podem entrar de forma alguma.",
+          "nl": "Een e-visum is theoretisch beschikbaar, maar niet erg betrouwbaar. Het is het beste om een visum aan te vragen via een reisbureau, dat een officiële bevestiging van het ministerie zal verkrijgen. Met deze bevestiging kunt u vervolgens naar elke ambassade gaan en uw visum kopen.\n\nLet op: burgers van de VS, het VK, Canada en Australië kunnen niet zelfstandig naar Iran reizen; zij hebben te allen tijde een gids nodig.\n\nHet visum voor 30 dagen kan in de meeste provinciehoofdsteden tweemaal worden verlengd, waardoor u in totaal 90 aaneengesloten dagen in het land kunt verblijven.\n\nSommige nationaliteiten kunnen visumvrij binnenkomen. Israëliërs kunnen Iran helemaal niet in.",
+          "pl": "Wiza elektroniczna jest teoretycznie dostępna, ale nie jest zbyt wiarygodna. Wizę najlepiej uzyskać za pośrednictwem biura podróży, które otrzyma oficjalne potwierdzenie z ministerstwa. Z tym potwierdzeniem można udać się do dowolnej ambasady i kupić wizę.\nNależy pamiętać, że obywatele USA, Wielkiej Brytanii, Kanady i Australii nie mogą podróżować po Iranie samodzielnie, potrzebują przewodnika przez cały czas.\nWizę 30-dniową można przedłużyć dwukrotnie w większości stolic prowincji, co oznacza, że można przebywać w kraju łącznie 90 kolejnych dni.\nObywatele niektórych państw mogą wjechać bez wizy. Obywatele Izraela nie mogą wjechać w ogóle.",
+          "ru": "Электронная виза теоретически доступна, но не очень надежна. Лучше всего оформить визу через туристическое агентство, которое получит официальное подтверждение от министерства. С этим подтверждением вы можете обратиться в любое посольство и купить визу.\nОбратите внимание, что граждане США, Великобритании, Канады и Австралии не могут путешествовать в Иран самостоятельно, им постоянно необходим гид.\n30-дневную визу можно продлить дважды в большинстве столиц провинций, поэтому вы можете находиться в стране в общей сложности 90 дней подряд.\nГраждане некоторых стран могут въезжать без визы. Гражданам Израиля въезд вообще запрещен."
         },
         "carnet_comment_translations": {
           "en": "A carnet is required. There are ways to get a temporary, Iran-only carnet at the border, which is very expensive and not refundable. So a carnet is a must to enter with their own vehicle.",
-          "fr": "Un carnet de passage en douane est obligatoire. Il est possible d'obtenir un carnet temporaire valable uniquement en Iran à la frontière, mais il est très coûteux et non remboursable. Un carnet de passage en douane est donc indispensable pour entrer avec son propre véhicule.",
+          "fr": "Un carnet ATA est obligatoire. Il est possible d'obtenir un carnet ATA temporaire, valable uniquement en Iran, à la frontière, mais il est très coûteux et non remboursable. Un carnet ATA est donc indispensable pour entrer en Iran avec son propre véhicule.",
           "de": "Ein Carnet ist erforderlich. Es gibt zwar Möglichkeiten, an der Grenze ein temporäres, nur für den Iran gültiges Carnet zu erhalten, dieses ist jedoch sehr teuer und wird nicht erstattet. Daher ist ein Carnet für die Einreise mit dem eigenen Fahrzeug zwingend notwendig.",
           "it": "È obbligatorio il carnet. Esistono modi per ottenere un carnet temporaneo, valido solo per l'Iran, alla frontiera, ma è molto costoso e non rimborsabile. Pertanto, il carnet è obbligatorio per entrare con il proprio veicolo.",
           "es": "Se requiere un carnet. Hay maneras de obtener un carnet temporal, exclusivo para Irán, en la frontera, que es muy caro y no reembolsable. Por lo tanto, es imprescindible tener un carnet para entrar con vehículo propio.",
@@ -4972,6 +4986,17 @@
           "nl": "Een carnet is vereist. Er zijn manieren om aan de grens een tijdelijk carnet te verkrijgen dat alleen geldig is in Iran, maar dit is erg duur en niet restitueerbaar. Een carnet is dus een absolute noodzaak om met een eigen voertuig het land binnen te komen.",
           "pl": "Wymagany jest karnet. Istnieją sposoby na uzyskanie tymczasowego karnetu tylko dla Iranu na granicy, ale jest on bardzo drogi i nie podlega zwrotowi. Dlatego karnet jest niezbędny, aby wjechać własnym pojazdem.",
           "ru": "Для въезда необходим карнет. Существуют способы получить на границе временный карнет, предназначенный только для Ирана, который очень дорог и не подлежит возврату. Поэтому карнет обязателен для въезда на собственном транспортном средстве."
+        },
+        "stay_duration_translations": {
+          "en": "5 months",
+          "fr": "5 mois",
+          "de": "5 Monate",
+          "it": "5 mesi",
+          "es": "5 meses",
+          "pt": "5 meses",
+          "nl": "5 maanden",
+          "pl": "5 miesięcy",
+          "ru": "5 месяцев"
         }
       },
       "borderIds": [],
@@ -9160,9 +9185,11 @@
           "ru": "Граждане большинства стран могут въезжать без визы и оставаться в стране в течение 90 дней из 180."
         },
         "carnet": 2,
+        "visa": 0,
+        "comment": "A medical insurance is required for stays of more than 30 days, or if you not eligible to a visa-free entry.",
         "updatedat": {
-          "_seconds": 1768478518,
-          "_nanoseconds": 201000000
+          "_seconds": 1768918883,
+          "_nanoseconds": 312000000
         }
       },
       "borderIds": [],
@@ -10264,13 +10291,8 @@
           "ru": "Южная Осетия",
           "zh": "南奥塞梯"
         },
-        "visa": 1,
         "comment": "It's possible to visit the country from the Russia side, but only if you get prior authorization.\nCrossing from Georgia is impossible.\nSince the 2008 war between Russia and Georgia, Georgia has lost all sovereignty of South Ossetia and Russia, which recognizes it as a sovereign state, has control over its security.",
         "disputed": "Breakaway Georgian republic only recognized by Russia and a few other states.",
-        "updatedat": {
-          "_seconds": 1763990215,
-          "_nanoseconds": 964000000
-        },
         "foreign_url": {
           "fr_FR": "georgie"
         },
@@ -10296,6 +10318,11 @@
           "nl": "De afgescheiden Georgische republiek wordt alleen erkend door Rusland en een paar andere staten.",
           "pl": "Oderwana od reszty kraju republika gruzińska, uznawana jedynie przez Rosję i kilka innych państw.",
           "ru": "Отколовшаяся Грузинская республика признана лишь Россией и несколькими другими государствами."
+        },
+        "visa": 3,
+        "updatedat": {
+          "_seconds": 1768919473,
+          "_nanoseconds": 858000000
         }
       },
       "borderIds": [],

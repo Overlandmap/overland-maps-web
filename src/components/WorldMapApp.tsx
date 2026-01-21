@@ -11,6 +11,7 @@ import SimpleMapContainer from './SimpleMapContainer'
 import DetailSidebar from './DetailSidebar'
 import DisclaimerPopup from './DisclaimerPopup'
 import ColorSchemeOnboardingTooltip from './ColorSchemeOnboardingTooltip'
+import NavigationBar from './NavigationBar'
 import { generateEntityUrl } from '../lib/url-utils'
 
 interface SelectedFeature {
@@ -763,22 +764,27 @@ function WorldMapAppInner({ initialCountry, initialBorder, initialBorderPost, in
 
   return (
     <div className="relative h-screen overflow-hidden">
-      {/* Map Container */}
-      <SimpleMapContainer
-        className="w-full h-full"
-        onCountryClick={handleCountryClick}
-        onBorderClick={handleBorderClick}
-        onBorderPostClick={handleBorderPostClick}
-        onZoneClick={handleZoneClick}
-        onItineraryClick={handleItineraryClick}
-        onSelectionClear={handleSelectionClear}
-        onMapReady={handleMapReady}
-        selectedCountryId={selectedFeature?.type === 'country' ? selectedFeature.id : null}
-        selectedBorderId={selectedFeature?.type === 'border' ? selectedFeature.id : null}
-        selectedBorderPostId={selectedFeature?.type === 'border-post' ? selectedFeature.id : null}
-        selectedZoneId={selectedFeature?.type === 'zone' ? selectedFeature.id : null}
-        selectedItineraryId={selectedFeature?.type === 'itinerary' ? selectedFeature.id : null}
-      />
+      {/* Navigation Bar */}
+      <NavigationBar />
+
+      {/* Map Container - full screen, nav bar overlays on top */}
+      <div className="h-full">
+        <SimpleMapContainer
+          className="w-full h-full"
+          onCountryClick={handleCountryClick}
+          onBorderClick={handleBorderClick}
+          onBorderPostClick={handleBorderPostClick}
+          onZoneClick={handleZoneClick}
+          onItineraryClick={handleItineraryClick}
+          onSelectionClear={handleSelectionClear}
+          onMapReady={handleMapReady}
+          selectedCountryId={selectedFeature?.type === 'country' ? selectedFeature.id : null}
+          selectedBorderId={selectedFeature?.type === 'border' ? selectedFeature.id : null}
+          selectedBorderPostId={selectedFeature?.type === 'border-post' ? selectedFeature.id : null}
+          selectedZoneId={selectedFeature?.type === 'zone' ? selectedFeature.id : null}
+          selectedItineraryId={selectedFeature?.type === 'itinerary' ? selectedFeature.id : null}
+        />
+      </div>
 
       {/* Detail Sidebar */}
       <DetailSidebar

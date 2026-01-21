@@ -933,7 +933,7 @@ export default function DetailSidebar({
               <p className="text-sm text-gray-700 text-center">
                 {getTranslatedLabel('country_app_promotion', language)}
               </p>
-              <AppStoreButtons language={language} size="large" layout="full-width" />
+              <AppStoreButtons size="large" layout="full-width" />
             </div>
             </div>
           )}
@@ -1669,7 +1669,7 @@ export default function DetailSidebar({
           <p className="text-sm text-gray-700 text-center">
             {getTranslatedLabel('border_post_app_promotion', language)}
           </p>
-          <AppStoreButtons language={language} size="large" layout="full-width" />
+          <AppStoreButtons size="large" layout="full-width" />
         </div>
       </div>
     )
@@ -1995,7 +1995,7 @@ export default function DetailSidebar({
           <p className="text-xs text-gray-800 mb-3">
             {getTranslatedLabel('itinerary_app_promotion', language)}
           </p>
-          <AppStoreButtons language={language} size="small" />
+          <AppStoreButtons size="small" />
         </div>
       </div>
     )

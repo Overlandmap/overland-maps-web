@@ -2770,7 +2770,7 @@ export default function SimpleMapContainer({
       {/* Legend Toggle Button */}
       <button
         onClick={() => setShowLegend(!showLegend)}
-        className="absolute top-4 left-4 bg-white bg-opacity-95 rounded-lg shadow-lg z-20 p-2 hover:bg-opacity-100 transition-all"
+        className="absolute top-20 left-4 bg-white bg-opacity-95 rounded-lg shadow-lg z-20 p-2 hover:bg-opacity-100 transition-all"
         title={showLegend ? "Hide Legend" : "Show Legend"}
       >
         <svg 
@@ -2790,7 +2790,7 @@ export default function SimpleMapContainer({
 
       {/* Legend Panel */}
       {showLegend && (
-        <div className="absolute top-4 left-16 bg-white bg-opacity-95 rounded-lg shadow-lg z-10 max-w-sm">
+        <div className="absolute top-20 left-16 bg-white bg-opacity-95 rounded-lg shadow-lg z-10 max-w-sm">
           <div className="p-3">
           {/* Color Scheme Selector */}
           <div className="mb-4">
@@ -2916,7 +2916,7 @@ export default function SimpleMapContainer({
                     <p className="text-xs text-gray-800 mb-3">
                       {getTranslatedLabel('itinerary_app_promotion', language)}
                     </p>
-                    <AppStoreButtons language={language} size="small" />
+                    <AppStoreButtons size="small" />
                   </div>
                 </>
               ) : colorScheme === 'climate' ? (

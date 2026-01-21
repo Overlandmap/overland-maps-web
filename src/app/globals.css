@@ -37,3 +37,10 @@ body {
 .sidebar.open {
   transform: translateX(0);
 }
+
+/* Navigation Bar Transparency Override */
+nav.nav-transparent {
+  background-color: rgba(255, 255, 255, 0.25) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+}
