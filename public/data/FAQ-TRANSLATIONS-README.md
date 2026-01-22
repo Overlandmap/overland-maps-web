@@ -12,7 +12,6 @@ The FAQ system supports multiple languages. Each language has its own JSON file:
 - `faq-ja.json` - Japanese
 - `faq-nl.json` - Dutch
 - `faq-ru.json` - Russian
-- `faq-zh.json` - Chinese
 
 ## Translation Status
 
@@ -24,7 +23,6 @@ The FAQ system supports multiple languages. Each language has its own JSON file:
 - ⏳ Japanese (ja) - Pending
 - ⏳ Dutch (nl) - Pending
 - ⏳ Russian (ru) - Pending
-- ⏳ Chinese (zh) - Pending
 
 ## How to Add Translations
 

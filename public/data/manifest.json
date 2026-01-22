@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-01-20T15:55:20.408Z",
+  "generatedAt": "2026-01-22T15:32:21.682Z",
   "version": "1.1.0",
   "files": {
     "countries.json": {
       "description": "Country data with parameters and border references",
       "recordCount": 242,
-      "sizeEstimate": "597 KB"
+      "sizeEstimate": "600 KB"
     },
     "borders.json": {
       "description": "Border metadata for route generation only (data loaded from Firestore)",

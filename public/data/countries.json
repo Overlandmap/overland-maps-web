@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generatedAt": "2026-01-20T15:55:20.350Z",
+    "generatedAt": "2026-01-22T15:32:21.620Z",
     "totalCountries": 242,
     "countriesWithIso3": 0,
     "countriesWithBorders": 0
@@ -3086,25 +3086,8 @@
           "ru": "Алжир",
           "zh": "阿尔及利亚"
         },
-        "comment": "Most of the south is out of unstable security-wide, and one needs an army escort to explore the areas around Djanet and Tamanrasset.",
         "overlanding": 3,
-        "comment_translations": {
-          "en": "Most of the south is out of unstable security-wide, and one needs an army escort to explore the areas around Djanet and Tamanrasset.",
-          "fr": "La majeure partie du sud est en proie à une insécurité généralisée, et une escorte militaire est nécessaire pour explorer les environs de Djanet et Tamanrasset.",
-          "de": "Der größte Teil des Südens ist aufgrund der instabilen Sicherheitslage ungeschützt, und man benötigt eine Armeeeskorte, um die Gebiete um Djanet und Tamanrasset zu erkunden.",
-          "it": "La maggior parte del sud è fuori da una situazione di instabilità e sicurezza, ed è necessaria una scorta militare per esplorare le zone attorno a Djanet e Tamanrasset.",
-          "es": "La mayor parte del sur se encuentra a salvo de situaciones de seguridad inestables, y es necesaria una escolta militar para explorar las zonas alrededor de Djanet y Tamanrasset.",
-          "pt": "Grande parte do sul do país encontra-se em situação de segurança instável, sendo necessário um acompanhamento do exército para explorar as áreas ao redor de Djanet e Tamanrasset.",
-          "nl": "Het grootste deel van het zuiden is onveilig en men heeft een militaire escorte nodig om de gebieden rond Djanet en Tamanrasset te verkennen.",
-          "pl": "Większość południa kraju jest objęta strefą niestabilnego bezpieczeństwa, a eksploracja terenów wokół Djanet i Tamanrasset wymaga eskorty wojskowej.",
-          "ru": "В большей части юга страны наблюдается повсеместная нестабильность, и для осмотра районов вокруг Джанета и Таманрассета требуется армейский эскорт."
-        },
         "visa": 3,
-        "visa_comment": "90 days / 110€",
-        "updatedat": {
-          "_seconds": 1768903360,
-          "_nanoseconds": 541000000
-        },
         "visa_comment_translations": {
           "en": "90 days / 110€",
           "fr": "90 jours / 110 €",
@@ -3115,6 +3098,23 @@
           "nl": "90 dagen / €110",
           "pl": "90 dni / 110 €",
           "ru": "90 дней / 110€"
+        },
+        "comment_translations": {
+          "en": "The south of the country is progressively opening to tourism, but the security situation is still complicated, and tourists need an army escort and a guide to explore the areas around Djanet and Tamanrasset.",
+          "fr": "Le sud du pays s'ouvre progressivement au tourisme, mais la situation sécuritaire reste complexe et les touristes ont besoin d'une escorte militaire et d'un guide pour explorer les environs de Djanet et de Tamanrasset.",
+          "de": "Der Süden des Landes öffnet sich zunehmend dem Tourismus, doch die Sicherheitslage ist nach wie vor kompliziert, und Touristen benötigen eine Armeeeskorte und einen Führer, um die Gegend um Djanet und Tamanrasset zu erkunden.",
+          "it": "Il sud del paese si sta progressivamente aprendo al turismo, ma la situazione della sicurezza è ancora complicata e i turisti hanno bisogno di una scorta militare e di una guida per esplorare le zone intorno a Djanet e Tamanrasset.",
+          "es": "El sur del país se está abriendo progresivamente al turismo, pero la situación de seguridad sigue siendo complicada y los turistas necesitan una escolta militar y un guía para explorar las zonas alrededor de Djanet y Tamanrasset.",
+          "pt": "O sul do país está se abrindo progressivamente ao turismo, mas a situação de segurança ainda é complicada, e os turistas precisam de escolta militar e guia para explorar as áreas ao redor de Djanet e Tamanrasset.",
+          "nl": "Het zuiden van het land opent zich steeds meer voor toerisme, maar de veiligheidssituatie blijft gecompliceerd en toeristen hebben een militaire escorte en een gids nodig om de gebieden rond Djanet en Tamanrasset te verkennen.",
+          "pl": "Południe kraju stopniowo otwiera się na turystykę, jednak sytuacja bezpieczeństwa jest nadal skomplikowana, a turyści potrzebują eskorty wojskowej i przewodnika, aby móc zwiedzić obszary wokół Djanet i Tamanrasset.",
+          "ru": "Юг страны постепенно открывается для туризма, но ситуация с безопасностью по-прежнему сложная, и туристам требуется армейский эскорт и гид для осмотра окрестностей Джанета и Таманрассета."
+        },
+        "comment": "The south of the country is progressively opening to tourism, but the security situation is still complicated, and tourists need an army escort on certain roads leading to the south, and a guide to explore the areas around Djanet and Tamanrasset.",
+        "visa_comment": "The visa can be obtained at any consulate for 90 days / 110€. If you use a travel agency, they can also arrange a visa on arrival, so that you don't have to visit a consulate.",
+        "updatedat": {
+          "_seconds": 1769009294,
+          "_nanoseconds": 422000000
         }
       },
       "borderIds": [],
@@ -6805,9 +6805,12 @@
           " -KwAYrkBbK5OnRNkuLN-X": "MRT"
         },
         "visa": 0,
+        "stay_duration": "6 months",
+        "tip": "Keep the paper which is given when you enter the country, you'll need to give it back when you leave.",
+        "carnet": 0,
         "updatedat": {
-          "_seconds": 1768487401,
-          "_nanoseconds": 497000000
+          "_seconds": 1769009523,
+          "_nanoseconds": 110000000
         }
       },
       "borderIds": [],
@@ -11737,10 +11740,6 @@
           "-KwAYrlCQ40kbZ1jYYZr": "POL"
         },
         "carnet": 0,
-        "updatedat": {
-          "_seconds": 1764859177,
-          "_nanoseconds": 723000000
-        },
         "comment_translations": {
           "en": "The South-East corner of the country is definitely a no-go, but the rest of the country can be visited without any problem.",
           "fr": "Le sud-est du pays est absolument à éviter, mais le reste du pays peut être visité sans aucun problème.",
@@ -11751,6 +11750,23 @@
           "nl": "De zuidoostelijke hoek van het land is absoluut verboden terrein, maar de rest van het land kan zonder problemen bezocht worden.",
           "pl": "Południowo-wschodnia część kraju jest zdecydowanie zabroniona, ale resztę kraju można zwiedzić bez żadnych problemów.",
           "ru": "Юго-восточный угол страны категорически не подходит для посещения, но остальную часть страны можно посетить без каких-либо проблем."
+        },
+        "visa": 0,
+        "visa_comment": "Most Europeans and North and South American nationals can enter visa-free for up to 90 days. But of course, the ongoing war makes tourism pointless.",
+        "updatedat": {
+          "_seconds": 1768929889,
+          "_nanoseconds": 86000000
+        },
+        "visa_comment_translations": {
+          "en": "Most Europeans and North and South American nationals can enter visa-free for up to 90 days. But of course, the ongoing war makes tourism pointless.",
+          "fr": "La plupart des Européens et des ressortissants d'Amérique du Nord et du Sud peuvent entrer sans visa pour un séjour allant jusqu'à 90 jours. Mais bien sûr, la guerre en cours rend le tourisme impossible.",
+          "de": "Die meisten Europäer sowie Staatsangehörige Nord- und Südamerikas können visumfrei für bis zu 90 Tage einreisen. Doch der andauernde Krieg macht Tourismus natürlich sinnlos.",
+          "it": "La maggior parte degli europei e dei cittadini nordamericani e sudamericani può entrare senza visto per un massimo di 90 giorni. Ma ovviamente, la guerra in corso rende il turismo inutile.",
+          "es": "La mayoría de los europeos y ciudadanos de Norteamérica y Sudamérica pueden entrar sin visado hasta por 90 días. Pero, claro, la guerra en curso hace que el turismo sea inútil.",
+          "pt": "A maioria dos europeus e cidadãos da América do Norte e do Sul podem entrar sem visto por até 90 dias. Mas, é claro, a guerra em curso torna o turismo inútil.",
+          "nl": "De meeste Europeanen en inwoners van Noord- en Zuid-Amerika kunnen tot 90 dagen visumvrij het land binnenkomen. Maar door de aanhoudende oorlog is toerisme natuurlijk zinloos.",
+          "pl": "Większość Europejczyków oraz obywateli Ameryki Północnej i Południowej może wjechać bez wizy na okres do 90 dni. Oczywiście, trwająca wojna sprawia, że turystyka traci sens.",
+          "ru": "Большинство граждан Европы, Северной и Южной Америки могут въезжать в страну без визы на срок до 90 дней. Но, разумеется, продолжающаяся война делает туризм бессмысленным."
         }
       },
       "borderIds": [],
