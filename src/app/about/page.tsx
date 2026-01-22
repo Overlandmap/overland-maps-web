@@ -1,7 +1,5 @@
 'use client'
 
-import { ColorSchemeProvider } from '../../contexts/ColorSchemeContext'
-import { LanguageProvider } from '../../contexts/LanguageContext'
 import NavigationBar from '../../components/NavigationBar'
 
 function AboutPageContent() {
@@ -127,11 +125,5 @@ function AboutPageContent() {
 }
 
 export default function AboutPage() {
-  return (
-    <LanguageProvider>
-      <ColorSchemeProvider>
-        <AboutPageContent />
-      </ColorSchemeProvider>
-    </LanguageProvider>
-  )
+  return <AboutPageContent />
 }

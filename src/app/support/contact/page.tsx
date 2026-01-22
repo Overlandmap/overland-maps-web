@@ -1,8 +1,6 @@
 'use client'
 
 import Link from 'next/link'
-import { ColorSchemeProvider } from '../../../contexts/ColorSchemeContext'
-import { LanguageProvider } from '../../../contexts/LanguageContext'
 import NavigationBar from '../../../components/NavigationBar'
 
 function ContactPageContent() {
@@ -103,11 +101,5 @@ function ContactPageContent() {
 }
 
 export default function ContactPage() {
-  return (
-    <LanguageProvider>
-      <ColorSchemeProvider>
-        <ContactPageContent />
-      </ColorSchemeProvider>
-    </LanguageProvider>
-  )
+  return <ContactPageContent />
 }

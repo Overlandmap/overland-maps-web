@@ -2,8 +2,6 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { ColorSchemeProvider } from '../../../contexts/ColorSchemeContext'
-import { LanguageProvider } from '../../../contexts/LanguageContext'
 import NavigationBar from '../../../components/NavigationBar'
 import { signInWithEmail, getCurrentUser } from '../../../lib/firebase-client'
 import { deleteUser } from 'firebase/auth'
@@ -197,11 +195,5 @@ function DeleteAccountPageContent() {
 }
 
 export default function DeleteAccountPage() {
-  return (
-    <LanguageProvider>
-      <ColorSchemeProvider>
-        <DeleteAccountPageContent />
-      </ColorSchemeProvider>
-    </LanguageProvider>
-  )
+  return <DeleteAccountPageContent />
 }

@@ -1,7 +1,6 @@
 'use client'
 
-import { LanguageProvider, useLanguage } from '../../contexts/LanguageContext'
-import { ColorSchemeProvider } from '../../contexts/ColorSchemeContext'
+import { useLanguage } from '../../contexts/LanguageContext'
 import NavigationBar from '../../components/NavigationBar'
 import AppStoreButtons from '../../components/AppStoreButtons'
 
@@ -24,25 +23,25 @@ const translations = {
     cta_subtitle: 'Join thousands of overlanders exploring the world with Overland Map'
   },
   fr: {
-    hero_subtitle: "Un couteau suisse pour préparer vos voyages à travers le monde. Installez l'app mobile et découvrez quelles frontières sont ouvertes, planifiez vos itinéraires et explorez le monde en toute confiance.",
-    feature_maps_title: 'Cartes interactives',
-    feature_maps_desc: 'Explorez la carte du monde et retrouvez des détails sur les passages de frontière, les exigences de visa et les conditions de voyage pour votre voyage au long cours.',
-    feature_offline_title: 'Accès hors ligne',
-    feature_offline_desc: 'Téléchargez des cartes et des itinéraires pour une utilisation sans internet lors de vos voyages dans des zones reculées.',
-    feature_community_title: 'Communauté de voyageurs',
-    feature_community_desc: "Recevez des mises à jour de la part d'autres voyageurs sur les conditions aux frontières ou l'état des routes.",
-    feature_vehicle_title: 'Formalités pour le véhicule',
-    feature_vehicle_desc: "Retrouvez les exigences de carnet de passage, d'assurance et de permis pour passer les frontières avec un véhicule.",
-    feature_climate_title: 'Données climatiques',
+    hero_subtitle: 'Votre compagnon ultime pour les voyages en overland. Naviguez aux frontières, planifiez vos itinéraires et explorez le monde en toute confiance.',
+    feature_maps_title: 'Cartes Interactives',
+    feature_maps_desc: 'Explorez des cartes détaillées avec les passages frontaliers, les exigences de visa et les conditions de voyage dans le monde entier.',
+    feature_offline_title: 'Accès Hors Ligne',
+    feature_offline_desc: 'Téléchargez des cartes et des itinéraires pour une utilisation hors ligne lors de vos voyages dans des zones reculées.',
+    feature_community_title: 'Mises à Jour Communautaires',
+    feature_community_desc: 'Recevez des mises à jour en temps réel de la part d\'autres voyageurs sur les conditions aux frontières et l\'état des routes.',
+    feature_vehicle_title: 'Documentation Véhicule',
+    feature_vehicle_desc: 'Suivez les exigences de carnet, l\'assurance et les documents du véhicule pour chaque pays.',
+    feature_climate_title: 'Données Climatiques',
     feature_climate_desc: 'Planifiez votre voyage avec des informations climatiques détaillées et des recommandations saisonnières.',
-    feature_itineraries_title: 'Itinéraires détaillés',
-    feature_itineraries_desc: "Achetez des itinéraires hors piste ou sur route avec des points de passage détaillés, de nombreux points d'intérêt et des articles de fond.",
-    cta_title: 'Votre aventure commence ici',
-    cta_subtitle: 'Rejoignez des milliers de voyageurs en 4x4, van, moto, camion ou vélo qui explorent le monde avec Overland Map'
+    feature_itineraries_title: 'Itinéraires Sélectionnés',
+    feature_itineraries_desc: 'Achetez des itinéraires professionnels avec des points de passage détaillés, la difficulté hors route et des informations contextuelles.',
+    cta_title: 'Commencez Votre Aventure Aujourd\'hui',
+    cta_subtitle: 'Rejoignez des milliers d\'overlanders qui explorent le monde avec Overland Map'
   }
 }
 
-function AppPageContent() {
+export default function AppPage() {
   const { language } = useLanguage()
   const t = translations[language as keyof typeof translations] || translations.en
 
@@ -78,7 +77,7 @@ function AppPageContent() {
             </div>
 
             <div className="bg-white rounded-xl shadow-sm p-8 text-center">
-              <div className="text-5xl mb-4">🛰️</div>
+              <div className="text-5xl mb-4">�</div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
                 {t.feature_offline_title}
               </h3>
@@ -143,15 +142,5 @@ function AppPageContent() {
         </div>
       </main>
     </div>
-  )
-}
-
-export default function AppPage() {
-  return (
-    <LanguageProvider>
-      <ColorSchemeProvider>
-        <AppPageContent />
-      </ColorSchemeProvider>
-    </LanguageProvider>
   )
 }

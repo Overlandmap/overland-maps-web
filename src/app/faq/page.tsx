@@ -2,8 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { ColorSchemeProvider } from '../../contexts/ColorSchemeContext'
-import { LanguageProvider, useLanguage } from '../../contexts/LanguageContext'
+import { useLanguage } from '../../contexts/LanguageContext'
 import NavigationBar from '../../components/NavigationBar'
 
 interface FAQItem {
@@ -91,12 +90,34 @@ function parseTextWithLineBreaks(text: string, startKey: number): (string | JSX.
   return result
 }
 
+const translations = {
+  en: {
+    title: 'Frequently Asked Questions',
+    subtitle: 'Find answers to common questions about Overland Map',
+    loading: 'Loading FAQs...',
+    all: 'All',
+    still_have_questions: 'Still have questions?',
+    cant_find_answer: "Can't find the answer you're looking for? Visit our Support page or contact us directly.",
+    go_to_support: 'Go to Support'
+  },
+  fr: {
+    title: 'Foire Aux Questions',
+    subtitle: 'Trouvez des réponses à vos questions',
+    loading: 'Chargement des FAQ...',
+    all: 'Tout',
+    still_have_questions: 'Vous avez encore des questions ?',
+    cant_find_answer: "Vous ne trouvez pas la réponse que vous cherchez ? Visitez notre page d'assistance ou contactez-nous directement.",
+    go_to_support: 'Aller au Support'
+  }
+}
+
 function FAQPageContent() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
-  const [selectedCategory, setSelectedCategory] = useState<string>('All')
+  const [selectedCategory, setSelectedCategory] = useState<string>('all') // Use lowercase 'all' as internal key
   const [faqData, setFaqData] = useState<FAQItem[]>([])
   const [isLoading, setIsLoading] = useState(true)
   const { language } = useLanguage()
+  const t = translations[language as keyof typeof translations] || translations.en
 
   useEffect(() => {
     const lang = language || 'en'
@@ -125,8 +146,17 @@ function FAQPageContent() {
       })
   }, [language])
 
-  const categories = ['All', ...Array.from(new Set(faqData.map(item => item.category)))]
-  const filteredFAQs = selectedCategory === 'All' 
+  // Get unique categories from FAQ data
+  const uniqueCategories = Array.from(new Set(faqData.map(item => item.category)))
+  
+  // Build categories array with translated "All" first, then actual categories
+  const categories = [
+    { key: 'all', label: t.all },
+    ...uniqueCategories.map(cat => ({ key: cat, label: cat }))
+  ]
+  
+  // Filter FAQs based on selected category
+  const filteredFAQs = selectedCategory === 'all' 
     ? faqData 
     : faqData.filter(item => item.category === selectedCategory)
 
@@ -137,16 +167,16 @@ function FAQPageContent() {
       <main className="px-4 sm:px-6 lg:px-8 py-20">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Frequently Asked Questions
+            {t.title}
           </h1>
           <p className="text-lg text-gray-600 mb-8">
-            Find answers to common questions about Overland Map
+            {t.subtitle}
           </p>
 
           {isLoading ? (
             <div className="text-center py-12">
               <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-              <p className="mt-4 text-gray-600">Loading FAQs...</p>
+              <p className="mt-4 text-gray-600">{t.loading}</p>
             </div>
           ) : (
             <>
@@ -154,15 +184,15 @@ function FAQPageContent() {
               <div className="flex flex-wrap gap-2 mb-8">
                 {categories.map((category) => (
                   <button
-                    key={category}
-                    onClick={() => setSelectedCategory(category)}
+                    key={category.key}
+                    onClick={() => setSelectedCategory(category.key)}
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                      selectedCategory === category
+                      selectedCategory === category.key
                         ? 'bg-blue-600 text-white'
                         : 'bg-white text-gray-700 hover:bg-gray-100'
                     }`}
                   >
-                    {category}
+                    {category.label}
                   </button>
                 ))}
               </div>
@@ -216,16 +246,16 @@ function FAQPageContent() {
           {/* Contact Section */}
           <div className="mt-12 bg-blue-50 rounded-lg p-6 text-center">
             <h2 className="text-xl font-semibold text-gray-900 mb-2">
-              Still have questions?
+              {t.still_have_questions}
             </h2>
             <p className="text-gray-700 mb-4">
-              Can&apos;t find the answer you&apos;re looking for? Visit our Support page or contact us directly.
+              {t.cant_find_answer}
             </p>
             <a
               href="/support"
               className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
             >
-              Go to Support
+              {t.go_to_support}
             </a>
           </div>
         </div>
@@ -235,11 +265,5 @@ function FAQPageContent() {
 }
 
 export default function FAQPage() {
-  return (
-    <LanguageProvider>
-      <ColorSchemeProvider>
-        <FAQPageContent />
-      </ColorSchemeProvider>
-    </LanguageProvider>
-  )
+  return <FAQPageContent />
 }

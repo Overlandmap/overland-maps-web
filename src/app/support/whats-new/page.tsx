@@ -1,8 +1,6 @@
 'use client'
 
 import Link from 'next/link'
-import { ColorSchemeProvider } from '../../../contexts/ColorSchemeContext'
-import { LanguageProvider } from '../../../contexts/LanguageContext'
 import NavigationBar from '../../../components/NavigationBar'
 
 function WhatsNewPageContent() {
@@ -166,11 +164,5 @@ function WhatsNewPageContent() {
 }
 
 export default function WhatsNewPage() {
-  return (
-    <LanguageProvider>
-      <ColorSchemeProvider>
-        <WhatsNewPageContent />
-      </ColorSchemeProvider>
-    </LanguageProvider>
-  )
+  return <WhatsNewPageContent />
 }

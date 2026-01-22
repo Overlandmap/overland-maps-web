@@ -1,5 +1,4 @@
 import { Suspense } from 'react'
-import { LanguageProvider } from '../../../contexts/LanguageContext'
 import { AuthProvider } from '../../../contexts/AuthContext'
 import WorldMapApp from '../../../components/WorldMapApp'
 
@@ -12,21 +11,19 @@ interface BorderPageProps {
 export default function BorderPage({ params }: BorderPageProps) {
   return (
     <AuthProvider>
-      <LanguageProvider>
-        <main className="h-screen relative">
-          <Suspense fallback={
-            <div className="h-screen flex items-center justify-center bg-gray-50">
-              <div className="text-center">
-                <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4"></div>
-                <h2 className="text-xl font-semibold text-gray-900 mb-2">Loading Border Details</h2>
-                <p className="text-gray-600">Loading border {params.id}...</p>
-              </div>
+      <main className="h-screen relative">
+        <Suspense fallback={
+          <div className="h-screen flex items-center justify-center bg-gray-50">
+            <div className="text-center">
+              <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4"></div>
+              <h2 className="text-xl font-semibold text-gray-900 mb-2">Loading Border Details</h2>
+              <p className="text-gray-600">Loading border {params.id}...</p>
             </div>
-          }>
-            <WorldMapApp initialBorder={params.id} />
-          </Suspense>
-        </main>
-      </LanguageProvider>
+          </div>
+        }>
+          <WorldMapApp initialBorder={params.id} />
+        </Suspense>
+      </main>
     </AuthProvider>
   )
 }

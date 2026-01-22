@@ -1,8 +1,6 @@
 'use client'
 
 import Link from 'next/link'
-import { ColorSchemeProvider } from '../../../contexts/ColorSchemeContext'
-import { LanguageProvider } from '../../../contexts/LanguageContext'
 import NavigationBar from '../../../components/NavigationBar'
 
 function PrivacyPolicyPageContent() {
@@ -207,11 +205,5 @@ function PrivacyPolicyPageContent() {
 }
 
 export default function PrivacyPolicyPage() {
-  return (
-    <LanguageProvider>
-      <ColorSchemeProvider>
-        <PrivacyPolicyPageContent />
-      </ColorSchemeProvider>
-    </LanguageProvider>
-  )
+  return <PrivacyPolicyPageContent />
 }
