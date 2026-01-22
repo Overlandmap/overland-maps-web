@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { ColorSchemeProvider } from '../../contexts/ColorSchemeContext'
-import { LanguageProvider } from '../../contexts/LanguageContext'
+import { LanguageProvider, useLanguage } from '../../contexts/LanguageContext'
 import NavigationBar from '../../components/NavigationBar'
 
 interface FAQItem {
@@ -12,17 +12,20 @@ interface FAQItem {
   category: string
 }
 
-// Parse markdown-style links [text](href) and convert to React elements
+// Parse markdown-style links [text](href) and newlines, convert to React elements
 function parseMarkdownLinks(text: string): (string | JSX.Element)[] {
   const parts: (string | JSX.Element)[] = []
   const regex = /\[([^\]]+)\]\(([^)]+)\)/g
   let lastIndex = 0
   let match
+  let keyCounter = 0
 
   while ((match = regex.exec(text)) !== null) {
-    // Add text before the link
+    // Add text before the link (with line breaks)
     if (match.index > lastIndex) {
-      parts.push(text.substring(lastIndex, match.index))
+      const textBefore = text.substring(lastIndex, match.index)
+      parts.push(...parseTextWithLineBreaks(textBefore, keyCounter))
+      keyCounter += textBefore.split('\n').length
     }
 
     // Add the link
@@ -36,7 +39,7 @@ function parseMarkdownLinks(text: string): (string | JSX.Element)[] {
       // External link - use regular <a> tag with target="_blank"
       parts.push(
         <a
-          key={match.index}
+          key={`link-${match.index}`}
           href={href}
           target="_blank"
           rel="noopener noreferrer"
@@ -49,7 +52,7 @@ function parseMarkdownLinks(text: string): (string | JSX.Element)[] {
       // Internal link - use Next.js Link component
       parts.push(
         <Link
-          key={match.index}
+          key={`link-${match.index}`}
           href={href}
           className="text-blue-600 hover:text-blue-700 underline"
         >
@@ -61,12 +64,31 @@ function parseMarkdownLinks(text: string): (string | JSX.Element)[] {
     lastIndex = regex.lastIndex
   }
 
-  // Add remaining text after the last link
+  // Add remaining text after the last link (with line breaks)
   if (lastIndex < text.length) {
-    parts.push(text.substring(lastIndex))
+    const textAfter = text.substring(lastIndex)
+    parts.push(...parseTextWithLineBreaks(textAfter, keyCounter))
   }
 
   return parts.length > 0 ? parts : [text]
+}
+
+// Helper function to parse text and convert \n to <br /> elements
+function parseTextWithLineBreaks(text: string, startKey: number): (string | JSX.Element)[] {
+  const lines = text.split('\n')
+  const result: (string | JSX.Element)[] = []
+  
+  lines.forEach((line, index) => {
+    if (line) {
+      result.push(line)
+    }
+    // Add <br /> after each line except the last one
+    if (index < lines.length - 1) {
+      result.push(<br key={`br-${startKey}-${index}`} />)
+    }
+  })
+  
+  return result
 }
 
 function FAQPageContent() {
@@ -74,11 +96,26 @@ function FAQPageContent() {
   const [selectedCategory, setSelectedCategory] = useState<string>('All')
   const [faqData, setFaqData] = useState<FAQItem[]>([])
   const [isLoading, setIsLoading] = useState(true)
+  const { language } = useLanguage()
 
   useEffect(() => {
-    fetch('/data/faq.json')
+    const lang = language || 'en'
+    console.log('Loading FAQ for language:', lang)
+    setIsLoading(true)
+    
+    fetch(`/data/faq-${lang}.json`)
+      .then(response => {
+        console.log(`FAQ fetch response for ${lang}:`, response.status, response.ok)
+        if (!response.ok) {
+          console.log('Falling back to English FAQ')
+          // Fallback to English if translation not available
+          return fetch('/data/faq-en.json')
+        }
+        return response
+      })
       .then(response => response.json())
       .then(data => {
+        console.log('FAQ data loaded:', data.length, 'items')
         setFaqData(data)
         setIsLoading(false)
       })
@@ -86,7 +123,7 @@ function FAQPageContent() {
         console.error('Error loading FAQ data:', error)
         setIsLoading(false)
       })
-  }, [])
+  }, [language])
 
   const categories = ['All', ...Array.from(new Set(faqData.map(item => item.category)))]
   const filteredFAQs = selectedCategory === 'All' 

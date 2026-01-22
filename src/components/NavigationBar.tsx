@@ -7,6 +7,7 @@ import { useLanguage } from '../contexts/LanguageContext'
 import { getTranslatedLabel } from '../lib/i18n'
 import { MENU_ITEMS } from '../lib/navigation-config'
 import Image from 'next/image'
+import LanguageSelector from './LanguageSelector'
 
 interface NavigationBarProps {
   currentSection?: 'app' | 'faq' | 'support' | 'about'
@@ -112,6 +113,9 @@ export default function NavigationBar({ currentSection, className = '' }: Naviga
                   {getTranslatedLabel(item.translationKey, language)}
                 </Link>
               ))}
+              
+              {/* Language Selector */}
+              <LanguageSelector />
             </div>
 
             {/* Mobile menu button */}
@@ -190,6 +194,11 @@ export default function NavigationBar({ currentSection, className = '' }: Naviga
                     {getTranslatedLabel(item.translationKey, language)}
                   </Link>
                 ))}
+                
+                {/* Language Selector for Mobile */}
+                <div className="px-4 pt-4 border-t border-gray-200">
+                  <LanguageSelector />
+                </div>
               </nav>
             </div>
           </div>

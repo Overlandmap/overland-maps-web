@@ -1,0 +1,112 @@
+[
+  {
+    "category": "General",
+    "question": "What is Overland Map?",
+    "answer": "Overland Map is a one-stop platform for overlanders, providing detailed information on all the questions that arise when planning an overland trip while driving or riding your own vehicle (motor vehicle or bicycle). This includes border crossings, visas, vehicle documentation, climate data, and curated itineraries for overland travel worldwide.\nThe main tool is the mobile app, but this website provides access to the core information without requiring an app installation. However, discussions and the posting of comments or updates are currently available through the mobile app only."
+},
+  {
+    "category": "General",
+    "question": "Is Overland Map free to use?",
+    "answer": "The web version and basic mobile app features are free. Premium features including detailed itineraries, offline maps and detailed climate data require a subscription or a one-shot purchase."
+  },
+  {
+    "category": "General",
+    "question": "If it's free and there is no ads, what is the economic model?",
+    "answer": "Usually, when something is free, you are the product. Not in this case—we do not collect information about our users. We provide basic information for free and aim to cover infrastructure and development costs by selling detailed itineraries and a Pro subscription.\nIf you find the platform valuable but do not wish to purchase an itinerary, you can still contribute by posting corrections and additions, helping to keep the database up to date and relevant."
+  },
+  {
+    "category": "General",
+    "question": "How is it different from free track swapping sites such as Wikiloc or Alltrail?",
+    "answer": "Those sites publish raw GPS tracks with little explanation and very limited detail. Anyone can share a track - even a non-relevant errand around their house - so the quality of the tracks is not guaranteed. There is also no information about road surfaces, potential dangers, fuel stops, and so on.\nIn contrast, the itineraries we provide are well-researched routes with multiple waypoints and extensive background information on the geography and history of the places you visit."
+  },
+  {
+    "category": "General",
+    "question": "How is it different from iOverlander?",
+    "answer": "iOverlander is an invaluable source of information for overlanders, but it has little classification, and the quality of the different points varies greatly. Most of the waypoints shared on iOverlander are camp spots, shops, and restaurants—categories that we do not target. Therefore, we recommend using iOverlander and Park4Night for such places.\nOur overlap with iOverlander is in border post information. We provide a comprehensive list of border posts, organized by country (in the first iteration, only Asia is supported). This makes it much easier to find relevant information in a well-structured geographical database."
+  },
+  {
+    "category": "Countries & Borders",
+    "question": "How accurate is the border crossing information?",
+    "answer": "Our data is continuously updated by the overlanding community. We rely on real-world experiences from travelers who have recently crossed borders, making our information sometimes more relevant than more official sources."
+  },
+  {
+    "category": "Countries & Borders",
+    "question": "What does the overlanding friendliness rating mean?",
+    "answer": "The overlanding friendliness rating indicates how easy it is to visit a country with your own vehicle. Green means normal access with standard visas and paperwork, while black indicates that it is nearly impossible to enter with their own motor vehicle (for example, North Korea or Vietnam).\nRed countries are considered unsafe to visit, so we do not recommend traveling there and only limited information is provided. Yellow countries have specific restrictions that are critical to know (for example, if a guide is mandatory)."
+  },
+  {
+    "category": "Countries & Borders",
+    "question": "How safe is it to travel to country XXX? My government discourages all non-necessary travel to XXX, so shouldn't it be marked as red?",
+    "answer": "What is safe or not depends a lot on what is your level of acceptance of risks. We show here what is common sense, but of course we do not advice to travel to any place which is placed under scrutiny by a government, and take no responsibility in your decision to go there (or not). \nSo why are some countries advising against travel to some places that are displayed here in green or yellow ? it a nutshell, responsibility. If a traveler runs into trouble in a foreign country, and asks the embassy for help, it's a nuisance to them. So it's better for them if you stay at home. For example, the US government classifies France in yellow (Exercise increased caution dut to terrorism and unrest), but France puts the whole USA in green. Politics."
+  },
+  {
+    "category": "Countries & Borders",
+    "question": "What is a Carnet de Passage?",
+    "answer": "A Carnet de Passage en Douane is a document provided by your local automobile club that allows you to temporarily import your vehicle without paying import taxes. It requires a refundable deposit and is required in certain countries, mainly in Asia and Africa, countries where there are huge taxes on imported vehicles, so they want to ensure that the vehicle is re-exported and not sold inside the country. No such document is required in Europe, North or South America."
+  },
+  {
+    "category": "Mobile App",
+    "question": "What platforms is the mobile app available on?",
+    "answer": "The Overland Map mobile app is available for both iOS (iPhone/iPad) and Android devices. It can also be installed on MacOS (Apple Silicon).\nNote that currently the only incompatible device are the CarpeIter tablets, so we do not recommend using this tablet until they come with a big fix."
+  },
+  {
+    "category": "Mobile App",
+    "question": "If I purchase an itinerary on one platform, can I use it on another one?",
+    "answer": "Yes, if both devices—whether Android or iOS/macOS—use the same login, they will have access to the same itineraries.\nNote that Apple allows in-app purchases without requiring the creation of a user account. In that case, purchases cannot be shared with an Android device, which is why we do not recommend using this option."
+  },
+  {
+    "category": "Mobile App",
+    "question": "Can I use the app offline?",
+    "answer": "Of course! Overland Map is designed for overlanders who venture into places without any internet connexion, so all main features work with or without internet. When you purchase an itinerary, the detailed, step-by-step description and the photos are also downloaded for offline use. You also have the option to download a detailed, specially crafted offline map, and hillshading."
+  },
+  {
+    "category": "Countries & Borders",
+    "question": "I noticed an error. How do I contribute border crossing updates?",
+    "answer": "Install the mobile app, create an account, and click on a border post. You can then post comments to share your experience, propose updates to certain fields, and provide helpful information for other travelers."
+  },
+  {
+    "category": "Itineraries",
+    "question": "What are Track Packs?",
+    "answer": "Track Packs are collections of detailed itineraries with background information, points of interest, and step-by-step navigation for specific regions, which are purchased as one package."
+  },
+  {
+    "category": "Itineraries",
+    "question": "Do you provide GPX or KML files?",
+    "answer": "Purchased or trial itineraries are displayed and can be browsed directly in the app, so one need no specific knowledge of file types and sharing functions. Full-text search tools make it easy to find specific information. If you prefer to navigate using another app, you can easily export an itinerary in GPX format and open it in your favourite app."
+  },
+  {
+    "category": "Itineraries",
+    "question": "Can I create my own itineraries? Can I record and save my own tracks?",
+    "answer": "These features are considered for a future version."
+  },
+  {
+    "category": "Itineraries",
+    "question": "Do you provide turn-by-turn navigation for your itineraries?",
+    "answer": "We’re not big fans of automated navigation when we travel. We prefer to keep our eyes on the fantastic landscapes we cross rather than on a screen. That said, it’s very easy to open a waypoint in Google Maps or any other navigation app and use turn-by-turn directions to get there. This is especially valuable for reaching the starting point of an itinerary. These apps work well together with Overland Map."
+  },
+  {
+    "category": "Itineraries",
+    "question": "I'd rather read a book, is there a printed version of your itineraries?",
+    "answer": "We've started Overland Aventure editions many years ago as a way to publish our first itineraries. They are [still available, in French](https://overlandaventure.com), although they are now not entirely up to date. We've decided to publish updated only digitally, via the mobile app, but the books are still relevant for the wealth of background information that they contain."
+  },
+  {
+    "category": "Technical",
+    "question": "Why isn't my country showing data?",
+    "answer": "We're continuously expanding our database. Currently, all of Asia is complete with relevant and up to date information (although errors may be found), and soon we'll have full coverage for Africa and the Americas. Some countries are so straightforward to travel to that little information is needed, such as in Europe. Some countries may have limited data if few overlanders have traveled there recently (for example, island countries such as Maldives or Maurice are not prime overlander destinations). You can help by contributing your experiences through the mobile app."
+  },
+  {
+    "category": "Technical",
+    "question": "The map isn't loading. What should I do?",
+    "answer": "Try refreshing the page or clearing your browser cache. If the problem persists, check our Support page for technical assistance or contact us directly."
+  },
+  {
+    "category": "Technical",
+    "question": "What is the source of information for your maps, such as the one on this website?",
+    "answer": "All our maps are created using open-source OpenStreetMap data, just like other apps such as OsmAnd, Maps.me, Gaia, and others. They are updated regularly, though not on a daily basis.\nOur offline maps are also specifically designed to display much more information than apps like Maps.me or Organic Maps in remote areas with few or no roads, such as large parts of Mongolia or the Arabian Peninsula. This is an exclusive feature of Overland Map."
+  },
+  {
+    "category": "Technical",
+    "question": "Some of the wording is strange who wrote that text?",
+    "answer": "We're native French speakers, so the version in French is the one we're content about. For the other languagesn we rely on automatic translation, which gives sometimes strange results. We're sorry if the quality in your language isn't good, you can always switch back to English if you're annoyed by the translation."
+  }
+]

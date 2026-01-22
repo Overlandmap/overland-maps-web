@@ -6,7 +6,7 @@ This feature addresses a critical bug where itinerary layers (both the line laye
 
 ## Glossary
 
-- **Itinerary Layer**: The map layer that displays travel route lines with red color (#ef4444)
+- **Itinerary Layer**: The map layer that displays travel route lines with blue color (#3b82f6)
 - **Itinerary Labels Layer**: The map layer that displays route identifiers (like "G6") along the itinerary lines
 - **Color Scheme**: The current map display mode (overlanding, carnet, climate, itineraries)
 - **Layer Visibility**: The MapLibre GL property that controls whether a layer is shown ('visible') or hidden ('none')
