@@ -2,11 +2,51 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import { useLanguage } from '../../../contexts/LanguageContext'
 import NavigationBar from '../../../components/NavigationBar'
 import { signInWithEmail, getCurrentUser } from '../../../lib/firebase-client'
 import { deleteUser } from 'firebase/auth'
 
+const translations = {
+  en: {
+    back_to_support: 'Back to Support',
+    title: 'Delete Your Account',
+    subtitle: 'Login to your account to delete it',
+    email_label: 'Email Address',
+    password_label: 'Password',
+    login_button: 'Login to Delete Account',
+    logging_in: 'Logging in...',
+    success_title: 'Account Successfully Deleted',
+    success_message: 'Your account has been permanently deleted. All your data has been removed from our systems.',
+    return_home: 'Return to Home',
+    confirm_title: 'Delete Your Account?',
+    confirm_message: 'Do you want to delete your account at Overland Map? You will lose access to all purchases and all your settings. This is irreversible.',
+    cancel: 'Cancel',
+    ok_delete: 'OK, Delete',
+    deleting: 'Deleting...'
+  },
+  fr: {
+    back_to_support: 'Retour au Support',
+    title: 'Supprimer Votre Compte',
+    subtitle: 'Connectez-vous à votre compte pour le supprimer',
+    email_label: 'Adresse E-mail',
+    password_label: 'Mot de Passe',
+    login_button: 'Se Connecter pour Supprimer le Compte',
+    logging_in: 'Connexion en cours...',
+    success_title: 'Compte Supprimé avec Succès',
+    success_message: 'Votre compte a été définitivement supprimé. Toutes vos données ont été supprimées de nos systèmes.',
+    return_home: 'Retour à l\'Accueil',
+    confirm_title: 'Supprimer Votre Compte ?',
+    confirm_message: 'Voulez-vous supprimer votre compte Overland Map ? Vous perdrez l\'accès à tous vos achats et tous vos paramètres. Cette action est irréversible.',
+    cancel: 'Annuler',
+    ok_delete: 'OK, Supprimer',
+    deleting: 'Suppression en cours...'
+  }
+}
+
 function DeleteAccountPageContent() {
+  const { language } = useLanguage()
+  const t = translations[language as keyof typeof translations] || translations.en
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [isLoggedIn, setIsLoggedIn] = useState(false)
@@ -65,14 +105,14 @@ function DeleteAccountPageContent() {
             <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
-            Back to Support
+            {t.back_to_support}
           </Link>
 
           <h1 className="text-4xl font-bold text-gray-900 mb-4 mt-4">
-            Delete Your Account
+            {t.title}
           </h1>
           <p className="text-lg text-gray-600 mb-8">
-            Login to your account to delete it
+            {t.subtitle}
           </p>
 
           <div className="bg-white rounded-lg shadow-sm p-8">
@@ -84,23 +124,23 @@ function DeleteAccountPageContent() {
                   </svg>
                 </div>
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                  Account Successfully Deleted
+                  {t.success_title}
                 </h2>
                 <p className="text-gray-600 mb-6">
-                  Your account has been permanently deleted. All your data has been removed from our systems.
+                  {t.success_message}
                 </p>
                 <Link 
                   href="/"
                   className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
                 >
-                  Return to Home
+                  {t.return_home}
                 </Link>
               </div>
             ) : !isLoggedIn ? (
               <form onSubmit={handleLogin} className="max-w-md mx-auto">
                 <div className="mb-6">
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                    Email Address
+                    {t.email_label}
                   </label>
                   <input
                     type="email"
@@ -115,7 +155,7 @@ function DeleteAccountPageContent() {
 
                 <div className="mb-6">
                   <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
-                    Password
+                    {t.password_label}
                   </label>
                   <input
                     type="password"
@@ -139,7 +179,7 @@ function DeleteAccountPageContent() {
                   disabled={isLoggingIn}
                   className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed"
                 >
-                  {isLoggingIn ? 'Logging in...' : 'Login to Delete Account'}
+                  {isLoggingIn ? t.logging_in : t.login_button}
                 </button>
               </form>
             ) : null}
@@ -156,10 +196,10 @@ function DeleteAccountPageContent() {
                     </svg>
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 text-center mb-2">
-                    Delete Your Account?
+                    {t.confirm_title}
                   </h3>
                   <p className="text-gray-600 text-center">
-                    Do you want to delete your account at Overland Map? You will lose access to all purchases and all your settings. This is irreversible.
+                    {t.confirm_message}
                   </p>
                 </div>
 
@@ -175,14 +215,14 @@ function DeleteAccountPageContent() {
                     disabled={isDeleting}
                     className="flex-1 px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    Cancel
+                    {t.cancel}
                   </button>
                   <button
                     onClick={handleDeleteAccount}
                     disabled={isDeleting}
                     className="flex-1 px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed"
                   >
-                    {isDeleting ? 'Deleting...' : 'OK, Delete'}
+                    {isDeleting ? t.deleting : t.ok_delete}
                   </button>
                 </div>
               </div>

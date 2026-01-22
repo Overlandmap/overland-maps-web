@@ -1,9 +1,49 @@
 'use client'
 
 import Link from 'next/link'
+import { useLanguage } from '../../contexts/LanguageContext'
 import NavigationBar from '../../components/NavigationBar'
 
+const translations = {
+  en: {
+    title: 'Support',
+    subtitle: "We're here to help you get the most out of Overland Map",
+    contact_title: 'Contact',
+    contact_desc: 'Get in touch with our support team for help with technical issues or general inquiries.',
+    whats_new_title: "What's New",
+    whats_new_desc: 'Check out the latest features, updates, and improvements to Overland Map.',
+    privacy_title: 'Privacy Policy',
+    privacy_desc: 'Learn how we protect your data and respect your privacy.',
+    delete_account_title: 'Delete Account',
+    delete_account_desc: 'Request to permanently delete your account and associated data.',
+    need_more_help: 'Need More Help?',
+    before_contacting: 'Before contacting support, you might find your answer in our',
+    faq_section: 'FAQ section',
+    fastest_response: 'For the fastest response, use the mobile app to report issues or ask questions directly to the community.',
+    reach_via_email: 'You can also reach us via email at'
+  },
+  fr: {
+    title: 'Support',
+    subtitle: 'Nous sommes là pour vous aider à tirer le meilleur parti d\'Overland Map',
+    contact_title: 'Contact',
+    contact_desc: 'Contactez notre équipe d\'assistance pour obtenir de l\'aide sur des problèmes techniques ou des questions générales.',
+    whats_new_title: 'Nouveautés',
+    whats_new_desc: 'Découvrez les dernières fonctionnalités, mises à jour et améliorations d\'Overland Map.',
+    privacy_title: 'Politique de Confidentialité',
+    privacy_desc: 'Découvrez comment nous protégeons vos données et respectons votre vie privée.',
+    delete_account_title: 'Supprimer le Compte',
+    delete_account_desc: 'Demandez la suppression permanente de votre compte et des données associées.',
+    need_more_help: 'Besoin d\'Aide Supplémentaire ?',
+    before_contacting: 'Avant de contacter le support, vous pourriez trouver votre réponse dans notre',
+    faq_section: 'section FAQ',
+    fastest_response: 'Pour une réponse plus rapide, utilisez l\'application mobile pour signaler des problèmes ou poser des questions directement à la communauté.',
+    reach_via_email: 'Vous pouvez également nous contacter par e-mail à'
+  }
+}
+
 function SupportPageContent() {
+  const { language } = useLanguage()
+  const t = translations[language as keyof typeof translations] || translations.en
   return (
     <div className="min-h-screen bg-gray-50">
       <NavigationBar currentSection="support" />
@@ -11,10 +51,10 @@ function SupportPageContent() {
       <main className="px-4 sm:px-6 lg:px-8 py-20">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Support
+            {t.title}
           </h1>
           <p className="text-lg text-gray-600 mb-12">
-            We&apos;re here to help you get the most out of Overland Map
+            {t.subtitle}
           </p>
 
           {/* Support Options Grid */}
@@ -34,10 +74,10 @@ function SupportPageContent() {
                 </div>
                 <div className="flex-1">
                   <h2 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
-                    Contact
+                    {t.contact_title}
                   </h2>
                   <p className="text-gray-600">
-                    Get in touch with our support team for help with technical issues or general inquiries.
+                    {t.contact_desc}
                   </p>
                 </div>
               </div>
@@ -58,10 +98,10 @@ function SupportPageContent() {
                 </div>
                 <div className="flex-1">
                   <h2 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-green-600 transition-colors">
-                    What&apos;s New
+                    {t.whats_new_title}
                   </h2>
                   <p className="text-gray-600">
-                    Check out the latest features, updates, and improvements to Overland Map.
+                    {t.whats_new_desc}
                   </p>
                 </div>
               </div>
@@ -82,10 +122,10 @@ function SupportPageContent() {
                 </div>
                 <div className="flex-1">
                   <h2 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">
-                    Privacy Policy
+                    {t.privacy_title}
                   </h2>
                   <p className="text-gray-600">
-                    Learn how we protect your data and respect your privacy.
+                    {t.privacy_desc}
                   </p>
                 </div>
               </div>
@@ -106,10 +146,10 @@ function SupportPageContent() {
                 </div>
                 <div className="flex-1">
                   <h2 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-red-600 transition-colors">
-                    Delete Account
+                    {t.delete_account_title}
                   </h2>
                   <p className="text-gray-600">
-                    Request to permanently delete your account and associated data.
+                    {t.delete_account_desc}
                   </p>
                 </div>
               </div>
@@ -119,21 +159,21 @@ function SupportPageContent() {
           {/* Additional Help */}
           <div className="bg-white rounded-lg shadow-sm p-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-              Need More Help?
+              {t.need_more_help}
             </h2>
             <div className="space-y-4 text-gray-700">
               <p>
-                Before contacting support, you might find your answer in our{' '}
+                {t.before_contacting}{' '}
                 <Link href="/faq" className="text-blue-600 hover:text-blue-700 underline">
-                  FAQ section
+                  {t.faq_section}
                 </Link>
                 .
               </p>
               <p>
-                For the fastest response, use the mobile app to report issues or ask questions directly to the community.
+                {t.fastest_response}
               </p>
               <p>
-                You can also reach us via email at{' '}
+                {t.reach_via_email}{' '}
                 <a href="mailto:support@overlandmap.ch" className="text-blue-600 hover:text-blue-700 underline">
                   support@overlandmap.ch
                 </a>

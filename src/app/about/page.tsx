@@ -16,7 +16,7 @@ function AboutPageContent() {
           <div className="bg-white rounded-lg shadow-sm p-8 space-y-6">
             <section>
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-                Our Mission
+                The Mission
               </h2>
               <p className="text-gray-700 leading-relaxed">
                 Overland Map is dedicated to providing overlanders with accurate, up-to-date information
@@ -28,12 +28,12 @@ function AboutPageContent() {
 
             <section>
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-                What We Offer
+                What You Will Find
               </h2>
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-start">
                   <span className="text-blue-600 mr-2">•</span>
-                  <span>Interactive maps showing overlanding friendliness and border conditions</span>
+                  <span>Interactive maps showing where it&apos;s easy or difficult to travel</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-600 mr-2">•</span>
@@ -41,15 +41,15 @@ function AboutPageContent() {
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-600 mr-2">•</span>
-                  <span>Climate data to help you plan the best time to travel</span>
+                  <span>Climate maps to help you plan the best time to travel</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-600 mr-2">•</span>
-                  <span>Curated itineraries for overlanders</span>
+                  <span>Curated itineraries in selected destinations</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-600 mr-2">•</span>
-                  <span>Community-driven updates and real-time border crossing information</span>
+                  <span>Community-driven updates on border crossings and road conditions</span>
                 </li>
               </ul>
             </section>
