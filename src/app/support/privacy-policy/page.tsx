@@ -8,98 +8,233 @@ const translations = {
   en: {
     back_to_support: 'Back to Support',
     title: 'Privacy Policy',
-    last_updated: 'Last updated: January 2026',
+    last_updated: 'Last Updated: January 22, 2026',
     intro_title: 'Introduction',
-    intro_text: 'At Overland Map, we take your privacy seriously. This Privacy Policy explains how we collect, use, and protect your personal information when you use our website and mobile applications.',
+    intro_text: 'This Privacy Policy explains how we collect, use, and protect your personal information when you use our application. We are committed to ensuring the privacy and security of your data.',
+    
     info_collect_title: 'Information We Collect',
-    account_info: 'Account Information',
-    account_desc: 'When you create an account, we collect your email address and chosen username.',
-    usage_data: 'Usage Data',
-    usage_desc: 'We collect information about how you use our services, including pages visited, features used, and interaction patterns.',
-    location_data: 'Location Data',
-    location_desc: 'With your permission, we may collect location data to provide location-based features and improve our services.',
-    user_content: 'User-Generated Content',
-    user_content_desc: 'Comments, reviews, and updates you share about border crossings and travel experiences.',
+    info_collect_intro: 'We collect only the minimum information necessary to provide you with our services:',
+    info_collect_items: [
+      'Email address (for account creation and authentication)',
+      'Display name (chosen by you, shown publicly with your reviews)',
+      'Purchase history (for itinerary pack purchases)',
+      'Location data (only when you explicitly use location-based features)'
+    ],
+    
+    reviews_title: 'User Reviews and Comments',
+    reviews_intro: 'When you write reviews or comments in our application:',
+    reviews_items: [
+      'Only your chosen display name will be shown publicly',
+      'Your email address is never displayed or shared',
+      'Your display name can be changed at any time through your account settings',
+      'Reviews and comments will remain under your display name even if you delete your account, but won\'t be associated to your e-mail anymore'
+    ],
+    
+    third_party_title: 'Third-Party Services',
+    mapbox_title: 'Mapbox Services',
+    mapbox_intro: 'Our application uses Mapbox for mapping services. As part of this integration:',
+    mapbox_items: [
+      'Mapbox may collect location data and device information',
+      'This data is subject to Mapbox\'s Privacy Policy',
+      'We do not have access to or control over Mapbox\'s data collection'
+    ],
+    
+    location_title: 'Location Services',
+    location_intro: 'Location services are used to:',
+    location_items: [
+      'Show your current position on the map',
+      'Provide location-based features and recommendations',
+      'Improve map accuracy and user experience'
+    ],
+    location_control_title: 'To control location services:',
+    location_control_items: [
+      'During first app launch, you\'ll be asked to authorize location access "While Using the App"',
+      'You can later modify this setting in your device\'s Settings > Privacy > Location Services'
+    ],
+    location_notes_title: 'Important notes about location services:',
+    location_notes_items: [
+      'Location data is only collected when you actively use the app',
+      'We do not track or store your location history',
+      'You can disable location services at any time through your device settings'
+    ],
+    
     how_use_title: 'How We Use Your Information',
-    use_1: 'To provide and improve our services',
-    use_2: 'To personalize your experience',
-    use_3: 'To communicate with you about updates and features',
-    use_4: 'To ensure security and prevent fraud',
-    use_5: 'To comply with legal obligations',
-    sharing_title: 'Data Sharing and Disclosure',
-    sharing_intro: 'We do not sell your personal information. We may share your information only in the following circumstances:',
-    share_1: 'With your consent',
-    share_2: 'With service providers who assist in operating our platform',
-    share_3: 'When required by law or to protect our rights',
-    share_4: 'In connection with a business transfer or acquisition',
+    how_use_intro: 'Your information is used exclusively for:',
+    how_use_items: [
+      'Account creation and management',
+      'Authentication and security',
+      'Processing your itinerary pack purchases',
+      'Communicating essential service-related information'
+    ],
+    
+    security_title: 'Data Storage and Security',
+    security_items: [
+      'Your data is stored securely using industry-standard encryption',
+      'We implement appropriate technical and organizational measures to protect your information',
+      'Access to personal data is restricted to authorized personnel only'
+    ],
+    
+    sharing_title: 'Third-Party Sharing',
+    sharing_text: 'We do not share, sell, rent, or trade your personal information with any third parties. Your data remains strictly within our application\'s ecosystem. The only exception is the location data collected by Mapbox as described in the "Third-Party Services" section.',
+    
+    retention_title: 'Data Retention',
+    retention_intro: 'We retain your personal information only for as long as necessary to:',
+    retention_items: [
+      'Provide you with our services',
+      'Comply with legal obligations',
+      'Resolve disputes and enforce our agreements'
+    ],
+    
     rights_title: 'Your Rights',
     rights_intro: 'You have the right to:',
-    right_1: 'Access your personal data',
-    right_2: 'Correct inaccurate data',
-    right_3: 'Request deletion of your data',
-    right_4: 'Object to processing of your data',
-    right_5: 'Export your data',
-    security_title: 'Data Security',
-    security_text: 'We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet is 100% secure.',
-    cookies_title: 'Cookies and Tracking',
-    cookies_text: 'We use essential cookies and local storage to improve your experience and remember your preferences (such as language settings). We do not use tracking cookies or collect personal data for advertising purposes.',
-    children_title: 'Children\'s Privacy',
-    children_text: 'Our services are not directed to children under 13. We do not knowingly collect personal information from children under 13. If you believe we have collected such information, please contact us.',
-    changes_title: 'Changes to This Policy',
-    changes_text: 'We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.',
-    contact_title: 'Contact Us',
-    contact_text: 'If you have questions about this Privacy Policy, please contact us at'
+    rights_items: [
+      'Access your personal data',
+      'Correct inaccurate information',
+      'Request deletion of your account and data',
+      'Object to data processing',
+      'Export your data'
+    ],
+    
+    changes_personal_title: 'Changes to Personal Information',
+    changes_personal_text: 'You can review and update your personal information at any time through your account settings in the application.',
+    
+    deletion_title: 'Account Deletion',
+    deletion_intro: 'If you choose to delete your account:',
+    deletion_items: [
+      'All your personal information will be permanently deleted',
+      'Your reviews and comments will remain but will no longer be associated with your email',
+      'This action cannot be undone',
+      'You can request account deletion through the app settings or by contacting us'
+    ],
+    
+    updates_title: 'Updates to Privacy Policy',
+    updates_text: 'We may update this Privacy Policy occasionally. Users will be notified of any material changes via email or through the application.',
+    
+    contact_title: 'Contact Information',
+    contact_intro: 'If you have questions about this Privacy Policy or your personal data, please contact us at:',
+    contact_email: 'privacy@overlandmap.ch',
+    
+    law_title: 'Governing Law',
+    law_text: 'This Privacy Policy is governed by and construed in accordance with applicable data protection laws.'
   },
   fr: {
     back_to_support: 'Retour au Support',
     title: 'Politique de Confidentialité',
-    last_updated: 'Dernière mise à jour : Janvier 2026',
+    last_updated: 'Dernière mise à jour : 22 janvier 2026',
     intro_title: 'Introduction',
-    intro_text: 'Chez Overland Map, nous prenons votre vie privée au sérieux. Cette Politique de Confidentialité explique comment nous collectons, utilisons et protégeons vos informations personnelles lorsque vous utilisez notre site web et nos applications mobiles.',
-    info_collect_title: 'Informations que Nous Collectons',
-    account_info: 'Informations de Compte',
-    account_desc: 'Lorsque vous créez un compte, nous collectons votre adresse e-mail et le nom d\'utilisateur choisi.',
-    usage_data: 'Données d\'Utilisation',
-    usage_desc: 'Nous collectons des informations sur la façon dont vous utilisez nos services, y compris les pages visitées, les fonctionnalités utilisées et les modèles d\'interaction.',
-    location_data: 'Données de Localisation',
-    location_desc: 'Avec votre permission, nous pouvons collecter des données de localisation pour fournir des fonctionnalités basées sur la localisation et améliorer nos services.',
-    user_content: 'Contenu Généré par l\'Utilisateur',
-    user_content_desc: 'Commentaires, avis et mises à jour que vous partagez sur les passages frontaliers et les expériences de voyage.',
-    how_use_title: 'Comment Nous Utilisons Vos Informations',
-    use_1: 'Pour fournir et améliorer nos services',
-    use_2: 'Pour personnaliser votre expérience',
-    use_3: 'Pour communiquer avec vous sur les mises à jour et les fonctionnalités',
-    use_4: 'Pour assurer la sécurité et prévenir la fraude',
-    use_5: 'Pour respecter les obligations légales',
-    sharing_title: 'Partage et Divulgation des Données',
-    sharing_intro: 'Nous ne vendons pas vos informations personnelles. Nous pouvons partager vos informations uniquement dans les circonstances suivantes :',
-    share_1: 'Avec votre consentement',
-    share_2: 'Avec des prestataires de services qui nous aident à exploiter notre plateforme',
-    share_3: 'Lorsque requis par la loi ou pour protéger nos droits',
-    share_4: 'Dans le cadre d\'un transfert ou d\'une acquisition d\'entreprise',
+    intro_text: 'Cette Politique de Confidentialité explique comment nous collectons, utilisons et protégeons vos informations personnelles lorsque vous utilisez notre application. Nous nous engageons à garantir la confidentialité et la sécurité de vos données.',
+    
+    info_collect_title: 'Informations que nous collectons',
+    info_collect_intro: 'Nous collectons uniquement les informations minimales nécessaires pour vous fournir nos services :',
+    info_collect_items: [
+      'Adresse e-mail (pour la création et l\'authentification du compte)',
+      'Pseudo (choisi par vous, affiché publiquement avec vos avis)',
+      'Historique d\'achats (pour les achats de packs d\'itinéraires)',
+      'Données de localisation (uniquement lorsque vous utilisez explicitement des fonctionnalités basées sur la localisation)'
+    ],
+    
+    reviews_title: 'Avis et commentaires',
+    reviews_intro: 'Lorsque vous rédigez des avis ou des commentaires dans notre application :',
+    reviews_items: [
+      'Seul votre pseudo choisi sera affiché publiquement',
+      'Votre adresse e-mail n\'est jamais affichée ni partagée',
+      'Votre pseudo peut être modifié à tout moment dans les paramètres de votre compte',
+      'Si vous supprimez votre compte, vos avis et commentaires resteront mais ne seront plus liés à votre adresse e-mail'
+    ],
+    
+    third_party_title: 'Services Tiers',
+    mapbox_title: 'Services Mapbox',
+    mapbox_intro: 'Notre application utilise Mapbox pour les services de cartographie. Dans le cadre de cette intégration :',
+    mapbox_items: [
+      'Mapbox peut collecter des données de localisation et des informations sur l\'appareil',
+      'Ces données sont soumises à la Politique de Confidentialité de Mapbox',
+      'Nous n\'avons pas accès ni contrôle sur la collecte de données de Mapbox'
+    ],
+    
+    location_title: 'Services de Localisation',
+    location_intro: 'Les services de localisation sont utilisés pour :',
+    location_items: [
+      'Afficher votre position actuelle sur la carte',
+      'Fournir des fonctionnalités et recommandations basées sur la localisation',
+      'Améliorer la précision de la carte et l\'expérience utilisateur'
+    ],
+    location_control_title: 'Pour contrôler les services de localisation :',
+    location_control_items: [
+      'Lors du premier lancement de l\'application, il vous sera demandé d\'autoriser l\'accès à la localisation "Pendant l\'utilisation de l\'app"',
+      'Vous pouvez modifier ce paramètre ultérieurement dans Réglages > Confidentialité > Service de localisation de votre appareil'
+    ],
+    location_notes_title: 'Remarques importantes concernant les services de localisation :',
+    location_notes_items: [
+      'Les données de localisation ne sont collectées que lorsque vous utilisez activement l\'application',
+      'Nous ne suivons ni ne stockons votre historique de localisation',
+      'Vous pouvez désactiver les services de localisation à tout moment via les paramètres de votre appareil'
+    ],
+    
+    how_use_title: 'Utilisation de vos informations',
+    how_use_intro: 'Vos informations sont utilisées exclusivement pour :',
+    how_use_items: [
+      'La création et la gestion de compte',
+      'L\'authentification et la sécurité',
+      'Le traitement de vos achats de packs d\'itinéraires',
+      'La communication d\'informations essentielles liées au service'
+    ],
+    
+    security_title: 'Stockage et Sécurité des Données',
+    security_items: [
+      'Vos données sont stockées en toute sécurité à l\'aide d\'un chiffrement standard de l\'industrie',
+      'Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos informations',
+      'L\'accès aux données personnelles est limité au personnel autorisé uniquement'
+    ],
+    
+    sharing_title: 'Partage avec des Tiers',
+    sharing_text: 'Nous ne partageons, ne vendons, ne louons ni n\'échangeons vos informations personnelles avec des tiers. Vos données restent strictement dans l\'écosystème de notre application. La seule exception concerne les données de localisation collectées par Mapbox comme décrit dans la section "Services Tiers".',
+    
+    retention_title: 'Conservation des Données',
+    retention_intro: 'Nous conservons vos informations personnelles uniquement le temps nécessaire pour :',
+    retention_items: [
+      'Vous fournir nos services',
+      'Respecter les obligations légales',
+      'Résoudre les litiges et faire respecter nos accords'
+    ],
+    
     rights_title: 'Vos Droits',
     rights_intro: 'Vous avez le droit de :',
-    right_1: 'Accéder à vos données personnelles',
-    right_2: 'Corriger les données inexactes',
-    right_3: 'Demander la suppression de vos données',
-    right_4: 'Vous opposer au traitement de vos données',
-    right_5: 'Exporter vos données',
-    security_title: 'Sécurité des Données',
-    security_text: 'Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos informations personnelles contre l\'accès non autorisé, la modification, la divulgation ou la destruction. Cependant, aucune méthode de transmission sur Internet n\'est sécurisée à 100%.',
-    cookies_title: 'Cookies et Suivi',
-    cookies_text: 'Nous utilisons des cookies essentiels et le stockage local pour améliorer votre expérience et mémoriser vos préférences (telles que les paramètres de langue). Nous n\'utilisons pas de cookies de suivi ni ne collectons de données personnelles à des fins publicitaires.',
-    children_title: 'Confidentialité des Enfants',
-    children_text: 'Nos services ne sont pas destinés aux enfants de moins de 13 ans. Nous ne collectons pas sciemment d\'informations personnelles auprès d\'enfants de moins de 13 ans. Si vous pensez que nous avons collecté de telles informations, veuillez nous contacter.',
-    changes_title: 'Modifications de Cette Politique',
-    changes_text: 'Nous pouvons mettre à jour cette Politique de Confidentialité de temps en temps. Nous vous informerons de tout changement en publiant la nouvelle Politique de Confidentialité sur cette page et en mettant à jour la date de "Dernière mise à jour".',
-    contact_title: 'Contactez-Nous',
-    contact_text: 'Si vous avez des questions sur cette Politique de Confidentialité, veuillez nous contacter à'
+    rights_items: [
+      'Accéder à vos données personnelles',
+      'Corriger les informations inexactes',
+      'Demander la suppression de votre compte et de vos données',
+      'Vous opposer au traitement des données',
+      'Exporter vos données'
+    ],
+    
+    changes_personal_title: 'Modification des Informations Personnelles',
+    changes_personal_text: 'Vous pouvez consulter et mettre à jour vos informations personnelles à tout moment via les paramètres de votre compte dans l\'application.',
+    
+    deletion_title: 'Suppression de Compte',
+    deletion_intro: 'Si vous choisissez de supprimer votre compte :',
+    deletion_items: [
+      'Toutes vos informations personnelles seront définitivement supprimées',
+      'Vos avis et commentaires resteront mais ne seront plus associés à votre e-mail',
+      'Cette action ne peut pas être annulée',
+      'Vous pouvez demander la suppression du compte via les paramètres de l\'application ou en nous contactant'
+    ],
+    
+    updates_title: 'Mises à Jour de la Politique de Confidentialité',
+    updates_text: 'Nous pouvons occasionnellement mettre à jour cette Politique de Confidentialité. Les utilisateurs seront informés de tout changement important par e-mail ou via l\'application.',
+    
+    contact_title: 'Informations de Contact',
+    contact_intro: 'Si vous avez des questions concernant cette Politique de Confidentialité ou vos données personnelles, veuillez nous contacter à :',
+    contact_email: 'privacy@overlandmap.ch',
+    
+    law_title: 'Loi Applicable',
+    law_text: 'Cette Politique de Confidentialité est régie et interprétée conformément aux lois applicables en matière de protection des données.'
   }
 }
 
 function PrivacyPolicyPageContent() {
   const { language } = useLanguage()
   const t = translations[language as keyof typeof translations] || translations.en
+  
   return (
     <div className="min-h-screen bg-gray-50">
       <NavigationBar currentSection="support" />
@@ -121,6 +256,7 @@ function PrivacyPolicyPageContent() {
           </p>
 
           <div className="bg-white rounded-lg shadow-sm p-8 space-y-8">
+            {/* Introduction */}
             <section>
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">
                 {t.intro_title}
@@ -130,161 +266,242 @@ function PrivacyPolicyPageContent() {
               </p>
             </section>
 
+            {/* Information We Collect */}
             <section>
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">
                 {t.info_collect_title}
               </h2>
-              <div className="space-y-4 text-gray-700">
-                <div>
-                  <h3 className="font-semibold mb-2">{t.account_info}</h3>
-                  <p>{t.account_desc}</p>
-                </div>
-                <div>
-                  <h3 className="font-semibold mb-2">{t.usage_data}</h3>
-                  <p>{t.usage_desc}</p>
-                </div>
-                <div>
-                  <h3 className="font-semibold mb-2">{t.location_data}</h3>
-                  <p>{t.location_desc}</p>
-                </div>
-                <div>
-                  <h3 className="font-semibold mb-2">{t.user_content}</h3>
-                  <p>{t.user_content_desc}</p>
-                </div>
-              </div>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                {t.info_collect_intro}
+              </p>
+              <ul className="space-y-2 text-gray-700">
+                {t.info_collect_items.map((item, index) => (
+                  <li key={index} className="flex items-start">
+                    <span className="text-blue-600 mr-2">•</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
             </section>
 
+            {/* User Reviews and Comments */}
+            <section>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                {t.reviews_title}
+              </h3>
+              <p className="text-gray-700 leading-relaxed mb-3">
+                {t.reviews_intro}
+              </p>
+              <ul className="space-y-2 text-gray-700">
+                {t.reviews_items.map((item, index) => (
+                  <li key={index} className="flex items-start">
+                    <span className="text-blue-600 mr-2">•</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </section>
+
+            {/* Third-Party Services */}
+            <section>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+                {t.third_party_title}
+              </h2>
+              
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                {t.mapbox_title}
+              </h3>
+              <p className="text-gray-700 leading-relaxed mb-3">
+                {t.mapbox_intro}
+              </p>
+              <ul className="space-y-2 text-gray-700 mb-6">
+                {t.mapbox_items.map((item, index) => (
+                  <li key={index} className="flex items-start">
+                    <span className="text-blue-600 mr-2">•</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                {t.location_title}
+              </h3>
+              <p className="text-gray-700 leading-relaxed mb-3">
+                {t.location_intro}
+              </p>
+              <ul className="space-y-2 text-gray-700 mb-4">
+                {t.location_items.map((item, index) => (
+                  <li key={index} className="flex items-start">
+                    <span className="text-blue-600 mr-2">•</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <p className="text-gray-700 font-semibold mb-2">
+                {t.location_control_title}
+              </p>
+              <ul className="space-y-2 text-gray-700 mb-4">
+                {t.location_control_items.map((item, index) => (
+                  <li key={index} className="flex items-start">
+                    <span className="text-blue-600 mr-2">•</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <p className="text-gray-700 font-semibold mb-2">
+                {t.location_notes_title}
+              </p>
+              <ul className="space-y-2 text-gray-700">
+                {t.location_notes_items.map((item, index) => (
+                  <li key={index} className="flex items-start">
+                    <span className="text-blue-600 mr-2">•</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </section>
+
+            {/* How We Use Your Information */}
             <section>
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">
                 {t.how_use_title}
               </h2>
-              <ul className="space-y-2 text-gray-700">
-                <li className="flex items-start">
-                  <span className="text-blue-600 mr-2">•</span>
-                  <span>{t.use_1}</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-blue-600 mr-2">•</span>
-                  <span>{t.use_2}</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-blue-600 mr-2">•</span>
-                  <span>{t.use_3}</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-blue-600 mr-2">•</span>
-                  <span>{t.use_4}</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-blue-600 mr-2">•</span>
-                  <span>{t.use_5}</span>
-                </li>
-              </ul>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-                {t.sharing_title}
-              </h2>
-              <p className="text-gray-700 leading-relaxed mb-4">
-                {t.sharing_intro}
+              <p className="text-gray-700 leading-relaxed mb-3">
+                {t.how_use_intro}
               </p>
               <ul className="space-y-2 text-gray-700">
-                <li className="flex items-start">
-                  <span className="text-blue-600 mr-2">•</span>
-                  <span>{t.share_1}</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-blue-600 mr-2">•</span>
-                  <span>{t.share_2}</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-blue-600 mr-2">•</span>
-                  <span>{t.share_3}</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-blue-600 mr-2">•</span>
-                  <span>{t.share_4}</span>
-                </li>
+                {t.how_use_items.map((item, index) => (
+                  <li key={index} className="flex items-start">
+                    <span className="text-blue-600 mr-2">•</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
               </ul>
             </section>
 
-            <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-                {t.rights_title}
-              </h2>
-              <p className="text-gray-700 leading-relaxed mb-4">
-                {t.rights_intro}
-              </p>
-              <ul className="space-y-2 text-gray-700">
-                <li className="flex items-start">
-                  <span className="text-blue-600 mr-2">•</span>
-                  <span>{t.right_1}</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-blue-600 mr-2">•</span>
-                  <span>{t.right_2}</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-blue-600 mr-2">•</span>
-                  <span>{t.right_3}</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-blue-600 mr-2">•</span>
-                  <span>{t.right_4}</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-blue-600 mr-2">•</span>
-                  <span>{t.right_5}</span>
-                </li>
-              </ul>
-            </section>
-
+            {/* Data Storage and Security */}
             <section>
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">
                 {t.security_title}
               </h2>
-              <p className="text-gray-700 leading-relaxed">
-                {t.security_text}
-              </p>
+              <ul className="space-y-2 text-gray-700">
+                {t.security_items.map((item, index) => (
+                  <li key={index} className="flex items-start">
+                    <span className="text-blue-600 mr-2">•</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
             </section>
 
+            {/* Third-Party Sharing */}
             <section>
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-                {t.cookies_title}
+                {t.sharing_title}
               </h2>
               <p className="text-gray-700 leading-relaxed">
-                {t.cookies_text}
+                {t.sharing_text}
               </p>
             </section>
 
+            {/* Data Retention */}
             <section>
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-                {t.children_title}
+                {t.retention_title}
               </h2>
-              <p className="text-gray-700 leading-relaxed">
-                {t.children_text}
+              <p className="text-gray-700 leading-relaxed mb-3">
+                {t.retention_intro}
               </p>
+              <ul className="space-y-2 text-gray-700">
+                {t.retention_items.map((item, index) => (
+                  <li key={index} className="flex items-start">
+                    <span className="text-blue-600 mr-2">•</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
             </section>
 
+            {/* Your Rights */}
             <section>
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-                {t.changes_title}
+                {t.rights_title}
+              </h2>
+              <p className="text-gray-700 leading-relaxed mb-3">
+                {t.rights_intro}
+              </p>
+              <ul className="space-y-2 text-gray-700">
+                {t.rights_items.map((item, index) => (
+                  <li key={index} className="flex items-start">
+                    <span className="text-blue-600 mr-2">•</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </section>
+
+            {/* Changes to Personal Information */}
+            <section>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+                {t.changes_personal_title}
               </h2>
               <p className="text-gray-700 leading-relaxed">
-                {t.changes_text}
+                {t.changes_personal_text}
               </p>
             </section>
 
+            {/* Account Deletion */}
+            <section>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+                {t.deletion_title}
+              </h2>
+              <p className="text-gray-700 leading-relaxed mb-3">
+                {t.deletion_intro}
+              </p>
+              <ul className="space-y-2 text-gray-700">
+                {t.deletion_items.map((item, index) => (
+                  <li key={index} className="flex items-start">
+                    <span className="text-blue-600 mr-2">•</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </section>
+
+            {/* Updates to Privacy Policy */}
+            <section>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+                {t.updates_title}
+              </h2>
+              <p className="text-gray-700 leading-relaxed">
+                {t.updates_text}
+              </p>
+            </section>
+
+            {/* Contact Information */}
             <section>
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">
                 {t.contact_title}
               </h2>
-              <p className="text-gray-700 leading-relaxed">
-                {t.contact_text}{' '}
-                <a href="mailto:privacy@overlandmap.ch" className="text-blue-600 hover:text-blue-700 underline">
-                  privacy@overlandmap.ch
+              <p className="text-gray-700 leading-relaxed mb-2">
+                {t.contact_intro}
+              </p>
+              <p className="text-gray-700">
+                <a href={`mailto:${t.contact_email}`} className="text-blue-600 hover:text-blue-700 underline">
+                  {t.contact_email}
                 </a>
+              </p>
+            </section>
+
+            {/* Governing Law */}
+            <section>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+                {t.law_title}
+              </h2>
+              <p className="text-gray-700 leading-relaxed">
+                {t.law_text}
               </p>
             </section>
           </div>
