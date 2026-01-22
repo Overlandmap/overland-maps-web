@@ -22,15 +22,15 @@ export default function LanguageSelector({ className = '' }: LanguageSelectorPro
     <div className={`relative ${className}`}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center space-x-2 px-3 py-2 bg-white border border-gray-300 rounded-lg shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors"
+        className="flex items-center space-x-2 px-3 py-2 bg-white bg-opacity-20 backdrop-blur-sm rounded-lg hover:bg-opacity-30 focus:outline-none focus:ring-2 focus:ring-gray-400 transition-all"
         aria-label="Select language"
       >
         <span className="text-lg">{currentLanguage?.flag}</span>
-        <span className="text-sm font-medium text-gray-700">
+        <span className="text-sm font-medium text-gray-900">
           {currentLanguage?.code.toUpperCase()}
         </span>
         <svg 
-          className={`w-4 h-4 text-gray-400 transition-transform ${isOpen ? 'rotate-180' : ''}`}
+          className={`w-4 h-4 text-gray-700 transition-transform ${isOpen ? 'rotate-180' : ''}`}
           fill="none" 
           stroke="currentColor" 
           viewBox="0 0 24 24"
@@ -48,7 +48,7 @@ export default function LanguageSelector({ className = '' }: LanguageSelectorPro
           />
           
           {/* Language Dropdown */}
-          <div className="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg z-20 max-h-64 overflow-y-auto">
+          <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg z-20 max-h-64 overflow-y-auto">
             <div className="py-1">
               {SUPPORTED_LANGUAGES.map((lang) => (
                 <button

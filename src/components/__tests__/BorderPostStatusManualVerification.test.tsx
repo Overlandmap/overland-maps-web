@@ -25,8 +25,7 @@ describe('Border Post Status Restricted Fix - Manual Verification', () => {
       { code: 'it', expected: 'Limitato' },
       { code: 'ja', expected: '制限' },
       { code: 'nl', expected: 'Beperkt' },
-      { code: 'ru', expected: 'Ограничено' },
-      { code: 'zh', expected: '受限' }
+      { code: 'ru', expected: 'Ограничено' }
     ]
 
     languages.forEach(({ code, expected }) => {
@@ -39,7 +38,7 @@ describe('Border Post Status Restricted Fix - Manual Verification', () => {
 
   describe('Translation key existence verification', () => {
     it('should have restricted translation key for all supported languages', () => {
-      const languages = ['en', 'de', 'es', 'fr', 'it', 'ja', 'nl', 'ru', 'zh']
+      const languages = ['en', 'de', 'es', 'fr', 'it', 'ja', 'nl', 'ru']
       
       languages.forEach(lang => {
         const translation = getTranslatedLabel('restricted', lang as any)

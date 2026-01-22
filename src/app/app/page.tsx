@@ -17,7 +17,7 @@ function AppPageContent() {
             Overland Map
           </h1>
           <p className="text-xl md:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto">
-            Your ultimate companion for overland travel. Navigate borders, plan routes, and explore the world with confidence.
+            Un couteau suisse pour préparer vos voyages à travers le monde. Installez l'app mobile et découvrez quelles frontières sont ouvertes, planifiez vos itinéraires et explorez le monde en toute confiance.
           </p>
           <div className="flex justify-center mb-12">
             <AppStoreButtons size="large" layout="compact" />
@@ -30,60 +30,60 @@ function AppPageContent() {
             <div className="bg-white rounded-xl shadow-sm p-8 text-center">
               <div className="text-5xl mb-4">🗺️</div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                Interactive Maps
+                Cartes interactives
               </h3>
               <p className="text-gray-600">
-                Explore detailed maps with border crossings, visa requirements, and travel conditions worldwide.
+                Explorez la carte du monde et retrouvez des détails sur les passages de frontière, les exigences de visa et les conditions de voyage pour votre voyage au long cours.
               </p>
             </div>
 
             <div className="bg-white rounded-xl shadow-sm p-8 text-center">
               <div className="text-5xl mb-4">📍</div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                Offline Access
+                Accès hors ligne
               </h3>
               <p className="text-gray-600">
-                Download maps and itineraries for offline use when traveling in remote areas.
+                Téléchargez des cartes et des itinéraires pour une utilisation sans internet lors de vos voyages dans des zones reculées.
               </p>
             </div>
 
             <div className="bg-white rounded-xl shadow-sm p-8 text-center">
               <div className="text-5xl mb-4">💬</div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                Community Updates
+                Communauté de voyageurs
               </h3>
               <p className="text-gray-600">
-                Get real-time updates from fellow travelers about border conditions and road status.
+                Recevez des mises à jour de la part d'autres voyageurs sur les conditions aux frontières ou l'état des routes.
               </p>
             </div>
 
             <div className="bg-white rounded-xl shadow-sm p-8 text-center">
               <div className="text-5xl mb-4">🚗</div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                Vehicle Documentation
+                Documents pour le véhicule
               </h3>
               <p className="text-gray-600">
-                Track carnet requirements, insurance, and vehicle paperwork for every country.
+                Retrouvez les exigences de carnet de passage, d'assurance et de permis pour passer les frontières avec un véhicule.
               </p>
             </div>
 
             <div className="bg-white rounded-xl shadow-sm p-8 text-center">
               <div className="text-5xl mb-4">🌡️</div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                Climate Data
+                Données climatiques
               </h3>
               <p className="text-gray-600">
-                Plan your journey with detailed climate information and seasonal recommendations.
+                Planifiez votre voyage avec des informations climatiques détaillées et des recommandations saisonnières.
               </p>
             </div>
 
             <div className="bg-white rounded-xl shadow-sm p-8 text-center">
               <div className="text-5xl mb-4">🛣️</div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                Curated Itineraries
+                Itinéraires détaillés
               </h3>
               <p className="text-gray-600">
-                Access professionally crafted routes with waypoints, camping spots, and highlights.
+                Achetez des itinéraires hors piste ou sur route avec des points de passage détaillés, de nombreux points d'intérêt et des articles de fond.
               </p>
             </div>
           </div>
@@ -91,10 +91,10 @@ function AppPageContent() {
           {/* CTA Section */}
           <div className="bg-blue-600 rounded-2xl shadow-xl p-12 text-center text-white">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Start Your Adventure Today
+              Commencez Votre Aventure Aujourd'hui
             </h2>
             <p className="text-xl mb-8 opacity-90">
-              Join thousands of overlanders exploring the world with Overland Map
+              Rejoignez des milliers de voyageurs en 4x4, van, moto, camion ou vélo qui explorent le monde avec Overland Map
             </p>
             <div className="flex justify-center">
               <AppStoreButtons size="large" layout="compact" />

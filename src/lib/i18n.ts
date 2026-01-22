@@ -4,7 +4,7 @@
 
 import { CountryData } from '../types'
 
-export type SupportedLanguage = 'en' | 'de' | 'es' | 'fr' | 'it' | 'ja' | 'nl' | 'ru' | 'zh'
+export type SupportedLanguage = 'en' | 'de' | 'es' | 'fr' | 'it' | 'nl' | 'ru'
 
 export interface LanguageInfo {
   code: SupportedLanguage
@@ -19,10 +19,8 @@ export const SUPPORTED_LANGUAGES: LanguageInfo[] = [
   { code: 'es', name: 'Spanish', nativeName: 'Español', flag: '🇪🇸' },
   { code: 'fr', name: 'French', nativeName: 'Français', flag: '🇫🇷' },
   { code: 'it', name: 'Italian', nativeName: 'Italiano', flag: '🇮🇹' },
-  { code: 'ja', name: 'Japanese', nativeName: '日本語', flag: '🇯🇵' },
   { code: 'nl', name: 'Dutch', nativeName: 'Nederlands', flag: '🇳🇱' },
-  { code: 'ru', name: 'Russian', nativeName: 'Русский', flag: '🇷🇺' },
-  { code: 'zh', name: 'Chinese', nativeName: '中文', flag: '🇨🇳' }
+  { code: 'ru', name: 'Russian', nativeName: 'Русский', flag: '🇷🇺' }
 ]
 
 export const DEFAULT_LANGUAGE: SupportedLanguage = 'en'
@@ -142,12 +140,6 @@ const BORDER_STATUS_TRANSLATIONS: Record<SupportedLanguage, Record<string, strin
     'open': 'Aperto',
     'unknown': 'Sconosciuto'
   },
-  ja: {
-    'closed': '閉鎖',
-    'dangerous': '危険',
-    'open': 'オープン',
-    'unknown': '不明'
-  },
   ru: {
     'closed': 'Закрыто',
     'dangerous': 'Опасно',
@@ -159,12 +151,6 @@ const BORDER_STATUS_TRANSLATIONS: Record<SupportedLanguage, Record<string, strin
     'dangerous': 'Gevaarlijk',
     'open': 'Open',
     'unknown': 'Onbekend'
-  },
-  zh: {
-    'closed': '关闭',
-    'dangerous': '危险',
-    'open': '开放',
-    'unknown': '未知'
   }
 }
 
@@ -207,13 +193,6 @@ const OVERLANDING_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>
     'open': 'Aperto',
     'unknown': 'Sconosciuto'
   },
-  ja: {
-    'forbidden': '禁止',
-    'war_dangerous': '危険',
-    'restricted': 'アクセス制限',
-    'open': 'オープン',
-    'unknown': '不明'
-  },
   nl: {
     'forbidden': 'Verboden',
     'war_dangerous': 'Onveilig',
@@ -227,13 +206,6 @@ const OVERLANDING_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>
     'restricted': 'Ограниченный доступ',
     'open': 'Открыто',
     'unknown': 'Неизвестно'
-  },
-  zh: {
-    'forbidden': '禁止',
-    'war_dangerous': '不安全',
-    'restricted': '限制访问',
-    'open': '开放',
-    'unknown': '未知'
   }
 }
 
@@ -320,12 +292,6 @@ const CARNET_STATUS_TRANSLATIONS: Record<SupportedLanguage, Record<string, strin
     'required_some': 'Richiesto in alcune situazioni',
     'required': 'Obbligatorio'
   },
-  ja: {
-    'access_forbidden': 'アクセス禁止',
-    'not_required': '不要',
-    'required_some': '一部の状況で必要',
-    'required': '必須'
-  },
   nl: {
     'access_forbidden': 'Toegang verboden',
     'not_required': 'Niet vereist',
@@ -337,12 +303,6 @@ const CARNET_STATUS_TRANSLATIONS: Record<SupportedLanguage, Record<string, strin
     'not_required': 'Не требуется',
     'required_some': 'Требуется в некоторых ситуациях',
     'required': 'Обязательно'
-  },
-  zh: {
-    'access_forbidden': '禁止进入',
-    'not_required': '不需要',
-    'required_some': '某些情况下需要',
-    'required': '强制性'
   }
 }
 
@@ -459,14 +419,6 @@ const VISA_STATUS_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>
     'visa_difficult': 'Il visto è difficile da ottenere',
     'unknown': 'Sconosciuto'
   },
-  ja: {
-    'no_visa_required': 'ビザ不要',
-    'visa_on_arrival': '国境でビザ取得可能（VOA）',
-    'evisa_online': 'オンラインでe-ビザ取得可能',
-    'visa_at_embassy': '大使館でビザを取得できます',
-    'visa_difficult': 'ビザの取得が困難',
-    'unknown': '不明'
-  },
   nl: {
     'no_visa_required': 'Geen visum vereist',
     'visa_on_arrival': 'Visum aan de grens (VOA)',
@@ -482,14 +434,6 @@ const VISA_STATUS_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>
     'visa_at_embassy': 'Визу можно получить в посольстве',
     'visa_difficult': 'Визу сложно получить',
     'unknown': 'Неизвестно'
-  },
-  zh: {
-    'no_visa_required': '无需签证',
-    'visa_on_arrival': '落地签（VOA）',
-    'evisa_online': '可在线申请电子签证',
-    'visa_at_embassy': '可在大使馆获得签证',
-    'visa_difficult': '签证难以获得',
-    'unknown': '未知'
   }
 }
 
@@ -1105,120 +1049,6 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'help_itineraries_title': 'Itinerari',
     'help_itineraries_text': 'Una selezione di itinerari dettagliati specificamente creati per overlanders sono disponibili per testare e scaricare nell\'app mobile (acquisto opzionale).'
   },
-  ja: {
-    'overlanding': 'オーバーランディング',
-    'carnet': 'カルネ',
-    'overlanding_status': 'オーバーランディング状況',
-    'carnet_requirements': 'カルネ要件',
-    'border_status': '国境状況',
-    'crossing_between': '{country1}と{country2}の間の国境',
-    'open': '開放',
-    'restricted_access': 'アクセス制限',
-    'war_dangerous': '危険',
-    'forbidden': '禁止',
-    'unknown': '不明',
-    'not_required': '不要',
-    'required_in_some_situations': '一部の状況で必要',
-    'mandatory': '必須',
-    'access_forbidden': 'アクセス禁止',
-    'restricted': '制限',
-    'closed': '閉鎖',
-    'loading_map': 'マップを読み込み中...',
-    'visa': 'ビザ',
-    'vehicle': '車両',
-    'driving': '運転',
-    'left': '左',
-    'right': '右',
-    'zoom_to_location': '場所にズーム',
-    'borders': '国境',
-    'border_posts': '国境検問所',
-    'adjacent_countries': '隣接国',
-    'countries': '国',
-    'bilateral': '二国間',
-    'restrictions_apply': '制限が適用されます',
-    'temporary_closed': '一時閉鎖',
-    'zones': 'ゾーン',
-    'restricted_areas': '制限区域',
-    'zone_closed': '閉鎖',
-    'zone_guide_escort': 'ガイド/エスコート必要',
-    'zone_permit': '許可証必要',
-    'zone_restrictions': '制限が適用されます',
-    'disclaimer_title': '旅行免責事項とプライバシー通知',
-    'disclaimer_message': 'このウェブサイトで提供される情報は、一般的なガイダンスのみを目的としています。コンテンツが正確で完全かつ最新であることを確保するためにあらゆる努力をしていますが、その正確性や現在の有効性を保証することはできません。旅行条件、ビザ要件、国境規制は予告なくいつでも変更される可能性があります。すべての情報を公式ソースで確認し、旅行の決定を行う際には自分の判断を行使する責任があります。すべての旅行は自己責任で行われます。',
-    'gdpr_title': 'プライバシーとデータ保護',
-    'gdpr_message': '私たちは、あなたの体験を向上させ、設定（言語設定など）を記憶するために、必須のクッキーとローカルストレージを使用しています。個人データは収集せず、トラッキングクッキーは使用していません。このサイトを継続して使用することで、必須のクッキーとローカルストレージの使用に同意したものとみなされます。',
-    'disclaimer_accept': '同意して続行',
-    'track_pack': 'トラックパック',
-    'itinerary_app_promotion': '詳細情報、旅程の詳細なステップをダウンロードして探索するには、モバイルアプリをダウンロードしてください',
-    'border_post_app_promotion': 'この国境検問所の状況について議論したり、通過について説明したりするには、モバイルアプリを開いてアカウントを作成してください',
-    'country_app_promotion': 'モバイルアプリでビザと車両の要件について議論する',
-    'app_store': 'App Store',
-    'play_store': 'Play Store',
-    'nav_map': 'マップ',
-    'nav_about': 'について',
-    'nav_contact': 'お問い合わせ',
-    'nav_app': 'アプリ',
-    'nav_faq': 'よくある質問',
-    'nav_support': 'サポート',
-    'nav_menu': 'メニュー',
-    'nav_close_menu': 'メニューを閉じる',
-    'length_unknown': '長さ不明',
-    'steps': 'ステップ',
-    'days': '日',
-    'climate': '気候',
-    'itineraries': '旅程',
-    'description': '説明',
-    'highlights': 'ハイライト',
-    'monthly_max_temperature': '月間最高気温',
-    'monthly_precipitation': '月間降水量',
-    'temperature': '気温',
-    'precipitation': '降水量',
-    'status_explanations': 'ステータス説明',
-    'requirements_explanations': '要件説明',
-    'jan': '1月',
-    'feb': '2月',
-    'mar': '3月',
-    'apr': '4月',
-    'may': '5月',
-    'jun': '6月',
-    'jul': '7月',
-    'aug': '8月',
-    'sep': '9月',
-    'oct': '10月',
-    'nov': '11月',
-    'dec': '12月',
-    'general': '一般',
-    'capital': '首都',
-    'currency': '通貨',
-    'comment': 'コメント',
-    'visa_comment': 'ビザコメント',
-    'visa_url': 'ビザURL',
-    'official_website': '公式ウェブサイト',
-    'carnet_comment': 'カルネコメント',
-    'tip': 'ヒント',
-    'tip_label': 'TIP（一時輸入許可証）',
-    'tip_comment': 'ヒントコメント',
-    'stay_duration': '滞在期間',
-    'maximum_stay': '最大滞在期間',
-    'insurance': '保険',
-    'insurance_comment': '保険コメント',
-    'insurance_url': '保険URL',
-    'insurance_system': '保険システム',
-    'no_borders': '利用可能な国境がありません',
-    'data_coming_soon': 'データは近日公開予定です。後でまたお越しください...',
-    'onboarding_tooltip_title': '異なる地図レイヤーを探索',
-    'onboarding_tooltip_message': '上のボタンをタップして、異なる地図レイヤーを切り替えます：オーバーランドの利便性、カルネ要件、気候、旅程。',
-    'onboarding_tooltip_got_it': 'わかりました！',
-    'help_button_title': 'レイヤー情報',
-    'help_overlanding_title': 'オーバーランディングの利便性',
-    'help_overlanding_text': '各国をオーバーランダーとして訪問することがどれだけ簡単かを示します。緑は通常のアクセス（簡単）を示します - 適切なビザと標準的な車両書類のみが必要です。黒は、自動車で国を訪問することが（ほぼ）不可能であることを意味しますが、徒歩や自転車では可能かもしれません。',
-    'help_carnet_title': 'カルネ要件',
-    'help_carnet_text': 'どの国がカルネ・ド・パッサージュ・アン・ドゥアーヌを必要とするかを示します。これは、地元の自動車クラブが提供する文書で、大きな返金可能な保証金と引き換えに、輸入税を支払わずに国に入国できます。これは現地の実情を表しており、「公式」ウェブサイトが述べていることとは異なります。それらはしばしば古い情報を含んでいます。モバイルアプリを使用してログインし、現在の状況について議論してください。それが変更されると、最終的にここに反映されます。',
-    'help_climate_title': '気候データ',
-    'help_climate_text': '過去50年間の平均月間最高気温と降水量を表示します。これにより、世界のさまざまな地域で旅行に最適な季節がわかります。',
-    'help_itineraries_title': '旅程',
-    'help_itineraries_text': 'オーバーランダー向けに特別に作成された詳細な旅程の選択は、モバイルアプリでテストおよびダウンロードできます（購入はオプション）。'
-  },
   nl: {
     'overlanding': 'Overlanding',
     'carnet': 'Carnet',
@@ -1446,120 +1276,6 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'help_climate_text': 'Отображает месячные максимальные температуры и осадки, усредненные за последние 50 лет. Это дает вам представление о том, какой сезон лучше всего подходит для путешествий в разных частях мира.',
     'help_itineraries_title': 'Маршруты',
     'help_itineraries_text': 'Подборка подробных маршрутов, специально созданных для оверлендеров, доступна для тестирования и загрузки в мобильном приложении (покупка необязательна).'
-  },
-  zh: {
-    'overlanding': '越野旅行',
-    'carnet': '通行证',
-    'overlanding_status': '越野旅行状态',
-    'carnet_requirements': '通行证要求',
-    'border_status': '边境状态',
-    'crossing_between': '{country1}和{country2}之间的过境点',
-    'open': '开放',
-    'restricted_access': '限制访问',
-    'war_dangerous': '不安全',
-    'forbidden': '禁止',
-    'unknown': '未知',
-    'not_required': '不需要',
-    'required_in_some_situations': '某些情况下需要',
-    'mandatory': '强制性',
-    'access_forbidden': '禁止访问',
-    'restricted': '受限',
-    'closed': '关闭',
-    'loading_map': '正在加载地图...',
-    'visa': '签证',
-    'vehicle': '车辆',
-    'driving': '驾驶',
-    'left': '左侧',
-    'right': '右侧',
-    'zoom_to_location': '缩放到位置',
-    'borders': '边界',
-    'border_posts': '边境哨所',
-    'adjacent_countries': '邻国',
-    'countries': '国家',
-    'bilateral': '双边',
-    'restrictions_apply': '适用限制',
-    'temporary_closed': '暂时关闭',
-    'zones': '区域',
-    'restricted_areas': '限制区域',
-    'zone_closed': '关闭',
-    'zone_guide_escort': '需要向导/护送',
-    'zone_permit': '需要许可证',
-    'zone_restrictions': '适用限制',
-    'disclaimer_title': '旅行免责声明和隐私声明',
-    'disclaimer_message': '本网站提供的信息仅供一般指导。虽然我们尽一切努力确保内容准确、完整和最新，但我们不能保证其正确性或当前有效性。旅行条件、签证要求和边境法规可能随时更改，恕不另行通知。您有责任通过官方渠道核实所有信息，并在做出旅行决定时运用自己的判断。所有旅行均由您自担风险。',
-    'gdpr_title': '隐私和数据保护',
-    'gdpr_message': '我们使用必要的cookie和本地存储来改善您的体验并记住您的偏好（如语言设置）。我们不收集个人数据，也不使用跟踪cookie。继续使用本网站即表示您同意我们使用必要的cookie和本地存储。',
-    'disclaimer_accept': '接受并继续',
-    'track_pack': '路线包',
-    'itinerary_app_promotion': '如需更多信息，下载并探索行程的详细步骤，请下载移动应用',
-    'border_post_app_promotion': '要讨论此边境哨所的状态或描述过境情况，请打开移动应用并创建账户',
-    'country_app_promotion': '在移动应用中讨论签证和车辆要求',
-    'app_store': 'App Store',
-    'play_store': 'Play Store',
-    'nav_map': '地图',
-    'nav_about': '关于',
-    'nav_contact': '联系',
-    'nav_app': '应用',
-    'nav_faq': '常见问题',
-    'nav_support': '支持',
-    'nav_menu': '菜单',
-    'nav_close_menu': '关闭菜单',
-    'length_unknown': '长度未知',
-    'steps': '步骤',
-    'days': '天',
-    'climate': '气候',
-    'itineraries': '行程',
-    'description': '描述',
-    'highlights': '亮点',
-    'monthly_max_temperature': '月最高气温',
-    'monthly_precipitation': '月降水量',
-    'temperature': '气温',
-    'precipitation': '降水量',
-    'status_explanations': '状态说明',
-    'requirements_explanations': '要求说明',
-    'jan': '1月',
-    'feb': '2月',
-    'mar': '3月',
-    'apr': '4月',
-    'may': '5月',
-    'jun': '6月',
-    'jul': '7月',
-    'aug': '8月',
-    'sep': '9月',
-    'oct': '10月',
-    'nov': '11月',
-    'dec': '12月',
-    'general': '一般',
-    'capital': '首都',
-    'currency': '货币',
-    'comment': '评论',
-    'visa_comment': '签证评论',
-    'visa_url': '签证URL',
-    'official_website': '官方网站',
-    'carnet_comment': '通行证评论',
-    'tip': '提示',
-    'tip_label': 'TIP（临时进口许可证）',
-    'tip_comment': '提示评论',
-    'stay_duration': '停留时间',
-    'maximum_stay': '最长停留时间',
-    'insurance': '保险',
-    'insurance_comment': '保险评论',
-    'insurance_url': '保险URL',
-    'insurance_system': '保险系统',
-    'no_borders': '没有可用的边界',
-    'data_coming_soon': '数据即将推出，请稍后再来...',
-    'onboarding_tooltip_title': '探索不同的地图图层',
-    'onboarding_tooltip_message': '点击上方按钮在不同的地图图层之间切换：越野友好度、通行证要求、气候和行程。',
-    'onboarding_tooltip_got_it': '明白了！',
-    'help_button_title': '图层信息',
-    'help_overlanding_title': '越野旅行友好度',
-    'help_overlanding_text': '显示作为越野旅行者访问每个国家的难易程度。绿色表示正常访问（容易）- 您只需要适当的签证和标准车辆文件。黑色表示用机动车访问该国（几乎）不可能，尽管步行或骑自行车可能可行。',
-    'help_carnet_title': '通行证要求',
-    'help_carnet_text': '显示哪些国家需要Carnet de Passage en Douane（海关通行证），这是由您当地的汽车俱乐部提供的文件，通过支付大额可退还押金，允许您在不支付进口税的情况下进入该国。这代表了实地情况，与"官方"网站所说的不同，因为它们通常包含过时的信息。使用移动应用程序登录并讨论当前情况，当情况发生变化时，最终会在这里反映出来。',
-    'help_climate_title': '气候数据',
-    'help_climate_text': '显示过去50年的月最高温度和降水量平均值。这为您提供了世界不同地区最适合旅行的季节指示。',
-    'help_itineraries_title': '行程',
-    'help_itineraries_text': '专为越野旅行者精心设计的详细行程可在移动应用程序中测试和下载（购买可选）。'
   }
 }
 
@@ -1732,13 +1448,6 @@ const INSURANCE_SCHEME_TRANSLATIONS: Record<SupportedLanguage, Record<string, st
     'soat': 'SOAT',
     'mercosur': 'Mercosur'
   },
-  ja: {
-    'brown_card': 'Brown card',
-    'yellow_card': 'Yellow card COMESA',
-    'green_card': 'グリーンカード',
-    'soat': 'SOAT',
-    'mercosur': 'Mercosur'
-  },
   nl: {
     'brown_card': 'Brown card',
     'yellow_card': 'Yellow card COMESA',
@@ -1750,13 +1459,6 @@ const INSURANCE_SCHEME_TRANSLATIONS: Record<SupportedLanguage, Record<string, st
     'brown_card': 'Brown card',
     'yellow_card': 'Yellow card COMESA',
     'green_card': 'Зелёная карта',
-    'soat': 'SOAT',
-    'mercosur': 'Mercosur'
-  },
-  zh: {
-    'brown_card': 'Brown card',
-    'yellow_card': 'Yellow card COMESA',
-    'green_card': '绿卡',
     'soat': 'SOAT',
     'mercosur': 'Mercosur'
   }
