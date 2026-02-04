@@ -161,6 +161,11 @@
       "ru": "Военная зона, поездки в Мускох и Каобаль-Гали запрещены."
     }
   },
+  "in-pk-siachen": {
+    "id": "in-pk-siachen",
+    "type": 0,
+    "name": "Siachen"
+  },
   "in-sikkim": {
     "id": "in-sikkim",
     "type": 2,

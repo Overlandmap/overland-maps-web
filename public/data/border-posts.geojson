@@ -22,6 +22,11 @@
         "createdat": {
           "_seconds": 1764172688,
           "_nanoseconds": 701000000
+        },
+        "geohash": "v1juywpb",
+        "updatedat": {
+          "_seconds": 1769107905,
+          "_nanoseconds": 309000000
         }
       }
     },
@@ -44,10 +49,6 @@
         },
         "name": "Allenby Bridge",
         "comment": "Only pedestrians (and bicycles) are allowed to cross, no motor vehicles.\nIf you'd like to visit Israel from Jordan, this is worth knowing:\nThis border is controlled by the Israelis, but they stamp you on a separate piece of paper, and on the Syrian side they don't stamp you out, so if you come back to Syria using this same border post, there will be no trace of your visit to Israel in your passport (which is important for some countries such as Iran or Sudan).\nNote that Jordanian visas are not available at this border: if you're crossing from Israel, you'll need to have purchased an e-visa beforehand.",
-        "updatedat": {
-          "_seconds": 1764752326,
-          "_nanoseconds": 898000000
-        },
         "comment_translations": {
           "en": "Only pedestrians (and bicycles) are allowed to cross, no motor vehicles.\nIf you'd like to visit Israel from Jordan, this is worth knowing:\nThis border is controlled by the Israelis, but they stamp you on a separate piece of paper, and on the Syrian side they don't stamp you out, so if you come back to Syria using this same border post, there will be no trace of your visit to Israel in your passport (which is important for some countries such as Iran or Sudan).\nNote that Jordanian visas are not available at this border: if you're crossing from Israel, you'll need to have purchased an e-visa beforehand.",
           "fr": "Seuls les piétons (et les cyclistes) sont autorisés à franchir la frontière ; aucun véhicule motorisé n'est autorisé.\n\nSi vous souhaitez vous rendre en Israël depuis la Jordanie, voici quelques informations utiles :\n\nCette frontière est contrôlée par les Israéliens, mais un tampon est apposé sur un document séparé. Du côté syrien, aucun tampon n'est apposé sur votre passeport. Ainsi, si vous retournez en Syrie par ce même poste frontière, votre passage en Israël ne fera l'objet d'aucune mention dans votre passeport (ce qui est important pour certains pays comme l'Iran ou le Soudan).\n\nVeuillez noter que les visas jordaniens ne sont pas délivrés à cette frontière : si vous traversez la frontière depuis Israël, vous devez avoir obtenu un visa électronique au préalable.",
@@ -58,6 +59,11 @@
           "nl": "Alleen voetgangers (en fietsers) mogen de grens oversteken, geen motorvoertuigen.\n\nAls u vanuit Jordanië naar Israël wilt reizen, is het goed om te weten:\nDeze grens wordt gecontroleerd door de Israëliërs, maar ze stempelen u op een apart document. Aan de Syrische kant stempelen ze u niet uit, dus als u via dezelfde grenspost terugkeert naar Syrië, zal er geen spoor van uw bezoek aan Israël in uw paspoort staan (wat belangrijk is voor sommige landen zoals Iran of Soedan).\n\nLet op: Jordaanse visa zijn niet verkrijgbaar aan deze grens: als u vanuit Israël reist, moet u vooraf een e-visum hebben aangevraagd.",
           "pl": "Przejście przez granicę jest dozwolone tylko dla pieszych (i rowerzystów), pojazdy mechaniczne są zabronione.\nJeśli chcesz odwiedzić Izrael z Jordanii, warto wiedzieć:\nGranica ta jest kontrolowana przez Izraelczyków, ale pieczątka jest umieszczana na osobnej kartce papieru, a po stronie syryjskiej nie jest ona wydawana, więc jeśli wrócisz do Syrii przez ten sam punkt graniczny, w Twoim paszporcie nie będzie śladu Twojej wizyty w Izraelu (co jest ważne w przypadku niektórych krajów, takich jak Iran czy Sudan).\nPamiętaj, że wizy jordańskie nie są dostępne na tej granicy: jeśli przekraczasz granicę z Izraela, musisz wcześniej wykupić wizę elektroniczną.",
           "ru": "Пересечение границы разрешено только пешеходам (и велосипедистам), автомобили запрещены.\nЕсли вы хотите посетить Израиль из Иордании, стоит знать следующее:\nЭта граница контролируется Израилем, но они ставят штамп на отдельном листе бумаги, а на сирийской стороне штампа о выезде не ставят, поэтому, если вы вернетесь в Сирию через этот же пограничный пункт, в вашем паспорте не будет никаких следов вашего визита в Израиль (что важно для некоторых стран, таких как Иран или Судан).\nОбратите внимание, что иорданские визы на этой границе не выдаются: если вы пересекаете границу из Израиля, вам необходимо заранее приобрести электронную визу."
+        },
+        "geohash": "sv9m2f2n",
+        "updatedat": {
+          "_seconds": 1769107905,
+          "_nanoseconds": 363000000
         }
       }
     },
@@ -78,7 +84,12 @@
           "_latitude": 26.4026803,
           "_longitude": 87.2657375
         },
-        "name": "Jogbani/Biratnagar"
+        "name": "Jogbani/Biratnagar",
+        "geohash": "tuwn1y2y",
+        "updatedat": {
+          "_seconds": 1769107905,
+          "_nanoseconds": 413000000
+        }
       }
     },
     {
@@ -103,9 +114,10 @@
           "_seconds": 1764171462,
           "_nanoseconds": 100000000
         },
+        "geohash": "u9b14p3d",
         "updatedat": {
-          "_seconds": 1764171462,
-          "_nanoseconds": 100000000
+          "_seconds": 1769107905,
+          "_nanoseconds": 452000000
         }
       }
     },
@@ -126,6 +138,11 @@
         "location": {
           "_latitude": 36.7471011,
           "_longitude": 71.5775203
+        },
+        "geohash": "twdchc95",
+        "updatedat": {
+          "_seconds": 1769107905,
+          "_nanoseconds": 470000000
         }
       }
     },
@@ -158,6 +175,11 @@
           "nl": "Een visum bij aankomst in Laos is beschikbaar en een e-visum wordt geaccepteerd.",
           "pl": "Dostępna jest usługa Lao VOA i akceptowane są wizy elektroniczne.",
           "ru": "Визы в Лаос при получении принимаются, также принимаются электронные визы."
+        },
+        "geohash": "w7b29bfb",
+        "updatedat": {
+          "_seconds": 1769107905,
+          "_nanoseconds": 511000000
         }
       }
     },
@@ -178,7 +200,12 @@
           "_latitude": 24.233134,
           "_longitude": 55.7696578
         },
-        "name": "Al Buraimi south"
+        "name": "Al Buraimi south",
+        "geohash": "thr9v5d0",
+        "updatedat": {
+          "_seconds": 1769107905,
+          "_nanoseconds": 552000000
+        }
       }
     },
     {
@@ -200,10 +227,6 @@
           "_longitude": 107.3737389
         },
         "comment": "Lao VOA not available and eVisa not accepted.\nVietnam eVisa not accepted.",
-        "updatedat": {
-          "_seconds": 1765195082,
-          "_nanoseconds": 157000000
-        },
         "comment_translations": {
           "en": "Lao VOA not available and eVisa not accepted.\nVietnam eVisa not accepted.",
           "fr": "Le visa à l'arrivée pour le Laos n'est pas disponible et le visa électronique n'est pas accepté.\n\nLe visa électronique pour le Vietnam n'est pas accepté.",
@@ -214,6 +237,11 @@
           "nl": "Visum bij aankomst in Laos niet beschikbaar en e-visum niet geaccepteerd.\n\ne-visum voor Vietnam niet geaccepteerd.",
           "pl": "Laotańska VOA niedostępna, a e-wizy nie są akceptowane.\nWietnamska e-wiza nie jest akceptowana.",
           "ru": "Лаосская виза по прибытии недоступна, электронная виза не принимается.\nВьетнамская электронная виза не принимается."
+        },
+        "geohash": "w6u27m5p",
+        "updatedat": {
+          "_seconds": 1769107905,
+          "_nanoseconds": 569000000
         }
       }
     },
@@ -246,6 +274,11 @@
           "nl": "Je kunt hier te voet of met de fiets oversteken, maar motorvoertuigen zijn verboden.",
           "pl": "Można tędy przejść pieszo lub rowerem, ale ruch pojazdów mechanicznych jest zabroniony.",
           "ru": "Здесь можно перейти дорогу пешком или на велосипеде, но движение автотранспорта запрещено."
+        },
+        "geohash": "tx73w0tk",
+        "updatedat": {
+          "_seconds": 1769107905,
+          "_nanoseconds": 602000000
         }
       }
     },
@@ -266,6 +299,11 @@
         "location": {
           "_latitude": 14.435037,
           "_longitude": 103.7001715
+        },
+        "geohash": "w69dpgb4",
+        "updatedat": {
+          "_seconds": 1769107905,
+          "_nanoseconds": 648000000
         }
       }
     },
@@ -286,6 +324,11 @@
         "location": {
           "_latitude": 4.7404993,
           "_longitude": 114.8135744
+        },
+        "geohash": "w8cduwux",
+        "updatedat": {
+          "_seconds": 1769107905,
+          "_nanoseconds": 685000000
         }
       }
     },
@@ -318,6 +361,11 @@
           "nl": "Let op: de VAE vragen 125 AED voor het afstempelen van het carnet; alle andere grensposten tussen Oman en de VAE zijn gratis.",
           "pl": "Uwaga: ZEA żądają opłaty 125 AED za podstemplowanie karnetu, na wszystkich innych przejściach granicznych między Omanem i ZEA opłata jest bezpłatna.",
           "ru": "Примечание: ОАЭ требуют 125 дирхамов ОАЭ за проставление штампа в карнете, на всех остальных пограничных пунктах между Оманом и ОАЭ вход бесплатный."
+        },
+        "geohash": "thrvnuhf",
+        "updatedat": {
+          "_seconds": 1769107905,
+          "_nanoseconds": 703000000
         }
       }
     },
@@ -338,6 +386,11 @@
         "location": {
           "_latitude": 30.9681395,
           "_longitude": 61.8212714
+        },
+        "geohash": "tmebnv8f",
+        "updatedat": {
+          "_seconds": 1769107905,
+          "_nanoseconds": 721000000
         }
       }
     },
@@ -358,6 +411,11 @@
         "location": {
           "_latitude": 5.8388222,
           "_longitude": 101.8946038
+        },
+        "geohash": "w303nwvm",
+        "updatedat": {
+          "_seconds": 1769107905,
+          "_nanoseconds": 755000000
         }
       }
     },
@@ -378,7 +436,12 @@
           "_latitude": 46.6811085,
           "_longitude": 82.7872368
         },
-        "name": "Baqti/Tacheng"
+        "name": "Baqti/Tacheng",
+        "geohash": "vb6cef5c",
+        "updatedat": {
+          "_seconds": 1769107905,
+          "_nanoseconds": 774000000
+        }
       }
     },
     {
@@ -398,7 +461,12 @@
           "_latitude": 42.2084978,
           "_longitude": 43.9893639
         },
-        "name": "Ergneti"
+        "name": "Ergneti",
+        "geohash": "szx215b4",
+        "updatedat": {
+          "_seconds": 1769107905,
+          "_nanoseconds": 791000000
+        }
       }
     },
     {
@@ -420,10 +488,6 @@
           "_longitude": 102.5498443
         },
         "comment": "Cambodian VOA available here (if border is open).",
-        "updatedat": {
-          "_seconds": 1765189108,
-          "_nanoseconds": 494000000
-        },
         "comment_translations": {
           "en": "Cambodian VOA available here (if border is open).",
           "fr": "Visa de voyage cambodgien disponible ici (si la frontière est ouverte).",
@@ -434,6 +498,11 @@
           "nl": "Cambodjaans visum bij aankomst is hier beschikbaar (indien de grens open is).",
           "pl": "Kambodżańska VOA dostępna tutaj (jeśli granica jest otwarta).",
           "ru": "Камбоджийская виза по прибытии доступна здесь (если граница открыта)."
+        },
+        "geohash": "w62vtwfx",
+        "updatedat": {
+          "_seconds": 1769107905,
+          "_nanoseconds": 827000000
         }
       }
     },
@@ -456,10 +525,6 @@
         },
         "name": "Taba",
         "comment": "The border is open to all, but the Sinai is a very sensitive area; you can go to Sharm el Sheikh and St Catherine monastery but that's about it.\nNote: motorbikes and 4x4 are forbidden in Sinai.",
-        "updatedat": {
-          "_seconds": 1764753368,
-          "_nanoseconds": 424000000
-        },
         "comment_translations": {
           "en": "The border is open to all, but the Sinai is a very sensitive area; you can go to Sharm el Sheikh and St Catherine monastery but that's about it.\nNote: motorbikes and 4x4 are forbidden in Sinai.",
           "fr": "La frontière est ouverte à tous, mais le Sinaï est une zone très sensible ; vous pouvez vous rendre à Charm el-Cheikh et au monastère Sainte-Catherine, mais c'est à peu près tout.\n\nRemarque : les motos et les 4x4 sont interdits dans le Sinaï.",
@@ -470,6 +535,11 @@
           "nl": "De grens is voor iedereen open, maar de Sinaï is een zeer gevoelig gebied; je kunt Sharm el Sheikh en het Sint-Catharinaklooster bezoeken, maar daar houdt het wel zo'n beetje op.\n\nLet op: motorfietsen en 4x4's zijn verboden in de Sinaï.",
           "pl": "Granica jest otwarta dla wszystkich, ale Synaj to bardzo wrażliwy obszar; można pojechać do Sharm el Sheikh i klasztoru św. Katarzyny, ale to tyle.\nUwaga: na Synaju obowiązuje zakaz jazdy motocyklami i samochodami terenowymi.",
           "ru": "Граница открыта для всех, но Синай — очень чувствительная зона; вы можете посетить Шарм-эль-Шейх и монастырь Святой Екатерины, но на этом, пожалуй, всё.\nПримечание: мотоциклы и внедорожники на Синае запрещены."
+        },
+        "geohash": "sv0zf0xm",
+        "updatedat": {
+          "_seconds": 1769107905,
+          "_nanoseconds": 849000000
         }
       }
     },
@@ -490,6 +560,11 @@
         "location": {
           "_latitude": 32.1603686,
           "_longitude": 60.8718371
+        },
+        "geohash": "tmeqcnte",
+        "updatedat": {
+          "_seconds": 1769107905,
+          "_nanoseconds": 886000000
         }
       }
     },
@@ -510,7 +585,12 @@
           "_latitude": 29.0658526,
           "_longitude": 46.6388619
         },
-        "name": "Salmi/Raqi"
+        "name": "Salmi/Raqi",
+        "geohash": "tj1jm732",
+        "updatedat": {
+          "_seconds": 1769107905,
+          "_nanoseconds": 906000000
+        }
       }
     },
     {
@@ -536,10 +616,6 @@
           "_nanoseconds": 418000000
         },
         "comment": "Russian eVisa valid.",
-        "updatedat": {
-          "_seconds": 1768482628,
-          "_nanoseconds": 951000000
-        },
         "comment_translations": {
           "en": "Russian eVisa valid.",
           "fr": "Visa électronique russe valide.",
@@ -550,6 +626,11 @@
           "nl": "Het Russische e-visum is geldig.",
           "pl": "Rosyjska e-wiza ważna.",
           "ru": "Российская электронная виза действительна."
+        },
+        "geohash": "ud5rzjyu",
+        "updatedat": {
+          "_seconds": 1769107905,
+          "_nanoseconds": 943000000
         }
       }
     },
@@ -570,7 +651,12 @@
           "_latitude": 24.2620696,
           "_longitude": 55.7669767
         },
-        "name": "Al Buraimi north"
+        "name": "Al Buraimi north",
+        "geohash": "thrdj0b2",
+        "updatedat": {
+          "_seconds": 1769107905,
+          "_nanoseconds": 978000000
+        }
       }
     },
     {
@@ -591,9 +677,10 @@
           "_longitude": 45.0682256
         },
         "name": "Tamarchin / Haji Omaran",
+        "geohash": "tn809d9x",
         "updatedat": {
-          "_seconds": 1767279622,
-          "_nanoseconds": 117000000
+          "_seconds": 1769107906,
+          "_nanoseconds": 16000000
         }
       }
     },
@@ -614,6 +701,11 @@
         "location": {
           "_latitude": 37.2376712,
           "_longitude": 67.4225795
+        },
+        "geohash": "tqxgy4zt",
+        "updatedat": {
+          "_seconds": 1769107906,
+          "_nanoseconds": 36000000
         }
       }
     },
@@ -634,7 +726,12 @@
           "_latitude": 37.1892876,
           "_longitude": 67.7971477
         },
-        "name": "Gulbakhor / Ayvanch"
+        "name": "Gulbakhor / Ayvanch",
+        "geohash": "tw85wf07",
+        "updatedat": {
+          "_seconds": 1769107906,
+          "_nanoseconds": 56000000
+        }
       }
     },
     {
@@ -654,6 +751,11 @@
         "location": {
           "_latitude": 34.7086542,
           "_longitude": 61.0035837
+        },
+        "geohash": "tq5mknt2",
+        "updatedat": {
+          "_seconds": 1769107906,
+          "_nanoseconds": 110000000
         }
       }
     },
@@ -675,9 +777,10 @@
           "_longitude": 36.2006898
         },
         "name": "Naseem/Jaber",
+        "geohash": "svc9pf08",
         "updatedat": {
-          "_seconds": 1764703142,
-          "_nanoseconds": 854000000
+          "_seconds": 1769107906,
+          "_nanoseconds": 147000000
         }
       }
     },
@@ -698,7 +801,12 @@
           "_latitude": 24.1263907,
           "_longitude": 51.5744166
         },
-        "name": "Al Batha-Ghuwaifat"
+        "name": "Al Batha-Ghuwaifat",
+        "geohash": "thk9m856",
+        "updatedat": {
+          "_seconds": 1769107906,
+          "_nanoseconds": 185000000
+        }
       }
     },
     {
@@ -718,6 +826,11 @@
         "location": {
           "_latitude": 40.5516953,
           "_longitude": 75.3939088
+        },
+        "geohash": "txjwewhn",
+        "updatedat": {
+          "_seconds": 1769107906,
+          "_nanoseconds": 204000000
         }
       }
     },
@@ -738,7 +851,12 @@
           "_latitude": 35.181072,
           "_longitude": 46.181048
         },
-        "name": "Shushami"
+        "name": "Shushami",
+        "geohash": "tn2b4us0",
+        "updatedat": {
+          "_seconds": 1769107906,
+          "_nanoseconds": 225000000
+        }
       }
     },
     {
@@ -770,6 +888,11 @@
           "nl": "Geeft toegang tot de enclave Nachitsjevan. Azerbeidzjan heeft zijn landsgrenzen sinds COVID gesloten.",
           "pl": "Umożliwia dostęp do enklawy Nakchiwan. Azerbejdżan zamknął swoje granice lądowe z powodu pandemii COVID.",
           "ru": "Предоставляет доступ к Накчиванскому анклаву. Азербайджан закрыл свои сухопутные границы после начала пандемии COVID-19."
+        },
+        "geohash": "szpce6y5",
+        "updatedat": {
+          "_seconds": 1769107906,
+          "_nanoseconds": 244000000
         }
       }
     },
@@ -802,6 +925,11 @@
           "nl": "Je hebt een Jemenitisch visum nodig om het land binnen te komen, dat normaal gesproken alleen wordt verstrekt aan toeristen die naar Socotra reizen.",
           "pl": "Aby przejechać przez Jemen, potrzebna jest wiza jemeńska, która jest zazwyczaj wydawana wyłącznie turystom udającym się do Soccotra.",
           "ru": "Для въезда в Йемен необходима виза, которая обычно выдается только туристам, направляющимся на Соккотру."
+        },
+        "geohash": "t4vyb6cs",
+        "updatedat": {
+          "_seconds": 1769107906,
+          "_nanoseconds": 278000000
         }
       }
     },
@@ -822,6 +950,11 @@
         "location": {
           "_latitude": 40.1964387,
           "_longitude": 69.3016832
+        },
+        "geohash": "tx1k8vxc",
+        "updatedat": {
+          "_seconds": 1769107906,
+          "_nanoseconds": 294000000
         }
       }
     },
@@ -846,6 +979,11 @@
         "createdat": {
           "_seconds": 1764172688,
           "_nanoseconds": 287000000
+        },
+        "geohash": "v9t65c75",
+        "updatedat": {
+          "_seconds": 1769107906,
+          "_nanoseconds": 314000000
         }
       }
     },
@@ -866,6 +1004,11 @@
         "location": {
           "_latitude": 37.4466069,
           "_longitude": 54.6195827
+        },
+        "geohash": "tnwv4buy",
+        "updatedat": {
+          "_seconds": 1769107906,
+          "_nanoseconds": 331000000
         }
       }
     },
@@ -886,7 +1029,12 @@
           "_latitude": 35.3097091,
           "_longitude": 71.5442007
         },
-        "name": "Arandu"
+        "name": "Arandu",
+        "geohash": "tw6bu5bv",
+        "updatedat": {
+          "_seconds": 1769107906,
+          "_nanoseconds": 350000000
+        }
       }
     },
     {
@@ -910,6 +1058,11 @@
         "createdat": {
           "_seconds": 1764172512,
           "_nanoseconds": 467000000
+        },
+        "geohash": "u3xv5kve",
+        "updatedat": {
+          "_seconds": 1769107906,
+          "_nanoseconds": 383000000
         }
       }
     },
@@ -932,10 +1085,6 @@
           "_longitude": 74.5731088
         },
         "name": "Wagah - Attari",
-        "updatedat": {
-          "_seconds": 1765207940,
-          "_nanoseconds": 473000000
-        },
         "comment_translations": {
           "en": "Single border crossing between Pakistan and India.\nIt's been closed since the 2025 air war between both countries.",
           "fr": "Point de passage frontalier unique entre le Pakistan et l'Inde.\n\nIl est fermé depuis les affrontements aériens de 2025 entre les deux pays.",
@@ -946,6 +1095,11 @@
           "nl": "De enige grensovergang tussen Pakistan en India.\n\nDeze is gesloten sinds de luchtoorlog tussen beide landen in 2025.",
           "pl": "Jedyne przejście graniczne między Pakistanem a Indiami.\nJest zamknięte od czasu wojny powietrznej między oboma krajami w 2025 roku.",
           "ru": "Единственный пограничный переход между Пакистаном и Индией.\nОн закрыт с момента окончания воздушной войны между двумя странами в 2025 году."
+        },
+        "geohash": "ttt5bcqq",
+        "updatedat": {
+          "_seconds": 1769107906,
+          "_nanoseconds": 417000000
         }
       }
     },
@@ -966,7 +1120,12 @@
           "_latitude": 50.5169932,
           "_longitude": 94.3327852
         },
-        "name": "Shara-Sur/Tes"
+        "name": "Shara-Sur/Tes",
+        "geohash": "y0gp6s74",
+        "updatedat": {
+          "_seconds": 1769107906,
+          "_nanoseconds": 455000000
+        }
       }
     },
     {
@@ -986,7 +1145,12 @@
           "_latitude": 49.6321486,
           "_longitude": 117.3749944
         },
-        "name": "Zabaikalsk/Manchuria"
+        "name": "Zabaikalsk/Manchuria",
+        "geohash": "y8g6qgmb",
+        "updatedat": {
+          "_seconds": 1769107906,
+          "_nanoseconds": 492000000
+        }
       }
     },
     {
@@ -1011,9 +1175,10 @@
           "_seconds": 1764171929,
           "_nanoseconds": 743000000
         },
+        "geohash": "uetqm4m1",
         "updatedat": {
-          "_seconds": 1764257551,
-          "_nanoseconds": 633000000
+          "_seconds": 1769107906,
+          "_nanoseconds": 526000000
         }
       }
     },
@@ -1034,7 +1199,12 @@
           "_latitude": 42.7706455,
           "_longitude": 130.4587124
         },
-        "name": "Kraskino/Hunchun"
+        "name": "Kraskino/Hunchun",
+        "geohash": "wzsg2djj",
+        "updatedat": {
+          "_seconds": 1769107906,
+          "_nanoseconds": 563000000
+        }
       }
     },
     {
@@ -1056,10 +1226,6 @@
         },
         "name": "Torkham",
         "comment": "The border has been closed since the skirmishes of 2025.",
-        "updatedat": {
-          "_seconds": 1764010152,
-          "_nanoseconds": 22000000
-        },
         "comment_translations": {
           "en": "The border has been closed since the skirmishes of 2025.",
           "fr": "La frontière est fermée depuis les escarmouches de 2025.",
@@ -1070,6 +1236,11 @@
           "nl": "De grens is sinds de schermutselingen van 2025 gesloten.",
           "pl": "Granica jest zamknięta od czasu potyczek w 2025 roku.",
           "ru": "Граница закрыта с момента столкновений 2025 года."
+        },
+        "geohash": "tw4d1g9m",
+        "updatedat": {
+          "_seconds": 1769107906,
+          "_nanoseconds": 582000000
         }
       }
     },
@@ -1090,7 +1261,12 @@
           "_latitude": 40.0835813,
           "_longitude": 69.5435915
         },
-        "name": "Kayragach"
+        "name": "Kayragach",
+        "geohash": "tx1kn8bp",
+        "updatedat": {
+          "_seconds": 1769107906,
+          "_nanoseconds": 618000000
+        }
       }
     },
     {
@@ -1110,6 +1286,11 @@
         "location": {
           "_latitude": 37.190923,
           "_longitude": 68.6047452
+        },
+        "geohash": "tw8g94kk",
+        "updatedat": {
+          "_seconds": 1769107906,
+          "_nanoseconds": 635000000
         }
       }
     },
@@ -1142,6 +1323,11 @@
           "nl": "Het Indonesische e-visum wordt niet geaccepteerd.",
           "pl": "Indonezyjska e-wiza nie jest akceptowana.",
           "ru": "Электронные визы Индонезии не принимаются."
+        },
+        "geohash": "qy2fnrmx",
+        "updatedat": {
+          "_seconds": 1769107906,
+          "_nanoseconds": 652000000
         }
       }
     },
@@ -1164,10 +1350,6 @@
           "_longitude": 40.0112018
         },
         "name": "Adler / Psou",
-        "updatedat": {
-          "_seconds": 1764167347,
-          "_nanoseconds": 691000000
-        },
         "comment_translations": {
           "en": "It feels like a normal border crossing. Coming from Russia, you need the proper visa (see country info).\nIf you enter Abkhazia here, you must also exit from here, crossing from Russia to Abkhazia to Georgia isn't permitted.",
           "fr": "Cela ressemble à un passage de frontière classique. En venant de Russie, vous avez besoin du visa approprié (voir les informations par pays).\n\nSi vous entrez en Abkhazie par ce point, vous devez également en sortir ; le passage de la Russie vers l'Abkhazie puis la Géorgie n'est pas autorisé.",
@@ -1178,6 +1360,11 @@
           "nl": "Het voelt als een normale grensovergang. Komend vanuit Rusland heb je het juiste visum nodig (zie landinformatie).\n\nAls je Abchazië hier binnenkomt, moet je het ook hier weer verlaten; het is niet toegestaan om van Rusland naar Abchazië en vervolgens naar Georgië te reizen.",
           "pl": "To jak normalne przekraczanie granicy. Jadąc z Rosji, potrzebujesz odpowiedniej wizy (zobacz informacje o kraju).\nJeśli wjeżdżasz tutaj do Abchazji, musisz również stąd wyjechać. Przejazd z Rosji do Abchazji i Gruzji nie jest dozwolony.",
           "ru": "Ощущения от прохождения границы обычные. При въезде из России необходима соответствующая виза (см. информацию о стране).\nЕсли вы въезжаете в Абхазию здесь, вы также должны выехать отсюда; пересечение границы из России в Абхазию и далее в Грузию запрещено."
+        },
+        "geohash": "szsqy7x6",
+        "updatedat": {
+          "_seconds": 1769107906,
+          "_nanoseconds": 670000000
         }
       }
     },
@@ -1200,10 +1387,6 @@
         },
         "name": "Tashanta/Tsagaannuur",
         "comment": "Russian eVisa is valid here.",
-        "updatedat": {
-          "_seconds": 1768482168,
-          "_nanoseconds": 763000000
-        },
         "comment_translations": {
           "en": "Russian eVisa is valid here.",
           "fr": "Le visa électronique russe est valable ici.",
@@ -1214,6 +1397,11 @@
           "nl": "Het Russische e-visum is hier geldig.",
           "pl": "Rosyjska e-wiza jest tutaj ważna.",
           "ru": "Здесь действительна российская электронная виза."
+        },
+        "geohash": "vbzd7m3d",
+        "updatedat": {
+          "_seconds": 1769107906,
+          "_nanoseconds": 689000000
         }
       }
     },
@@ -1234,7 +1422,12 @@
           "_latitude": 41.2291534,
           "_longitude": 44.8343471
         },
-        "name": "Bagratashen/Sadakhlo"
+        "name": "Bagratashen/Sadakhlo",
+        "geohash": "szrfs1x3",
+        "updatedat": {
+          "_seconds": 1769107906,
+          "_nanoseconds": 709000000
+        }
       }
     },
     {
@@ -1254,6 +1447,11 @@
         "location": {
           "_latitude": 1.3780939,
           "_longitude": 103.5990862
+        },
+        "geohash": "w21xv6ye",
+        "updatedat": {
+          "_seconds": 1769107906,
+          "_nanoseconds": 746000000
         }
       }
     },
@@ -1274,6 +1472,11 @@
         "location": {
           "_latitude": 6.0211525,
           "_longitude": 101.9762501
+        },
+        "geohash": "w30d280g",
+        "updatedat": {
+          "_seconds": 1769107906,
+          "_nanoseconds": 784000000
         }
       }
     },
@@ -1294,6 +1497,11 @@
         "location": {
           "_latitude": 40.57256,
           "_longitude": 72.76007
+        },
+        "geohash": "tx5wzdn2",
+        "updatedat": {
+          "_seconds": 1769107906,
+          "_nanoseconds": 802000000
         }
       }
     },
@@ -1314,6 +1522,11 @@
         "location": {
           "_latitude": 0.9879238,
           "_longitude": 110.3529132
+        },
+        "geohash": "w2nmx5ue",
+        "updatedat": {
+          "_seconds": 1769107906,
+          "_nanoseconds": 821000000
         }
       }
     },
@@ -1334,7 +1547,12 @@
           "_latitude": 48.092958,
           "_longitude": 88.9424913
         },
-        "name": "Dayan/Hunshanjin"
+        "name": "Dayan/Hunshanjin",
+        "geohash": "vbx1xgjc",
+        "updatedat": {
+          "_seconds": 1769107906,
+          "_nanoseconds": 856000000
+        }
       }
     },
     {
@@ -1359,9 +1577,10 @@
           "_seconds": 1764171929,
           "_nanoseconds": 422000000
         },
+        "geohash": "udu69ujj",
         "updatedat": {
-          "_seconds": 1764257568,
-          "_nanoseconds": 38000000
+          "_seconds": 1769107906,
+          "_nanoseconds": 873000000
         }
       }
     },
@@ -1382,6 +1601,11 @@
         "location": {
           "_latitude": 38.4538667,
           "_longitude": 70.8275104
+        },
+        "geohash": "twf6g8r4",
+        "updatedat": {
+          "_seconds": 1769107906,
+          "_nanoseconds": 910000000
         }
       }
     },
@@ -1403,9 +1627,10 @@
           "_longitude": 106.7113061
         },
         "name": "Huu Nghi/Friendship Gate",
+        "geohash": "w7gvh22u",
         "updatedat": {
-          "_seconds": 1765193861,
-          "_nanoseconds": 426000000
+          "_seconds": 1769107906,
+          "_nanoseconds": 949000000
         }
       }
     },
@@ -1426,7 +1651,12 @@
           "_latitude": 46.7233637,
           "_longitude": 134.0232183
         },
-        "name": "Pokrovka/Zhaohe"
+        "name": "Pokrovka/Zhaohe",
+        "geohash": "ybr3cc8x",
+        "updatedat": {
+          "_seconds": 1769107906,
+          "_nanoseconds": 985000000
+        }
       }
     },
     {
@@ -1446,6 +1676,11 @@
         "location": {
           "_latitude": 16.6016708,
           "_longitude": 104.72631
+        },
+        "geohash": "w6fqrn5r",
+        "updatedat": {
+          "_seconds": 1769107907,
+          "_nanoseconds": 7000000
         }
       }
     },
@@ -1466,6 +1701,11 @@
         "location": {
           "_latitude": 31.8537069,
           "_longitude": 47.8021389
+        },
+        "geohash": "tj9vpyb3",
+        "updatedat": {
+          "_seconds": 1769107907,
+          "_nanoseconds": 47000000
         }
       }
     },
@@ -1486,7 +1726,12 @@
           "_latitude": 24.0212654,
           "_longitude": 55.8473625
         },
-        "name": "Mazyad"
+        "name": "Mazyad",
+        "geohash": "thr8wufy",
+        "updatedat": {
+          "_seconds": 1769107907,
+          "_nanoseconds": 65000000
+        }
       }
     },
     {
@@ -1506,6 +1751,11 @@
         "location": {
           "_latitude": 35.2598399,
           "_longitude": 62.2829198
+        },
+        "geohash": "tqk296c5",
+        "updatedat": {
+          "_seconds": 1769107907,
+          "_nanoseconds": 84000000
         }
       }
     },
@@ -1526,6 +1776,11 @@
         "location": {
           "_latitude": 40.6087966,
           "_longitude": 68.4170431
+        },
+        "geohash": "tx0xhbeg",
+        "updatedat": {
+          "_seconds": 1769107907,
+          "_nanoseconds": 130000000
         }
       }
     },
@@ -1546,7 +1801,12 @@
           "_latitude": 20.4436803,
           "_longitude": 99.8807897
         },
-        "name": "Mae Sai/Tachilek"
+        "name": "Mae Sai/Tachilek",
+        "geohash": "w5xh2cdv",
+        "updatedat": {
+          "_seconds": 1769107907,
+          "_nanoseconds": 163000000
+        }
       }
     },
     {
@@ -1570,6 +1830,11 @@
         "createdat": {
           "_seconds": 1764172689,
           "_nanoseconds": 598000000
+        },
+        "geohash": "v3eg4rdd",
+        "updatedat": {
+          "_seconds": 1769107907,
+          "_nanoseconds": 182000000
         }
       }
     },
@@ -1590,6 +1855,11 @@
         "location": {
           "_latitude": 42.8578666,
           "_longitude": 75.2853287
+        },
+        "geohash": "txtec4j1",
+        "updatedat": {
+          "_seconds": 1769107907,
+          "_nanoseconds": 218000000
         }
       }
     },
@@ -1610,6 +1880,11 @@
         "location": {
           "_latitude": 16.7254183,
           "_longitude": 98.4949374
+        },
+        "geohash": "w4yp1kcb",
+        "updatedat": {
+          "_seconds": 1769107907,
+          "_nanoseconds": 237000000
         }
       }
     },
@@ -1630,6 +1905,11 @@
         "location": {
           "_latitude": 6.5194489,
           "_longitude": 100.4190222
+        },
+        "geohash": "w1pmj4ff",
+        "updatedat": {
+          "_seconds": 1769107907,
+          "_nanoseconds": 275000000
         }
       }
     },
@@ -1650,6 +1930,11 @@
         "location": {
           "_latitude": 5.7479521,
           "_longitude": 101.030565
+        },
+        "geohash": "w1pben2h",
+        "updatedat": {
+          "_seconds": 1769107907,
+          "_nanoseconds": 311000000
         }
       }
     },
@@ -1682,6 +1967,11 @@
           "nl": "Aan de Iraakse kant kom je in Koerdistan aan. Een visum bij aankomst is niet mogelijk; je moet vooraf een e-visum voor (federaal) Irak hebben aangevraagd.",
           "pl": "Po stronie irackiej przylatujesz do Kurdystanu. Wiza po przylocie nie jest możliwa, musisz wcześniej wykupić wizę elektroniczną do (federalnego) Iraku.",
           "ru": "На иракской стороне вы прибываете в Курдистан. Виза по прибытии невозможна, необходимо заранее приобрести электронную визу в (федеральный) Ирак."
+        },
+        "geohash": "tn2dx5k7",
+        "updatedat": {
+          "_seconds": 1769107907,
+          "_nanoseconds": 331000000
         }
       }
     },
@@ -1702,7 +1992,12 @@
           "_latitude": 33.4342064,
           "_longitude": 38.9106155
         },
-        "name": "Al Walid / Al Tanf"
+        "name": "Al Walid / Al Tanf",
+        "geohash": "svgwjqtb",
+        "updatedat": {
+          "_seconds": 1769107907,
+          "_nanoseconds": 348000000
+        }
       }
     },
     {
@@ -1726,6 +2021,11 @@
         "createdat": {
           "_seconds": 1764172634,
           "_nanoseconds": 535000000
+        },
+        "geohash": "uds1ccnx",
+        "updatedat": {
+          "_seconds": 1769107907,
+          "_nanoseconds": 385000000
         }
       }
     },
@@ -1746,6 +2046,11 @@
         "location": {
           "_latitude": 23.0388718,
           "_longitude": 88.8842795
+        },
+        "geohash": "tup5nd5e",
+        "updatedat": {
+          "_seconds": 1769107907,
+          "_nanoseconds": 402000000
         }
       }
     },
@@ -1766,6 +2071,11 @@
         "location": {
           "_latitude": 4.583552,
           "_longitude": 114.0746331
+        },
+        "geohash": "w8c45f6t",
+        "updatedat": {
+          "_seconds": 1769107907,
+          "_nanoseconds": 420000000
         }
       }
     },
@@ -1791,9 +2101,10 @@
           "_seconds": 1764171929,
           "_nanoseconds": 352000000
         },
+        "geohash": "udgbepjt",
         "updatedat": {
-          "_seconds": 1764257572,
-          "_nanoseconds": 157000000
+          "_seconds": 1769107907,
+          "_nanoseconds": 439000000
         }
       }
     },
@@ -1814,7 +2125,12 @@
           "_latitude": 27.1419418,
           "_longitude": 63.3191621
         },
-        "name": "Kuhak-Chagdi"
+        "name": "Kuhak-Chagdi",
+        "geohash": "tkv42v59",
+        "updatedat": {
+          "_seconds": 1769107907,
+          "_nanoseconds": 456000000
+        }
       }
     },
     {
@@ -1834,6 +2150,11 @@
         "location": {
           "_latitude": 38.2727054,
           "_longitude": 71.337946
+        },
+        "geohash": "twf9xr6d",
+        "updatedat": {
+          "_seconds": 1769107907,
+          "_nanoseconds": 474000000
         }
       }
     },
@@ -1854,6 +2175,11 @@
         "location": {
           "_latitude": 40.3639912,
           "_longitude": 70.4548572
+        },
+        "geohash": "tx4jehp9",
+        "updatedat": {
+          "_seconds": 1769107907,
+          "_nanoseconds": 494000000
         }
       }
     },
@@ -1874,7 +2200,12 @@
           "_latitude": 32.4975617,
           "_longitude": 35.5770768
         },
-        "name": "Sheikh Hussein/Jordan River"
+        "name": "Sheikh Hussein/Jordan River",
+        "geohash": "svc2cs42",
+        "updatedat": {
+          "_seconds": 1769107907,
+          "_nanoseconds": 512000000
+        }
       }
     },
     {
@@ -1894,6 +2225,11 @@
         "location": {
           "_latitude": 14.3451789,
           "_longitude": 104.0581437
+        },
+        "geohash": "w69cxgky",
+        "updatedat": {
+          "_seconds": 1769107907,
+          "_nanoseconds": 530000000
         }
       }
     },
@@ -1926,6 +2262,11 @@
           "nl": "Een visum bij aankomst in Laos is niet beschikbaar en een e-visum wordt niet geaccepteerd.",
           "pl": "Usługa Lao VOA jest niedostępna, a eVisa nie jest akceptowana.",
           "ru": "Визы по прибытии в Лаос не предоставляются, электронные визы не принимаются."
+        },
+        "geohash": "w5pyvzwk",
+        "updatedat": {
+          "_seconds": 1769107907,
+          "_nanoseconds": 554000000
         }
       }
     },
@@ -1950,6 +2291,11 @@
         "createdat": {
           "_seconds": 1764258327,
           "_nanoseconds": 770000000
+        },
+        "geohash": "ud5v008g",
+        "updatedat": {
+          "_seconds": 1769107907,
+          "_nanoseconds": 573000000
         }
       }
     },
@@ -1971,9 +2317,10 @@
           "_longitude": 35.9238448
         },
         "name": "Masnaa/Jdeideh",
+        "geohash": "svcx9rqc",
         "updatedat": {
-          "_seconds": 1764703105,
-          "_nanoseconds": 736000000
+          "_seconds": 1769107907,
+          "_nanoseconds": 590000000
         }
       }
     },
@@ -1998,6 +2345,11 @@
         "createdat": {
           "_seconds": 1764172687,
           "_nanoseconds": 889000000
+        },
+        "geohash": "vc4311m9",
+        "updatedat": {
+          "_seconds": 1769107907,
+          "_nanoseconds": 677000000
         }
       }
     },
@@ -2018,6 +2370,11 @@
         "location": {
           "_latitude": 36.7034639,
           "_longitude": 38.9580515
+        },
+        "geohash": "sye8y98m",
+        "updatedat": {
+          "_seconds": 1769107907,
+          "_nanoseconds": 726000000
         }
       }
     },
@@ -2038,6 +2395,11 @@
         "location": {
           "_latitude": 41.7675771,
           "_longitude": 60.0744555
+        },
+        "geohash": "tr6tx58c",
+        "updatedat": {
+          "_seconds": 1769107907,
+          "_nanoseconds": 746000000
         }
       }
     },
@@ -2058,7 +2420,12 @@
           "_latitude": 43.6725198,
           "_longitude": 80.624637
         },
-        "name": "Kolzhat/Dolat"
+        "name": "Kolzhat/Dolat",
+        "geohash": "tzc26wm4",
+        "updatedat": {
+          "_seconds": 1769107907,
+          "_nanoseconds": 766000000
+        }
       }
     },
     {
@@ -2090,6 +2457,11 @@
           "nl": "Een visum bij aankomst in Laos is niet beschikbaar en een e-visum wordt niet geaccepteerd.",
           "pl": "Usługa VOA w Laosie jest niedostępna, a e-wiza nie jest akceptowana.",
           "ru": "Визы по прибытии в Лаос не предоставляются, электронные визы не принимаются."
+        },
+        "geohash": "w76b8gqq",
+        "updatedat": {
+          "_seconds": 1769107907,
+          "_nanoseconds": 814000000
         }
       }
     },
@@ -2110,6 +2482,11 @@
         "location": {
           "_latitude": 17.8646345,
           "_longitude": 102.7307591
+        },
+        "geohash": "w71j9snm",
+        "updatedat": {
+          "_seconds": 1769107907,
+          "_nanoseconds": 852000000
         }
       }
     },
@@ -2134,6 +2511,11 @@
         "createdat": {
           "_seconds": 1764172688,
           "_nanoseconds": 620000000
+        },
+        "geohash": "v1hthbhs",
+        "updatedat": {
+          "_seconds": 1769107907,
+          "_nanoseconds": 871000000
         }
       }
     },
@@ -2154,7 +2536,12 @@
           "_latitude": 48.5970085,
           "_longitude": 115.8626848
         },
-        "name": "Khaviragiin/Ar-Khunshuut"
+        "name": "Khaviragiin/Ar-Khunshuut",
+        "geohash": "y8dkkwbd",
+        "updatedat": {
+          "_seconds": 1769107907,
+          "_nanoseconds": 892000000
+        }
       }
     },
     {
@@ -2174,6 +2561,11 @@
         "location": {
           "_latitude": 6.6962594,
           "_longitude": 100.1793761
+        },
+        "geohash": "w1pnpeh2",
+        "updatedat": {
+          "_seconds": 1769107907,
+          "_nanoseconds": 929000000
         }
       }
     },
@@ -2199,9 +2591,10 @@
           "_seconds": 1764171929,
           "_nanoseconds": 857000000
         },
+        "geohash": "uejc9jkr",
         "updatedat": {
-          "_seconds": 1764257559,
-          "_nanoseconds": 462000000
+          "_seconds": 1769107907,
+          "_nanoseconds": 947000000
         }
       }
     },
@@ -2222,6 +2615,11 @@
         "location": {
           "_latitude": 6.6653385,
           "_longitude": 100.3268058
+        },
+        "geohash": "w1pmfvru",
+        "updatedat": {
+          "_seconds": 1769107907,
+          "_nanoseconds": 981000000
         }
       }
     },
@@ -2242,6 +2640,11 @@
         "location": {
           "_latitude": 54.544123,
           "_longitude": 25.7000408
+        },
+        "geohash": "u9dq2c6n",
+        "updatedat": {
+          "_seconds": 1769107908,
+          "_nanoseconds": 1000000
         }
       }
     },
@@ -2262,6 +2665,11 @@
         "location": {
           "_latitude": 22.5067918,
           "_longitude": 103.9659126
+        },
+        "geohash": "wk1bjc1x",
+        "updatedat": {
+          "_seconds": 1769107908,
+          "_nanoseconds": 20000000
         }
       }
     },
@@ -2282,7 +2690,12 @@
           "_latitude": 30.0926546,
           "_longitude": 47.7101423
         },
-        "name": " Safwan/Abdali"
+        "name": " Safwan/Abdali",
+        "geohash": "tj3gjwjq",
+        "updatedat": {
+          "_seconds": 1769107908,
+          "_nanoseconds": 71000000
+        }
       }
     },
     {
@@ -2302,7 +2715,12 @@
           "_latitude": 44.1571787,
           "_longitude": 80.3988612
         },
-        "name": "Khorgos"
+        "name": "Khorgos",
+        "geohash": "tzc5jw8d",
+        "updatedat": {
+          "_seconds": 1769107908,
+          "_nanoseconds": 91000000
+        }
       }
     },
     {
@@ -2322,6 +2740,11 @@
         "location": {
           "_latitude": 41.5236949,
           "_longitude": 69.4085686
+        },
+        "geohash": "tx3k5rjv",
+        "updatedat": {
+          "_seconds": 1769107908,
+          "_nanoseconds": 127000000
         }
       }
     },
@@ -2354,6 +2777,11 @@
           "nl": "Een visum bij aankomst in Laos is beschikbaar, maar een e-visum wordt niet geaccepteerd.",
           "pl": "Usługa Lao VOA jest dostępna, ale eVisa nie jest akceptowana.",
           "ru": "Визы по прибытии в Лаос принимаются, но электронные визы не принимаются."
+        },
+        "geohash": "w6en048k",
+        "updatedat": {
+          "_seconds": 1769107908,
+          "_nanoseconds": 163000000
         }
       }
     },
@@ -2378,6 +2806,11 @@
         "createdat": {
           "_seconds": 1764172512,
           "_nanoseconds": 657000000
+        },
+        "geohash": "u3wjsy7e",
+        "updatedat": {
+          "_seconds": 1769107908,
+          "_nanoseconds": 182000000
         }
       }
     },
@@ -2410,6 +2843,11 @@
           "nl": "Gesloten vanwege renovatie. Naar verwachting heropent het in 2026.",
           "pl": "Zamknięte z powodu remontu. Powinno zostać ponownie otwarte w 2026 roku.",
           "ru": "Закрыто на реконструкцию. Ожидается открытие в 2026 году."
+        },
+        "geohash": "tpzz6jpc",
+        "updatedat": {
+          "_seconds": 1769107908,
+          "_nanoseconds": 215000000
         }
       }
     },
@@ -2430,7 +2868,12 @@
           "_latitude": 44.4099846,
           "_longitude": 131.1884721
         },
-        "name": "Pogranitschny/Suifenhe"
+        "name": "Pogranitschny/Suifenhe",
+        "geohash": "wzvk9k8d",
+        "updatedat": {
+          "_seconds": 1769107908,
+          "_nanoseconds": 249000000
+        }
       }
     },
     {
@@ -2450,7 +2893,12 @@
           "_latitude": 37.143435,
           "_longitude": 42.5645842
         },
-        "name": "Ibrahim Khalil"
+        "name": "Ibrahim Khalil",
+        "geohash": "syw729f8",
+        "updatedat": {
+          "_seconds": 1769107908,
+          "_nanoseconds": 290000000
+        }
       }
     },
     {
@@ -2474,6 +2922,11 @@
         "createdat": {
           "_seconds": 1764172688,
           "_nanoseconds": 479000000
+        },
+        "geohash": "v9eu07ms",
+        "updatedat": {
+          "_seconds": 1769107908,
+          "_nanoseconds": 310000000
         }
       }
     },
@@ -2494,6 +2947,11 @@
         "location": {
           "_latitude": 54.2745663,
           "_longitude": 25.3759668
+        },
+        "geohash": "u9dhc2qh",
+        "updatedat": {
+          "_seconds": 1769107908,
+          "_nanoseconds": 346000000
         }
       }
     },
@@ -2514,7 +2972,12 @@
           "_latitude": 17.8036693,
           "_longitude": 52.5539202
         },
-        "name": "Shihan-Al Mazyunah"
+        "name": "Shihan-Al Mazyunah",
+        "geohash": "t5jm7ch9",
+        "updatedat": {
+          "_seconds": 1769107908,
+          "_nanoseconds": 382000000
+        }
       }
     },
     {
@@ -2534,6 +2997,11 @@
         "location": {
           "_latitude": 37.0626854,
           "_longitude": 41.217732
+        },
+        "geohash": "syt6cgjc",
+        "updatedat": {
+          "_seconds": 1769107908,
+          "_nanoseconds": 400000000
         }
       }
     },
@@ -2554,6 +3022,11 @@
         "location": {
           "_latitude": 38.1492243,
           "_longitude": 74.8009878
+        },
+        "geohash": "twv1n0u7",
+        "updatedat": {
+          "_seconds": 1769107908,
+          "_nanoseconds": 419000000
         }
       }
     },
@@ -2574,7 +3047,12 @@
           "_latitude": 42.5913525,
           "_longitude": 101.2831521
         },
-        "name": "Sheveekhuren/Ceke"
+        "name": "Sheveekhuren/Ceke",
+        "geohash": "wr842c80",
+        "updatedat": {
+          "_seconds": 1769107908,
+          "_nanoseconds": 451000000
+        }
       }
     },
     {
@@ -2594,7 +3072,12 @@
           "_latitude": 28.9775633,
           "_longitude": 61.5502529
         },
-        "name": "Mirjaveh - Taftan"
+        "name": "Mirjaveh - Taftan",
+        "geohash": "tm5ube5w",
+        "updatedat": {
+          "_seconds": 1769107908,
+          "_nanoseconds": 473000000
+        }
       }
     },
     {
@@ -2614,6 +3097,11 @@
         "location": {
           "_latitude": 40.7869504,
           "_longitude": 68.5771731
+        },
+        "geohash": "tx2b0903",
+        "updatedat": {
+          "_seconds": 1769107908,
+          "_nanoseconds": 492000000
         }
       }
     },
@@ -2634,6 +3122,11 @@
         "location": {
           "_latitude": 10.4263788,
           "_longitude": 104.4536647
+        },
+        "geohash": "w3f72fhf",
+        "updatedat": {
+          "_seconds": 1769107908,
+          "_nanoseconds": 510000000
         }
       }
     },
@@ -2654,6 +3147,11 @@
         "location": {
           "_latitude": -8.9589752,
           "_longitude": 124.950624
+        },
+        "geohash": "qy2v5346",
+        "updatedat": {
+          "_seconds": 1769107908,
+          "_nanoseconds": 531000000
         }
       }
     },
@@ -2674,7 +3172,12 @@
           "_latitude": 42.3736833,
           "_longitude": 59.3016982
         },
-        "name": "Khodjeyli / Konye-Urgench"
+        "name": "Khodjeyli / Konye-Urgench",
+        "geohash": "trd1j3yh",
+        "updatedat": {
+          "_seconds": 1769107908,
+          "_nanoseconds": 548000000
+        }
       }
     },
     {
@@ -2694,7 +3197,12 @@
           "_latitude": 24.7271429,
           "_longitude": 50.8223462
         },
-        "name": "Salwa/Abu Samra"
+        "name": "Salwa/Abu Samra",
+        "geohash": "thkhsmrw",
+        "updatedat": {
+          "_seconds": 1769107908,
+          "_nanoseconds": 589000000
+        }
       }
     },
     {
@@ -2714,7 +3222,12 @@
           "_latitude": 41.9006989,
           "_longitude": 52.6532056
         },
-        "name": "Garabogaz / Temir Baba"
+        "name": "Garabogaz / Temir Baba",
+        "geohash": "tpmqq5uc",
+        "updatedat": {
+          "_seconds": 1769107908,
+          "_nanoseconds": 623000000
+        }
       }
     },
     {
@@ -2734,7 +3247,12 @@
           "_latitude": 26.9881573,
           "_longitude": 84.8547709
         },
-        "name": "Raxaul/Birgunj"
+        "name": "Raxaul/Birgunj",
+        "geohash": "tuu3dcj3",
+        "updatedat": {
+          "_seconds": 1769107908,
+          "_nanoseconds": 658000000
+        }
       }
     },
     {
@@ -2754,7 +3272,12 @@
           "_latitude": 27.4759208,
           "_longitude": 83.4698147
         },
-        "name": "Sonauli"
+        "name": "Sonauli",
+        "geohash": "tugk73uf",
+        "updatedat": {
+          "_seconds": 1769107908,
+          "_nanoseconds": 676000000
+        }
       }
     },
     {
@@ -2774,7 +3297,12 @@
           "_latitude": 1.6116537,
           "_longitude": 109.679578
         },
-        "name": "Biawak/Aruk"
+        "name": "Biawak/Aruk",
+        "geohash": "w2mcpv6h",
+        "updatedat": {
+          "_seconds": 1769107908,
+          "_nanoseconds": 696000000
+        }
       }
     },
     {
@@ -2798,6 +3326,11 @@
         "createdat": {
           "_seconds": 1764172689,
           "_nanoseconds": 531000000
+        },
+        "geohash": "v3kjtbcr",
+        "updatedat": {
+          "_seconds": 1769107908,
+          "_nanoseconds": 713000000
         }
       }
     },
@@ -2823,9 +3356,10 @@
           "_seconds": 1764171929,
           "_nanoseconds": 486000000
         },
+        "geohash": "udue8r3b",
         "updatedat": {
-          "_seconds": 1764257564,
-          "_nanoseconds": 670000000
+          "_seconds": 1769107908,
+          "_nanoseconds": 734000000
         }
       }
     },
@@ -2850,6 +3384,11 @@
         "createdat": {
           "_seconds": 1764172688,
           "_nanoseconds": 416000000
+        },
+        "geohash": "v9s3xs8u",
+        "updatedat": {
+          "_seconds": 1769107908,
+          "_nanoseconds": 754000000
         }
       }
     },
@@ -2870,7 +3409,12 @@
           "_latitude": 29.575104,
           "_longitude": 34.9786272
         },
-        "name": "Wadi Araba / Itzhak Rabin"
+        "name": "Wadi Araba / Itzhak Rabin",
+        "geohash": "sv2b5zyx",
+        "updatedat": {
+          "_seconds": 1769107908,
+          "_nanoseconds": 772000000
+        }
       }
     },
     {
@@ -2902,6 +3446,11 @@
           "nl": "Alleen open voor bilaterale handel, geen toeristen toegestaan, behalve Indiase pelgrims naar Kailash met een speciale vergunning.",
           "pl": "Otwarte tylko na handel dwustronny, wstęp wzbroniony turystom, z wyjątkiem pielgrzymów z Indii do Kailash, którzy muszą uzyskać specjalne zezwolenie.",
           "ru": "Открыто только для двусторонней торговли, туристам вход воспрещен, за исключением индийских паломников на Кайлаш, при наличии специального разрешения."
+        },
+        "geohash": "tv3egzep",
+        "updatedat": {
+          "_seconds": 1769107908,
+          "_nanoseconds": 791000000
         }
       }
     },
@@ -2926,6 +3475,11 @@
         "createdat": {
           "_seconds": 1764172688,
           "_nanoseconds": 553000000
+        },
+        "geohash": "v157r59u",
+        "updatedat": {
+          "_seconds": 1769107908,
+          "_nanoseconds": 810000000
         }
       }
     },
@@ -2947,9 +3501,10 @@
           "_longitude": 48.3600117
         },
         "name": "Bilasuvar",
+        "geohash": "tp42h6wd",
         "updatedat": {
-          "_seconds": 1764168581,
-          "_nanoseconds": 478000000
+          "_seconds": 1769107908,
+          "_nanoseconds": 846000000
         }
       }
     },
@@ -2970,7 +3525,12 @@
           "_latitude": 49.5113242,
           "_longitude": 112.6008041
         },
-        "name": "Verkhniy Ulkhun"
+        "name": "Verkhniy Ulkhun",
+        "geohash": "y8b1dm32",
+        "updatedat": {
+          "_seconds": 1769107908,
+          "_nanoseconds": 868000000
+        }
       }
     },
     {
@@ -2994,6 +3554,11 @@
         "createdat": {
           "_seconds": 1764172688,
           "_nanoseconds": 811000000
+        },
+        "geohash": "v35j7m5h",
+        "updatedat": {
+          "_seconds": 1769107908,
+          "_nanoseconds": 888000000
         }
       }
     },
@@ -3026,6 +3591,11 @@
           "nl": "Het e-visum voor Vietnam wordt niet geaccepteerd.",
           "pl": "Wietnamska wiza elektroniczna nie jest akceptowana.",
           "ru": "Электронные визы во Вьетнам не принимаются."
+        },
+        "geohash": "w65u06y1",
+        "updatedat": {
+          "_seconds": 1769107908,
+          "_nanoseconds": 934000000
         }
       }
     },
@@ -3058,6 +3628,11 @@
           "nl": "Over het algemeen gesloten, behalve voor lokale handelaren en Indiase pelgrims naar de Kailash Mansarovar Yatra (speciale vergunning vereist).\nIndiase toeristen kunnen tot aan de grens rijden, maar buitenlanders niet.",
           "pl": "Generalnie zamknięte, z wyjątkiem lokalnych handlarzy i indyjskich pielgrzymów do Kailash Mansarovar Yatra (ze specjalnym zezwoleniem).\nTuryści z Indii mogą dojechać do granicy samochodem, ale obcokrajowcy nie.",
           "ru": "В целом закрыто, за исключением местных торговцев и индийских паломников, совершающих паломничество к Кайлаш-Мансаровару (по специальному разрешению).\nИндийские туристы могут подъехать к границе на автомобиле, а иностранцы — нет."
+        },
+        "geohash": "tuz5v3se",
+        "updatedat": {
+          "_seconds": 1769107908,
+          "_nanoseconds": 953000000
         }
       }
     },
@@ -3078,6 +3653,11 @@
         "location": {
           "_latitude": 37.6299086,
           "_longitude": 58.4058167
+        },
+        "geohash": "tq9w143f",
+        "updatedat": {
+          "_seconds": 1769107908,
+          "_nanoseconds": 973000000
         }
       }
     },
@@ -3098,7 +3678,12 @@
           "_latitude": 24.8719821,
           "_longitude": 92.2485568
         },
-        "name": "Sutarkandi/Sheola"
+        "name": "Sutarkandi/Sheola",
+        "geohash": "wh3t7pv3",
+        "updatedat": {
+          "_seconds": 1769107908,
+          "_nanoseconds": 990000000
+        }
       }
     },
     {
@@ -3130,6 +3715,11 @@
           "nl": "Een visum bij aankomst in Laos is niet beschikbaar en een e-visum wordt niet geaccepteerd.",
           "pl": "Usługa VOA w Laosie jest niedostępna, a e-wiza nie jest akceptowana.",
           "ru": "Визы по прибытии в Лаос не предоставляются, электронные визы не принимаются."
+        },
+        "geohash": "w76nb2yq",
+        "updatedat": {
+          "_seconds": 1769107909,
+          "_nanoseconds": 8000000
         }
       }
     },
@@ -3151,9 +3741,10 @@
           "_longitude": 92.067347
         },
         "name": "Khandagaity/Borsho",
+        "geohash": "y112rhc6",
         "updatedat": {
-          "_seconds": 1764167137,
-          "_nanoseconds": 101000000
+          "_seconds": 1769107909,
+          "_nanoseconds": 27000000
         }
       }
     },
@@ -3176,10 +3767,6 @@
           "_longitude": 106.1715268
         },
         "comment": "Cambodia VOA available, eVisa accepted.",
-        "updatedat": {
-          "_seconds": 1765188670,
-          "_nanoseconds": 539000000
-        },
         "comment_translations": {
           "en": "Cambodia VOA available, eVisa accepted.",
           "fr": "VOA cambodgien disponible, visa électronique accepté.",
@@ -3190,6 +3777,11 @@
           "nl": "Visum bij aankomst in Cambodja beschikbaar, e-visum wordt geaccepteerd.",
           "pl": "Dostępna usługa VOA dla Kambodży, akceptowana jest wiza elektroniczna.",
           "ru": "Виза по прибытии в Камбоджу доступна, электронная виза принимается."
+        },
+        "geohash": "w3grpbrd",
+        "updatedat": {
+          "_seconds": 1769107909,
+          "_nanoseconds": 63000000
         }
       }
     },
@@ -3215,9 +3807,10 @@
           "_seconds": 1764171461,
           "_nanoseconds": 893000000
         },
+        "geohash": "u98nv7uq",
         "updatedat": {
-          "_seconds": 1764171461,
-          "_nanoseconds": 893000000
+          "_seconds": 1769107909,
+          "_nanoseconds": 84000000
         }
       }
     },
@@ -3239,9 +3832,10 @@
           "_longitude": 61.6545268
         },
         "name": "Rimdan",
+        "geohash": "tkeb6gz7",
         "updatedat": {
-          "_seconds": 1764257304,
-          "_nanoseconds": 365000000
+          "_seconds": 1769107909,
+          "_nanoseconds": 101000000
         }
       }
     },
@@ -3262,7 +3856,12 @@
           "_latitude": 38.8537671,
           "_longitude": 46.206445
         },
-        "name": "Norduz"
+        "name": "Norduz",
+        "geohash": "tnbv53ne",
+        "updatedat": {
+          "_seconds": 1769107909,
+          "_nanoseconds": 117000000
+        }
       }
     },
     {
@@ -3282,6 +3881,11 @@
         "location": {
           "_latitude": 21.5378694,
           "_longitude": 107.968127
+        },
+        "geohash": "w7uf8bgg",
+        "updatedat": {
+          "_seconds": 1769107909,
+          "_nanoseconds": 134000000
         }
       }
     },
@@ -3302,7 +3906,12 @@
           "_latitude": 51.6340575,
           "_longitude": 100.8572602
         },
-        "name": "Khankh/Mondy"
+        "name": "Khankh/Mondy",
+        "geohash": "y1ptxpdn",
+        "updatedat": {
+          "_seconds": 1769107909,
+          "_nanoseconds": 155000000
+        }
       }
     },
     {
@@ -3334,6 +3943,11 @@
           "nl": "Open voor bilaterale handel, maar ook voor Indiase pelgrims die de Kailash Mansarovar Yatra maken, waarvoor speciale vergunningen nodig zijn.",
           "pl": "Otwarte na handel dwustronny, ale także dla indyjskich pielgrzymów odbywających trasę Kailash Mansarovar Yatra, ale wymagane są specjalne zezwolenia.",
           "ru": "Открыто для двусторонней торговли, а также для индийских паломников, совершающих паломничество к Кайлаш-Мансаровару, при необходимости получения специальных разрешений."
+        },
+        "geohash": "tv3gdc0z",
+        "updatedat": {
+          "_seconds": 1769107909,
+          "_nanoseconds": 194000000
         }
       }
     },
@@ -3354,6 +3968,11 @@
         "location": {
           "_latitude": 52.0729083,
           "_longitude": 23.6560725
+        },
+        "geohash": "u92b4r9f",
+        "updatedat": {
+          "_seconds": 1769107909,
+          "_nanoseconds": 210000000
         }
       }
     },
@@ -3374,6 +3993,11 @@
         "location": {
           "_latitude": 37.0625989,
           "_longitude": 72.6955
+        },
+        "geohash": "twedy5p1",
+        "updatedat": {
+          "_seconds": 1769107909,
+          "_nanoseconds": 249000000
         }
       }
     },
@@ -3394,7 +4018,12 @@
           "_latitude": 39.3596189,
           "_longitude": 45.0705406
         },
-        "name": "Poldasht/Shahtakhti"
+        "name": "Poldasht/Shahtakhti",
+        "geohash": "tnbpct5q",
+        "updatedat": {
+          "_seconds": 1769107909,
+          "_nanoseconds": 266000000
+        }
       }
     },
     {
@@ -3419,9 +4048,10 @@
           "_seconds": 1764171462,
           "_nanoseconds": 33000000
         },
+        "geohash": "u3z967mv",
         "updatedat": {
-          "_seconds": 1764171462,
-          "_nanoseconds": 33000000
+          "_seconds": 1769107909,
+          "_nanoseconds": 318000000
         }
       }
     },
@@ -3442,7 +4072,12 @@
           "_latitude": 45.1933217,
           "_longitude": 82.5670353
         },
-        "name": "Dostyk/Alashankou"
+        "name": "Dostyk/Alashankou",
+        "geohash": "vb49ng5q",
+        "updatedat": {
+          "_seconds": 1769107909,
+          "_nanoseconds": 339000000
+        }
       }
     },
     {
@@ -3462,6 +4097,11 @@
         "location": {
           "_latitude": 41.4714641,
           "_longitude": 69.3585889
+        },
+        "geohash": "tx37fm9k",
+        "updatedat": {
+          "_seconds": 1769107909,
+          "_nanoseconds": 357000000
         }
       }
     },
@@ -3494,6 +4134,11 @@
           "nl": "Let op voor fietsers: het is verboden om tussen Sost en Tashkurgan te fietsen; neem in plaats daarvan de bus en vervoer de fiets in de bus. Motorfietsen en auto's zijn wel toegestaan.\n\nAan de Pakistaanse kant moet je 30 dollar per persoon betalen voor de toegang tot het Khunjerab Nationaal Park.",
           "pl": "Uwaga dla rowerzystów: jazda między Sost a Tashkurgan jest zabroniona; zamiast tego należy wsiąść do autobusu i umieścić rower w autobusie. Motocykle i samochody są dozwolone.\nPo stronie pakistańskiej za wjazd do Parku Narodowego Khunjerab należy uiścić opłatę 30 USD od osoby.",
           "ru": "Примечание для велосипедистов: езда на велосипеде между Состом и Ташкурганом запрещена; вместо этого необходимо доехать на автобусе и перевезти велосипед в автобусе. Мотоциклы и автомобили разрешены.\nЗа въезд в национальный парк Хунджераб с пакистанской стороны необходимо заплатить 30 долларов с человека."
+        },
+        "geohash": "twt9skmj",
+        "updatedat": {
+          "_seconds": 1769107909,
+          "_nanoseconds": 378000000
         }
       }
     },
@@ -3514,6 +4159,11 @@
         "location": {
           "_latitude": 22.4794025,
           "_longitude": 101.7151593
+        },
+        "geohash": "w7brfs68",
+        "updatedat": {
+          "_seconds": 1769107909,
+          "_nanoseconds": 401000000
         }
       }
     },
@@ -3536,10 +4186,6 @@
           "_longitude": 106.0298901
         },
         "comment": "Lao VOA available, but eVisa is not accepted.\nCambodian VOA available and eVisa accepted.",
-        "updatedat": {
-          "_seconds": 1765190116,
-          "_nanoseconds": 388000000
-        },
         "comment_translations": {
           "en": "Lao VOA available, but eVisa is not accepted.\nCambodian VOA available and eVisa accepted.",
           "fr": "Le visa à l'arrivée pour le Laos est disponible, mais le visa électronique n'est pas accepté.\n\nLe visa à l'arrivée pour le Cambodge est disponible et le visa électronique est accepté.",
@@ -3550,6 +4196,11 @@
           "nl": "Visum bij aankomst in Laos beschikbaar, maar e-visum wordt niet geaccepteerd.\n\nVisum bij aankomst in Cambodja beschikbaar en e-visum wordt geaccepteerd.",
           "pl": "Dostępna jest VOA dla Laosu, ale e-wiza nie jest akceptowana.\nDostępna jest VOA dla Kambodży i akceptowane są e-wizy.",
           "ru": "Лаосская виза по прибытии (VOA) принимается, но электронная виза не принимается.\nКамбоджийская виза по прибытии (VOA) принимается, а электронная виза — нет."
+        },
+        "geohash": "w67rhy8s",
+        "updatedat": {
+          "_seconds": 1769107909,
+          "_nanoseconds": 438000000
         }
       }
     },
@@ -3570,6 +4221,11 @@
         "location": {
           "_latitude": 40.1126425,
           "_longitude": 70.731634
+        },
+        "geohash": "tx4k1w31",
+        "updatedat": {
+          "_seconds": 1769107909,
+          "_nanoseconds": 456000000
         }
       }
     },
@@ -3602,6 +4258,11 @@
           "nl": "Reserveren is verplicht: https://lvrobeza.lv/en/reserve/",
           "pl": "Obowiązkowa rezerwacja: https://lvrobeza.lv/en/reserve/",
           "ru": "Обязательное бронирование: https://lvrobeza.lv/en/reserve/"
+        },
+        "geohash": "u9gts9sp",
+        "updatedat": {
+          "_seconds": 1769107909,
+          "_nanoseconds": 473000000
         }
       }
     },
@@ -3622,7 +4283,12 @@
           "_latitude": 50.1997888,
           "_longitude": 119.3382033
         },
-        "name": "Starotsurukhaytuysky/Heishantou"
+        "name": "Starotsurukhaytuysky/Heishantou",
+        "geohash": "y8uvede6",
+        "updatedat": {
+          "_seconds": 1769107909,
+          "_nanoseconds": 491000000
+        }
       }
     },
     {
@@ -3646,6 +4312,11 @@
         "createdat": {
           "_seconds": 1764172689,
           "_nanoseconds": 404000000
+        },
+        "geohash": "v3wyckh8",
+        "updatedat": {
+          "_seconds": 1769107909,
+          "_nanoseconds": 509000000
         }
       }
     },
@@ -3666,7 +4337,12 @@
           "_latitude": 26.8612765,
           "_longitude": 89.3808084
         },
-        "name": "Jaigaon/Phuentsholing"
+        "name": "Jaigaon/Phuentsholing",
+        "geohash": "tuz8ccvn",
+        "updatedat": {
+          "_seconds": 1769107909,
+          "_nanoseconds": 527000000
+        }
       }
     },
     {
@@ -3686,7 +4362,12 @@
           "_latitude": 39.4122129,
           "_longitude": 44.3777801
         },
-        "name": "Bazargan"
+        "name": "Bazargan",
+        "geohash": "szp81yfb",
+        "updatedat": {
+          "_seconds": 1769107909,
+          "_nanoseconds": 545000000
+        }
       }
     },
     {
@@ -3706,7 +4387,12 @@
           "_latitude": 49.9560564,
           "_longitude": 95.6272424
         },
-        "name": "Tsagan-Tolgoy/Arts-Sur"
+        "name": "Tsagan-Tolgoy/Arts-Sur",
+        "geohash": "y0uh0n1x",
+        "updatedat": {
+          "_seconds": 1769107909,
+          "_nanoseconds": 564000000
+        }
       }
     },
     {
@@ -3738,6 +4424,11 @@
           "nl": "De grenspost Kodari werd in 2025 tijdelijk gesloten vanwege wegverwoesting. Inmiddels is de grenspost Kodari weer in gebruik genomen.\n\nNa de reparatie zal het opnieuw de enige grensovergang tussen Tibet en Nepal voor toeristen zijn.",
           "pl": "Tymczasowo zamknięta w 2025 roku, kiedy droga została zniszczona. W międzyczasie ponownie uruchomiono posterunek graniczny w Kodari.\nPo naprawie ponownie będzie to jedyne przejście graniczne między Tybetem a Nepalem dla turystów.",
           "ru": "Временно закрыт в 2025 году из-за разрушения дороги. Тем временем пограничный пункт Кодари был вновь введен в эксплуатацию.\nПосле его ремонта он снова станет единственным пунктом пересечения границы между Тибетом и Непалом для туристов."
+        },
+        "geohash": "tvh8ygfq",
+        "updatedat": {
+          "_seconds": 1769107909,
+          "_nanoseconds": 582000000
         }
       }
     },
@@ -3759,9 +4450,10 @@
           "_longitude": 105.9812093
         },
         "name": "Xa Mat/Trapeang Plong",
+        "geohash": "w6567sj4",
         "updatedat": {
-          "_seconds": 1765188057,
-          "_nanoseconds": 60000000
+          "_seconds": 1769107909,
+          "_nanoseconds": 601000000
         }
       }
     },
@@ -3786,6 +4478,11 @@
         "createdat": {
           "_seconds": 1764172689,
           "_nanoseconds": 143000000
+        },
+        "geohash": "v9c71u4c",
+        "updatedat": {
+          "_seconds": 1769107909,
+          "_nanoseconds": 618000000
         }
       }
     },
@@ -3806,7 +4503,12 @@
           "_latitude": 40.5462428,
           "_longitude": 69.2162849
         },
-        "name": "Oybek / Fotehobod"
+        "name": "Oybek / Fotehobod",
+        "geohash": "tx1nxj1y",
+        "updatedat": {
+          "_seconds": 1769107909,
+          "_nanoseconds": 637000000
+        }
       }
     },
     {
@@ -3838,6 +4540,11 @@
           "nl": "De weg is moeilijk begaanbaar tijdens regenachtig weer, vermijd deze route.\n\nEr is tol voor de brug: 4000 CFA (motor), 10000 CFA (auto) of 20000 CFA (vrachtwagen).\n\nSenegal binnenrijden:\nEen Passe-avant is 48 uur geldig, soms 5 dagen (5000-6000 CFA); betaal niet meer!\n\nMet een CdP moet je deze binnen 48 uur in Dakar laten afstempelen.\n\nEen Carte Bruné-verzekering is hier verkrijgbaar. In Saint-Louis is het goedkoper, maar je loopt het risico aangehouden te worden en een boete te krijgen.\n\nMauritanië binnenrijden (alles contant te betalen):\n100 MRU gemeentebelasting\n200 MRU per persoon voor het nationale park\n55 € voor het e-visum\nVerzekering verkrijgbaar aan de grens.",
           "pl": "Droga jest trudna w czasie deszczu, należy jej unikać.\nPrzejazd przez most jest płatny: 4000 CFA (motocykl), 10000 CFA (samochód) lub 20000 (ciężarówka).\nWjazd do Senegalu:\nPasse-avant jest ważny przez 48 godzin, czasami 5 dni (5000-6000 CFA); nie płać więcej!\nZ kartą CdP musisz uzyskać pieczątkę w Dakarze w ciągu 48 godzin.\nUbezpieczenie Carte brune dostępne tutaj. Jest tańsze w St. Louis, ale ryzykujesz zatrzymanie i mandat podczas jazdy.\nWjazd do Mauretanii (płatność gotówką):\n100 MRU podatku lokalnego\n200 MRU/os. za wstęp do parku narodowego\n55 EUR za e-wizę\nUbezpieczenie dostępne na granicy.",
           "ru": "Дорога в дождливую погоду труднопроходима, избегайте её.\nЗа проезд по мосту взимается плата: 4000 CFA (мотоцикл), 10000 CFA (легковой автомобиль) или 20000 CFA (грузовик).\nВъезд в Сенегал:\nPasse-avant действителен в течение 48 часов, иногда 5 дней (5000-6000 CFA); не платите больше!\nС CdP необходимо получить штамп в Дакаре в течение 48 часов.\nЗдесь можно оформить страховку Carte brune. В Сен-Луи она дешевле, но есть риск быть остановленным и оштрафованным за рулём.\nВъезд в Мавританию (все оплачивается наличными):\n100 MRU муниципальный налог\n200 MRU с человека за посещение национального парка\n55€ за электронную визу\nСтраховка доступна на границе."
+        },
+        "geohash": "eduk4rwg",
+        "updatedat": {
+          "_seconds": 1769107909,
+          "_nanoseconds": 656000000
         }
       }
     },
@@ -3858,7 +4565,12 @@
           "_latitude": 51.3364379,
           "_longitude": 119.8725653
         },
-        "name": "Olochi/Shiwei"
+        "name": "Olochi/Shiwei",
+        "geohash": "y9jhpc88",
+        "updatedat": {
+          "_seconds": 1769107909,
+          "_nanoseconds": 676000000
+        }
       }
     },
     {
@@ -3878,7 +4590,12 @@
           "_latitude": 24.8558381,
           "_longitude": 56.0014094
         },
-        "name": "Mudayrah"
+        "name": "Mudayrah",
+        "geohash": "thrv6kfg",
+        "updatedat": {
+          "_seconds": 1769107909,
+          "_nanoseconds": 695000000
+        }
       }
     },
     {
@@ -3900,10 +4617,6 @@
           "_longitude": 107.3147594
         },
         "comment": "Vietnam eVisa not accepted.",
-        "updatedat": {
-          "_seconds": 1765195517,
-          "_nanoseconds": 10000000
-        },
         "comment_translations": {
           "en": "Vietnam eVisa not accepted.",
           "fr": "Visa électronique vietnamien non accepté.",
@@ -3914,6 +4627,11 @@
           "nl": "Het e-visum voor Vietnam wordt niet geaccepteerd.",
           "pl": "Wietnamska wiza elektroniczna nie jest akceptowana.",
           "ru": "Электронные визы во Вьетнам не принимаются."
+        },
+        "geohash": "w6hq4j81",
+        "updatedat": {
+          "_seconds": 1769107909,
+          "_nanoseconds": 713000000
         }
       }
     },
@@ -3940,10 +4658,6 @@
           "_nanoseconds": 351000000
         },
         "comment": "Russian eVisa valid.",
-        "updatedat": {
-          "_seconds": 1768482642,
-          "_nanoseconds": 843000000
-        },
         "comment_translations": {
           "en": "Russian eVisa valid.",
           "fr": "Visa électronique russe valide.",
@@ -3954,6 +4668,11 @@
           "nl": "Het Russische e-visum is geldig.",
           "pl": "Rosyjska e-wiza ważna.",
           "ru": "Российская электронная виза действительна."
+        },
+        "geohash": "ud795bn9",
+        "updatedat": {
+          "_seconds": 1769107909,
+          "_nanoseconds": 734000000
         }
       }
     },
@@ -3978,6 +4697,11 @@
         "createdat": {
           "_seconds": 1764172689,
           "_nanoseconds": 27000000
+        },
+        "geohash": "v1pcmd3k",
+        "updatedat": {
+          "_seconds": 1769107909,
+          "_nanoseconds": 753000000
         }
       }
     },
@@ -4002,6 +4726,11 @@
         "createdat": {
           "_seconds": 1764172688,
           "_nanoseconds": 106000000
+        },
+        "geohash": "v9rfv70w",
+        "updatedat": {
+          "_seconds": 1769107909,
+          "_nanoseconds": 789000000
         }
       }
     },
@@ -4026,6 +4755,11 @@
         "createdat": {
           "_seconds": 1764172014,
           "_nanoseconds": 180000000
+        },
+        "geohash": "usmkr23m",
+        "updatedat": {
+          "_seconds": 1769107909,
+          "_nanoseconds": 809000000
         }
       }
     },
@@ -4063,9 +4797,10 @@
           "ru": "Обязательное бронирование: https://lvrobeza.lv/en/reserve/"
         },
         "comment": "Russian eVisa valid.",
+        "geohash": "ud5g937y",
         "updatedat": {
-          "_seconds": 1768482564,
-          "_nanoseconds": 29000000
+          "_seconds": 1769107909,
+          "_nanoseconds": 828000000
         }
       }
     },
@@ -4086,7 +4821,12 @@
           "_latitude": 38.9447352,
           "_longitude": 45.6325458
         },
-        "name": "Jolfa/Julfa"
+        "name": "Jolfa/Julfa",
+        "geohash": "tnbmw3st",
+        "updatedat": {
+          "_seconds": 1769107909,
+          "_nanoseconds": 867000000
+        }
       }
     },
     {
@@ -4106,7 +4846,12 @@
           "_latitude": 25.6256314,
           "_longitude": 56.270657
         },
-        "name": "Dibba"
+        "name": "Dibba",
+        "geohash": "tk81b3p0",
+        "updatedat": {
+          "_seconds": 1769107909,
+          "_nanoseconds": 889000000
+        }
       }
     },
     {
@@ -4138,6 +4883,11 @@
           "nl": "Een visum bij aankomst in Laos is beschikbaar, maar een e-visum wordt niet geaccepteerd.",
           "pl": "Usługa Lao VOA jest dostępna, ale eVisa nie jest akceptowana.",
           "ru": "Визы по прибытии в Лаос принимаются, но электронные визы не принимаются."
+        },
+        "geohash": "w70hekcb",
+        "updatedat": {
+          "_seconds": 1769107909,
+          "_nanoseconds": 908000000
         }
       }
     },
@@ -4159,9 +4909,10 @@
           "_longitude": 45.5912218
         },
         "name": "Parviz Khan",
+        "geohash": "tn0kt6yd",
         "updatedat": {
-          "_seconds": 1767279650,
-          "_nanoseconds": 33000000
+          "_seconds": 1769107909,
+          "_nanoseconds": 928000000
         }
       }
     },
@@ -4186,6 +4937,11 @@
         "createdat": {
           "_seconds": 1764172687,
           "_nanoseconds": 580000000
+        },
+        "geohash": "v0c30y7e",
+        "updatedat": {
+          "_seconds": 1769107909,
+          "_nanoseconds": 947000000
         }
       }
     },
@@ -4210,6 +4966,11 @@
         "createdat": {
           "_seconds": 1764258327,
           "_nanoseconds": 908000000
+        },
+        "geohash": "ud5x34s5",
+        "updatedat": {
+          "_seconds": 1769107909,
+          "_nanoseconds": 969000000
         }
       }
     },
@@ -4235,9 +4996,10 @@
           "_seconds": 1764171461,
           "_nanoseconds": 771000000
         },
+        "geohash": "u3yfmp0u",
         "updatedat": {
-          "_seconds": 1764171461,
-          "_nanoseconds": 771000000
+          "_seconds": 1769107910,
+          "_nanoseconds": 1000000
         }
       }
     },
@@ -4258,7 +5020,12 @@
           "_latitude": 38.4969018,
           "_longitude": 44.3205641
         },
-        "name": "Kapıköy-Razi"
+        "name": "Kapıköy-Razi",
+        "geohash": "syze081h",
+        "updatedat": {
+          "_seconds": 1769107910,
+          "_nanoseconds": 21000000
+        }
       }
     },
     {
@@ -4282,6 +5049,11 @@
         "createdat": {
           "_seconds": 1764172687,
           "_nanoseconds": 825000000
+        },
+        "geohash": "vc0mx8sq",
+        "updatedat": {
+          "_seconds": 1769107910,
+          "_nanoseconds": 41000000
         }
       }
     },
@@ -4307,9 +5079,10 @@
           "_seconds": 1764171929,
           "_nanoseconds": 678000000
         },
+        "geohash": "ueusufcq",
         "updatedat": {
-          "_seconds": 1764257547,
-          "_nanoseconds": 590000000
+          "_seconds": 1769107910,
+          "_nanoseconds": 60000000
         }
       }
     },
@@ -4335,9 +5108,10 @@
           "_seconds": 1764171929,
           "_nanoseconds": 793000000
         },
+        "geohash": "uemr4w0f",
         "updatedat": {
-          "_seconds": 1764257555,
-          "_nanoseconds": 490000000
+          "_seconds": 1769107910,
+          "_nanoseconds": 100000000
         }
       }
     },
@@ -4360,10 +5134,6 @@
         },
         "name": "Ruwaished / Turaibil",
         "comment": "You'll have to be escorted on Iraqi side, sometimes all the way between the border and Baghdad, sometimes just a few km from the border.",
-        "updatedat": {
-          "_seconds": 1766353224,
-          "_nanoseconds": 685000000
-        },
         "comment_translations": {
           "en": "You'll have to be escorted on Iraqi side, sometimes all the way between the border and Baghdad, sometimes just a few km from the border.",
           "fr": "Vous devrez être escorté du côté irakien, parfois jusqu'à Bagdad, parfois à quelques kilomètres seulement de la frontière.",
@@ -4374,6 +5144,11 @@
           "nl": "Aan de Iraakse kant moet je onder begeleiding reizen, soms helemaal tussen de grens en Bagdad, soms slechts een paar kilometer van de grens.",
           "pl": "Będziesz musiał skorzystać z eskorty po stronie irackiej, czasami aż do Bagdadu, a czasami tylko kilka kilometrów od granicy.",
           "ru": "На иракской стороне вас будут сопровождать, иногда на всем пути от границы до Багдада, а иногда всего в нескольких километрах от границы."
+        },
+        "geohash": "svgdr8h4",
+        "updatedat": {
+          "_seconds": 1769107910,
+          "_nanoseconds": 119000000
         }
       }
     },
@@ -4394,7 +5169,12 @@
           "_latitude": 43.0251607,
           "_longitude": 74.7036648
         },
-        "name": "Korday / Ak-Zhol"
+        "name": "Korday / Ak-Zhol",
+        "geohash": "txthgbmx",
+        "updatedat": {
+          "_seconds": 1769107910,
+          "_nanoseconds": 141000000
+        }
       }
     },
     {
@@ -4414,7 +5194,12 @@
           "_latitude": 30.5053954,
           "_longitude": 48.0266119
         },
-        "name": "Shalamcheh"
+        "name": "Shalamcheh",
+        "geohash": "tj6jsc7f",
+        "updatedat": {
+          "_seconds": 1769107910,
+          "_nanoseconds": 160000000
+        }
       }
     },
     {
@@ -4446,6 +5231,11 @@
           "nl": "Vroeger was het mogelijk om met het juiste Abchazië-visum van Georgië naar Abchazië te reizen, maar het lijkt erop dat niemand dat al lange tijd meer lukt.\n\nAls je vanuit Georgië komt, moet je na je bezoek aan Abchazië via dezelfde grensovergang terugkeren naar Georgië (en niet doorreizen naar Rusland).",
           "pl": "Kiedyś można było przekroczyć granicę z Gruzji do Abchazji z odpowiednią wizą abchaską, ale wygląda na to, że od dawna nikomu się to nie udaje.\nJadąc z Gruzji, należy wrócić do Gruzji tym samym przejściem granicznym po wizycie w Abchazji (a nie kontynuować podróży do Rosji).",
           "ru": "Раньше можно было пересечь границу из Грузии в Абхазию при наличии соответствующей абхазской визы, но, похоже, уже давно это не удаётся.\nЕсли вы приехали из Грузии, то после посещения Абхазии вам нужно вернуться в Грузию через тот же пограничный переход (а не продолжать путь в Россию)."
+        },
+        "geohash": "sztf0wu0",
+        "updatedat": {
+          "_seconds": 1769107910,
+          "_nanoseconds": 177000000
         }
       }
     },
@@ -4478,6 +5268,11 @@
           "nl": "Veerterminal.",
           "pl": "Terminal promowy.",
           "ru": "Паромный терминал."
+        },
+        "geohash": "ybw2fgne",
+        "updatedat": {
+          "_seconds": 1769107910,
+          "_nanoseconds": 196000000
         }
       }
     },
@@ -4510,6 +5305,11 @@
           "nl": "Een visum bij aankomst in Laos is niet beschikbaar en een e-visum wordt niet geaccepteerd.",
           "pl": "Usługa VOA w Laosie jest niedostępna, a e-wiza nie jest akceptowana.",
           "ru": "Визы по прибытии в Лаос не предоставляются, электронные визы не принимаются."
+        },
+        "geohash": "w6uhf1dz",
+        "updatedat": {
+          "_seconds": 1769107910,
+          "_nanoseconds": 232000000
         }
       }
     },
@@ -4542,6 +5342,11 @@
           "nl": "Een visum bij aankomst in Laos is beschikbaar, maar een e-visum wordt niet geaccepteerd.",
           "pl": "Usługa Lao VOA jest dostępna, ale eVisa nie jest akceptowana.",
           "ru": "Визы по прибытии в Лаос принимаются, но электронные визы не принимаются."
+        },
+        "geohash": "w6gy96nf",
+        "updatedat": {
+          "_seconds": 1769107910,
+          "_nanoseconds": 271000000
         }
       }
     },
@@ -4562,7 +5367,12 @@
           "_latitude": 31.527683,
           "_longitude": 37.0819015
         },
-        "name": "Al Omari"
+        "name": "Al Omari",
+        "geohash": "svd77g6n",
+        "updatedat": {
+          "_seconds": 1769107910,
+          "_nanoseconds": 314000000
+        }
       }
     },
     {
@@ -4582,6 +5392,11 @@
         "location": {
           "_latitude": 37.9388556,
           "_longitude": 70.2292377
+        },
+        "geohash": "tw9zy4e3",
+        "updatedat": {
+          "_seconds": 1769107910,
+          "_nanoseconds": 333000000
         }
       }
     },
@@ -4614,6 +5429,11 @@
           "nl": "Grens tussen Syrië en Koerdistan.",
           "pl": "Granica między Syrią i Kurdystanem.",
           "ru": "Граница между Сирией и Курдистаном."
+        },
+        "geohash": "syw4gxvh",
+        "updatedat": {
+          "_seconds": 1769107910,
+          "_nanoseconds": 351000000
         }
       }
     },
@@ -4634,7 +5454,12 @@
           "_longitude": 79.1812994
         },
         "countries": "KGZ-KAZ",
-        "name": "Karkara"
+        "name": "Karkara",
+        "geohash": "tz873zdj",
+        "updatedat": {
+          "_seconds": 1769107910,
+          "_nanoseconds": 369000000
+        }
       }
     },
     {
@@ -4654,7 +5479,12 @@
           "_latitude": 29.1709518,
           "_longitude": 36.0740579
         },
-        "name": "Al Mudawara"
+        "name": "Al Mudawara",
+        "geohash": "sv1tuykm",
+        "updatedat": {
+          "_seconds": 1769107910,
+          "_nanoseconds": 389000000
+        }
       }
     },
     {
@@ -4674,7 +5504,12 @@
           "_latitude": 28.5430629,
           "_longitude": 48.3896077
         },
-        "name": "Nuwaiseeb/Khafji"
+        "name": "Nuwaiseeb/Khafji",
+        "geohash": "tj46mhh5",
+        "updatedat": {
+          "_seconds": 1769107910,
+          "_nanoseconds": 405000000
+        }
       }
     },
     {
@@ -4694,7 +5529,12 @@
           "_latitude": 43.6949726,
           "_longitude": 111.9361926
         },
-        "name": "Zamiin-Uud/Erenhot"
+        "name": "Zamiin-Uud/Erenhot",
+        "geohash": "wrz8e4mm",
+        "updatedat": {
+          "_seconds": 1769107910,
+          "_nanoseconds": 423000000
+        }
       }
     },
     {
@@ -4716,10 +5556,6 @@
         },
         "comment": "On this border post, the Indian eVisa is accepted, even for the first entry.",
         "name": "Napalganj / Rupaidiha",
-        "updatedat": {
-          "_seconds": 1768898943,
-          "_nanoseconds": 429000000
-        },
         "comment_translations": {
           "en": "On this border post, the Indian eVisa is accepted, even for the first entry.",
           "fr": "À ce poste frontière, le visa électronique indien est accepté, même pour une première entrée.",
@@ -4730,6 +5566,11 @@
           "nl": "Bij deze grenspost wordt het Indiase e-visum geaccepteerd, zelfs bij de eerste binnenkomst.",
           "pl": "Na tym przejściu granicznym akceptowane są indyjskie wizy elektroniczne, nawet przy pierwszym wjeździe.",
           "ru": "На этом пограничном пункте принимается индийская электронная виза, даже для первого въезда."
+        },
+        "geohash": "tufp2uew",
+        "updatedat": {
+          "_seconds": 1769107910,
+          "_nanoseconds": 463000000
         }
       }
     },
@@ -4762,6 +5603,11 @@
           "nl": "Het Indonesische e-visum wordt niet geaccepteerd.",
           "pl": "Indonezyjska e-wiza nie jest akceptowana.",
           "ru": "Электронные визы Индонезии не принимаются."
+        },
+        "geohash": "w2ptcg72",
+        "updatedat": {
+          "_seconds": 1769107910,
+          "_nanoseconds": 504000000
         }
       }
     },
@@ -4782,7 +5628,12 @@
           "_latitude": 37.7174784,
           "_longitude": 44.622154
         },
-        "name": "Serow-Esender"
+        "name": "Serow-Esender",
+        "geohash": "syxwx6kb",
+        "updatedat": {
+          "_seconds": 1769107910,
+          "_nanoseconds": 522000000
+        }
       }
     },
     {
@@ -4802,7 +5653,12 @@
           "_latitude": 34.3977199,
           "_longitude": 40.9769976
         },
-        "name": "Al Qa’im / Abu Kamal"
+        "name": "Al Qa’im / Abu Kamal",
+        "geohash": "syj5smyt",
+        "updatedat": {
+          "_seconds": 1769107910,
+          "_nanoseconds": 543000000
+        }
       }
     },
     {
@@ -4822,6 +5678,11 @@
         "location": {
           "_latitude": 41.5882762,
           "_longitude": 42.8185854
+        },
+        "geohash": "szqkw6gt",
+        "updatedat": {
+          "_seconds": 1769107910,
+          "_nanoseconds": 562000000
         }
       }
     },
@@ -4854,6 +5715,11 @@
           "nl": "Veerterminal",
           "pl": "Terminal promowy",
           "ru": "Паромный терминал"
+        },
+        "geohash": "ybfty57h",
+        "updatedat": {
+          "_seconds": 1769107910,
+          "_nanoseconds": 581000000
         }
       }
     },
@@ -4874,7 +5740,12 @@
           "_latitude": 39.413881,
           "_longitude": 71.7209223
         },
-        "name": "Karamyk / Jirgital"
+        "name": "Karamyk / Jirgital",
+        "geohash": "tx500p1d",
+        "updatedat": {
+          "_seconds": 1769107910,
+          "_nanoseconds": 599000000
+        }
       }
     },
     {
@@ -4896,10 +5767,6 @@
           "_longitude": 104.4918251
         },
         "comment": "Lao VOA not available and eVisa not accepted.\nVietnam eVisa not accepted.",
-        "updatedat": {
-          "_seconds": 1765195058,
-          "_nanoseconds": 581000000
-        },
         "comment_translations": {
           "en": "Lao VOA not available and eVisa not accepted.\nVietnam eVisa not accepted.",
           "fr": "Le visa à l'arrivée pour le Laos n'est pas disponible et le visa électronique n'est pas accepté.\n\nLe visa électronique pour le Vietnam n'est pas accepté.",
@@ -4910,6 +5777,11 @@
           "nl": "Laotiaans visum bij aankomst niet beschikbaar en e-visum niet geaccepteerd.\n\nVietnamees e-visum niet geaccepteerd.",
           "pl": "Laotańska VOA niedostępna, a e-wizy nie są akceptowane.\nWietnamska e-wiza nie jest akceptowana.",
           "ru": "Лаосская виза по прибытии недоступна, электронная виза не принимается.\nВьетнамская электронная виза не принимается."
+        },
+        "geohash": "w7dmcub8",
+        "updatedat": {
+          "_seconds": 1769107910,
+          "_nanoseconds": 640000000
         }
       }
     },
@@ -4930,6 +5802,11 @@
         "location": {
           "_latitude": 39.6956473,
           "_longitude": 73.9254246
+        },
+        "geohash": "txh9f4qg",
+        "updatedat": {
+          "_seconds": 1769107910,
+          "_nanoseconds": 659000000
         }
       }
     },
@@ -4950,6 +5827,11 @@
         "location": {
           "_latitude": 40.1222811,
           "_longitude": 69.6702943
+        },
+        "geohash": "tx1s32h3",
+        "updatedat": {
+          "_seconds": 1769107910,
+          "_nanoseconds": 679000000
         }
       }
     },
@@ -4970,7 +5852,12 @@
           "_latitude": 39.3733558,
           "_longitude": 73.3268693
         },
-        "name": "Kyzyl-Art / Bor Dobo"
+        "name": "Kyzyl-Art / Bor Dobo",
+        "geohash": "twupuxdy",
+        "updatedat": {
+          "_seconds": 1769107910,
+          "_nanoseconds": 696000000
+        }
       }
     },
     {
@@ -4992,10 +5879,6 @@
         },
         "name": "Le Thanh",
         "comment": "Vietnam eVisa not accepted.",
-        "updatedat": {
-          "_seconds": 1765195498,
-          "_nanoseconds": 934000000
-        },
         "comment_translations": {
           "en": "Vietnam eVisa not accepted.",
           "fr": "Visa électronique vietnamien non accepté.",
@@ -5006,6 +5889,11 @@
           "nl": "Het e-visum voor Vietnam wordt niet geaccepteerd.",
           "pl": "Wietnamska wiza elektroniczna nie jest akceptowana.",
           "ru": "Электронные визы во Вьетнам не принимаются."
+        },
+        "geohash": "w6kqq4mv",
+        "updatedat": {
+          "_seconds": 1769107910,
+          "_nanoseconds": 714000000
         }
       }
     },
@@ -5037,6 +5925,11 @@
           "nl": "Veerterminal.",
           "pl": "Terminal promowy.",
           "ru": "Паромный терминал."
+        },
+        "geohash": "ybmpq9u2",
+        "updatedat": {
+          "_seconds": 1769107910,
+          "_nanoseconds": 733000000
         }
       }
     },
@@ -5069,6 +5962,11 @@
           "nl": "Alleen open voor bilaterale handel, geen toeristen toegestaan.",
           "pl": "Otwarte tylko na handel dwustronny, wstęp wzbroniony turystom.",
           "ru": "Открыто только для двусторонней торговли, туристам вход воспрещен."
+        },
+        "geohash": "ttxvpdu6",
+        "updatedat": {
+          "_seconds": 1769107910,
+          "_nanoseconds": 752000000
         }
       }
     },
@@ -5090,9 +5988,10 @@
           "_longitude": 47.0163814
         },
         "name": "Al Wadiah",
+        "geohash": "t512mvu6",
         "updatedat": {
-          "_seconds": 1764257288,
-          "_nanoseconds": 915000000
+          "_seconds": 1769107910,
+          "_nanoseconds": 771000000
         }
       }
     },
@@ -5117,6 +6016,11 @@
         "createdat": {
           "_seconds": 1764172689,
           "_nanoseconds": 339000000
+        },
+        "geohash": "v9b92vh8",
+        "updatedat": {
+          "_seconds": 1769107910,
+          "_nanoseconds": 790000000
         }
       }
     },
@@ -5137,7 +6041,12 @@
           "_latitude": 24.215886,
           "_longitude": 55.9554305
         },
-        "name": "Khatm Al Shikla"
+        "name": "Khatm Al Shikla",
+        "geohash": "thrcc23e",
+        "updatedat": {
+          "_seconds": 1769107910,
+          "_nanoseconds": 807000000
+        }
       }
     },
     {
@@ -5157,6 +6066,11 @@
         "location": {
           "_latitude": 36.5199427,
           "_longitude": 61.1649514
+        },
+        "geohash": "tq7rzb6b",
+        "updatedat": {
+          "_seconds": 1769107910,
+          "_nanoseconds": 847000000
         }
       }
     },
@@ -5177,6 +6091,11 @@
         "location": {
           "_latitude": 41.5209873,
           "_longitude": 41.5483829
+        },
+        "geohash": "szms1qwt",
+        "updatedat": {
+          "_seconds": 1769107910,
+          "_nanoseconds": 867000000
         }
       }
     },
@@ -5197,7 +6116,12 @@
           "_latitude": 39.5181679,
           "_longitude": 67.3994957
         },
-        "name": "Jartepa / Sarazm"
+        "name": "Jartepa / Sarazm",
+        "geohash": "trpbvdnf",
+        "updatedat": {
+          "_seconds": 1769107910,
+          "_nanoseconds": 885000000
+        }
       }
     },
     {
@@ -5217,7 +6141,12 @@
           "_latitude": 16.5098977,
           "_longitude": 42.9729442
         },
-        "name": "At Tuwal"
+        "name": "At Tuwal",
+        "geohash": "sfytcvec",
+        "updatedat": {
+          "_seconds": 1769107910,
+          "_nanoseconds": 904000000
+        }
       }
     },
     {
@@ -5237,7 +6166,12 @@
           "_latitude": 41.1500699,
           "_longitude": 67.9306503
         },
-        "name": "Shardara"
+        "name": "Shardara",
+        "geohash": "tx261g1s",
+        "updatedat": {
+          "_seconds": 1769107910,
+          "_nanoseconds": 922000000
+        }
       }
     },
     {
@@ -5257,7 +6191,12 @@
           "_latitude": 45.7535616,
           "_longitude": 116.2359356
         },
-        "name": "Bichigt/Zuun Khatavch"
+        "name": "Bichigt/Zuun Khatavch",
+        "geohash": "y84sm10m",
+        "updatedat": {
+          "_seconds": 1769107910,
+          "_nanoseconds": 943000000
+        }
       }
     },
     {
@@ -5278,9 +6217,10 @@
           "_longitude": 46.3090885
         },
         "name": "Lagodeki / Balakan",
+        "geohash": "tp2vtzcp",
         "updatedat": {
-          "_seconds": 1764168589,
-          "_nanoseconds": 593000000
+          "_seconds": 1769107910,
+          "_nanoseconds": 962000000
         }
       }
     },
@@ -5301,6 +6241,11 @@
         "location": {
           "_latitude": 4.7930764,
           "_longitude": 115.2357124
+        },
+        "geohash": "w8cgq281",
+        "updatedat": {
+          "_seconds": 1769107910,
+          "_nanoseconds": 981000000
         }
       }
     },
@@ -5321,6 +6266,11 @@
         "location": {
           "_latitude": 1.4642546,
           "_longitude": 103.7665923
+        },
+        "geohash": "w23b3689",
+        "updatedat": {
+          "_seconds": 1769107910,
+          "_nanoseconds": 999000000
         }
       }
     },
@@ -5341,7 +6291,12 @@
           "_latitude": 40.8357383,
           "_longitude": 68.5643067
         },
-        "name": "Atameken / Gulistan"
+        "name": "Atameken / Gulistan",
+        "geohash": "tx2b21zj",
+        "updatedat": {
+          "_seconds": 1769107911,
+          "_nanoseconds": 22000000
+        }
       }
     },
     {
@@ -5361,7 +6316,12 @@
           "_latitude": 46.1423775,
           "_longitude": 90.9953677
         },
-        "name": "Bulgan/Takashiken"
+        "name": "Bulgan/Takashiken",
+        "geohash": "y00wqxuy",
+        "updatedat": {
+          "_seconds": 1769107911,
+          "_nanoseconds": 42000000
+        }
       }
     },
     {
@@ -5381,7 +6341,12 @@
           "_latitude": 26.095704,
           "_longitude": 61.8465359
         },
-        "name": "Mand-Pishin"
+        "name": "Mand-Pishin",
+        "geohash": "tkeurqe6",
+        "updatedat": {
+          "_seconds": 1769107911,
+          "_nanoseconds": 60000000
+        }
       }
     },
     {
@@ -5413,6 +6378,11 @@
           "nl": "Veerbootovertocht.\n\nLao VAA is niet beschikbaar en e-visum wordt niet geaccepteerd.",
           "pl": "Przeprawa promowa.\nLaotańska VOA niedostępna, a e-wizy nie są akceptowane.",
           "ru": "Переправа на пароме.\nЛаосская виза по прибытии недоступна, электронная виза не принимается."
+        },
+        "geohash": "w70qtu4e",
+        "updatedat": {
+          "_seconds": 1769107911,
+          "_nanoseconds": 77000000
         }
       }
     },
@@ -5433,7 +6403,12 @@
           "_latitude": 48.0264965,
           "_longitude": 118.1756549
         },
-        "name": "Bayan/Hushuu Uvdug"
+        "name": "Bayan/Hushuu Uvdug",
+        "geohash": "y8s11nuy",
+        "updatedat": {
+          "_seconds": 1769107911,
+          "_nanoseconds": 96000000
+        }
       }
     },
     {
@@ -5457,6 +6432,11 @@
         "createdat": {
           "_seconds": 1764172689,
           "_nanoseconds": 76000000
+        },
+        "geohash": "v352kx9b",
+        "updatedat": {
+          "_seconds": 1769107911,
+          "_nanoseconds": 114000000
         }
       }
     },
@@ -5477,7 +6457,12 @@
           "_latitude": 45.5485647,
           "_longitude": 133.322976
         },
-        "name": "Lesozavodsk"
+        "name": "Lesozavodsk",
+        "geohash": "ybng1gfg",
+        "updatedat": {
+          "_seconds": 1769107911,
+          "_nanoseconds": 132000000
+        }
       }
     },
     {
@@ -5509,6 +6494,11 @@
           "nl": "Het Indonesische e-visum wordt niet geaccepteerd.",
           "pl": "Indonezyjska e-wiza nie jest akceptowana.",
           "ru": "Электронные визы Индонезии не принимаются."
+        },
+        "geohash": "w2npqrgu",
+        "updatedat": {
+          "_seconds": 1769107911,
+          "_nanoseconds": 170000000
         }
       }
     },
@@ -5534,9 +6524,10 @@
           "_seconds": 1764171929,
           "_nanoseconds": 554000000
         },
+        "geohash": "ushm81bm",
         "updatedat": {
-          "_seconds": 1764257543,
-          "_nanoseconds": 96000000
+          "_seconds": 1769107911,
+          "_nanoseconds": 190000000
         }
       }
     },
@@ -5558,9 +6549,10 @@
           "_longitude": 48.4164344
         },
         "name": "Samur / Yarag-Kazmalyar",
+        "geohash": "tp6kvezb",
         "updatedat": {
-          "_seconds": 1764168585,
-          "_nanoseconds": 781000000
+          "_seconds": 1769107911,
+          "_nanoseconds": 209000000
         }
       }
     },
@@ -5581,6 +6573,11 @@
         "location": {
           "_latitude": 41.4538484,
           "_longitude": 69.2087231
+        },
+        "geohash": "tx35yfkq",
+        "updatedat": {
+          "_seconds": 1769107911,
+          "_nanoseconds": 230000000
         }
       }
     },
@@ -5602,9 +6599,10 @@
           "_longitude": 115.7448754
         },
         "name": "Yereentsav/Solovyovsk",
+        "geohash": "y8f7ccdz",
         "updatedat": {
-          "_seconds": 1764167316,
-          "_nanoseconds": 440000000
+          "_seconds": 1769107911,
+          "_nanoseconds": 270000000
         }
       }
     },
@@ -5625,6 +6623,11 @@
         "location": {
           "_latitude": 13.086883,
           "_longitude": 102.445235
+        },
+        "geohash": "w62f7nqk",
+        "updatedat": {
+          "_seconds": 1769107911,
+          "_nanoseconds": 290000000
         }
       }
     },
@@ -5645,6 +6648,11 @@
         "location": {
           "_latitude": 10.6027341,
           "_longitude": 104.9269809
+        },
+        "geohash": "w3fs7djm",
+        "updatedat": {
+          "_seconds": 1769107911,
+          "_nanoseconds": 309000000
         }
       }
     },
@@ -5665,6 +6673,11 @@
         "location": {
           "_latitude": 42.9953162,
           "_longitude": 74.8639649
+        },
+        "geohash": "txthxe43",
+        "updatedat": {
+          "_seconds": 1769107911,
+          "_nanoseconds": 328000000
         }
       }
     },
@@ -5689,6 +6702,11 @@
         "createdat": {
           "_seconds": 1764172689,
           "_nanoseconds": 470000000
+        },
+        "geohash": "v373shkp",
+        "updatedat": {
+          "_seconds": 1769107911,
+          "_nanoseconds": 347000000
         }
       }
     },
@@ -5709,6 +6727,11 @@
         "location": {
           "_latitude": 23.4593701,
           "_longitude": 91.2534307
+        },
+        "geohash": "wh0vkw8s",
+        "updatedat": {
+          "_seconds": 1769107911,
+          "_nanoseconds": 367000000
         }
       }
     },
@@ -5730,9 +6753,10 @@
           "_longitude": 36.0424049
         },
         "name": "Ramtha",
+        "geohash": "svc9k4vk",
         "updatedat": {
-          "_seconds": 1764703154,
-          "_nanoseconds": 762000000
+          "_seconds": 1769107911,
+          "_nanoseconds": 386000000
         }
       }
     },
@@ -5757,6 +6781,11 @@
         "createdat": {
           "_seconds": 1764172512,
           "_nanoseconds": 543000000
+        },
+        "geohash": "u3wtq45w",
+        "updatedat": {
+          "_seconds": 1769107911,
+          "_nanoseconds": 418000000
         }
       }
     },
@@ -5777,6 +6806,11 @@
         "location": {
           "_latitude": 12.9267365,
           "_longitude": 102.492859
+        },
+        "geohash": "w62cs31p",
+        "updatedat": {
+          "_seconds": 1769107911,
+          "_nanoseconds": 437000000
         }
       }
     },
@@ -5809,6 +6843,11 @@
           "nl": "Het Laotiaanse e-visum wordt hier niet geaccepteerd.",
           "pl": "Wiza elektroniczna do Laosu nie jest tutaj akceptowana.",
           "ru": "Здесь не принимаются электронные визы Лаоса."
+        },
+        "geohash": "w747qyhc",
+        "updatedat": {
+          "_seconds": 1769107911,
+          "_nanoseconds": 458000000
         }
       }
     },
@@ -5831,10 +6870,6 @@
         },
         "name": "An Nukhayb / Arar",
         "comment": "Closed to tourists. Only open for Iraqi pilgrims heading to Mecca.",
-        "updatedat": {
-          "_seconds": 1765721960,
-          "_nanoseconds": 771000000
-        },
         "comment_translations": {
           "en": "Closed to tourists. Only open for Iraqi pilgrims heading to Mecca.",
           "fr": "Fermé aux touristes. Ouvert uniquement aux pèlerins irakiens se rendant à La Mecque.",
@@ -5845,6 +6880,11 @@
           "nl": "Gesloten voor toeristen. Alleen open voor Iraakse pelgrims op weg naar Mekka.",
           "pl": "Zamknięte dla turystów. Otwarte tylko dla pielgrzymów z Iraku udających się do Mekki.",
           "ru": "Закрыто для туристов. Открыто только для иракских паломников, направляющихся в Мекку."
+        },
+        "geohash": "svt6rp56",
+        "updatedat": {
+          "_seconds": 1769107911,
+          "_nanoseconds": 551000000
         }
       }
     },
@@ -5865,6 +6905,11 @@
         "location": {
           "_latitude": 36.6461706,
           "_longitude": 37.0847701
+        },
+        "geohash": "syd27zhr",
+        "updatedat": {
+          "_seconds": 1769107911,
+          "_nanoseconds": 569000000
         }
       }
     },
@@ -5897,6 +6942,11 @@
           "nl": "Grenspost die Tatopani en Zhangmu verbindt aan de Araniko-snelweg. Het was de enige grensovergang van Nepal naar Tibet van de jaren 60 tot de grote aardbeving van 2015 die de post verwoestte. Sindsdien is de grenspost Rasuwagadhi-Gyirong de enige grensovergang.\n\nDe grenspost Kodari is normaal gesproken gesloten, maar werd heropend nadat de weg naar Gyirong was verwoest (moessonseizoen 2025).\n\nHet is dus te verwachten dat de grenspost weer gesloten zal worden zodra de grensovergang bij Gyirong weer toegankelijk is.",
           "pl": "Słup graniczny łączący Tatopani i Zhangmu na autostradzie Araniko. Było to jedyne przejście graniczne z Nepalu do Tybetu od lat 60. XX wieku, aż do zniszczenia go przez silne trzęsienie ziemi w 2015 roku. Od tego czasu funkcję tę przejęła granica Rasuwagadhi-Gyirong.\nSłup graniczny w Kodari jest zazwyczaj zamknięty, ale został ponownie otwarty po zniszczeniu drogi Gyirong (sezon monsunowy 2025).\nOczekuje się więc, że zostanie ponownie zamknięty, gdy przejście graniczne w Gyirong będzie ponownie dostępne.",
           "ru": "Пограничный пункт, соединяющий Татопани и Чжанму на шоссе Аранико. С 1960-х годов это был единственный пункт пересечения границы из Непала в Тибет, пока его не разрушило сильное землетрясение 2015 года. С тех пор его место занял пограничный пункт Расувагадхи-Гьиронг.\nПограничный пункт Кодари обычно закрыт, но он был вновь открыт после разрушения дороги на Гиронг (сезон муссонов 2025 года).\nПоэтому ожидается, что он будет снова закрыт после того, как станет доступен пункт пересечения границы на Гиронг."
+        },
+        "geohash": "tuvphhk7",
+        "updatedat": {
+          "_seconds": 1769107911,
+          "_nanoseconds": 609000000
         }
       }
     },
@@ -5917,6 +6967,11 @@
         "location": {
           "_latitude": 41.1786774,
           "_longitude": 61.3749816
+        },
+        "geohash": "tr7dk87g",
+        "updatedat": {
+          "_seconds": 1769107911,
+          "_nanoseconds": 652000000
         }
       }
     },
@@ -5941,6 +6996,11 @@
         "createdat": {
           "_seconds": 1764172688,
           "_nanoseconds": 949000000
+        },
+        "geohash": "v31ddes7",
+        "updatedat": {
+          "_seconds": 1769107911,
+          "_nanoseconds": 670000000
         }
       }
     },
@@ -5961,7 +7021,12 @@
           "_latitude": 24.9783555,
           "_longitude": 56.3648257
         },
-        "name": "Khatmat Malaha"
+        "name": "Khatmat Malaha",
+        "geohash": "tk2n4e5t",
+        "updatedat": {
+          "_seconds": 1769107911,
+          "_nanoseconds": 689000000
+        }
       }
     },
     {
@@ -5981,7 +7046,12 @@
           "_latitude": 38.50238,
           "_longitude": 68.1016314
         },
-        "name": "Saryasiya / Bratstvo"
+        "name": "Saryasiya / Bratstvo",
+        "geohash": "twb7j9nh",
+        "updatedat": {
+          "_seconds": 1769107911,
+          "_nanoseconds": 709000000
+        }
       }
     },
     {
@@ -6001,7 +7071,12 @@
           "_latitude": 20.2168403,
           "_longitude": 100.4617298
         },
-        "name": "Friendship Bridge 4/Chiang Khong"
+        "name": "Friendship Bridge 4/Chiang Khong",
+        "geohash": "w5x7n03g",
+        "updatedat": {
+          "_seconds": 1769107911,
+          "_nanoseconds": 728000000
+        }
       }
     },
     {
@@ -6021,7 +7096,12 @@
           "_latitude": 22.2122317,
           "_longitude": 55.5275973
         },
-        "name": "Rub' al Khali"
+        "name": "Rub' al Khali",
+        "geohash": "t5zqre9g",
+        "updatedat": {
+          "_seconds": 1769107911,
+          "_nanoseconds": 747000000
+        }
       }
     },
     {
@@ -6042,9 +7122,10 @@
           "_longitude": 66.43805
         },
         "name": "Chaman/Spin Boldak",
+        "geohash": "tmx0pg4s",
         "updatedat": {
-          "_seconds": 1764932129,
-          "_nanoseconds": 580000000
+          "_seconds": 1769107911,
+          "_nanoseconds": 787000000
         }
       }
     },
@@ -6065,7 +7146,12 @@
           "_latitude": 26.7926375,
           "_longitude": 91.5022946
         },
-        "name": "Samdrup Jongkhar"
+        "name": "Samdrup Jongkhar",
+        "geohash": "whc06jmy",
+        "updatedat": {
+          "_seconds": 1769107911,
+          "_nanoseconds": 821000000
+        }
       }
     },
     {
@@ -6085,7 +7171,12 @@
           "_latitude": 41.1404232,
           "_longitude": 43.7920841
         },
-        "name": "Bavra/Ninotsminda"
+        "name": "Bavra/Ninotsminda",
+        "geohash": "szr4h92k",
+        "updatedat": {
+          "_seconds": 1769107911,
+          "_nanoseconds": 839000000
+        }
       }
     },
     {
@@ -6105,6 +7196,11 @@
         "location": {
           "_latitude": 39.2112391,
           "_longitude": 63.7109602
+        },
+        "geohash": "tqvr1f0y",
+        "updatedat": {
+          "_seconds": 1769107911,
+          "_nanoseconds": 856000000
         }
       }
     },
@@ -6127,10 +7223,6 @@
         },
         "name": "Verkhniy Lars / Kazbegi",
         "comment": "Russian eVisa is valid here.",
-        "updatedat": {
-          "_seconds": 1768482197,
-          "_nanoseconds": 231000000
-        },
         "comment_translations": {
           "en": "Russian eVisa is valid here.",
           "fr": "Le visa électronique russe est valable ici.",
@@ -6141,6 +7233,11 @@
           "nl": "Het Russische e-visum is hier geldig.",
           "pl": "Rosyjska e-wiza jest tutaj ważna.",
           "ru": "Здесь действительна российская электронная виза."
+        },
+        "geohash": "szxeps8n",
+        "updatedat": {
+          "_seconds": 1769107911,
+          "_nanoseconds": 878000000
         }
       }
     },
@@ -6162,10 +7259,6 @@
         },
         "name": "Kyakhta/Altanbulag",
         "comment": "Russian eVisa is valid here.",
-        "updatedat": {
-          "_seconds": 1768482183,
-          "_nanoseconds": 433000000
-        },
         "comment_translations": {
           "en": "Russian eVisa is valid here.",
           "fr": "Le visa électronique russe est valable ici.",
@@ -6176,6 +7269,11 @@
           "nl": "Het Russische e-visum is hier geldig.",
           "pl": "Rosyjska e-wiza jest tutaj ważna.",
           "ru": "Здесь действительна российская электронная виза."
+        },
+        "geohash": "y2gwr0z4",
+        "updatedat": {
+          "_seconds": 1769107911,
+          "_nanoseconds": 895000000
         }
       }
     },
@@ -6200,6 +7298,11 @@
         "createdat": {
           "_seconds": 1764172688,
           "_nanoseconds": 349000000
+        },
+        "geohash": "v9f82n0z",
+        "updatedat": {
+          "_seconds": 1769107911,
+          "_nanoseconds": 915000000
         }
       }
     },
@@ -6232,6 +7335,11 @@
           "nl": "Een visum bij aankomst in Laos is niet beschikbaar en een e-visum wordt niet geaccepteerd.",
           "pl": "Usługa VOA w Laosie jest niedostępna, a e-wiza nie jest akceptowana.",
           "ru": "Визы по прибытии в Лаос не предоставляются, электронные визы не принимаются."
+        },
+        "geohash": "w75hw9pf",
+        "updatedat": {
+          "_seconds": 1769107911,
+          "_nanoseconds": 935000000
         }
       }
     },
@@ -6264,6 +7372,11 @@
           "nl": "Een visum bij aankomst in Laos is niet beschikbaar en een e-visum wordt niet geaccepteerd.",
           "pl": "Usługa VOA w Laosie jest niedostępna, a e-wiza nie jest akceptowana.",
           "ru": "Визы по прибытии в Лаос не предоставляются, электронные визы не принимаются."
+        },
+        "geohash": "w7d7kwqr",
+        "updatedat": {
+          "_seconds": 1769107911,
+          "_nanoseconds": 955000000
         }
       }
     },
@@ -6284,7 +7397,12 @@
           "_latitude": 24.907299,
           "_longitude": 55.8112143
         },
-        "name": "Ar Rawdah"
+        "name": "Ar Rawdah",
+        "geohash": "thrtwn0r",
+        "updatedat": {
+          "_seconds": 1769107911,
+          "_nanoseconds": 975000000
+        }
       }
     },
     {
@@ -6304,7 +7422,12 @@
           "_latitude": 45.2621886,
           "_longitude": 131.9781645
         },
-        "name": "Turiy Rog/Mishan"
+        "name": "Turiy Rog/Mishan",
+        "geohash": "ybjc7pxx",
+        "updatedat": {
+          "_seconds": 1769107911,
+          "_nanoseconds": 994000000
+        }
       }
     },
     {
@@ -6336,6 +7459,11 @@
           "nl": "Gesloten sinds de militaire machtsovername in Myanmar.",
           "pl": "Zamknięte od czasu przejęcia władzy w Mjanmie przez wojsko.",
           "ru": "Закрыто с момента военного переворота в Мьянме."
+        },
+        "geohash": "wh71fjcp",
+        "updatedat": {
+          "_seconds": 1769107912,
+          "_nanoseconds": 12000000
         }
       }
     },
@@ -6356,6 +7484,11 @@
         "location": {
           "_latitude": 13.8946896,
           "_longitude": 99.0819825
+        },
+        "geohash": "w4qrn9mq",
+        "updatedat": {
+          "_seconds": 1769107912,
+          "_nanoseconds": 31000000
         }
       }
     },
@@ -6376,6 +7509,11 @@
         "location": {
           "_latitude": 23.8394518,
           "_longitude": 91.2550016
+        },
+        "geohash": "wh0zsecf",
+        "updatedat": {
+          "_seconds": 1769107912,
+          "_nanoseconds": 50000000
         }
       }
     },
@@ -6408,6 +7546,11 @@
           "nl": "Een visum bij aankomst in Laos is niet beschikbaar en een e-visum wordt niet geaccepteerd.",
           "pl": "Usługa VOA w Laosie jest niedostępna, a e-wiza nie jest akceptowana.",
           "ru": "Визы по прибытии в Лаос не предоставляются, электронные визы не принимаются."
+        },
+        "geohash": "w6s7xt8u",
+        "updatedat": {
+          "_seconds": 1769107912,
+          "_nanoseconds": 70000000
         }
       }
     },
@@ -6428,7 +7571,12 @@
           "_latitude": 47.5023975,
           "_longitude": 85.6136464
         },
-        "name": "Jeminay/Maikapchagai"
+        "name": "Jeminay/Maikapchagai",
+        "geohash": "vbkyhptc",
+        "updatedat": {
+          "_seconds": 1769107912,
+          "_nanoseconds": 89000000
+        }
       }
     },
     {
@@ -6448,7 +7596,12 @@
           "_latitude": 41.2076482,
           "_longitude": 44.3201994
         },
-        "name": "Gogavan/Guguti"
+        "name": "Gogavan/Guguti",
+        "geohash": "szrd2t8g",
+        "updatedat": {
+          "_seconds": 1769107912,
+          "_nanoseconds": 109000000
+        }
       }
     },
     {
@@ -6473,9 +7626,10 @@
           "_seconds": 1764171461,
           "_nanoseconds": 833000000
         },
+        "geohash": "u3z97896",
         "updatedat": {
-          "_seconds": 1764171461,
-          "_nanoseconds": 833000000
+          "_seconds": 1769107912,
+          "_nanoseconds": 129000000
         }
       }
     },
@@ -6497,9 +7651,10 @@
           "_longitude": 48.5553613
         },
         "name": "Yalama / Tagirkent-Kazmalyar",
+        "geohash": "tp6t8yhy",
         "updatedat": {
-          "_seconds": 1764168243,
-          "_nanoseconds": 973000000
+          "_seconds": 1769107912,
+          "_nanoseconds": 146000000
         }
       }
     },
@@ -6521,9 +7676,10 @@
           "_longitude": 45.073882
         },
         "name": "Red Bridge/Sixli",
+        "geohash": "tp251etf",
         "updatedat": {
-          "_seconds": 1764168601,
-          "_nanoseconds": 112000000
+          "_seconds": 1769107912,
+          "_nanoseconds": 165000000
         }
       }
     },
@@ -6548,6 +7704,11 @@
         "createdat": {
           "_seconds": 1764172687,
           "_nanoseconds": 428000000
+        },
+        "geohash": "v068fc2t",
+        "updatedat": {
+          "_seconds": 1769107912,
+          "_nanoseconds": 182000000
         }
       }
     },
@@ -6580,6 +7741,11 @@
           "nl": "Alleen te voet, geen motorvoertuigen toegestaan.",
           "pl": "Tylko pieszo, zakaz poruszania się pojazdami mechanicznymi.",
           "ru": "Передвижение только пешком, автомобили запрещены."
+        },
+        "geohash": "tn07dehj",
+        "updatedat": {
+          "_seconds": 1769107912,
+          "_nanoseconds": 201000000
         }
       }
     },
@@ -6600,6 +7766,11 @@
         "location": {
           "_latitude": 38.3392833,
           "_longitude": 65.4661323
+        },
+        "geohash": "tqyd1eqy",
+        "updatedat": {
+          "_seconds": 1769107912,
+          "_nanoseconds": 220000000
         }
       }
     },
@@ -6624,6 +7795,11 @@
         "createdat": {
           "_seconds": 1764172512,
           "_nanoseconds": 726000000
+        },
+        "geohash": "u3wm8g9t",
+        "updatedat": {
+          "_seconds": 1769107912,
+          "_nanoseconds": 237000000
         }
       }
     },
@@ -6648,6 +7824,11 @@
         "createdat": {
           "_seconds": 1764172634,
           "_nanoseconds": 476000000
+        },
+        "geohash": "ud7c2gxg",
+        "updatedat": {
+          "_seconds": 1769107912,
+          "_nanoseconds": 256000000
         }
       }
     },
@@ -6668,7 +7849,12 @@
           "_latitude": 28.992359,
           "_longitude": 80.1207109
         },
-        "name": "Banbasa"
+        "name": "Banbasa",
+        "geohash": "tv0uzjyh",
+        "updatedat": {
+          "_seconds": 1769107912,
+          "_nanoseconds": 271000000
+        }
       }
     },
     {
@@ -6700,6 +7886,11 @@
           "nl": "Deze grensovergang is alleen open voor handel tussen de twee landen.",
           "pl": "To przejście graniczne jest otwarte wyłącznie w celu handlu między tymi dwoma krajami.",
           "ru": "Этот пограничный переход открыт только для торговли между двумя странами."
+        },
+        "geohash": "tv5wz4j5",
+        "updatedat": {
+          "_seconds": 1769107912,
+          "_nanoseconds": 288000000
         }
       }
     },
@@ -6720,7 +7911,12 @@
           "_latitude": 40.8229199,
           "_longitude": 72.9775511
         },
-        "name": "Khanabad"
+        "name": "Khanabad",
+        "geohash": "tx7bhxsd",
+        "updatedat": {
+          "_seconds": 1769107912,
+          "_nanoseconds": 330000000
+        }
       }
     },
     {
@@ -6752,6 +7948,11 @@
           "nl": "Ook wel bekend als de Roki-tunnel.",
           "pl": "Znany również jako tunel Roki.",
           "ru": "Также известен как туннель Роки."
+        },
+        "geohash": "szx6e2d0",
+        "updatedat": {
+          "_seconds": 1769107912,
+          "_nanoseconds": 367000000
         }
       }
     },
@@ -6772,7 +7973,12 @@
           "_latitude": 33.150938,
           "_longitude": 70.0300178
         },
-        "name": "Ghulam Khan"
+        "name": "Ghulam Khan",
+        "geohash": "ttcu9dfq",
+        "updatedat": {
+          "_seconds": 1769107912,
+          "_nanoseconds": 386000000
+        }
       }
     },
     {
@@ -6792,7 +7998,12 @@
           "_latitude": 29.357803,
           "_longitude": 34.9627204
         },
-        "name": "Durra"
+        "name": "Durra",
+        "geohash": "sv0z587j",
+        "updatedat": {
+          "_seconds": 1769107912,
+          "_nanoseconds": 403000000
+        }
       }
     },
     {
@@ -6812,7 +8023,12 @@
           "_latitude": 40.9680155,
           "_longitude": 68.7275182
         },
-        "name": "Yalama / Konysbayeva"
+        "name": "Yalama / Konysbayeva",
+        "geohash": "tx2c5cvz",
+        "updatedat": {
+          "_seconds": 1769107912,
+          "_nanoseconds": 419000000
+        }
       }
     },
     {
@@ -6832,7 +8048,12 @@
           "_latitude": 33.1225012,
           "_longitude": 46.0511099
         },
-        "name": "Mehran"
+        "name": "Mehran",
+        "geohash": "tjbsrvv2",
+        "updatedat": {
+          "_seconds": 1769107912,
+          "_nanoseconds": 437000000
+        }
       }
     },
     {
@@ -6856,6 +8077,11 @@
         "createdat": {
           "_seconds": 1764172687,
           "_nanoseconds": 761000000
+        },
+        "geohash": "vc1cuz0x",
+        "updatedat": {
+          "_seconds": 1769107912,
+          "_nanoseconds": 454000000
         }
       }
     },
@@ -6876,7 +8102,12 @@
           "_latitude": 26.1842342,
           "_longitude": 50.32286
         },
-        "name": "King Fahd Causeway"
+        "name": "King Fahd Causeway",
+        "geohash": "theucney",
+        "updatedat": {
+          "_seconds": 1769107912,
+          "_nanoseconds": 472000000
+        }
       }
     },
     {
@@ -6896,7 +8127,12 @@
           "_latitude": 26.0497437,
           "_longitude": 56.087357
         },
-        "name": "Al Dhara"
+        "name": "Al Dhara",
+        "geohash": "thxuhq1w",
+        "updatedat": {
+          "_seconds": 1769107912,
+          "_nanoseconds": 490000000
+        }
       }
     },
     {
@@ -6916,6 +8152,11 @@
         "location": {
           "_latitude": -2.6086255,
           "_longitude": 140.9980302
+        },
+        "geohash": "rps30mpe",
+        "updatedat": {
+          "_seconds": 1769107912,
+          "_nanoseconds": 508000000
         }
       }
     },
@@ -6937,9 +8178,10 @@
           "_longitude": 45.1356123
         },
         "name": "Sadaxli",
+        "geohash": "tp257hfd",
         "updatedat": {
-          "_seconds": 1764168595,
-          "_nanoseconds": 932000000
+          "_seconds": 1769107912,
+          "_nanoseconds": 525000000
         }
       }
     },
@@ -6960,6 +8202,11 @@
         "location": {
           "_latitude": 37.5280597,
           "_longitude": 59.3340997
+        },
+        "geohash": "tqdjqpvb",
+        "updatedat": {
+          "_seconds": 1769107912,
+          "_nanoseconds": 543000000
         }
       }
     },
@@ -6997,9 +8244,10 @@
           "ru": "Обязательное бронирование: https://lvrobeza.lv/en/reserve/"
         },
         "comment": "Mandatory reservation: https://lvrobeza.lv/en/reserve/\nRussian eVisa valid.",
+        "geohash": "udh09eke",
         "updatedat": {
-          "_seconds": 1768482591,
-          "_nanoseconds": 930000000
+          "_seconds": 1769107912,
+          "_nanoseconds": 559000000
         }
       }
     },
@@ -7020,6 +8268,11 @@
         "location": {
           "_latitude": 42.8812462,
           "_longitude": 75.1489788
+        },
+        "geohash": "txt7yn3c",
+        "updatedat": {
+          "_seconds": 1769107912,
+          "_nanoseconds": 579000000
         }
       }
     },
@@ -7042,10 +8295,6 @@
         },
         "name": "Wam Dibba",
         "comment": "This new crossing opened in 2025. It's able to process foreigners, so it's open to all.",
-        "updatedat": {
-          "_seconds": 1764671698,
-          "_nanoseconds": 269000000
-        },
         "comment_translations": {
           "en": "This new crossing opened in 2025. It's able to process foreigners, so it's open to all.",
           "fr": "Ce nouveau point de passage a ouvert en 2025. Il est en mesure de traiter les demandes des étrangers, il est donc ouvert à tous.",
@@ -7056,6 +8305,11 @@
           "nl": "Deze nieuwe grensovergang is in 2025 geopend. Ze is geschikt voor buitenlanders en dus voor iedereen toegankelijk.",
           "pl": "To nowe przejście graniczne zostanie otwarte w 2025 roku. Może ono obsługiwać cudzoziemców, jest więc otwarte dla wszystkich.",
           "ru": "Этот новый пункт пропуска открылся в 2025 году. Он способен обслуживать иностранцев, поэтому открыт для всех."
+        },
+        "geohash": "thxcxw43",
+        "updatedat": {
+          "_seconds": 1769107912,
+          "_nanoseconds": 598000000
         }
       }
     },
@@ -7080,6 +8334,11 @@
         "createdat": {
           "_seconds": 1764172687,
           "_nanoseconds": 494000000
+        },
+        "geohash": "v09q2xz1",
+        "updatedat": {
+          "_seconds": 1769107912,
+          "_nanoseconds": 615000000
         }
       }
     },
@@ -7100,7 +8359,12 @@
           "_latitude": 50.1980288,
           "_longitude": 127.6451164
         },
-        "name": "Kani-Kurgan/Heihe"
+        "name": "Kani-Kurgan/Heihe",
+        "geohash": "ybfv8dk2",
+        "updatedat": {
+          "_seconds": 1769107912,
+          "_nanoseconds": 635000000
+        }
       }
     },
     {
@@ -7124,6 +8388,11 @@
         "createdat": {
           "_seconds": 1764172687,
           "_nanoseconds": 636000000
+        },
+        "geohash": "vc1emf8y",
+        "updatedat": {
+          "_seconds": 1769107912,
+          "_nanoseconds": 654000000
         }
       }
     },
@@ -7144,7 +8413,12 @@
           "_latitude": 40.1937942,
           "_longitude": 68.8482281
         },
-        "name": "Zafarobod / Xovosobod"
+        "name": "Zafarobod / Xovosobod",
+        "geohash": "tx0uwtj9",
+        "updatedat": {
+          "_seconds": 1769107912,
+          "_nanoseconds": 672000000
+        }
       }
     },
     {
@@ -7164,6 +8438,11 @@
         "location": {
           "_latitude": 4.6911944,
           "_longitude": 115.0294271
+        },
+        "geohash": "w8cf9w1b",
+        "updatedat": {
+          "_seconds": 1769107912,
+          "_nanoseconds": 689000000
         }
       }
     },
@@ -7196,6 +8475,11 @@
           "nl": "Een visum bij aankomst in Laos is niet beschikbaar en een e-visum wordt niet geaccepteerd.",
           "pl": "Usługa VOA w Laosie jest niedostępna, a e-wiza nie jest akceptowana.",
           "ru": "Визы по прибытии в Лаос не предоставляются, электронные визы не принимаются."
+        },
+        "geohash": "w5rzkr2s",
+        "updatedat": {
+          "_seconds": 1769107912,
+          "_nanoseconds": 709000000
         }
       }
     },
@@ -7216,6 +8500,11 @@
         "location": {
           "_latitude": 42.8230545,
           "_longitude": 73.5110693
+        },
+        "geohash": "txs78g9n",
+        "updatedat": {
+          "_seconds": 1769107912,
+          "_nanoseconds": 729000000
         }
       }
     },
@@ -7240,6 +8529,11 @@
         "createdat": {
           "_seconds": 1764172688,
           "_nanoseconds": 882000000
+        },
+        "geohash": "v1hnyptk",
+        "updatedat": {
+          "_seconds": 1769107912,
+          "_nanoseconds": 748000000
         }
       }
     },
@@ -7260,6 +8554,11 @@
         "location": {
           "_latitude": 42.7915914,
           "_longitude": 71.5033786
+        },
+        "geohash": "txdg7jgp",
+        "updatedat": {
+          "_seconds": 1769107912,
+          "_nanoseconds": 765000000
         }
       }
     },
@@ -7292,6 +8591,11 @@
           "nl": "Veerbootovertocht.\n\nAan de Laotiaanse kant is een visum bij aankomst (VOA) mogelijk, maar een e-visum wordt niet geaccepteerd.",
           "pl": "Przeprawa promowa.\nPo stronie Laosu VOA jest dostępna, ale e-wiza nie jest akceptowana.",
           "ru": "Переправа на пароме.\nНа лаосской стороне виза по прибытии доступна, но электронная виза не принимается."
+        },
+        "geohash": "w5x5v93r",
+        "updatedat": {
+          "_seconds": 1769107912,
+          "_nanoseconds": 783000000
         }
       }
     },
@@ -7312,6 +8616,11 @@
         "location": {
           "_latitude": 31.2483171,
           "_longitude": 34.2574284
+        },
+        "geohash": "sv83g896",
+        "updatedat": {
+          "_seconds": 1769107912,
+          "_nanoseconds": 801000000
         }
       }
     },
@@ -7333,9 +8642,10 @@
           "_longitude": 48.4761962
         },
         "name": "Shirvanovka / Filya",
+        "geohash": "tp6mr07m",
         "updatedat": {
-          "_seconds": 1764168248,
-          "_nanoseconds": 417000000
+          "_seconds": 1769107912,
+          "_nanoseconds": 819000000
         }
       }
     },
@@ -7360,6 +8670,11 @@
         "createdat": {
           "_seconds": 1764172688,
           "_nanoseconds": 40000000
+        },
+        "geohash": "vc0cwv3u",
+        "updatedat": {
+          "_seconds": 1769107912,
+          "_nanoseconds": 839000000
         }
       }
     },
@@ -7384,6 +8699,11 @@
         "createdat": {
           "_seconds": 1764172687,
           "_nanoseconds": 974000000
+        },
+        "geohash": "v9rtj493",
+        "updatedat": {
+          "_seconds": 1769107912,
+          "_nanoseconds": 857000000
         }
       }
     },
@@ -7416,6 +8736,11 @@
           "nl": "Veerbootovertocht.\n\nEr zijn veel negatieve ervaringen met corrupte ambtenaren aan deze grens, dus steek indien mogelijk over bij Diama (tijdens het regenseizoen kan het modderige pad naar Diama te moeilijk begaanbaar zijn).",
           "pl": "Przeprawa promowa.\nWiele negatywnych opinii od skorumpowanych urzędników na tej granicy, więc jeśli to możliwe, przekraczajcie granicę w Diamie (podczas deszczu błotnista droga do Diamy może być zbyt trudna).",
           "ru": "Переправа на пароме.\nМного негативных отзывов от коррумпированных чиновников на этой границе, поэтому, если возможно, пересекайте границу в Диаме (во время дождей грязная дорога до Диамы может быть слишком сложной)."
+        },
+        "geohash": "eduvbhrx",
+        "updatedat": {
+          "_seconds": 1769107912,
+          "_nanoseconds": 875000000
         }
       }
     },
@@ -7440,6 +8765,11 @@
         "createdat": {
           "_seconds": 1764172689,
           "_nanoseconds": 190000000
+        },
+        "geohash": "v3wj6svc",
+        "updatedat": {
+          "_seconds": 1769107912,
+          "_nanoseconds": 894000000
         }
       }
     },
@@ -7472,6 +8802,11 @@
           "nl": "Een visum bij aankomst in Laos is niet beschikbaar en een e-visum wordt niet geaccepteerd.",
           "pl": "Usługa VOA w Laosie jest niedostępna, a e-wiza nie jest akceptowana.",
           "ru": "Визы по прибытии в Лаос не предоставляются, электронные визы не принимаются."
+        },
+        "geohash": "w7c0tq43",
+        "updatedat": {
+          "_seconds": 1769107912,
+          "_nanoseconds": 913000000
         }
       }
     },
@@ -7496,6 +8831,11 @@
         "createdat": {
           "_seconds": 1764172688,
           "_nanoseconds": 146000000
+        },
+        "geohash": "v9rrb3d1",
+        "updatedat": {
+          "_seconds": 1769107912,
+          "_nanoseconds": 930000000
         }
       }
     },
@@ -7516,6 +8856,11 @@
         "location": {
           "_latitude": 37.5270323,
           "_longitude": 71.5011408
+        },
+        "geohash": "twdv7p9d",
+        "updatedat": {
+          "_seconds": 1769107912,
+          "_nanoseconds": 949000000
         }
       }
     },
@@ -7537,9 +8882,10 @@
           "_latitude": 38.4392017,
           "_longitude": 48.8761252
         },
+        "geohash": "tnff8jws",
         "updatedat": {
-          "_seconds": 1764168571,
-          "_nanoseconds": 51000000
+          "_seconds": 1769107912,
+          "_nanoseconds": 970000000
         }
       }
     },
@@ -7572,6 +8918,11 @@
           "nl": "Veerbootovertocht.\n\nLaotiaans visum bij aankomst niet beschikbaar en e-visum wordt niet geaccepteerd.",
           "pl": "Przeprawa promowa.\nLaotańska VOA niedostępna, a e-wizy nie są akceptowane.",
           "ru": "Переправа на пароме.\nЛаосская виза по прибытии недоступна, электронная виза не принимается."
+        },
+        "geohash": "w738w7vd",
+        "updatedat": {
+          "_seconds": 1769107912,
+          "_nanoseconds": 989000000
         }
       }
     },
@@ -7594,10 +8945,6 @@
         "countries": "THA-KHM",
         "name": "Hat Lek/Cham Yeam",
         "comment": "Cambodian VOA available here (if border is open).",
-        "updatedat": {
-          "_seconds": 1765189073,
-          "_nanoseconds": 489000000
-        },
         "comment_translations": {
           "en": "Cambodian VOA available here (if border is open).",
           "fr": "Visa de voyage cambodgien disponible ici (si la frontière est ouverte).",
@@ -7608,6 +8955,11 @@
           "nl": "Cambodjaans visum bij aankomst is hier beschikbaar (indien de grens open is).",
           "pl": "Kambodżańska informacja VOA dostępna tutaj (jeśli granica jest otwarta).",
           "ru": "Камбоджийская виза по прибытии доступна здесь (если граница открыта)."
+        },
+        "geohash": "w614mbbx",
+        "updatedat": {
+          "_seconds": 1769107913,
+          "_nanoseconds": 12000000
         }
       }
     },
@@ -7628,6 +8980,11 @@
         "location": {
           "_latitude": 37.2460585,
           "_longitude": 65.2671742
+        },
+        "geohash": "tqw7vhqn",
+        "updatedat": {
+          "_seconds": 1769107913,
+          "_nanoseconds": 34000000
         }
       }
     },
@@ -7648,7 +9005,12 @@
           "_latitude": 35.9043493,
           "_longitude": 36.0090512
         },
-        "name": "Yayladağı / Kassab"
+        "name": "Yayladağı / Kassab",
+        "geohash": "sy3s72hv",
+        "updatedat": {
+          "_seconds": 1769107913,
+          "_nanoseconds": 51000000
+        }
       }
     },
     {
@@ -7680,6 +9042,11 @@
           "nl": "Als toerist moet je de immigratiekantoren aan beide zijden van de grens opzoeken, omdat 99,99% van het verkeer tweezijdig is en je alleen een identiteitsbewijs hoeft te laten zien om de grens over te steken, dus het is erg informeel.\n\nLaat je visum controleren en je carnet afstempelen voordat je de grens oversteekt. Daar controleren ze alleen je in- en uitreisstempels.\n\nHoud er rekening mee dat de brede tweebaansweg alleen toegankelijk is voor auto's en vrachtwagens. Motorfietsen moeten de kleinere, parallel lopende weg nemen, die vol zit met riksja's.",
           "pl": "Jako turysta musisz szukać urzędów imigracyjnych po obu stronach granicy, ponieważ 99,99% ruchu odbywa się w obie strony i wymaga jedynie okazania dokumentu tożsamości, co jest bardzo nieformalne.\nPrzed przekroczeniem granicy sprawdź wizę i podstempluj karnet. Tam sprawdzą tylko pieczątki wjazdowe i wyjazdowe.\nPamiętaj, że duża, dwupasmowa autostrada jest przeznaczona wyłącznie dla samochodów osobowych i ciężarowych, a motocykle muszą korzystać z mniejszej, równoległej drogi, na której często jeżdżą riksze.",
           "ru": "Туристам необходимо искать иммиграционные пункты по обе стороны границы, поскольку 99,99% движения является двусторонним, и для пересечения границы достаточно предъявить удостоверение личности, поэтому это очень неформально.\nПроверьте визу и поставьте штамп в карнете до пересечения границы, где проверят только штампы въезда/выезда.\nОбратите внимание, что большая двухполосная автомагистраль предназначена только для легковых автомобилей и грузовиков, мотоциклам необходимо ехать по меньшей дороге, которая идет параллельно и которая перегружена рикшами."
+        },
+        "geohash": "tuwxw4w0",
+        "updatedat": {
+          "_seconds": 1769107913,
+          "_nanoseconds": 70000000
         }
       }
     },
@@ -7700,6 +9067,11 @@
         "location": {
           "_latitude": 41.235148,
           "_longitude": 43.2024286
+        },
+        "geohash": "szqdx4eh",
+        "updatedat": {
+          "_seconds": 1769107913,
+          "_nanoseconds": 88000000
         }
       }
     }

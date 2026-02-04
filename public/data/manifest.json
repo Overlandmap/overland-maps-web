@@ -1,22 +1,22 @@
 {
-  "generatedAt": "2026-01-22T15:32:21.682Z",
+  "generatedAt": "2026-01-28T09:35:18.067Z",
   "version": "1.1.0",
   "files": {
     "countries.json": {
       "description": "Country data with parameters and border references",
       "recordCount": 242,
-      "sizeEstimate": "600 KB"
+      "sizeEstimate": "620 KB"
     },
     "borders.json": {
       "description": "Border metadata for route generation only (data loaded from Firestore)",
       "recordCount": 334,
-      "sizeEstimate": "2.2 MB",
+      "sizeEstimate": "2.3 MB",
       "note": "Border details are always loaded from Firestore, not from static files"
     },
     "border-posts.json": {
       "description": "Border post details without geographic data (for lookups)",
       "recordCount": 320,
-      "sizeEstimate": "384 KB"
+      "sizeEstimate": "428 KB"
     },
     "border-posts.geojson": {
       "description": "Border crossing posts as Point features",

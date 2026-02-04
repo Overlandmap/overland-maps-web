@@ -43260,7 +43260,8 @@
         "overlanding": 2,
         "iso_a2": "UA",
         "driving": "r",
-        "carnet": 0
+        "carnet": 0,
+        "visa": 0
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -112089,7 +112090,8 @@
         "overlanding": 3,
         "iso_a2": "QA",
         "driving": "r",
-        "carnet": 2
+        "carnet": 2,
+        "visa": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -151468,6 +151470,7 @@
         "overlanding": 3,
         "iso_a2": "MA",
         "driving": "r",
+        "carnet": 0,
         "visa": 0
       },
       "geometry": {
@@ -158257,7 +158260,7 @@
         "overlanding": 2,
         "iso_a2": "_Abkhazia",
         "driving": "r",
-        "visa": 1
+        "visa": 2
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -158414,7 +158417,7 @@
         "overlanding": 2,
         "iso_a2": "_South_Ossetia",
         "driving": "r",
-        "visa": 1
+        "visa": 3
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -344388,7 +344391,7 @@
         "ADM0_A3": "CMR",
         "NAME": "Cameroon",
         "ABBREV": "Cam.",
-        "overlanding": 2,
+        "overlanding": 3,
         "iso_a2": "CM",
         "driving": "r",
         "visa": 2
@@ -369497,7 +369500,7 @@
         "iso_a2": "AZ",
         "driving": "r",
         "carnet": 0,
-        "visa": 0
+        "visa": 2
       },
       "geometry": {
         "type": "MultiPolygon",
