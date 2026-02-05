@@ -1,0 +1,112 @@
+[
+  {
+    "category": "General",
+    "question": "¿Qué es Overland Map?",
+    "answer": "Overland Map es una plataforma integral para overlanders, que proporciona información detallada sobre todas las preguntas que surgen al planificar un viaje overland conduciendo o montando su propio vehículo (vehículo motorizado o bicicleta). Esto incluye cruces fronterizos, visas, documentación del vehículo, datos climáticos e itinerarios seleccionados para viajes overland en todo el mundo.\nLa herramienta principal es la aplicación móvil, pero este sitio web proporciona acceso a la información básica sin requerir la instalación de una aplicación. Sin embargo, las discusiones y la publicación de comentarios o actualizaciones están actualmente disponibles solo a través de la aplicación móvil."
+  },
+  {
+    "category": "General",
+    "question": "¿Es gratuito usar Overland Map?",
+    "answer": "La versión web y las funciones básicas de la aplicación móvil son gratuitas. Las funciones premium, incluidos itinerarios detallados, mapas sin conexión y datos climáticos detallados, requieren una suscripción o una compra única."
+  },
+  {
+    "category": "General",
+    "question": "Si es gratis y no hay anuncios, ¿cuál es el modelo económico?",
+    "answer": "Por lo general, cuando algo es gratis, tú eres el producto. No en este caso: no recopilamos información sobre nuestros usuarios. Proporcionamos información básica de forma gratuita y nuestro objetivo es cubrir los costos de infraestructura y desarrollo vendiendo itinerarios detallados y una suscripción Pro.\nSi encuentra valiosa la plataforma pero no desea comprar un itinerario, aún puede contribuir publicando correcciones y adiciones, ayudando a mantener la base de datos actualizada y relevante."
+  },
+  {
+    "category": "General",
+    "question": "¿En qué se diferencia de los sitios gratuitos de intercambio de tracks como Wikiloc o Alltrail?",
+    "answer": "Esos sitios publican tracks GPS sin procesar con poca explicación y detalles muy limitados. Cualquiera puede compartir un track, incluso un recado irrelevante alrededor de su casa, por lo que la calidad de los tracks no está garantizada. Tampoco hay información sobre superficies de carreteras, peligros potenciales, paradas de combustible, etc.\nEn contraste, los itinerarios que proporcionamos son rutas bien investigadas con múltiples puntos de referencia e información extensa sobre la geografía e historia de los lugares que visita."
+  },
+  {
+    "category": "General",
+    "question": "¿En qué se diferencia de iOverlander?",
+    "answer": "iOverlander es una fuente invaluable de información para overlanders, pero tiene poca clasificación y la calidad de los diferentes puntos varía mucho. La mayoría de los puntos compartidos en iOverlander son lugares para acampar, tiendas y restaurantes, categorías que no cubrimos. Por lo tanto, recomendamos usar iOverlander y Park4Night para esos lugares.\nNuestra superposición con iOverlander está en la información de puestos fronterizos. Proporcionamos una lista completa de puestos fronterizos, organizados por país (en la primera iteración, solo se admite Asia). Esto hace que sea mucho más fácil encontrar información relevante en una base de datos geográfica bien estructurada."
+  },
+  {
+    "category": "Países y Fronteras",
+    "question": "¿Qué tan precisa es la información sobre cruces fronterizos?",
+    "answer": "Nuestros datos se actualizan continuamente por la comunidad overlanding. Nos basamos en experiencias del mundo real de viajeros que han cruzado fronteras recientemente, lo que hace que nuestra información sea a veces más relevante que las fuentes oficiales."
+  },
+  {
+    "category": "Países y Fronteras",
+    "question": "¿Qué significa la calificación de amigabilidad overlanding?",
+    "answer": "La calificación de amigabilidad overlanding indica qué tan fácil es visitar un país con su propio vehículo. Verde significa acceso normal con visas y papeleo estándar, mientras que negro indica que es casi imposible ingresar con su propio vehículo motorizado (por ejemplo, Corea del Norte o Vietnam).\nLos países rojos se consideran inseguros para visitar, por lo que no recomendamos viajar allí y solo se proporciona información limitada. Los países amarillos tienen restricciones específicas que son críticas de conocer (por ejemplo, si un guía es obligatorio)."
+  },
+  {
+    "category": "Países y Fronteras",
+    "question": "¿Qué tan seguro es viajar al país XXX? Mi gobierno desaconseja todos los viajes no necesarios a XXX, ¿no debería estar marcado en rojo?",
+    "answer": "Lo que es seguro o no depende mucho de cuál es su nivel de aceptación de riesgos. Mostramos aquí lo que es sentido común, pero por supuesto no aconsejamos viajar a ningún lugar que esté bajo escrutinio de un gobierno, y no asumimos ninguna responsabilidad en su decisión de ir allí (o no).\nEntonces, ¿por qué algunos países aconsejan no viajar a algunos lugares que se muestran aquí en verde o amarillo? En pocas palabras, responsabilidad. Si un viajero tiene problemas en un país extranjero y pide ayuda a la embajada, es una molestia para ellos. Así que es mejor para ellos si te quedas en casa. Por ejemplo, el gobierno de EE. UU. clasifica a Francia en amarillo (Ejercer mayor precaución debido al terrorismo y disturbios), pero Francia pone a todo EE. UU. en verde. Política."
+  },
+  {
+    "category": "Países y Fronteras",
+    "question": "¿Qué es un Carnet de Passage?",
+    "answer": "Un Carnet de Passage en Douane es un documento proporcionado por su club automovilístico local que le permite importar temporalmente su vehículo sin pagar impuestos de importación. Requiere un depósito reembolsable y es obligatorio en ciertos países, principalmente en Asia y África, países donde hay grandes impuestos sobre vehículos importados, por lo que quieren asegurarse de que el vehículo sea reexportado y no vendido dentro del país. No se requiere tal documento en Europa, América del Norte o del Sur."
+  },
+  {
+    "category": "Aplicación Móvil",
+    "question": "¿En qué plataformas está disponible la aplicación móvil?",
+    "answer": "La aplicación móvil Overland Map está disponible tanto para iOS (iPhone/iPad) como para dispositivos Android. También se puede instalar en MacOS (Apple Silicon).\nTenga en cuenta que actualmente los únicos dispositivos incompatibles son las tabletas CarpeIter, por lo que no recomendamos usar esta tableta hasta que vengan con una gran corrección."
+  },
+  {
+    "category": "Aplicación Móvil",
+    "question": "Si compro un itinerario en una plataforma, ¿puedo usarlo en otra?",
+    "answer": "Sí, si ambos dispositivos, ya sea Android o iOS/macOS, usan el mismo inicio de sesión, tendrán acceso a los mismos itinerarios.\nTenga en cuenta que Apple permite compras dentro de la aplicación sin requerir la creación de una cuenta de usuario. En ese caso, las compras no se pueden compartir con un dispositivo Android, por lo que no recomendamos usar esta opción."
+  },
+  {
+    "category": "Aplicación Móvil",
+    "question": "¿Puedo usar la aplicación sin conexión?",
+    "answer": "¡Por supuesto! Overland Map está diseñado para overlanders que se aventuran en lugares sin conexión a internet, por lo que todas las funciones principales funcionan con o sin internet. Cuando compra un itinerario, la descripción detallada paso a paso y las fotos también se descargan para uso sin conexión. También tiene la opción de descargar un mapa sin conexión detallado, especialmente diseñado, y sombreado de colinas."
+  },
+  {
+    "category": "Países y Fronteras",
+    "question": "Noté un error. ¿Cómo contribuyo con actualizaciones de cruces fronterizos?",
+    "answer": "Instale la aplicación móvil, cree una cuenta y haga clic en un puesto fronterizo. Luego puede publicar comentarios para compartir su experiencia, proponer actualizaciones a ciertos campos y proporcionar información útil para otros viajeros."
+  },
+  {
+    "category": "Itinerarios",
+    "question": "¿Qué son los Track Packs?",
+    "answer": "Los Track Packs son colecciones de itinerarios detallados con información de fondo, puntos de interés y navegación paso a paso para regiones específicas, que se compran como un paquete."
+  },
+  {
+    "category": "Itinerarios",
+    "question": "¿Proporcionan archivos GPX o KML?",
+    "answer": "Los itinerarios comprados o de prueba se muestran y se pueden explorar directamente en la aplicación, por lo que no se necesita un conocimiento específico de tipos de archivos y funciones de compartir. Las herramientas de búsqueda de texto completo facilitan encontrar información específica. Si prefiere navegar usando otra aplicación, puede exportar fácilmente un itinerario en formato GPX y abrirlo en su aplicación favorita."
+  },
+  {
+    "category": "Itinerarios",
+    "question": "¿Puedo crear mis propios itinerarios? ¿Puedo grabar y guardar mis propios tracks?",
+    "answer": "Estas funciones se están considerando para una versión futura."
+  },
+  {
+    "category": "Itinerarios",
+    "question": "¿Proporcionan navegación paso a paso para sus itinerarios?",
+    "answer": "No somos grandes fanáticos de la navegación automatizada cuando viajamos. Preferimos mantener nuestros ojos en los fantásticos paisajes que cruzamos en lugar de en una pantalla. Dicho esto, es muy fácil abrir un punto de referencia en Google Maps o cualquier otra aplicación de navegación y usar direcciones paso a paso para llegar allí. Esto es especialmente valioso para llegar al punto de partida de un itinerario. Estas aplicaciones funcionan bien junto con Overland Map."
+  },
+  {
+    "category": "Itinerarios",
+    "question": "Prefiero leer un libro, ¿hay una versión impresa de sus itinerarios?",
+    "answer": "Comenzamos Overland Aventure editions hace muchos años como una forma de publicar nuestros primeros itinerarios. Todavía están [disponibles, en francés](https://overlandaventure.com), aunque ahora no están completamente actualizados. Hemos decidido publicar actualizaciones solo digitalmente, a través de la aplicación móvil, pero los libros siguen siendo relevantes por la riqueza de información de fondo que contienen."
+  },
+  {
+    "category": "Técnico",
+    "question": "¿Por qué mi país no muestra datos?",
+    "answer": "Estamos expandiendo continuamente nuestra base de datos. Actualmente, toda Asia está completa con información relevante y actualizada (aunque se pueden encontrar errores), y pronto tendremos cobertura completa para África y las Américas. Algunos países son tan sencillos de viajar que se necesita poca información, como en Europa. Algunos países pueden tener datos limitados si pocos overlanders han viajado allí recientemente (por ejemplo, países insulares como Maldivas o Mauricio no son destinos principales de overlanders). Puede ayudar contribuyendo con sus experiencias a través de la aplicación móvil."
+  },
+  {
+    "category": "Técnico",
+    "question": "El mapa no se carga. ¿Qué debo hacer?",
+    "answer": "Intente actualizar la página o borrar el caché de su navegador. Si el problema persiste, consulte nuestra página de Soporte para obtener asistencia técnica o contáctenos directamente."
+  },
+  {
+    "category": "Técnico",
+    "question": "¿Cuál es la fuente de información para sus mapas, como el de este sitio web?",
+    "answer": "Todos nuestros mapas se crean utilizando datos de OpenStreetMap de código abierto, al igual que otras aplicaciones como OsmAnd, Maps.me, Gaia y otras. Se actualizan regularmente, aunque no diariamente.\nNuestros mapas sin conexión también están diseñados específicamente para mostrar mucha más información que aplicaciones como Maps.me u Organic Maps en áreas remotas con pocas o ninguna carretera, como grandes partes de Mongolia o la Península Arábiga. Esta es una característica exclusiva de Overland Map."
+  },
+  {
+    "category": "Técnico",
+    "question": "Algunas palabras son extrañas, ¿quién escribió ese texto?",
+    "answer": "Somos hablantes nativos de francés, por lo que la versión en francés es con la que estamos contentos. Para los otros idiomas, confiamos en la traducción automática, que a veces da resultados extraños. Lo sentimos si la calidad en su idioma no es buena, siempre puede volver al inglés si le molesta la traducción."
+  }
+]

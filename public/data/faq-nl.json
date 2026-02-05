@@ -1,0 +1,112 @@
+[
+  {
+    "category": "Algemeen",
+    "question": "Wat is Overland Map?",
+    "answer": "Overland Map is een alles-in-één platform voor overlanders, dat gedetailleerde informatie biedt over alle vragen die opkomen bij het plannen van een overlandreis met je eigen voertuig (motorvoertuig of fiets). Dit omvat grensovergangen, visa, voertuigdocumentatie, klimaatgegevens en samengestelde reisroutes voor overlandreizen wereldwijd.\nDe belangrijkste tool is de mobiele app, maar deze website biedt toegang tot de kerninformatie zonder dat een app-installatie vereist is. Discussies en het plaatsen van opmerkingen of updates zijn momenteel echter alleen beschikbaar via de mobiele app."
+  },
+  {
+    "category": "Algemeen",
+    "question": "Is Overland Map gratis te gebruiken?",
+    "answer": "De webversie en basisfuncties van de mobiele app zijn gratis. Premium-functies, waaronder gedetailleerde reisroutes, offline kaarten en gedetailleerde klimaatgegevens, vereisen een abonnement of een eenmalige aankoop."
+  },
+  {
+    "category": "Algemeen",
+    "question": "Als het gratis is en er zijn geen advertenties, wat is dan het economische model?",
+    "answer": "Meestal ben je het product als iets gratis is. Niet in dit geval – we verzamelen geen informatie over onze gebruikers. We bieden basisinformatie gratis aan en streven ernaar infrastructuur- en ontwikkelingskosten te dekken door gedetailleerde reisroutes en een Pro-abonnement te verkopen.\nAls je het platform waardevol vindt maar geen reisroute wilt kopen, kun je nog steeds bijdragen door correcties en toevoegingen te plaatsen, waardoor de database actueel en relevant blijft."
+  },
+  {
+    "category": "Algemeen",
+    "question": "Hoe verschilt het van gratis track-deelsites zoals Wikiloc of Alltrail?",
+    "answer": "Die sites publiceren ruwe GPS-tracks met weinig uitleg en zeer beperkte details. Iedereen kan een track delen – zelfs een irrelevante boodschap rond hun huis – dus de kwaliteit van de tracks is niet gegarandeerd. Er is ook geen informatie over wegdekken, potentiële gevaren, tankstations, enzovoort.\nDaarentegen zijn de reisroutes die wij bieden goed onderzochte routes met meerdere waypoints en uitgebreide achtergrondinformatie over de geografie en geschiedenis van de plaatsen die je bezoekt."
+  },
+  {
+    "category": "Algemeen",
+    "question": "Hoe verschilt het van iOverlander?",
+    "answer": "iOverlander is een onschatbare informatiebron voor overlanders, maar heeft weinig classificatie en de kwaliteit van de verschillende punten varieert sterk. De meeste waypoints die op iOverlander worden gedeeld, zijn kampeerplekken, winkels en restaurants – categorieën die wij niet targeten. Daarom raden we aan iOverlander en Park4Night te gebruiken voor dergelijke plaatsen.\nOnze overlap met iOverlander ligt in grenspostinformatie. We bieden een uitgebreide lijst van grensposten, georganiseerd per land (in de eerste iteratie wordt alleen Azië ondersteund). Dit maakt het veel gemakkelijker om relevante informatie te vinden in een goed gestructureerde geografische database."
+  },
+  {
+    "category": "Landen & Grenzen",
+    "question": "Hoe nauwkeurig is de informatie over grensovergangen?",
+    "answer": "Onze gegevens worden voortdurend bijgewerkt door de overlanding-gemeenschap. We vertrouwen op real-world ervaringen van reizigers die recent grenzen hebben overgestoken, waardoor onze informatie soms relevanter is dan officiële bronnen."
+  },
+  {
+    "category": "Landen & Grenzen",
+    "question": "Wat betekent de overlanding-vriendelijkheidsbeoordeling?",
+    "answer": "De overlanding-vriendelijkheidsbeoordeling geeft aan hoe gemakkelijk het is om een land met je eigen voertuig te bezoeken. Groen betekent normale toegang met standaard visa en papierwerk, terwijl zwart aangeeft dat het bijna onmogelijk is om binnen te komen met je eigen motorvoertuig (bijvoorbeeld Noord-Korea of Vietnam).\nRode landen worden als onveilig beschouwd om te bezoeken, dus we raden niet aan daarheen te reizen en er wordt slechts beperkte informatie verstrekt. Gele landen hebben specifieke beperkingen die cruciaal zijn om te weten (bijvoorbeeld als een gids verplicht is)."
+  },
+  {
+    "category": "Landen & Grenzen",
+    "question": "Hoe veilig is het om naar land XXX te reizen? Mijn regering ontmoedigt alle niet-noodzakelijke reizen naar XXX, dus zou het niet rood gemarkeerd moeten zijn?",
+    "answer": "Wat veilig is of niet hangt sterk af van wat je niveau van risicoacceptatie is. We tonen hier wat gezond verstand is, maar natuurlijk adviseren we niet om naar een plaats te reizen die onder toezicht staat van een regering, en nemen geen verantwoordelijkheid voor je beslissing om daar wel (of niet) heen te gaan.\nDus waarom adviseren sommige landen tegen reizen naar plaatsen die hier groen of geel worden weergegeven? Kort gezegd, verantwoordelijkheid. Als een reiziger in de problemen komt in een vreemd land en de ambassade om hulp vraagt, is dat een last voor hen. Dus het is beter voor hen als je thuis blijft. Bijvoorbeeld, de Amerikaanse regering classificeert Frankrijk als geel (Verhoogde voorzichtigheid vanwege terrorisme en onrust), maar Frankrijk plaatst de hele VS in groen. Politiek."
+  },
+  {
+    "category": "Landen & Grenzen",
+    "question": "Wat is een Carnet de Passage?",
+    "answer": "Een Carnet de Passage en Douane is een document dat door je lokale automobielclub wordt verstrekt en waarmee je je voertuig tijdelijk kunt importeren zonder invoerbelasting te betalen. Het vereist een restitueerbare borg en is vereist in bepaalde landen, voornamelijk in Azië en Afrika, landen waar er enorme belastingen zijn op geïmporteerde voertuigen, dus willen ze ervoor zorgen dat het voertuig wordt geherexporteerd en niet in het land wordt verkocht. Een dergelijk document is niet vereist in Europa, Noord- of Zuid-Amerika."
+  },
+  {
+    "category": "Mobiele App",
+    "question": "Op welke platforms is de mobiele app beschikbaar?",
+    "answer": "De Overland Map mobiele app is beschikbaar voor zowel iOS (iPhone/iPad) als Android-apparaten. Het kan ook worden geïnstalleerd op MacOS (Apple Silicon).\nMerk op dat momenteel de enige incompatibele apparaten de CarpeIter-tablets zijn, dus we raden niet aan deze tablet te gebruiken totdat ze met een grote fix komen."
+  },
+  {
+    "category": "Mobiele App",
+    "question": "Als ik een reisroute op één platform koop, kan ik deze dan op een ander platform gebruiken?",
+    "answer": "Ja, als beide apparaten – of het nu Android of iOS/macOS is – dezelfde login gebruiken, hebben ze toegang tot dezelfde reisroutes.\nMerk op dat Apple in-app aankopen toestaat zonder dat het aanmaken van een gebruikersaccount vereist is. In dat geval kunnen aankopen niet worden gedeeld met een Android-apparaat, daarom raden we deze optie niet aan."
+  },
+  {
+    "category": "Mobiele App",
+    "question": "Kan ik de app offline gebruiken?",
+    "answer": "Natuurlijk! Overland Map is ontworpen voor overlanders die zich wagen op plaatsen zonder internetverbinding, dus alle hoofdfuncties werken met of zonder internet. Wanneer je een reisroute koopt, worden ook de gedetailleerde stap-voor-stap beschrijving en de foto's gedownload voor offline gebruik. Je hebt ook de optie om een gedetailleerde, speciaal gemaakte offline kaart en hillshading te downloaden."
+  },
+  {
+    "category": "Landen & Grenzen",
+    "question": "Ik heb een fout opgemerkt. Hoe draag ik grensovergangs-updates bij?",
+    "answer": "Installeer de mobiele app, maak een account aan en klik op een grenspost. Je kunt dan opmerkingen plaatsen om je ervaring te delen, updates voor bepaalde velden voorstellen en nuttige informatie voor andere reizigers verstrekken."
+  },
+  {
+    "category": "Reisroutes",
+    "question": "Wat zijn Track Packs?",
+    "answer": "Track Packs zijn verzamelingen van gedetailleerde reisroutes met achtergrondinformatie, bezienswaardigheden en stap-voor-stap navigatie voor specifieke regio's, die als één pakket worden gekocht."
+  },
+  {
+    "category": "Reisroutes",
+    "question": "Leveren jullie GPX- of KML-bestanden?",
+    "answer": "Gekochte of proef-reisroutes worden weergegeven en kunnen direct in de app worden doorbladerd, dus er is geen specifieke kennis van bestandstypen en deelfuncties nodig. Volledige-tekst zoektools maken het gemakkelijk om specifieke informatie te vinden. Als je liever met een andere app navigeert, kun je een reisroute eenvoudig exporteren in GPX-formaat en openen in je favoriete app."
+  },
+  {
+    "category": "Reisroutes",
+    "question": "Kan ik mijn eigen reisroutes maken? Kan ik mijn eigen tracks opnemen en opslaan?",
+    "answer": "Deze functies worden overwogen voor een toekomstige versie."
+  },
+  {
+    "category": "Reisroutes",
+    "question": "Bieden jullie turn-by-turn navigatie voor jullie reisroutes?",
+    "answer": "We zijn geen grote fans van geautomatiseerde navigatie wanneer we reizen. We houden onze ogen liever op de fantastische landschappen die we doorkruisen dan op een scherm. Dat gezegd hebbende, het is heel gemakkelijk om een waypoint te openen in Google Maps of een andere navigatie-app en turn-by-turn aanwijzingen te gebruiken om er te komen. Dit is vooral waardevol voor het bereiken van het startpunt van een reisroute. Deze apps werken goed samen met Overland Map."
+  },
+  {
+    "category": "Reisroutes",
+    "question": "Ik lees liever een boek, is er een gedrukte versie van jullie reisroutes?",
+    "answer": "We zijn vele jaren geleden Overland Aventure editions begonnen als een manier om onze eerste reisroutes te publiceren. Ze zijn [nog steeds beschikbaar, in het Frans](https://overlandaventure.com), hoewel ze nu niet helemaal up-to-date zijn. We hebben besloten om updates alleen digitaal te publiceren, via de mobiele app, maar de boeken zijn nog steeds relevant vanwege de rijkdom aan achtergrondinformatie die ze bevatten."
+  },
+  {
+    "category": "Technisch",
+    "question": "Waarom toont mijn land geen gegevens?",
+    "answer": "We breiden onze database voortdurend uit. Momenteel is heel Azië compleet met relevante en actuele informatie (hoewel fouten kunnen worden gevonden), en binnenkort hebben we volledige dekking voor Afrika en Amerika. Sommige landen zijn zo eenvoudig om naar te reizen dat er weinig informatie nodig is, zoals in Europa. Sommige landen hebben mogelijk beperkte gegevens als er recent weinig overlanders hebben gereisd (bijvoorbeeld eilandlanden zoals de Malediven of Mauritius zijn geen primaire overlander-bestemmingen). Je kunt helpen door je ervaringen bij te dragen via de mobiele app."
+  },
+  {
+    "category": "Technisch",
+    "question": "De kaart laadt niet. Wat moet ik doen?",
+    "answer": "Probeer de pagina te vernieuwen of je browsercache te wissen. Als het probleem aanhoudt, bekijk dan onze Ondersteuningspagina voor technische assistentie of neem direct contact met ons op."
+  },
+  {
+    "category": "Technisch",
+    "question": "Wat is de informatiebron voor jullie kaarten, zoals die op deze website?",
+    "answer": "Al onze kaarten zijn gemaakt met open-source OpenStreetMap-gegevens, net als andere apps zoals OsmAnd, Maps.me, Gaia en anderen. Ze worden regelmatig bijgewerkt, hoewel niet dagelijks.\nOnze offline kaarten zijn ook specifiek ontworpen om veel meer informatie weer te geven dan apps zoals Maps.me of Organic Maps in afgelegen gebieden met weinig of geen wegen, zoals grote delen van Mongolië of het Arabisch Schiereiland. Dit is een exclusieve functie van Overland Map."
+  },
+  {
+    "category": "Technisch",
+    "question": "Sommige formuleringen zijn vreemd, wie heeft die tekst geschreven?",
+    "answer": "We zijn native Franstaligen, dus de versie in het Frans is degene waar we tevreden over zijn. Voor de andere talen vertrouwen we op automatische vertaling, die soms vreemde resultaten geeft. Het spijt ons als de kwaliteit in jouw taal niet goed is, je kunt altijd terugschakelen naar Engels als je geïrriteerd bent door de vertaling."
+  }
+]

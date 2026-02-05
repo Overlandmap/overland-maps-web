@@ -1,0 +1,112 @@
+[
+  {
+    "category": "Generale",
+    "question": "Cos'è Overland Map?",
+    "answer": "Overland Map è una piattaforma completa per overlander, che fornisce informazioni dettagliate su tutte le domande che sorgono durante la pianificazione di un viaggio overland guidando o utilizzando il proprio veicolo (veicolo a motore o bicicletta). Questo include attraversamenti di frontiera, visti, documentazione del veicolo, dati climatici e itinerari selezionati per viaggi overland in tutto il mondo.\nLo strumento principale è l'app mobile, ma questo sito web fornisce accesso alle informazioni principali senza richiedere l'installazione di un'app. Tuttavia, le discussioni e la pubblicazione di commenti o aggiornamenti sono attualmente disponibili solo tramite l'app mobile."
+  },
+  {
+    "category": "Generale",
+    "question": "Overland Map è gratuito?",
+    "answer": "La versione web e le funzionalità di base dell'app mobile sono gratuite. Le funzionalità premium, inclusi itinerari dettagliati, mappe offline e dati climatici dettagliati, richiedono un abbonamento o un acquisto una tantum."
+  },
+  {
+    "category": "Generale",
+    "question": "Se è gratuito e non ci sono annunci, qual è il modello economico?",
+    "answer": "Di solito, quando qualcosa è gratuito, tu sei il prodotto. Non in questo caso: non raccogliamo informazioni sui nostri utenti. Forniamo informazioni di base gratuitamente e miriamo a coprire i costi di infrastruttura e sviluppo vendendo itinerari dettagliati e un abbonamento Pro.\nSe trovi la piattaforma preziosa ma non desideri acquistare un itinerario, puoi comunque contribuire pubblicando correzioni e aggiunte, aiutando a mantenere il database aggiornato e rilevante."
+  },
+  {
+    "category": "Generale",
+    "question": "In che modo è diverso dai siti gratuiti di condivisione di tracce come Wikiloc o Alltrail?",
+    "answer": "Quei siti pubblicano tracce GPS grezze con poca spiegazione e dettagli molto limitati. Chiunque può condividere una traccia, anche una commissione irrilevante intorno alla propria casa, quindi la qualità delle tracce non è garantita. Non ci sono nemmeno informazioni sulle superfici stradali, pericoli potenziali, stazioni di servizio, ecc.\nAl contrario, gli itinerari che forniamo sono percorsi ben ricercati con più punti di riferimento e ampie informazioni di base sulla geografia e la storia dei luoghi che visiti."
+  },
+  {
+    "category": "Generale",
+    "question": "In che modo è diverso da iOverlander?",
+    "answer": "iOverlander è una fonte inestimabile di informazioni per gli overlander, ma ha poca classificazione e la qualità dei diversi punti varia notevolmente. La maggior parte dei punti condivisi su iOverlander sono luoghi di campeggio, negozi e ristoranti, categorie che non copriamo. Pertanto, consigliamo di utilizzare iOverlander e Park4Night per tali luoghi.\nLa nostra sovrapposizione con iOverlander riguarda le informazioni sui posti di frontiera. Forniamo un elenco completo di posti di frontiera, organizzati per paese (nella prima iterazione, è supportata solo l'Asia). Questo rende molto più facile trovare informazioni rilevanti in un database geografico ben strutturato."
+  },
+  {
+    "category": "Paesi e Confini",
+    "question": "Quanto sono accurate le informazioni sugli attraversamenti di frontiera?",
+    "answer": "I nostri dati vengono continuamente aggiornati dalla comunità overlanding. Ci basiamo su esperienze reali di viaggiatori che hanno recentemente attraversato i confini, rendendo le nostre informazioni a volte più rilevanti delle fonti ufficiali."
+  },
+  {
+    "category": "Paesi e Confini",
+    "question": "Cosa significa la valutazione di amichevolezza overlanding?",
+    "answer": "La valutazione di amichevolezza overlanding indica quanto sia facile visitare un paese con il proprio veicolo. Verde significa accesso normale con visti e documenti standard, mentre nero indica che è quasi impossibile entrare con il proprio veicolo a motore (ad esempio, Corea del Nord o Vietnam).\nI paesi rossi sono considerati non sicuri da visitare, quindi non consigliamo di viaggiare lì e vengono fornite solo informazioni limitate. I paesi gialli hanno restrizioni specifiche che è fondamentale conoscere (ad esempio, se una guida è obbligatoria)."
+  },
+  {
+    "category": "Paesi e Confini",
+    "question": "Quanto è sicuro viaggiare nel paese XXX? Il mio governo sconsiglia tutti i viaggi non necessari in XXX, quindi non dovrebbe essere contrassegnato in rosso?",
+    "answer": "Ciò che è sicuro o meno dipende molto dal tuo livello di accettazione dei rischi. Mostriamo qui ciò che è buon senso, ma ovviamente non consigliamo di viaggiare in nessun luogo che sia sotto controllo da parte di un governo e non ci assumiamo alcuna responsabilità nella tua decisione di andarci (o meno).\nAllora perché alcuni paesi sconsigliano di viaggiare in alcuni luoghi che sono visualizzati qui in verde o giallo? In poche parole, responsabilità. Se un viaggiatore ha problemi in un paese straniero e chiede aiuto all'ambasciata, è un fastidio per loro. Quindi è meglio per loro se rimani a casa. Ad esempio, il governo degli Stati Uniti classifica la Francia in giallo (Esercitare maggiore cautela a causa del terrorismo e dei disordini), ma la Francia mette tutti gli Stati Uniti in verde. Politica."
+  },
+  {
+    "category": "Paesi e Confini",
+    "question": "Cos'è un Carnet de Passage?",
+    "answer": "Un Carnet de Passage en Douane è un documento fornito dal tuo club automobilistico locale che ti consente di importare temporaneamente il tuo veicolo senza pagare tasse di importazione. Richiede un deposito rimborsabile ed è richiesto in alcuni paesi, principalmente in Asia e Africa, paesi dove ci sono enormi tasse sui veicoli importati, quindi vogliono assicurarsi che il veicolo venga riesportato e non venduto all'interno del paese. Nessun documento del genere è richiesto in Europa, Nord o Sud America."
+  },
+  {
+    "category": "App Mobile",
+    "question": "Su quali piattaforme è disponibile l'app mobile?",
+    "answer": "L'app mobile Overland Map è disponibile sia per iOS (iPhone/iPad) che per dispositivi Android. Può anche essere installata su MacOS (Apple Silicon).\nSi noti che attualmente gli unici dispositivi incompatibili sono i tablet CarpeIter, quindi non consigliamo di utilizzare questo tablet fino a quando non arriveranno con una grande correzione."
+  },
+  {
+    "category": "App Mobile",
+    "question": "Se acquisto un itinerario su una piattaforma, posso usarlo su un'altra?",
+    "answer": "Sì, se entrambi i dispositivi, sia Android che iOS/macOS, utilizzano lo stesso login, avranno accesso agli stessi itinerari.\nSi noti che Apple consente acquisti in-app senza richiedere la creazione di un account utente. In tal caso, gli acquisti non possono essere condivisi con un dispositivo Android, motivo per cui non consigliamo di utilizzare questa opzione."
+  },
+  {
+    "category": "App Mobile",
+    "question": "Posso usare l'app offline?",
+    "answer": "Certo! Overland Map è progettato per overlander che si avventurano in luoghi senza connessione internet, quindi tutte le funzionalità principali funzionano con o senza internet. Quando acquisti un itinerario, anche la descrizione dettagliata passo dopo passo e le foto vengono scaricate per l'uso offline. Hai anche la possibilità di scaricare una mappa offline dettagliata, appositamente creata, e l'ombreggiatura delle colline."
+  },
+  {
+    "category": "Paesi e Confini",
+    "question": "Ho notato un errore. Come posso contribuire con aggiornamenti sugli attraversamenti di frontiera?",
+    "answer": "Installa l'app mobile, crea un account e fai clic su un posto di frontiera. Puoi quindi pubblicare commenti per condividere la tua esperienza, proporre aggiornamenti a determinati campi e fornire informazioni utili per altri viaggiatori."
+  },
+  {
+    "category": "Itinerari",
+    "question": "Cosa sono i Track Pack?",
+    "answer": "I Track Pack sono raccolte di itinerari dettagliati con informazioni di base, punti di interesse e navigazione passo dopo passo per regioni specifiche, che vengono acquistati come un unico pacchetto."
+  },
+  {
+    "category": "Itinerari",
+    "question": "Fornite file GPX o KML?",
+    "answer": "Gli itinerari acquistati o di prova vengono visualizzati e possono essere sfogliati direttamente nell'app, quindi non è necessaria una conoscenza specifica dei tipi di file e delle funzioni di condivisione. Gli strumenti di ricerca full-text facilitano la ricerca di informazioni specifiche. Se preferisci navigare utilizzando un'altra app, puoi facilmente esportare un itinerario in formato GPX e aprirlo nella tua app preferita."
+  },
+  {
+    "category": "Itinerari",
+    "question": "Posso creare i miei itinerari? Posso registrare e salvare le mie tracce?",
+    "answer": "Queste funzionalità sono considerate per una versione futura."
+  },
+  {
+    "category": "Itinerari",
+    "question": "Fornite la navigazione turn-by-turn per i vostri itinerari?",
+    "answer": "Non siamo grandi fan della navigazione automatizzata quando viaggiamo. Preferiamo tenere gli occhi sui fantastici paesaggi che attraversiamo piuttosto che su uno schermo. Detto questo, è molto facile aprire un punto di riferimento in Google Maps o qualsiasi altra app di navigazione e utilizzare le indicazioni turn-by-turn per arrivarci. Questo è particolarmente prezioso per raggiungere il punto di partenza di un itinerario. Queste app funzionano bene insieme a Overland Map."
+  },
+  {
+    "category": "Itinerari",
+    "question": "Preferirei leggere un libro, c'è una versione stampata dei vostri itinerari?",
+    "answer": "Abbiamo iniziato Overland Aventure editions molti anni fa come modo per pubblicare i nostri primi itinerari. Sono [ancora disponibili, in francese](https://overlandaventure.com), anche se ora non sono completamente aggiornati. Abbiamo deciso di pubblicare aggiornamenti solo digitalmente, tramite l'app mobile, ma i libri sono ancora rilevanti per la ricchezza di informazioni di base che contengono."
+  },
+  {
+    "category": "Tecnico",
+    "question": "Perché il mio paese non mostra dati?",
+    "answer": "Stiamo continuamente espandendo il nostro database. Attualmente, tutta l'Asia è completa con informazioni rilevanti e aggiornate (anche se possono essere trovati errori), e presto avremo una copertura completa per Africa e Americhe. Alcuni paesi sono così semplici da visitare che sono necessarie poche informazioni, come in Europa. Alcuni paesi potrebbero avere dati limitati se pochi overlander hanno viaggiato lì di recente (ad esempio, paesi insulari come Maldive o Mauritius non sono destinazioni principali per overlander). Puoi aiutare contribuendo con le tue esperienze tramite l'app mobile."
+  },
+  {
+    "category": "Tecnico",
+    "question": "La mappa non si carica. Cosa devo fare?",
+    "answer": "Prova ad aggiornare la pagina o a cancellare la cache del browser. Se il problema persiste, consulta la nostra pagina di Supporto per assistenza tecnica o contattaci direttamente."
+  },
+  {
+    "category": "Tecnico",
+    "question": "Qual è la fonte di informazioni per le vostre mappe, come quella su questo sito web?",
+    "answer": "Tutte le nostre mappe sono create utilizzando dati OpenStreetMap open source, proprio come altre app come OsmAnd, Maps.me, Gaia e altre. Vengono aggiornate regolarmente, anche se non quotidianamente.\nLe nostre mappe offline sono anche specificamente progettate per visualizzare molte più informazioni rispetto ad app come Maps.me o Organic Maps in aree remote con poche o nessuna strada, come gran parte della Mongolia o della Penisola Arabica. Questa è una caratteristica esclusiva di Overland Map."
+  },
+  {
+    "category": "Tecnico",
+    "question": "Alcune formulazioni sono strane, chi ha scritto quel testo?",
+    "answer": "Siamo madrelingua francesi, quindi la versione in francese è quella di cui siamo contenti. Per le altre lingue, ci affidiamo alla traduzione automatica, che a volte dà risultati strani. Ci dispiace se la qualità nella tua lingua non è buona, puoi sempre tornare all'inglese se sei infastidito dalla traduzione."
+  }
+]
