@@ -100,6 +100,24 @@ const translations = {
     cant_find_answer: "Can't find the answer you're looking for? Visit our Support page or contact us directly.",
     go_to_support: 'Go to Support'
   },
+  de: {
+    title: 'Häufig Gestellte Fragen',
+    subtitle: 'Finden Sie Antworten auf häufige Fragen zu Overland Map',
+    loading: 'FAQs werden geladen...',
+    all: 'Alle',
+    still_have_questions: 'Haben Sie noch Fragen?',
+    cant_find_answer: 'Können Sie die gesuchte Antwort nicht finden? Besuchen Sie unsere Support-Seite oder kontaktieren Sie uns direkt.',
+    go_to_support: 'Zum Support'
+  },
+  es: {
+    title: 'Preguntas Frecuentes',
+    subtitle: 'Encuentra respuestas a preguntas comunes sobre Overland Map',
+    loading: 'Cargando preguntas frecuentes...',
+    all: 'Todas',
+    still_have_questions: '¿Todavía tienes preguntas?',
+    cant_find_answer: '¿No encuentras la respuesta que buscas? Visita nuestra página de Soporte o contáctanos directamente.',
+    go_to_support: 'Ir a Soporte'
+  },
   fr: {
     title: 'Foire Aux Questions',
     subtitle: 'Trouvez des réponses à vos questions',
@@ -108,6 +126,33 @@ const translations = {
     still_have_questions: 'Vous avez encore des questions ?',
     cant_find_answer: "Vous ne trouvez pas la réponse que vous cherchez ? Visitez notre page d'assistance ou contactez-nous directement.",
     go_to_support: 'Aller au Support'
+  },
+  it: {
+    title: 'Domande Frequenti',
+    subtitle: 'Trova risposte alle domande comuni su Overland Map',
+    loading: 'Caricamento FAQ...',
+    all: 'Tutte',
+    still_have_questions: 'Hai ancora domande?',
+    cant_find_answer: 'Non riesci a trovare la risposta che cerchi? Visita la nostra pagina di Supporto o contattaci direttamente.',
+    go_to_support: 'Vai al Supporto'
+  },
+  nl: {
+    title: 'Veelgestelde Vragen',
+    subtitle: 'Vind antwoorden op veelgestelde vragen over Overland Map',
+    loading: 'FAQ\'s laden...',
+    all: 'Alle',
+    still_have_questions: 'Heb je nog vragen?',
+    cant_find_answer: 'Kun je het antwoord dat je zoekt niet vinden? Bezoek onze Ondersteuningspagina of neem direct contact met ons op.',
+    go_to_support: 'Naar Ondersteuning'
+  },
+  ru: {
+    title: 'Часто Задаваемые Вопросы',
+    subtitle: 'Найдите ответы на распространенные вопросы об Overland Map',
+    loading: 'Загрузка FAQ...',
+    all: 'Все',
+    still_have_questions: 'Остались вопросы?',
+    cant_find_answer: 'Не можете найти нужный ответ? Посетите нашу страницу поддержки или свяжитесь с нами напрямую.',
+    go_to_support: 'Перейти в Поддержку'
   }
 }
 

@@ -40,7 +40,6 @@ This specification addresses the need to update the border post status mapping t
 6. WHEN the language is set to Japanese THEN the system SHALL display "制限" for `is_open=3`
 7. WHEN the language is set to Dutch THEN the system SHALL display "Beperkt" for `is_open=3`
 8. WHEN the language is set to Russian THEN the system SHALL display "Ограничено" for `is_open=3`
-9. WHEN the language is set to Chinese THEN the system SHALL display "受限" for `is_open=3`
 
 ### Requirement 3
 

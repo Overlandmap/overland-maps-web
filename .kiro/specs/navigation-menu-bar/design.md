@@ -100,7 +100,6 @@ New translation keys to be added to `src/lib/i18n.ts`:
 - **Japanese**: マップ, について, お問い合わせ, アプリ, メニュー, メニューを閉じる
 - **Dutch**: Kaart, Over, Contact, App, Menu, Menu sluiten
 - **Russian**: Карта, О нас, Контакт, Приложение, Меню, Закрыть меню
-- **Chinese**: 地图, 关于, 联系, 应用, 菜单, 关闭菜单
 
 ## Correctness Properties
 

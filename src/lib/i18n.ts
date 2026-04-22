@@ -112,44 +112,51 @@ export function getLanguagePreference(): SupportedLanguage {
 const BORDER_STATUS_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> = {
   en: {
     'closed': 'Closed',
-    'dangerous': 'Dangerous',
+    'bilateral': 'Bilateral',
     'open': 'Open',
+    'restricted': 'Restricted',
     'unknown': 'Unknown'
   },
   de: {
     'closed': 'Geschlossen',
-    'dangerous': 'Gefährlich',
+    'bilateral': 'Bilateral',
     'open': 'Offen',
+    'restricted': 'Eingeschränkt',
     'unknown': 'Unbekannt'
   },
   es: {
     'closed': 'Cerrado',
-    'dangerous': 'Peligroso',
+    'bilateral': 'Bilateral',
     'open': 'Abierto',
+    'restricted': 'Restringido',
     'unknown': 'Desconocido'
   },
   fr: {
     'closed': 'Fermé',
-    'dangerous': 'Dangereux',
+    'bilateral': 'Bilatéral',
     'open': 'Ouvert',
+    'restricted': 'Restreint',
     'unknown': 'Inconnu'
   },
   it: {
     'closed': 'Chiuso',
-    'dangerous': 'Pericoloso',
+    'bilateral': 'Bilaterale',
     'open': 'Aperto',
+    'restricted': 'Limitato',
     'unknown': 'Sconosciuto'
   },
   ru: {
     'closed': 'Закрыто',
-    'dangerous': 'Опасно',
+    'bilateral': 'Двусторонний',
     'open': 'Открыто',
+    'restricted': 'Ограничено',
     'unknown': 'Неизвестно'
   },
   nl: {
     'closed': 'Gesloten',
-    'dangerous': 'Gevaarlijk',
+    'bilateral': 'Bilateraal',
     'open': 'Open',
+    'restricted': 'Beperkt',
     'unknown': 'Onbekend'
   }
 }
@@ -228,10 +235,13 @@ export function getTranslatedBorderStatus(
       key = 'closed'
       break
     case 1:
-      key = 'dangerous'
+      key = 'bilateral'
       break
     case 2:
       key = 'open'
+      break
+    case 3:
+      key = 'restricted'
       break
     default:
       key = 'unknown'
@@ -250,9 +260,11 @@ export function getBorderStatusColorClasses(isOpen: number | string): string {
     case 0:
       return 'bg-red-100 text-red-800' // Closed - Red
     case 1:
-      return 'bg-yellow-100 text-yellow-800' // Dangerous - Yellow
+      return 'bg-orange-100 text-orange-800' // Bilateral - Orange
     case 2:
       return 'bg-green-100 text-green-900' // Open - Dark Green
+    case 3:
+      return 'bg-yellow-100 text-yellow-800' // Restricted - Yellow
     default:
       return 'bg-gray-100 text-gray-800' // Unknown - Gray
   }
@@ -563,7 +575,9 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'dec': 'Dec',
     'general': 'General',
     'capital': 'Capital',
+    'continent': 'Continent',
     'currency': 'Currency',
+    'money': 'Money',
     'comment': 'Comment',
     'visa_comment': 'Visa Comment',
     'visa_url': 'Visa URL',
@@ -677,7 +691,9 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'dec': 'Dez',
     'general': 'Allgemein',
     'capital': 'Hauptstadt',
+    'continent': 'Kontinent',
     'currency': 'Währung',
+    'money': 'Geld',
     'comment': 'Kommentar',
     'visa_comment': 'Visum-Kommentar',
     'visa_url': 'Visum-URL',
@@ -791,7 +807,9 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'dec': 'Dic',
     'general': 'General',
     'capital': 'Capital',
+    'continent': 'Continente',
     'currency': 'Moneda',
+    'money': 'Dinero',
     'comment': 'Comentario',
     'visa_comment': 'Comentario de Visa',
     'visa_url': 'URL de Visa',
@@ -905,7 +923,9 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'dec': 'Déc',
     'general': 'Général',
     'capital': 'Capitale',
+    'continent': 'Continent',
     'currency': 'Monnaie',
+    'money': 'Argent',
     'comment': 'Commentaire',
     'visa_comment': 'Commentaire Visa',
     'visa_url': 'URL Visa',
@@ -1019,7 +1039,9 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'dec': 'Dic',
     'general': 'Generale',
     'capital': 'Capitale',
+    'continent': 'Continente',
     'currency': 'Valuta',
+    'money': 'Denaro',
     'comment': 'Commento',
     'visa_comment': 'Commento Visto',
     'visa_url': 'URL Visto',
@@ -1133,7 +1155,9 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'dec': 'Dec',
     'general': 'Algemeen',
     'capital': 'Hoofdstad',
+    'continent': 'Continent',
     'currency': 'Valuta',
+    'money': 'Geld',
     'comment': 'Opmerking',
     'visa_comment': 'Visum Opmerking',
     'visa_url': 'Visum URL',
@@ -1247,7 +1271,9 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'dec': 'Дек',
     'general': 'Общее',
     'capital': 'Столица',
+    'continent': 'Континент',
     'currency': 'Валюта',
+    'money': 'Деньги',
     'comment': 'Комментарий',
     'visa_comment': 'Комментарий к визе',
     'visa_url': 'URL визы',

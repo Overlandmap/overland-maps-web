@@ -2,7 +2,7 @@
 
 - [x] 1. Add translation keys to i18n system
   - Add 'crossing_between' translation key to INTERFACE_TRANSLATIONS dictionary for all supported languages
-  - Ensure proper grammatical structure for each language (German, Spanish, French, Italian, Japanese, Dutch, Russian, Chinese)
+  - Ensure proper grammatical structure for each language (German, Spanish, French, Italian, Dutch, Russian)
   - _Requirements: 1.1, 1.5, 2.2_
 
 - [ ]* 1.1 Write property test for complete language coverage

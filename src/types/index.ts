@@ -55,7 +55,7 @@ export interface ISO3Lookup {
 export interface BorderPostData {
   id: string
   location?: any // GeoJSON Point geometry or coordinates
-  is_open?: number // -1: unknown, 0: closed, 1: bilateral, 2: open, 3: restrictions apply
+  is_open?: number // 0: closed, 1: bilateral, 2: open, 3: restricted, null: unknown
   properties?: Record<string, any>
 }
 

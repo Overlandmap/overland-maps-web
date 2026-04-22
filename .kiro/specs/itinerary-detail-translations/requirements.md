@@ -35,5 +35,5 @@ This feature adds internationalization support for the itinerary detail panel te
 1. WHEN new translation keys are added THEN the system SHALL store them in the INTERFACE_TRANSLATIONS dictionary in i18n.ts
 2. WHEN translation keys are accessed THEN the system SHALL use the existing getTranslatedLabel function
 3. WHEN a translation is missing for a language THEN the system SHALL fallback to the English translation
-4. WHEN all supported languages are considered THEN the system SHALL provide translations for English, German, Spanish, French, Italian, Japanese, Dutch, Russian, and Chinese
+4. WHEN all supported languages are considered THEN the system SHALL provide translations for English, German, Spanish, French, Italian, Dutch, and Russian
 5. WHEN the translation system is used THEN the system SHALL maintain consistency with existing translation patterns in the codebase

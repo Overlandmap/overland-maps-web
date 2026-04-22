@@ -18,6 +18,32 @@ const translations = {
     stay_updated: 'Stay Updated',
     stay_desc: 'Download the mobile app to receive notifications about new features and updates.'
   },
+  de: {
+    back_to_support: 'Zurück zum Support',
+    title: 'Was ist Neu',
+    subtitle: 'Neueste Updates und Verbesserungen von Overland Map',
+    version: 'Version',
+    released: 'Veröffentlicht',
+    latest: 'Neueste',
+    new_features: '✨ Neue Funktionen',
+    improvements: '🔧 Verbesserungen',
+    bug_fixes: '🐛 Fehlerbehebungen',
+    stay_updated: 'Bleiben Sie Auf dem Laufenden',
+    stay_desc: 'Laden Sie die mobile App herunter, um Benachrichtigungen über neue Funktionen und Updates zu erhalten.'
+  },
+  es: {
+    back_to_support: 'Volver a Soporte',
+    title: 'Novedades',
+    subtitle: 'Últimas actualizaciones y mejoras de Overland Map',
+    version: 'Versión',
+    released: 'Publicado',
+    latest: 'Última',
+    new_features: '✨ Nuevas Funciones',
+    improvements: '🔧 Mejoras',
+    bug_fixes: '🐛 Correcciones de Errores',
+    stay_updated: 'Mantente Actualizado',
+    stay_desc: 'Descarga la aplicación móvil para recibir notificaciones sobre nuevas funciones y actualizaciones.'
+  },
   fr: {
     back_to_support: 'Retour au Support',
     title: 'Nouveautés',
@@ -30,6 +56,45 @@ const translations = {
     bug_fixes: '🐛 Corrections de Bugs',
     stay_updated: 'Restez Informé',
     stay_desc: 'Téléchargez l\'application mobile pour recevoir des notifications sur les nouvelles fonctionnalités et mises à jour.'
+  },
+  it: {
+    back_to_support: 'Torna al Supporto',
+    title: 'Novità',
+    subtitle: 'Ultimi aggiornamenti e miglioramenti di Overland Map',
+    version: 'Versione',
+    released: 'Rilasciato',
+    latest: 'Ultima',
+    new_features: '✨ Nuove Funzionalità',
+    improvements: '🔧 Miglioramenti',
+    bug_fixes: '🐛 Correzioni di Bug',
+    stay_updated: 'Rimani Aggiornato',
+    stay_desc: 'Scarica l\'app mobile per ricevere notifiche su nuove funzionalità e aggiornamenti.'
+  },
+  nl: {
+    back_to_support: 'Terug naar Ondersteuning',
+    title: 'Wat is Nieuw',
+    subtitle: 'Laatste updates en verbeteringen van Overland Map',
+    version: 'Versie',
+    released: 'Uitgebracht',
+    latest: 'Nieuwste',
+    new_features: '✨ Nieuwe Functies',
+    improvements: '🔧 Verbeteringen',
+    bug_fixes: '🐛 Bugfixes',
+    stay_updated: 'Blijf Op de Hoogte',
+    stay_desc: 'Download de mobiele app om meldingen te ontvangen over nieuwe functies en updates.'
+  },
+  ru: {
+    back_to_support: 'Назад в Поддержку',
+    title: 'Что Нового',
+    subtitle: 'Последние обновления и улучшения Overland Map',
+    version: 'Версия',
+    released: 'Выпущено',
+    latest: 'Последняя',
+    new_features: '✨ Новые Функции',
+    improvements: '🔧 Улучшения',
+    bug_fixes: '🐛 Исправления Ошибок',
+    stay_updated: 'Будьте в Курсе',
+    stay_desc: 'Загрузите мобильное приложение, чтобы получать уведомления о новых функциях и обновлениях.'
   }
 }
 
@@ -57,14 +122,14 @@ function WhatsNewPageContent() {
           </p>
 
           <div className="space-y-6">
-            {/* Version 2.1.0 */}
+            {/* Version 2.0.1 */}
             <div className="bg-white rounded-lg shadow-sm p-8">
               <div className="flex items-start justify-between mb-4">
                 <div>
                   <h2 className="text-2xl font-semibold text-gray-900">
-                    {t.version} 2.1.0
+                    {t.version} 2.0.1
                   </h2>
-                  <p className="text-sm text-gray-500 mt-1">{t.released} January 2026</p>
+                  <p className="text-sm text-gray-500 mt-1">{t.released} February 2026</p>
                 </div>
                 <span className="px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full">
                   {t.latest}
@@ -76,74 +141,23 @@ function WhatsNewPageContent() {
                   <ul className="space-y-2 text-gray-700">
                     <li className="flex items-start">
                       <span className="text-blue-600 mr-2">•</span>
-                      <span>Added climate data visualization with monthly temperature and precipitation</span>
+                      <span>New overland information for all countries, in free access for everyone, with companion website</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-blue-600 mr-2">•</span>
-                      <span>New itinerary layer with curated overland routes</span>
+                      <span>Extensive collaboration features. Post corrections and suggest new data, start a discussion with other overlanders</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-blue-600 mr-2">•</span>
-                      <span>Enhanced border post details with community comments</span>
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">{t.improvements}</h3>
-                  <ul className="space-y-2 text-gray-700">
-                    <li className="flex items-start">
-                      <span className="text-blue-600 mr-2">•</span>
-                      <span>Faster map loading and improved performance</span>
+                      <span>New PRO features (available with every purchase of a pack): Historic climate data and weather forecast on every itinerary</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-blue-600 mr-2">•</span>
-                      <span>Better mobile responsiveness</span>
+                      <span>Polished UI</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-blue-600 mr-2">•</span>
-                      <span>Updated translations for 9 languages</span>
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">{t.bug_fixes}</h3>
-                  <ul className="space-y-2 text-gray-700">
-                    <li className="flex items-start">
-                      <span className="text-blue-600 mr-2">•</span>
-                      <span>Fixed border post status display issues</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-blue-600 mr-2">•</span>
-                      <span>Resolved zoom button positioning on mobile</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            {/* Version 2.0.0 */}
-            <div className="bg-white rounded-lg shadow-sm p-8">
-              <div className="mb-4">
-                <h2 className="text-2xl font-semibold text-gray-900">
-                  {t.version} 2.0.0
-                </h2>
-                <p className="text-sm text-gray-500 mt-1">{t.released} December 2025</p>
-              </div>
-              <div className="space-y-4">
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">{t.new_features}</h3>
-                  <ul className="space-y-2 text-gray-700">
-                    <li className="flex items-start">
-                      <span className="text-blue-600 mr-2">•</span>
-                      <span>Complete redesign of the web interface</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-blue-600 mr-2">•</span>
-                      <span>Added restricted zones and special permit areas</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-blue-600 mr-2">•</span>
-                      <span>Multi-language support for interface and content</span>
+                      <span>Bug fixes</span>
                     </li>
                   </ul>
                 </div>

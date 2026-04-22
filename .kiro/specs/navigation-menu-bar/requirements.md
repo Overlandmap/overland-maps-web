@@ -68,7 +68,7 @@ This specification defines the requirements for adding a navigation menu bar to 
 
 1. WHEN a user selects a language THEN the system SHALL display all menu items in the selected language
 2. WHEN the language changes THEN the system SHALL update menu item text without requiring a page reload
-3. WHEN displaying menu items THEN the system SHALL support all 9 languages currently supported by the application (English, German, Spanish, French, Italian, Japanese, Dutch, Russian, Chinese)
+3. WHEN displaying menu items THEN the system SHALL support all 7 languages currently supported by the application (English, German, Spanish, French, Italian, Dutch, Russian)
 
 ### Requirement 6
 

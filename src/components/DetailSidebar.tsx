@@ -701,15 +701,7 @@ export default function DetailSidebar({
                   <span className="font-normal">{formatCapitalName(countryData, language)}</span>
                 </div>
               )}
-              
-              {/* Currency */}
-              {countryData.parameters?.currency && (
-                <div className="flex justify-between">
-                  <span className="text-gray-600 font-semibold">{getTranslatedLabel('currency', language)}:</span>
-                  <span className="font-normal">{countryData.parameters.currency}</span>
-                </div>
-              )}
-              
+
               {/* General Comment */}
               {(() => {
                 const generalComment = getTranslatedComment(countryData, language)
@@ -721,6 +713,21 @@ export default function DetailSidebar({
                   </div>
                 )
               })()}
+              
+              {/* Currency */}
+              {countryData.parameters?.currency && (
+                <div className="flex justify-between">
+                  <span className="text-gray-600 font-semibold">{getTranslatedLabel('currency', language)}:</span>
+                  <span className="font-normal">{countryData.parameters.currency}</span>
+                </div>
+              )}
+
+              {/* Money */}
+              {countryData.parameters?.money && (
+                <div className="bg-gray-50 border border-gray-200 rounded-lg p-3 shadow-inner">
+                  <p className="text-gray-800 text-sm leading-relaxed">{countryData.parameters.money}</p>
+                </div>
+              )}
 
             {/* Official Travel Advice Links */}
             {(() => {

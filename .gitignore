@@ -48,3 +48,6 @@ pmtiles
 
 # wrangler
 .wrangler
+
+# keys, etc.
+.env

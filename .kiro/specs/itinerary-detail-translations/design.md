@@ -72,7 +72,7 @@ Property 6: Translation fallback behavior
 **Validates: Requirements 2.3**
 
 Property 7: Complete language coverage
-*For any* new translation key added for itinerary details, translations should exist for all 9 supported languages (English, German, Spanish, French, Italian, Japanese, Dutch, Russian, Chinese)
+*For any* new translation key added for itinerary details, translations should exist for all 7 supported languages (English, German, Spanish, French, Italian, Dutch, Russian)
 **Validates: Requirements 2.4**
 
 ## Error Handling

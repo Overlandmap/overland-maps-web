@@ -58264,9 +58264,10 @@
         "ADM0_A3": "SYR",
         "NAME": "Syria",
         "ABBREV": "Syria",
-        "overlanding": 2,
+        "overlanding": 3,
         "iso_a2": "SY",
         "driving": "r",
+        "carnet": 0,
         "visa": 1
       },
       "geometry": {
@@ -184810,7 +184811,7 @@
         "overlanding": 3,
         "iso_a2": "JO",
         "driving": "r",
-        "carnet": 1,
+        "carnet": 0,
         "visa": 2
       },
       "geometry": {
@@ -192916,7 +192917,8 @@
         "ABBREV": "Pal.",
         "overlanding": 2,
         "iso_a2": "PS",
-        "driving": "r"
+        "driving": "r",
+        "visa": 0
       },
       "geometry": {
         "type": "Polygon",
