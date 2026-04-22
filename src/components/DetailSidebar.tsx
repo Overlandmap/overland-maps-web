@@ -50,6 +50,60 @@ function LinkifiedText({ text, className }: { text: string; className?: string }
   )
 }
 
+/**
+ * Fetches and displays exchange rate from USD to a target currency.
+ * Only fetches when the user clicks the button.
+ */
+function ExchangeRateDisplay({ currencyCode }: { currencyCode: string }) {
+  const [rate, setRate] = useState<number | null>(null)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+
+  const fetchRate = async () => {
+    setLoading(true)
+    setError(null)
+    try {
+      const appId = process.env.NEXT_PUBLIC_OXR_APP_ID
+      if (!appId) { setError('API key not configured'); return }
+      const res = await fetch(`https://openexchangerates.org/api/latest.json?app_id=${appId}&symbols=${currencyCode}`)
+      if (!res.ok) throw new Error('Failed to fetch')
+      const data = await res.json()
+      const r = data.rates?.[currencyCode]
+      if (r) {
+        setRate(r)
+      } else {
+        setError('Rate not available')
+      }
+    } catch {
+      setError('Could not fetch rate')
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  if (rate !== null) {
+    return (
+      <div className="text-sm text-gray-600">
+        1 USD = {rate.toFixed(rate < 10 ? 4 : 2)} {currencyCode}
+      </div>
+    )
+  }
+
+  if (error) {
+    return <div className="text-sm text-red-500">{error}</div>
+  }
+
+  return (
+    <button
+      onClick={fetchRate}
+      disabled={loading}
+      className="text-xs text-blue-600 hover:text-blue-700 underline disabled:text-gray-400 disabled:no-underline"
+    >
+      {loading ? '...' : `Show USD → ${currencyCode} rate`}
+    </button>
+  )
+}
+
 interface DetailSidebarProps {
   isOpen: boolean
   onClose: () => void
@@ -743,9 +797,13 @@ export default function DetailSidebar({
               
               {/* Currency */}
               {countryData.parameters?.currency && (
-                <div className="flex justify-between">
-                  <span className="text-gray-600 font-semibold">{getTranslatedLabel('currency', language)}:</span>
-                  <span className="font-normal">{countryData.parameters.currency}</span>
+                <div className="space-y-2">
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-600 font-semibold">{getTranslatedLabel('currency', language)}:</span>
+                    <span className="font-normal">{countryData.parameters.currency}{countryData.parameters.currency_symbol ? ` (${countryData.parameters.currency_symbol})` : ''}</span>
+                  </div>
+                  {/* Exchange rate button & display */}
+                  <ExchangeRateDisplay key={countryData.id} currencyCode={countryData.parameters.currency} />
                 </div>
               )}
 
