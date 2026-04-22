@@ -21,6 +21,35 @@ import { processItineraryText, setupItineraryLinkHandlers } from '../lib/text-fi
 import CountryFlag from './CountryFlag'
 import AppStoreButtons from './AppStoreButtons'
 
+/**
+ * Renders text with URLs automatically converted to clickable links.
+ * Also preserves newlines via whitespace-pre-line.
+ */
+function LinkifiedText({ text, className }: { text: string; className?: string }) {
+  const urlRegex = /(https?:\/\/[^\s<]+)/g
+  const parts = text.split(urlRegex)
+
+  return (
+    <p className={className}>
+      {parts.map((part, i) =>
+        urlRegex.test(part) ? (
+          <a
+            key={i}
+            href={part}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:text-blue-700 underline break-all"
+          >
+            {part}
+          </a>
+        ) : (
+          <span key={i}>{part}</span>
+        )
+      )}
+    </p>
+  )
+}
+
 interface DetailSidebarProps {
   isOpen: boolean
   onClose: () => void
@@ -707,9 +736,7 @@ export default function DetailSidebar({
                 const generalComment = getTranslatedComment(countryData, language)
                 return generalComment && (
                   <div className="bg-gray-50 border border-gray-200 rounded-lg p-3 shadow-inner">
-                    <p className="text-gray-800 text-sm leading-relaxed">
-                      {generalComment}
-                    </p>
+                    <LinkifiedText text={generalComment} className="text-gray-800 text-sm leading-relaxed whitespace-pre-line" />
                   </div>
                 )
               })()}
@@ -725,7 +752,7 @@ export default function DetailSidebar({
               {/* Money */}
               {countryData.parameters?.money && (
                 <div className="bg-gray-50 border border-gray-200 rounded-lg p-3 shadow-inner">
-                  <p className="text-gray-800 text-sm leading-relaxed">{countryData.parameters.money}</p>
+                  <LinkifiedText text={countryData.parameters.money} className="text-gray-800 text-sm leading-relaxed whitespace-pre-line" />
                 </div>
               )}
 
@@ -981,9 +1008,7 @@ export default function DetailSidebar({
                     const visaComment = getTranslatedVisaComment(countryData, language)
                     return visaComment && (
                       <div className="bg-gray-50 border border-gray-200 rounded-lg p-3 shadow-inner">
-                        <p className="text-gray-800 text-sm leading-relaxed">
-                          {visaComment}
-                        </p>
+                        <LinkifiedText text={visaComment} className="text-gray-800 text-sm leading-relaxed whitespace-pre-line" />
                       </div>
                     )
                   })()}
@@ -1028,9 +1053,7 @@ export default function DetailSidebar({
                     const carnetComment = getTranslatedCarnetComment(countryData, language)
                     return carnetComment && (
                       <div className="bg-gray-50 border border-gray-200 rounded-lg p-3 shadow-inner">
-                        <p className="text-gray-800 text-sm leading-relaxed">
-                          {carnetComment}
-                        </p>
+                        <LinkifiedText text={carnetComment} className="text-gray-800 text-sm leading-relaxed whitespace-pre-line" />
                       </div>
                     )
                   })()}
@@ -1047,9 +1070,7 @@ export default function DetailSidebar({
                       <div className="space-y-2">
                         <span className="text-gray-600 font-semibold">{getTranslatedLabel('tip_label', language)}:</span>
                         <div className="bg-gray-50 border border-gray-200 rounded-lg p-3 shadow-inner">
-                          <p className="text-gray-800 text-sm leading-relaxed">
-                            {tip}
-                          </p>
+                          <LinkifiedText text={tip} className="text-gray-800 text-sm leading-relaxed whitespace-pre-line" />
                         </div>
                       </div>
                     )
@@ -1060,9 +1081,7 @@ export default function DetailSidebar({
                     const tipComment = getTranslatedTipComment(countryData, language)
                     return tipComment && (
                       <div className="bg-gray-50 border border-gray-200 rounded-lg p-3 shadow-inner">
-                        <p className="text-gray-800 text-sm leading-relaxed">
-                          {tipComment}
-                        </p>
+                        <LinkifiedText text={tipComment} className="text-gray-800 text-sm leading-relaxed whitespace-pre-line" />
                       </div>
                     )
                   })()}
@@ -1108,9 +1127,7 @@ export default function DetailSidebar({
                     const insuranceComment = getTranslatedInsuranceComment(countryData, language)
                     return insuranceComment && (
                       <div className="bg-gray-50 border border-gray-200 rounded-lg p-3 shadow-inner">
-                        <p className="text-gray-800 text-sm leading-relaxed">
-                          {insuranceComment}
-                        </p>
+                        <LinkifiedText text={insuranceComment} className="text-gray-800 text-sm leading-relaxed whitespace-pre-line" />
                       </div>
                     )
                   })()}
