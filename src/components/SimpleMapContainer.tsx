@@ -120,7 +120,13 @@ export default function SimpleMapContainer({
   const [showBorderPosts, setShowBorderPosts] = useState(true)
   const [selectedMonth, setSelectedMonth] = useState<number>(0) // 0 = January, 11 = December
   const [climateDataType, setClimateDataType] = useState<'temperature' | 'precipitation'>('temperature')
-  const [showLegend, setShowLegend] = useState(false) // Will be set based on screen size
+  const [showLegend, setShowLegend] = useState(() => {
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('legendExpanded')
+      if (saved !== null) return saved === 'true'
+    }
+    return false
+  })
   const [showColorSchemeHelp, setShowColorSchemeHelp] = useState(false)
   const [explanationPopup, setExplanationPopup] = useState<{
     isOpen: boolean
@@ -2038,9 +2044,15 @@ export default function SimpleMapContainer({
     }
   }, [colorScheme, isLoaded, updateMapColors])
 
-  // Set initial legend visibility based on screen size
+  // Set initial legend visibility based on screen size (only if no saved preference)
   useEffect(() => {
     if (initialLegendSetRef.current) return
+    
+    // If user has a saved preference, skip screen-size detection
+    if (typeof window !== 'undefined' && localStorage.getItem('legendExpanded') !== null) {
+      initialLegendSetRef.current = true
+      return
+    }
     
     const checkScreenSize = () => {
       // Show legend on desktop/tablet (768px and above), hide on mobile
@@ -2768,7 +2780,11 @@ export default function SimpleMapContainer({
 
       {/* Legend Toggle Button */}
       <button
-        onClick={() => setShowLegend(!showLegend)}
+        onClick={() => {
+          const next = !showLegend
+          setShowLegend(next)
+          localStorage.setItem('legendExpanded', String(next))
+        }}
         className="absolute top-20 left-4 bg-white bg-opacity-95 rounded-lg shadow-lg z-20 p-2 hover:bg-opacity-100 transition-all"
         title={showLegend ? "Hide Legend" : "Show Legend"}
       >
@@ -3085,6 +3101,10 @@ export default function SimpleMapContainer({
                     <span className="text-gray-700">{getTranslatedLabel('open', language)}</span>
                   </div>
                   <div className="flex items-center space-x-2">
+                    <div className="w-4 h-2" style={{ backgroundColor: '#3b82f6' }}></div>
+                    <span className="text-gray-700">{getTranslatedLabel('bilateral', language)}</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
                     <div className="w-4 h-2" style={{ backgroundColor: '#eab308' }}></div>
                     <span className="text-gray-700">{getTranslatedLabel('restricted', language)}</span>
                   </div>
@@ -3107,35 +3127,6 @@ export default function SimpleMapContainer({
                     <div className="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-blue-600"></div>
                   </label>
                   <h3 className="text-sm font-semibold ml-2">{getTranslatedLabel('border_posts', language)}</h3>
-                  <button
-                    onClick={() => handleLegendGroupClick('border_posts')}
-                    className="ml-2 w-4 h-4 rounded-full bg-gray-200 hover:bg-gray-300 flex items-center justify-center text-xs text-gray-600 hover:text-gray-800 transition-colors"
-                    title="Click for detailed explanations"
-                  >
-                    ?
-                  </button>
-                </div>
-                <div 
-                  className="cursor-pointer hover:bg-gray-100 p-2 rounded transition-colors space-y-1 text-xs"
-                  onClick={() => handleLegendGroupClick('border_posts')}
-                  title="Click for detailed explanations"
-                >
-                  <div className="flex items-center space-x-2">
-                    <div className="w-3 h-3 rounded-full" style={{ backgroundColor: '#22c55e' }}></div>
-                    <span className="text-gray-700">{getTranslatedLabel('open', language)}</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-3 h-3 rounded-full" style={{ backgroundColor: '#3b82f6' }}></div>
-                    <span className="text-gray-700">{getTranslatedLabel('bilateral', language)}</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-3 h-3 rounded-full" style={{ backgroundColor: '#eab308' }}></div>
-                    <span className="text-gray-700">{getTranslatedLabel('restricted', language)}</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-3 h-3 rounded-full" style={{ backgroundColor: '#ef4444' }}></div>
-                    <span className="text-gray-700">{getTranslatedLabel('closed', language)}</span>
-                  </div>
                 </div>
               </div>
 
