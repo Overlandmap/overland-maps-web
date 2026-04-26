@@ -228,7 +228,7 @@ function AboutPageContent() {
                       </svg>
                     </a>
                     <a
-                      href="https://www.facebook.com/overlandmap"
+                      href="https://www.facebook.com/profile.php?id=61573402341277"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-gray-600 hover:text-blue-600 transition-colors"
