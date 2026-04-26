@@ -326,6 +326,7 @@ export default function DetailSidebar({
   const [borderDetails, setBorderDetails] = useState<BorderDetail[]>([])
   const [loadingBorders, setLoadingBorders] = useState(false)
   const [borderPosts, setBorderPosts] = useState<any[]>([])
+  const [borderPostJsonData, setBorderPostJsonData] = useState<any>(null)
   const [translatedBorderTitle, setTranslatedBorderTitle] = useState<string>('')
   const [crossingText, setCrossingText] = useState<string>('')
   const [activeCountryTab, setActiveCountryTab] = useState<'general' | 'visa' | 'driving' | 'borders'>('general')
@@ -476,6 +477,19 @@ export default function DetailSidebar({
 
     loadCrossingText()
   }, [selectedFeature, language])
+
+  // Load border post data from JSON file when a border post is selected
+  useEffect(() => {
+    const loadBorderPostJson = async () => {
+      if (selectedFeature?.type === 'border-post' && selectedFeature.id) {
+        const jsonData = await getBorderPostById(selectedFeature.id)
+        setBorderPostJsonData(jsonData)
+      } else {
+        setBorderPostJsonData(null)
+      }
+    }
+    loadBorderPostJson()
+  }, [selectedFeature])
 
   /**
    * Get translated border title from country codes
@@ -1567,10 +1581,19 @@ export default function DetailSidebar({
 
     // Special handling for translation fields - preserve from feature if database doesn't have them
     // Check both comment_translations and comment_translated field names
-    const comment_translations = borderPostData?.comment_translations || 
+    const rawCommentTranslations = borderPostData?.comment_translations || 
                                  borderPostData?.comment_translated ||
                                  feature?.properties?.comment_translations ||
                                  feature?.properties?.comment_translated;
+    // PMTiles serializes nested objects to JSON strings — parse if needed
+    let comment_translations = rawCommentTranslations;
+    if (typeof rawCommentTranslations === 'string') {
+      try {
+        comment_translations = JSON.parse(rawCommentTranslations);
+      } catch {
+        comment_translations = null;
+      }
+    }
     const comment = borderPostData?.comment || feature?.properties?.comment;
 
     // Normalize coordinates from different formats
@@ -1602,8 +1625,10 @@ export default function DetailSidebar({
    * Render border post information (read-only) - unified implementation
    */
   const renderBorderPostDetails = (borderPostData: any, feature: any) => {
+    // Use JSON file data as primary source (has translations), fall back to passed-in data
+    const primaryData = borderPostJsonData || borderPostData;
     // Normalize data from both sources into a unified structure
-    const properties = normalizeBorderPostData(borderPostData, feature);
+    const properties = normalizeBorderPostData(primaryData, feature);
     
     // Handle case where no valid data is available
     if (!properties) {
@@ -1719,19 +1744,14 @@ export default function DetailSidebar({
           
           {/* Comment */}
           {(() => {
-            // Validate translation structure and log warnings
-            const validation = validateTranslationStructure(properties);
-            if (validation.warnings.length > 0) {
-              console.warn('Border post translation validation warnings:', validation.warnings);
-            }
+            // Always use JSON file data for comment (has translations)
+            const jsonSrc = borderPostJsonData || properties;
+            const translations = jsonSrc?.comment_translations || jsonSrc?.comment_translated;
+            const originalComment = jsonSrc?.comment || properties?.comment;
 
-            // Check if translations are in comment_translated field instead
-            const translations = properties.comment_translated || properties.comment_translations;
-
-            // Get the translated comment using the validation helper
             const displayComment = getTranslatedFieldValue(
               translations,
-              properties.comment,
+              originalComment,
               language
             );
             
@@ -1739,7 +1759,7 @@ export default function DetailSidebar({
               <div className="space-y-2">
                 <span className="text-gray-600 text-sm font-medium">{getTranslatedLabel('comment', language)}:</span>
                 <div className="bg-gray-50 p-3 rounded-lg">
-                  <p className="text-sm text-gray-800">{displayComment}</p>
+                  <LinkifiedText text={displayComment} className="text-sm text-gray-800 whitespace-pre-line" />
                 </div>
               </div>
             )

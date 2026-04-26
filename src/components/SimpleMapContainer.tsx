@@ -3183,6 +3183,11 @@ export default function SimpleMapContainer({
               </div>
             </>
           )}
+
+          {/* App Store Buttons */}
+          <div className="mt-4 pt-3 border-t border-gray-200">
+            <AppStoreButtons size="small" layout="compact" />
+          </div>
           </div>
         </div>
       )}

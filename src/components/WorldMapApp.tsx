@@ -200,21 +200,14 @@ function WorldMapAppInner({ initialCountry, initialBorder, initialBorderPost, in
       // Load border post data from JSON file
       const jsonData = await getBorderPostById(borderPostId)
       
-      // Merge data from JSON file and feature properties
-      // Priority: jsonData (from border-posts.json) > feature.properties (from map)
+      // Merge data: JSON file (with translations) takes priority over GeoJSON feature properties
+      const featureProps = feature?.properties || {}
       const completeData = {
+        ...featureProps,
+        ...(jsonData || {}),
         id: borderPostId,
-        name: jsonData?.name || feature?.properties?.name || 'Unnamed Border Post',
-        is_open: jsonData?.is_open ?? feature?.properties?.is_open ?? -1,
-        comment: jsonData?.comment || feature?.properties?.comment,
-        comment_translations: jsonData?.comment_translations || feature?.properties?.comment_translations,
-        comment_translated: jsonData?.comment_translated || feature?.properties?.comment_translated,
-        countries: jsonData?.countries || feature?.properties?.countries,
-        location: jsonData?.location || feature?.properties?.location,
         geometry: feature?.geometry,
         coordinates: jsonData?.coordinates || (feature?.geometry?.type === 'Point' ? feature.geometry.coordinates : null),
-        ...feature?.properties,
-        ...jsonData // JSON data takes priority
       }
       
       // Show detail sidebar
