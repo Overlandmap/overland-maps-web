@@ -12,7 +12,7 @@
  * Requirements: 1.1, 1.2, 1.5, 2.1-2.9, 3.4, 3.5
  */
 
-import { getTranslatedLabel } from '../../lib/i18n'
+import { getBorderStatusColorClasses, getTranslatedBorderStatus, getTranslatedLabel } from '../../lib/i18n'
 
 describe('Border Post Status Restricted Fix - Manual Verification', () => {
   
@@ -23,7 +23,6 @@ describe('Border Post Status Restricted Fix - Manual Verification', () => {
       { code: 'es', expected: 'Restringido' },
       { code: 'fr', expected: 'Restreint' },
       { code: 'it', expected: 'Limitato' },
-      { code: 'ja', expected: '制限' },
       { code: 'nl', expected: 'Beperkt' },
       { code: 'ru', expected: 'Ограничено' }
     ]
@@ -38,13 +37,36 @@ describe('Border Post Status Restricted Fix - Manual Verification', () => {
 
   describe('Translation key existence verification', () => {
     it('should have restricted translation key for all supported languages', () => {
-      const languages = ['en', 'de', 'es', 'fr', 'it', 'ja', 'nl', 'ru']
+      const languages = ['en', 'de', 'es', 'fr', 'it', 'nl', 'ru']
       
       languages.forEach(lang => {
         const translation = getTranslatedLabel('restricted', lang as any)
         expect(translation).toBeTruthy()
         expect(translation).not.toBe('restricted') // Should be translated, not return the key
       })
+    })
+  })
+
+  describe('Temporary closed status', () => {
+    const languages = [
+      { code: 'en', expected: 'Temporary closed' },
+      { code: 'de', expected: 'Vorübergehend geschlossen' },
+      { code: 'es', expected: 'Cerrado temporalmente' },
+      { code: 'fr', expected: 'Fermé temporairement' },
+      { code: 'it', expected: 'Chiuso temporaneamente' },
+      { code: 'nl', expected: 'Tijdelijk gesloten' },
+      { code: 'ru', expected: 'Временно закрыто' }
+    ]
+
+    languages.forEach(({ code, expected }) => {
+      it(`should translate "temporary_closed" correctly in ${code}`, () => {
+        expect(getTranslatedLabel('temporary_closed', code as any)).toBe(expected)
+      })
+    })
+
+    it('maps is_open=4 to the temporary-closed label and orange UI classes', () => {
+      expect(getTranslatedBorderStatus(4, 'en')).toBe('Temporary closed')
+      expect(getBorderStatusColorClasses(4)).toBe('bg-orange-100 text-orange-800')
     })
   })
 

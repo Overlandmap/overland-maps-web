@@ -67,9 +67,13 @@ describe('LegendExplanationPopup', () => {
 
     expect(screen.getByText('Borders Status Explanations')).toBeInTheDocument()
     expect(screen.getByText('Open')).toBeInTheDocument()
+    expect(screen.getByText('Bilateral')).toBeInTheDocument()
     expect(screen.getByText('Restricted')).toBeInTheDocument()
+    expect(screen.getByText('Temporary closed')).toBeInTheDocument()
     expect(screen.getByText('Closed')).toBeInTheDocument()
     expect(screen.getByText(/The border can be crossed at the designated border posts/)).toBeInTheDocument()
+    expect(screen.getByText('The border can be used only by nationals of the border countries.')).toBeInTheDocument()
+    expect(screen.getByText('The border is temporary closed for avarious reasons, but is expected to reopen in the not so distant future.')).toBeInTheDocument()
   })
 
   it('should render border posts explanations', () => {

@@ -115,6 +115,7 @@ const BORDER_STATUS_TRANSLATIONS: Record<SupportedLanguage, Record<string, strin
     'bilateral': 'Bilateral',
     'open': 'Open',
     'restricted': 'Restricted',
+    'temporary_closed': 'Temporary closed',
     'unknown': 'Unknown'
   },
   de: {
@@ -122,6 +123,7 @@ const BORDER_STATUS_TRANSLATIONS: Record<SupportedLanguage, Record<string, strin
     'bilateral': 'Bilateral',
     'open': 'Offen',
     'restricted': 'Eingeschränkt',
+    'temporary_closed': 'Vorübergehend geschlossen',
     'unknown': 'Unbekannt'
   },
   es: {
@@ -129,6 +131,7 @@ const BORDER_STATUS_TRANSLATIONS: Record<SupportedLanguage, Record<string, strin
     'bilateral': 'Bilateral',
     'open': 'Abierto',
     'restricted': 'Restringido',
+    'temporary_closed': 'Cerrado temporalmente',
     'unknown': 'Desconocido'
   },
   fr: {
@@ -136,6 +139,7 @@ const BORDER_STATUS_TRANSLATIONS: Record<SupportedLanguage, Record<string, strin
     'bilateral': 'Bilatéral',
     'open': 'Ouvert',
     'restricted': 'Restreint',
+    'temporary_closed': 'Fermé temporairement',
     'unknown': 'Inconnu'
   },
   it: {
@@ -143,6 +147,7 @@ const BORDER_STATUS_TRANSLATIONS: Record<SupportedLanguage, Record<string, strin
     'bilateral': 'Bilaterale',
     'open': 'Aperto',
     'restricted': 'Limitato',
+    'temporary_closed': 'Chiuso temporaneamente',
     'unknown': 'Sconosciuto'
   },
   ru: {
@@ -150,6 +155,7 @@ const BORDER_STATUS_TRANSLATIONS: Record<SupportedLanguage, Record<string, strin
     'bilateral': 'Двусторонний',
     'open': 'Открыто',
     'restricted': 'Ограничено',
+    'temporary_closed': 'Временно закрыто',
     'unknown': 'Неизвестно'
   },
   nl: {
@@ -157,6 +163,7 @@ const BORDER_STATUS_TRANSLATIONS: Record<SupportedLanguage, Record<string, strin
     'bilateral': 'Bilateraal',
     'open': 'Open',
     'restricted': 'Beperkt',
+    'temporary_closed': 'Tijdelijk gesloten',
     'unknown': 'Onbekend'
   }
 }
@@ -243,6 +250,9 @@ export function getTranslatedBorderStatus(
     case 3:
       key = 'restricted'
       break
+    case 4:
+      key = 'temporary_closed'
+      break
     default:
       key = 'unknown'
   }
@@ -265,6 +275,8 @@ export function getBorderStatusColorClasses(isOpen: number | string): string {
       return 'bg-green-100 text-green-900' // Open - Dark Green
     case 3:
       return 'bg-yellow-100 text-yellow-800' // Restricted - Yellow
+    case 4:
+      return 'bg-orange-100 text-orange-800' // Temporary closed - Orange
     default:
       return 'bg-gray-100 text-gray-800' // Unknown - Gray
   }
@@ -522,7 +534,7 @@ const INTERFACE_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> 
     'countries': 'Countries',
     'bilateral': 'Bilateral',
     'restrictions_apply': 'Restrictions apply',
-    'temporary_closed': 'Temporary Closed',
+    'temporary_closed': 'Temporary closed',
     'zones': 'Zones',
     'restricted_areas': 'Restricted areas',
     'zone_closed': 'Closed',

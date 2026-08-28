@@ -30,6 +30,7 @@ function getBorderPostLayerConfig(): maplibregl.LayerSpecification {
         ['==', ['get', 'is_open'], 1], '#3b82f6',  // Bilateral - blue
         ['==', ['get', 'is_open'], 2], '#22c55e',  // Open - green
         ['==', ['get', 'is_open'], 3], '#eab308',  // Restrictions - yellow
+        ['==', ['get', 'is_open'], 4], '#f97316',  // Temporary closed - orange
         '#ef4444'  // Closed (0) or null - red (default)
       ],
       'circle-radius': [
@@ -3107,6 +3108,10 @@ export default function SimpleMapContainer({
                   <div className="flex items-center space-x-2">
                     <div className="w-4 h-2" style={{ backgroundColor: '#eab308' }}></div>
                     <span className="text-gray-700">{getTranslatedLabel('restricted', language)}</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-4 h-2" style={{ backgroundColor: '#f97316' }}></div>
+                    <span className="text-gray-700">{getTranslatedLabel('temporary_closed', language)}</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <div className="w-4 h-2" style={{ backgroundColor: '#ef4444' }}></div>

@@ -649,6 +649,7 @@ export default function DetailSidebar({
    * 1 = Bilateral (orange)
    * 2 = Open/Multilateral (green)
    * 3 = Restricted (yellow)
+  * 4 = Temporary closed (orange)
    */
   const getBorderPostStatus = (isOpen: number) => {
     switch (isOpen) {
@@ -660,6 +661,8 @@ export default function DetailSidebar({
         return { label: getTranslatedLabel('open', language as any), color: 'bg-green-100 text-green-800' }
       case 3:
         return { label: getTranslatedLabel('restricted', language as any), color: 'bg-yellow-100 text-yellow-800' }
+      case 4:
+        return { label: getTranslatedLabel('temporary_closed', language as any), color: 'bg-orange-100 text-orange-800' }
       default:
         return { label: getTranslatedLabel('unknown', language as any), color: 'bg-gray-100 text-gray-800' }
     }

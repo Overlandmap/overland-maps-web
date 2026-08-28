@@ -13,7 +13,6 @@ export async function GET() {
       return NextResponse.json({
         countries: [],
         metadata: {
-          generatedAt: new Date().toISOString(),
           totalCountries: 0,
           source: 'firestore-live'
         }
@@ -41,7 +40,6 @@ export async function GET() {
     return NextResponse.json({
       countries,
       metadata: {
-        generatedAt: new Date().toISOString(),
         totalCountries: countries.length,
         source: 'firestore-live'
       }

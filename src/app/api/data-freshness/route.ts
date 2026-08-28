@@ -45,8 +45,7 @@ export async function GET() {
       staticFileTime,
       hasRecentUpdates,
       hasVeryRecentUpdates,
-      recommendation: hasRecentUpdates || hasVeryRecentUpdates ? 'load-fresh' : 'use-static',
-      timestamp: Date.now()
+      recommendation: hasRecentUpdates || hasVeryRecentUpdates ? 'load-fresh' : 'use-static'
     })
     
   } catch (error) {
@@ -58,7 +57,6 @@ export async function GET() {
       hasRecentUpdates: false,
       hasVeryRecentUpdates: false,
       recommendation: 'use-static',
-      timestamp: Date.now(),
       error: error instanceof Error ? error.message : 'Unknown error'
     })
   }

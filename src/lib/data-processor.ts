@@ -461,7 +461,7 @@ export class DataProcessor {
       
       // Check for border posts with invalid is_open values
       const borderPostsWithInvalidStatus = borderPosts.filter(bp => 
-        bp.is_open !== undefined && (bp.is_open < -1 || bp.is_open > 3)
+        bp.is_open !== undefined && (bp.is_open < -1 || bp.is_open > 4)
       )
       if (borderPostsWithInvalidStatus.length > 0) {
         issues.push(`${borderPostsWithInvalidStatus.length} border posts have invalid is_open values`)

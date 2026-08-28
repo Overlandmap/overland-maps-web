@@ -119,6 +119,17 @@ const BORDER_EXPLANATIONS = {
     ja: "指定された国境検問所で国境を越えることができます。",
     zh: "可以在指定的边境哨所过境。"
   },
+  bilateral: {
+    en: "The border can be used only by nationals of the border countries.",
+    fr: "La frontière ne peut être utilisée que par les ressortissants des pays frontaliers.",
+    de: "Die Grenze kann nur von Staatsangehörigen der Grenzländer genutzt werden.",
+    es: "La frontera solo puede ser utilizada por nacionales de los países fronterizos.",
+    it: "Il confine può essere utilizzato solo dai cittadini dei paesi confinanti.",
+    ru: "Границей могут пользоваться только граждане приграничных стран.",
+    nl: "De grens kan alleen worden gebruikt door onderdanen van de grenslanden.",
+    ja: "国境を利用できるのは、国境を接する国の国民のみです。",
+    zh: "只有边境国家的国民可以使用该边境。"
+  },
   restricted: {
     en: "Some category of people or vehicles are not allowed to cross, see the comments.",
     fr: "Certaines catégories de personnes ou de véhicules ne sont pas autorisées à traverser, voir les commentaires.",
@@ -129,6 +140,17 @@ const BORDER_EXPLANATIONS = {
     nl: "Sommige categorieën mensen of voertuigen mogen niet oversteken, zie de opmerkingen.",
     ja: "一部のカテゴリーの人や車両は通過が許可されていません。コメントを参照してください。",
     zh: "某些类别的人员或车辆不允许通过，请查看评论。"
+  },
+  temporary_closed: {
+    en: "The border is temporary closed for avarious reasons, but is expected to reopen in the not so distant future.",
+    fr: "La frontière est temporairement fermée pour diverses raisons, mais devrait rouvrir dans un avenir pas trop lointain.",
+    de: "Die Grenze ist aus verschiedenen Gründen vorübergehend geschlossen, soll aber in nicht allzu ferner Zukunft wieder geöffnet werden.",
+    es: "La frontera está cerrada temporalmente por diversos motivos, pero se espera que vuelva a abrir en un futuro no muy lejano.",
+    it: "Il confine è temporaneamente chiuso per vari motivi, ma dovrebbe riaprire in un futuro non troppo lontano.",
+    ru: "Граница временно закрыта по различным причинам, но ожидается, что она вновь откроется в не столь отдаленном будущем.",
+    nl: "De grens is om verschillende redenen tijdelijk gesloten, maar zal naar verwachting in de niet al te verre toekomst weer opengaan.",
+    ja: "国境はさまざまな理由で一時的に閉鎖されていますが、それほど遠くない将来に再開される見込みです。",
+    zh: "边境因各种原因暂时关闭，但预计将在不久的将来重新开放。"
   },
   closed: {
     en: "The border is completely closed to all tourists, at all border posts, although some very limited local traffic may be allowed.",
@@ -177,6 +199,17 @@ const BORDER_POST_EXPLANATIONS = {
     nl: "Lees de opmerkingen om erachter te komen of je kunt oversteken. Bijvoorbeeld, alleen voetgangersverkeer is toegestaan, of alleen in één richting.",
     ja: "通過できるかどうかはコメントを読んで確認してください。例えば、歩行者のみ許可されている、または一方向のみなどです。",
     zh: "阅读评论以了解您是否可以通过。例如，只允许行人通行，或只允许单向通行。"
+  },
+  temporary_closed: {
+    en: "The border post is temporarily closed to all traffic.",
+    fr: "Le poste frontière est temporairement fermé à tout trafic.",
+    de: "Der Grenzübergang ist vorübergehend für den gesamten Verkehr geschlossen.",
+    es: "El puesto fronterizo está temporalmente cerrado a todo tráfico.",
+    it: "Il posto di frontiera è temporaneamente chiuso a tutto il traffico.",
+    ru: "Пограничный пункт временно закрыт для всего движения.",
+    nl: "De grenspost is tijdelijk gesloten voor al het verkeer.",
+    ja: "国境検問所はすべての交通に対して一時的に閉鎖されています。",
+    zh: "边境哨所暂时对所有交通关闭。"
   },
   closed: {
     en: "There is a designated border post, but it is closed to all traffic.",
@@ -355,9 +388,19 @@ export default function LegendExplanationPopup({
           text: BORDER_EXPLANATIONS.open[language as keyof typeof BORDER_EXPLANATIONS.open] || BORDER_EXPLANATIONS.open.en
         },
         {
+          title: getTranslatedLabel('bilateral', language),
+          color: '#3b82f6',
+          text: BORDER_EXPLANATIONS.bilateral[language as keyof typeof BORDER_EXPLANATIONS.bilateral] || BORDER_EXPLANATIONS.bilateral.en
+        },
+        {
           title: getTranslatedLabel('restricted', language),
           color: '#eab308',
           text: BORDER_EXPLANATIONS.restricted[language as keyof typeof BORDER_EXPLANATIONS.restricted] || BORDER_EXPLANATIONS.restricted.en
+        },
+        {
+          title: getTranslatedLabel('temporary_closed', language),
+          color: '#f97316',
+          text: BORDER_EXPLANATIONS.temporary_closed[language as keyof typeof BORDER_EXPLANATIONS.temporary_closed] || BORDER_EXPLANATIONS.temporary_closed.en
         },
         {
           title: getTranslatedLabel('closed', language),
@@ -381,6 +424,11 @@ export default function LegendExplanationPopup({
           title: getTranslatedLabel('restricted', language),
           color: '#eab308',
           text: BORDER_POST_EXPLANATIONS.restricted[language as keyof typeof BORDER_POST_EXPLANATIONS.restricted] || BORDER_POST_EXPLANATIONS.restricted.en
+        },
+        {
+          title: getTranslatedLabel('temporary_closed', language),
+          color: '#f97316',
+          text: BORDER_POST_EXPLANATIONS.temporary_closed[language as keyof typeof BORDER_POST_EXPLANATIONS.temporary_closed] || BORDER_POST_EXPLANATIONS.temporary_closed.en
         },
         {
           title: getTranslatedLabel('closed', language),

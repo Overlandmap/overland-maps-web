@@ -16,8 +16,7 @@ export async function GET() {
       return NextResponse.json({
         borders: [],
         metadata: {
-          count: 0,
-          fetchedAt: new Date().toISOString()
+          count: 0
         }
       })
     }
@@ -33,8 +32,7 @@ export async function GET() {
     return NextResponse.json({
       borders,
       metadata: {
-        count: borders.length,
-        fetchedAt: new Date().toISOString()
+        count: borders.length
       }
     })
     
